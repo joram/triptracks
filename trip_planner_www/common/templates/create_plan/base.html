@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script src="/static/create_plan.js"></script>
+    <script src="/static/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&libraries=drawing"></script>
+	<script type="text/javascript" src="/static/jquery.ui.map.full.min.js"></script>
+	<link href="/static/map.css">
+{% endblock %}
+
+{% block content %}
+	<div class="text-center center">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3 text-right">
+						<h2>Untitled Trip Plan</h2>
+					</div>
+					<div class="col-md-3 text-left" style="height:63px; margin-top: 18px;">
+						{% block sub_header %}
+							{% include "create_plan/sub_header.html" with editing='map' %}
+						{% endblock %}
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+		</div>
+		<div id="create_map" class="row">
+			<div class="col-md-12">
+				{% include "create_plan/_map.html" %}
+			</div>
+		</div>
+		<div id="create_itn" class="row">
+			<div class="col-md-12">
+				{% include "create_plan/_itinerary.html" %}
+			</div>
+		</div>
+		<div id="create_lst" class="row">
+			<div class="col-md-12">
+				{% include "create_plan/_pack_list.html" %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
