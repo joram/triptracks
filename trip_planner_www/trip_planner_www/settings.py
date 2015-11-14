@@ -28,6 +28,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+POSTGIS_VERSION = (1, 5, 8)
 
 # Application definition
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'common',
 )
 
@@ -60,9 +62,13 @@ WSGI_APPLICATION = 'trip_planner_www.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis", # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or "oracle".
+        "NAME": "tplanner",                       # Or path to database file if using sqlite3.
+        "USER": "tplanner",                             # Not used with sqlite3.
+        "PASSWORD": "tplanner",                         # Not used with sqlite3.
+        "HOST": "localhost",                             # Set to empty string for localhost. Not used with sqlite3.
+        "PORT": "",                             # Set to empty string for default. Not used with sqlite3.
     }
 }
 
