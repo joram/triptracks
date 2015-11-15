@@ -1,9 +1,1 @@
-<div id="floating-panel">
-  <input onclick="clearMarkers();" type=button value="Add Marker">
-  <input onclick="showMarkers();" type=button value="Add Line">
-</div>
-
-<script>
-  var map_data = {{ plan.map_object.json_string | safe }};
-</script>
-<div id="map" style="height:500px;"></div>
+<div id="map" data-map-id="{{ plan.map_object.id }}" style="height:500px;"></div>

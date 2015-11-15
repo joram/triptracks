@@ -8,12 +8,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
-GOOGLE_MAPS_API_KEY = "AIzaSyArWd4k21GGdjFwpnB8v_edai_0kKs7o9I"
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+GOOGLE_MAPS_API_KEY = "AIzaSyArWd4k21GGdjFwpnB8v_edai_0kKs7o9I"
+GEOIP_DATABASE = os.path.join(BASE_DIR, "../GeoIP.dat")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -28,12 +28,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-POSTGIS_VERSION = (1, 5, 8)
+POSTGIS_VERSION = (2, 1, 4)
 
 # Application definition
 
 INSTALLED_APPS = (
-    #'django_admin_bootstrapped',
+    #'django_admin_bootstrapped', # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

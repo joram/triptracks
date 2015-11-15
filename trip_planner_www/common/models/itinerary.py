@@ -6,3 +6,4 @@ class Itinerary(models.Model):
 
 	class Meta:
 		app_label = 'common'
+		verbose_name_plural = "Itineraries"

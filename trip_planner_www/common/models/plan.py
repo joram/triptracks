@@ -22,5 +22,8 @@ class Plan(models.Model):
     	m, _ = Map.objects.get_or_create(plan_id=self.id);
     	return m
 
+    def __str__(self):
+        return self.name
+
     class Meta:
     	app_label = 'common'

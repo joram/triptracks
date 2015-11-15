@@ -1,16 +1,19 @@
 import json
-from django.db import models
-from jsonfield import JSONField
+from django.contrib.gis.db import models
+
+class Point(models.Model):
+	location = models.PointField()
+	plan = models.ForeignKey("Map")
+	objects = models.GeoManager()
+
+	class Meta:
+		app_label = 'common'
 
 class Map(models.Model):
-	markers = JSONField(default=[])
-	lines = JSONField(default=[])
+	markers = models.MultiPointField(blank=True, null=True)
+	lines = models.MultiLineStringField(blank=True, null=True)
 	plan = models.ForeignKey("Plan")
+	objects = models.GeoManager()
 
-	@property
-	def json_string(self):
-		return json.dumps({
-			'markers': self.markers,
-			'lines': self.lines})
 	class Meta:
 		app_label = 'common'
