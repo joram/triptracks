@@ -20,10 +20,11 @@ def create(request):
 def edit(request, plan_id):
 	if request.is_ajax():
 		data = json.loads(request.body)
-		form = MapForm({
+		form_data = {
 			'plan_id': plan_id,
 			'markers': fromstr(json.dumps(data.get('markers'))),
-			'lines': fromstr(json.dumps(data.get('lines')))})
+			'lines': fromstr(json.dumps(data.get('lines')))}
+		form = MapForm(form_data)
 		if form.is_valid():
 			form.save()
 			return HttpResponse("OK")

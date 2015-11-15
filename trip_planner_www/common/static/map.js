@@ -5,6 +5,7 @@ var drawingManager;
 var map_data = {};
 
 function init_map(event, map) {
+  map_id = $('#map').data('mapId')
   map.setCenter({lat: 48.4, lng: -123.0});
   map.setZoom(10);
   map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
@@ -37,7 +38,6 @@ function init_map(event, map) {
         create_marker(p);
       });
       data['markers'] = markers;
-      console.log(data);
 
       // build lines from string
       lines_str = data['lines'].replace("MULTILINESTRING ((", "").replace("))", "")
@@ -59,64 +59,51 @@ function init_map(event, map) {
     }
   });
   
-  google.maps.event.addListener(drawingManager, "overlaycomplete", overlay_added);
+  google.maps.event.addListener(drawingManager, 'polylinecomplete', created_line);
+  google.maps.event.addListener(drawingManager, "markercomplete", added_marker);
 }
 
-function create_line(points){
-  var flightPlanCoordinates = [];
-  $.each(points, function(index, point){
-    flightPlanCoordinates.push({lat: point[0], lng: point[1]});
+function close_all_info_windows(){
+  $.each(markers, function(i, marker){
+    marker.info_window.close();
   });
-
-  var flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    geodesic: true,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2
+  $.each(lines, function(i, line){
+    line.info_window.close();
   });
-  flightPath.setMap(drawingManager.map);
-  lines.push(points);
 }
-
-function created_line(event){
-  line = [];
-  $.each(event.overlay.getPath().getArray(), function(index, point){
-    line.push([point.lat(), point.lng()]);
-  });
-  lines.push(line);
-}
-
-function overlay_added(event){
-  if (event.type == google.maps.drawing.OverlayType.POLYLINE) {
-    created_line(event);
-  }
-  if (event.type == google.maps.drawing.OverlayType.MARKER) {
-    pos = [event.overlay.position.lat(), event.overlay.position.lng()];
-    create_marker(pos);
-  }
-  ajax_update_map();
-};
 
 function ajax_update_map(){
-  coordinates = []
+  coordinates = [];
   $.each(markers, function(i, marker){
     if(marker.position.lat() && marker.map != null){
       coordinates.push([marker.position.lat(),marker.position.lng()])}});
+
+  line_coordinates = [];
+  $.each(lines, function(i, line){
+    points = line.getPath().getArray();
+    if(points.toString() != "(NaN, NaN)" && line.map != null){
+      line_points = [];
+      $.each(points, function(i, point){
+        line_points.push([point.lat(), point.lng()]);
+      });
+      line_coordinates.push(line_points);
+    }
+  });
+
+  data = {
+    'action': 'update_map',
+    'markers': { "type": "MultiPoint", "coordinates": coordinates },
+    'lines': {'type': 'MultiLineString', 'coordinates': line_coordinates},
+  }
 
   $.ajax({
     method: "POST",
     url: "/plan/1/edit",
     contentType: "application/json; charset=utf-8",
-    data: JSON.stringify({
-      'action': 'update_map',
-      'markers': { "type": "MultiPoint", "coordinates": coordinates },
-      'lines': {'type': 'MultiLineString', 'coordinates': lines},
-    }),
+    data: JSON.stringify(data),
   });
 }
 
 $( document ).ready(function() {
   $('#map').gmap().bind('init', init_map);
-  map_id = $('#map').data('mapId')
 });
