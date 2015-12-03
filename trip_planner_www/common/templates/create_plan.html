@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script src="/static/create_plan.js"></script>
+    <script src="/static/map.js"></script>
+    <script src="/static/map_markers.js"></script>
+    <script src="/static/map_lines.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&libraries=drawing"></script>
+	<script type="text/javascript" src="/static/jquery.ui.map.full.min.js"></script>
+
+	<link href="/static/map.css">
+	
+{% endblock %}
+
+{% block content %}
+	<div class="text-center center">
+		<div class="overhang_tabs">
+			<div class="overhang_tab">hello</div>
+			<div class="overhang_tab">hello</div>
+			<div class="overhang_tab">hello</div>
+		</div>
+		<div id="create_map" class="fill row">
+          <div class="col-md-12 fill">
+			{% include "create_plan/_map.html" %}
+		  </div>
+		</div>
+		<div id="create_itn" class="row">
+			<div class="col-md-12">
+				{% include "create_plan/_itinerary.html" %}
+			</div>
+		</div>
+		<div id="create_lst" class="row">
+			<div class="col-md-12">
+				{% include "create_plan/_pack_list.html" %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

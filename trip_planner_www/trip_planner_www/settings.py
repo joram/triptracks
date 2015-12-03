@@ -23,7 +23,6 @@ SECRET_KEY = '98o90!*7b)1_70&v6vwf_0p+hqy&6x_7#9upnh$=j!j7(o76#4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -64,9 +63,9 @@ WSGI_APPLICATION = 'trip_planner_www.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis", # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or "oracle".
-        "NAME": "tplanner",                       # Or path to database file if using sqlite3.
-        "USER": "tplanner",                             # Not used with sqlite3.
-        "PASSWORD": "tplanner",                         # Not used with sqlite3.
+        "NAME": "tp_database",                       # Or path to database file if using sqlite3.
+        "USER": "tp_user",                             # Not used with sqlite3.
+        "PASSWORD": "tp_password",                         # Not used with sqlite3.
         "HOST": "localhost",                             # Set to empty string for localhost. Not used with sqlite3.
         "PORT": "",                             # Set to empty string for default. Not used with sqlite3.
     }
@@ -90,3 +89,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+    },
+}

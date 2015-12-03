@@ -1,16 +1,64 @@
 <html>
-	<head>
-		<!-- CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-		<!-- JS -->
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		{% block extra_js %}{% endblock %}
-	</head>
-	<body>
-		{% include 'top_nav.html' %}
-		{% block content %}{% endblock %}
-	</body>
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link href="/static/common.css" rel="stylesheet"/>
+	<link href="/static/css/bootstrap-editable.css" rel="stylesheet"/>
+	<script src="/static/js/bootstrap-editable.js"></script>
+	{% block extra_js %}{% endblock %}
+</head>
+<body>
+	<nav id="main_navigation" class="navbar navbar-default">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Trip Planner</a>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						Account
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{% url 'create-plan' %}">
+								<i class="fa fa-plus-square-o"></i>
+								Trip Plan
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-plus-square-o"></i>
+								Trip Report
+							</a>
+						</li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<div id="body">
+		<div class="row">
+			<div class="col-md-12">
+				{% block pre-content %}{% endblock %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
 </html>

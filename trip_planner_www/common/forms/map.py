@@ -1,5 +1,10 @@
 from django.contrib.gis import forms
-from common.models import Map
+from common.models import Map, Plan
+
+class PlanNameForm(forms.ModelForm):
+	class Meta:
+		model = Plan
+		fields = ['name']
 
 class MapForm(forms.Form):
 	plan_id = forms.IntegerField(required=True)

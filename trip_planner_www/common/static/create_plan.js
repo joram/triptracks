@@ -33,6 +33,18 @@ function toggle_view(view_name){
 	}
 }
 
+function update_plan_name(response, newValue){
+  $.ajax({
+    method: "POST",
+    url: "/plan/1/edit",
+    contentType: "application/json; charset=utf-8",
+    data: JSON.stringify({
+	  'action': 'update_name',
+	  'name': newValue
+	}),
+  });
+}
+
 $( document ).ready(function() {
 	$("#map_btn").click(function(){
 		toggle_view('map');
@@ -44,4 +56,7 @@ $( document ).ready(function() {
 		toggle_view('pack_list');
 	});
 	toggle_view('map');
+	$('.editable').editable({
+		success: update_plan_name
+	});
 });
