@@ -11,7 +11,7 @@ RUN apt-get -y install python python-pip
 RUN apt-get -y install build-essential autoconf libtool pkg-config python-dev
 RUN apt-get -y install binutils libproj-dev gdal-bin
 RUN apt-get -y install postgresql-9.4 postgresql-9.4-postgis postgresql-server-dev-9.4
-
+RUN apt-get -y install cython libxml2 libxml2-dev libxslt1-dev 
 
 RUN pip install Django==1.8
 RUN pip install jsonfield
@@ -19,6 +19,7 @@ RUN pip install django_admin_bootstrapped
 RUN pip install django-geoip
 RUN pip install django-tastypie
 RUN pip install psycopg2==2.6.1
+RUN pip install pykml
 
 #########
 # create user/password/db:
