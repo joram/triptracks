@@ -21,3 +21,4 @@ class PackingListItem(models.Model):
 
 	class Meta:
 		app_label = 'common'
+
