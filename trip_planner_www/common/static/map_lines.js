@@ -1,5 +1,6 @@
 
 function init_lines(data){
+  console.log(data)
   if(data['lines']!=null){
     $.each(data['lines']['coordinates'], function (index, line_coords){
       create_line(line_coords);
@@ -8,18 +9,19 @@ function init_lines(data){
 }
 
 function create_line(points){
+  console.log(points)
   var flightPlanCoordinates = [];
   $.each(points, function(index, point){
-    flightPlanCoordinates.push({lat: point[0], lng: point[1]});
+    flightPlanCoordinates.push({lat: point[1], lng: point[0]});
   });
 
   var line = new google.maps.Polyline({
     path: flightPlanCoordinates
   });
-  created_line(line);
+  created_line(line, true);
 }
 
-function created_line(line){
+function created_line(line, dont_update){
   line.setMap(drawingManager.map);
   line.info_window = new google.maps.InfoWindow;
   line.setEditable(true);
@@ -38,7 +40,9 @@ function created_line(line){
 
   line.list_index = lines.indexOf(line);
   line.info_window.setContent("<div style='width:100px'><button onclick='remove_line("+line.list_index+");'>remove</button></div>");
-  ajax_update_route();
+  if(dont_update==null){
+    ajax_update_route();
+  }
 }
 
 function remove_line(list_index){

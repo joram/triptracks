@@ -24,7 +24,7 @@ function init_map(event, map) {
 
   $.ajax({
     method: "GET",
-    url: "/api/v1/route/1/",
+    url: "/api/v1/route/"+route_id+"/",
     success: function(data){
       init_markers(data);
       init_lines(data);
@@ -71,7 +71,7 @@ function ajax_update_route(){
 
   $.ajax({
     method: "PUT",
-    url: "/api/v1/route/1/",
+    url: "/api/v1/route/"+route_id+"/",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(data),
   });
