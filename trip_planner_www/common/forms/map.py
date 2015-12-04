@@ -15,6 +15,8 @@ class MapForm(forms.Form):
 		plan_id = self.cleaned_data.get('plan_id')
 		markers = self.cleaned_data.get('markers')
 		lines = self.cleaned_data.get('lines')
+		print markers
+		print lines
 		m, _ = Map.objects.get_or_create(plan__id=plan_id)
 		m.markers = markers
 		m.lines = lines

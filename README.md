@@ -12,3 +12,6 @@ pull the project: `git clone https://github.com/joram/trip-planner.git`
   - Note: The --rm removes the container and its image when the container exits successfully.
 - visit in the browser <a href="http://localhost:8000">localhost:8000</a>
 - if you need to restart the docker instance: `sudo service docker restart`
+- if you need to clean up space:
+  - Delete all containers `sudo docker rm $(sudo docker ps -a -q)`
+  - Delete all images `sudo docker rmi $(sudo docker images -q)`
