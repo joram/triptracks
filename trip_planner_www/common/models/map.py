@@ -1,6 +1,7 @@
 import json
 from django.contrib.gis.db import models
 
+
 class Point(models.Model):
 	location = models.PointField()
 	plan = models.ForeignKey("Map")
@@ -8,6 +9,7 @@ class Point(models.Model):
 
 	class Meta:
 		app_label = 'common'
+
 
 class Map(models.Model):
 	markers = models.MultiPointField(blank=True, null=True)

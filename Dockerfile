@@ -16,6 +16,7 @@ RUN apt-get -y install postgresql-9.4 postgresql-9.4-postgis postgresql-server-d
 RUN mkdir /srv/www/
 RUN mkdir /srv/www/trip-planner
 ADD . /srv/www/trip-planner
+RUN chmod 777 -R /srv/www/trip-planner
 
 RUN pip install Django==1.8
 RUN pip install jsonfield
@@ -37,5 +38,7 @@ RUN service postgresql start && psql --command "CREATE USER tp_user WITH SUPERUS
 ENV PYTHONPATH /srv/www/trip-planner/trip_planner_www
 ENV DJANGO_SETTINGS_MODULE trip_planner_www.settings
 
+RUN service postgresql start && django-admin.py syncdb --noinput && django-admin.py makemigrations && django-admin.py migrate && echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | django-admin.py shell
+
 EXPOSE 8000
-CMD service postgresql start && django-admin.py syncdb --noinput && django-admin.py migrate && django-admin.py runserver 0.0.0.0:8000
+CMD service postgresql start && django-admin.py runserver 0.0.0.0:8000

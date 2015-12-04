@@ -32,6 +32,7 @@ POSTGIS_VERSION = (2, 1, 4)
 # Application definition
 
 INSTALLED_APPS = (
+    'common',
     #'django_admin_bootstrapped', # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'common',
 )
 
 MIDDLEWARE_CLASSES = (
