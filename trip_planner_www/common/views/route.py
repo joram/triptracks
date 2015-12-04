@@ -19,7 +19,7 @@ def tmp_load_data(request):
 	for filename in os.listdir(examples_dir):
 		filepath = os.path.join(examples_dir, filename)
 		Route.objects.route_from_file(filepath)
-	return HttpResponse("ok")
+	return redirect('list-routes')
 
 def create(request):
 	route = Route.objects.create()
