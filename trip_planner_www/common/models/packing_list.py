@@ -14,7 +14,7 @@ class PackingListItem(models.Model):
 
 	packing_list = models.ForeignKey("PackingList")
 	name = models.CharField(max_length=30)
-	item_type = models.ChoicesField(
+	item_type = models.CharField(
 		max_length=2,
 		choices=ITEM_TYPE_CHOICES,
 		default=PERSONAL)
