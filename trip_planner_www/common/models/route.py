@@ -1,6 +1,6 @@
 import json
 from django.contrib.gis.db import models
-from django.contrib.gis.geos import LineString
+from django.contrib.gis.geos import LineString, MultiLineString
 
 import os
 import json
@@ -39,17 +39,15 @@ class RouteManager(models.GeoManager):
 		if filepath.endswith(".kml"):
 			contents = self._load_kml_content(filepath)
 
-		route = Route()
-		route.name = filepath
 		geo_line = []
 		for content in contents:
 			root = parser.fromstring(content)
 			line = self._load_kml_str(root)
 			for (lat, lng, alt) in line:
 				geo_line.append((lat, lng))
-		route.line = LineString(geo_line)
-		route.save()
-		return route
+		lines = MultiLineString(LineString(geo_line))
+		print lines.__str__()[0:30]	
+		return self.create(lines=lines)
 
 class Route(models.Model):
 	markers = models.MultiPointField(blank=True, null=True)
