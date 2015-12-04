@@ -24,37 +24,11 @@ function init_map(event, map) {
 
   $.ajax({
     method: "GET",
-    url: "/api/v1/map/1/",
+    url: "/api/v1/route/1/",
     success: function(data){
-
-      // build markers from string
-      markers_str = data['markers'].replace("MULTIPOINT (", "").replace(")", "")
-      markers = []
-      $.each(markers_str.split(", "), function(i, marker_str){
-        p = marker_str.split(" ");
-        p[0] = parseFloat(p[0]);
-        p[1] = parseFloat(p[1]);
-        create_marker(p);
-      });
-      data['markers'] = markers;
-
-      // build lines from string
-      lines_str = data['lines'].replace("MULTILINESTRING ((", "").replace("))", "")
-      $.each(lines_str.split("), ("), function(i, line_str){
-        line = []
-        $.each(line_str.split(", "), function(i, point_str){
-          p = point_str.split(" ");
-          p[0] = parseFloat(p[0]);
-          p[1] = parseFloat(p[1]);
-          line.push(p)
-        });
-        create_line(line);
-      });
-
+      init_markers(data);
+      init_lines(data);
       map_data = data;
-      $.each(map_data['markers'], function(index, pos){
-        create_marker(pos);
-      });
     }
   });
   
@@ -71,7 +45,7 @@ function close_all_info_windows(){
   });
 }
 
-function ajax_update_map(){
+function ajax_update_route(){
   coordinates = [];
   $.each(markers, function(i, marker){
     if(marker.position.lat() && marker.map != null){
@@ -96,8 +70,8 @@ function ajax_update_map(){
   }
 
   $.ajax({
-    method: "POST",
-    url: "/plan/1/edit",
+    method: "PUT",
+    url: "/api/v1/route/1/",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(data),
   });

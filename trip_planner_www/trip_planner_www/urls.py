@@ -2,14 +2,14 @@ from django.conf.urls import patterns, include, url
 from tastypie.api import Api
 from django.contrib import admin
 
-from common.api import MapResource
+from common.api import RouteResource
 from common.views.home import home
 from common.views.plan import create, edit
 
 admin.autodiscover()
 
 v1_api = Api(api_name='v1')
-v1_api.register(MapResource())
+v1_api.register(RouteResource())
 
 
 urlpatterns = patterns('',

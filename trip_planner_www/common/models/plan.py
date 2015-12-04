@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-from common.models import PackingList, Itinerary, Map
+from common.models import PackingList, Itinerary, Route
 
 
 class Plan(models.Model):
     name = models.CharField(max_length=30)
     owner = models.ForeignKey(User)
-    
+    route = models.ForeignKey("Route")
+
     @property
     def packing_list(self):
     	pl, _ = PackingList.objects.get_or_create(plan_id=self.id);
@@ -15,12 +16,12 @@ class Plan(models.Model):
     @property
     def itinerary(self):
     	it, _ = Itinerary.objects.get_or_create(plan_id=self.id);
-    	return pl
+    	return it
 
     @property
-    def map_object(self):
-    	m, _ = Map.objects.get_or_create(plan_id=self.id);
-    	return m
+    def route(self):
+    	r, _ = Route.objects.get_or_create(plan_id=self.id);
+    	return r
 
     def __str__(self):
         return self.name

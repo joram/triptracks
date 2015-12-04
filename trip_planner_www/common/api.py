@@ -1,16 +1,22 @@
 from tastypie import authorization
-from tastypie.resources import ModelResource
-from common.models import Map
-from django.core.serializers import serialize
-import pdb
+from tastypie.contrib.gis.resources import ModelResource
+from tastypie.resources import ALL
+
 from django.contrib.gis.geos import MultiPoint, GEOSGeometry, fromstr
-import json
+from django.core.serializers import serialize
+
+from common.models import Route
 
 
-class MapResource(ModelResource):
+class RouteResource(ModelResource):
 	class Meta:
-	    queryset = Map.objects.all()
-	    resource_name = 'map'
-	    allowed_methods = ('get')
-	    exclude = ['plan']
-	    authorization = authorization.Authorization()
+		queryset = Route.objects.all()
+		resource_name = 'route'
+		allowed_methods = ('get', 'post', 'put')
+		authorization = authorization.Authorization()
+		exclude = ['plan']
+
+		filtering = {
+			'markers': ALL,
+			'lines': ALL,
+		}

@@ -6,8 +6,9 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
 
-from common.models import Map, Plan
-from common.forms.map import MapForm, PlanNameForm
+from common.models import Route, Plan
+from common.forms.route import RouteForm
+from common.forms.plan import PlanForm
 
 
 
@@ -36,7 +37,7 @@ def update(request, plan_id):
 			'plan_id': plan_id,
 			'markers': fromstr(json.dumps(data.get('markers'))),
 			'lines': fromstr(json.dumps(data.get('lines')))}
-		form = MapForm(form_data)
+		form = RouteForm(form_data)
 		if form.is_valid():
 			form.save()
 			return HttpResponse("OK")
@@ -44,7 +45,7 @@ def update(request, plan_id):
 
 	if action == "update_name":
 		print("updating name")
-		form = PlanNameForm(instance=Plan.objects.get(id=plan_id))
+		form = PlanForm(instance=Plan.objects.get(id=plan_id))
 		form.name = data.get('name')
 		if form.is_valid():
 			form.save()
