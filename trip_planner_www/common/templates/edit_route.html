@@ -14,26 +14,5 @@
 {% endblock %}
 
 {% block content %}
-	<div class="text-center center">
-		<div class="overhang_tabs">
-			<div class="overhang_tab">hello</div>
-			<div class="overhang_tab">hello</div>
-			<div class="overhang_tab">hello</div>
-		</div>
-		<div id="create_map" class="fill row">
-          <div class="col-md-12 fill">
-			{% include "create_plan/_map.html" %}
-		  </div>
-		</div>
-		<div id="create_itn" class="row">
-			<div class="col-md-12">
-				{% include "create_plan/_itinerary.html" %}
-			</div>
-		</div>
-		<div id="create_lst" class="row">
-			<div class="col-md-12">
-				{% include "create_plan/_pack_list.html" %}
-			</div>
-		</div>
-	</div>
+	<div id="map" data-map-id="{{ plan.map_object.id }}"></div>
 {% endblock %}
