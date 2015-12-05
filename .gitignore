@@ -1,3 +1,5 @@
 setup_env.sh
 *.sqlite3
 *.pyc
+node_modules/*
+trip_planner_www/common/static/generated-js/*.js
