@@ -20,42 +20,7 @@
 				<a class="navbar-brand" href="#">Trip Planner</a>
 			</div>
 
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						Account
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="{% url 'create-route' %}">
-								<i class="fa fa-plus-square-o"></i>
-								Create Route
-							</a>
-						</li>
-						<li>
-							<a href="{% url 'list-routes' %}">
-								<i class="fa fa-plus-square-o"></i>
-								Edit Route
-							</a>
-						</li>
-						<li>
-							<a href="{% url 'demo-routes' %}">
-								<i class="fa fa-plus-square-o"></i>
-								Load Demo Routes
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fa fa-plus-square-o"></i>
-								Trip Report
-							</a>
-						</li>
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-				</li>
-			</ul>
+			{% include 'top_nav.html' %}
 
 		</div>
 	</nav>

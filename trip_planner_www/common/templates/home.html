@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script src="/static/map_home.js"></script>
+    <script src="/static/map_lines.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&libraries=drawing"></script>
+    <script type="text/javascript" src="/static/jquery.ui.map.full.min.js"></script>
+    <link href="/static/map.css">
+{% endblock %}
+
 {% block content %}
-content
+    <div id="map" data-map-editable="false"></div>
 {% endblock %}
