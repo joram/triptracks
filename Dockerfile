@@ -38,7 +38,7 @@ ENV DJANGO_SETTINGS_MODULE trip_planner_www.settings
 
 ADD . /srv/www/trip-planner
 
-RUN service postgresql start && django-admin.py syncdb --noinput && django-admin.py makemigrations && django-admin.py migrate && echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | django-admin.py shell
+RUN service postgresql start && django-admin.py makemigrations && django-admin.py migrate && echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | django-admin.py shell
 
 EXPOSE 8000
 VOLUME /srv/www/trip-planner

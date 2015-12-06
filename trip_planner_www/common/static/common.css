@@ -21,3 +21,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.grid_element {
+  border: solid thin black;
+  width: 200px;
+  margin: 20px;
+}

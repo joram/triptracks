@@ -43,21 +43,42 @@ class RouteManager(models.GeoManager):
         geo_line = []
         for content in contents:
             root = parser.fromstring(content)
-            line = self._load_kml_str(root)
-            i = 0
-            nth_vertex = int(len(line) / max_vertices) if max_vertices < len(line) else 1
-            for (lat, lng, alt) in line:
-                if not max_vertices or i % nth_vertex == 0:
-                    geo_line.append((lat, lng))
-                i += 1
-        lines = MultiLineString(LineString(geo_line))
-        return self.create(lines=lines)
+            line_tuples = self._load_kml_str(root)
+            nth_vertex = max(1, int(len(line_tuples) / max_vertices))
+            for (lat, lng, alt) in line_tuples[0::nth_vertex]:
+                geo_line.append((lat, lng))
+        line = LineString(geo_line)
+
+        name = filepath.split("/")[-1].split(".")[0]
+        return self.create(line=line, name=name)
 
 
 class Route(models.Model):
+    name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
-    lines = models.MultiLineStringField(blank=True, null=True)
+    line = models.LineStringField(blank=True, null=True)
+    center = models.PointField(blank=True, null=True)
     objects = RouteManager()
+
+    def vertices(self, max_verts):
+        nth_vertex = max(1, int(len(self.line)/max_verts))
+        return self.line[0::nth_vertex]
+
+    def save(self, *args, **kwargs):
+        envelope = self.line.envelope
+        print dir(envelope)
+        print envelope.tuple
+        self.center = self.line.centroid
+        return super(Route, self).save(*args, **kwargs)
+
+    @property
+    def static_tile_image_src(self):
+        url = "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=200x200&maptype=roadmap"
+        url += "&center=%s,%s" % (self.center.y, self.center.x)
+        url += "&path=color:0x0000ff|weight:5"
+        for p in self.vertices(20):
+            url += "|%s,%s" % (p[1], p[0])
+        return url
 
     class Meta:
         app_label = 'common'

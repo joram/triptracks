@@ -1,15 +1,13 @@
 
 function init_lines(data){
-  console.log(data)
   if(data['lines']!=null){
     $.each(data['lines']['coordinates'], function (index, line_coords){
-      create_line(line_coords);
+      create_line(line_coords, true);
     });
   }
 }
 
-function create_line(points){
-  console.log(points)
+function create_line(points, dont_update){
   var flightPlanCoordinates = [];
   $.each(points, function(index, point){
     flightPlanCoordinates.push({lat: point[1], lng: point[0]});
@@ -18,15 +16,14 @@ function create_line(points){
   var line = new google.maps.Polyline({
     path: flightPlanCoordinates
   });
-  created_line(line, true);
+  created_line(line, dont_update);
 }
 
 function created_line(line, dont_update){
   line.setMap(drawingManager.map);
   line.info_window = new google.maps.InfoWindow;
-  line.setEditable(true);
-  line.setDraggable(true);
   lines.push(line);
+  line.list_index = lines.indexOf(line);
 
   google.maps.event.addListener(line, "dragend", updated_line);
   google.maps.event.addListener(line.getPath(), "insert_at", updated_line);
@@ -38,9 +35,11 @@ function created_line(line, dont_update){
     line.info_window.open(drawingManager.map);
   });
 
-  line.list_index = lines.indexOf(line);
   line.info_window.setContent("<div style='width:100px'><button onclick='remove_line("+line.list_index+");'>remove</button></div>");
-  if(dont_update==null){
+  line.setEditable(true);
+  line.setDraggable(true);
+
+  if(dont_update != true){
     ajax_update_route();
   }
 }

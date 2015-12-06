@@ -14,11 +14,9 @@
 {% endblock %}
 
 {% block content %}
-	<div class="text-center center">
-		<ul>
+	<div class="row">
 		{% for route in routes %}
-			<li><a href="{% url 'edit-route' route.id %}">route {{ route.id }}</a></li>
+			{% include "_list_route_grid.html" with route=route %}
 		{% endfor %}
-		</ul>
 	</div>
 {% endblock %}

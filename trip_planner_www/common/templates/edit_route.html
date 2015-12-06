@@ -13,5 +13,9 @@
 {% endblock %}
 
 {% block content %}
-	<div id="map" data-map-id="{{ plan.map_object.id }}"></div>
+  <div id="map"
+    data-map-id="{{ route.id }}"
+	data-center-lat="{{ route.center.y }}"
+    data-center-lng="{{ route.center.x }}">
+  </div>
 {% endblock %}

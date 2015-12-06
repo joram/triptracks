@@ -6,4 +6,4 @@ from common.models import Route
 class RouteForm(ModelForm):
 	class Meta:
 		model = Route
-		fields = ['markers', 'lines']
+		fields = ['markers', 'line']

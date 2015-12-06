@@ -6,7 +6,11 @@ var map_data = {};
 
 function init_map(event, map) {
   map_id = $('#map').data('mapId')
-  map.setCenter({lat: 48.4, lng: -123.0});
+  map_center_lat = parseFloat($('#map').data('centerLat'))
+  map_center_lng = parseFloat($('#map').data('centerLng'))
+  console.log("centering")
+  console.log({lat: map_center_lat, lng: map_center_lng})
+  map.setCenter({lat: map_center_lat, lng: map_center_lng});
   map.setZoom(10);
   map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
 
