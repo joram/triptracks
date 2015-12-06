@@ -9,7 +9,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: "trip_planner_www/common"
         src: ["static/coffee/*.coffee"]
-        dest: 'static/generated-js/'
+        dest: 'static/generated-js/output'
         ext: ".js"
         options:
           bare: true
@@ -17,7 +17,7 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: 'trip_planner_www/**/*.coffee'
+        files: '*.coffee'
         tasks: ['coffee']
       options:
         livereload: true
