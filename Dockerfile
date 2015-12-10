@@ -5,21 +5,20 @@ RUN locale-gen --no-purge en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
 
+#########
+# install all aptitude packages
+#########
 RUN apt-get -y update
 RUN apt-get -y upgrade
-RUN apt-get -y install python python-pip
-RUN apt-get -y install build-essential autoconf libtool pkg-config python-dev
-RUN apt-get -y install binutils libproj-dev gdal-bin
-RUN apt-get -y install postgresql-9.4 postgresql-9.4-postgis postgresql-server-dev-9.4
-RUN apt-get -y install cython libxml2 libxml2-dev libxslt1-dev
+ADD requirements_apt.txt /requirements_apt.txt
+RUN cat /requirements_apt.txt | xargs apt-get install -y
 
-RUN pip install Django==1.8
-RUN pip install jsonfield
-RUN pip install django_admin_bootstrapped
-RUN pip install django-geoip
-RUN pip install django-tastypie
-RUN pip install psycopg2==2.6.1
-RUN pip install pykml
+#########
+# install all pip packages
+#########
+ADD requirements_pip.txt /requirements_pip.txt
+RUN pip install -r /requirements_pip.txt
+
 
 #########
 # create user/password/db:
@@ -36,8 +35,10 @@ RUN mkdir -p /srv/www/trip-planner
 ENV PYTHONPATH /srv/www/trip-planner/trip_planner_www
 ENV DJANGO_SETTINGS_MODULE trip_planner_www.settings
 
+#########
+# create and run migrations
+#########
 ADD . /srv/www/trip-planner
-
 RUN service postgresql start && django-admin.py makemigrations && django-admin.py migrate && echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | django-admin.py shell
 
 EXPOSE 8000
