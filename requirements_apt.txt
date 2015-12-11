@@ -6,11 +6,6 @@ libtool
 pkg-config
 python-dev
 binutils
-libproj-dev
-gdal-bin
-postgresql-9.4
-postgresql-9.4-postgis
-postgresql-server-dev-9.4
 cython
 libxml2
 libxml2-dev
