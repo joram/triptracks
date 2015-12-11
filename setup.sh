@@ -1,25 +1,30 @@
 #!/bin/bash
 
-# TODO: move to code dir
-mkdir ~/code
 export CODE_DIR=~/code
-export POSTGIS_DIR=~/code/postgis
-export ELASTICSEARCH_DIR=~/code/elasticsearch
+if [ ! -d $CODE_DIR ]; then
+  mkdir $CODE_DIR
+fi;
+export POSTGIS_DIR=$CODE_DIR/postgis
+export ELASTIC_DIR=$CODE_DIR/elasticsearch
+export PROJECT_DIR=$CODE_DIR/trip-planner
 
-# create postgis docker image
-cd $CODE_DIR
 if [ ! -d $POSTGIS_DIR ]; then
+    cd $CODE_DIR
     git clone https://github.com/joram/postgis.git
 fi;
 cd $POSTGIS_DIR
 git pull --rebase
-sudo docker build -t postgis .
 
-# create elastic docker image
-cd $CODE_DIR
-if [ ! -d $ELASTICSEARCH_DIR ]; then
+if [ ! -d $ELASTIC_DIR ]; then
+    cd $CODE_DIR
     git clone https://github.com/joram/elasticsearch.git
 fi;
-cd $ELASTICSEARCH_DIR
+cd $ELASTIC_DIR
 git pull --rebase
-sudo docker build -t elasticsearch .
+
+echo making: $POSTGIS_DIR
+sudo docker build -t tp/postgis $POSTGIS_DIR
+echo making: $ELASTIC_DIR
+sudo docker build -t tp/elastic $ELASTIC_DIR
+echo making: $PROJECT_DIR
+sudo docker build -t tp/tripplanner $PROJECT_DIR
