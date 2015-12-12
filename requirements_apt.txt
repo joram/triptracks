@@ -6,6 +6,8 @@ libtool
 pkg-config
 python-dev
 binutils
+libproj-dev
+gdal-bin
 cython
 libxml2
 libxml2-dev

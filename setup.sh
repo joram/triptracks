@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+#sudo rm /etc/apt/sources.list.d/docker.list
+#sudo echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list
+#sudo apt-get update
+#sudo apt-get install docker-engine
+
+
 export CODE_DIR=~/code
 if [ ! -d $CODE_DIR ]; then
   mkdir $CODE_DIR
@@ -22,9 +29,17 @@ fi;
 cd $ELASTIC_DIR
 git pull --rebase
 
-echo making: $POSTGIS_DIR
 sudo docker build -t tp/postgis $POSTGIS_DIR
-echo making: $ELASTIC_DIR
 sudo docker build -t tp/elastic $ELASTIC_DIR
-echo making: $PROJECT_DIR
 sudo docker build -t tp/tripplanner $PROJECT_DIR
+
+sudo docker stop db
+sudo docker stop web
+sudo docker rm db web
+
+sudo docker run -d --name=db -P -p 5432:5432 tp/postgis
+#sudo docker run -d -P --name=web --link=db:db tp/tripplanner
+sudo docker ps
+sleep 5
+sudo docker run --name=web --link=db:db -v /home/john/code/trip-planner/:/srv/www/trip-planner tp/tripplanner
+sudo docker ps

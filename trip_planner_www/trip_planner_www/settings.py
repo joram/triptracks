@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,13 +51,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'xapian_backend.XapianEngine',
-        'PATH': os.path.join(BASE_DIR, 'xapian_index'),
-    },
-}
 
 ROOT_URLCONF = 'trip_planner_www.urls'
 
@@ -74,7 +66,7 @@ DATABASES = {
         "NAME": "tp_database",                       # Or path to database file if using sqlite3.
         "USER": "tp_user",                             # Not used with sqlite3.
         "PASSWORD": "tp_password",                         # Not used with sqlite3.
-        "HOST": "localhost",                             # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "db",                             # Set to empty string for localhost. Not used with sqlite3.
         "PORT": "",                             # Set to empty string for default. Not used with sqlite3.
     }
 }

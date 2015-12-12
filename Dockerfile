@@ -25,4 +25,8 @@ ENV DJANGO_SETTINGS_MODULE trip_planner_www.settings
 EXPOSE 8000
 VOLUME /srv/www/trip-planner
 WORKDIR /srv/www/trip-planner
-CMD django-admin.py runserver 0.0.0.0:8000
+
+#COPY ./entrypoint.sh /entrypoint.sh
+#CMD ["/entrypoint.sh"]
+
+CMD ["cat", "/etc/hosts", "&&", "django-admin.py", "runserver", "0.0.0.0:8000"]
