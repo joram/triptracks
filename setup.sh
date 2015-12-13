@@ -17,7 +17,7 @@ export PROJECT_DIR=$CODE_DIR/trip-planner
 
 if [ ! -d $POSTGIS_DIR ]; then
     cd $CODE_DIR
-    git clone https://github.com/joram/postgis.git
+    git clone git://github.com/joram/postgis
 fi;
 cd $POSTGIS_DIR
 git pull --rebase
@@ -30,16 +30,12 @@ cd $ELASTIC_DIR
 git pull --rebase
 
 sudo docker build -t tp/postgis $POSTGIS_DIR
-sudo docker build -t tp/elastic $ELASTIC_DIR
 sudo docker build -t tp/tripplanner $PROJECT_DIR
 
 sudo docker stop db
-sudo docker stop web
-sudo docker rm db web
+sudo docker rm db
+sudo docker run -d --name=db -p 5432:5432 tp/postgis
 
-sudo docker run -d --name=db -P -p 5432:5432 tp/postgis
-#sudo docker run -d -P --name=web --link=db:db tp/tripplanner
-sudo docker ps
-sleep 5
-sudo docker run --name=web --link=db:db -v /home/john/code/trip-planner/:/srv/www/trip-planner tp/tripplanner
-sudo docker ps
+sudo docker stop web
+sudo docker rm web
+sudo docker run -d --name=web -p 8000:8000 --link db:db -v /home/joram/code/trip-planner:/srv/www tp/tripplanner

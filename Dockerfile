@@ -18,15 +18,12 @@ RUN pip install -r /requirements_pip.txt
 
 USER root
 RUN mkdir /srv/www/
-RUN mkdir -p /srv/www/trip-planner
-ENV PYTHONPATH /srv/www/trip-planner/trip_planner_www
+RUN mkdir -p /srv/www/
+ENV PYTHONPATH /srv/www/trip_planner_www
 ENV DJANGO_SETTINGS_MODULE trip_planner_www.settings
 
 EXPOSE 8000
-VOLUME /srv/www/trip-planner
-WORKDIR /srv/www/trip-planner
+VOLUME /srv/www/
+WORKDIR /srv/www/
 
-#COPY ./entrypoint.sh /entrypoint.sh
-#CMD ["/entrypoint.sh"]
-
-CMD ["cat", "/etc/hosts", "&&", "django-admin.py", "runserver", "0.0.0.0:8000"]
+CMD ls . && django-admin.py migrate && django-admin.py runserver 0.0.0.0:8000

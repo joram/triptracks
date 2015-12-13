@@ -15,3 +15,4 @@ pull the project: `git clone https://github.com/joram/trip-planner.git`
 - if you need to clean up space:
   - Delete all containers `sudo docker rm $(sudo docker ps -a -q)`
   - Delete all images `sudo docker rmi $(sudo docker images -q)`
+  - if you really need to scrub, docker's temp folder is at `/var/lib/docker/tmp`

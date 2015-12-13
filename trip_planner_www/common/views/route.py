@@ -15,7 +15,7 @@ from common.forms.plan import PlanForm
 
 def tmp_load_data(request):
 	Route.objects.all().delete()
-	examples_dir = os.path.join(settings.BASE_DIR, '../scripts/example routes/')
+	examples_dir = os.path.join(settings.BASE_DIR, '../data/example routes/')
 	for filename in os.listdir(examples_dir):
 		filepath = os.path.join(examples_dir, filename)
 		Route.objects.route_from_file(filepath)
