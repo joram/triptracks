@@ -48,27 +48,27 @@ class RouteManager(models.GeoManager):
             for (lat, lng, alt) in line_tuples[0::nth_vertex]:
                 geo_line.append((lat, lng))
         line = LineString(geo_line)
-
+        lines = MultiLineString([line])
         name = filepath.split("/")[-1].split(".")[0]
-        return self.create(line=line, name=name)
+        return self.create(lines=lines, name=name)
 
 
 class Route(models.Model):
     name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
-    line = models.LineStringField(blank=True, null=True)
+    lines = models.MultiLineStringField(blank=True, null=True)
     center = models.PointField(blank=True, null=True)
     objects = RouteManager()
 
-    def vertices(self, max_verts):
-        nth_vertex = max(1, int(len(self.line)/max_verts))
-        return self.line[0::nth_vertex]
+    def vertices(self, max_verts=None):
+        nth_vertex = len(self.lines[0])
+        if max_verts:
+            nth_vertex = max(1, int(len(self.lines[0])/max_verts))
+        return self.lines[0][0::nth_vertex]
 
     def save(self, *args, **kwargs):
-        envelope = self.line.envelope
-        print dir(envelope)
-        print envelope.tuple
-        self.center = self.line.centroid
+        envelope = self.lines.envelope
+        self.center = self.lines.centroid
         return super(Route, self).save(*args, **kwargs)
 
     @property
@@ -76,7 +76,7 @@ class Route(models.Model):
         url = "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=200x200&maptype=roadmap"
         url += "&center=%s,%s" % (self.center.y, self.center.x)
         url += "&path=color:0x0000ff|weight:5"
-        for p in self.vertices(20):
+        for p in self.vertices(30):
             url += "|%s,%s" % (p[1], p[0])
         return url
 

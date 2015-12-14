@@ -33,6 +33,13 @@ def edit(request, route_id):
 		'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
 	return render_to_response("edit_route.html", context)
 
+def view(request, route_id):
+	route = Route.objects.get(id=route_id)
+	context = {
+		'route': route,
+		'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
+	return render_to_response("view_route.html", context)
+
 def list_routes(request):
 	context = {
 		'routes': Route.objects.all(),

@@ -26,4 +26,5 @@ EXPOSE 8000
 VOLUME /srv/www/
 WORKDIR /srv/www/
 
-CMD ls . && django-admin.py migrate && django-admin.py runserver 0.0.0.0:8000
+ADD ./entrypoint.sh /entrypoint.sh
+CMD ./entrypoint.sh

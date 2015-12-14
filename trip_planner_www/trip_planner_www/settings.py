@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'haystack'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,10 +57,6 @@ ROOT_URLCONF = 'trip_planner_www.urls'
 
 WSGI_APPLICATION = 'trip_planner_www.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis", # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or "oracle".
@@ -71,6 +68,14 @@ DATABASES = {
     }
 }
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://search:9200/',
+        'INDEX_NAME': 'haystack',
+    },
+}
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 

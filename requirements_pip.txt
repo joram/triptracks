@@ -6,3 +6,6 @@ django-tastypie
 psycopg2==2.6.1
 pykml
 gunicorn
+haystack
+django-haystack
+pyelasticsearch

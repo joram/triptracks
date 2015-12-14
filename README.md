@@ -6,6 +6,10 @@ This project is under development. The goal is to have a unified site to manage 
 ### Git
 pull the project: `git clone https://github.com/joram/trip-planner.git`
 
+### Gulp coffee
+- install gulp `sudo npm install -g gulp gulp-coffee`
+- from the base code dir, run `gulp watch`
+
 ### Docker
 - to build your local docker image run: `sudo docker build -t tripplanner .`
 - run the container (in the foreground): `sudo docker run --rm -p 8000:8000 -v <absolute_path_to_code_base>:/srv/www/trip-planner -t tripplanner`

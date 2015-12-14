@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=120)),
                 ('markers', django.contrib.gis.db.models.fields.MultiPointField(srid=4326, null=True, blank=True)),
-                ('line', django.contrib.gis.db.models.fields.LineStringField(srid=4326, null=True, blank=True)),
+                ('lines', django.contrib.gis.db.models.fields.MultiLineStringField(srid=4326, null=True, blank=True)),
                 ('center', django.contrib.gis.db.models.fields.PointField(srid=4326, null=True, blank=True)),
             ],
         ),
