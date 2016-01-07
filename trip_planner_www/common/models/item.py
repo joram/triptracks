@@ -19,7 +19,7 @@ class ItemManager(models.Manager):
 		price = float(price) if price != '' else -1
 		return price
 
-	def load_mec_items(self):
+	def load_mec_items(self, quantity=100):
 		self.all().delete()
 
 		s = ScrapeMEC()
@@ -39,9 +39,9 @@ class ItemManager(models.Manager):
 				img_href=data.get('img_href', ""),
 				attributes=data)
 			added_items += 1
-			if added_items >= 100:
+			if added_items > quantity:
 				return
-			print item
+			print "%s: %s" % (added_items, item)
 
 class Item(models.Model):
 	name = models.CharField(max_length=256)

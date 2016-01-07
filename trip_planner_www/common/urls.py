@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^items/upload/?$', item.upload, name='upload-mec-items'),
 	
 	url(r'^packing/lists/create/?$', packing_list.create, name='create-packing-list'),
+    url(r'^packing/lists/(?P<packing_list_id>[0-9]+)/edit/?$', packing_list.edit, name='edit-packing-list'),
     url(r'^packing/lists/items/search/?$', packing_list.search, name='search-packing-list'),
 )
 

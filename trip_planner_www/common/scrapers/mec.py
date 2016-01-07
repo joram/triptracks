@@ -103,33 +103,3 @@ class ScrapeMEC(Scrape):
 			except AttributeError as e:
 				print url
 				print e
-
-
-def push_item(data):
-	for k in data.keys():
-		try:
-			data[k] =  parser.unescape(str(data[k]))
-		except Exception as e:
-			print e
-	price = data.get('price', '').replace("$", "").replace(" ", "")
-	if "CAD" in price:
-		price = price.split("CAD")[0]
-	if "-" in price:
-		price = price.split("-")[1]
-	price = float(price) if price != '' else -1
-
-	massaged_data = {
-		'name': data.get('name'),
-		'price': price,
-		'description': data.get('description'),
-		'attributes': data}
-
-	r = requests.post(
-		url="http://localhost:8000/api/v1/item/",
-	    data=json.dumps(massaged_data),
-	    headers={
-	    	'Content-type': 'application/json',
-	    	'Accept': 'text/plain'}
-	)
-	return r.status_code
-

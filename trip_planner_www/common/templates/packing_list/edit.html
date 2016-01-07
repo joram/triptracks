@@ -7,15 +7,18 @@
 
 {% block content %}
 <div class="row">
+
+</div>
+
+
+<div class="row">
 	<div class="col-md-12">
 		<form id="search" data-search-uri="{% url 'search-packing-list' %}" data-csrf="{{ csrf_token }}">
 			<input id="search_text" type="text"></input>
-			<input type="submit">
 		</form>
 	</div>
+	<div class="col-md-12 text-center"><h3>{{ packing_list.name }}</h3></div>
+	<div id="items"></div>
 </div>
 
-<div id="possible_items" class="row">
-	items
-</div>
 {% endblock %}

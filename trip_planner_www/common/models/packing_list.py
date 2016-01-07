@@ -1,11 +1,11 @@
 from django.db import models
 
 class PackingList(models.Model):
-	name = models.CharField(max_length=30)
-	plan = models.ForeignKey("Plan")
+	name = models.CharField(max_length=30, blank=True, default="")
 
 	class Meta:
 		app_label = 'common'
+
 
 class PackingListItem(models.Model):
 	GROUP = "G"
@@ -18,6 +18,7 @@ class PackingListItem(models.Model):
 		max_length=2,
 		choices=ITEM_TYPE_CHOICES,
 		default=PERSONAL)
+	item = models.ForeignKey('Item')
 
 	class Meta:
 		app_label = 'common'
