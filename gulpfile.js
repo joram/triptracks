@@ -8,6 +8,6 @@ gulp.task('common-coffee-to-js', function(){
         .pipe(gulp.dest('trip_planner_www/common/static/compiled-js/'));
 });
 
-gulp.task('watch', function(){
+gulp.task('coffee', function(){
     gulp.watch('trip_planner_www/common/static/coffee/*.coffee', ['common-coffee-to-js']);
 });

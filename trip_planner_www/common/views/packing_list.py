@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.gis.gdal import DataSource
 from django.template.context_processors import csrf
+from django.core import serializers
 
 import os
 import json
@@ -24,6 +25,7 @@ def search(request):
 	search_text = request.POST.get('search_text')
 	print "searching for: %s" % search_text
 	qs = SearchQuerySet().filter(description=search_text)
-	print qs
-	data = {}
+	data = {
+		'items': [q.object.json for q in qs]
+	}
 	return JsonResponse(data)
