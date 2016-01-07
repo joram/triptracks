@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+	<script src="/static/compiled-js/packing_list.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12">
+		<form id="search" data-search-uri="{% url 'search-packing-list' %}" data-csrf="{{ csrf_token }}">
+			<input id="search_text" type="text"></input>
+			<input type="submit">
+		</form>
+	</div>
+</div>
+
+<div id="possible_items" class="row">
+	items
+</div>
+{% endblock %}

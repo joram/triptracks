@@ -3,9 +3,12 @@ jsonfield
 django_admin_bootstrapped
 django-geoip
 django-tastypie
+#django-progressbarupload # has issues with simple json
 psycopg2==2.6.1
 pykml
 gunicorn
-haystack
-django-haystack
 pyelasticsearch
+django-haystack
+#haystack  # apparently the order matters... maybe: elastic, haystack, dj-haystack?
+BeautifulSoup
+html

@@ -7,11 +7,12 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.gis.gdal import DataSource
+from django.template.context_processors import csrf
 
 from common.models import Route, Plan
 from common.forms.route import RouteForm
 from common.forms.plan import PlanForm
-
+from common.forms.tracks_file import TracksFileForm
 
 def tmp_load_data(request):
 	Route.objects.all().delete()
@@ -25,6 +26,20 @@ def create(request):
 	route = Route.objects.create()
 	return redirect('edit-route', route.id)
 
+def upload(request):
+	
+	if request.method == "POST":
+		form = TracksFileForm(request.POST, request.FILES)
+		if form.is_valid():
+			print request.FILES.get('tracks_file')
+			form.save()
+			return redirect('home')
+		print form.errors
+
+	form = TracksFileForm()
+	context = {'form': form}
+	context.update(csrf(request))
+	return render_to_response("upload_routes.html", context)
 
 def edit(request, route_id):
 	route = Route.objects.get(id=route_id)

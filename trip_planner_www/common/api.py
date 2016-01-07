@@ -5,7 +5,7 @@ from tastypie.resources import ALL
 from django.contrib.gis.geos import MultiPoint, GEOSGeometry, fromstr
 from django.core.serializers import serialize
 
-from common.models import Route
+from common.models import Route, Item
 
 
 class RouteResource(ModelResource):
@@ -20,3 +20,11 @@ class RouteResource(ModelResource):
 			'markers': ALL,
 			'lines': ALL,
 		}
+
+
+class ItemResource(ModelResource):
+	class Meta:
+		queryset = Item.objects.all()
+		resource_name = 'item'
+		allowed_methods = ('get', 'post', 'put')
+		authorization = authorization.Authorization()

@@ -8,40 +8,40 @@
 
 
 export CODE_DIR=~/code
+export PROJECT_DIR=$CODE_DIR/trip-planner
+
 if [ ! -d $CODE_DIR ]; then
   mkdir $CODE_DIR
 fi;
-export POSTGIS_DIR=$CODE_DIR/postgis
-export ELASTIC_DIR=$CODE_DIR/elasticsearch
-export PROJECT_DIR=$CODE_DIR/trip-planner
 
-if [ ! -d $POSTGIS_DIR ]; then 
-	cd $CODE_DIR
-	git clone git://github.com/joram/postgis
+if [ ! -d $PROJECT_DIR/data ]; then
+  mkdir $PROJECT_DIR/data
 fi;
-cd $POSTGIS_DIR
-git pull --rebase
 
-if [ ! -d $ELASTIC_DIR ]; then
-    cd $CODE_DIR
-    git clone https://github.com/joram/elasticsearch.git
+if [ ! -d $PROJECT_DIR/data/postgresql ]; then
+  mkdir $PROJECT_DIR/data/postgresql
+  chmod 777 -R $PROJECT_DIR/data/postgresql
 fi;
-cd $ELASTIC_DIR
-git pull --rebase
 
-sudo service postgresql stop
-# sudo docker build -t tp/postgis $POSTGIS_DIR
+if [ ! -d $PROJECT_DIR/data/elasticsearch ]; then
+  mkdir $PROJECT_DIR/data/elasticsearch
+fi;
+
 sudo docker stop db
 sudo docker rm db
-sudo docker run -d --name=db -p 5432:5432 tp/postgis
+sudo docker pull kartoza/postgis
+#TODO: figure out permissions for data/postgresql before mounting it as a vol
+sudo docker run -d --name=db -p 5432 -e POSTGRES_USER=tp_user -e POSTGRES_PASS=tp_password -t kartoza/postgis
 
-# sudo docker build -t tp/elastic $POSTGIS_DIR
 sudo docker stop search
 sudo docker rm search
-sudo docker run -d --name=search -p 9200:9200 tp/elastic
+sudo docker pull elasticsearch
+sudo docker run -d --name=search -v $PROJECT_DIR/data/elasticsearch:/usr/share/elasticsearch/data -p 9200:9200 -p 9300:9300 elasticsearch
 
-sudo docker build -t tp/tripplanner $PROJECT_DIR
+sudo service nginx stop
 sudo docker stop web
+sudo docker wait web
 sudo docker rm web
-sudo docker run -ti --name=web -p 8000:8000 --link db:db --link search:search -v /home/joram/code/trip-planner:/srv/www tp/tripplanner
+sudo docker build -t joram/tripplanner $PROJECT_DIR
+sudo docker run -ti --name=web -p 80:80 -p 8000:8000 --link db:db --link search:search -v $PROJECT_DIR:/srv/www joram/tripplanner
 

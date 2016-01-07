@@ -27,4 +27,4 @@ VOLUME /srv/www/
 WORKDIR /srv/www/
 
 ADD ./entrypoint.sh /entrypoint.sh
-CMD ./entrypoint.sh
+CMD /entrypoint.sh

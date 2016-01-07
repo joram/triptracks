@@ -32,7 +32,6 @@ POSTGIS_VERSION = (2, 1, 4)
 # Application definition
 
 INSTALLED_APPS = (
-    'common',
     #'django_admin_bootstrapped', # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,8 +40,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'haystack'
+    'haystack',
+    'common',
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,7 +61,7 @@ WSGI_APPLICATION = 'trip_planner_www.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis", # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or "oracle".
-        "NAME": "tp_database",                       # Or path to database file if using sqlite3.
+        "NAME": "gis",                       # Or path to database file if using sqlite3.
         "USER": "tp_user",                             # Not used with sqlite3.
         "PASSWORD": "tp_password",                         # Not used with sqlite3.
         "HOST": "db",                             # Set to empty string for localhost. Not used with sqlite3.
@@ -70,7 +71,8 @@ DATABASES = {
 
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+        #'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
         'URL': 'http://search:9200/',
         'INDEX_NAME': 'haystack',
     },
