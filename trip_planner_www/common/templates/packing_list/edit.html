@@ -6,12 +6,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
 
-</div>
-
-
-<div class="row">
+<div id="packing-list" class="row" data-name="{{ packing_list.name }}" data-id="{{ packing_list.id }}">
 	<div class="col-md-12">
 		<form id="search" data-search-uri="{% url 'add-packing-list-item' packing_list.id %}" data-csrf="{{ csrf_token }}">
 			<input id="search_text" type="text"></input>

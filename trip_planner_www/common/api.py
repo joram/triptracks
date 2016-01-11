@@ -73,8 +73,8 @@ class PackingListItemResource(ModelResource):
 	
 	def dehydrate_item(self, bundle):
 		return bundle.obj.item.id
+
 	def hydrate_item(self, bundle):
-		print bundle.data
 		item = get_object_or_404(Item, id=bundle.data.get('item'))
 		bundle.data['item'] = item
 		return bundle

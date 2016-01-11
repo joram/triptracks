@@ -25,19 +25,22 @@ class window.PackingListEditor
 			showbuttons: false,
 			type: 'text',
 			success: (response, new_name) =>
-				@update_packing_list({name:new_name})
+				$("#packing-list").data("name", new_name)
+				@update_packing_list()
 		}
 
 	ajax_failure: (data) ->
 		console.log "failed"
 		console.log data
 
-	update_packing_list: (data) ->
-		console.log data
-		list_id = 1
+	update_packing_list:  ->
+		data = {
+			name: $("#packing-list").data('name'),
+		}
+
 		$.ajax
 			type: "PUT",
-			url: "/api/v1/packing_list/"+list_id+"/",
+			url: "/api/v1/packing_list/"+$("#packing-list").data('id')+"/",
 			data: JSON.stringify(data),
 			dataType: 'json',
 			contentType: "application/json; charset=UTF-8",
