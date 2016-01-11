@@ -35,11 +35,35 @@ html, body {
   display: block;
 }
 
-.packing-list-item {
-  margin: 10px;
-}
 #possible_items {
   display: block;
   margin : 0 auto;
   width: 70%;
+}
+
+.packing-list-item {
+  margin: 10px;
+  padding: 0;
+}
+
+.packing-list-item-text {
+  margin: 0;
+  padding-top:5px;
+  padding-bottom:10px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.packing-list-item-text a {
+  display: inline;
+}
+
+.packing-list-item-text h3{
+  display: inline;
+  margin: 0;
+}
+
+.delete-item {
+  float: right;
+  padding-top: 10px;
+  padding-right:15px;
 }

@@ -41,7 +41,8 @@ class ItemManager(models.Manager):
 			added_items += 1
 			if added_items > quantity:
 				return
-			print "%s: %s" % (added_items, item)
+			if added_items % 100 == 0:
+				print "%s: %s" % (added_items, item)
 
 class Item(models.Model):
 	name = models.CharField(max_length=256)

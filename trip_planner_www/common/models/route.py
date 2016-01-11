@@ -1,6 +1,6 @@
-import json
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import LineString, MultiLineString
+from django.conf import settings
 
 import os
 import json
@@ -52,6 +52,16 @@ class RouteManager(models.GeoManager):
         name = filepath.split("/")[-1].split(".")[0]
         return self.create(lines=lines, name=name)
 
+    def load_demo_tracks(self):
+        tracks_dir = os.path.join(settings.BASE_DIR, "../data/tracks")
+        for filename in os.listdir(tracks_dir):
+            filepath = os.path.join(tracks_dir, filename)
+            try:
+                route = self.route_from_file(filepath)
+                print "%s %s" % (route, filepath) 
+            except Exception as e:
+                print filepath
+                print e
 
 class Route(models.Model):
     name = models.CharField(max_length=120)

@@ -1,8 +1,12 @@
 (function() {
+  var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
   window.PackingListEditor = (function() {
     var uuid;
 
     function PackingListEditor() {
+      this.add_on_clicks = bind(this.add_on_clicks, this);
+      this.add_item = bind(this.add_item, this);
       $("#search").submit((function(_this) {
         return function(event) {
           var csrf_token, search_text, search_url;
@@ -18,16 +22,18 @@
               search_text: search_text,
               csrfmiddlewaretoken: csrf_token
             },
-            success: _this.update_items,
+            success: _this.add_item,
             failure: _this.ajax_failure,
             dataType: 'json'
           });
         };
       })(this));
+      this.add_on_clicks();
     }
 
-    PackingListEditor.prototype.ajax_failure = function() {
-      return console.log("failed");
+    PackingListEditor.prototype.ajax_failure = function(data) {
+      console.log("failed");
+      return console.log(data);
     };
 
     uuid = function() {
@@ -39,45 +45,128 @@
       });
     };
 
-    PackingListEditor.prototype.update_items = function(data) {
-      var div_class, first, i, id, img, item, item_carousel, item_html, left_html, len, ref, right_html, slide;
-      id = uuid();
-      item_carousel = $('<div />', {
-        "id": id,
-        "class": "packing-list-item carousel slide col-md-2",
-        "data-ride": "carousel"
-      });
-      $("#items").prepend(item_carousel);
-      item_html = $('<div />', {
-        "class": 'carousel-inner',
-        "role": "listbox"
-      });
-      item_carousel.prepend(item_html);
-      first = true;
-      ref = data.items;
-      for (i = 0, len = ref.length; i < len; i++) {
-        item = ref[i];
-        div_class = "item";
-        if (first) {
-          div_class += " active";
-          first = false;
+    PackingListEditor.prototype.add_item = function(data) {
+      console.log(data.html);
+      $("#items").prepend(data.html);
+      return this.add_on_clicks();
+    };
+
+    PackingListEditor.prototype.delete_item = function(item) {
+      item = $(item);
+      return $.ajax({
+        type: "DELETE",
+        url: item.data("editUri"),
+        data: JSON.stringify({}),
+        dataType: 'json',
+        contentType: "application/json; charset=UTF-8",
+        success: function() {
+          return item.remove();
         }
-        slide = $('<div />', {
-          "class": div_class
-        });
-        slide.appendTo(item_html);
-        img = $('<img />', {
-          "src": item.img_href
-        });
-        img.appendTo(slide);
-      }
-      left_html = $('<a class="left carousel-control" href="#' + id + '" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>');
-      item_carousel.append(left_html);
-      right_html = $('<a class="right carousel-control" href="#' + id + '" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>');
-      item_carousel.append(right_html);
-      return item_carousel.carousel({
-        interval: 0
       });
+    };
+
+    PackingListEditor.prototype.update_item = function(data) {
+      var item;
+      console.log(data.item);
+      item = $(data.item);
+      data.id = item.attr('id');
+      data.name = data.name || item.find(".item-name").innerHTML;
+      data.quantity = data.quantity || item.find(".item-quantity")[0].innerHTML;
+      data.csrfmiddlewaretoken = item.data('csrf');
+      data.item_type = "P";
+      data.item = item.find('.item.active').data('itemId');
+      console.log(data);
+      return $.ajax({
+        type: "PUT",
+        url: item.data("editUri"),
+        data: JSON.stringify(data),
+        dataType: 'json',
+        contentType: "application/json; charset=UTF-8"
+      });
+    };
+
+    PackingListEditor.prototype.add_on_clicks = function() {
+      var control, fn, fn1, fn2, item_name, item_quantity, j, k, l, len, len1, len2, ref, ref1, ref2;
+      ref = $(".change-item.carousel-control");
+      fn = (function(_this) {
+        return function(control) {
+          return $(control).on("click", function(event) {
+            return setTimeout(function() {
+              var item, item_id;
+              item_id = $(control).data('itemId');
+              item = $("#" + item_id)[0];
+              return _this.update_item({
+                item: item
+              });
+            }, 1000);
+          });
+        };
+      })(this);
+      for (j = 0, len = ref.length; j < len; j++) {
+        control = ref[j];
+        fn(control);
+      }
+      $.fn.editable.defaults.mode = 'inline';
+      ref1 = $('.change-item.item-name');
+      fn1 = (function(_this) {
+        return function(item_name) {
+          return $(item_name).editable({
+            showbuttons: false,
+            type: 'text',
+            success: function(response, new_name) {
+              var item, item_id;
+              item_id = $(item_name).data('itemId');
+              item = $("#" + item_id)[0];
+              return _this.update_item({
+                item: item,
+                name: new_name
+              });
+            }
+          });
+        };
+      })(this);
+      for (k = 0, len1 = ref1.length; k < len1; k++) {
+        item_name = ref1[k];
+        fn1(item_name);
+      }
+      ref2 = $('.change-item.item-quantity');
+      fn2 = (function(_this) {
+        return function(item_quantity) {
+          return $(item_quantity).editable({
+            showbuttons: false,
+            type: 'select',
+            source: function() {
+              var i, m, values;
+              values = [];
+              for (i = m = 1; m <= 10; i = ++m) {
+                values.push({
+                  value: i,
+                  text: "" + i
+                });
+              }
+              return values;
+            },
+            success: function(response, new_quantity) {
+              var item, item_id;
+              item_id = $(item_quantity).data('itemId');
+              item = $("#" + item_id)[0];
+              return _this.update_item({
+                item: item,
+                quantity: new_quantity
+              });
+            }
+          });
+        };
+      })(this);
+      for (l = 0, len2 = ref2.length; l < len2; l++) {
+        item_quantity = ref2[l];
+        fn2(item_quantity);
+      }
+      return $('.packing-list-item .delete-item').on("click", (function(_this) {
+        return function(event) {
+          return _this.delete_item(event.toElement.closest('.packing-list-item'));
+        };
+      })(this));
     };
 
     return PackingListEditor;

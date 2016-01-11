@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from tastypie.api import Api
 from django.contrib import admin
 
-from common.api import RouteResource, ItemResource
+from common.api import RouteResource, ItemResource, PackingListItemResource
 from common.views.home import home
 from common.views import route, item, packing_list
 
@@ -10,6 +10,8 @@ from common.views import route, item, packing_list
 v1_api = Api(api_name='v1')
 v1_api.register(RouteResource())
 v1_api.register(ItemResource())
+v1_api.register(PackingListItemResource())
+
 
 
 urlpatterns = patterns('',
@@ -24,9 +26,12 @@ urlpatterns = patterns('',
     url(r'^route/(?P<route_id>[0-9]+)/view/?$', route.view, name='view-route'),
 
     url(r'^items/upload/?$', item.upload, name='upload-mec-items'),
-	
-	url(r'^packing/lists/create/?$', packing_list.create, name='create-packing-list'),
-    url(r'^packing/lists/(?P<packing_list_id>[0-9]+)/edit/?$', packing_list.edit, name='edit-packing-list'),
-    url(r'^packing/lists/items/search/?$', packing_list.search, name='search-packing-list'),
+    
+    url(r'^lists/?$', packing_list.list_packing_lists, name='list-packing-lists'),	
+	url(r'^list/create/?$', packing_list.create, name='create-packing-list'),
+    url(r'^list/(?P<packing_list_id>[0-9]+)/edit/?$', packing_list.edit, name='edit-packing-list'),
+    url(r'^list/(?P<packing_list_id>[0-9]+)/item/add/?$', packing_list.add_item, name='add-packing-list-item'),
+    url(r'^list/(?P<packing_list_id>[0-9]+)/item/(?P<packing_list_item_id>[0-9]+)/edit/?$', packing_list.edit_item, name='edit-packing-list-item'),
+    url(r'^list/items/search/?$', packing_list.search, name='search-packing-list'),
 )
 

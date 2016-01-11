@@ -24,6 +24,9 @@ SECRET_KEY = '98o90!*7b)1_70&v6vwf_0p+hqy&6x_7#9upnh$=j!j7(o76#4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 TEMPLATE_DEBUG = True
+TASTYPIE_FULL_DEBUG = True
+TASTYPIE_ALLOW_MISSING_SLASH = True
+TASTYPIE_DEFAULT_FORMATS = ['json', 'xml']
 
 ALLOWED_HOSTS = []
 

@@ -14,14 +14,16 @@ class window.PackingListEditor
 					quantity: 12,
 					search_text: search_text,
 					csrfmiddlewaretoken: csrf_token },
-				success: @update_items,
+				success: @add_item,
 				failure: @ajax_failure,
 				dataType: 'json'
 			});	
 		)
+		@add_on_clicks()
 
-	ajax_failure: ->
+	ajax_failure: (data) ->
 		console.log "failed"
+		console.log data
 
 	uuid = ->
 	  'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) ->
@@ -30,47 +32,81 @@ class window.PackingListEditor
 	    v.toString(16)
 	  )
 
-	update_items: (data) ->
-		id = uuid()
-		item_carousel = $('<div />', {
-			"id": id,
-			"class": "packing-list-item carousel slide col-md-2",
-			"data-ride": "carousel"})
-		$("#items").prepend item_carousel
+	add_item: (data) =>
+		console.log data.html
+		$("#items").prepend data.html
+		@add_on_clicks()
 
-		item_html = $('<div />', {
-			"class": 'carousel-inner',
-			"role": "listbox",
-		})
-		item_carousel.prepend item_html
+	delete_item: (item) ->
+		item = $(item)
+		$.ajax
+			type: "DELETE",
+			url: item.data("editUri"),
+			data: JSON.stringify({}),
+			dataType: 'json',
+			contentType: "application/json; charset=UTF-8",
+			success: ->
+				item.remove()
 
-		first = true
-		for item in data.items
-			div_class = "item"
-			if first
-				div_class += " active"
-				first = false
+	update_item: (data) ->
+		console.log data.item
+		item = $(data.item)
+		data.id = item.attr('id')
+		data.name = data.name || item.find(".item-name").innerHTML
+		data.quantity = data.quantity || item.find(".item-quantity")[0].innerHTML
+		data.csrfmiddlewaretoken = item.data('csrf')
+		data.item_type = "P"
+		data.item = item.find('.item.active').data('itemId')
 
-			slide = $('<div />', {"class": div_class,})
-			slide.appendTo(item_html)
-			img = $('<img />', {"src": item.img_href,})
-			img.appendTo(slide)
+		console.log data
 
-		left_html = $('<a class="left carousel-control" href="#'+id+'" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>')
-		item_carousel.append left_html
+		$.ajax
+			type: "PUT",
+			url: item.data("editUri"),
+			data: JSON.stringify(data),
+			dataType: 'json',
+			contentType: "application/json; charset=UTF-8",
 
-		right_html = $('<a class="right carousel-control" href="#'+id+'" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>')
-		item_carousel.append right_html
+	add_on_clicks: =>
+		for control in $(".change-item.carousel-control")
+			do (control) =>
+				$(control).on "click", (event) =>
+					setTimeout(=>
+						item_id = $(control).data('itemId')
+						item = $("#"+item_id)[0]
+						@update_item {item:item}
+					, 1000)
+		
+		$.fn.editable.defaults.mode = 'inline'
+		for item_name in $('.change-item.item-name')
+			do (item_name) =>
+				$(item_name).editable {
+					showbuttons: false,
+					type: 'text',
+					success: (response, new_name) =>
+						item_id = $(item_name).data('itemId')
+						item = $("#"+item_id)[0]
+						@update_item {item: item, name:new_name}
+				}
 
-		item_carousel.carousel({
-        	interval: 0
-    	})
+		for item_quantity in $('.change-item.item-quantity')
+			do (item_quantity) =>
+				$(item_quantity).editable {
+					showbuttons: false,
+					type: 'select',
+					source: ->
+						values = []
+						for i in [1..10]
+							values.push {value: i, text: ""+i}
+						return values
+					success: (response, new_quantity) =>
+						item_id = $(item_quantity).data('itemId')
+						item = $("#"+item_id)[0]
+						@update_item {item:item, quantity:new_quantity}
+				}
+		$('.packing-list-item .delete-item').on "click", (event) =>
+			@delete_item event.toElement.closest('.packing-list-item')
+
 
 $(document).ready ->
   new window.PackingListEditor()
