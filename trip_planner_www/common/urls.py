@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from tastypie.api import Api
 from django.contrib import admin
 
-from common.api import RouteResource, ItemResource, PackingListItemResource
+from common.api import RouteResource, ItemResource, PackingListResource, PackingListItemResource
 from common.views.home import home
 from common.views import route, item, packing_list
 
@@ -10,6 +10,7 @@ from common.views import route, item, packing_list
 v1_api = Api(api_name='v1')
 v1_api.register(RouteResource())
 v1_api.register(ItemResource())
+v1_api.register(PackingListResource())
 v1_api.register(PackingListItemResource())
 
 

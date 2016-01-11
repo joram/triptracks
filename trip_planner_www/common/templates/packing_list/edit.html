@@ -17,7 +17,11 @@
 			<input id="search_text" type="text"></input>
 		</form>
 	</div>
-	<div class="col-md-12 text-center"><h3>{{ packing_list.name }}</h3></div>
+	<div class="col-md-12 text-center">
+		<h3>
+			<a id="packing-list-name" class="editable editable-click">{{ packing_list.name }}</a>
+		</h3>
+	</div>
 	<div id="items">
 		{% for item in packing_list.items %}
 			{% include 'packing_list/_packing_list_item.html' with packing_list_item=item %}

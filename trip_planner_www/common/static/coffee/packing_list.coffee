@@ -20,17 +20,26 @@ class window.PackingListEditor
 			});	
 		)
 		@add_on_clicks()
+		$('#packing-list-name').editable {
+			showbuttons: false,
+			type: 'text',
+			success: (response, new_name) =>
+				@update_list({name:new_name})
+		}
 
 	ajax_failure: (data) ->
 		console.log "failed"
 		console.log data
 
-	uuid = ->
-	  'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) ->
-	    r = Math.random() * 16 | 0
-	    v = if c is 'x' then r else (r & 0x3|0x8)
-	    v.toString(16)
-	  )
+	update_list: (data) ->
+		console.log data
+		list_id = 1
+		$.ajax
+			type: "PUT",
+			url: "/api/v1/packing_list/"+list_id+"/",
+			data: JSON.stringify(data),
+			dataType: 'json',
+			contentType: "application/json; charset=UTF-8",
 
 	add_item: (data) =>
 		console.log data.html
@@ -109,4 +118,4 @@ class window.PackingListEditor
 
 
 $(document).ready ->
-  new window.PackingListEditor()
+	new window.PackingListEditor()

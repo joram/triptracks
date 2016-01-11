@@ -6,7 +6,7 @@ from django.contrib.gis.geos import MultiPoint, GEOSGeometry, fromstr
 from django.core.serializers import serialize
 from django.shortcuts import get_object_or_404
 
-from common.models import Route, Item, PackingListItem
+from common.models import Route, Item, PackingList, PackingListItem
 
 import json
 from tastypie.serializers import Serializer
@@ -48,6 +48,16 @@ class ItemResource(ModelResource):
 		resource_name = 'item'
 		allowed_methods = ('get', 'post', 'put')
 		authorization = authorization.Authorization()
+
+
+class PackingListResource(ModelResource):
+
+	class Meta:
+		queryset = PackingList.objects.all()
+		resource_name = 'packing_list'
+		allowed_methods = ['get', 'post', 'put', 'delete', 'patch']
+		authorization = authorization.Authorization()
+		fields = ['id', 'name']
 
 
 class PackingListItemResource(ModelResource):

@@ -2,8 +2,6 @@
   var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   window.PackingListEditor = (function() {
-    var uuid;
-
     function PackingListEditor() {
       this.add_on_clicks = bind(this.add_on_clicks, this);
       this.add_item = bind(this.add_item, this);
@@ -29,6 +27,17 @@
         };
       })(this));
       this.add_on_clicks();
+      $('#packing-list-name').editable({
+        showbuttons: false,
+        type: 'text',
+        success: (function(_this) {
+          return function(response, new_name) {
+            return _this.update_list({
+              name: new_name
+            });
+          };
+        })(this)
+      });
     }
 
     PackingListEditor.prototype.ajax_failure = function(data) {
@@ -36,12 +45,16 @@
       return console.log(data);
     };
 
-    uuid = function() {
-      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r, v;
-        r = Math.random() * 16 | 0;
-        v = c === 'x' ? r : r & 0x3 | 0x8;
-        return v.toString(16);
+    PackingListEditor.prototype.update_list = function(data) {
+      var list_id;
+      console.log(data);
+      list_id = 1;
+      return $.ajax({
+        type: "PUT",
+        url: "/api/v1/packing_list/" + list_id + "/",
+        data: JSON.stringify(data),
+        dataType: 'json',
+        contentType: "application/json; charset=UTF-8"
       });
     };
 
