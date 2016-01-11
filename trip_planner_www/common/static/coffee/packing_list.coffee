@@ -2,6 +2,7 @@
 class window.PackingListEditor
 
 	constructor: () ->
+		$('.carousel').carousel()
 		$( "#search" ).submit( (event) =>
 			event.preventDefault()
 			search_text = $("#search_text").val()
@@ -24,14 +25,14 @@ class window.PackingListEditor
 			showbuttons: false,
 			type: 'text',
 			success: (response, new_name) =>
-				@update_list({name:new_name})
+				@update_packing_list({name:new_name})
 		}
 
 	ajax_failure: (data) ->
 		console.log "failed"
 		console.log data
 
-	update_list: (data) ->
+	update_packing_list: (data) ->
 		console.log data
 		list_id = 1
 		$.ajax
@@ -42,7 +43,6 @@ class window.PackingListEditor
 			contentType: "application/json; charset=UTF-8",
 
 	add_item: (data) =>
-		console.log data.html
 		$("#items").prepend data.html
 		@add_on_clicks()
 
@@ -57,17 +57,14 @@ class window.PackingListEditor
 			success: ->
 				item.remove()
 
-	update_item: (data) ->
-		console.log data.item
-		item = $(data.item)
-		data.id = item.attr('id')
-		data.name = data.name || item.find(".item-name").innerHTML
-		data.quantity = data.quantity || item.find(".item-quantity")[0].innerHTML
-		data.csrfmiddlewaretoken = item.data('csrf')
-		data.item_type = "P"
-		data.item = item.find('.item.active').data('itemId')
-
-		console.log data
+	update_item: (item) ->
+		data = {
+			id: $(item).data('id'),
+			item: $(item).data('item'),
+			item_type: $(item).data('item-type'),
+			name: $(item).data('name'),
+			quantity: $(item).data('quantity'),
+		}
 
 		$.ajax
 			type: "PUT",
@@ -77,25 +74,25 @@ class window.PackingListEditor
 			contentType: "application/json; charset=UTF-8",
 
 	add_on_clicks: =>
-		for control in $(".change-item.carousel-control")
-			do (control) =>
-				$(control).on "click", (event) =>
-					setTimeout(=>
-						item_id = $(control).data('itemId')
-						item = $("#"+item_id)[0]
-						@update_item {item:item}
-					, 1000)
+		$(".packing-list-item.carousel").on 'slid.bs.carousel', (event) =>
+			item = $(event.target)
+			item.data('item', item.find(".item.active").data('itemId'))
+			@update_item item
+
+		$('.packing-list-item .delete-item').on "click", (event) =>
+			@delete_item event.toElement.closest('.packing-list-item')
 		
 		$.fn.editable.defaults.mode = 'inline'
+
 		for item_name in $('.change-item.item-name')
 			do (item_name) =>
 				$(item_name).editable {
 					showbuttons: false,
 					type: 'text',
 					success: (response, new_name) =>
-						item_id = $(item_name).data('itemId')
-						item = $("#"+item_id)[0]
-						@update_item {item: item, name:new_name}
+						item = $(item_name).closest(".packing-list-item")
+						item.data('name', new_name)
+						@update_item item
 				}
 
 		for item_quantity in $('.change-item.item-quantity')
@@ -109,12 +106,10 @@ class window.PackingListEditor
 							values.push {value: i, text: ""+i}
 						return values
 					success: (response, new_quantity) =>
-						item_id = $(item_quantity).data('itemId')
-						item = $("#"+item_id)[0]
-						@update_item {item:item, quantity:new_quantity}
+						item = $(item_quantity).closest(".packing-list-item")
+						item.data('quantity', new_quantity)
+						@update_item item
 				}
-		$('.packing-list-item .delete-item').on "click", (event) =>
-			@delete_item event.toElement.closest('.packing-list-item')
 
 
 $(document).ready ->

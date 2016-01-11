@@ -2,25 +2,30 @@
 	id="{{ packing_list_item.id }}"
 	class="packing-list-item carousel slide col-xs-2"
 	data-ride="carousel"
-	data-csrf="{{ csrf_token }}"
 	data-interval='false'
-	data-edit-uri="/api/v1/packing_list_item/{{ packing_list_item.id }}/"
-	data-packing-list-item-id="{{ packing_list_item.id }}">
+
+ 	data-edit-uri="/api/v1/packing_list_item/{{ packing_list_item.id }}/"
+	data-csrf="{{ csrf_token }}"
+	data-id="{{ packing_list_item.id }}"
+	data-name="{{ packing_list_item.name }}"
+	data-orginal-name="{{ packing_list_item.original_name }}"
+	data-quantity="{{ packing_list_item.quantity }}"
+	data-item="{{ packing_list_item.item.id }}"
+	data-item-type="{{ packing_list_item.item_type }}"
+	data-item-uri="/api/v1/item/{{ item.id }}/"
+	>
+
 	<div class="carousel-inner" role="listbox">
 		{% for item, primary in packing_list_item.items %}
-		<div
-			class="item {% if primary %}active{% endif %}"
-			data-packing-list-item-id="{{ packing_list_item.id }}"
-			data-item-id="{{ item.id }}"
-			data-item-uri="/api/v1/item/{{ item.id }}/">
+		<div class="item{% if primary %} active{% endif %}" data-item-id="{{ item.id }}">
 			<img src="{{ item.img_href }}">
 		</div>
 		{% endfor %}
-		<a class="left carousel-control change-item" href="#{{ packing_list_item.id }}" role="button" data-slide="prev" data-item-id="{{ packing_list_item.id }}">
+		<a class="left carousel-control" href="#{{ packing_list_item.id }}" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="right carousel-control change-item" href="#{{ packing_list_item.id }}" role="button" data-slide="next" data-item-id="{{ packing_list_item.id }}">
+		<a class="right carousel-control" href="#{{ packing_list_item.id }}" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
@@ -28,16 +33,11 @@
 
 	<div class="packing-list-item-text text-center">
 		<h3>
-		  <a
-		  class="editable editable-click change-item item-name"
-		  data-orginal-name="{{ packing_list_item.original_name }}"
-		  data-item-id="{{ packing_list_item.id }}">{{ packing_list_item.name }}</a>
+		  <a class="editable editable-click change-item item-name">{{ packing_list_item.name }}</a>
 	    </h3>
 		x
-		<a 
-		class="editable editable-click change-item item-quantity"
-		data-item-id="{{ packing_list_item.id }}">{{ packing_list_item.quantity }}</a>
-		<a class="delete-item" data-item-id="{{ packing_list_item.id }}">
+		<a class="editable editable-click change-item item-quantity">{{ packing_list_item.quantity }}</a>
+		<a class="delete-item">
 			<i class="fa fa-trash-o icon-2"></i>
 		</a>
 	</div>
