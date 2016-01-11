@@ -5,3 +5,4 @@ node_modules/*
 */generated-js/*
 */compiled-js/*
 data/*
+trip_planner_www/common/static/compiled-js/*.js
