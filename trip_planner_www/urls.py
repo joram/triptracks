@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from trip_planner_www.trip_planner_www.urls import urlpatterns as tpwww_urlpatterns 
-from trip_planner_www.common.urls import urlpatterns as common_urlpatterns 
+from trip_planner_www.urls import urlpatterns as tpwww_urlpatterns 
+from common.urls import urlpatterns as common_urlpatterns 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
