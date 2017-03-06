@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-GOOGLE_MAPS_API_KEY = os.environ.get("AIzaSyAntpb0h6GbbKCowtWxK6kes6RCxEQv7o0")
+GOOGLE_MAPS_API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY")
 # Application definition
 
 INSTALLED_APPS = [
