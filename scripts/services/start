@@ -1,0 +1,4 @@
+#!/bin/bash
+#? Start Docker service containers
+
+docker run --name trip-planner-postgis -e POSTGRES_PASSWORD=password -d mdillon/postgis
