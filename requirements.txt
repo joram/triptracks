@@ -3,6 +3,7 @@ jsonfield
 django_admin_bootstrapped
 django-geoip
 django-tastypie
+dj_database_url
 #django-progressbarupload # has issues with simple json
 psycopg2==2.6.1
 pykml
