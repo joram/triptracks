@@ -1,3 +1,5 @@
 #!/bin/bash
 #? Destroy Docker service containers
 
+ docker rmi mdillon/postgis -f
+ docker rm trip-planner-postgis -f

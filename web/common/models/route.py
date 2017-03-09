@@ -3,26 +3,27 @@ from django.contrib.gis.geos import LineString, MultiLineString
 from django.conf import settings
 
 import os
-import json
 import zipfile
-from django.contrib.gis.gdal import DataSource
 from pykml import parser
 
 
 class RouteManager(models.GeoManager):
 
-    def _load_kml_content(self, filename):
+    @staticmethod
+    def _load_kml_content(filename):
         f = open(filename)
         return [f.read()]
 
-    def _load_kmz_content(self, filepath):
+    @staticmethod
+    def _load_kmz_content(filepath):
         zf = zipfile.ZipFile(filepath)
         file_contents = []
         for info in zf.infolist():
             file_contents.append(zf.read(info.filename))
         return file_contents
 
-    def _load_kml_str(self, node):
+    @staticmethod
+    def _load_kml_str(node):
         coords = []
         for el in node.findall(".//{http://www.google.com/kml/ext/2.2}coord"):
             (lat, lng, alt) = el.text.split(" ")
@@ -58,10 +59,11 @@ class RouteManager(models.GeoManager):
             filepath = os.path.join(tracks_dir, filename)
             try:
                 route = self.route_from_file(filepath)
-                print "%s %s" % (route, filepath) 
+                print "%s %s" % (route, filepath)
             except Exception as e:
                 print filepath
                 print e
+
 
 class Route(models.Model):
     name = models.CharField(max_length=120)
@@ -77,8 +79,8 @@ class Route(models.Model):
         return self.lines[0][0::nth_vertex]
 
     def save(self, *args, **kwargs):
-        envelope = self.lines.envelope
-        self.center = self.lines.centroid
+        if self.lines:
+            self.center = self.lines.centroid
         return super(Route, self).save(*args, **kwargs)
 
     @property
