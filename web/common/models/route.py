@@ -9,21 +9,18 @@ from pykml import parser
 
 class RouteManager(models.GeoManager):
 
-    @staticmethod
-    def _load_kml_content(filename):
+    def _load_kml_content(self, filename):
         f = open(filename)
         return [f.read()]
 
-    @staticmethod
-    def _load_kmz_content(filepath):
+    def _load_kmz_content(self, filepath):
         zf = zipfile.ZipFile(filepath)
         file_contents = []
         for info in zf.infolist():
             file_contents.append(zf.read(info.filename))
         return file_contents
 
-    @staticmethod
-    def _load_kml_str(node):
+    def _load_kml_str(self, node):
         coords = []
         for el in node.findall(".//{http://www.google.com/kml/ext/2.2}coord"):
             (lat, lng, alt) = el.text.split(" ")

@@ -4,6 +4,7 @@ from tastypie.api import Api
 from api import RouteResource, ItemResource, PackingListResource, PackingListItemResource
 from views.home import home
 from views import route, item, packing_list
+from django.views.generic.base import RedirectView
 
 
 v1_api = Api(api_name='v1')
@@ -13,11 +14,14 @@ v1_api.register(PackingListResource())
 v1_api.register(PackingListItemResource())
 
 
+favicon_view = RedirectView.as_view(url='/static/img/favicon.png', permanent=True)
 
 urlpatterns = [
-    url(r'^/?$', home, name='home'),
-    url(r'^api/', include(v1_api.urls)),
 
+    url(r'^/?$', home, name='home'),
+    url(r'^favicon.ico', favicon_view),
+
+    url(r'^api/', include(v1_api.urls)),
     url(r'^routes/?$', route.list_routes, name='list-routes'),
     url(r'^routes/load/demo/data/', route.tmp_load_data, name='demo-routes'),
     url(r'^routes/upload/', route.upload, name='upload-routes'),
