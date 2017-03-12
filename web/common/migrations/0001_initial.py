@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models, migrations
 from django.conf import settings
 import django.contrib.gis.db.models.fields
+from django.contrib.postgres.operations import CreateExtension
+from django.db import migrations
 
 
 class Migration(migrations.Migration):
@@ -13,6 +15,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        CreateExtension('postgis'),
+        CreateExtension('postgis_topology'),
         migrations.CreateModel(
             name='Itinerary',
             fields=[

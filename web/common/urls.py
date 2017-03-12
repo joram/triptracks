@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from tastypie.api import Api
 
 from api import RouteResource, ItemResource, PackingListResource, PackingListItemResource
@@ -14,7 +14,7 @@ v1_api.register(PackingListItemResource())
 
 
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^/?$', home, name='home'),
     url(r'^api/', include(v1_api.urls)),
 
@@ -33,5 +33,5 @@ urlpatterns = patterns('',
     url(r'^list/(?P<packing_list_id>[0-9]+)/item/add/?$', packing_list.add_item, name='add-packing-list-item'),
     url(r'^list/(?P<packing_list_id>[0-9]+)/item/(?P<packing_list_item_id>[0-9]+)/edit/?$', packing_list.edit_item, name='edit-packing-list-item'),
     url(r'^list/items/search/?$', packing_list.search, name='search-packing-list'),
-)
+]
 

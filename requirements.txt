@@ -1,11 +1,11 @@
-Django==1.8
+Django==1.10.6
 jsonfield
 django_admin_bootstrapped
 django-geoip
 django-tastypie
 dj_database_url
 #django-progressbarupload # has issues with simple json
-psycopg2==2.6.1
+psycopg2==2.7
 pykml
 gunicorn
 pyelasticsearch

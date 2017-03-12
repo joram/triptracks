@@ -1,4 +1,5 @@
 setup_env.sh
+.venv
 *.sqlite3
 *.pyc
 node_modules/*
@@ -7,3 +8,4 @@ node_modules/*
 data/*
 trip_planner_www/common/static/compiled-js/*.js
 scripts/.activate
+.idea
