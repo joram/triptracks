@@ -1,4 +1,4 @@
-Django==1.10.6
+Django==1.11.1
 jsonfield
 django_admin_bootstrapped
 django-geoip
@@ -13,3 +13,4 @@ django-haystack
 #haystack  # apparently the order matters... maybe: elastic, haystack, dj-haystack?
 BeautifulSoup
 html
+gpxpy

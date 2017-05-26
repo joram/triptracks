@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+import django
+django.setup()
+
+import os
+from django.core.files import File
+from apps.common.models import TracksFile, Route
+
+cwd = os.path.dirname(os.path.realpath(__file__))
+data_dir = os.path.join(cwd, "../data/trailpeak")
+
+
+def gpx_files():
+    count = 0
+    for filename in os.listdir(data_dir):
+        if filename.endswith(".gpx"):
+            filepath = os.path.join(data_dir, filename)
+            content = open(filepath).read()
+            if not content.startswith("<html>"):
+                parts = filename.split("_")
+                id = parts[1]
+                name = parts[2]
+                yield filepath, name, id
+                count += 1
+
+
+def load_file(filepath, name, id):
+    print "loading {} {} {}".format(id, name, filepath)
+    with open(filepath) as f:
+        tf = TracksFile.objects.create(tracks_file=File(f, name=name))
+        return Route.objects.create_from_route(tf)
+
+
+def load_all_files():
+    for filepath, name, id in gpx_files():
+        load_file(filepath, name, id)
+
+Route.objects.all().delete()
+TracksFile.objects.all().delete()
+load_all_files()
+# route = load_file(os.path.join(data_dir, "trail_2141_ArrowSmith_judge.gpx"), "Judges Route.gpx", 2141)
+# print route
+# print len(route.lines), len(route.lines[0])
+# print route.id
