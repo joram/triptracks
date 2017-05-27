@@ -14,3 +14,6 @@ django-haystack
 BeautifulSoup
 html
 gpxpy
+shortuuid
+python-geoip
+python-geoip-geolite2

@@ -27,18 +27,32 @@ function load_all_routes_google_maps(api_key){
 }
 
 function build_map_all_routes() {
-    let map_element = document.getElementById("map");
 
-    map = new google.maps.Map(map_element, {});
-    map.setZoom(15);
-    map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
-    map_element.map = map;
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var center = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
 
-    return $.ajax({
-        method: "GET",
-        url: `/api/routes/all`,
-        success: load_map_all_routes_data
+        let map_element = document.getElementById("map");
+        map = new google.maps.Map(map_element, {
+            zoom: 12,
+            center: center,
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+        });
+        map_element.map = map;
+
+        google.maps.event.addListener(map, 'bounds_changed', function() {
+            bounds = map.getBounds().toUrlValue();
+            return $.ajax({
+                method: "GET",
+                url: `/api/routes/all?bounds=${bounds}`,
+                success: load_routes_data
+            });
+        });
+
     });
+
 }
 
 
@@ -53,66 +67,59 @@ function build_map() {
     return $.ajax({
         method: "GET",
         url: `/api/v1/route/${this.route_id}/`,
-        success: load_map_data
+        success: load_route_data
     });
 }
 
-function load_map_all_routes_data(data) {
-    first_route = data[0];
-    console.log(first_route);
-    center = {
-        lat: parseFloat(first_route['center']['coordinates'][0]),
-        lng: parseFloat(first_route['center']['coordinates'][1])
-    }
-    let map_element = document.getElementById("map");
-    map_element.map.setCenter(center);
-
+function load_routes_data(data) {
     $.each(data, (index, route) => {
-      console.log("loading route");
-        load_route(route);
+        load_route(route, false);
     });
 }
 
-function load_map_data(data) {
-  load_route(data)
+function load_route_data(data) {
+    load_route(data, true)
 }
 
-function load_route(data) {
-    center = {
-        lat: parseFloat(data['center']['coordinates'][0]),
-        lng: parseFloat(data['center']['coordinates'][1])
-    }
-
+function load_route(data, recenter) {
     let map_element = document.getElementById("map");
-    map_element.lines = [];
-    map_element.map.setCenter(center);
 
-//    if (data['markers'] !== null) {
-//        $.each(data['markers']['coordinates'], this.add_marker);
-//    }
+    if (recenter && data['center'] !== null) {
+        center = {
+            lat: parseFloat(data['center']['coordinates'][0]),
+            lng: parseFloat(data['center']['coordinates'][1])
+        }
+        map_element.map.setCenter(center);
+    }
 
     if (data['lines'] !== null) {
         $.each(data['lines']['coordinates'], (index, line) => {
-            add_line(map_element.map, line);
+            add_line(line);
         });
     }
 }
 
 
-function add_line(map, line_coords) {
-    let line_coordinates = [];
-    $.each(line_coords, (index, point) => line_coordinates.push({lat: point[0], lng: point[1]}));
+function add_line(line_coords) {
+    let path = [];
+    for (var j = 0; j < line_coords.length; j++) {
+        path.push({
+            lat: parseFloat(line_coords[j][0]),
+            lng: parseFloat(line_coords[j][1])
+        })
+    }
+
+    let map_element = document.getElementById("map");
 
     line = new google.maps.Polyline({
-      path: line_coordinates,
-      geodesic: true,
-      strokeColor: '#FF0000',
-      strokeOpacity: 1.0,
-      strokeWeight: 2
+        path: path,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2,
+        map: map_element.map,
     });
 
-    line.setMap(map);
-    console.log("added a line");
 }
 
 function add_marker(coord) {

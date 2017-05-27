@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+GEOIP_PATH = os.path.join(BASE_DIR, "bin/GeoLiteCity.dat")
 
 # Application definition
 

@@ -8,6 +8,7 @@ from django.http import JsonResponse
 
 from apps.common.models import Route
 from apps.common.forms.tracks_file import TracksFileForm
+from django.contrib.gis.geos import Polygon
 
 
 def tmp_load_data(request):
@@ -24,20 +25,31 @@ def create(request):
     return redirect('edit-route', route.id)
 
 
-cached_all_routes = None
 def api_all(request):
-    global cached_all_routes
-    if cached_all_routes is not None:
-        return cached_all_routes
+    # "lat_lo,lng_lo,lat_hi,lng_hi"
+    bounds = request.GET['bounds'].split(",")
+    bbox_coords = [float(val) for val in bounds]
 
-    route = Route.objects.all()[0]
-    routes = [{
-        'center': {"coordinates": [route.center[0], route.center[1]]},
-        'name': route.name,
-        'lines': {"coordinates": [[list(p) for p in line] for line in route.lines]}
-    } for route in list(Route.objects.all())]
-    cached_all_routes = JsonResponse(routes, safe=False)
-    return cached_all_routes
+    # bbox_coords = (xmin, ymin, xmax, ymax)
+    bbox = Polygon.from_bbox(bbox_coords)
+
+    routes = []
+    qs = Route.objects.filter(lines__within=bbox)
+    print "found {} routes within {}.".format(len(qs), bbox_coords)
+    for route in qs:
+
+        center = None
+        if route.center:
+            center = {"coordinates": [route.center[0], route.center[1]]}
+
+        routes.append({
+            'center': center,
+            'name': route.name,
+            'lines': {"coordinates": [[list(p) for p in line] for line in route.lines]}
+        })
+
+    return JsonResponse(routes, safe=False)
+
 
 def upload(request):
     if request.method == "POST":

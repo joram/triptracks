@@ -1,25 +1,13 @@
 from django.contrib.gis.db import models
-from django.contrib.gis.geos import LineString, MultiLineString, Point
-from django.conf import settings
-
-import os
+from django.contrib.gis.geos import LineString, MultiLineString
 import zipfile
 import gpxpy.gpx
 from pykml import parser
+from django.conf import settings
+from utils.fields import ShortUUIDField
 
 
 class RouteManager(models.GeoManager):
-
-    def _load_kml_content(self, filename):
-        f = open(filename)
-        return [f.read()]
-
-    def _load_kmz_content(self, filepath):
-        zf = zipfile.ZipFile(filepath)
-        file_contents = []
-        for info in zf.infolist():
-            file_contents.append(zf.read(info.filename))
-        return file_contents
 
     def _load_kml_str(self, node):
         coords = []
@@ -32,59 +20,68 @@ class RouteManager(models.GeoManager):
             coords.append(coord)
         return coords
 
-    def route_from_gpx(self, tracks_file):
+    def _lines_from_gpx(self, tracks_file):
         gpx = gpxpy.parse(tracks_file.tracks_file)
-        line_tuples = []
+        lines = []
         for track in gpx.tracks:
             for segment in track.segments:
+                line = []
                 for point in segment.points:
-                    line_tuples.append((point.latitude, point.longitude, point.elevation))
-
-        for waypoint in gpx.waypoints:
-            line_tuples.append((waypoint.latitude, waypoint.longitude, 0))
+                    line.append((point.latitude, point.longitude, point.elevation))
+                lines.append(line)
 
         for route in gpx.routes:
+            line = []
             for point in route.points:
-                line_tuples.append((point.latitude, point.longitude, point.elevation))
+                line.append((point.latitude, point.longitude, point.elevation))
+            lines.append(line)
 
-        return line_tuples
+        return lines
 
-    def route_from_file(self, filepath, max_vertices=100):
-        line_tuples = []
-        if filepath.endswith("kmz"):
-            contents = self._load_kmz_content(filepath)
-            for content in contents:
-                root = parser.fromstring(content)
-                line_tuples = self._load_kml_str(root)
+    def _lines_from_kmz(self, tracks_file):
+        lines = []
 
-        if filepath.endswith(".kml"):
-            contents = self._load_kml_content(filepath)
-            for content in contents:
-                root = parser.fromstring(content)
-                line_tuples = self._load_kml_str(root)
+        zf = zipfile.ZipFile(tracks_file.tracks_file)
+        contents = []
+        for info in zf.infolist():
+            contents.append(zf.read(info.filename))
 
-        name = filepath  # TODO
-        return self._route_from_line(line_tuples, name)
+        for content in contents:
+            root = parser.fromstring(content)
+            lines = self._load_kml_str(root)
+        return lines
 
-    def create_from_route(self, tracks_file):
-        line_tuples = []
+    def _lines_from_kml(self, tracks_file):
+        lines = []
+
+        contents = tracks_file.tracks_file.read().split["\n"]
+        for content in contents:
+            root = parser.fromstring(content)
+            lines = self._load_kml_str(root)
+
+        return lines
+
+    def create_from_route(self, tracks_file, max_vertices=1000000):
+        lines = []
+        name = tracks_file.tracks_file.name
 
         if tracks_file.tracks_file.path.endswith(".gpx"):
-            line_tuples = self.route_from_gpx(tracks_file)
+            lines = self._lines_from_gpx(tracks_file)
+        if tracks_file.tracks_file.path.endswith(".kml"):
+            lines = self._lines_from_kml(tracks_file)
+        if tracks_file.tracks_file.path.endswith(".kmz"):
+            lines = self._lines_from_kmz(tracks_file)
 
-        return self._route_from_line(line_tuples, tracks_file.tracks_file.name)
-
-    def _route_from_line(self, line_tuples, name, max_vertices=10000):
-        if len(line_tuples) < 2:
-            print "empty line"
-            return
-
-        geo_line = []
-        nth_vertex = max(1, int(len(line_tuples) / max_vertices))
-        for (lat, lng, alt) in line_tuples[0::nth_vertex]:
-            geo_line.append((lat, lng))
-        line = LineString(geo_line)
-        lines = MultiLineString([line])
+        geo_lines = []
+        for line in lines:
+            if len(line) < 2:
+                continue
+            geo_line = []
+            nth_vertex = max(1, int(len(line) / max_vertices))
+            for (lat, lng, alt) in line[0::nth_vertex]:
+                geo_line.append((lat, lng))
+            geo_lines.append(LineString(geo_line))
+        lines = MultiLineString(geo_lines)
 
         center = None
         if lines:
@@ -92,19 +89,9 @@ class RouteManager(models.GeoManager):
 
         return self.create(lines=lines, name=name, center=center)
 
-    def load_demo_tracks(self):
-        tracks_dir = os.path.join(settings.BASE_DIR, "../data/tracks")
-        for filename in os.listdir(tracks_dir):
-            filepath = os.path.join(tracks_dir, filename)
-            try:
-                route = self.route_from_file(filepath)
-                print "%s %s" % (route, filepath)
-            except Exception as e:
-                print filepath
-                print e
-
 
 class Route(models.Model):
+    # pub_id = ShortUUIDField(prefix="rt_")
     name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
     lines = models.MultiLineStringField(blank=True, null=True)
@@ -132,11 +119,21 @@ class Route(models.Model):
 
     @property
     def static_tile_image_src(self):
-        url = "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=200x200&maptype=roadmap"
-        url += "&center=%s,%s" % (self.center.y, self.center.x)
-        url += "&path=color:0x0000ff|weight:5"
+
+        path = "color:0x0000ff|weight:5"
         for p in self.vertices(30):
-            url += "|%s,%s" % (p[1], p[0])
+            path += "|%s,%s" % (p[1], p[0])
+
+        url = "https://maps.googleapis.com/maps/api/staticmap?" \
+              "zoom={zoom}&size={size}&maptype={maptype}&key={key}&center={center}&path={path}".format(
+                    zoom=13,
+                    size="200x200",
+                    maptype="roadmap",
+                    key=settings.GOOGLE_MAPS_API_KEY,
+                    center="{},{}".format(self.center.y, self.center.x),
+                    path=path,
+              )
+
         return url
 
     class Meta:
