@@ -17,3 +17,4 @@ gpxpy
 shortuuid
 python-geoip
 python-geoip-geolite2
+oauth2client

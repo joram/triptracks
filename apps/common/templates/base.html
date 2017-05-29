@@ -1,5 +1,6 @@
 <html>
 <head>
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -10,9 +11,13 @@
 	<link href="/static/common.css" rel="stylesheet"/>
 	<link href="/static/css/bootstrap-editable.css" rel="stylesheet"/>
 	<script src="/static/js/bootstrap-editable.js"></script>
+	<script src="/static/js/google_auth.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com">
 	{% block extra_js %}{% endblock %}
 </head>
 <body>
+	<div id="csrf_token" hidden="hidden">{{ csrf_token }}</div>
 	<nav id="main_navigation" class="navbar navbar-default">
 		<div class="container-fluid">
 

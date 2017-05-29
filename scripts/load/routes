@@ -4,7 +4,7 @@ django.setup()
 
 import os
 from django.core.files import File
-from apps.common.models import TracksFile, Route
+from apps.routes.models import TracksFile, Route
 
 cwd = os.path.dirname(os.path.realpath(__file__))
 data_dir = os.path.join(cwd, "../data/trailpeak")

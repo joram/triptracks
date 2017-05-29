@@ -8,15 +8,18 @@ BASE_DIR = os.path.normpath(os.path.join(os.path.abspath(__file__), "../../.."))
 # MUST OVERRIDE
 DATABASES = {}
 
-
 ALLOWED_HOSTS = [
     'triptracks.herokuapp.com',
     'localhost',
 ]
 
 INSTALLED_APPS = (
-    'apps.accounts',
+
     'apps.common',
+    'apps.accounts',
+    'apps.routes',
+    'apps.packing',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

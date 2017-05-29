@@ -22,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'x(a4pke^57(tl3-cko1ycgqoet*wjqiux8=t!-q&9!me_p-v$+'
 
+CSRF_USE_SESSIONS = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-GEOIP_PATH = os.path.join(BASE_DIR, "bin/GeoLiteCity.dat")
 
 # Application definition
 
@@ -74,12 +74,7 @@ WSGI_APPLICATION = 'empty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
 
 
 # Password validation

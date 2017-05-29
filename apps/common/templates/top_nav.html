@@ -1,7 +1,9 @@
 <ul class="nav navbar-nav navbar-right">
-    <li class="dropdown">
+    <div id='sign-in' class="g-signin2" data-onsuccess="onSignIn"></div>
+    <li id='signed-in-menu' class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Account
+            <div id="account_name">Account</div>
+            <img id="account_image" src=""/>
             <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
@@ -49,7 +51,9 @@
 
             <li class="dropdown-header">Account</li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li>
+                <a href="#" onclick="signOut();">Sign out</a>
+            </li>
         </ul>
     </li>
 </ul>

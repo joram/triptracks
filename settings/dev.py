@@ -2,8 +2,10 @@ from settings.base import *
 #
 SECRET_KEY = 'shouldbearealkeyonproduction'
 GOOGLE_MAPS_API_KEY = os.environ.get("TP_GOOGLE_MAPS_API_KEY")
+GOOGLE_CLIENT_ID = os.environ.get("TP_GOOGLE_CLIENT_ID")
 
 DEBUG = True
+CSRF_USE_SESSIONS = True
 
 LOGGING = {
     'version': 1,
