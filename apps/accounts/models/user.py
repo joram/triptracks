@@ -1,14 +1,16 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import UserManager
+from utils.fields import ShortUUIDField
 
 
 class User(AbstractBaseUser):
-    google_id = models.CharField(max_length=256)
-    image_url = models.CharField(max_length=256)
-    name = models.CharField(max_length=256)
+    google_credentials = JSONField()
     email = models.CharField(max_length=256, unique=True)
-    last_authenticated = models.DateTimeField()
+    is_admin = models.BooleanField(default=False)
+    pub_id = ShortUUIDField(prefix="user", max_length=128)
+
     USERNAME_FIELD = 'email'
 
     objects = UserManager()

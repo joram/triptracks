@@ -5,7 +5,7 @@ function onSignIn(googleUser) {
     var csrftoken = $("#csrf_token").text();
     console.log("csrf token: "+csrftoken)
 
-    $("#account_name").text(profile.getName())
+    $("#account_fullname").text(profile.getName())
     $("#account_image").attr('src', profile.getImageUrl());
     $("#sign-in").hide()
     $("#signed-in-menu").show()
