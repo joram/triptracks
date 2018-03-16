@@ -7,7 +7,8 @@ node_modules/*
 */compiled-js/*
 data/*
 trip_planner_www/common/static/compiled-js/*.js
-scripts/.activate
+scripts/.*
 scripts/data*
 scripts/scrapers/*
 .idea
+

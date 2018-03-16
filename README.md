@@ -3,9 +3,13 @@ This project is under development. The goal is to have a unified site to manage 
 
 ## Setup
 - pull the project: `git clone https://github.com/joram/trip-planner.git`
-- install the python packages `pip install -r requirements.txt`
+- install the project dependencies
+```bash
+sudo apt-get install libgdal-dev
+pip install -r requirements.txt
+```
 - build the docker container `bash ./scripts/services/start`
-- migrate your database `python ./scripts/manage migrate --all`
+- migrate your database `python ./scripts/manage migrate`
 - run the server `bash ./scripts/run`
 - (optional) load in some gpx files with `python ./scripts/load/trailpeak`
 - visit in the browser <a href="http://localhost:8000">localhost:8000</a>
