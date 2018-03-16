@@ -8,6 +8,6 @@ node_modules/*
 data/*
 trip_planner_www/common/static/compiled-js/*.js
 scripts/.activate
-scripts/data*
+./data*
 scripts/scrapers/*
 .idea
