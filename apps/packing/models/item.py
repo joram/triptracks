@@ -1,6 +1,6 @@
 from django.db import models
 from jsonfield import JSONField
-from scripts.scrapers.mec import ScrapeMEC
+from scrapers import ScrapeMEC
 import HTMLParser
 parser = HTMLParser.HTMLParser()
 import unicodedata
