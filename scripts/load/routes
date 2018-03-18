@@ -1,9 +1,12 @@
 #!/usr/bin/env python
-import django
 import os
-
+import sys
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.dev")
-# django.setup()
+root_path = os.path.abspath(os.path.split(__file__)[0])
+sys.path.insert(0, os.path.join(root_path, 'trip-planner'))
+sys.path.insert(0, root_path)
+import django
+django.setup()
 
 from django.conf import settings
 from django.core.files import File
@@ -18,12 +21,14 @@ def load_file(filepath):
         name = os.path.basename(filepath)
 
         qs1 = TracksFile.objects.filter(filename=name)
+        qs1_exists = qs1.exists()
         tf = qs1[0] if qs1.exists() else TracksFile.objects.create(tracks_file=File(f, name=name), filename=name)
 
         qs2 = Route.objects.filter(name=name)
-        route = qs2[0]  if qs2.exists() else Route.objects.create_from_route(tf, name)
+        qs2_exists = qs2.exists()
+        route = qs2[0] if qs2.exists() else Route.objects.create_from_route(tf, name)
 
-        print route.id,  qs1.exists(),  qs2.exists(), name
+        print route.id,  qs1_exists,  qs2_exists, name
         return route
 
 

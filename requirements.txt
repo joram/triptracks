@@ -1,21 +1,19 @@
-Django==1.11.1
-jsonfield
+BeautifulSoup
+Django==1.11.11
 django_admin_bootstrapped
 django-geoip
 django-tastypie
-dj_database_url
-#django-progressbarupload # has issues with simple json
-psycopg2==2.7
-pykml
-gunicorn
-pyelasticsearch
+django-uuidfield
 django-haystack
-#haystack  # apparently the order matters... maybe: elastic, haystack, dj-haystack?
-BeautifulSoup
-html
+dj_database_url
+gunicorn
 gpxpy
-shortuuid
+html
+jsonfield
+oauth2client
+pyelasticsearch
 python-geoip
 python-geoip-geolite2
-oauth2client
-django-uuidfield
+psycopg2==2.7
+pykml
+shortuuid

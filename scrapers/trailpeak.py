@@ -36,6 +36,14 @@ class ScrapeTrailPeak(BaseScraper):
 
         return filename, None
 
+    def filepaths(self):
+        existing_files = os.listdir(self.data_dir)
+        for filename in existing_files:
+            filepath = os.path.join(self.data_dir, filename)
+            if filename.endswith(".gpx") and not filename.endswith("FAILED.gpx"):
+                yield filepath
+
+
 if __name__ == "__main__":
     s = ScrapeTrailPeak()
     s.debug = True

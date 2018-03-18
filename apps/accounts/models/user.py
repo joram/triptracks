@@ -6,11 +6,15 @@ from utils.fields import ShortUUIDField
 
 
 class User(AbstractBaseUser):
+
+    USERNAME_FIELD = 'email'
+
+    objects = UserManager()
+
     google_credentials = JSONField()
     email = models.CharField(max_length=256, unique=True)
     is_admin = models.BooleanField(default=False)
     pub_id = ShortUUIDField(prefix="user", max_length=128)
 
-    USERNAME_FIELD = 'email'
-
-    objects = UserManager()
+    class Meta:
+        app_label = 'accounts'

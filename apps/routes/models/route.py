@@ -62,9 +62,8 @@ class RouteManager(models.GeoManager):
 
         return lines
 
-    def create_from_route(self, tracks_file, max_vertices=1000000):
+    def create_from_route(self, tracks_file, name, max_vertices=1000000):
         lines = []
-        name = tracks_file.tracks_file.name
 
         if tracks_file.tracks_file.path.endswith(".gpx"):
             lines = self._lines_from_gpx(tracks_file)
@@ -82,7 +81,7 @@ class RouteManager(models.GeoManager):
             for (lat, lng, alt) in line[0::nth_vertex]:
                 geo_line.append((lat, lng))
             geo_lines.append(LineString(geo_line))
-            geo_lines = MultiLineString(geo_lines)
+        geo_lines = MultiLineString(geo_lines)
 
         center = None
         if geo_lines:
@@ -112,23 +111,25 @@ class RouteManager(models.GeoManager):
         )
         return new_route
 
-
     def _reduced_lines(self, original_lines, ratio, max_vertices):
-        max_vertices = min(len(original_lines)/ratio, max_vertices)
-        step = int(len(original_lines)/max_vertices)
         lines = []
-        for orginial_line in original_lines:
+        for original_line in original_lines:
+            total_vertices = len(original_line)
+            max_vertices = min(max_vertices, int(total_vertices / ratio))
+            max_vertices = max(max_vertices, 1)
+            step = int(total_vertices / max_vertices)
+
             line = []
-            for i in range(0, len(orginial_line), step):
-                line.append(orginial_line[i])
-            line.append(orginial_line[-1])
+            for i in range(0, len(original_line)-1, step):
+                line.append(original_line[i])
+            line.append(original_line[-1])
             lines.append(line)
 
         return lines
 
 
 class Route(models.Model):
-    pub_id = ShortUUIDField(prefix="rt_")
+    pub_id = ShortUUIDField(prefix="route_", max_length=32)
     name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
     lines = models.MultiLineStringField(blank=True, null=True)
