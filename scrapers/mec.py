@@ -68,7 +68,7 @@ class ScrapeMEC(BaseScraper):
 
         return id, data
 
-
-s = ScrapeMEC()
-s.debug = True
-s.run()
+if __name__ == "__main__":
+    s = ScrapeMEC()
+    s.debug = True
+    s.run()

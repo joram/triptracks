@@ -36,7 +36,7 @@ class ScrapeTrailPeak(BaseScraper):
 
         return filename, None
 
-
-s = ScrapeTrailPeak()
-s.debug = True
-s.run()
+if __name__ == "__main__":
+    s = ScrapeTrailPeak()
+    s.debug = True
+    s.run()
