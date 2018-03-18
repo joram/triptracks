@@ -140,6 +140,9 @@ class Route(models.Model):
     center = models.PointField(blank=True, null=True)
     objects = RouteManager()
 
+    class Meta:
+        app_label = 'routes'
+
     def vertices(self, max_verts=None):
         if len(self.lines) == 0:
             return []

@@ -1,42 +1,35 @@
 #!/usr/bin/env python
 import django
-django.setup()
-
 import os
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.dev")
+# django.setup()
+
+from django.conf import settings
 from django.core.files import File
 from apps.routes.models import TracksFile, Route
+from scrapers.trailpeak import ScrapeTrailPeak
 
-cwd = os.path.dirname(os.path.realpath(__file__))
-data_dir = os.path.join(cwd, "../data/trailpeak")
-
-
-def gpx_files():
-    count = 0
-    for filename in os.listdir(data_dir):
-        if filename.endswith(".gpx"):
-            filepath = os.path.join(data_dir, filename)
-            content = open(filepath).read()
-            if not content.startswith("<html>"):
-                parts = filename.split("_")
-                id = parts[0]
-                name = parts[1]
-                yield filepath, name, id
-                count += 1
+data_dir = os.path.join(settings.BASE_DIR, "data/ScrapeTrailPeak")
 
 
-def load_file(filepath, name, id):
-    print "loading {} {} {}".format(id, name, filepath)
+def load_file(filepath):
     with open(filepath) as f:
-        tf = TracksFile.objects.create(tracks_file=File(f, name=name))
-        return Route.objects.create_from_route(tf)
+        name = os.path.basename(filepath)
 
+        qs1 = TracksFile.objects.filter(filename=name)
+        tf = qs1[0] if qs1.exists() else TracksFile.objects.create(tracks_file=File(f, name=name), filename=name)
 
-def load_all_files():
-    for filepath, name, id in gpx_files():
-        load_file(filepath, name, id)
+        qs2 = Route.objects.filter(name=name)
+        route = qs2[0]  if qs2.exists() else Route.objects.create_from_route(tf, name)
+
+        print route.id,  qs1.exists(),  qs2.exists(), name
+        return route
 
 
 if __name__ == "__main__":
-    Route.objects.all().delete()
-    TracksFile.objects.all().delete()
-    load_all_files()
+    # Route.objects.all().delete()
+    # TracksFile.objects.all().delete()
+    for filepath in ScrapeTrailPeak().filepaths():
+        load_file(filepath)
+

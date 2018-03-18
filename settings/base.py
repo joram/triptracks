@@ -1,7 +1,58 @@
 import os
-from settings.default import *
+import django
+from django.conf import settings
 
-DEBUG = True
+settings.configure(DEBUG=True)
+django.setup()
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/path/to/django/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+ROOT_URLCONF = 'urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 BASE_DIR = os.path.normpath(os.path.join(os.path.abspath(__file__), "../../.."))
 
@@ -14,7 +65,6 @@ ALLOWED_HOSTS = [
 ]
 
 INSTALLED_APPS = (
-
     'apps.common',
     'apps.accounts',
     'apps.routes',
@@ -33,65 +83,12 @@ WSGI_APPLICATION = 'wsgi.application'
 
 LOCALE_PATHS = []
 LOGGING_CONFIG = None
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse',
-        },
-        'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
-        },
-    },
-    'formatters': {
-        'django.server': {
-            '()': 'django.utils.log.ServerFormatter',
-            'format': '[%(server_time)s] %(message)s',
-        }
-    },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'filters': ['require_debug_true'],
-            'class': 'logging.StreamHandler',
-        },
-        'django.server': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'django.server',
-        },
-        'django.request': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'django.server',
-        },
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'mail_admins'],
-            'level': 'INFO',
-        },
-        'django.server': {
-            'handlers': ['django.server'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    }
-}
-
 FORCE_SCRIPT_NAME = ""
 DEFAULT_TABLESPACE = None
 DEFAULT_INDEX_TABLESPACE = None
 ABSOLUTE_URL_OVERRIDES = {}
 AUTH_USER_MODEL = 'accounts.User'
 LANGUAGES_BIDI = []
-# MIDDLEWARE_CLASSES = []
 DATABASE_ROUTERS = []
 
 CACHES = {
@@ -100,8 +97,5 @@ CACHES = {
     }
 }
 
-import django
-MEDIA_ROUTE = "uploads"
+MEDIA_ROUTE = os.path.join(BASE_DIR, "data/uploads")
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_ROUTE)
-
-print django.VERSION

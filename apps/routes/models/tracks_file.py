@@ -10,3 +10,6 @@ def tracks_file_path(instance, filename):
 class TracksFile(models.Model):
 
     tracks_file = models.FileField(upload_to=tracks_file_path)
+
+    class Meta:
+        app_label = 'routes'
