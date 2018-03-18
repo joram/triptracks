@@ -26,15 +26,18 @@ def create(request):
 
 
 def api_all(request):
+    # bbox_coords = (xmin, ymin, xmax, ymax)
     # "lat_lo,lng_lo,lat_hi,lng_hi"
     bounds = request.GET['bounds'].split(",")
     bbox_coords = [float(val) for val in bounds]
-
-    # bbox_coords = (xmin, ymin, xmax, ymax)
     bbox = Polygon.from_bbox(bbox_coords)
 
+    zoom_level = request.GET['zoom']
+    zoom_level = zoom_level if zoom_level in ["1", "2", "3", "4", "5"] else "5"
+    zoom_field_name = "lines_zoom_{}".format(zoom_level)
+
     routes = []
-    qs = Route.objects.filter(lines__within=bbox)
+    qs = Route.objects.filter(lines__within=bbox).values_list("center", "name", zoom_field_name)
     print "found {} routes within {}.".format(len(qs), bbox_coords)
     for route in qs:
 
@@ -45,7 +48,7 @@ def api_all(request):
         routes.append({
             'center': center,
             'name': route.name,
-            'lines': {"coordinates": [[list(p) for p in line] for line in route.lines]}
+            'lines': {"coordinates": route.coordinates(zoom_level)}
         })
 
     return JsonResponse(routes, safe=False)

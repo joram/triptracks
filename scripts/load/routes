@@ -18,8 +18,8 @@ def gpx_files():
             content = open(filepath).read()
             if not content.startswith("<html>"):
                 parts = filename.split("_")
-                id = parts[1]
-                name = parts[2]
+                id = parts[0]
+                name = parts[1]
                 yield filepath, name, id
                 count += 1
 
@@ -35,10 +35,8 @@ def load_all_files():
     for filepath, name, id in gpx_files():
         load_file(filepath, name, id)
 
-Route.objects.all().delete()
-TracksFile.objects.all().delete()
-load_all_files()
-# route = load_file(os.path.join(data_dir, "trail_2141_ArrowSmith_judge.gpx"), "Judges Route.gpx", 2141)
-# print route
-# print len(route.lines), len(route.lines[0])
-# print route.id
+
+if __name__ == "__main__":
+    Route.objects.all().delete()
+    TracksFile.objects.all().delete()
+    load_all_files()

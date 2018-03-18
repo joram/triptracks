@@ -41,8 +41,7 @@ class BaseScraper(object):
 
     def store_item(self, id, data):
         with open(self.item_filepath(id), "w") as f:
-            s = json.dumps(data, indent=4, sort_keys=True)
-            f.write(s)
+            f.write(data)
 
     def item_urls(self):
         raise NotImplemented()
@@ -92,5 +91,5 @@ class BaseScraper(object):
                     if self.debug:
                         print filename, url
                     self.store_item(filename, data)
-                except FailedRequest:
+                except:
                     self.store_item(id+"____FAILED", "")

@@ -5,6 +5,7 @@ import gpxpy.gpx
 from pykml import parser
 from django.conf import settings
 from utils.fields import ShortUUIDField
+import jsonfield
 
 
 class RouteManager(models.GeoManager):
@@ -81,20 +82,61 @@ class RouteManager(models.GeoManager):
             for (lat, lng, alt) in line[0::nth_vertex]:
                 geo_line.append((lat, lng))
             geo_lines.append(LineString(geo_line))
-        lines = MultiLineString(geo_lines)
+            geo_lines = MultiLineString(geo_lines)
 
         center = None
-        if lines:
-            center = lines.centroid
+        if geo_lines:
+            center = geo_lines.centroid
 
-        return self.create(lines=lines, name=name, center=center)
+        new_route = self.create(
+            lines=geo_lines,
+            name=name,
+            center=center,
+            lines_zoom_1=self._reduced_lines(lines, 1, 100),
+            lines_zoom_2=self._reduced_lines(lines, 2, 50),
+            lines_zoom_3=self._reduced_lines(lines, 3, 10),
+            lines_zoom_4=self._reduced_lines(lines, 4, 5),
+            lines_zoom_5=self._reduced_lines(lines, 5, 1),
+        )
+
+        print "{} original:{}, zooms:{}".format(
+            new_route.name.ljust(32, " "),
+            [len(line) for line in lines],
+            [[len(line) for line in zoomed_lines] for zoomed_lines in [
+                new_route.lines_zoom_1,
+                new_route.lines_zoom_2,
+                new_route.lines_zoom_3,
+                new_route.lines_zoom_4,
+                new_route.lines_zoom_5,
+            ]]
+        )
+        return new_route
+
+
+    def _reduced_lines(self, original_lines, ratio, max_vertices):
+        max_vertices = min(len(original_lines)/ratio, max_vertices)
+        step = int(len(original_lines)/max_vertices)
+        lines = []
+        for orginial_line in original_lines:
+            line = []
+            for i in range(0, len(orginial_line), step):
+                line.append(orginial_line[i])
+            line.append(orginial_line[-1])
+            lines.append(line)
+
+        return lines
 
 
 class Route(models.Model):
-    # pub_id = ShortUUIDField(prefix="rt_")
+    pub_id = ShortUUIDField(prefix="rt_")
     name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
     lines = models.MultiLineStringField(blank=True, null=True)
+    lines_zoom_1 = jsonfield.JSONField()
+    lines_zoom_2 = jsonfield.JSONField()
+    lines_zoom_3 = jsonfield.JSONField()
+    lines_zoom_4 = jsonfield.JSONField()
+    lines_zoom_5 = jsonfield.JSONField()
     center = models.PointField(blank=True, null=True)
     objects = RouteManager()
 
@@ -111,6 +153,18 @@ class Route(models.Model):
             nth_vertex = max(1, int(len(line)/max_verts))
         vertices = line[0::nth_vertex]
         return vertices
+
+    def coordinates(self, zoom_level):
+        options = {
+            "1": self.lines_zoom_1,
+            "2": self.lines_zoom_2,
+            "3": self.lines_zoom_3,
+            "4": self.lines_zoom_4,
+            "5": self.lines_zoom_5,
+        }
+        if zoom_level not in options.keys():
+            zoom_level = "5"
+        return options[zoom_level]
 
     def save(self, *args, **kwargs):
         if self.lines:
