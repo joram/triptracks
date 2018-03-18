@@ -38,9 +38,9 @@ def api_all(request):
 
     routes = []
     qs = Route.objects.filter(lines__within=bbox).values("center", "name", zoom_field_name)
-    print "found {} routes within {}.".format(len(qs), bbox_coords)
+    count = 0
     for route in qs:
-
+        count += 1
         center = route["center"]
         if center:
             center = {"coordinates": [center[0], center[1]]}
@@ -48,8 +48,9 @@ def api_all(request):
         routes.append({
             'center': center,
             'name': route["name"],
-            'lines': {"coordinates": route[zoom_field_name]}
+            'lines': {"coordinates": json.loads(route[zoom_field_name])}
         })
+    print "found {} routes within {}.".format(count, bbox_coords)
 
     return JsonResponse(routes, safe=False)
 
