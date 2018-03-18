@@ -3,6 +3,7 @@ import os
 import sys
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.dev")
 root_path = os.path.abspath(os.path.split(__file__)[0])
+root_path = os.path.join(root_path, "../..")
 sys.path.insert(0, os.path.join(root_path, 'trip-planner'))
 sys.path.insert(0, root_path)
 import django
@@ -36,5 +37,9 @@ if __name__ == "__main__":
     # Route.objects.all().delete()
     # TracksFile.objects.all().delete()
     for filepath in ScrapeTrailPeak().filepaths():
-        load_file(filepath)
+        try:
+            load_file(filepath)
+        except Exception as e:
+            print e
+            print filepath
 

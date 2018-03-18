@@ -26,7 +26,7 @@ MEDIA_ROUTE = os.path.join(BASE_DIR, "data/uploads")
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_ROUTE)
 
 ALLOWED_HOSTS = [
-    'triptracks.io',
+    'app.triptracks.io',
     'triptracks.herokuapp.com',
     'localhost',
 ]
