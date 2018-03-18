@@ -1,6 +1,6 @@
 from django.db import models
 from jsonfield import JSONField
-from scrapers import ScrapeMEC
+from scrapers.mec import ScrapeMEC
 import HTMLParser
 parser = HTMLParser.HTMLParser()
 import unicodedata
@@ -20,27 +20,27 @@ class ItemManager(models.Manager):
     def load_mec_items(self, quantity=100):
         self.all().delete()
 
-        s = ScrapeMEC()
-        added_items = 0
-        for data in s.items():
-            for k in data.keys():
-                try:
-                    data[k] = unicodedata.normalize('NFKD', u"%s" % data[k]).encode('utf8', errors='ignore')
-                except Exception as e:
-                    print e
-
-            item, created = self.get_or_create(
-                name=data.get('name'),
-                price=self._parse_price(data.get('price', '')),
-                description=data.get('description'),
-                href=data.get('url', ""),
-                img_href=data.get('img_href', ""),
-                attributes=data)
-            added_items += 1
-            if added_items > quantity:
-                return
-            if added_items % 100 == 0:
-                print "%s: %s" % (added_items, item)
+        # s = ScrapeMEC()
+        # added_items = 0
+        # for data in s.items():
+        #     for k in data.keys():
+        #         try:
+        #             data[k] = unicodedata.normalize('NFKD', u"%s" % data[k]).encode('utf8', errors='ignore')
+        #         except Exception as e:
+        #             print e
+        #
+        #     item, created = self.get_or_create(
+        #         name=data.get('name'),
+        #         price=self._parse_price(data.get('price', '')),
+        #         description=data.get('description'),
+        #         href=data.get('url', ""),
+        #         img_href=data.get('img_href', ""),
+        #         attributes=data)
+        #     added_items += 1
+        #     if added_items > quantity:
+        #         return
+        #     if added_items % 100 == 0:
+        #         print "%s: %s" % (added_items, item)
 
 
 class Item(models.Model):
