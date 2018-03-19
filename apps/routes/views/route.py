@@ -34,6 +34,7 @@ def api_all(request):
 
     try:
         map_zoom = int(request.GET.get('zoom', "20"))
+        print map_zoom
     except:
         map_zoom = 20
     zoom_level = 5
