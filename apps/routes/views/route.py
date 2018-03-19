@@ -32,7 +32,17 @@ def api_all(request):
     bbox_coords = [float(val) for val in bounds]
     bbox = Polygon.from_bbox(bbox_coords)
 
-    zoom_level = request.GET.get('zoom', "5")
+    try:
+        map_zoom = int(request.GET.get('zoom', "20"))
+    except:
+        map_zoom = 20
+    zoom_level = 5
+    if map_zoom < 10:
+        zoom_level = 4
+    if map_zoom < 8:
+        zoom_level = 2
+    if map_zoom < 6:
+        zoom_level = 1
     zoom_level = zoom_level if zoom_level in ["1", "2", "3", "4", "5"] else "5"
     zoom_field_name = "lines_zoom_{}".format(zoom_level)
 

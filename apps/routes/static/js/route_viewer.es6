@@ -46,9 +46,12 @@ function build_map_all_routes() {
             bounds = map.getBounds().toUrlValue();
             return $.ajax({
                 method: "GET",
-                url: `/api/routes/all?bounds=${bounds}`,
+                url: `/api/routes/all?bounds=${bounds}&zoom=${map.zoom}`,
                 success: load_routes_data
             });
+        });
+        google.maps.event.addListener(map, 'zoom_changed', function() {
+            console.log("zoom: "+map.zoom)
         });
 
     });
