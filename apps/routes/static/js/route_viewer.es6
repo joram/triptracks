@@ -51,7 +51,7 @@ function build_map_all_routes() {
             });
         });
         google.maps.event.addListener(map, 'zoom_changed', function() {
-            console.log("zoom: "+map.zoom)
+            console.log("zoom: "+map.getZoom());
         });
 
     });
