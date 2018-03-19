@@ -38,16 +38,16 @@ def api_all(request):
     except:
         map_zoom = 20
     zoom_level = {
-        10: 4,
-        9: 4,
-        8: 3,
-        7: 3,
-        6: 2,
-        5: 2,
-        4: 1,
-        3: 1,
-        2: 1,
-        1: 1,
+        11: 4,
+        12: 4,
+        13: 3,
+        14: 3,
+        15: 2,
+        16: 2,
+        17: 1,
+        18: 1,
+        19: 1,
+        20: 1,
     }.get(map_zoom, 5)
     zoom_level = zoom_level if zoom_level in ["1", "2", "3", "4", "5"] else "5"
     zoom_field_name = "lines_zoom_{}".format(zoom_level)
