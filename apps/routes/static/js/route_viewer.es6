@@ -1,7 +1,7 @@
 
 function load_google_maps(api_key, route_id) {
     this.route_id = route_id;
-    this.lines = [];
+    this.lines = {};
 
     let fileref = document.createElement('script');
     fileref.setAttribute("async", "");
@@ -14,7 +14,7 @@ function load_google_maps(api_key, route_id) {
 }
 
 function load_all_routes_google_maps(api_key){
-    this.lines = [];
+    this.lines = {};
 
     let fileref = document.createElement('script');
     fileref.setAttribute("async", "");
@@ -60,8 +60,9 @@ function build_map_all_routes() {
 
 
 function build_map() {
-    let map_element = document.getElementById("map");
+    this.lines = {};
 
+    let map_element = document.getElementById("map");
     map = new google.maps.Map(map_element, {});
     map.setZoom(15);
     map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
@@ -84,19 +85,34 @@ function load_route_data(data) {
     load_route(data, true)
 }
 
-function load_route(data, recenter) {
+function load_route(route, recenter) {
     let map_element = document.getElementById("map");
+    pub_id = route["pub_id"];
+    center = route["center"];
+    zoom_level = route["zoom_level"];
+    route_lines = route["lines"];
 
-    if (recenter && data['center'] !== null) {
+    if (recenter && route['center'] !== null) {
         center = {
-            lat: parseFloat(data['center']['coordinates'][0]),
-            lng: parseFloat(data['center']['coordinates'][1])
+            lat: parseFloat(route['center']['coordinates'][0]),
+            lng: parseFloat(route['center']['coordinates'][1])
         }
         map_element.map.setCenter(center);
     }
 
-    if (data['lines'] !== null) {
-        $.each(data['lines']['coordinates'], (index, line) => {
+
+    if(pub_id in this.lines && zoom_level in this.lines[pub_id]){
+        console.log(""+pub_id+" is cached");
+        return
+    }
+    if(!(pub_id in this.lines)){
+        this.lines[pub_id] = {};
+    }
+    this.lines[pub_id][zoom_level] = route;
+    console.log(""+pub_id+" is now cached");
+
+    if (route['lines'] !== null) {
+        $.each(route['lines'], (index, line) => {
             add_line(line);
         });
     }
