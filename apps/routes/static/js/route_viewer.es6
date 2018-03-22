@@ -101,6 +101,16 @@ function load_route(route, recenter) {
     }
 
 
+        // unload
+    if(pub_id in this.lines) {
+        numKeys = this.lines[pub_id].keys().length();
+        for (var j = 0; j < numKeys.length; j++) {
+            zoom_level_other = this.lines[pub_id].keys()[j];
+            if (zoom_level_other != zoom_level) {
+                // todo: unload other zoom levels
+            }
+        }
+    }
     if(pub_id in this.lines && zoom_level in this.lines[pub_id]){
         console.log(""+pub_id+" is cached");
         return
@@ -111,10 +121,14 @@ function load_route(route, recenter) {
     this.lines[pub_id][zoom_level] = route;
     console.log(""+pub_id+" is now cached");
 
+
     if (route['lines'] !== null) {
+        google_lines = [];
         $.each(route['lines'], (index, line) => {
-            add_line(line);
+            google_line = add_line(line);
+            google_lines.append(google_line);
         });
+        this.lines[pub_id][zoom_level]["glines"] = google_lines;
     }
 }
 
@@ -138,7 +152,7 @@ function add_line(line_coords) {
         strokeWeight: 2,
         map: map_element.map,
     });
-
+    return line;
 }
 
 function add_marker(coord) {

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 from base import BaseScraper
+import os
 
 
 class ScrapeMEC(BaseScraper):
@@ -67,6 +68,13 @@ class ScrapeMEC(BaseScraper):
                     data[key] = val
 
         return id, data
+
+    def filepaths(self):
+        existing_files = os.listdir(self.data_dir)
+        for filename in existing_files:
+            filepath = os.path.join(self.data_dir, filename)
+            yield filepath
+
 
 if __name__ == "__main__":
     s = ScrapeMEC()

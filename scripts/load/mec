@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+
+from util import setup_env
+setup_env()
+
+import os
+import json
+from scrapers.mec import ScrapeMEC
+from apps.packing.models import Item
+import unicodedata
+import pprint
+import codecs
+
+
+def clean_data(s):
+    return s
+
+def _clean_data(s):
+    clean_data = {}
+    for data in s.items():
+        for k in data.keys():
+            try:
+                data[k] = unicodedata.normalize('NFKD', u"%s" % data[k]).encode('utf8', errors='ignore')
+            except Exception as e:
+                print e
+    return data
+
+def parse_price(price_str):
+    try:
+        for bad in ["$", " ", "Available", "prices"]:
+            price_str = price_str.replace(bad, "")
+        price = float(price_str) if price_str != '' else -1
+        return price
+    except:
+        return -2
+
+def create_item(data):
+     item, created = Item.objects.get_or_create(
+         name=data.get('title'),
+         price=parse_price(data.get('price', '')),
+         description=data.get('description'),
+         href=data.get('url', ""),
+         img_href=data.get('image', ""),
+         attributes=data)
+     return item
+
+if __name__ == "__main__":
+#    Item.objects.all().delete()
+    for filepath in ScrapeMEC().filepaths():
+        with codecs.open(filepath, encoding='utf-8') as f:
+            try:
+                data = clean_data(json.loads(f.read()))
+                if Item.objects.filter(name=data.get("title")).exists():
+                    print "EXISTS: {}".format(data.get("title"))
+                    continue
+                item = create_item(data)
+                print item.name
+            except Exception as e:
+                print e
+                pprint.pprint(data)

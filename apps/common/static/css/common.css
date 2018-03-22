@@ -21,6 +21,12 @@
     height: 25px;
 }
 
+#navbar-icon {
+    float:left;
+    width:30px;
+    padding-top: 10px;
+}
+
 #signed-in-menu .dropdown-toggle {
     min-width:158px;
     padding-bottom: 9px;
