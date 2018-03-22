@@ -91,11 +91,11 @@ class RouteManager(models.GeoManager):
             lines=geo_lines,
             name=name,
             center=center,
-            lines_zoom_1=self._reduced_lines(lines, 1, 100),
-            lines_zoom_2=self._reduced_lines(lines, 2, 50),
-            lines_zoom_3=self._reduced_lines(lines, 3, 10),
-            lines_zoom_4=self._reduced_lines(lines, 4, 5),
-            lines_zoom_5=self._reduced_lines(lines, 5, 1),
+            lines_zoom_1=self._reduced_lines(lines, 1, 1000),
+            lines_zoom_2=self._reduced_lines(lines, 2, 500),
+            lines_zoom_3=self._reduced_lines(lines, 3, 100),
+            lines_zoom_4=self._reduced_lines(lines, 4, 50),
+            lines_zoom_5=self._reduced_lines(lines, 5, 10),
         )
 
         print "{} original:{}, zooms:{}".format(

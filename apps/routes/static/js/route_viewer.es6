@@ -1,4 +1,6 @@
 var lines_cache = {};
+var get_routes_calls_in_progress = 0;
+var get_routes_max_calls = 10;
 
 function load_google_maps(api_key, route_id) {
     this.route_id = route_id;
@@ -43,7 +45,12 @@ function build_map_all_routes() {
         });
         map_element.map = map;
 
+
         google.maps.event.addListener(map, 'bounds_changed', function() {
+            if(get_routes_calls_in_progress >= get_routes_max_calls){
+                return
+            }
+            get_routes_calls_in_progress +=1;
             bounds = map.getBounds().toUrlValue();
             return $.ajax({
                 method: "GET",
@@ -81,6 +88,7 @@ function load_routes_data(data) {
             load_route(route);
         }
     });
+    get_routes_calls_in_progress -= 1;
 }
 
 function load_route_data(data) {
