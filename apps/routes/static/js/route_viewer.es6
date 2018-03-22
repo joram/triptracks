@@ -1,3 +1,4 @@
+var lines_cache = {};
 
 function load_google_maps(api_key, route_id) {
     this.route_id = route_id;
@@ -50,17 +51,15 @@ function build_map_all_routes() {
                 success: load_routes_data
             });
         });
-        map.addListener('zoom_changed', function() {
-            console.log("zoom: "+map.getZoom());
-        });
+        // map.addListener('zoom_changed', function() {
+        //     console.log("zoom: "+map.getZoom());
+        // });
 
     });
 
 }
 
-
 function build_map() {
-    this.lines = {};
 
     let map_element = document.getElementById("map");
     map = new google.maps.Map(map_element, {});
@@ -77,7 +76,10 @@ function build_map() {
 
 function load_routes_data(data) {
     $.each(data, (index, route) => {
-        load_route(route, false);
+        unload_route(route);
+        if(!use_cached_lines(route)){
+            load_route(route);
+        }
     });
 }
 
@@ -85,55 +87,79 @@ function load_route_data(data) {
     load_route(data, true)
 }
 
-function load_route(route, recenter) {
-    let map_element = document.getElementById("map");
+function unload_route(route) {
     pub_id = route["pub_id"];
-    center = route["center"];
     zoom_level = route["zoom_level"];
-    route_lines = route["lines"];
-
-    if (recenter && route['center'] !== null) {
-        center = {
-            lat: parseFloat(route['center']['coordinates'][0]),
-            lng: parseFloat(route['center']['coordinates'][1])
-        }
-        map_element.map.setCenter(center);
-    }
-
-
-        // unload
-    if(pub_id in this.lines) {
-        numKeys = this.lines[pub_id].keys().length();
-        for (var j = 0; j < numKeys.length; j++) {
-            zoom_level_other = this.lines[pub_id].keys()[j];
-            if (zoom_level_other != zoom_level) {
-                // todo: unload other zoom levels
+    if (lines_cache[pub_id] != null){
+        for(zoom in lines_cache[pub_id]) {
+            if(lines_cache[pub_id][zoom] != null && zoom != zoom_level){
+                lines_cache[pub_id][zoom]["googlemaps_lines"].forEach(function (google_line){
+                    google_line.setMap(null);
+                });
             }
         }
     }
-    if(pub_id in this.lines && zoom_level in this.lines[pub_id]){
-        console.log(""+pub_id+" is cached");
-        return
-    }
-    if(!(pub_id in this.lines)){
-        this.lines[pub_id] = {};
-    }
-    this.lines[pub_id][zoom_level] = route;
-    console.log(""+pub_id+" is now cached");
+}
 
+function center(route){
+    let map_element = document.getElementById("map");
+    center = route["center"];
 
-    if (route['lines'] !== null) {
+    // recenter
+    if (route['center'] !== null) {
+        center = {
+            lat: parseFloat(route['center']['coordinates'][0]),
+            lng: parseFloat(route['center']['coordinates'][1])
+        };
+        map_element.map.setCenter(center);
+    }
+}
+
+function use_cached_lines(route){
+    pub_id = route["pub_id"];
+    zoom_level = route["zoom_level"];
+    route_lines = route["lines"];
+
+    if(lines_cache[pub_id] == null){
+        return false;
+    }
+    if(lines_cache[pub_id][zoom_level] == null) {
+        return false;
+    }
+
+    let map_element = document.getElementById("map");
+    google_lines = lines_cache[pub_id][zoom_level]["googlemaps_lines"];
+    google_lines.forEach(function (google_line){
+        google_line.setMap(map_element.map);
+    });
+    return true;
+}
+
+function load_route(route) {
+    pub_id = route["pub_id"];
+    zoom_level = route["zoom_level"];
+    route_lines = route["lines"];
+
+     // create new
+     if (route['lines'] !== null) {
         google_lines = [];
-        $.each(route['lines'], (index, line) => {
-            google_line = add_line(line);
-            google_lines.append(google_line);
+        route['lines'].forEach(function (line) {
+            google_lines.push(create_line(line));
         });
-        this.lines[pub_id][zoom_level]["glines"] = google_lines;
+        route["googlemaps_lines"] = google_lines;
+     }
+
+    // cache
+    if(lines_cache[pub_id] == null){
+        lines_cache[pub_id] = {};
+    }
+    if(lines_cache[pub_id][zoom_level] == null) {
+        lines_cache[pub_id][zoom_level] = route;
     }
 }
 
 
-function add_line(line_coords) {
+function create_line(line_coords) {
     let path = [];
     for (var j = 0; j < line_coords.length; j++) {
         path.push({
@@ -150,8 +176,8 @@ function add_line(line_coords) {
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2,
-        map: map_element.map,
     });
+    line.setMap(map_element.map);
     return line;
 }
 
