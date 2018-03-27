@@ -10,6 +10,7 @@ from apps.packing.models import Item
 import unicodedata
 import pprint
 import codecs
+from utils.fields import ShortUUIDField
 
 
 def clean_data(s):
@@ -40,9 +41,21 @@ def create_item(data):
          price=parse_price(data.get('price', '')),
          description=data.get('description'),
          href=data.get('url', ""),
-         img_href=data.get('image', ""),
+         img_href=data.get('img_href', ""),
          attributes=data)
      return item
+
+def clean_pub_id(item):
+    if not item.pub_id.startswith("item_"):
+        print "updating UUID"
+        item.pub_id = ShortUUIDField(prefix="item").create_uuid()
+        item.save()
+
+def clean_image(item):
+    if item.img_href.startswith("https://cdn.mec.ca"):
+        print "updating image"
+        item.img_href = item.attributes["img_href"]
+        item.save()
 
 if __name__ == "__main__":
 #    Item.objects.all().delete()
@@ -50,11 +63,14 @@ if __name__ == "__main__":
         with codecs.open(filepath, encoding='utf-8') as f:
             try:
                 data = clean_data(json.loads(f.read()))
-                if Item.objects.filter(name=data.get("title")).exists():
+                qs = Item.objects.filter(name=data.get("title"))
+                if qs.exists():
                     print "EXISTS: {}".format(data.get("title"))
+                    for item in qs:
+                        clean_pub_id(item)
+                        clean_image(item)
                     continue
                 item = create_item(data)
                 print item.name
             except Exception as e:
                 print e
-                pprint.pprint(data)

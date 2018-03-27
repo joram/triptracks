@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from base import BaseScraper
 import os
-
+import json
 
 class ScrapeMEC(BaseScraper):
 
@@ -52,6 +52,10 @@ class ScrapeMEC(BaseScraper):
         except:
             data["price"] = "N/A"
 
+        primary_img_div = soup.find("div", {"id": "primary_image"})
+        imgs = primary_img_div.findAll("img", {"class": "srcset-image__content"})
+        data["img_href"] = imgs[0]["src"]
+
         specs = soup.find(id="pdp-tech-specs")
         if specs:
             for tr in specs.findAll("tr"):
@@ -67,7 +71,7 @@ class ScrapeMEC(BaseScraper):
                     val = td.text
                     data[key] = val
 
-        return id, data
+        return id, json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
 
     def filepaths(self):
         existing_files = os.listdir(self.data_dir)

@@ -16,6 +16,6 @@ urlpatterns = [
     url(r'^list/(?P<packing_list_id>[0-9]+)/edit/?$', packing_list.edit, name='edit-packing-list'),
     url(r'^list/(?P<packing_list_id>[0-9]+)/item/add/?$', packing_list.add_item, name='add-packing-list-item'),
     url(r'^list/(?P<packing_list_id>[0-9]+)/item/(?P<packing_list_item_id>[0-9]+)/edit/?$', packing_list.edit_item, name='edit-packing-list-item'),
-    url(r'^list/items/search/?$', packing_list.search, name='search-packing-list'),
+    url(r'^packing/items/search/?$', item.search, name='search-items'),
 ]
 
