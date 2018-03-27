@@ -1,0 +1,10 @@
+#search-items {
+  max-width:1300px;
+  margin: 0 auto;
+}
+
+.item-search-image {
+    width: 200px;
+    height:200px;
+    border: solid thin black;
+}
