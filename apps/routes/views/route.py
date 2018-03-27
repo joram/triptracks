@@ -50,8 +50,12 @@ def api_all(request):
     }.get(map_zoom, 5)
     zoom_field_name = "lines_zoom_{}".format(zoom_level)
 
+    qs = Route.objects.filter(lines__bboverlaps=bbox)
+
     routes = []
-    qs = Route.objects.filter(lines__bboverlaps=bbox).values("center", "name", "pub_id", zoom_field_name)
+    if qs.count() < 10:
+        zoom_field_name = "lines_zoom_1"
+    qs = qs.values("center", "name", "pub_id", zoom_field_name)
     count = 0
     for route in qs:
         count += 1
