@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 def setup_env():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.dev")
     root_path = os.path.abspath(os.path.split(__file__)[0])
