@@ -3,6 +3,7 @@ from base import BaseScraper
 import os
 import json
 
+
 class ScrapeMEC(BaseScraper):
 
     def __init__(self):
