@@ -43,9 +43,8 @@ LOGGING = {
 }
 
 
-DATABASES = {
-    'default': dj_database_url.config(env="TP_DATABASE_URL")
-}
+DATABASES = {'default': dj_database_url.config(env="TP_DATABASE_URL")}
 DATABASES["default"]["NAME"] = DATABASES["default"]["NAME"].rstrip("\r")
 DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 
