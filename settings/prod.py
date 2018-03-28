@@ -48,3 +48,5 @@ DATABASES["default"]["NAME"] = DATABASES["default"]["NAME"].rstrip("\r")
 DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 
+DEBUG = True
+
