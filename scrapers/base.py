@@ -32,7 +32,9 @@ class BaseScraper(object):
         self.data_dir = data_dir
 
     def item_filepath(self, id, ):
-        filepath = os.path.join(self.data_dir, "./{}.{}".format(id, self.FILETYPE))
+        if not id.endswith(".{}".format(self.FILETYPE)):
+            id += ".{}".format(self.FILETYPE)
+        filepath = os.path.join(self.data_dir, "./{}".format(id))
         filepath = os.path.abspath(filepath)
         return filepath
 
@@ -50,7 +52,7 @@ class BaseScraper(object):
         raise NotImplemented()
 
     def get_content(self, url):
-
+        print "downloading {}".format(url)
         # TODO: cache in files
         time.sleep(self.wait)
         resp = requests.get(url)
@@ -93,3 +95,19 @@ class BaseScraper(object):
                     self.store_item(filename, data)
                 except:
                     self.store_item(id+"____FAILED", "")
+
+    def items(self):
+        for id, url in self.item_urls():
+
+            try:
+                filename, data = self.item_content(url, id)
+                filepath = self.item_filepath(filename)
+                if data is None:
+                    raise FailedRequest()
+                self.store_item(filename, data)
+                yield id, filepath, data
+            except Exception as e:
+                print e
+                self.store_item(id+"____FAILED", "")
+            continue
+

@@ -13,6 +13,7 @@ class ScrapeMEC(BaseScraper):
         self.visited_shop_urls = []
         self.unvisited_shop_urls = []
         self.product_urls = []
+        self.existing_files = os.listdir(self.data_dir)
 
     def item_urls(self):
         self.unvisited_shop_urls.append("http://www.mec.ca/shop/")
@@ -43,7 +44,20 @@ class ScrapeMEC(BaseScraper):
 
                 yield id, product_url
 
+    def get_existing_content(self, id):
+        for filename in self.existing_files:
+            if filename.startswith(id):
+                filepath = self.item_filepath(id)
+                with open(filepath) as f:
+                    data = f.read()
+                    return data
+        return None
+
     def item_content(self, url, id):
+        data = self.get_existing_content(id)
+        if data is not None:
+            return id, data
+
         soup = self.get_soup(url)
         data = self.get_metadata(soup)
 
