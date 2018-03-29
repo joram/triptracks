@@ -4,14 +4,12 @@ django_admin_bootstrapped
 django-geoip
 django-tastypie
 django-uuidfield
-django-haystack
 dj_database_url
-gunicorn
+gunicorn==19.7.1
 gpxpy
 html
 jsonfield
 oauth2client
-pyelasticsearch
 python-geoip
 python-geoip-geolite2
 psycopg2-binary
