@@ -1,2 +1,2 @@
-web: ./scripts//run
+web: gunicorn wsgi
 web_old: python ./manage.py runserver 0.0.0.0:$PORT --settings=settings.prod
