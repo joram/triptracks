@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 admin.autodiscover()
 
 urlpatterns = [
@@ -24,7 +26,7 @@ urlpatterns = [
     url(r'', include('apps.common.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.routes.urls')),
-	url(r'^admin/', include(admin.site.urls)),
+    # url(r'^admin/', include(admin.site.urls)),
     # (r'^search/', include('haystack.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

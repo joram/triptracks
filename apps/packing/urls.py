@@ -9,7 +9,7 @@ v1_api.register(PackingListResource())
 v1_api.register(PackingListItemResource())
 
 urlpatterns = [
-    url(r'^api/', include(v1_api.urls)),
+    # url(r'^api/', include(v1_api.urls)),
     url(r'^items/upload/?$', item.upload, name='upload-mec-items'),
     url(r'^lists/?$', packing_list.list_packing_lists, name='list-packing-lists'),
 	url(r'^list/create/?$', packing_list.create, name='create-packing-list'),
