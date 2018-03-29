@@ -7,7 +7,6 @@ if __name__ == "__main__":
     import django
     django.setup()
 
-    # Override default port for `runserver` command
     from django.core.management.commands.runserver import Command as runserver
     runserver.default_port = os.environ.get("PORT", "8000")
 
