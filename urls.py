@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'', include('apps.common.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.routes.urls')),
-	url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     # (r'^search/', include('haystack.urls')),
 ]
 
