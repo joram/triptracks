@@ -13,7 +13,14 @@ class ScrapeMEC(BaseScraper):
         self.visited_shop_urls = []
         self.unvisited_shop_urls = []
         self.product_urls = []
-        self.existing_files = os.listdir(self.data_dir)
+        self._existing_urls = None
+        self._existing_files = None
+
+    @property
+    def existing_files(self):
+        if self._existing_files is None:
+            self._existing_files = os.listdir(self.data_dir)
+        return self._existing_files
 
     def item_urls(self):
         self.unvisited_shop_urls.append("http://www.mec.ca/shop/")
@@ -24,6 +31,8 @@ class ScrapeMEC(BaseScraper):
             hrefs = set([a['href'] for a in soup.findAll('a', href=True)])
             for href in hrefs:
                 href = "http://www.mec.ca%s" % href if not href.startswith(self.base_url) else href
+                if "?" in href:
+                    href = href.split("?")[0]
 
                 # handle more shop urls
                 if href.startswith("http://www.mec.ca/en/products/") and href not in self.visited_shop_urls:

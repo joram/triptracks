@@ -7,6 +7,7 @@ node_modules/*
 */generated-js/*
 */compiled-js/*
 data/*
+data_raw*
 trip_planner_www/common/static/compiled-js/*.js
 scripts/.*
 scripts/data*

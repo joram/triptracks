@@ -4,6 +4,7 @@ from utils.fields import ShortUUIDField
 from scrapers.mec import ScrapeMEC
 import json
 
+
 class ItemManager(models.Manager):
 
     def _parse_price(self, price_str):
