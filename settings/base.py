@@ -6,10 +6,6 @@ STATICFILES_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'apps.common',
-    'apps.accounts',
-    'apps.routes',
-    'apps.packing',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -18,6 +14,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.gis',
 
+    'apps.common',
+    'apps.accounts',
+    'apps.routes',
+    'apps.packing',
 )
 
 
