@@ -10,7 +10,6 @@ INSTALLED_APPS = (
     'apps.accounts',
     'apps.routes',
     'apps.packing',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
