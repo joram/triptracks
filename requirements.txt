@@ -4,6 +4,7 @@ django_admin_bootstrapped
 django-geoip
 django-uuidfield
 dj_database_url
+gdal
 gunicorn
 gpxpy
 html
