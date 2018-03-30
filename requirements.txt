@@ -1,5 +1,5 @@
 BeautifulSoup
-Django==1.11.11
+Django==1.11
 django_admin_bootstrapped
 django-geoip
 django-uuidfield
