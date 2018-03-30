@@ -11,6 +11,7 @@ jsonfield
 oauth2client
 python-geoip
 python-geoip-geolite2
+psycopg2
 psycopg2-binary
 pykml
 shortuuid
