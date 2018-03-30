@@ -1,6 +1,5 @@
 from settings.base import *
 import dj_database_url
-from os import environ
 
 SECRET_KEY = os.environ.get("TP_SECRET_KEY", "youshouldntusethisoneinprod")
 GOOGLE_MAPS_API_KEY = os.environ.get("TP_GOOGLE_MAPS_API_KEY")
@@ -13,8 +12,8 @@ DATABASES["default"]["NAME"] = DATABASES["default"]["NAME"].rstrip("\r")
 DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 
-GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
-GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
+GDAL_LIBRARY_PATH="/app/.heroku/vendor/lib/libgdal.so"
+GEOS_LIBRARY_PATH="/app/.heroku/vendor/lib/libgeos_c.so"
 
 DEBUG = True
 
