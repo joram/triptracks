@@ -20,7 +20,7 @@ INSTALLED_APPS = (
     'apps.packing',
 )
 
-
+LOGGING_CONFIG = 'logging.config.dictConfig'
 LOGGING = {
     'version': 1,
     'formatters': {
