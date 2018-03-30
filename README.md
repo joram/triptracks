@@ -1,4 +1,4 @@
-# trip-planner
+# TripTracks
 This project is under development. The goal is to have a unified site to manage trip plans and reports for outdoor trips.
 
 ## Setup
@@ -13,6 +13,12 @@ pip install -r requirements.txt
 - run the server `bash ./scripts/run`
 - (optional) load in some gpx files with `python ./scripts/load/trailpeak`
 - visit in the browser <a href="http://localhost:8000">localhost:8000</a>
+
+### pyenv
+- install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
+- install python `pyenv install 2.7.14`
+- 
+
 
 #### notes:
 - if you need to clean up space:

@@ -21,18 +21,36 @@ class BaseScraper(object):
         self.debug = False
         self.wait = 1
         self.items_count = 0
+        self._data_dir = None
+        self._data_raw_dir = None
+        self.base_url = ""
 
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        data_dir = os.path.join(dir_path, "../data/", self.__class__.__name__, "./")
-        data_dir = os.path.abspath(data_dir)
-        if not os.path.exists(data_dir):
-            os.makedirs(data_dir)
+    @property
+    def data_dir(self):
+        if self._data_dir is None:
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            data_dir = os.path.join(dir_path, "../data/", self.__class__.__name__, "./")
+            data_dir = os.path.abspath(data_dir)
+            if not os.path.exists(data_dir):
+                os.makedirs(data_dir)
+            self._data_dir = data_dir
+        return self._data_dir
 
-        print data_dir
-        self.data_dir = data_dir
+    @property
+    def data_raw_dir(self):
+        if self._data_raw_dir is None:
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+            data_raw_dir = os.path.join(dir_path, "../data_raw/", self.__class__.__name__, "./")
+            data_raw_dir = os.path.abspath(data_raw_dir)
+            if not os.path.exists(data_raw_dir):
+                os.makedirs(data_raw_dir)
+            self._data_raw_dir = data_raw_dir
+        return self._data_raw_dir
 
     def item_filepath(self, id, ):
-        filepath = os.path.join(self.data_dir, "./{}.{}".format(id, self.FILETYPE))
+        if not id.endswith(".{}".format(self.FILETYPE)):
+            id += ".{}".format(self.FILETYPE)
+        filepath = os.path.join(self.data_dir, "./{}".format(id))
         filepath = os.path.abspath(filepath)
         return filepath
 
@@ -49,14 +67,30 @@ class BaseScraper(object):
     def item_content(self, url, id):
         raise NotImplemented()
 
-    def get_content(self, url):
+    def get_content(self, url, extension="html"):
+        cache_filepath = os.path.join(self.data_raw_dir, url.replace(self.base_url, "")).rstrip("/")
+        extension = ".{}".format(extension)
+        if not cache_filepath.lower().endswith(extension):
+            cache_filepath += extension
 
-        # TODO: cache in files
+        if os.path.exists(cache_filepath):
+            print "loading cached {}".format(url)
+            with open(cache_filepath) as f:
+                return f.read()
+
+        print "downloading {}".format(url)
         time.sleep(self.wait)
         resp = requests.get(url)
-        # TODO verify 200'ed
         if resp.status_code != 200:
             raise FailedRequest()
+
+        cache_path = os.path.dirname(cache_filepath)
+        cache_path = os.path.abspath(cache_path)
+        if not os.path.exists(cache_path):
+            os.makedirs(cache_path)
+        with open(cache_filepath, "w+") as f:
+            f.write(resp.content)
+
         return resp.content
 
     def get_soup(self, url):
@@ -93,3 +127,19 @@ class BaseScraper(object):
                     self.store_item(filename, data)
                 except:
                     self.store_item(id+"____FAILED", "")
+
+    def items(self):
+        for id, url in self.item_urls():
+
+            try:
+                filename, data = self.item_content(url, id)
+                filepath = self.item_filepath(filename)
+                if data is None:
+                    raise FailedRequest()
+                self.store_item(filename, data)
+                yield id, filepath, data
+            except Exception as e:
+                print e
+                self.store_item(id+"____FAILED", "")
+            continue
+
