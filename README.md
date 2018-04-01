@@ -17,8 +17,6 @@ pip install -r requirements.txt
 ### pyenv
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 - install python `pyenv install 2.7.14`
-- 
-
 
 #### notes:
 - if you need to clean up space:
