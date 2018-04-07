@@ -1,5 +1,6 @@
-FROM ecarrara/python-gdal
+FROM appliedis/gdal
 
+RUN apk add --update python python-dev linux-headers py-pip postgresql-dev gcc make musl-dev build-base libxml2-dev libxslt-dev
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /code

@@ -2,6 +2,6 @@
 source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
 
 docker build . -t triptracks
-docker tag triptracks us.gcr.io/$TP_GOOGLE_PROJECT_ID/triptracks
-docker push us.gcr.io/$TP_GOOGLE_PROJECT_ID/triptracks
+docker tag triptracks us.gcr.io/$TP_GOOGLE_PROJECT_ID/triptracks:hello_world
+docker push us.gcr.io/$TP_GOOGLE_PROJECT_ID/triptracks:hello_world
 
