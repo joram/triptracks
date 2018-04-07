@@ -1,6 +1,24 @@
 from settings.base import *
 import dj_database_url
 import os
+from google.cloud import logging
+
+stack_driver_client = logging.Client()
+stack_driver_client.setup_logging()
+LOGGING = {
+    'handlers': {
+        'stackdriver': {
+            'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
+            'client': stack_driver_client
+        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['stackdriver'],
+            'level': 'INFO'
+        }
+    },
+}
 
 GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH')
 GEOS_LIBRARY_PATH = os.getenv('GEOS_LIBRARY_PATH')

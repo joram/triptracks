@@ -1,4 +1,7 @@
 #!/bin/bash
-source ./scripts/.env
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
 
-python ./manage.py runserver 0.0.0.0:8000 --settings=settings.dev
+
+docker run --env-file ./scripts/.env -p $PORT:$PORT -d --name=triptracks triptracks
+
+# python ./manage.py runserver 0.0.0.0:8000 --settings=settings.dev
