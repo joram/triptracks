@@ -1,7 +1,4 @@
 #!/bin/bash
 source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
 
-
-# docker run --env-file ./scripts/.env -p $PORT:$PORT -d --name=triptracks triptracks
-
-python ./manage.py runserver 0.0.0.0:8000 --settings=$DJANGO_SETTINGS_MODULE
+python2.7 ./manage.py runserver 0.0.0.0:$PORT --settings=$DJANGO_SETTINGS_MODULE

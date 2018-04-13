@@ -3,6 +3,7 @@ setup_env.sh
 venv*
 *.sqlite3
 *.pyc
+*.pem
 node_modules/*
 */generated-js/*
 */compiled-js/*
@@ -13,4 +14,3 @@ scripts/.*
 scripts/data*
 scripts/scrapers/*
 .idea
-

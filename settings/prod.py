@@ -3,7 +3,7 @@ import dj_database_url
 import os
 
 GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH')
-GEOS_LIBRARY_PATH = os.getenv('GEOS_LIBRARY_PATH')
+# GEOS_LIBRARY_PATH = os.getenv('GEOS_LIBRARY_PATH')
 
 SECRET_KEY = os.environ.get("TP_SECRET_KEY", "youshouldntusethisoneinprod")
 GOOGLE_MAPS_API_KEY = os.environ.get("TP_GOOGLE_MAPS_API_KEY")
@@ -17,5 +17,5 @@ DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 
 
-DEBUG = True
+DEBUG = False
 

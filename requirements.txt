@@ -2,7 +2,7 @@ BeautifulSoup==3.2.1
 certifi==2018.1.18
 chardet==3.0.4
 dj-database-url==0.4.2              # DB config via ENV vars
-Django==1.11.4                      # Web framework
+Django==1.11.5                      # Web framework
 django-admin-bootstrapped==2.5.7
 django-appconf==1.0.2
 django-geoip==0.5.2.1
@@ -11,7 +11,6 @@ django-extensions==1.8.1            # Various Django extras
 django-uuidfield==0.5.0
 gpxpy==1.2.0
 gunicorn==19.7.1
-google-cloud==0.32.0
 html==1.16
 httplib2==0.11.0
 ipython==5.5.0                      # Better Django shell experience

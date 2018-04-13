@@ -1,6 +1,9 @@
 # TripTracks
 This project is under development. The goal is to have a unified site to manage trip plans and reports for outdoor trips.
 
+## Associated Resources:
+[dockerhub image](https://hub.docker.com/r/joram87/triptracks/)
+
 ## Setup
 - pull the project: `git clone https://github.com/joram/trip-planner.git`
 - install the project dependencies

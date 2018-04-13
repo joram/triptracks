@@ -20,6 +20,7 @@ INSTALLED_APPS = (
     'apps.packing',
 )
 
+from django.contrib.gis import *
 LOGGING_CONFIG = 'logging.config.dictConfig'
 LOGGING = {
     'version': 1,
@@ -65,4 +66,5 @@ ALLOWED_HOSTS = [
     'app.triptracks.io',
     'triptracks.herokuapp.com',
     'localhost',
+    '199.245.58.143',
 ]

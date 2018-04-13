@@ -134,23 +134,29 @@ class RouteManager(models.GeoManager):
     def collect_and_load_all(self):
         scraper = ScrapeTrailPeak()
         for id, filepath, data in scraper.items():
-            name = os.path.basename(filepath)
+            try:
+                self._collect_and_load(id, filepath, data)
+            except Exception as e:
+                print e
 
-            routes = Route.objects.filter(name=name)
-            if routes.exists():
-                continue
+    def _collect_and_load(self, id, filepath, data):
+        name = os.path.basename(filepath)
 
-            if filepath.endswith("FAILED.gpx"):
-                continue
+        routes = Route.objects.filter(name=name)
+        if routes.exists():
+            return
 
-            trailFiles = TracksFile.objects.filter(filename=name)
-            if trailFiles.exists():
-                tf = trailFiles[0]
-            else:
-                with open(filepath) as f:
-                    tf = TracksFile.objects.create(tracks_file=File(f, name=name), filename=name)
+        if filepath.endswith("FAILED.gpx"):
+            return
 
-            Route.objects.create_from_route(tf, name)
+        trailFiles = TracksFile.objects.filter(filename=name)
+        if trailFiles.exists():
+            tf = trailFiles[0]
+        else:
+            with open(filepath) as f:
+                tf = TracksFile.objects.create(tracks_file=File(f, name=name), filename=name)
+
+        Route.objects.create_from_route(tf, name)
 
 
 class Route(models.Model):
