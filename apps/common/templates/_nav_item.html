@@ -1,0 +1,40 @@
+<li style="list-style-type: none; height:20px;">
+  {% if type == "edit" and app == "routes" %}
+    <a href="/routes">
+  {% elif type == "create" and app == "routes" %}
+    <a href="/route/create">
+  {% elif type == "edit" and app == "packing" %}
+    <a href="/lists">
+  {% elif type == "create" and app == "packing" %}
+    <a href="/list/create">
+  {% else %}
+    <a>
+  {% endif %}
+
+    <div style="width:20px; float:left; margin-top:4px;">
+      {% if type == "edit" %}
+        <i class="fa fa-pencil-square-o"></i>
+      {% elif type == "create" %}
+        <i class="fa fa-plus-square-o"></i>
+      {% endif %}
+    </div>
+
+    <div style="float:left;">
+      {% if app == "packing" %}
+        <img src="/static/img/icons/icons8-backpack-128.png" style="width:20px;"/>
+      {% elif app == "routes" %}
+        <img src="/static/img/icons/icons8-world-map-128.png" style="width:20px;"/>
+      {% endif %}
+    </div>
+
+    <div style="float:left; margin-top:2px; margin-left:3px;">
+      {% if type == "edit" %}
+        List/Edit
+      {% elif type == "create" %}
+        Create
+      {% endif %}
+    </div>
+
+  </a>
+</li>
+
