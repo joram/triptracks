@@ -1,7 +1,11 @@
 #!/bin/bash
 
 source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+docker build . -t joram87/triptracks
+docker push joram87/triptracks:latest
 hyper pull joram87/triptracks:latest
+hyper service rolling-update --image joram87/triptracks triptracks
 
 #hyper service rm triptracks
 #hyper service create --service-port=443 --container-port=$PORT --label=app=triptracks --name=triptracks --replicas=1 --ssl-cert=https-service.pem --protocol=httpsTerm --env-file=scripts/.env joram87/triptracks:latest
@@ -9,4 +13,3 @@ hyper pull joram87/triptracks:latest
 #sleep 10
 #hyper service attach-fip --fip=199.245.58.143 triptracks
 
-hyper service rolling-update --image joram87/triptracks triptracks
