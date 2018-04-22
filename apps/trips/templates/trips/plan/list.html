@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div class="row">
+		{% for plan in plans %}
+		<a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">{{ plan.name }}</a><br/>
+		{% endfor %}
+	</div>
+{% endblock %}

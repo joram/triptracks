@@ -18,6 +18,7 @@ INSTALLED_APPS = (
     'apps.accounts',
     'apps.routes',
     'apps.packing',
+    'apps.trips',
 )
 
 from django.contrib.gis import *

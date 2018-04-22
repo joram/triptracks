@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+  <link rel="stylesheet" href="/static/css/trips.css">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div id="title-box">
+        <div id="trip-title">
+          <h2>{{ plan.name }}</h2>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">
+            <img class="trip-plan-icon" src="/static/img/icons/icons8-world-map-512.png">
+            <br/>
+            Route
+          </button>
+          <button type="button" class="btn btn-default">
+            <img class="trip-plan-icon" src="/static/img/icons/icons8-backpack-512.png">
+            <br/>
+            Packing
+          </button>
+          <button type="button" class="btn btn-default">
+            <img class="trip-plan-icon" src="/static/img/icons/icons8-realtime-512.png">
+            <br/>
+            Time
+          </button>
+          <button type="button" class="btn btn-default">
+            <img class="trip-plan-icon" src="/static/img/icons/icons8-male-user-512.png">
+            <br/>
+            Partner(s)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
