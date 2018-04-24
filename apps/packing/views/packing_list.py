@@ -20,12 +20,12 @@ def list_packing_lists(request):
 @login_required
 def create(request):
     packing_list = PackingList.objects.create(name="Unnamed List")
-    return redirect('edit-packing-list', packing_list.id)
+    return redirect('edit-packing-list', packing_list.pub_id)
 
 
 @login_required
-def edit(request, packing_list_id):
-    packing_list = get_object_or_404(PackingList, id=packing_list_id)
+def edit(request, pub_id):
+    packing_list = get_object_or_404(PackingList, pub_id=pub_id)
     context = {
         'packing_list': packing_list
     }

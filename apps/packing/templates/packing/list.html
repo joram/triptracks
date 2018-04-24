@@ -1,22 +1,16 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block extra_js %}
-    <script src="/static/create_plan.js"></script>
-    <script src="/static/map.js"></script>
-    <script src="/static/map_markers.js"></script>
-    <script src="/static/map_lines.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&libraries=drawing"></script>
-	<script type="text/javascript" src="/static/jquery.ui.map.full.min.js"></script>
-
-	<link href="/static/map.css">
-	
-{% endblock %}
-
 {% block content %}
 	<div class="row">
+		<ul>
 		{% for packing_list in packing_lists %}
-			{% include "packing/_list_packing_list_grid.html" with packing_list=packing_list %}
+			<li>
+				<a href="{% url 'edit-packing-list' packing_list.pub_id %}">
+					{{ packing_list.name }}
+				</a>
+			</li>
 		{% endfor %}
+		</ul>
 	</div>
 {% endblock %}

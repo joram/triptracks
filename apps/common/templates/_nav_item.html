@@ -4,9 +4,9 @@
   {% elif type == "create" and app == "routes" %}
     <a href="/route/create">
   {% elif type == "edit" and app == "packing" %}
-    <a href="/lists">
+    <a href="{% url 'list-packing-lists' %}">
   {% elif type == "create" and app == "packing" %}
-    <a href="/list/create">
+    <a href="{% url 'create-packing-list' %}">
   {% elif type == "edit" and app == "trip-plans" %}
     <a href="/trip/plans">
   {% elif type == "create" and app == "trip-plans" %}

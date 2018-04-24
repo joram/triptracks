@@ -1,8 +1,9 @@
 from django.db import models
-# from haystack.query import SearchQuerySet
+from utils.fields import ShortUUIDField
 
 
 class PackingList(models.Model):
+    pub_id = ShortUUIDField(prefix="pcklst", max_length=32)
     name = models.CharField(max_length=30, blank=True, default="")
 
     @property
