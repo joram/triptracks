@@ -36,7 +36,7 @@ class ItemManager(models.Manager):
 
 
 class Item(models.Model):
-    pub_id = ShortUUIDField(prefix="item_", max_length=32)
+    pub_id = ShortUUIDField(prefix="item", max_length=32)
     name = models.CharField(max_length=256)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)

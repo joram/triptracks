@@ -160,7 +160,7 @@ class RouteManager(models.GeoManager):
 
 
 class Route(models.Model):
-    pub_id = ShortUUIDField(prefix="route_", max_length=32)
+    pub_id = ShortUUIDField(prefix="route", max_length=32)
     name = models.CharField(max_length=120)
     markers = models.MultiPointField(blank=True, null=True)
     lines = models.MultiLineStringField(blank=True, null=True)
