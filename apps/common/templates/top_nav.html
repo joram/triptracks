@@ -25,6 +25,13 @@
       {% endwith %}
 
       <br/>
+      <li class="dropdown-header">Trip Plans</li>
+      {% with app="trip-plans" %}
+        {% with type="create" %}{% include "_nav_item.html" %}{% endwith %}
+        {% with type="edit" %}{% include "_nav_item.html" %}{% endwith %}
+      {% endwith %}
+
+      <br/>
       <li class="dropdown-header">Account</li>
       <li><a href="#">Profile</a></li>
       <li>

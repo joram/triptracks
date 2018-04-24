@@ -7,6 +7,10 @@
     <a href="/lists">
   {% elif type == "create" and app == "packing" %}
     <a href="/list/create">
+  {% elif type == "edit" and app == "trip-plans" %}
+    <a href="/trip/plans">
+  {% elif type == "create" and app == "trip-plans" %}
+    <a href="/trip/plan/create">
   {% else %}
     <a>
   {% endif %}
@@ -24,6 +28,8 @@
         <img src="/static/img/icons/icons8-backpack-128.png" style="width:20px;"/>
       {% elif app == "routes" %}
         <img src="/static/img/icons/icons8-world-map-128.png" style="width:20px;"/>
+      {% elif app == "trip-plans" %}
+        <img src="/static/img/icons/icons8-alps-144.png" style="width:20px;"/>
       {% endif %}
     </div>
 

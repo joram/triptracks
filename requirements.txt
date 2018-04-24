@@ -4,7 +4,6 @@ chardet==3.0.4
 dj-database-url==0.4.2              # DB config via ENV vars
 Django==1.11.5                      # Web framework
 django-appconf==1.0.2
-django-geoip==0.5.2.1
 django-tastypie==0.14.0
 django-extensions==1.8.1            # Various Django extras
 django-uuidfield==0.5.0
