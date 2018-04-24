@@ -27,7 +27,7 @@ def create(request):
 def edit(request, pub_id):
     packing_list = get_object_or_404(PackingList, pub_id=pub_id)
     pl_items = PackingListItem.objects.filter(packing_list_pub_id=pub_id)
-    items = Item.objects.filter(pub_id__in=[pli.item_pub_id for pli in pl_items]).order_by('created_at')
+    items = Item.objects.filter(pub_id__in=[pli.item_pub_id for pli in pl_items])
 
     context = {
         'packing_list': packing_list,
