@@ -50,11 +50,17 @@ function attach_onclick_handler(pub_id){
 }
 
 function add_item_to_packing_list(item_pub_id, title) {
-    packing_list_pub_id = $("#packing-list-pub-id").text;
+    packing_list_pub_id = $("div#packing-list-pub-id").text();
     item = $("#search_item_"+item_pub_id);
     item.detach()
     $("#packing-list-items").append(item);
-    // todo AJAX request
+    add_item_url = "/packing/list/"+packing_list_pub_id+"/add/"+item_pub_id
+
+    $.ajax({
+      type: "GET",
+      url: add_item_url,
+      dataType: 'json'
+    });
 }
 
 function add_item_to_packing_list_success(){

@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.http import JsonResponse, Http404
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template.context_processors import csrf
 from django.template.loader import render_to_string
@@ -26,34 +26,38 @@ def create(request):
 @login_required
 def edit(request, pub_id):
     packing_list = get_object_or_404(PackingList, pub_id=pub_id)
+    pl_items = PackingListItem.objects.filter(packing_list_pub_id=pub_id)
+    items = Item.objects.filter(pub_id__in=[pli.item_pub_id for pli in pl_items]).order_by('created_at')
+
     context = {
-        'packing_list': packing_list
+        'packing_list': packing_list,
+        'items': items
     }
     context.update(csrf(request))
     return render_to_response('packing/edit.html', context)
 
 
 @login_required
-def add_item(request, packing_list_id):
-    packing_list = get_object_or_404(PackingList, id=packing_list_id)
-    item_name = request.POST.get('search_text')
-    qs = Item.objects.filter(description=item_name)
-    # qs = SearchQuerySet().filter(description=item_name)
-    packing_list_item = None
-    if len(qs) == 0:
-        raise Http404("no items with search text: %s" % item_name)
+def add_item(request, pub_id, item_pub_id):
+    packing_list = get_object_or_404(PackingList, pub_id=pub_id)
+    item = get_object_or_404(Item, pub_id=item_pub_id)
+    PackingListItem.objects.create(
+        packing_list_pub_id=pub_id,
+        item_pub_id=item_pub_id,
+    )
+    return HttpResponse()
 
-    item = qs[0]
-    packing_list_item = PackingListItem.objects.create(
-        packing_list_id=packing_list_id,
+
+@login_required
+def remove_item(request, pub_id, item_pub_id):
+    packing_list = get_object_or_404(PackingList, pub_id=pub_id)
+    item = get_object_or_404(Item, pub_id=item_pub_id)
+    PackingListItem.objects.filter(
+        packing_list_id=packing_list.id,
         item_id=item.id,
-        name=item_name)
-
-    context = {
-        'packing_list_item': packing_list_item
-    }
-    s = render_to_string('packing/_packing_list_item.html', context)
-    return JsonResponse({'html': s})
+        name=item.name
+    ).delete()
+    return HttpResponse()
 
 
 @login_required

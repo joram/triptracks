@@ -21,7 +21,13 @@
     </div>
     <div class="row imagetiles">
       <div class="container">
-        <div id="packing-list-items"></div>
+        <div id="packing-list-items">
+          {% for item in items %}
+            <div class="packing-item col-lg-3 col-md-3 col-sm-3 col-xs-6" id="search_item_{{ item.pub_id }}">
+              <img data-item-pub-id="{{ item.pub_id }}" class="item-search-image" src="{{ item.img_href }}">
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
 
@@ -36,7 +42,6 @@
          id="search_text"
          type="text"
          data-search-uri="{% url 'search-items' %}"
-         data-other="{% url 'add-packing-list-item' packing_list.id %}"
          data-csrf="{{ csrf_token }}"/>
       </div>
     </div>
