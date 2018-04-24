@@ -1,13 +1,16 @@
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from apps.packing.models import Item
+from apps.common.decorators import login_required
 
 
+@login_required
 def upload(request):
     Item.objects.load_mec_items()
     return redirect('list-routes')
 
 
+@login_required
 def search(request):
     search_text = request.GET.get('text', "")
     quantity = min(10, int(request.GET.get('quantity', '10')))

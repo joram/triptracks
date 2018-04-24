@@ -4,8 +4,8 @@ from django.http import HttpResponse, HttpResponseForbidden
 from apps.accounts.models import User
 
 
-def google_login_token(requests):
-    token = requests.POST.get('token')
+def login(request):
+    token = request.POST.get('token')
     try:
         idinfo = client.verify_id_token(token, settings.GOOGLE_CLIENT_ID)
         if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
@@ -13,20 +13,22 @@ def google_login_token(requests):
         email = idinfo['email']
         users = User.objects.filter(email=email)
 
-        if len(users) > 1:
-            raise Exception("multiple users with email:{}".format(email))
-
-        if len(users) == 0:
+        if not users.exists():
             user = User.objects.create(email=email, google_credentials=idinfo)
             print "new user: {} {}".format(email, user.pub_id)
-
         else:
             user = users[0]
 
+        request.session["user_pub_id"] = user.pub_id
         print "user logged in: {} {}".format(email, user.pub_id)
 
     except crypt.AppIdentityError:
         print "failed to validated {}".format(token)
         return HttpResponseForbidden("nope")
 
+    return HttpResponse("ok")
+
+
+def logout(request):
+    del request.session["user_pub_id"]
     return HttpResponse("ok")
