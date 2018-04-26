@@ -11,7 +11,7 @@ v1_api.register(RouteResource())
 urlpatterns = [
     url(r'^api/routes/all', route.api_all),
     # url(r'^api/', include(v1_api.urls)),
-    url(r'^routes/?$', route.list_routes, name='list-routes'),
+    url(r'^routes/?$', route.browse, name='view-routes'),
     url(r'^routes/load/demo/data/', route.tmp_load_data, name='demo-routes'),
     url(r'^routes/upload/', route.upload, name='upload-routes'),
     url(r'^route/create/?$', route.create, name='create-route'),

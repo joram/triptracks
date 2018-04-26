@@ -5,6 +5,9 @@ from apps.accounts.models import User
 
 
 def login(request):
+    if request.user is not None:
+        return HttpResponse("ok")
+
     token = request.POST.get('token')
     try:
         idinfo = client.verify_id_token(token, settings.GOOGLE_CLIENT_ID)

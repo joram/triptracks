@@ -1,10 +1,19 @@
+
 {% extends 'base.html' %}
 {% load staticfiles %}
 
 {% block content %}
-	<div class="row">
+<div class="container">
+    <br/>
+    <ul class="list-group" style="width:300px;">
+    <button type="button" class="list-group-item list-group-item-dark list-group-item-action active">
+        My Packing Lists
+    </button>
 		{% for plan in plans %}
-		<a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">{{ plan.name }}</a><br/>
-		{% endfor %}
-	</div>
+        <li class="list-group-item list-group-item-dark">
+            <a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">{{ plan.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
 {% endblock %}

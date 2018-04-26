@@ -24,16 +24,20 @@
 #navbar-icon {
     float:left;
     width:30px;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 #signed-in-menu .dropdown-toggle {
     min-width:158px;
-    padding-bottom: 9px;
+    padding: 2px;
+    padding-right: 8px;
 }
 
+#signed-in-menu .dropdown-toggle #account_name i {
+    margin-top:3;
+}
 #signed-in-menu .dropdown-menu {
-    padding-top: 0px;
+    margin-top: 20px;
 }
 
 #map {

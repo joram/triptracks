@@ -10,6 +10,7 @@ from apps.routes.models import Route
 from apps.routes.forms.tracks_file import TracksFileForm
 from django.contrib.gis.geos import Polygon
 from apps.common.decorators import login_required
+from django.middleware.csrf import get_token
 
 
 @login_required
@@ -28,7 +29,6 @@ def create(request):
     return redirect('edit-route', route.id)
 
 
-@login_required
 def api_all(request):
     # bbox_coords = (xmin, ymin, xmax, ymax)
     # "lat_lo,lng_lo,lat_hi,lng_hi"
@@ -102,6 +102,15 @@ def edit(request, route_id):
 
 
 @login_required
+def browse(request):
+    context = {
+        "csrf_token": get_token(request),
+        "GOOGLE_MAPS_API_KEY": settings.GOOGLE_MAPS_API_KEY,
+    }
+    return render_to_response("home.html", context)
+
+
+@login_required
 def view(request, route_id):
     route = Route.objects.get(id=route_id)
     if not route.center:
@@ -113,16 +122,3 @@ def view(request, route_id):
         'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
     return render_to_response("route/view.html", context)
 
-
-@login_required
-def list_routes(request):
-    routes = []
-    for route in Route.objects.all():
-        if route.center is None:
-            route.center = 'POINT(-123.329773 48.407326)'
-        routes.append(route)
-
-    context = {
-        'routes': routes,
-        'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
-    return render_to_response("route/list.html", context)

@@ -1,42 +1,78 @@
-<ul class="nav navbar-nav navbar-right">
-  <div id='sign-in' class="g-signin2" data-onsuccess="onSignIn"></div>
-  <li id='signed-in-menu' class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-      <img id="account_image" src=""/>
-      <div id="account_name">
-        <div id="account_fullname">Account</div>
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </div>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img id="navbar-icon" src="/static/img/favicon.png"/>
+        TripTracks
     </a>
 
-    <ul class="dropdown-menu">
+    <div class="dropdown" style="display: none;" id="signed-in-menu">
 
-      <li class="dropdown-header">Routes</li>
-      {% with app="routes" %}
-        {% with type="create" %}{% include "_nav_item.html" %}{% endwith %}
-        {% with type="edit" %}{% include "_nav_item.html" %}{% endwith %}
-      {% endwith %}
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img id="account_image" src="{{ request.user.profile_image }}"/>
+            <div id="account_name">
+                <div id="account_fullname">Account</div>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% url 'routes' as url_view_routes %}
+            {% url 'create-route' as url_create_route %}
+            <li class="dropdown-header">Routes</li>
+            {% include '_nav_item.html' with
+            href=url_view_routes
+            action_icon="fa-eye"
+            app_icon="/static/img/icons/icons8-world-map-128.png"
+            text="Browse All"
+            %}
+            {% include '_nav_item.html' with
+            href=url_create_route
+            action_icon="fa-plus-square-o"
+            app_icon="/static/img/icons/icons8-world-map-128.png"
+            text="Create"
+            %}
+            <br/>
 
-      <br/>
-      <li class="dropdown-header">Packing</li>
-      {% with app="packing" %}
-        {% with type="create" %}{% include "_nav_item.html" %}{% endwith %}
-        {% with type="edit" %}{% include "_nav_item.html" %}{% endwith %}
-      {% endwith %}
+            {% url 'list-packing-lists' as url_view_packing_lists %}
+            {% url 'create-packing-list' as url_create_packing_list  %}
+            <li class="dropdown-header">Packing Lists</li>
+            {% include '_nav_item.html' with
+            href=url_view_packing_lists
+            action_icon="fa-pencil-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Edit"
+            %}
+            {% include '_nav_item.html' with
+            href=url_create_packing_list
+            action_icon="fa-plus-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Create"
+            %}
+            <br/>
 
-      <br/>
-      <li class="dropdown-header">Trip Plans</li>
-      {% with app="trip-plans" %}
-        {% with type="create" %}{% include "_nav_item.html" %}{% endwith %}
-        {% with type="edit" %}{% include "_nav_item.html" %}{% endwith %}
-      {% endwith %}
+            {% url 'list-trip-plans' as url_view_trip_plans %}
+            {% url 'create-trip-plan' as url_create_trip_plan  %}
+            <li class="dropdown-header">Trip Plans</li>
+            {% include '_nav_item.html' with
+            href=url_view_trip_plans
+            action_icon="fa-pencil-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Edit"
+            %}
+            {% include '_nav_item.html' with
+            href=url_create_trip_plan
+            action_icon="fa-plus-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Create"
+            %}
+            <br/>
 
-      <br/>
-      <li class="dropdown-header">Account</li>
-      <li><a href="#">Profile</a></li>
-      <li>
-        <a href="#" onclick="signOut();">Sign out</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+
+            <li class="dropdown-header">Account</li>
+            <a class="dropdown-item" href="#" onclick="signOut();">Sign out</a>
+
+        </div>
+    </div>
+    {% if not request.user %}
+      <div id='sign-in' class="g-signin2" data-onsuccess="onSignIn"></div>
+    {% endif %}
+
+</nav>

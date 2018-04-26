@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+  <script src="/static/js/route_viewer.es6" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&callback=build_map_all_routes" async defer></script>
+  <link href="/static/map.css">
+{% endblock %}
+
+{% block content %}
+    <div id="map"></div>
+{% endblock %}

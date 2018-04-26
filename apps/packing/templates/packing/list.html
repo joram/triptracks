@@ -2,15 +2,20 @@
 {% load staticfiles %}
 
 {% block content %}
-	<div class="row">
-		<ul>
-		{% for packing_list in packing_lists %}
-			<li>
-				<a href="{% url 'edit-packing-list' packing_list.pub_id %}">
-					{{ packing_list.name }}
-				</a>
-			</li>
-		{% endfor %}
-		</ul>
-	</div>
+<div class="container">
+    <br/>
+    <ul class="list-group" style="width:300px;">
+    <button type="button" class="list-group-item list-group-item-dark list-group-item-action active">
+        My Packing Lists
+    </button>
+    {% for packing_list in packing_lists %}
+        <li class="list-group-item list-group-item-dark">
+            <a href="{% url 'edit-packing-list' packing_list.pub_id %}">
+                {{ packing_list.name }}
+                <span class="badge badge-primary badge-pill">14</span>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
 {% endblock %}

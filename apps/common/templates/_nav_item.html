@@ -1,46 +1,12 @@
-<li style="list-style-type: none; height:20px;">
-  {% if type == "edit" and app == "routes" %}
-    <a href="/routes">
-  {% elif type == "create" and app == "routes" %}
-    <a href="/route/create">
-  {% elif type == "edit" and app == "packing" %}
-    <a href="{% url 'list-packing-lists' %}">
-  {% elif type == "create" and app == "packing" %}
-    <a href="{% url 'create-packing-list' %}">
-  {% elif type == "edit" and app == "trip-plans" %}
-    <a href="/trip/plans">
-  {% elif type == "create" and app == "trip-plans" %}
-    <a href="/trip/plan/create">
-  {% else %}
-    <a>
-  {% endif %}
-
+<a class="dropdown-item" href="{{ href }}">
     <div style="width:20px; float:left; margin-top:4px;">
-      {% if type == "edit" %}
-        <i class="fa fa-pencil-square-o"></i>
-      {% elif type == "create" %}
-        <i class="fa fa-plus-square-o"></i>
-      {% endif %}
+      <i class="fa {{ action_icon }}"></i>
     </div>
-
     <div style="float:left;">
-      {% if app == "packing" %}
-        <img src="/static/img/icons/icons8-backpack-128.png" style="width:20px;"/>
-      {% elif app == "routes" %}
-        <img src="/static/img/icons/icons8-world-map-128.png" style="width:20px;"/>
-      {% elif app == "trip-plans" %}
-        <img src="/static/img/icons/icons8-alps-144.png" style="width:20px;"/>
-      {% endif %}
+      <img src="{{ app_icon }}" style="width:20px;"/>
     </div>
-
-    <div style="float:left; margin-top:2px; margin-left:3px;">
-      {% if type == "edit" %}
-        List/Edit
-      {% elif type == "create" %}
-        Create
-      {% endif %}
+    <div style="float:left; margin-left:3px;">
+      {{ text }}
     </div>
-
-  </a>
-</li>
+</a>
 

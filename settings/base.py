@@ -1,9 +1,12 @@
 from settings.default import *
+import os
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),
 )
+
+STAFF_EMAILS = os.getenv("TP_STAFF_EMAILS", "").rstrip("\r").split(",")
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -62,6 +65,12 @@ LOGGING = {
 SECRET_KEY = os.environ.get("TP_SECRET_KEY", "youshouldntusethisoneinprod")
 MEDIA_ROUTE = os.path.join(BASE_DIR, "data/uploads")
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_ROUTE)
+
+import re
+from django.template import base
+base.tag_re = re.compile(base.tag_re.pattern, re.DOTALL)
+# from django.template.context_processors import request
+# TEMPLATES[0]["OPTIONS"]["context_processors"] += ""
 
 ALLOWED_HOSTS = [
     'app.triptracks.io',
