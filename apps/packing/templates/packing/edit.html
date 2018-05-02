@@ -12,30 +12,32 @@
 <div class="row">
 
 	<div class="col-md-6" style="border:solid thin black;">
-    <div class="row">
+    <div class="row packing-heading">
       <div class="center">
         <h3>
-          <a id="packing-list-name" class="editable editable-click">{{ packing_list.name }}</a> Items
+          <a id="packing-list-name">{{ packing_list.name }}</a>
         </h3>
       </div>
     </div>
-    <div class="row imagetiles">
-      <div class="container">
-        <div id="packing-list-items">
-          {% for item in items %}
-            <div class="packing-item col-lg-3 col-md-3 col-sm-3 col-xs-6" id="search_item_{{ item.pub_id }}">
-              <img data-item-pub-id="{{ item.pub_id }}" class="item-search-image" src="{{ item.img_href }}">
-            </div>
-          {% endfor %}
+    <div class="row" id="packing-list-items">
+    {% for item in items %}
+
+      <div class="col-sm-3 packing-item" id="search_item_{{ item.pub_id }}">
+        <div class="card">
+          <div class="card-body">
+            <img class="card-img-top item-search-image" data-item-pub-id="{{ item.pub_id }}" src="{{ item.img_href }}" alt="Card image cap">
+          </div>
         </div>
       </div>
+
+    {% endfor %}
     </div>
 
 	</div>
 
 
 	<div class="col-md-6" style="border:solid thin black;">
-    <div class="row">
+    <div class="row packing-heading">
       <div class="center">
         <label for="search_text"><h3>Search</h3></label>
         <input
@@ -45,11 +47,7 @@
          data-csrf="{{ csrf_token }}"/>
       </div>
     </div>
-    <div class="row imagetiles">
-      <div class="container">
-        <div id="search-items"></div>
-      </div>
-    </div>
+    <div class="row" id="search-items"></div>
 	</div>
 
 </div>

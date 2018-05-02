@@ -4,6 +4,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 
 	<!-- JS -->
 	<script
@@ -12,17 +13,20 @@
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
 	<link href="/static/css/common.css" rel="stylesheet"/>
-	<link href="/static/css/bootstrap-editable.css" rel="stylesheet"/>
-	<script src="/static/js/bootstrap-editable.js"></script>
-	<script src="/static/js/cacheJS.min.js"></script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/cacheJS.min.js"></script>
 	<script src="/static/js/google_auth.js"></script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-signin-client_id" content="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com">
 	{% block extra_js %}{% endblock %}
 </head>
 <body>
-	<div id="csrf_token" hidden="hidden">{{ csrf_token }}</div>
+    <form method="post" id="csrf_middleware" style="display: none;">
+        {% csrf_token %}
+    </form>
     {% include 'top_nav.html' %}
 	<div id="body">
 		{% block content %}{% endblock %}

@@ -1,18 +1,14 @@
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.packing-heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .packing-item {
+  margin-top: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
-.packing-item img {
-  border: solid thin black;
-  border-radius: 15px;
-
-  margin-top: 8px;
-  vertical-align: middle;
-  max-width:100%;
-  max-height:100%;
+.packing-item .card-body {
+  padding:2px;
 }

@@ -11,13 +11,30 @@ function debounce(fn, delay) {
 
 
 $(document).ready(function() {
-    let search_text = $("#search_text");
-    let search_url = $('#search_text').data().searchUri;
-    let csrf_token = $('#search_text').data().csrf;
-    search_text.keyup(debounce(function(){
+    $("#search_text").keyup(debounce(function(){
         update_search_items()
     }, 200));
+
+    $('#packing-list-name').editable({
+        mode:'inline',
+        showbuttons:false,
+    });
+    $('#packing-list-name').on('save', function(e, params) {
+        update_packing_list_meta(params.newValue);
+    })
 })
+
+function update_packing_list_meta(name){
+    packing_list_pub_id = $("div#packing-list-pub-id").text();
+    $.ajax({
+        type: "POST",
+        url: "/packing/list/"+packing_list_pub_id+"/edit",
+        data: {
+            name: name,
+        },
+        dataType: 'json'
+    });
+}
 
 function update_search_items(){
 	search_url = $('#search_text').data().searchUri;
@@ -36,9 +53,16 @@ function add_items_to_carousel(data) {
 	data["items"].forEach(function (item){
         href = item["img_href"];
         pub_id = item["pub_id"];
-    	item = $(`<div class="packing-item col-lg-3 col-md-3 col-sm-3 col-xs-6" id="search_item_`+pub_id+`">
-            <img data-item-pub-id="`+pub_id+`" data-search-text="`+search_text+`" class="item-search-image" src="`+href+`">
-        </div>`);
+
+        item = $('' +
+        '<div class="col-sm-3 packing-item" id="search_item_'+pub_id+'">'+
+        '  <div class="card">'+
+        '    <div class="card-body">'+
+        '      <img class="card-img-top item-search-image" data-item-pub-id="'+pub_id+'" src="'+href+'" alt="Card image cap">'+
+        '    </div>'+
+        '  </div>'+
+        '</div>')
+
         item.click("click", attach_onclick_handler(pub_id));
         carousel.append(item);
     });
@@ -61,7 +85,4 @@ function add_item_to_packing_list(item_pub_id, title) {
       url: add_item_url,
       dataType: 'json'
     });
-}
-
-function add_item_to_packing_list_success(){
 }
