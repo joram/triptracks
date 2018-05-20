@@ -162,6 +162,8 @@ class RouteManager(models.GeoManager):
 class Route(models.Model):
     pub_id = ShortUUIDField(prefix="route", max_length=32)
     name = models.CharField(max_length=120)
+    description = models.CharField(max_length=1024*16, default="")
+    image_url = models.CharField(max_length=2048, default="")
     markers = models.MultiPointField(blank=True, null=True)
     lines = models.MultiLineStringField(blank=True, null=True)
     lines_zoom_1 = jsonfield.JSONField()

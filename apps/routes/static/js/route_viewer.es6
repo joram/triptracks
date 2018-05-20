@@ -152,7 +152,13 @@ function load_route(route) {
      if (route['lines'] !== null) {
         google_lines = [];
         route['lines'].forEach(function (line) {
-            google_lines.push(create_line(line));
+            google_line = create_line(line);
+            (function(route) {
+                google_line.addListener('click', function () {
+                    show_route_details(route);
+                });
+            })(route);
+            google_lines.push(google_line);
         });
         route["googlemaps_lines"] = google_lines;
      }
@@ -166,6 +172,26 @@ function load_route(route) {
     }
 }
 
+function show_route_details(route){
+    $("#route_details_card").remove();
+    pub_id = route["pub_id"];
+    route_name = route["name"];
+    route_description = route["description"];
+    route_image_url = route["image_url"];
+    img_top = "";
+    if(route_image_url != ""){
+        img_top = "<img class='card-img-top' src='"+route_image_url+"' alt='Card image cap'>";
+    }
+    routeDetailsCard = $("<div id='route_details_card' class='card' style='width: 18rem;'> \
+       <div class='card-header'>"+route_name+"</div>    \
+       "+ img_top +"\
+       <div class='card-body'> \
+        <p class='card-text'>"+route_description+"</p> \
+      </div> \
+    </div>");
+
+    $("#body").append(routeDetailsCard);
+}
 
 function create_line(line_coords) {
     let path = [];

@@ -59,7 +59,7 @@ def api_all(request):
     routes = []
     if qs.count() < 10:
         zoom_field_name = "lines_zoom_1"
-    qs = qs.values("center", "name", "pub_id", zoom_field_name)
+    qs = qs.values("center", "name", "description", "image_url", "pub_id", zoom_field_name)
     count = 0
     for route in qs:
         count += 1
@@ -70,6 +70,8 @@ def api_all(request):
         routes.append({
             'center': center,
             'name': route["name"],
+            'description': route["description"],
+            'image_url': route["image_url"],
             'pub_id': route["pub_id"],
             'zoom_level': zoom_level,
             'lines': json.loads(route[zoom_field_name])
