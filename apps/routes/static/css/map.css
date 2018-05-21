@@ -3,3 +3,16 @@
   width: 80px;
 }
 
+#route_details_card {
+  width: 300px;
+}
+
+#route_details_card > .card-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#route_details_card > .card-img-top {
+  max-height: 250px;
+}

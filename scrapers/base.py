@@ -24,6 +24,7 @@ class BaseScraper(object):
         self._data_dir = None
         self._data_raw_dir = None
         self.base_url = ""
+        self.extension = "html"
 
     @property
     def data_dir(self):
@@ -47,51 +48,58 @@ class BaseScraper(object):
             self._data_raw_dir = data_raw_dir
         return self._data_raw_dir
 
-    def item_filepath(self, id, ):
+    def item_filepath(self, id):
         if not id.endswith(".{}".format(self.FILETYPE)):
             id += ".{}".format(self.FILETYPE)
         filepath = os.path.join(self.data_dir, "./{}".format(id))
         filepath = os.path.abspath(filepath)
         return filepath
 
-    def have_item(self, id):
-        return os.path.exists(self.item_filepath(id))
+    def have_item(self, filepath):
+        return os.path.exists(filepath)
 
-    def store_item(self, id, data):
-        with open(self.item_filepath(id), "w") as f:
+    def store_item(self, filepath, data):
+        with open(filepath, "w") as f:
             f.write(data)
+
+    def get_item(self, filepath):
+        with open(filepath, "r") as f:
+            return f.read()
 
     def item_urls(self):
         raise NotImplemented()
 
-    def item_content(self, url, id):
+    def item_cache_filepath(self, url):
         raise NotImplemented()
 
-    def get_content(self, url, extension="html"):
-        cache_filepath = os.path.join(self.data_raw_dir, url.replace(self.base_url, "")).rstrip("/")
-        extension = ".{}".format(extension)
-        if not cache_filepath.lower().endswith(extension):
-            cache_filepath += extension
-
-        if os.path.exists(cache_filepath):
-            print "loading cached {}".format(url)
-            with open(cache_filepath) as f:
-                return f.read()
-
-        print "downloading {}".format(url)
+    def get_uncached_content(self, url):
+        if self.debug:
+            print "downloading {}".format(url)
         time.sleep(self.wait)
         resp = requests.get(url)
         if resp.status_code != 200:
-            raise FailedRequest()
-
-        cache_path = os.path.dirname(cache_filepath)
-        cache_path = os.path.abspath(cache_path)
-        if not os.path.exists(cache_path):
-            os.makedirs(cache_path)
-        with open(cache_filepath, "w+") as f:
-            f.write(resp.content)
-
+            raise FailedRequest(resp.content)
         return resp.content
+
+    def get_content(self, url):
+
+        # check cache
+        cache_filepath = self.item_cache_filepath(url)
+        if self.have_item(cache_filepath):
+            if self.debug:
+                print "loading cached {}".format(url)
+            return self.get_item(cache_filepath)
+
+        content = self.get_uncached_content(url)
+
+        # update cache
+        path = os.path.dirname(cache_filepath)
+        if not os.path.exists(path):
+            os.makedirs(path)
+        with open(cache_filepath, "w+") as f:
+            f.write(content)
+
+        return content
 
     def get_soup(self, url):
         html = self.get_content(url)
@@ -116,30 +124,6 @@ class BaseScraper(object):
         return data
 
     def run(self):
-        for id, url in self.item_urls():
-            if not self.have_item(id):
-                try:
-                    filename, data = self.item_content(url, id)
-                    if data is None:
-                        raise FailedRequest()
-                    if self.debug:
-                        print filename, url
-                    self.store_item(filename, data)
-                except:
-                    self.store_item(id+"____FAILED", "")
-
-    def items(self):
-        for id, url in self.item_urls():
-
-            try:
-                filename, data = self.item_content(url, id)
-                filepath = self.item_filepath(filename)
-                if data is None:
-                    raise FailedRequest()
-                self.store_item(filename, data)
-                yield id, filepath, data
-            except Exception as e:
-                print e
-                self.store_item(id+"____FAILED", "")
-            continue
+        for url in self.item_urls():
+            yield self.get_content(url)
 

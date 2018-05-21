@@ -180,9 +180,9 @@ function show_route_details(route){
     route_image_url = route["image_url"];
     img_top = "";
     if(route_image_url != ""){
-        img_top = "<img class='card-img-top' src='"+route_image_url+"' alt='Card image cap'>";
+        img_top = "<img class='card-img-top' src='https://www.trailpeak.com/"+route_image_url+"' alt='Card image cap'>";
     }
-    routeDetailsCard = $("<div id='route_details_card' class='card' style='width: 18rem;'> \
+    routeDetailsCard = $("<div id='route_details_card' class='card'> \
        <div class='card-header'>"+route_name+"</div>    \
        "+ img_top +"\
        <div class='card-body'> \

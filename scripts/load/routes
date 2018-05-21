@@ -2,8 +2,50 @@
 from util import setup_env
 setup_env()
 from apps.routes.models import Route
+import json
+from scrapers.trailpeak_details import ScrapeTrailPeakDetails
+from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
+from django.conf import settings
 
+settings.DEBUG = False
 
 if __name__ == "__main__":
-    Route.objects.collect_and_load_all()
+    s = ScrapeTrailPeakDetails()
+    sGPX = ScrapeTrailPeakGPX()
+
+    for details in s.run():
+        try:
+            details = json.loads(details)
+        except Exception as e:
+            print e
+            continue
+
+        # try:
+        #     sGPX.get_content(details["url"])
+        # except Exception as e:
+        #     print e
+        #     continue
+        name = details["name"]
+        trail_id = details["trail_id"]
+        trail_image_url = details["trail_image_url"]
+        description = details["description"]
+
+        print u"updating route {}: {}".format(
+            trail_id.rjust(5, "0"),
+            name
+        )
+        gpx_name = trail_id+"_" + name.replace(" ", "_")
+        routes = Route.objects.filter(name__contains=gpx_name)
+        if len(routes) > 0:
+            for i in range(1, len(routes)):
+                routes[i].delete()
+            routes[0].name = name
+            routes[0].description = description
+            routes[0].image_url = trail_image_url
+
+            try:
+                routes[0].save()
+            except Exception as e:
+                print e
+                continue
 

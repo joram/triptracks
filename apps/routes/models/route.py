@@ -4,7 +4,7 @@ import gpxpy.gpx
 from pykml import parser
 from django.conf import settings
 from utils.fields import ShortUUIDField
-from scrapers.trailpeak import ScrapeTrailPeak
+from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
 import jsonfield
 import os
 from apps.routes.models.tracks_file import TracksFile
@@ -132,7 +132,7 @@ class RouteManager(models.GeoManager):
         return lines
 
     def collect_and_load_all(self):
-        scraper = ScrapeTrailPeak()
+        scraper = ScrapeTrailPeakGPX()
         for id, filepath, data in scraper.items():
             try:
                 self._collect_and_load(id, filepath, data)
@@ -143,10 +143,19 @@ class RouteManager(models.GeoManager):
         name = os.path.basename(filepath)
 
         routes = Route.objects.filter(name=name)
-        if routes.exists():
+        if routes.exists() and routes[0].description != "":
             return
 
         if filepath.endswith("FAILED.gpx"):
+            return
+
+        if routes.exists() and routes[0].description == "":
+            desc = ScrapeTrailPeakGPX().get_details(id).description
+            print desc
+            import time
+            time.sleep(5)
+            # routes[0].description = desc
+            # routes[0].save()
             return
 
         trailFiles = TracksFile.objects.filter(filename=name)
