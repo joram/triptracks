@@ -183,10 +183,13 @@ function show_route_details(route){
         img_top = "<img class='card-img-top' src='https://www.trailpeak.com/"+route_image_url+"' alt='Card image cap'>";
     }
     routeDetailsCard = $("<div id='route_details_card' class='card'> \
-       <div class='card-header'>"+route_name+"</div>    \
-       "+ img_top +"\
-       <div class='card-body'> \
+      <div class='card-header'>"+route_name+"</div>    \
+      "+ img_top +"\
+      <div class='card-body'> \
         <p class='card-text'>"+route_description+"</p> \
+        <div class='btn-group' role='group' aria-label='Basic example'> \
+          <a type='button' class='btn' href='/trip/plan/create/?route="+pub_id+"'>Plan Trip</a> \
+        </div> \
       </div> \
     </div>");
 
