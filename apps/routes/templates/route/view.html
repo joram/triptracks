@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block extra_js %}
-  <script src="/static/js/route_viewer.es6" type="text/javascript"></script>
+  <script src="/static/js/routes.js" type="text/javascript"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       load_google_maps("{{ GOOGLE_MAPS_API_KEY }}", {{ route.id }});

@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.middleware.csrf import get_token
 from django.conf import settings
 
+
 @login_required
 def create(request):
     route = None
@@ -30,12 +31,13 @@ def edit(request, pub_id):
     routes = Route.objects.filter(pub_id=plan.route_pub_id)
     if routes.exists():
         route = routes[0]
-        (N,E), (S,W) = route.lines.boundary.coords
+        (S,W), (N,E) = route.lines.boundary.coords
 
     context = {
         "csrf_token": get_token(request),
         "plan": plan,
         "route": route,
+        "route_coords": route.coordinates(4),
         "route_boundaries": {
             'N': N,
             'S': S,

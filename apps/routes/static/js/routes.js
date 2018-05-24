@@ -82,7 +82,7 @@ function build_map() {
 }
 
 function load_routes_data(data) {
-    $.each(data, (index, route) => {
+    data.forEach(function (route){
         unload_route(route);
         if(!use_cached_lines(route)){
             load_route(route);
@@ -110,7 +110,7 @@ function unload_route(route) {
 }
 
 function center(route){
-    let map_element = document.getElementById("map");
+    map_element = document.getElementById("map");
     center = route["center"];
 
     // recenter
@@ -135,7 +135,7 @@ function use_cached_lines(route){
         return false;
     }
 
-    let map_element = document.getElementById("map");
+    map_element = document.getElementById("map");
     google_lines = lines_cache[pub_id][zoom_level]["googlemaps_lines"];
     google_lines.forEach(function (google_line){
         google_line.setMap(map_element.map);
@@ -194,37 +194,5 @@ function show_route_details(route){
     </div>");
 
     $("#body").append(routeDetailsCard);
-}
-
-function create_line(line_coords) {
-    let path = [];
-    for (var j = 0; j < line_coords.length; j++) {
-        path.push({
-            lat: parseFloat(line_coords[j][0]),
-            lng: parseFloat(line_coords[j][1])
-        })
-    }
-
-    let map_element = document.getElementById("map");
-
-    line = new google.maps.Polyline({
-        path: path,
-        geodesic: true,
-        strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-    });
-    line.setMap(map_element.map);
-    return line;
-}
-
-function add_marker(coord) {
-    let marker = new google.maps.Marker({
-        'position': new google.maps.LatLng(coord[0], coord[1]),
-        'draggable': false,
-        'map': this.drawingManager.map });
-    maparkers.add(marker);
-    marker.list_index = markers.indexOf(marker);
-    return marker;
 }
 

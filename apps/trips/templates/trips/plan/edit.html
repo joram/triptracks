@@ -2,6 +2,9 @@
 {% load staticfiles %}
 
 {% block extra_js %}
+  <script src="/static/js/route.js" type="text/javascript"></script>
+  <script src="/static/js/route_utils.js" type="text/javascript"></script>
+  <script src="/static/js/trip_edit.js" type="text/javascript"></script>
   <link rel="stylesheet" href="/static/css/trips.css">
 {% endblock %}
 
@@ -13,22 +16,22 @@
           <h2>{{ plan.name }}</h2>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn btn-default">
+          <button id="route-button" type="button" class="btn btn-default">
             <img class="trip-plan-icon" src="/static/img/icons/icons8-world-map-512.png">
             <br/>
             Route
           </button>
-          <button type="button" class="btn btn-default">
+          <button id="packing-button" type="button" class="btn btn-default">
             <img class="trip-plan-icon" src="/static/img/icons/icons8-backpack-512.png">
             <br/>
             Packing
           </button>
-          <button type="button" class="btn btn-default">
+          <button id="time-button" type="button" class="btn btn-default">
             <img class="trip-plan-icon" src="/static/img/icons/icons8-realtime-512.png">
             <br/>
             Time
           </button>
-          <button type="button" class="btn btn-default">
+          <button id="team-button" type="button" class="btn btn-default">
             <img class="trip-plan-icon" src="/static/img/icons/icons8-male-user-512.png">
             <br/>
             Partner(s)
@@ -37,23 +40,18 @@
       </div>
     </div>
     <div class="row">
-      <div id="route">
-        <div id="map"></div>
+      <div id="route-view">
+        <div id="map" style="margin-top:200px;width:500px; height:500px;"></div>
         <script>
-          var map;
           function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {});
-            var northEast = new google.maps.LatLng({{ route_boundaries.S }},{{ route_boundaries.w }});
-            var southWest = new google.maps.LatLng({{ route_boundaries.N }},{{ route_boundaries.E }});
-            var bounds = new google.maps.LatLngBounds(southWest,northEast);
-            map.fitBounds(bounds);
+            show_route("{{ plan.route_pub_id }}");
           }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap" async defer></script>
       </div>
-      <div id="packing"></div>
-      <div id="time"></div>
-      <div id="partners"></div>
+      <div id="packing-view"></div>
+      <div id="time-view"></div>
+      <div id="team-view"></div>
     </div>
   </div>
 {% endblock %}

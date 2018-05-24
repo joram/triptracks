@@ -2,7 +2,7 @@ import json
 import os
 
 from django.conf import settings
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template.context_processors import csrf
 from django.http import JsonResponse
 
@@ -27,6 +27,28 @@ def tmp_load_data(request):
 def create(request):
     route = Route.objects.create()
     return redirect('edit-route', route.id)
+
+
+def api_route(request, pub_id):
+
+    route = get_object_or_404(Route, pub_id=pub_id)
+    se, nw = route.lines.boundary.coords
+    route_details = {
+        'center': {"coordinates": [route.center[0], route.center[1]]},
+        'name': route.name,
+        'description': route.description,
+        'image_url': route.image_url,
+        'pub_id': pub_id,
+        'zoom_level': 1,
+        'lines': route.lines_zoom_1,
+        'bbox': {
+            'n': nw[0],
+            's': se[0],
+            'w': nw[1],
+            'e': se[1]
+        },
+    }
+    return JsonResponse(route_details, safe=False)
 
 
 def api_all(request):
