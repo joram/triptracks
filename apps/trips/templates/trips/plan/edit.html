@@ -11,47 +11,49 @@
 {% block content %}
   <div class="container">
     <div class="row">
-      <div id="title-box">
-        <div id="trip-title">
-          <h2>{{ plan.name }}</h2>
-        </div>
-        <div class="btn-group">
-          <button id="route-button" type="button" class="btn btn-default">
-            <img class="trip-plan-icon" src="/static/img/icons/icons8-world-map-512.png">
-            <br/>
-            Route
-          </button>
-          <button id="packing-button" type="button" class="btn btn-default">
-            <img class="trip-plan-icon" src="/static/img/icons/icons8-backpack-512.png">
-            <br/>
-            Packing
-          </button>
-          <button id="time-button" type="button" class="btn btn-default">
-            <img class="trip-plan-icon" src="/static/img/icons/icons8-realtime-512.png">
-            <br/>
-            Time
-          </button>
-          <button id="team-button" type="button" class="btn btn-default">
-            <img class="trip-plan-icon" src="/static/img/icons/icons8-male-user-512.png">
-            <br/>
-            Partner(s)
-          </button>
-        </div>
+      <div id="trip-title">
+        <h2>{{ plan.name }}</h2>
       </div>
+      <!-- https://getbootstrap.com/docs/4.0/components/navs/#tabs-with-dropdowns -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item dark">
+          <a class="nav-link" id="route-tab" data-toggle="tab" href="#route" role="tab" aria-controls="route" aria-selected="true">
+            Route <img class="trip-plan-icon" src="/static/img/icons/icons8-world-map-512.png">
+          </a>
+        </li>
+        <li class="nav-item dark">
+          <a class="nav-link" id="packing-tab" data-toggle="tab" href="#packing" role="tab" aria-controls="packing" aria-selected="false">
+            Packing <img class="trip-plan-icon" src="/static/img/icons/icons8-backpack-512.png">
+          </a>
+        </li>
+        <li class="nav-item dark">
+          <a class="nav-link" id="time-tab" data-toggle="tab" href="#time" role="tab" aria-controls="time" aria-selected="false">
+            Time <img class="trip-plan-icon" src="/static/img/icons/icons8-realtime-512.png">
+          </a>
+        </li>
+        <li class="nav-item dark">
+          <a class="nav-link active" id="partners-tab" data-toggle="tab" href="#partners" role="tab" aria-controls="partners" aria-selected="false">
+            Partner(s) <img class="trip-plan-icon" src="/static/img/icons/icons8-male-user-512.png">
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="row">
-      <div id="route-view">
-        <div id="map" style="margin-top:200px;width:500px; height:500px;"></div>
-        <script>
-          function initMap() {
-            show_route("{{ plan.route_pub_id }}");
-          }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap" async defer></script>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="route" role="tabpanel" aria-labelledby="route-tab">
+          <div id="map" style="top:0;"></div>
+          <script>
+            function initMap() {
+              show_route("{{ plan.route_pub_id }}");
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap" async defer></script>
+        </div>
+        <div class="tab-pane fade" id="packing" role="tabpanel" aria-labelledby="packing-tab">Packing...</div>
+        <div class="tab-pane fade" id="time" role="tabpanel" aria-labelledby="time-tab">Time...</div>
+        <div class="tab-pane fade show active" id="partners" role="tabpanel" aria-labelledby="partners-tab">Partners...</div>
       </div>
-      <div id="packing-view"></div>
-      <div id="time-view"></div>
-      <div id="team-view"></div>
     </div>
   </div>
+
 {% endblock %}
