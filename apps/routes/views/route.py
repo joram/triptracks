@@ -32,7 +32,6 @@ def create(request):
 def api_route(request, pub_id):
 
     route = get_object_or_404(Route, pub_id=pub_id)
-    se, nw = route.lines.boundary.coords
     route_details = {
         'center': {"coordinates": [route.center[0], route.center[1]]},
         'name': route.name,
@@ -41,12 +40,6 @@ def api_route(request, pub_id):
         'pub_id': pub_id,
         'zoom_level': 1,
         'lines': route.lines_zoom_1,
-        'bbox': {
-            'n': nw[0],
-            's': se[0],
-            'w': nw[1],
-            'e': se[1]
-        },
     }
     return JsonResponse(route_details, safe=False)
 

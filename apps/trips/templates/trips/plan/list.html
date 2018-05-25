@@ -10,9 +10,15 @@
         My Packing Lists
     </button>
 		{% for plan in plans %}
+        <a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">
         <li class="list-group-item list-group-item-dark">
-            <a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">{{ plan.name }}</a>
+            {{ plan.name }}
+            <br/>
+            {% if plan.route %}
+                {{ plan.route.name}}
+            {% endif %}
         </li>
+        </a>
     {% endfor %}
     </ul>
 </div>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div id="packing-list-pub-id" style="display:none;">{{ packing_list.pub_id }}</div>
+	<div class="col-md-6" style="border:solid thin black;">
+    <div class="row packing-heading">
+      <div class="center">
+        <h3>
+          <a id="packing-list-name">{{ packing_list.name }}</a>
+        </h3>
+      </div>
+    </div>
+    <div class="row" id="packing-list-items">
+    {% for item in packing_list.items %}
+      <div class="col-sm-3 packing-item" id="search_item_{{ item.pub_id }}">
+        <div class="card">
+          <div class="card-body">
+            <img class="card-img-top item-search-image" data-item-pub-id="{{ item.pub_id }}" src="{{ item.img_href }}" alt="Card image cap">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+	</div>
+
+	<div class="col-md-6" style="border:solid thin black;">
+    <div class="row packing-heading">
+      <div class="center">
+        <label for="search_text"><h3>Search</h3></label>
+        <input
+         id="search_text"
+         type="text"
+         data-search-uri="{% url 'search-items' %}"
+         data-csrf="{{ csrf_token }}"/>
+      </div>
+    </div>
+    <div class="row" id="search-items"></div>
+	</div>
+
+</div>

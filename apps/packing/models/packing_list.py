@@ -11,7 +11,8 @@ class PackingList(models.Model):
 
     @property
     def items(self):
-        return PackingListItem.objects.filter(packing_list_pub_id=self.pub_id).order_by('-created_at')
+        pl_items = PackingListItem.objects.filter(packing_list_pub_id=self.pub_id)
+        return Item.objects.filter(pub_id__in=[pli.item_pub_id for pli in pl_items])
 
     @property
     def item_count(self):

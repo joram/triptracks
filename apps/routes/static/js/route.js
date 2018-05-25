@@ -9,12 +9,22 @@ function show_route(pub_id) {
     });
 }
 
+function line_bounds(line){
+  var bounds = new google.maps.LatLngBounds();
+  line.getPath().forEach(function(item, index) {
+      bounds.extend(new google.maps.LatLng(item.lat(), item.lng()));
+  });
+  return bounds;
+}
+
 function load_route_details(data) {
-  sw = new google.maps.LatLng(data.bbox.s, data.bbox.w);
-  ne = new google.maps.LatLng(data.bbox.n, data.bbox.e);
-  plan_map.fitBounds(new google.maps.LatLngBounds(sw, ne));
+  bounds = new google.maps.LatLngBounds();
   data.lines.forEach(function (line_coords) {
     line = create_new_line(line_coords);
     line.setMap(plan_map);
+    bbox = line_bounds(line);
+    bounds.extend(bbox.getNorthEast());
+    bounds.extend(bbox.getSouthWest());
   });
+  plan_map.fitBounds(bounds);
 }
