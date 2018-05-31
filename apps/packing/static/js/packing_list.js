@@ -50,6 +50,7 @@ function update_search_items(){
 function add_items_to_carousel(data) {
 	carousel = $("#search-items");
 	carousel.empty();
+    $("#search-items").show();
 	data["items"].forEach(function (item){
         href = item["img_href"];
         pub_id = item["pub_id"];
@@ -76,9 +77,10 @@ function attach_onclick_handler(pub_id){
 function add_item_to_packing_list(item_pub_id, title) {
     packing_list_pub_id = $("div#packing-list-pub-id").text();
     item = $("#search_item_"+item_pub_id);
-    item.detach()
+    item.detach();
     $("#packing-list-items").append(item);
-    add_item_url = "/packing/list/"+packing_list_pub_id+"/add/"+item_pub_id
+    add_item_url = "/packing/list/"+packing_list_pub_id+"/add/"+item_pub_id;
+    $("#search-items").hide();
 
     $.ajax({
       type: "GET",
