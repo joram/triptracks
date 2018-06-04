@@ -14,40 +14,6 @@
             </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            {% url 'routes' as url_view_routes %}
-            {% url 'create-route' as url_create_route %}
-            <li class="dropdown-header">Routes</li>
-            {% include '_nav_item.html' with
-            href=url_view_routes
-            action_icon="fa-eye"
-            app_icon="/static/img/icons/icons8-world-map-128.png"
-            text="Browse"
-            %}
-            {% include '_nav_item.html' with
-            href=url_create_route
-            action_icon="fa-plus-square-o"
-            app_icon="/static/img/icons/icons8-world-map-128.png"
-            text="Create"
-            %}
-            <br/>
-
-            {% url 'list-packing-lists' as url_view_packing_lists %}
-            {% url 'create-packing-list' as url_create_packing_list  %}
-            <li class="dropdown-header">Packing Lists</li>
-            {% include '_nav_item.html' with
-            href=url_view_packing_lists
-            action_icon="fa-pencil-square-o"
-            app_icon="/static/img/icons/icons8-backpack-128.png"
-            text="Edit"
-            %}
-            {% include '_nav_item.html' with
-            href=url_create_packing_list
-            action_icon="fa-plus-square-o"
-            app_icon="/static/img/icons/icons8-backpack-128.png"
-            text="Create"
-            %}
-            <br/>
-
             {% url 'list-trip-plans' as url_view_trip_plans %}
             {% url 'create-trip-plan' as url_create_trip_plan  %}
             <li class="dropdown-header">Trip Plans</li>
