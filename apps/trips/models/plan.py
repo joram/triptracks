@@ -6,6 +6,8 @@ from apps.packing.models import PackingList
 from yr.libyr import Yr
 import json
 from utils.fields import ShortUUIDField
+import pprint
+from django.http import JsonResponse
 
 
 class Plan(models.Model):
@@ -48,12 +50,25 @@ class Plan(models.Model):
     def forecast(self):
         weather = Yr(location_xyz=(self.route.center[1], self.route.center[0], 0))
 
-        data = []
-        for forecast in weather.forecast(as_json=True):
-            data.append(json.loads(forecast))
+        data = {}
+        for forecast in weather.forecast():
+            from_dt = forecast["@from"]
+            if from_dt not in data:
+                data[from_dt] = {}
 
-        import pprint
-        pprint.pprint(data)
+            for key in forecast["location"].keys():
+                if key.startswith("@"):
+                    continue
+                for second_key in ["@value", "@percent", "@name"]:
+                    value = forecast["location"].get(key, {}).get(second_key)
+                    if value:
+                        try:
+                            value = float(value)
+                        except:
+                            pass
+                        data[from_dt][key] = value
+                        break
+
         return data
 
     def __str__(self):

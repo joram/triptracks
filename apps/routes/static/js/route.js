@@ -26,5 +26,6 @@ function load_route_details(data) {
     bounds.extend(bbox.getNorthEast());
     bounds.extend(bbox.getSouthWest());
   });
+  console.log(bounds);
   plan_map.fitBounds(bounds);
 }

@@ -1,22 +1,12 @@
 <div class="row">
   <link rel="stylesheet" href="/static/css/weather-icons.css" />
   <link rel="stylesheet" href="/static/css/weather-icons-wind.css" />
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" type="text/javascript"></script>
 
   <input type="text" id="trip_datepicker" value="{{ plan.daterange }}" />
-  <div class="intro-icons">
-    <i class="wi wi-day-lightning"></i>
-    <i class="wi wi-night-thunderstorm"></i>
-    <i class="wi wi-day-snow"></i>
-    <i class="wi wi-sprinkle"></i>
-    <i class="wi wi-day-sunny"></i>
-    <i class="wi wi-cloudy"></i>
-    <i class="wi wi-night-rain-mix"></i>
-    <i class="wi wi-sunset"></i>
-    <i class="wi wi-sunrise"></i>
-    <i class="wi wi-day-cloudy-windy"></i>
-    <i class="wi wi-night-rain"></i>
-    <i class="wi wi-night-alt-snow"></i>
-  </div>
-{#  {{  plan.forecast }}#}
+  <div style="display: None;" id="start_dt">{{ plan.start_datetime }}</div>
+  <div style="display: None;" id="end_dt">{{ plan.end_datetime }}</div>
+  <canvas id="temperatureChart"></canvas>
+  <canvas id="precipitationChart"></canvas>
+  <canvas id="humidityChart"></canvas>
 </div>
