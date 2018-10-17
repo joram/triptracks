@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 from base import BaseScraper
 import os
 import json
@@ -6,10 +6,9 @@ import json
 
 class ScrapeMEC(BaseScraper):
 
-    def __init__(self):
-        super(ScrapeMEC, self).__init__()
+    def __init__(self, debug=False):
+        BaseScraper.__init__(self, debug)
         self.base_url = "http://www.mec.ca/"
-
         self.visited_shop_urls = []
         self.unvisited_shop_urls = []
         self.product_urls = []
@@ -21,6 +20,14 @@ class ScrapeMEC(BaseScraper):
         if self._existing_files is None:
             self._existing_files = os.listdir(self.data_dir)
         return self._existing_files
+
+    def item_cache_filepath(self, url):
+        product_id = 0
+        if url != "http://www.mec.ca/shop/":
+            parts = url.replace(self.base_url, "").split("/")
+            product_id = url.replace(self.base_url, "").split("/")[-1]
+        p = os.path.abspath(os.path.join(self.data_dir, "./{}.html".format(product_id)))
+        return p
 
     def item_urls(self):
         self.unvisited_shop_urls.append("http://www.mec.ca/shop/")
@@ -49,9 +56,7 @@ class ScrapeMEC(BaseScraper):
                     continue
 
                 self.product_urls.append(product_url)
-                id = product_url.split("/")[-1]
-
-                yield id, product_url
+                yield product_url
 
     def get_existing_content(self, id):
         for filename in self.existing_files:
@@ -105,6 +110,6 @@ class ScrapeMEC(BaseScraper):
 
 
 if __name__ == "__main__":
-    s = ScrapeMEC()
-    s.debug = True
-    s.run()
+    s = ScrapeMEC(True)
+    for c in s.run():
+        pass

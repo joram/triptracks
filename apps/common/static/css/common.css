@@ -1,5 +1,5 @@
 #account_name {
-    float: right;
+    float: left;
 }
 
 #account_name i {
@@ -14,6 +14,7 @@
 }
 
 #account_image {
+    float: left;
     border-radius: 12px;
     background: #73AD21;
     padding: 0px;
@@ -31,6 +32,10 @@
     min-width:158px;
     padding: 2px;
     padding-right: 8px;
+}
+
+#signed-in-menu .dropdown-toggle::after {
+    margin-top:10px;
 }
 
 #signed-in-menu .dropdown-toggle #account_name i {

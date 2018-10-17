@@ -1,9 +1,7 @@
-#!/usr/bin/python
 import os
 import re
 import time
 import requests
-import json
 from BeautifulSoup import BeautifulSoup
 import HTMLParser
 
@@ -17,8 +15,8 @@ class FailedRequest(Exception):
 class BaseScraper(object):
     FILETYPE = "json"
 
-    def __init__(self):
-        self.debug = False
+    def __init__(self, debug=False):
+        self.debug = debug
         self.wait = 1
         self.items_count = 0
         self._data_dir = None
@@ -36,17 +34,6 @@ class BaseScraper(object):
                 os.makedirs(data_dir)
             self._data_dir = data_dir
         return self._data_dir
-
-    @property
-    def data_raw_dir(self):
-        if self._data_raw_dir is None:
-            dir_path = os.path.dirname(os.path.realpath(__file__))
-            data_raw_dir = os.path.join(dir_path, "../data_raw/", self.__class__.__name__, "./")
-            data_raw_dir = os.path.abspath(data_raw_dir)
-            if not os.path.exists(data_raw_dir):
-                os.makedirs(data_raw_dir)
-            self._data_raw_dir = data_raw_dir
-        return self._data_raw_dir
 
     def item_filepath(self, id):
         if not id.endswith(".{}".format(self.FILETYPE)):
@@ -125,5 +112,9 @@ class BaseScraper(object):
 
     def run(self):
         for url in self.item_urls():
-            yield self.get_content(url)
+            try:
+                yield self.get_content(url)
+            except Exception as e:
+                print e
+                pass
 

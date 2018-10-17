@@ -1,7 +1,7 @@
 from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
-from scrapers.mec import ScrapeMEC
+from scrapers.mec_raw_html import ScrapeMEC
 import json
 
 

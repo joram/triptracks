@@ -9,17 +9,33 @@ This project is under development. The goal is to have a unified site to manage 
 - install the project dependencies
 ```bash
 sudo apt-get install libgdal-dev
-pip install -r requirements.txt
 ```
-- build the docker container `bash ./scripts/services/start`
-- migrate your database `python ./scripts/manage migrate`
-- run the server `bash ./scripts/run`
-- (optional) load in some gpx files with `python ./scripts/load/trailpeak`
-- visit in the browser <a href="http://localhost:8000">localhost:8000</a>
 
 ### pyenv
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
-- install python `pyenv install 2.7.14`
+- install python
+    ```
+    pyenv install 2.7.14
+    pyenv virtualenv 2.7.14 tt
+    pyenv activate tt
+    pip install -r requirements.txt
+    ```
+
+### More Setup
+- build the docker container `bash ./scripts/services/start`
+- migrate your database `./scripts/manage migrate`
+- run the server `./scripts/run`
+- (optional) load in some gpx files with `./scripts/load/routes` and `./scripts/load/items`
+- visit in the browser <a href="http://localhost:8000">localhost:8000</a>
+
+### secrets
+create the file `scripts/.env`
+inside it add:
+```
+TP_GOOGLE_MAPS_API_KEY=...
+TP_GOOGLE_CLIENT_ID=...
+TP_DATABASE_URL=postgresql://docker:docker@localhost:25432/tripplanner
+```
 
 #### notes:
 - if you need to clean up space:
