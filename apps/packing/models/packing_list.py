@@ -10,6 +10,17 @@ class PackingList(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     @property
+    def weight(self):
+        total_g = sum([item.weight for item in self.items if item.weight is not None])
+        if total_g < 1000:
+            return "%.2fg" % total_g
+
+        total_kg = total_g/1000
+        return "%.2fKg" % total_kg
+
+
+
+    @property
     def items(self):
         pl_items = PackingListItem.objects.filter(packing_list_pub_id=self.pub_id)
         return Item.objects.filter(pub_id__in=[pli.item_pub_id for pli in pl_items])

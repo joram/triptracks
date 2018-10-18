@@ -6,7 +6,7 @@ STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),
 )
 
-STAFF_EMAILS = os.getenv("TP_STAFF_EMAILS", "").rstrip("\r").split(",")
+STAFF_EMAILS = os.getenv("TT_STAFF_EMAILS", "").rstrip("\r").split(",")
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -22,6 +22,7 @@ INSTALLED_APPS = (
     'apps.routes',
     'apps.packing',
     'apps.trips',
+    'apps.integrations',
 )
 
 from django.contrib.gis import *
@@ -62,7 +63,7 @@ LOGGING = {
     }
 }
 
-SECRET_KEY = os.environ.get("TP_SECRET_KEY", "youshouldntusethisoneinprod")
+SECRET_KEY = os.environ.get("TT_SECRET_KEY", "youshouldntusethisoneinprod")
 MEDIA_ROUTE = os.path.join(BASE_DIR, "data/uploads")
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_ROUTE)
 

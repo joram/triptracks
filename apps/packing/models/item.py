@@ -44,10 +44,35 @@ class Item(models.Model):
     img_href = models.URLField()
     attributes = JSONField()
 
+    _weight = None
+
     objects = ItemManager()
 
     def __str__(self):
         return self.name
+
+    @property
+    def weight(self):
+
+        def grams(s):
+            s = s.lower()
+            if s.endswith("kg"):
+                v = s.replace("kg", "")
+                v = float(v)
+                return v*1000
+
+            if s.endswith("g"):
+                v = s.replace("g", "")
+                v = float(v)
+                return v
+
+        if self._weight is None:
+            for key in self.attributes.keys():
+                if key.lower() == "weight":
+                    self._weight = grams(self.attributes[key])
+                    break
+
+        return self._weight
 
     @property
     def json(self):
