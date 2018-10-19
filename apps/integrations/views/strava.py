@@ -18,5 +18,19 @@ def authorized(request):
 
     client.access_token = access_token
     athlete = client.get_athlete()
-    print dir(athlete)
-    print athlete
+    routes = client.get_routes(athlete.id)
+    route_data = []
+    for route in routes:
+        route_data.append({
+            "name": route.name,
+            "description": route.description,
+            "map": {
+                "id": route.map.id,
+                "polyline": route.map.polyline,
+                "summary_polyline": route.map.summary_polyline,
+            }
+        })
+    import json
+    s = json.dumps(route_data, sort_keys=True, indent = 4, separators = (',', ': '))
+    print s
+    return HttpResponse(s)

@@ -4,10 +4,7 @@ from apps.routes.models import Route
 from apps.packing.models import PackingList
 
 from yr.libyr import Yr
-import json
 from utils.fields import ShortUUIDField
-import pprint
-from django.http import JsonResponse
 
 
 class Plan(models.Model):
@@ -15,8 +12,8 @@ class Plan(models.Model):
     name = models.CharField(max_length=256)
     summary = models.TextField(null=True, blank=True)
 
-    route_pub_id = models.CharField(max_length=32)
-    packing_list_pub_id = models.CharField(max_length=32)
+    route_pub_id = models.CharField(max_length=32, null=True)
+    packing_list_pub_id = models.CharField(max_length=32, null=True)
 
     start_datetime = models.DateTimeField(blank=True, null=True)
     end_datetime = models.DateTimeField(blank=True, null=True)
@@ -48,26 +45,29 @@ class Plan(models.Model):
 
     @property
     def forecast(self):
-        weather = Yr(location_xyz=(self.route.center[1], self.route.center[0], 0))
-
         data = {}
-        for forecast in weather.forecast():
-            from_dt = forecast["@from"]
-            if from_dt not in data:
-                data[from_dt] = {}
+        try:
+            weather = Yr(location_xyz=(self.route.center[1], self.route.center[0], 0))
 
-            for key in forecast["location"].keys():
-                if key.startswith("@"):
-                    continue
-                for second_key in ["@value", "@percent", "@name"]:
-                    value = forecast["location"].get(key, {}).get(second_key)
-                    if value:
-                        try:
-                            value = float(value)
-                        except:
-                            pass
-                        data[from_dt][key] = value
-                        break
+            for forecast in weather.forecast():
+                from_dt = forecast["@from"]
+                if from_dt not in data:
+                    data[from_dt] = {}
+
+                for key in forecast["location"].keys():
+                    if key.startswith("@"):
+                        continue
+                    for second_key in ["@value", "@percent", "@name"]:
+                        value = forecast["location"].get(key, {}).get(second_key)
+                        if value:
+                            try:
+                                value = float(value)
+                            except:
+                                pass
+                            data[from_dt][key] = value
+                            break
+        except Exception as e:
+            print e
 
         return data
 

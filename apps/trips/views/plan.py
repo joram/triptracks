@@ -18,7 +18,7 @@ def create(request):
     if pub_id:
         route = get_object_or_404(Route, pub_id=pub_id)
 
-    plan = Plan.objects.create(name="Unnamed Plan", route_pub_id=route.pub_id)
+    plan = Plan.objects.create(name="Unnamed Plan", route_pub_id=pub_id)
     return redirect('edit-trip-plan', plan.pub_id)
 
 
