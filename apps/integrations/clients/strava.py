@@ -1,3 +1,4 @@
+import json
 from django.conf import settings
 from stravalib.client import Client as BaseStravaClient
 
@@ -18,4 +19,8 @@ class StravaClient(BaseStravaClient):
             client_secret=settings.STRAVA_CLIENT_SECRET,
             code=request.GET.get("code"),
         )
+        print json.dumps({
+            "code": request.GET.get("code"),
+            "access_token": access_token,
+        })
         return access_token
