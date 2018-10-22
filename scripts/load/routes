@@ -1,15 +1,29 @@
 #!/usr/bin/env python
 from util import setup_env
 setup_env()
-from apps.routes.models import Route
+from apps.routes.models import Route, TracksFile
 import json
 from scrapers.trailpeak_details import ScrapeTrailPeakDetails
 from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
+from scrapers.strava_gpx import StravaGPX
 from django.conf import settings
 
 settings.DEBUG = False
 
-if __name__ == "__main__":
+
+def get_strava_files():
+    s = StravaGPX()
+    for filepath in s.files():
+        try:
+            tf = TracksFile.objects.get_or_create_from_filepath(filepath)
+            name = tf.filename.split("_")[1]
+            Route.objects.create_from_route(tf, name)
+        except Exception as e:
+            print e
+            print filepath
+
+
+def get_trailpeak_files():
     s = ScrapeTrailPeakDetails()
     sGPX = ScrapeTrailPeakGPX()
 
@@ -49,3 +63,7 @@ if __name__ == "__main__":
                 print e
                 continue
 
+
+if __name__ == "__main__":
+    get_strava_files()
+    # get_trailpeak_files()

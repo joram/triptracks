@@ -1,7 +1,7 @@
 from apps.integrations.clients.strava import StravaClient
 from django.http import HttpResponse, HttpResponseForbidden, HttpResponseRedirect
 from apps.common.decorators import login_required
-
+from apps.integrations.models import StravaAccount
 
 @login_required
 def connect(request):
@@ -16,21 +16,15 @@ def authorized(request):
     client = StravaClient()
     access_token = client.get_access_token(request)
 
-    client.access_token = access_token
-    athlete = client.get_athlete()
-    routes = client.get_routes(athlete.id)
-    route_data = []
-    for route in routes:
-        route_data.append({
-            "name": route.name,
-            "description": route.description,
-            "map": {
-                "id": route.map.id,
-                "polyline": route.map.polyline,
-                "summary_polyline": route.map.summary_polyline,
-            }
-        })
-    import json
-    s = json.dumps(route_data, sort_keys=True, indent = 4, separators = (',', ': '))
-    print s
-    return HttpResponse(s)
+    # strava_account = StravaAccount.objects.create(
+    #     user_pub_id=request.session.get("user_pub_id"),
+    #     access_token=access_token,
+    # )
+    #
+    # client.access_token = access_token
+    # athlete = client.get_athlete()
+    # routes = client.get_routes(athlete.id)
+    # for activity in client.get_activities():
+    #     streams = client.get_activity_streams(activity.id)
+
+    return HttpResponse("strava connected")

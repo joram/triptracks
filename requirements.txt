@@ -31,7 +31,7 @@ requests==2.18.4
 rsa==3.4.2
 shortuuid==0.5.0
 simplejson==3.13.2
-stravalib==0.9.4
 six==1.11.0
 urllib3==1.22
+-e git://github.com/joram/stravalib.git#egg=stravalib
 -e git://github.com/wckd/python-yr.git@python2#egg=python-yr

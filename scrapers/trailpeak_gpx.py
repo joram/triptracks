@@ -45,4 +45,5 @@ class ScrapeTrailPeakGPX(BaseScraper):
 if __name__ == "__main__":
     s = ScrapeTrailPeakGPX()
     s.debug = True
-    s.run()
+    for data in s.run():
+        pass
