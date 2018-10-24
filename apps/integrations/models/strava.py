@@ -33,6 +33,7 @@ class StravaAccount(models.Model):
                 tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data, "{}.gpx".format(str(activity.name)))
                 route = Route.objects.create_from_route(tracks_file, activity.name)
                 route.is_public = False
+                route.owner_pub_id = self.user_pub_id
                 route.save()
 
                 yield StravaActivity.objects.create(
@@ -40,7 +41,7 @@ class StravaAccount(models.Model):
                     strava_id=activity.id,
                     route_pub_id=route.pub_id
                 ), True
-                after = activity.created
+                after = activity.start_date
 
 
 class StravaActivity(models.Model):

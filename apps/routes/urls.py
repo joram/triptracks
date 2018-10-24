@@ -10,9 +10,11 @@ v1_api.register(RouteResource())
 
 urlpatterns = [
     url(r'^api/routes/all', route.api_all),
+    url(r'^api/routes/mine', route.api_mine),
     url(r'^api/route/(?P<pub_id>[0-9a-zA-Z_]+)', route.api_route),
     # url(r'^api/', include(v1_api.urls)),
     url(r'^routes/?$', route.browse, name='view-routes'),
+    url(r'^routes/mine?$', route.mine, name='view-my-routes'),
     url(r'^routes/load/demo/data/', route.tmp_load_data, name='demo-routes'),
     url(r'^routes/upload/', route.upload, name='upload-routes'),
     url(r'^route/create/?$', route.create, name='create-route'),

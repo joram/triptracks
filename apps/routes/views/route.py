@@ -94,6 +94,58 @@ def api_all(request):
     return JsonResponse(routes, safe=False)
 
 
+def api_mine(request):
+    # bbox_coords = (xmin, ymin, xmax, ymax)
+    # "lat_lo,lng_lo,lat_hi,lng_hi"
+    bounds = request.GET['bounds'].split(",")
+    bbox_coords = [float(val) for val in bounds]
+    bbox = Polygon.from_bbox(bbox_coords)
+
+    try:
+        map_zoom = int(request.GET.get('zoom', "20"))
+    except:
+        map_zoom = 20
+    zoom_level = {
+        11: 4,
+        12: 4,
+        13: 3,
+        14: 2,
+        15: 1,
+        16: 1,
+        17: 1,
+        18: 1,
+        19: 1,
+        20: 1,
+    }.get(map_zoom, 5)
+    zoom_field_name = "lines_zoom_{}".format(zoom_level)
+
+    user_pub_id = request.session.get("user_pub_id")
+    qs = Route.objects.filter(lines__bboverlaps=bbox, owner_pub_id=user_pub_id)
+
+    routes = []
+    if qs.count() < 10:
+        zoom_field_name = "lines_zoom_1"
+    qs = qs.values("center", "name", "description", "image_url", "pub_id", zoom_field_name)
+    count = 0
+
+    for route in qs:
+        count += 1
+        center = route["center"]
+        if center:
+            center = {"coordinates": [center[0], center[1]]}
+
+        routes.append({
+            'center': center,
+            'name': route["name"],
+            'description': route["description"],
+            'image_url': route["image_url"],
+            'pub_id': route["pub_id"],
+            'zoom_level': zoom_level,
+            'lines': json.loads(route[zoom_field_name])
+        })
+    return JsonResponse(routes, safe=False)
+
+
 @login_required
 def upload(request):
     if request.method == "POST":
@@ -138,4 +190,12 @@ def view(request, route_id):
         'route': route,
         'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
     return render_to_response("route/view.html", context)
+
+
+@login_required
+def mine(request):
+    context = {
+        'request': request,
+        'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
+    return render_to_response("route/mine.html", context)
 
