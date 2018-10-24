@@ -1,6 +1,8 @@
+from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
+from apps.routes.models import Route, TracksFile
 
 
 class StravaAccount(models.Model):
@@ -8,3 +10,41 @@ class StravaAccount(models.Model):
     user_pub_id = models.CharField(max_length=128)
     access_token = models.CharField(max_length=256)
     attributes = JSONField()
+
+    def get_client(self):
+        return StravaClient(access_token=str(self.access_token))
+
+    def populate_activities(self):
+        after = None
+        client = self.get_client()
+        seen = []
+        while True:
+            for activity in client.get_activities(after=after):
+                if activity.id in seen:
+                    return
+                seen.append(activity.id)
+
+                qs = StravaActivity.objects.filter(strava_id=activity.id)
+                if qs.exists():
+                    yield qs[0], False
+                    continue
+
+                gpx_data = client.get_gpx_file(activity.id)
+                tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data, "{}.gpx".format(str(activity.name)))
+                route = Route.objects.create_from_route(tracks_file, activity.name)
+                route.is_public = False
+                route.save()
+
+                yield StravaActivity.objects.create(
+                    strava_account_pub_id=self.pub_id,
+                    strava_id=activity.id,
+                    route_pub_id=route.pub_id
+                ), True
+                after = activity.created
+
+
+class StravaActivity(models.Model):
+    pub_id = ShortUUIDField(prefix="st_act", max_length=128)
+    strava_account_pub_id = models.CharField(max_length=128)
+    strava_id = models.IntegerField()
+    route_pub_id = models.CharField(max_length=128, null=True)

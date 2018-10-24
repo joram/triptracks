@@ -1,6 +1,7 @@
 import os
 from django.contrib.gis.db import models
 from django.core.files import File
+from cStringIO import StringIO
 
 
 def tracks_file_path(instance, filename):
@@ -18,6 +19,10 @@ class TracksFileManager(models.Manager):
             return trailFiles[0]
 
         f = open(filepath)
+        return TracksFile.objects.create(tracks_file=File(f, name=filename), filename=filename)
+
+    def get_or_create_from_data(self, content, filename):
+        f = StringIO(content)
         return TracksFile.objects.create(tracks_file=File(f, name=filename), filename=filename)
 
 

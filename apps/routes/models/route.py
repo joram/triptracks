@@ -170,6 +170,8 @@ class RouteManager(models.GeoManager):
 
 class Route(models.Model):
     pub_id = ShortUUIDField(prefix="route", max_length=32)
+    owner_pub_id = models.CharField(max_length=128, default="user_system")
+    is_public = models.BooleanField(default=True)
     name = models.CharField(max_length=120)
     description = models.CharField(max_length=1024*16, default="")
     image_url = models.CharField(max_length=2048, default="")

@@ -1,1 +1,1 @@
-from strava import StravaAccount
+from strava import StravaAccount, StravaActivity

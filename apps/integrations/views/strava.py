@@ -1,30 +1,32 @@
-from apps.integrations.clients.strava import StravaClient
-from django.http import HttpResponse, HttpResponseForbidden, HttpResponseRedirect
-from apps.common.decorators import login_required
+from stravalib import Client as StravaClient
 from apps.integrations.models import StravaAccount
+from django.http import HttpResponse, HttpResponseRedirect
+from apps.common.decorators import login_required
+from django.conf import settings
+
 
 @login_required
 def connect(request):
     client = StravaClient()
-    uri = client.auth_url()
-    print uri
-    return HttpResponseRedirect(uri)
+    authorize_url = client.authorization_url(
+        client_id=settings.STRAVA_CLIENT_ID,
+        redirect_uri=settings.BASE_URL+"/integrations/strava/authorized",
+    )
+    return HttpResponseRedirect(authorize_url)
 
 
 @login_required
 def authorized(request):
     client = StravaClient()
-    access_token = client.get_access_token(request)
-
-    # strava_account = StravaAccount.objects.create(
-    #     user_pub_id=request.session.get("user_pub_id"),
-    #     access_token=access_token,
-    # )
-    #
-    # client.access_token = access_token
-    # athlete = client.get_athlete()
-    # routes = client.get_routes(athlete.id)
-    # for activity in client.get_activities():
-    #     streams = client.get_activity_streams(activity.id)
+    access_token = client.exchange_code_for_token(
+        client_id=settings.STRAVA_CLIENT_ID,
+        client_secret=settings.STRAVA_CLIENT_SECRET,
+        code=request.GET.get("code"),
+    )
+    user_pub_id = request.session.get("user_pub_id")
+    strava_account = StravaAccount.objects.create(
+        user_pub_id=request.session.get("user_pub_id"),
+        access_token=access_token,
+    )
 
     return HttpResponse("strava connected")
