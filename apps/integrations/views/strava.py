@@ -16,6 +16,14 @@ def connect(request):
 
 
 @login_required
+def collect(request):
+    strava_account = StravaAccount.objects.get(user_pub_id=request.session.get("user_pub_id"))
+    for activity, created in strava_account.populate_activities():
+        print created, activity
+    return HttpResponse("collecting")
+
+
+@login_required
 def authorized(request):
     client = StravaClient()
     access_token = client.exchange_code_for_token(
@@ -23,7 +31,6 @@ def authorized(request):
         client_secret=settings.STRAVA_CLIENT_SECRET,
         code=request.GET.get("code"),
     )
-    user_pub_id = request.session.get("user_pub_id")
     strava_account = StravaAccount.objects.create(
         user_pub_id=request.session.get("user_pub_id"),
         access_token=access_token,
