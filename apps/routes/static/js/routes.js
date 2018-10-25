@@ -30,6 +30,14 @@ function load_all_routes_google_maps(api_key){
 }
 
 function build_map_all_routes() {
+    _build_map_routes("all")
+}
+
+function build_map_my_routes() {
+    _build_map_routes("mine")
+}
+
+function _build_map_routes(filter) {
 
     navigator.geolocation.getCurrentPosition(function(position) {
         var center = {
@@ -54,14 +62,10 @@ function build_map_all_routes() {
             bounds = map.getBounds().toUrlValue();
             return $.ajax({
                 method: "GET",
-                url: `/api/routes/all?bounds=${bounds}&zoom=${map.getZoom()}`,
+                url: `/api/routes?filter=${filter}&bounds=${bounds}&zoom=${map.getZoom()}`,
                 success: load_routes_data
             });
         });
-        // map.addListener('zoom_changed', function() {
-        //     console.log("zoom: "+map.getZoom());
-        // });
-
     });
 
 }

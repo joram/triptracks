@@ -48,6 +48,7 @@ def api_all(request):
     # bbox_coords = (xmin, ymin, xmax, ymax)
     # "lat_lo,lng_lo,lat_hi,lng_hi"
     bounds = request.GET['bounds'].split(",")
+    filter = request.GET.get('filter', 'all')
     bbox_coords = [float(val) for val in bounds]
     bbox = Polygon.from_bbox(bbox_coords)
 
@@ -70,6 +71,9 @@ def api_all(request):
     zoom_field_name = "lines_zoom_{}".format(zoom_level)
 
     qs = Route.objects.filter(lines__bboverlaps=bbox)
+    if filter == "mine":
+        user_pub_id = request.session.get("user_pub_id")
+        qs = qs.filter(owner_pub_id=user_pub_id)
 
     routes = []
     if qs.count() < 10:
@@ -92,59 +96,6 @@ def api_all(request):
             'lines': json.loads(route[zoom_field_name])
         })
     return JsonResponse(routes, safe=False)
-
-
-def api_mine(request):
-    # bbox_coords = (xmin, ymin, xmax, ymax)
-    # "lat_lo,lng_lo,lat_hi,lng_hi"
-    bounds = request.GET['bounds'].split(",")
-    bbox_coords = [float(val) for val in bounds]
-    bbox = Polygon.from_bbox(bbox_coords)
-
-    try:
-        map_zoom = int(request.GET.get('zoom', "20"))
-    except:
-        map_zoom = 20
-    zoom_level = {
-        11: 4,
-        12: 4,
-        13: 3,
-        14: 2,
-        15: 1,
-        16: 1,
-        17: 1,
-        18: 1,
-        19: 1,
-        20: 1,
-    }.get(map_zoom, 5)
-    zoom_field_name = "lines_zoom_{}".format(zoom_level)
-
-    user_pub_id = request.session.get("user_pub_id")
-    qs = Route.objects.filter(lines__bboverlaps=bbox, owner_pub_id=user_pub_id)
-
-    routes = []
-    if qs.count() < 10:
-        zoom_field_name = "lines_zoom_1"
-    qs = qs.values("center", "name", "description", "image_url", "pub_id", zoom_field_name)
-    count = 0
-
-    for route in qs:
-        count += 1
-        center = route["center"]
-        if center:
-            center = {"coordinates": [center[0], center[1]]}
-
-        routes.append({
-            'center': center,
-            'name': route["name"],
-            'description': route["description"],
-            'image_url': route["image_url"],
-            'pub_id': route["pub_id"],
-            'zoom_level': zoom_level,
-            'lines': json.loads(route[zoom_field_name])
-        })
-    return JsonResponse(routes, safe=False)
-
 
 @login_required
 def upload(request):
@@ -187,6 +138,7 @@ def view(request, route_id):
     else:
         route.center = str(route.center).split(";")[1].replace(" (", "(")
     context = {
+        'request': request,
         'route': route,
         'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
     return render_to_response("route/view.html", context)

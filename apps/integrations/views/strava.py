@@ -7,6 +7,9 @@ from django.conf import settings
 
 @login_required
 def connect(request):
+    if StravaAccount.objects.filter(user_pub_id=request.session.get("user_pub_id")).exists():
+        return HttpResponse("strava already connected")
+
     client = StravaClient()
     authorize_url = client.authorization_url(
         client_id=settings.STRAVA_CLIENT_ID,
@@ -25,6 +28,9 @@ def collect(request):
 
 @login_required
 def authorized(request):
+    if StravaAccount.objects.filter(user_pub_id=request.session.get("user_pub_id")).exists():
+        return HttpResponse("strava already connected")
+
     client = StravaClient()
     access_token = client.exchange_code_for_token(
         client_id=settings.STRAVA_CLIENT_ID,
