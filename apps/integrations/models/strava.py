@@ -3,6 +3,7 @@ from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
 from apps.routes.models import Route, TracksFile
+from apps.accounts.models import User
 
 
 class StravaAccount(models.Model):
@@ -10,6 +11,10 @@ class StravaAccount(models.Model):
     user_pub_id = models.CharField(max_length=128)
     access_token = models.CharField(max_length=256)
     attributes = JSONField()
+
+    @property
+    def user(self):
+        return User.objects.get(pub_id=self.user_pub_id)
 
     def get_client(self):
         return StravaClient(access_token=str(self.access_token))
@@ -49,3 +54,7 @@ class StravaActivity(models.Model):
     strava_account_pub_id = models.CharField(max_length=128)
     strava_id = models.IntegerField()
     route_pub_id = models.CharField(max_length=128, null=True)
+
+    @property
+    def route(self):
+        return Route.objects.get(pub_id=self.route_pub_id)

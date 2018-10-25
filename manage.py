@@ -6,8 +6,8 @@ if __name__ == "__main__":
     import django
     django.setup()
 
-    # from django.core.management.commands.runserver import Command as runserver
-    # runserver.default_port = os.environ.get("PORT", "8000")
+    from apps.integrations.strava_worker import start as collect_strava_data
+    collect_strava_data()
 
     from django.core.management import execute_from_command_line
     execute_from_command_line(sys.argv)
