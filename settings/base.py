@@ -48,12 +48,21 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
+        'null': {
+            'level': 'DEBUG',
+            'class':'logging.NullHandler',
+        },
     },
     'loggers': {
         'django': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['null'],  # Quiet by default!
+            'propagate': False,
+            'level':'DEBUG',
         },
         'django.request': {
             'handlers': ['console'],

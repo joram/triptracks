@@ -1,0 +1,3 @@
+#!/bin/bash
+
+hyper logs -f $(hyper ps -q)
