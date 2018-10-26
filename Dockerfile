@@ -13,13 +13,13 @@ RUN mkdir /code/settings
 RUN mkdir /code/utils
 
 ADD requirements.txt /code
-ADD manage.py /code
-ADD urls.py /code
-ADD wsgi.py /code
-
 WORKDIR /code
 RUN pip install -r requirements.txt
 RUN rm -rf /root/.cache/pip/wheels/*
+
+ADD manage.py /code
+ADD urls.py /code
+ADD wsgi.py /code
 
 ADD ./apps/. /code/apps
 ADD ./scrapers/. /code/scrapers

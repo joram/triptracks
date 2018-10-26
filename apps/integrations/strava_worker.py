@@ -37,4 +37,10 @@ def pull_strava_activities(sleep_s):
 
 
 def start():
-    thread.start_new_thread(pull_strava_activities, (5,))
+    print "starting strava collection thread"
+    return thread.start_new_thread(pull_strava_activities, (5,))
+
+
+_COLLECT_THREAD = None
+if _COLLECT_THREAD is None:
+    _COLLECT_THREAD = start()
