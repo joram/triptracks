@@ -10,7 +10,7 @@ class StravaAccount(models.Model):
     pub_id = ShortUUIDField(prefix="strava", max_length=128)
     user_pub_id = models.CharField(max_length=128)
     access_token = models.CharField(max_length=256)
-    strava_account_id = models.IntegerField()
+    strava_athlete_id = models.IntegerField()
     attributes = JSONField()
 
     @property
