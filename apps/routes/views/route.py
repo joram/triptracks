@@ -127,6 +127,7 @@ def edit(request, route_id):
 @login_required
 def browse(request):
     context = {
+        "request": request,
         "csrf_token": get_token(request),
         "GOOGLE_MAPS_API_KEY": settings.GOOGLE_MAPS_API_KEY,
     }
