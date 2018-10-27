@@ -11,6 +11,7 @@ STRAVA_CLIENT_ID = os.environ.get("TT_STRAVA_CLIENT_ID")
 STRAVA_CLIENT_SECRET = os.environ.get("TT_STRAVA_CLIENT_SECRET")
 STRAVA_ACCESS_TOKEN = os.environ.get("TT_STRAVA_ACCESS_TOKEN")
 STRAVA_REFRESH_TOKEN = os.environ.get("TT_STRAVA_REFRESH_TOKEN")
+STRAVA_VERIFY_TOKEN = os.environ.get("TT_STRAVA_VERIFY_TOKEN")
 
 DATABASES = {'default': dj_database_url.config(env="TT_DATABASE_URL")}
 DATABASES["default"]["NAME"] = DATABASES["default"]["NAME"].rstrip("\r")

@@ -10,6 +10,7 @@ class StravaAccount(models.Model):
     pub_id = ShortUUIDField(prefix="strava", max_length=128)
     user_pub_id = models.CharField(max_length=128)
     access_token = models.CharField(max_length=256)
+    strava_account_id = models.IntegerField()
     attributes = JSONField()
 
     @property
@@ -77,11 +78,47 @@ class StravaAccount(models.Model):
         return unicode(self.__str__())
 
 
+class StravaActivityManager(models.Manager):
+
+    def get_or_create_from_strava_activity(self, strava_activity_id, strava_activity_name, user_pub_id):
+        qs = StravaActivity.objects.filter(strava_id=strava_activity_id)
+        if qs.exists():
+            return qs[0], False
+
+        gpx_data = self.account.get_client().get_gpx_file(strava_activity_id)
+        if gpx_data is None:
+            print "no tracks"
+            return None, False
+
+        try:
+            tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data,
+                                                                     "{}.gpx".format(strava_activity_name))
+            route = Route.objects.create_from_route(tracks_file, strava_activity_name)
+            route.is_public = False
+            route.owner_pub_id = user_pub_id
+            route.save()
+        except Exception as e:
+            print e
+            return None, False
+
+        return StravaActivity.objects.create(
+            strava_account_pub_id=self.pub_id,
+            strava_id=strava_activity_id,
+            route_pub_id=route.pub_id
+        ), True
+
+
 class StravaActivity(models.Model):
     pub_id = ShortUUIDField(prefix="st_act", max_length=128)
     strava_account_pub_id = models.CharField(max_length=128)
     strava_id = models.IntegerField()
     route_pub_id = models.CharField(max_length=128, null=True)
+
+    objects = StravaActivityManager()
+
+    @property
+    def account(self):
+        return StravaAccount.objects.get(pub_id=self.strava_account_pub_id)
 
     @property
     def route(self):

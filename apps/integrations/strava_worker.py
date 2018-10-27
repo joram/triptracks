@@ -48,12 +48,12 @@ def pull_strava_activities(sleep_s):
         print "finished polling all accounts. sleeping for 10min"
         time.sleep(600)
 
+#
+# def start():
+#     print "starting strava collection thread"
+#     return thread.start_new_thread(pull_strava_activities, (5,))
+#
 
-def start():
-    print "starting strava collection thread"
-    return thread.start_new_thread(pull_strava_activities, (5,))
-
-
-_COLLECT_THREAD = None
-if _COLLECT_THREAD is None:
-    _COLLECT_THREAD = start()
+# _COLLECT_THREAD = None
+# if _COLLECT_THREAD is None:
+#     _COLLECT_THREAD = start()

@@ -1,8 +1,10 @@
+import pprint
 from stravalib import Client as StravaClient
-from apps.integrations.models import StravaAccount
-from django.http import HttpResponse, HttpResponseRedirect
+from apps.integrations.models import StravaAccount, StravaActivity
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from apps.common.decorators import login_required
 from django.conf import settings
+from apps.integrations.clients.strava import StravaClient
 
 
 @login_required
@@ -24,6 +26,49 @@ def collect(request):
     for activity, created in strava_account.populate_activities():
         print created, activity
     return HttpResponse("collecting")
+
+
+def webhooks(request):
+
+    # registering webhooks validation
+    if request.method == "GET":
+        data = dict(request.GET)
+        pprint.pprint(data)
+        if "hub.mode" in data.keys():
+            return HttpResponse("invalid")
+        if data.get("hub.verify_token")[0] == settings.STRAVA_VERIFY_TOKEN:
+            return HttpResponse("invalid")
+        return JsonResponse({"hub.challenge": data.get("hub.challenge")[0]})
+
+    # regular webhook
+    owner_id = request.POST.get("owner_id")
+    object_id = request.POST.get("object_id")
+    object_type = request.POST.get("object_type")
+
+    if object_type != "activity":
+        print "only interested in activities, not {}".format(object_type)
+        return HttpResponse("ok")
+
+    qs = StravaAccount.objects.filter(strava_account_id=owner_id)
+    if not qs.exists():
+        print "user doesn't exists for strava_account_id:{}".format(owner_id)
+        return HttpResponse("ok")
+
+    account = qs[0]
+    activity = account.get_client().get_activity(object_id)
+
+    qs = StravaActivity.objects.filter(strava_id=activity.get("id"))
+    if qs.exists():
+        print "TODO: update activity"
+        return HttpResponse("ok")
+
+    strava_activity, created = StravaActivity.objects.get_or_create_from_strava_activity(
+        activity.id,
+        activity.name,
+        account.user_pub_id,
+    )
+    print "new activity {} created:{}".format(strava_activity, created)
+    return HttpResponse("ok")
 
 
 @login_required
