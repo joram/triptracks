@@ -80,12 +80,13 @@ class StravaAccount(models.Model):
 
 class StravaActivityManager(models.Manager):
 
-    def get_or_create_from_strava_activity(self, strava_activity_id, strava_activity_name, user_pub_id):
+    def get_or_create_from_strava_activity(self, strava_athlete_id, strava_activity_id, strava_activity_name, user_pub_id):
         qs = StravaActivity.objects.filter(strava_id=strava_activity_id)
         if qs.exists():
             return qs[0], False
 
-        gpx_data = self.account.get_client().get_gpx_file(strava_activity_id)
+        account = StravaAccount.objects.get(strava_athlete_id=strava_athlete_id)
+        gpx_data = account.get_client().get_gpx_file(strava_activity_id)
         if gpx_data is None:
             print "no tracks"
             return None, False
@@ -102,7 +103,7 @@ class StravaActivityManager(models.Manager):
             return None, False
 
         return StravaActivity.objects.create(
-            strava_account_pub_id=self.pub_id,
+            strava_account_pub_id=account.pub_id,
             strava_id=strava_activity_id,
             route_pub_id=route.pub_id
         ), True
