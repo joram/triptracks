@@ -86,6 +86,8 @@ function build_map() {
 }
 
 function load_routes_data(data) {
+    console.log("loading "+data.length+" routes");
+
     data.forEach(function (route){
         unload_route(route);
         if(!use_cached_lines(route)){
@@ -151,6 +153,7 @@ function load_route(route) {
     pub_id = route["pub_id"];
     zoom_level = route["zoom_level"];
     route_lines = route["lines"];
+    console.log(pub_id);
 
      // create new
      if (route['lines'] !== null) {

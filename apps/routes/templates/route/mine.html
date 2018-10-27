@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block extra_js %}
+  <script src="/static/js/route_utils.js" type="text/javascript"></script>
   <script src="/static/js/routes.js" type="text/javascript"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&callback=build_map_my_routes" async defer></script>
   <link href="/static/map.css">

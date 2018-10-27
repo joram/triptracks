@@ -73,7 +73,10 @@ def api_all(request):
     qs = Route.objects.filter(lines__bboverlaps=bbox)
     if filter == "mine":
         user_pub_id = request.session.get("user_pub_id")
+        print user_pub_id
         qs = qs.filter(owner_pub_id=user_pub_id)
+    else:
+        qs = qs.filter(is_public=True)
 
     routes = []
     if qs.count() < 10:

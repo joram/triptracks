@@ -2,9 +2,9 @@ import pprint
 from stravalib import Client
 from apps.integrations.models import StravaAccount, StravaActivity
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from apps.common.decorators import login_required
 from django.conf import settings
-from apps.integrations.clients.strava import StravaClient
 
 
 @login_required
@@ -24,6 +24,7 @@ def collect(request):
     return HttpResponse("collecting")
 
 
+@csrf_exempt
 def webhooks(request):
 
     # registering webhooks validation
@@ -37,6 +38,11 @@ def webhooks(request):
         return JsonResponse({"hub.challenge": data.get("hub.challenge")[0]})
 
     # regular webhook
+    print "post"
+    pprint.pprint(dict(request.POST))
+    print "get"
+    pprint.pprint(dict(request.GET))
+
     owner_id = request.POST.get("owner_id")
     object_id = request.POST.get("object_id")
     object_type = request.POST.get("object_type")
