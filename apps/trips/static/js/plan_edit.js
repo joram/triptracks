@@ -108,8 +108,19 @@ function createChart(rawData) {
 
 }
 
+function init_invite(){
+  modal = $("#invite_email_modal");
+  button = $("#invite_email_button");
+  input = $("#invite_email");
+  button.on("click", function(){
+    console.log(input.value());
+    modal.modal("hide");
+  });
+}
+
 $( document ).ready(function() {
   init_datepicker();
   init_remove();
   init_forecast();
+  init_invite();
 });

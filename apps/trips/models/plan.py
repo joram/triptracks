@@ -1,14 +1,17 @@
 from django.db import models
 
+from apps.accounts.models import User
 from apps.routes.models import Route
 from apps.packing.models import PackingList
 
 from yr.libyr import Yr
 from utils.fields import ShortUUIDField
+from utils.email import send_trip_invitation_email
 
 
 class Plan(models.Model):
     pub_id = ShortUUIDField(prefix="plan", max_length=32)
+    user_pub_id = models.CharField(max_length=128)
     name = models.CharField(max_length=256)
     summary = models.TextField(null=True, blank=True)
 
@@ -71,5 +74,29 @@ class Plan(models.Model):
 
         return data
 
+    @property
+    def attendees(self):
+        user_pub_ids = [User.objects.get(pub_id=self.user_pub_id).pub_id]
+        user_pub_ids = user_pub_ids + [ta.user_pub_id for ta in TripAttendee.objects.filter(plan_pub_id=self.pub_id)]
+        users = User.objects.filter(pub_id__in=user_pub_ids)
+        return users
+
+    def add_attendee(self, inviting_user, user):
+        if user.pub_id == self.user_pub_id:
+            return
+        TripAttendee.objects.get_or_create(user_pub_id=user.pub_id, plan_pub_id=self.pub_id)
+        if user.send_invitation_emails:
+            send_trip_invitation_email(from_user=inviting_user, to_user=user, trip=self)
+
+    def remove_attendee(self, user):
+        if user.pub_id == self.user_pub_id:
+            return
+        TripAttendee.objects.filter(user_pub_id=user.pub_id, plan_pub_id=self.pub_id).delete()
+
     def __str__(self):
         return self.name
+
+
+class TripAttendee(models.Model):
+    plan_pub_id = models.CharField(max_length=32)
+    user_pub_id = models.CharField(max_length=128)

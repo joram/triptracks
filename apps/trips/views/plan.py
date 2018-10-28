@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from apps.accounts.models import User
 from apps.packing.models import PackingList, PackingListItem
 from apps.trips.models import Plan
 from apps.routes.models import Route
@@ -7,7 +8,7 @@ from apps.common.decorators import login_required
 
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.middleware.csrf import get_token
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseForbidden
 from django.conf import settings
 
 
@@ -31,6 +32,10 @@ def list(request):
 @login_required
 def edit(request, pub_id):
     plan = get_object_or_404(Plan, pub_id=pub_id)
+    user_pub_id = request.session.get("user_pub_id")
+    acting_user = User.objects.get(pub_id=user_pub_id)
+    if acting_user.pub_id not in [u.pub_id for u in plan.attendees]:
+        return HttpResponseForbidden()
 
     if request.method == "POST":
         def _str_to_dt(s):
@@ -43,6 +48,16 @@ def edit(request, pub_id):
         end = request.POST.get("end")
         if end is not None:
             plan.end_datetime = _str_to_dt(end)
+
+        invite_user_email = request.POST.get("invite_user_email")
+        if invite_user_email is not None:
+            user, created = User.objects.get_or_create(email=invite_user_email)
+            plan.add_attendee(inviting_user=acting_user, user=user)
+
+        remove_user_pub_id = request.POST.get("remove_user_pub_id")
+        if remove_user_pub_id is not None:
+            user = User.objects.get(pub_id=remove_user_pub_id)
+            plan.remove_attendee(user)
 
         plan.save()
         return HttpResponse()
