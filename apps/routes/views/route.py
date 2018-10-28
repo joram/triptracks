@@ -4,7 +4,7 @@ import os
 from django.conf import settings
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template.context_processors import csrf
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseForbidden
 
 from apps.routes.models import Route
 from apps.routes.forms.tracks_file import TracksFileForm
@@ -30,18 +30,31 @@ def create(request):
 
 
 def api_route(request, pub_id):
-
     route = get_object_or_404(Route, pub_id=pub_id)
-    route_details = {
-        'center': {"coordinates": [route.center[0], route.center[1]]},
-        'name': route.name,
-        'description': route.description,
-        'image_url': route.image_url,
-        'pub_id': pub_id,
-        'zoom_level': 1,
-        'lines': route.lines_zoom_1,
-    }
-    return JsonResponse(route_details, safe=False)
+    if not route.is_public:
+        user_pub_id = request.session.get("user_pub_id")
+        if user_pub_id != route.owner_pub_id:
+            return HttpResponseForbidden()
+
+    if request.method == "GET":
+        route_details = {
+            'center': {"coordinates": [route.center[0], route.center[1]]},
+            'name': route.name,
+            'description': route.description,
+            'image_url': route.image_url,
+            'pub_id': pub_id,
+            'zoom_level': 1,
+            'lines': route.lines_zoom_1,
+        }
+        return JsonResponse(route_details, safe=False)
+
+    is_public = request.POST.get("is_public")
+    if is_public is not None:
+        options = {"true": True, "false": False}
+        route.is_public = options.get(is_public, route.is_public)
+
+    route.save()
+    return HttpResponse()
 
 
 def api_all(request):
@@ -51,6 +64,7 @@ def api_all(request):
     filter = request.GET.get('filter', 'all')
     bbox_coords = [float(val) for val in bounds]
     bbox = Polygon.from_bbox(bbox_coords)
+    user_pub_id = request.session.get("user_pub_id")
 
     try:
         map_zoom = int(request.GET.get('zoom', "20"))
@@ -72,8 +86,6 @@ def api_all(request):
 
     qs = Route.objects.filter(lines__bboverlaps=bbox)
     if filter == "mine":
-        user_pub_id = request.session.get("user_pub_id")
-        print user_pub_id
         qs = qs.filter(owner_pub_id=user_pub_id)
     else:
         qs = qs.filter(is_public=True)
@@ -81,7 +93,7 @@ def api_all(request):
     routes = []
     if qs.count() < 10:
         zoom_field_name = "lines_zoom_1"
-    qs = qs.values("center", "name", "description", "image_url", "pub_id", zoom_field_name)
+    qs = qs.values("center", "name", "description", "image_url", "pub_id", "owner_pub_id", "is_public", zoom_field_name)
     count = 0
     for route in qs:
         count += 1
@@ -96,9 +108,12 @@ def api_all(request):
             'image_url': route["image_url"],
             'pub_id': route["pub_id"],
             'zoom_level': zoom_level,
-            'lines': json.loads(route[zoom_field_name])
+            'lines': json.loads(route[zoom_field_name]),
+            'is_mine': route["owner_pub_id"] == user_pub_id,
+            'is_public': route["is_public"],
         })
     return JsonResponse(routes, safe=False)
+
 
 @login_required
 def upload(request):

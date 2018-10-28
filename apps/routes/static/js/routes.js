@@ -86,8 +86,6 @@ function build_map() {
 }
 
 function load_routes_data(data) {
-    console.log("loading "+data.length+" routes");
-
     data.forEach(function (route){
         unload_route(route);
         if(!use_cached_lines(route)){
@@ -153,7 +151,6 @@ function load_route(route) {
     pub_id = route["pub_id"];
     zoom_level = route["zoom_level"];
     route_lines = route["lines"];
-    console.log(pub_id);
 
      // create new
      if (route['lines'] !== null) {
@@ -185,21 +182,80 @@ function show_route_details(route){
     route_name = route["name"];
     route_description = route["description"];
     route_image_url = route["image_url"];
+    is_mine = route["is_mine"];
+    is_public = route["is_public"];
+
     img_top = "";
     if(route_image_url != ""){
         img_top = "<img class='card-img-top' src='https://www.trailpeak.com/"+route_image_url+"' alt='Card image cap'>";
     }
+    privacy_buttons = "";
+    if(is_mine){
+        public_class = "";
+        private_class = "active";
+        if(is_public){
+            public_class = "active";
+            private_class = "";
+        }
+        privacy_buttons = "\
+        <div class='btn-group btn-group-toggle public-toggle'> \
+          <label class='route-public privacy_btn btn btn-secondary "+ public_class +"'  data-pub_id='"+pub_id+"'> \
+            <input type='checkbox' autocomplete='off'> Public \
+          </label> \
+          <label class='route-private privacy_btn btn btn-secondary "+ private_class +"' data-pub_id='"+pub_id+"'> \
+            <input type='checkbox' autocomplete='off' checked> Private \
+          </label>  \
+        </div>"
+    }
+
     routeDetailsCard = $("<div id='route_details_card' class='card'> \
       <div class='card-header'>"+route_name+"</div>    \
       "+ img_top +"\
       <div class='card-body'> \
         <p class='card-text'>"+route_description+"</p> \
-        <div class='btn-group' role='group' aria-label='Basic example'> \
-          <a type='button' class='btn' href='/trip/plan/create/?route="+pub_id+"'>Plan Trip</a> \
+        \
+        <div class='btn-group btn-group-toggle' role='group'> \
+          <label class='btn btn-secondary'> \
+            <input class='route-trip' type='checkbox' autocomplete='off' data-href='/trip/plan/create/?route=\"+pub_id+\"'> Plan Trip \
+          </label> \
+        </div> \
+        "+privacy_buttons+" \
         </div> \
       </div> \
     </div>");
 
     $("#body").append(routeDetailsCard);
+
+    $(".route-trip > input").on("click", function(e){
+        toggle_button_group(e.target.parentNode);
+    });
+
+    $(".route-public > input").on("click", function(e){
+        toggle_button_group(e.target.parentNode);
+        route_pub_id = $(e.target.parentNode).data("pub_id");
+        $.ajax({
+            method: "POST",
+            url: `/api/route/${route_pub_id}`,
+            data: {'is_public': true}
+        });
+    });
+    $(".route-private > input").on("click", function(e){
+        toggle_button_group(e.target.parentNode);
+        route_pub_id = $(e.target.parentNode).data("pub_id");
+        $.ajax({
+            method: "POST",
+            url: `/api/route/${route_pub_id}`,
+            data: {'is_public': false}
+        });
+    });
+
+
+    function toggle_button_group(enabled_button){
+        $(".privacy_btn").removeClass("active").removeAttr("aria-pressed");
+        n = $(enabled_button);
+        n.addClass("active").attr("aria-pressed", "true");
+    }
+
+
 }
 
