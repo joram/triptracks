@@ -170,3 +170,88 @@ def mine(request):
         'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY}
     return render_to_response("route/mine.html", context)
 
+
+class GeoTreeNode(object):
+    
+    def __init__(self, parent=None):
+        self.parent = parent
+        self.data = {}
+        self.children = {}
+
+    def key(self, coord, depth=14):
+        lat, lng = coord
+        lat = str(lat)
+        lng = str(lng)
+        delta = len(lat) - len(lng)
+        if delta > 0:
+            lat = lat.rjust(delta, " ")
+        if delta < 0:
+            lng = lng.rjust(-delta, " ")
+        return (
+            lat.ljust(depth, "0"),
+            lat.ljust(depth, "0"),
+        )
+
+    def _get_key(self, coord):
+        lat, lng = coord
+        lat_key, lat_remainder = lat[0], lat[1:]
+        lng_key, lng_remainder = lng[0], lng[1:]
+        key = "{}{}".format(lat_key, lng_key)
+        remainder_coord = (lat_remainder, lng_remainder)
+        is_leaf = min(len(lat), len(lng)) == 1
+        return key, remainder_coord, is_leaf
+
+    def add(self, coord, data):
+        key = self.key(coord)
+        self._add(key, data)
+
+    def _add(self, coord, data):
+        key, remainder_coord, is_leaf = self._get_key(coord)
+
+        if is_leaf:
+            self.data[key] = data
+            return
+
+        if key not in self.children:
+            self.children[key] = GeoTreeNode()
+        self.children[key]._add(remainder_coord, data)
+
+    def get(self, coord, depth):
+        key = self.key(coord, depth)
+        return self._get(key)
+
+    def _get(self, coord):
+        key, remainder_coord, is_leaf = self._get_key(coord)
+        if is_leaf:
+            return [self.data.get(key)] + self._get_all()
+        if key not in self.children:
+            return None
+        return self.children[key]._get(remainder_coord)
+
+    def _get_all(self):
+        data = self.data.values()
+        for c in self.children:
+            data += c._get_all()
+        return data
+
+    def to_json(self):
+        data = {
+            'c': {},
+        }
+        for key in self.children:
+            data['c'][key] = self.children[key].to_json()
+        if len(self.data.keys()) > 0:
+            data['d'] = self.data
+        return data
+
+
+def encoded_routes(request):
+
+    root = GeoTreeNode()
+    for r in Route.objects.all():
+        if r.center is None:
+            continue
+        root.add(r.center.coords, r.pub_id)
+
+    return JsonResponse(root.to_json())
+
