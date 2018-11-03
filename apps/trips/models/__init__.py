@@ -1,1 +1,1 @@
-from plan import Plan
+from plan import Plan, TripAttendee

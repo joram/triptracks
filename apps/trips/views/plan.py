@@ -14,27 +14,28 @@ from django.conf import settings
 
 @login_required
 def create(request):
-    route = None
     pub_id = request.GET.get("route")
     if pub_id:
-        route = get_object_or_404(Route, pub_id=pub_id)
+        get_object_or_404(Route, pub_id=pub_id)
 
-    plan = Plan.objects.create(name="Unnamed Plan", route_pub_id=pub_id)
+    plan = Plan.objects.create(
+        name="Unnamed Plan",
+        user_pub_id=request.user.pub_id,
+        route_pub_id=pub_id,
+    )
     return redirect('edit-trip-plan', plan.pub_id)
 
 
 @login_required
 def list(request):
-    context = {"plans": Plan.objects.all()}
+    context = {"plans": request.user.plans}
     return render_to_response("trips/plan/list.html", context)
 
 
 @login_required
 def edit(request, pub_id):
     plan = get_object_or_404(Plan, pub_id=pub_id)
-    user_pub_id = request.session.get("user_pub_id")
-    acting_user = User.objects.get(pub_id=user_pub_id)
-    if acting_user.pub_id not in [u.pub_id for u in plan.attendees]:
+    if request.user.pub_id not in [u.pub_id for u in plan.attendees]:
         return HttpResponseForbidden()
 
     if request.method == "POST":
@@ -52,7 +53,7 @@ def edit(request, pub_id):
         invite_user_email = request.POST.get("invite_user_email")
         if invite_user_email is not None:
             user, created = User.objects.get_or_create(email=invite_user_email)
-            plan.add_attendee(inviting_user=acting_user, user=user)
+            plan.add_attendee(inviting_user=request.user, user=user)
 
         remove_user_pub_id = request.POST.get("remove_user_pub_id")
         if remove_user_pub_id is not None:

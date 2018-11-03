@@ -187,7 +187,7 @@ function show_route_details(route){
 
     img_top = "";
     if(route_image_url != ""){
-        img_top = "<img class='card-img-top' src='https://www.trailpeak.com/"+route_image_url+"' alt='Card image cap'>";
+        img_top = `<img class='card-img-top' src='https://www.trailpeak.com/${route_image_url}' alt='Card image cap'>`;
     }
     privacy_buttons = "";
     if(is_mine){
@@ -197,32 +197,30 @@ function show_route_details(route){
             public_class = "active";
             private_class = "";
         }
-        privacy_buttons = "\
-        <div class='btn-group btn-group-toggle public-toggle'> \
-          <label class='route-public privacy_btn btn btn-secondary "+ public_class +"'  data-pub_id='"+pub_id+"'> \
-            <input type='checkbox' autocomplete='off'> Public \
-          </label> \
-          <label class='route-private privacy_btn btn btn-secondary "+ private_class +"' data-pub_id='"+pub_id+"'> \
-            <input type='checkbox' autocomplete='off' checked> Private \
-          </label>  \
-        </div>"
+        privacy_buttons = `<div class='btn-group btn-group-toggle public-toggle'> 
+          <label class='route-public privacy_btn btn btn-secondary ${public_class}'  data-pub_id='${pub_id}'> 
+            <input type='checkbox' autocomplete='off'> Public 
+          </label> 
+          <label class='route-private privacy_btn btn btn-secondary ${private_class}' data-pub_id='${pub_id}'> 
+            <input type='checkbox' autocomplete='off' checked> Private 
+          </label>  
+        </div>`
     }
 
-    routeDetailsCard = $("<div id='route_details_card' class='card'> \
-      <div class='card-header'>"+route_name+"</div>    \
-      "+ img_top +"\
-      <div class='card-body'> \
-        <p class='card-text'>"+route_description+"</p> \
-        \
-        <div class='btn-group btn-group-toggle' role='group'> \
-          <label class='btn btn-secondary'> \
-            <input class='route-trip' type='checkbox' autocomplete='off' data-href='/trip/plan/create/?route=\"+pub_id+\"'> Plan Trip \
-          </label> \
-        </div> \
-        "+privacy_buttons+" \
-        </div> \
-      </div> \
-    </div>");
+    routeDetailsCard = $(`<div id='route_details_card' class='card'> 
+      <div class='card-header'>${route_name}</div>    
+      ${img_top}
+      <div class='card-body'> 
+        <p class='card-text'>${route_description}</p> 
+        <div class='btn-group btn-group-toggle' role='group'> 
+          <label class='btn btn-secondary'> 
+            <a href='/trip/plan/create/?route=${pub_id}'>Plan Trip</a>
+          </label> 
+        </div> 
+        ${privacy_buttons} 
+        </div>
+      </div>
+    </div>`);
 
     $("#body").append(routeDetailsCard);
 

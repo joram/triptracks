@@ -19,6 +19,12 @@ class User(AbstractBaseUser):
     send_invitation_emails = models.BooleanField(default=True)
 
     @property
+    def plans(self):
+        from apps.trips.models import Plan, TripAttendee
+        plan_pub_ids = [ta.plan_pub_id for ta in TripAttendee.objects.filter(user_pub_id=self.pub_id)]
+        return Plan.objects.filter(models.Q(pub_id__in=plan_pub_ids) | models.Q(user_pub_id=self.pub_id))
+
+    @property
     def profile_image(self):
         if self.google_credentials is None:
             return ""
