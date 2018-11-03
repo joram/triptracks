@@ -176,15 +176,7 @@ function load_route(route) {
     }
 }
 
-function show_route_details(route){
-    $("#route_details_card").remove();
-    pub_id = route["pub_id"];
-    route_name = route["name"];
-    route_description = route["description"];
-    route_image_url = route["image_url"];
-    is_mine = route["is_mine"];
-    is_public = route["is_public"];
-
+function create_route_panel(pub_id, route_name, route_description, route_image_url, is_mine, is_public){
     img_top = "";
     if(route_image_url != ""){
         img_top = `<img class='card-img-top' src='https://www.trailpeak.com/${route_image_url}' alt='Card image cap'>`;
@@ -221,6 +213,19 @@ function show_route_details(route){
         </div>
       </div>
     </div>`);
+
+    return routeDetailsCard;
+}
+
+function show_route_details(route){
+    $("#route_details_card").remove();
+    pub_id = route["pub_id"];
+    route_name = route["name"];
+    route_description = route["description"];
+    route_image_url = route["image_url"];
+    is_mine = route["is_mine"];
+    is_public = route["is_public"];
+    routeDetailsCard = create_route_panel(pub_id, route_name, route_description, route_image_url, is_mine, is_public);
 
     $("#body").append(routeDetailsCard);
 

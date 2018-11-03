@@ -20,6 +20,10 @@
   max-height: 100px;
 }
 
+#route_details_card  a {
+  color: white;
+}
+
 #route_details_card > .card-img-top {
   max-height: 250px;
 }
