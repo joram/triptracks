@@ -2,10 +2,7 @@ import os
 import re
 import time
 import requests
-from BeautifulSoup import BeautifulSoup
-import HTMLParser
-
-parser = HTMLParser.HTMLParser()
+from bs4 import BeautifulSoup
 
 
 class FailedRequest(Exception):
@@ -61,7 +58,7 @@ class BaseScraper(object):
 
     def get_uncached_content(self, url):
         if self.debug:
-            print "downloading {}".format(url)
+            print("downloading {}".format(url))
         time.sleep(self.wait)
         resp = requests.get(url)
         if resp.status_code != 200:
@@ -74,7 +71,7 @@ class BaseScraper(object):
         cache_filepath = self.item_cache_filepath(url)
         if self.have_item(cache_filepath):
             if self.debug:
-                print "loading cached {}".format(url)
+                print("loading cached {}".format(url))
             return self.get_item(cache_filepath)
 
         content = self.get_uncached_content(url)
@@ -115,6 +112,6 @@ class BaseScraper(object):
             try:
                 yield self.get_content(url)
             except Exception as e:
-                print e
+                print(e)
                 pass
 

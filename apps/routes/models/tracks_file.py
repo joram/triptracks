@@ -1,7 +1,7 @@
 import os
 from django.contrib.gis.db import models
 from django.core.files import File
-from cStringIO import StringIO
+from io import StringIO
 
 
 def tracks_file_path(instance, filename):

@@ -1,8 +1,8 @@
 from django.conf.urls import include, url
 from tastypie.api import Api
 
-from api import RouteResource
-from views import route
+from apps.routes.api import RouteResource
+from apps.routes.views import route
 
 v1_api = Api(api_name='v1')
 v1_api.register(RouteResource())

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from base import BaseScraper
+from scrapers.base import BaseScraper
 import os
 import json
 

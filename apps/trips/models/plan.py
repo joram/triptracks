@@ -4,7 +4,7 @@ from apps.accounts.models import User
 from apps.routes.models import Route
 from apps.packing.models import PackingList
 
-from yr.libyr import Yr
+from apps.integrations.yrno_forecast import get_daily_weather, get_icons
 from utils.fields import ShortUUIDField
 from utils.email import send_trip_invitation_email
 
@@ -48,31 +48,12 @@ class Plan(models.Model):
 
     @property
     def forecast(self):
-        data = {}
-        try:
-            weather = Yr(location_xyz=(self.route.center[1], self.route.center[0], 0))
+        f = get_daily_weather(self.route.center[1], self.route.center[0])
+        return f
 
-            for forecast in weather.forecast():
-                from_dt = forecast["@from"]
-                if from_dt not in data:
-                    data[from_dt] = {}
-
-                for key in forecast["location"].keys():
-                    if key.startswith("@"):
-                        continue
-                    for second_key in ["@value", "@percent", "@name"]:
-                        value = forecast["location"].get(key, {}).get(second_key)
-                        if value:
-                            try:
-                                value = float(value)
-                            except:
-                                pass
-                            data[from_dt][key] = value
-                            break
-        except Exception as e:
-            print e
-
-        return data
+    @property
+    def forecast_icons(self):
+        return get_icons(self.route.center[1], self.route.center[0])
 
     @property
     def attendees(self):

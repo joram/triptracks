@@ -1,25 +1,25 @@
-
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block extra_js %}
+  <link rel="stylesheet" href="/static/css/plan_list.css">
+{% endblock %}
+
 {% block content %}
-<div class="container">
-    <br/>
-    <ul class="list-group" style="width:300px;">
-    <button type="button" class="list-group-item list-group-item-dark list-group-item-action active">
-        My Packing Lists
-    </button>
-		{% for plan in plans %}
-        <a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">
-        <li class="list-group-item list-group-item-dark">
-            {{ plan.name }}
-            <br/>
-            {% if plan.route %}
-                {{ plan.route.name}}
-            {% endif %}
-        </li>
-        </a>
-    {% endfor %}
-    </ul>
+<div id="plans" class="container">
+  {% for plan in plans %}
+  <label class='col-md-3 btn btn-secondary'>
+    <a href="{% url 'edit-trip-plan' pub_id=plan.pub_id %}">
+      <div class="plan">
+        <div class="plan-name">{{ plan.name }}</div> -
+        <div class="plan-route-name">
+          {% if plan.route %}
+              {{ plan.route.name}}
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  </label>
+  {% endfor %}
 </div>
 {% endblock %}

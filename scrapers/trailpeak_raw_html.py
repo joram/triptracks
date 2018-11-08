@@ -1,8 +1,6 @@
 #!/usr/bin/python
 import os
-from base import BaseScraper
-from BeautifulSoup import BeautifulSoup
-import json
+from scrapers.base import BaseScraper
 
 
 class ScrapeTrailPeakRawHTML(BaseScraper):

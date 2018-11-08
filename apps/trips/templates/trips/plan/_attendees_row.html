@@ -1,15 +1,11 @@
-<div class="row">
-  {% for user in plan.attendees %}
-    <img class="big_account_image" src="{{ user.profile_image }}" alt="{{ user.sort_name }}">
-  {% endfor %}
 
-    <!-- Button trigger modal -->
-  <label data-toggle="modal" data-target="#invite_email_modal">
-    <img class="big_account_image" id="add_attendee" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-bGO8tGmNZWc8Qq3Tpu06blB0uQNBbA30Nj09x9ay1p7W7wqQg">
-  </label>
+<label class="attendee" data-toggle="modal" data-target="#invite_email_modal">
+  <img class="big_account_image" id="add_attendee" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-bGO8tGmNZWc8Qq3Tpu06blB0uQNBbA30Nj09x9ay1p7W7wqQg">
+</label>
+{% for user in plan.attendees %}
+  <img class="attendee big_account_image" src="{{ user.profile_image }}" alt="{{ user.sort_name }}">
+{% endfor %}
 
-
-</div>
 
 <!-- Modal -->
 <div class="modal fade" id="invite_email_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

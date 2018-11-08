@@ -29,15 +29,15 @@ class StravaAccount(models.Model):
             headers = {"Authorization": "Bearer {token}".format(token=self.access_token)}
             resp = requests.get(url, headers=headers)
             if resp.status_code != 200:
-                print resp.content
-                print resp.status_code
+                print(resp.content)
+                print(resp.status_code)
                 time.sleep(30)
                 continue
             activities = resp.json()
 
             if len(activities) == 0:
                 break
-            print "--- new page [{}] count:{} ---".format(page, len(activities))
+            print("--- new page [{}] count:{} ---".format(page, len(activities)))
             for activity in activities:
                 yield activity
             page += 1
@@ -52,7 +52,7 @@ class StravaAccount(models.Model):
 
             gpx_data = client.get_gpx_file(activity.get("id"))
             if gpx_data is None:
-                print "no tracks"
+                print("no tracks")
                 continue
 
             try:
@@ -62,7 +62,7 @@ class StravaAccount(models.Model):
                 route.owner_pub_id = self.user_pub_id
                 route.save()
             except Exception as e:
-                print e
+                print(e)
                 continue
 
             yield StravaActivity.objects.create(
@@ -75,7 +75,7 @@ class StravaAccount(models.Model):
         return u"strava_account:{}".format(self.user.name)
 
     def __unicode__(self):
-        return unicode(self.__str__())
+        return self.__str__()
 
 
 class StravaActivityManager(models.Manager):
@@ -88,7 +88,7 @@ class StravaActivityManager(models.Manager):
         account = StravaAccount.objects.get(strava_athlete_id=strava_athlete_id)
         gpx_data = account.get_client().get_gpx_file(strava_activity_id)
         if gpx_data is None:
-            print "no tracks"
+            print("no tracks")
             return None, False
 
         try:
@@ -99,7 +99,7 @@ class StravaActivityManager(models.Manager):
             route.owner_pub_id = user_pub_id
             route.save()
         except Exception as e:
-            print e
+            print(e)
             return None, False
 
         return StravaActivity.objects.create(
@@ -129,4 +129,4 @@ class StravaActivity(models.Model):
         return u"strava_activity:{}".format(self.route.name)
 
     def __unicode__(self):
-        return unicode(self.__str__())
+        return self.__str__()

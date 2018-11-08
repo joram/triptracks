@@ -1,4 +1,3 @@
-import thread
 import time
 from apps.integrations.models import StravaAccount
 
@@ -35,17 +34,16 @@ def pull_strava_activities(sleep_s):
                 if account is None:
                     break
                 i += 1
-                print "got activity:{activity_name} for account:{username} created:{created}".format(
+                print("got activity:{activity_name} for account:{username} created:{created}".format(
                     activity_name=activity.route.name,
                     username=account.user.get_short_name(),
                     created=created,
-                )
+                ))
                 time.sleep(sleep_s)
         except Exception as e:
-            print "error!"
-            print e
+            print(e)
 
-        print "finished polling all accounts. sleeping for 10min"
+        print("finished polling all accounts. sleeping for 10min")
         time.sleep(600)
 
 #

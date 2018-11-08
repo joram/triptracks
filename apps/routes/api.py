@@ -2,7 +2,7 @@ from tastypie import authorization, fields
 from tastypie.contrib.gis.resources import ModelResource
 from tastypie.resources import ALL
 
-from models import Route
+from apps.routes.models import Route
 
 import json
 from tastypie.serializers import Serializer

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import os
-from base import BaseScraper
-from trailpeak_raw_html import ScrapeTrailPeakRawHTML
+from scrapers.base import BaseScraper
+from scrapers.trailpeak_raw_html import ScrapeTrailPeakRawHTML
 
 
 class ScrapeTrailPeakGPX(BaseScraper):

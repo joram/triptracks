@@ -14,7 +14,7 @@ def _send(email_id, email_data, recipient):
         )
         if resp.status_code == 200:
             break
-        print resp.content
+        print(resp.content)
         time.sleep(10)
 
 

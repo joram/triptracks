@@ -1,7 +1,7 @@
 var plan_map;
 
-function show_route(pub_id) {
-    plan_map = new google.maps.Map(document.getElementById('map'), {});
+function show_route(pub_id, id) {
+    plan_map = new google.maps.Map(document.getElementById(id), {});
     return $.ajax({
         method: "GET",
         url: "/api/route/"+pub_id,
@@ -26,6 +26,5 @@ function load_route_details(data) {
     bounds.extend(bbox.getNorthEast());
     bounds.extend(bbox.getSouthWest());
   });
-  console.log(bounds);
   plan_map.fitBounds(bounds);
 }

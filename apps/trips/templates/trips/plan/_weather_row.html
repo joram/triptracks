@@ -1,0 +1,12 @@
+<div id="weather" class="content">
+  <div class="row">
+    {% for day in plan.forecast %}
+      <div class="weather-day col-md-1">
+        <div class="weather-day-date">{{ day.date_friendly }}</div>
+        <i class="wi {{ day.icon }}"></i>
+        <div class="weather-day-temperature">{{ day.minTemperature }} - {{ day.maxTemperature }}C</div>
+        <div class="weather-day-precipitation {% if day.precipitation > 0 %}rain{% endif %}">{{ day.precipitation }}mm</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from views import item, packing_list
+from apps.packing.views import item, packing_list
 
 
 urlpatterns = [

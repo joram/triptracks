@@ -18,15 +18,15 @@ def login(request):
 
         if not users.exists():
             user = User.objects.create(email=email, google_credentials=idinfo)
-            print "new user: {} {}".format(email, user.pub_id)
+            print("new user: {} {}".format(email, user.pub_id))
         else:
             user = users[0]
 
         request.session["user_pub_id"] = user.pub_id
-        print "user logged in: {} {}".format(email, user.pub_id)
+        print("user logged in: {} {}".format(email, user.pub_id))
 
     except crypt.AppIdentityError:
-        print "failed to validated {}".format(token)
+        print("failed to validated {}".format(token))
         return HttpResponseForbidden("nope")
 
     return HttpResponse("ok")

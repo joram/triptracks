@@ -1,4 +1,4 @@
-BeautifulSoup==3.2.1
+beautifulsoup4==4.6.3
 certifi==2018.1.18
 chardet==3.0.4
 dj-database-url==0.4.2              # DB config via ENV vars
@@ -10,7 +10,7 @@ django-uuidfield==0.5.0
 dj-static==0.0.6
 gpxpy==1.2.0
 gunicorn==19.7.1
-html==1.16
+# html==1.16
 httplib2==0.11.0
 ipython==5.5.0                      # Better Django shell experience
 idna==2.6
@@ -35,4 +35,4 @@ simplejson==3.13.2
 six==1.11.0
 urllib3==1.22
 -e git://github.com/joram/stravalib.git#egg=stravalib
--e git://github.com/wckd/python-yr.git@python2#egg=python-yr
+-e git://github.com/wckd/python-yr.git#egg=python-yr

@@ -1,1 +1,1 @@
-from plan import Plan, TripAttendee
+from apps.trips.models.plan import Plan, TripAttendee

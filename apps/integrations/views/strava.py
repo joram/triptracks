@@ -21,7 +21,7 @@ def connect(request):
 def collect(request):
     strava_account = StravaAccount.objects.get(user_pub_id=request.session.get("user_pub_id"))
     for activity, created in strava_account.populate_activities():
-        print created, activity
+        print(created, activity)
     return HttpResponse("collecting")
 
 
@@ -50,16 +50,16 @@ def webhooks(request):
     updates = data.get("updates", {})
 
     if object_type != "activity":
-        print "only interested in activities, not {}".format(object_type)
+        print("only interested in activities, not {}".format(object_type))
         return HttpResponse()
 
     if aspect_type == "delete":
-        print "only interested in creates or updates, not deletes"
+        print("only interested in creates or updates, not deletes")
         return HttpResponse()
 
     qs = StravaAccount.objects.filter(strava_athlete_id=owner_id)
     if not qs.exists():
-        print "user doesn't exists for strava_account_id:{}".format(owner_id)
+        print("user doesn't exists for strava_account_id:{}".format(owner_id))
         return HttpResponse()
 
     account = qs[0]
@@ -67,7 +67,7 @@ def webhooks(request):
 
     qs = StravaActivity.objects.filter(strava_id=activity.id)
     if qs.exists():
-        print "TODO: update activity"
+        print("TODO: update activity")
         return HttpResponse()
 
     strava_activity, created = StravaActivity.objects.get_or_create_from_strava_activity(
@@ -76,13 +76,13 @@ def webhooks(request):
         activity.name,
         account.user_pub_id,
     )
-    print "new activity {} created:{}".format(strava_activity, created)
+    print("new activity {} created:{}".format(strava_activity, created))
     return HttpResponse()
 
 
 @login_required
 def authorized(request):
-    print dict(request.GET)
+    print(dict(request.GET))
     qs = StravaAccount.objects.filter(user_pub_id=request.session.get("user_pub_id"))
     if qs.exists():
         for a in qs:

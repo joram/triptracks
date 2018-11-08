@@ -22,7 +22,7 @@ class ItemManager(models.Manager):
             data = json.loads(data)
             qs = self.filter(name=data.get("title"))
             if qs.exists():
-                print u"EXISTS: {}".format(data.get("title"))
+                print(u"EXISTS: {}".format(data.get("title")))
                 continue
 
             self.get_or_create(
@@ -32,7 +32,7 @@ class ItemManager(models.Manager):
                 href=data.get('url', ""),
                 img_href=data.get('img_href', ""),
                 attributes=data)
-            print u"CREATED: {}".format(data.get("title"))
+            print(u"CREATED: {}".format(data.get("title")))
 
 
 class Item(models.Model):

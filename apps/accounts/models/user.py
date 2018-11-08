@@ -38,8 +38,6 @@ class User(AbstractBaseUser):
 
     @property
     def is_staff(self):
-        print self.email
-        print settings.STAFF_EMAILS
         return self.email in settings.STAFF_EMAILS
 
     def has_module_perms(self, app):

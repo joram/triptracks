@@ -1,7 +1,6 @@
 from django.contrib.gis.geos import LineString, MultiLineString
 import zipfile
 import gpxpy.gpx
-from pykml import parser
 from django.conf import settings
 from utils.fields import ShortUUIDField
 from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
@@ -10,6 +9,9 @@ import os
 from apps.routes.models.tracks_file import TracksFile
 from django.core.files import File
 from django.contrib.gis.db import models
+
+import urllib3 as urllib2
+from pykml import parser
 
 
 class RouteManager(models.GeoManager):
@@ -102,7 +104,7 @@ class RouteManager(models.GeoManager):
             lines_zoom_5=self._reduced_lines(lines, 5, 10),
         )
 
-        print "{} original:{}, zooms:{}".format(
+        print("{} original:{}, zooms:{}".format(
             new_route.name.ljust(32, " "),
             [len(line) for line in lines],
             [[len(line) for line in zoomed_lines] for zoomed_lines in [
@@ -112,7 +114,7 @@ class RouteManager(models.GeoManager):
                 new_route.lines_zoom_4,
                 new_route.lines_zoom_5,
             ]]
-        )
+        ))
         return new_route
 
     def _reduced_lines(self, original_lines, ratio, max_vertices):
@@ -137,7 +139,7 @@ class RouteManager(models.GeoManager):
             try:
                 self._collect_and_load(id, filepath, data)
             except Exception as e:
-                print e
+                print(e)
 
     def _collect_and_load(self, id, filepath, data):
         name = os.path.basename(filepath)
@@ -151,7 +153,7 @@ class RouteManager(models.GeoManager):
 
         if routes.exists() and routes[0].description == "":
             desc = ScrapeTrailPeakGPX().get_details(id).description
-            print desc
+            print(desc)
             import time
             time.sleep(5)
             # routes[0].description = desc
