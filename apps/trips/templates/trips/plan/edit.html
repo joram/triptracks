@@ -15,7 +15,8 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&callback=initMap" async defer></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.7/showdown.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&callback=initMap" async defer></script>
   <script>
     function initMap(){
       show_route('{{ plan.route_pub_id }}', 'route-map');
@@ -46,8 +47,8 @@
 
     <div class="row" id="description-weather-and-map">
       <div class="col-md-8" id="description-and-weather">
-        <div id="trip-description">{{ plan.description }}</div>
         {% include "trips/plan/_weather_row.html" %}
+        {% include "trips/plan/_description.html" %}
       </div>
       <div class="col-md-4" id="route-map-parent">
         <div id="route-map"></div>
@@ -55,13 +56,8 @@
     </div>
 
     <div class="row" id="packing-lists">
-      <div class="col-md-6">
-        <div>Group Packing List</div>
-        <!--{% include "packing/_edit_row.html" with packing_list=plan.packing_list hide_name="true" %}-->
-      </div>
-      <div class="col-md-6">
-        <div>Personal Packing List</div>
-        <!--{% include "packing/_edit_row.html" with packing_list=plan.packing_list hide_name="true" %}-->
+      <div class="col-md-12">
+        {% include "packing/_edit_row.html" with packing_list=plan.packing_list hide_name="true" %}
       </div>
     </div>
 

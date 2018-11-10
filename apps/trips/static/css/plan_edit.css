@@ -36,20 +36,24 @@
   height: 350px;
 }
 
-#description-weather-and-map, #packing-lists {
+#description-weather-and-map {
   border: solid thin darkgray;
 }
 #description-and-weather{
   padding: 0;
 }
 
-.weather #row {
-  margin: auto;
+
+#weather{
+  display: flex;
+  border-bottom: solid thin darkgray;
 }
 
 .weather-day {
+  flex: 1;
   padding: 0;
   text-align: center;
+  position: relative;
 }
 
 .weather-day i {
@@ -75,6 +79,13 @@
   background-color: lightblue;
 }
 
-#packing-lists, #trip-description{
-  background-color: #73AD21;
+#trip-description {
+}
+
+#packing-lists {
+  border: solid thin darkgray;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
