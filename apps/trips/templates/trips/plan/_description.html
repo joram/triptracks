@@ -39,9 +39,9 @@ function debounce(func, wait, immediate) {
   function toggle_edit(bool){
     if(bool==true){
       $("#trip-description-static").hide();
-      $("#trip-description-edit").show();
+      $("#trip-description-editor").show();
     } else {
-      $("#trip-description-edit").hide();
+      $("#trip-description-editor").hide();
       $("#trip-description-static").show();
     }
   }
@@ -55,8 +55,9 @@ function debounce(func, wait, immediate) {
 
 
 <div id="trip-description">
-    <div id="trip-description-static"></div>
-    <div id="trip-description-edit" style="display: none;">
-        <textarea id="editor">{{ plan.description }}</textarea>
-    </div>
+  <i id="trip-description-edit" class="far fa-edit"></i>
+  <div id="trip-description-static"></div>
+  <div id="trip-description-editor" style="display: none;">
+    <textarea id="editor">{{ plan.description }}</textarea>
+  </div>
 </div>

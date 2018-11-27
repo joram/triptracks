@@ -1,25 +1,26 @@
+<i id="trip-packinglist-group-edit" class="far fa-edit"></i>
 <div class="row">
   <div id="packing-list-pub-id" style="display:none;">{{ packing_list.pub_id }}</div>
 
-	<div class="col-md-12">
-    <div class="row packing-heading">
-      <div class="center">
-        {% if hide_name != "true" %}
-          <h3><a id="packing-list-name">{{ packing_list.name }}</a></h3>
-        {% endif %}
-        <label for="search_text"><h3>Search</h3></label>
-        <input
-         id="search_text"
-         type="text"
-         data-search-uri="{% url 'search-items' %}"
-         data-csrf="{{ csrf_token }}"/>
-      </div>
-    </div>
-  </div>
+	<!--<div class="col-md-12">-->
+    <!--<div class="row packing-heading">-->
+      <!--<div class="center">-->
+        <!--{% if hide_name != "true" %}-->
+          <!--<h3><a id="packing-list-name">{{ packing_list.name }}</a></h3>-->
+        <!--{% endif %}-->
+        <!--<label for="search_text"><h3>Search</h3></label>-->
+        <!--<input-->
+         <!--id="search_text"-->
+         <!--type="text"-->
+         <!--data-search-uri="{% url 'search-items' %}"-->
+         <!--data-csrf="{{ csrf_token }}"/>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 
-	<div class="col-md-12">
-    <div class="row" id="search-items"></div>
-	</div>
+	<!--<div class="col-md-12">-->
+    <!--<div class="row" id="search-items"></div>-->
+	<!--</div>-->
 
   <div class="row" id="packing-list-items">
     {% for item in packing_list.items %}

@@ -12,6 +12,23 @@
   font-size:30px;
 }
 
+#trip-title-edit {
+  font-size:12px;
+  top: 10px;
+  padding-left: 5px;
+  position: absolute;
+}
+#trip-description-edit {
+  font-size:12px;
+  float: right;
+  padding: 5px;
+}
+#trip-packinglist-group-edit {
+  font-size:12px;
+  float: right;
+  padding: 5px;
+}
+
 #trip-subtitle {
   font-size:12px;
   color: gray;
