@@ -12,8 +12,8 @@ sudo apt-get install libgdal-dev
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 - install python
     ```
-    pyenv install 2.7.14
-    pyenv virtualenv 2.7.14 tt
+    pyenv install 3.6.6
+    pyenv virtualenv 3.6.6 tt
     pyenv activate tt
     pip install -r requirements.txt
     ```
