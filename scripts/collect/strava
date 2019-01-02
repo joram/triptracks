@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+export PYTHONPATH=$PYTHONPATH:/home/john/code/src/joram/triptracks
+
+./scrapers/strava_gpx.py

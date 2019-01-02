@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+  <script src="/static/js/routes.js" type="text/javascript"></script>
+  <script src="/static/js/route_editor.es6" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var rv = new window.RouteEditor("map", true);
+    });
+  </script>
+  <link href="/static/map.css">
+{% endblock %}
+
+{% block content %}
+  <div id="map"
+    data-google-maps-api-key="{{ GOOGLE_MAPS_API_KEY }}"
+    data-route-id="{{ route.id }}"
+    data-center-lat="{{ route.center.y }}"
+    data-center-lng="{{ route.center.x }}">
+  </div>
+{% endblock %}

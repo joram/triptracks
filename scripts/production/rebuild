@@ -1,0 +1,7 @@
+#!/bin/bash
+
+hyper service detach-fip triptracks
+hyper service rm triptracks
+hyper service create --service-port=443 --container-port=8000 --label=app=triptracks --name=triptracks --replicas=1 --ssl-cert=https-service2.pem --protocol=httpsTerm --env-file=scripts/.env joram87/triptracks:latest
+sleep 10
+hyper service attach-fip --fip=199.245.58.143 triptracks

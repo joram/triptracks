@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#python ./scrapers/trailpeak_gpx.py
+python ./scrapers/routes.py

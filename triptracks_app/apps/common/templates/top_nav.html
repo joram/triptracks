@@ -1,0 +1,44 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+        <img id="navbar-icon" src="/static/img/favicon.png"/>
+        TripTracks
+    </a>
+
+    <div class="dropdown" style="display: none;" id="signed-in-menu">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img id="account_image" src="{{ request.user.profile_image }}"/>
+            <div id="account_name">
+                <div id="account_fullname">Account</div>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% url 'list-trip-plans' as url_view_trip_plans %}
+            {% url 'create-trip-plan' as url_create_trip_plan  %}
+            <li class="dropdown-header">Trip Plans</li>
+            {% include '_nav_item.html' with
+            href=url_view_trip_plans
+            action_icon="fa-pencil-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Edit"
+            %}
+            {% include '_nav_item.html' with
+            href=url_create_trip_plan
+            action_icon="fa-plus-square-o"
+            app_icon="/static/img/icons/icons8-backpack-128.png"
+            text="Create"
+            %}
+            <br/>
+
+
+            <li class="dropdown-header">Account</li>
+            <a class="dropdown-item" href="#" onclick="signOut();">Sign out</a>
+
+        </div>
+    </div>
+    {% if not request.user %}
+      <div id='sign-in' class="g-signin2" data-onsuccess="onSignIn"></div>
+    {% endif %}
+
+</nav>

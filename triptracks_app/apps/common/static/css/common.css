@@ -1,0 +1,123 @@
+#account_name {
+    float: left;
+}
+
+#account_name i {
+    padding-top: 3px;
+}
+
+#account_fullname {
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    text-align: center;
+}
+
+#account_image {
+    float: left;
+    border-radius: 12px;
+    background: #73AD21;
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+}
+
+.big_account_image {
+    float: left;
+    border-radius: 24px;
+    background: #73AD21;
+    padding: 0px;
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+}
+
+#navbar-icon {
+    float:left;
+    width:30px;
+    padding-top: 0px;
+}
+
+#signed-in-menu .dropdown-toggle {
+    min-width:158px;
+    padding: 2px;
+    padding-right: 8px;
+}
+
+#signed-in-menu .dropdown-toggle::after {
+    margin-top:10px;
+}
+
+#signed-in-menu .dropdown-toggle #account_name i {
+    margin-top:3;
+}
+#signed-in-menu .dropdown-menu {
+    margin-top: 20px;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  bottom: 0px;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#main_navigation {
+  margin-bottom: 0;
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+.col-md-12 {
+  margin: 0;
+  padding: 0;
+}
+
+.grid_element {
+  border: solid thin black;
+  width: 200px;
+  margin: 20px;
+}
+
+#possible_items {
+  display: block;
+  margin : 0 auto;
+  width: 70%;
+}
+
+.packing-list-item {
+  margin: 10px;
+  padding: 0;
+}
+
+.packing-list-item-text {
+  margin: 0;
+  padding-top:5px;
+  padding-bottom:10px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.packing-list-item-text a {
+  display: inline;
+}
+
+.packing-list-item-text h3{
+  display: inline;
+  margin: 0;
+}
+
+.delete-item {
+  float: right;
+  padding-top: 10px;
+  padding-right:15px;
+}
+
+.center {
+margin: 0 auto;
+}

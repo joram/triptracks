@@ -1,0 +1,5 @@
+#!/bin/bash
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+docker build . -t joram87/triptracks
+docker push joram87/triptracks:latest

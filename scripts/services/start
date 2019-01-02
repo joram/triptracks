@@ -1,0 +1,7 @@
+#!/bin/bash
+#? Start Docker service containers
+
+if ! docker start trip-planner-postgis
+then
+  docker run --name "trip-planner-postgis" -e POSTGRES_DBNAME=tripplanner -p 25432:5432 -d -t kartoza/postgis
+fi

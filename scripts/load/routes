@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+from util import setup_env
+setup_env()
+from apps.routes.models import Route, TracksFile
+import json
+from scrapers.trailpeak_details import ScrapeTrailPeakDetails
+from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
+from scrapers.strava_gpx import StravaGPX
+from django.conf import settings
+
+settings.DEBUG = False
+
+
+def get_strava_files():
+    s = StravaGPX()
+    for filepath in s.files():
+        try:
+            tf = TracksFile.objects.get_or_create_from_filepath(filepath)
+            name = tf.filename.split("_")[1]
+            Route.objects.create_from_route(tf, name)
+        except Exception as e:
+            print e
+            print filepath
+
+
+def get_trailpeak_files():
+    s = ScrapeTrailPeakDetails()
+    sGPX = ScrapeTrailPeakGPX()
+
+    for details in s.run():
+        try:
+            details = json.loads(details)
+        except Exception as e:
+            print e
+            continue
+
+        # try:
+        #     sGPX.get_content(details["url"])
+        # except Exception as e:
+        #     print e
+        #     continue
+        name = details["name"]
+        trail_id = details["trail_id"]
+        trail_image_url = details["trail_image_url"]
+        description = details["description"]
+
+        print u"updating route {}: {}".format(
+            trail_id.rjust(5, "0"),
+            name
+        )
+        gpx_name = trail_id+"_" + name.replace(" ", "_")
+        routes = Route.objects.filter(name__contains=gpx_name)
+        if len(routes) > 0:
+            for i in range(1, len(routes)):
+                routes[i].delete()
+            routes[0].name = name
+            routes[0].description = description
+            routes[0].image_url = trail_image_url
+
+            try:
+                routes[0].save()
+            except Exception as e:
+                print e
+                continue
+
+
+if __name__ == "__main__":
+    get_strava_files()
+    # get_trailpeak_files()

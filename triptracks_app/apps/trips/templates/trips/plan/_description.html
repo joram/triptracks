@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
+  $( document ).ready(function() {
+    var simplemde = new SimpleMDE({
+      element: document.getElementById("editor"),
+      autosave: {
+        enabled: true,
+        uniqueId: "description",
+        delay: 1000,
+      },
+    });
+    $("#trip-description-edit").on("change", function(){
+      debounce(save_description, 250);
+    });
+    update_description_static("# Description Goes here\n\n it's gonna be markdown");
+  });
+
+  function save_description() {
+    console.log(simplemde.value());
+  }
+
+  function toggle_edit(bool){
+    if(bool==true){
+      $("#trip-description-static").hide();
+      $("#trip-description-editor").show();
+    } else {
+      $("#trip-description-editor").hide();
+      $("#trip-description-static").show();
+    }
+  }
+
+  function update_description_static(markdown) {
+    var converter = new showdown.Converter();
+    $("#trip-description-static").html(converter.makeHtml(markdown));
+  }
+
+</script>
+
+
+<div id="trip-description">
+  <i id="trip-description-edit" class="far fa-edit"></i>
+  <div id="trip-description-static"></div>
+  <div id="trip-description-editor" style="display: none;">
+    <textarea id="editor">{{ plan.description }}</textarea>
+  </div>
+</div>

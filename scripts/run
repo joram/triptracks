@@ -1,0 +1,6 @@
+#!/bin/bash
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+export PORT=8000
+export DJANGO_SETTINGS_MODULE=settings.dev
+python ./manage.py runserver 0.0.0.0:$PORT

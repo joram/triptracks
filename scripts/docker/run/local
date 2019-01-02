@@ -1,0 +1,5 @@
+#!/bin/bash
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+docker stop triptracks
+docker run --env-file ./scripts/.env -p 8000:8000 --rm -d --name=triptracks joram87/triptracks:latest

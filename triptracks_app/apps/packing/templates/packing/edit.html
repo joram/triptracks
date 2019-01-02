@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+	<script src="/static/js/packing_list.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="/static/css/packing.css" />
+{% endblock %}
+
+{% block content %}
+  <div id="packing-list-pub-id" style="display:none;">{{ packing_list.pub_id }}</div>
+  {% include "packing/_edit_row.html" %}
+{% endblock %}

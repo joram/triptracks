@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build . -t joram87/triptracks

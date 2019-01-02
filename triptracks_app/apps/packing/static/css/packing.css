@@ -1,0 +1,14 @@
+.packing-heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.packing-item {
+  margin-top: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.packing-item .card-body {
+  padding:2px;
+}
