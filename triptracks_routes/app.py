@@ -1,7 +1,8 @@
+#!/usr/bin/env python
 import os
 import json
 from flask import render_template, Flask, request, send_from_directory
-import Geohash
+import geohash2
 from stores.cached_routes import CachedRoutesStore
 from stores.routes import RoutesStore
 app = Flask(__name__)
@@ -36,10 +37,11 @@ stores = {
 def favicon():
   return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+
 def geohash(bbox):
   ((lat1, lng1), (lat2, lng2)) = bbox
-  h1 = Geohash.encode(lat1, lng1)
-  h2 = Geohash.encode(lat2, lng2)
+  h1 = geohash2.encode(lat1, lng1)
+  h2 = geohash2.encode(lat2, lng2)
   i = 0
   for c in h1:
     if h2[i] == c:

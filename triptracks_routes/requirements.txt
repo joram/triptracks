@@ -1,6 +1,6 @@
 zappa
 flask
-Geohash
+geohash2
 gpxpy
 pykml
 bs4

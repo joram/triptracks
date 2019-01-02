@@ -46,10 +46,6 @@ class RoutesStore(object):
         with open(filepath, "w") as f:
             f.write(json.dumps(route.details()))
 
-    def _parent_geohashes(self, geohash):
-        for i in range(0, len(geohash)+1):
-            yield geohash[:len(geohash)-i]
-
     def get(self, geohash):
         path = self._path(geohash)
         if not os.path.exists(path):
@@ -67,7 +63,13 @@ class RoutesStore(object):
               gpx=data["gpx"],
             )
 
-    def _files_in(self, root_dir):
+    @staticmethod
+    def _parent_geohashes(geohash):
+        for i in range(0, len(geohash)+1):
+            yield geohash[:len(geohash)-i]
+
+    @staticmethod
+    def _files_in(root_dir):
         for root, subdirs, files in os.walk(root_dir):
             for f in files:
                 if f.startswith("route_"):

@@ -1,8 +1,5 @@
-import Geohash
-import os
+import geohash2
 import gpxpy.gpx
-from pykml import parser
-import pprint
 import uuid
 import random
 
@@ -30,6 +27,7 @@ def lines_from_gpx(filepath):
             line.append((point.latitude, point.longitude, point.elevation))
         lines.append(line)
     return lines
+
 
 def reduced_lines(original_lines, max_vertices):
     lines = []
@@ -95,8 +93,8 @@ class Route(object):
 
     def geohash(self):
         ((lat1, lng1), (lat2, lng2)) = self.bbox()
-        h1 = Geohash.encode(lat1, lng1)
-        h2 = Geohash.encode(lat2, lng2)
+        h1 = geohash2.encode(lat1, lng1)
+        h2 = geohash2.encode(lat2, lng2)
         i = 0
         for c in h1:
             if h2[i] == c:
@@ -124,7 +122,6 @@ class Route(object):
                 min_lng = min(min_lng, lng)
                 max_lng = max(max_lng, lng)
         return ((min_lat, min_lng), (max_lat, max_lng))
-
 
     def vertices(self, max_verts=None):
         if self.lines is None or len(self.lines) == 0:
