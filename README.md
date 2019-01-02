@@ -1,11 +1,8 @@
-# TripTracks
+# Triptracks
 This project is under development. The goal is to have a unified site to manage trip plans and reports for outdoor trips.
 
-## Associated Resources:
-[dockerhub image](https://hub.docker.com/r/joram87/triptracks/)
-
 ## Setup
-- pull the project: `git clone https://github.com/joram/trip-planner.git`
+- pull the project: `git clone https://github.com/joram/triptracks.git`
 - install the project dependencies
 ```bash
 sudo apt-get install libgdal-dev
@@ -15,8 +12,8 @@ sudo apt-get install libgdal-dev
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 - install python
     ```
-    pyenv install 2.7.14
-    pyenv virtualenv 2.7.14 tt
+    pyenv install 3.6.6
+    pyenv virtualenv 3.6.6 tt
     pyenv activate tt
     pip install -r requirements.txt
     ```
