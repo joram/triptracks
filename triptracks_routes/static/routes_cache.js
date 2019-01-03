@@ -17,15 +17,19 @@ function geohashBounds(){
 
 class RoutesCache {
     constructor() {
-        this.fetched_hashes = {};
+        this.fetched_hashes = [];
         this.routes = {};
         this.curr_zoom = -1;
         var self = this;
+
         this.have = function (zoom, geohash){
-            if (!(geohash in this.fetched_hashes)){
-                return false;
-            }
-            return this.fetched_hashes[geohash].contains(map.zoom);
+            var key = zoom.toString()+"_"+geohash;
+            return this.fetched_hashes.indexOf(key) >= 0;
+        };
+
+        this.got = function(zoom, geohash){
+          var key = zoom.toString()+"_"+geohash;
+            self.fetched_hashes.push(key);
         };
 
         this.update_zoom = function () {
@@ -35,14 +39,11 @@ class RoutesCache {
         };
 
         this.update_bounds = function () {
-            console.log("updating bounds");
             var geohash = geohashBounds();
-            if(self.have(map.zoom, geohash)){
-                console.log("already have ", geohash, zoom);
-                return false;
+            if(!self.have(map.zoom, geohash)){
+                self.got(map.zoom, geohash);
+                self.getRoutes();
             }
-            self.getRoutes();
-            return true;
         };
 
         this.getRoutes = function () {

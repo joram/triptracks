@@ -8,8 +8,8 @@ class Route {
     var self = this;
 
     this.add_lines = function (lines, zoom) {
-        console.log("adding line ", this.pub_id, zoom, lines[0].length);
-        this.lines[zoom] = lines;
+        // console.log("adding line ", this.pub_id, zoom, lines[0].length);
+        self.lines[zoom] = lines;
 
 
         self.map_lines[zoom] = [];
@@ -33,20 +33,20 @@ class Route {
 
     this.show = function (zoom) {
 
-        if (zoom === this.curr_zoom) {
-          console.log("already showing ", this.pub_id, " at ", zoom);
+        if (zoom === self.curr_zoom) {
+          console.log("already showing ", self.pub_id, " at ", zoom);
           return
         }
-        console.log("showing new route", this.lines.length, this.map_lines.length);
+        console.log("showing new route", self.lines.length, self.map_lines.length);
 
         $.each(self.map_lines[zoom], function (i, line) {
           line.setMap(map);
         });
 
-        $.each(self.map_lines[this.curr_zoom], function (i, line) {
+        $.each(self.map_lines[self.curr_zoom], function (i, line) {
           line.setMap();
         });
-        this.curr_zoom = zoom;
+        self.curr_zoom = zoom;
       }
     }
 }
