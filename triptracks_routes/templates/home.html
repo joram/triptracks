@@ -9,13 +9,12 @@
     <div id="map" style="width:100%; height:100%;"></div>
     <script>
       var map;
-      var routes_cache;
+      var routes_cache = new RoutesCache();
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 48.4284, lng: -123.3656},
           zoom: 12
         });
-        routes_cache = new RoutesCache();
       	google.maps.event.addListener(map, "bounds_changed", routes_cache.update_bounds);
       	google.maps.event.addListener(map, "zoom_changed", routes_cache.update_zoom);
       }
