@@ -41,5 +41,3 @@ class CachedRoutesStore(object):
         return content
     except self.client.exceptions.NoSuchKey:
         return None
-  
-  

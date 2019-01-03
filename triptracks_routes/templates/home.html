@@ -2,109 +2,22 @@
   <head>
    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
    <script src="./static/geohash.js"></script>
+   <script src="./static/routes.js"></script>
+   <script src="./static/routes_cache.js"></script>
   </head>
   <body>
     <div id="map" style="width:100%; height:100%;"></div>
     <script>
       var map;
-      var geohashesGot = {};
-      var routesStore = {};
-
-      function loadRoutes(data){
-	data = JSON.parse(data);
-	$.each(data.routes, function(pub_id, route){
-	  loadRoute(pub_id, route, data.zoom);
-	  geohashesGot[key].push(pub_id);
-	});
-        showRoutes();
-      }
-
-      function loadRoute(pub_id, route, zoom){
-	  if(pub_id in routesStore){
-            if(zoom in routesStore[pub_id].lines) {
-  	      return
-	    }
-	  } else {
-	    routesStore[pub_id] = {
-       	      name: route.name,
-	      pub_id: pub_id,
-	      lines: {},
-	    }
-	  }
-
-	  map_lines = []
-	  $.each(route.lines, function(i, coords){
-	    latLngs = [];
-	    $.each(coords, function (j, coord){
-	      latLngs.push({lat: coord[0], lng: coord[1]})
-	    });
-            line = new google.maps.Polyline({
-	      path: latLngs,
-	      geodesic: true,
-	      strokeColor: '#FF0000',
-	      strokeOpacity: 1.0,
-	      strokeWeight: 2
-	    });
-            line.setMap(map);
-	    map_lines.push(line);
-	  });
-          routesStore[pub_id].lines[zoom] = map_lines
-      }
-
-      function geohashBounds(){
-	bbox = map.getBounds()
-	ne = bbox.getNorthEast()
-	sw = bbox.getSouthWest()
-        h1 = Geohash.encode(ne.lat(), ne.lng());
-        h2 = Geohash.encode(sw.lat(), sw.lng());
-	for(i=0; i<h1.length; i++){
-	  if(h1.substring(0,i) != h2.substring(0,i)){
-	        h = h1.substring(0,i-1);
-		return h
-	  }
-	};
-      }
-
-      function getRoutes(){
-	  url = window.location.href
-	  if(!url.endsWith("/")){ url += "/"}
-	  url += "routes?bbox="+map.getBounds().toUrlValue()+"&zoom="+map.getZoom();
-	  $.ajax({
-	    url: url,
-	    success: loadRoutes,
-	  });
-      }
-
-      function showRoutes(){
-	key = geohashBounds()+"_"+map.zoom
-	console.log("updating zoom for:", geohashesGot[key]);
-	$.each(geohashesGot[key], function(i, pub_id){
-	  $.each(routesStore[pub_id].lines, function(z, lines){
-	    $.each(lines, function(i, line){
-	      if(z!=map.zoom){
-	        line.setMap();
-	      } else {
-	        line.setMap(map);
-	      }
-	    });
-	  });
-	});
-      }
-
+      var routes_cache;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 48.4284, lng: -123.3656},
           zoom: 12
         });
-	google.maps.event.addListener(map, "bounds_changed", function() {
-	  key = geohashBounds()+"_"+map.zoom
-          if(!(key in geohashesGot)){
-	    geohashesGot[key] = [];
-	    getRoutes();
-	  } else {
-            showRoutes();
-          }
-	});
+        routes_cache = new RoutesCache();
+      	google.maps.event.addListener(map, "bounds_changed", routes_cache.update_bounds);
+      	google.maps.event.addListener(map, "zoom_changed", routes_cache.update_zoom);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAntpb0h6GbbKCowtWxK6kes6RCxEQv7o0&callback=initMap" async defer></script>
