@@ -33,7 +33,7 @@ class RoutesCache {
         };
 
         this.update_zoom = function () {
-          $.each(this.routes, function(pub_id, route){
+          $.each(self.routes, function(pub_id, route){
             route.show(map.zoom);
           });
         };
@@ -53,23 +53,24 @@ class RoutesCache {
           url += "routes?bbox="+map.getBounds().toUrlValue()+"&zoom="+map.getZoom();
           $.ajax({
             url: url,
-            success: this.loadRoutes,
+            success: self.loadRoutes,
           });
         };
 
         this.loadRoutes = function (data){
             data = JSON.parse(data);
+            console.log("getting "+Object.keys(data.routes).length+" routes");
             $.each(data.routes, function(pub_id, route){
               self.loadRoute(pub_id, route, data.zoom);
             });
         };
 
         this.loadRoute = function (pub_id, route, zoom){
-          if(!(pub_id in this.routes)){
-                this.routes[pub_id] = new Route(route.name, pub_id)
+          if(!(pub_id in self.routes)){
+                self.routes[pub_id] = new Route(route.name, pub_id)
           }
-          this.routes[pub_id].add_lines(route.lines, zoom);
-          this.routes[pub_id].show(zoom);
+          self.routes[pub_id].add_lines(route.lines, zoom);
+          self.routes[pub_id].show(zoom);
           }
         }
 

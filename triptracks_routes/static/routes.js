@@ -34,10 +34,8 @@ class Route {
     this.show = function (zoom) {
 
         if (zoom === self.curr_zoom) {
-          console.log("already showing ", self.pub_id, " at ", zoom);
           return
         }
-        console.log("showing new route", self.lines.length, self.map_lines.length);
 
         $.each(self.map_lines[zoom], function (i, line) {
           line.setMap(map);

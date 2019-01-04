@@ -47,5 +47,4 @@ if __name__ == "__main__":
     s = ScrapeTrailPeakGPX()
     s.debug = True
     for data in s.run():
-        print data
-        pass
+        print(data)

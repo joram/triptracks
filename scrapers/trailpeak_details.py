@@ -73,5 +73,5 @@ if __name__ == "__main__":
     s.debug = True
     for data in s.run():
         data = json.loads(data)
-        print data.keys()
+        print(data.keys())
         pass

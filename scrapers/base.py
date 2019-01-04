@@ -43,7 +43,7 @@ class BaseScraper(object):
         return os.path.exists(filepath)
 
     def store_item(self, filepath, data):
-        with open(filepath, "w") as f:
+        with open(filepath, "wb") as f:
             f.write(data)
 
     def get_item(self, filepath):
