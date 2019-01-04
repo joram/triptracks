@@ -1,5 +1,7 @@
 zappa
 flask
+flask-graphql
+graphene
 geohash2
 gpxpy
 pykml

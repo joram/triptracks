@@ -59,7 +59,7 @@ class RoutesStore(object):
               pub_id=data["pub_id"],
               description=data["description"],
               lines=data["lines"],
-              gpx=data["gpx"],
+              # gpx=data["gpx"],
             )
 
     @staticmethod

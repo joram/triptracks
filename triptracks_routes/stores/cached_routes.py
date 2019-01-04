@@ -13,11 +13,17 @@ class CachedRoutesStore(object):
     self.max_vertices = max_vertices
   
   def get(self, geohash):
+    print("getting ", geohash)
+    from models.route import Route
     path = os.path.join(self.base_path, "{}.json".format(geohash))
     content = self._get_s3_content(path)
     if content is not None:
       content = json.loads(content)
-      return content, True
+      routes = [Route(pub_id=r["pub_id"], name=r["name"], lines=r["lines"]) for r in content]
+      for r in routes:
+        print(vars(r))
+      print(routes)
+      return routes
 
     full_routes = self.base_store.get(geohash)
     routes = []
@@ -27,9 +33,8 @@ class CachedRoutesStore(object):
           "name": r.name,
           "lines": r.vertices(self.max_vertices),
         })
-
     self._write_s3_content(path, json.dumps(routes))
-    return routes, False
+    return self.get(geohash)
 
   def _write_s3_content(self, key, content):
     obj = self.client.put_object(Bucket=self.bucket, Key=key, Body=content)

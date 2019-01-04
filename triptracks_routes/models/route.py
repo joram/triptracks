@@ -1,49 +1,54 @@
 import geohash2
-import gpxpy.gpx
 import uuid
 import random
+import graphene
+from utils import lines_from_gpx
+from models.user import User
+
+ZOOM_LEVELS = {
+    0: 1,
+    1: 1,
+    2: 1,
+    3: 5,
+    4: 5,
+    5: 5,
+    6: 10,
+    7: 10,
+    8: 10,
+    9: 25,
+    10: 25,
+    11: 100,
+    12: 100,
+    13: 500,
+    14: 500,
+    15: 1000,
+    16: 1000,
+    17: 1500,
+    18: 1500,
+    19: 2000,
+    20: 2000,
+}
 
 
-def lines_from_gpx(filepath):
-    try:
-        if filepath.endswith(".json"):
-            filepath = filepath.replace(".json", ".gpx")
-        with open(filepath) as f:
-            gpx = gpxpy.parse(f)
-    except Exception as e:
-        print(filepath)
-        print(e)
-        return []
-    lines = []
-    for track in gpx.tracks:
-        for segment in track.segments:
-            line = []
-            for point in segment.points:
-                line.append((point.latitude, point.longitude, point.elevation))
-            lines.append(line)
-    for route in gpx.routes:
-        line = []
-        for point in route.points:
-            line.append((point.latitude, point.longitude, point.elevation))
-        lines.append(line)
-    return lines
+def get_cache(zoom=1):
+    max_verts = ZOOM_LEVELS[zoom]
+    from stores.routes import RoutesStore
+    from stores.cached_routes import CachedRoutesStore
+    return CachedRoutesStore(max_verts, RoutesStore())
 
 
-def reduced_lines(original_lines, max_vertices):
-    lines = []
-    for original_line in original_lines:
-        total_vertices = len(original_line)
-        max_vertices = min(max_vertices, total_vertices)
-        step = int(total_vertices / max_vertices)
-        line = []
-        for i in range(0, len(original_line)-1, step):
-            line.append(original_line[i])
-            line.append(original_line[-1])
-        lines.append(line)
-    return lines
+class Route(graphene.ObjectType):
+    pub_id = graphene.ID()
+    name = graphene.String()
+    geohash = graphene.String()
+    zoom = graphene.Int()
+    description = graphene.String()
+    lines = graphene.JSONString()
+    owner = graphene.Field(User)
+    is_public = graphene.Boolean()
 
-
-class Route(object):
+    def resolve_owner(self, info):
+        return User(pub_id="user_???", name="bob")
 
     @classmethod
     def from_data(cls, data):
@@ -52,16 +57,17 @@ class Route(object):
           lines=lines_from_gpx(filepath),
           name=data["name"].strip("\n "),
           description=data["description"],
-          gpx=filepath,
         )
         return route
 
-    def __init__(self, lines, name=None, description=None, gpx=None, pub_id=None):
+    def __init__(self, lines, name=None, description=None, pub_id=None, geohash=None, zoom=None):
+        super(Route, self).__init__()
+        self.pub_id = pub_id
+        self.geohash = geohash
+        self.zoom = zoom
         self.name = name
         self.description = description
         self.lines = lines
-        self.gpx = gpx
-        self.pub_id = pub_id
 
         if self.pub_id is None:
           rd = random.Random()
