@@ -2,7 +2,7 @@ import geohash2
 import uuid
 import random
 import graphene
-from utils import lines_from_gpx
+from utils.lines import lines_from_gpx
 from models.user import User
 
 ZOOM_LEVELS = {

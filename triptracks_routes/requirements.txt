@@ -2,7 +2,15 @@ zappa
 flask
 flask-graphql
 graphene
+graphene_django
 geohash2
 gpxpy
 pykml
 bs4
+dj_database_url
+psycopg2-binary
+shortuuid
+jsonfield
+sendwithus
+-e git://github.com/joram/stravalib.git#egg=stravalib
+-e git://github.com/wckd/python-yr.git#egg=python-yr
