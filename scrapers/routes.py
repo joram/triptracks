@@ -14,6 +14,6 @@ if __name__ == "__main__":
     route = Route.from_data(data)
     route.lines = lines_from_gpx(data["gpx_filepath"])
     num_verts = sum(len(l) for l in route.lines)
-    print route.pub_id, num_verts, route.name
+    print(route.pub_id, num_verts, route.name)
     store.add(route)
 

@@ -25,11 +25,10 @@ class CachedRoutesStore(object):
       print(routes)
       return routes
 
-    full_routes = self.base_store.get(geohash)
+    print("building cache key")
     routes = []
-    for r in full_routes:
+    for r in self.base_store.get(geohash):
         routes.append({
-          "pub_id": r.pub_id,
           "name": r.name,
           "lines": r.vertices(self.max_vertices),
         })
