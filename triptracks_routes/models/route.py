@@ -32,9 +32,9 @@ ZOOM_LEVELS = {
 
 def get_cache(zoom=1):
     max_verts = ZOOM_LEVELS[zoom]
-    from stores.routes import RoutesStore
+    from stores.s3Routes import S3RoutesStore
     from stores.cached_routes import CachedRoutesStore
-    return CachedRoutesStore(max_verts, RoutesStore())
+    return CachedRoutesStore(max_verts, S3RoutesStore())
 
 
 class Route(graphene.ObjectType):
@@ -63,7 +63,7 @@ class Route(graphene.ObjectType):
     def __init__(self, lines, name=None, description=None, pub_id=None, geohash=None, zoom=None):
         super(Route, self).__init__()
         self.pub_id = pub_id
-        self.geohash = geohash
+        # self.geohash = geohash
         self.zoom = zoom
         self.name = name
         self.description = description
@@ -79,14 +79,14 @@ class Route(graphene.ObjectType):
           "name": self.name,
           "description": self.description,
           "pub_id": self.pub_id,
-          "gpx": self.gpx,
           "lines": self.lines,
         }
 
     def __str__(self):
         geohash=self.geohash()
         if geohash.endswith("000"):
-            geohash = self.gpx
+            # geohash = self.gpx
+            geohash = "unknown"
 
         return u"{uuid}[{name}]{geohash}".format(
             uuid=self.pub_id,

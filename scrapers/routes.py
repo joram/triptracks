@@ -2,9 +2,11 @@ import json
 from scrapers.trailpeak_details import ScrapeTrailPeakDetails
 from models.route import Route, lines_from_gpx
 from stores.routes import RoutesStore
+from stores.s3Routes import S3RoutesStore
 
 
-store = RoutesStore()
+# store = RoutesStore()
+store = S3RoutesStore()
 if __name__ == "__main__":
   s = ScrapeTrailPeakDetails()
   for data in s.run():
@@ -12,8 +14,9 @@ if __name__ == "__main__":
         continue
     data = json.loads(data)
     route = Route.from_data(data)
-    route.lines = lines_from_gpx(data["gpx_filepath"])
+    p = data["gpx_filepath"].replace("/mnt/c/Users/john/triptracks", ".")
+    route.lines = lines_from_gpx(p)
     num_verts = sum(len(l) for l in route.lines)
-    print(route.pub_id, num_verts, route.name)
-    store.add(route)
+    if num_verts > 0:
+      store.add(route)
 

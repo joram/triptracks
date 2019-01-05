@@ -12,5 +12,6 @@ psycopg2-binary
 shortuuid
 jsonfield
 sendwithus
+oauth2client
 -e git://github.com/joram/stravalib.git#egg=stravalib
 -e git://github.com/wckd/python-yr.git#egg=python-yr

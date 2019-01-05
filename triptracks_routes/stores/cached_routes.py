@@ -20,15 +20,13 @@ class CachedRoutesStore(object):
     if content is not None:
       content = json.loads(content)
       routes = [Route(pub_id=r["pub_id"], name=r["name"], lines=r["lines"]) for r in content]
-      for r in routes:
-        print(vars(r))
-      print(routes)
       return routes
 
     print("building cache key")
     routes = []
     for r in self.base_store.get(geohash):
         routes.append({
+          "pub_id": r.pub_id,
           "name": r.name,
           "lines": r.vertices(self.max_vertices),
         })
@@ -36,7 +34,9 @@ class CachedRoutesStore(object):
     return self.get(geohash)
 
   def _write_s3_content(self, key, content):
-    obj = self.client.put_object(Bucket=self.bucket, Key=key, Body=content)
+    s3 = boto3.resource('s3')
+    object = s3.Object(bucket_name=self.bucket, key=key)
+    object.put(Body=content)
 
   def _get_s3_content(self, key=''):
     try:

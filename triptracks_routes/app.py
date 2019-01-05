@@ -4,14 +4,14 @@ import json
 from flask import render_template, Flask, request, send_from_directory
 import geohash2
 from stores.cached_routes import CachedRoutesStore
-from stores.routes import RoutesStore
+from stores.s3Routes import S3RoutesStore
 from flask_graphql import GraphQLView
 from schema import schema
 app = Flask(__name__)
 app.debug = True
 app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=schema, graphiql=True))
 
-base_store = RoutesStore()
+base_store = S3RoutesStore()
 stores = {
   0: CachedRoutesStore(1, base_store),
   1: CachedRoutesStore(1, base_store),

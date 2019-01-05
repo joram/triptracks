@@ -21,6 +21,9 @@ class Plan(models.Model):
     start_datetime = models.DateTimeField(blank=True, null=True)
     end_datetime = models.DateTimeField(blank=True, null=True)
 
+    def resolve_user(self, info):
+        return User.objects.get(pub_id=self.user_pub_id)
+
     @property
     def route(self):
         return None

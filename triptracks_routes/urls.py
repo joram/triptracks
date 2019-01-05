@@ -20,14 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 admin.autodiscover()
 from graphene_django.views import GraphQLView
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
-    url(r'^graphql', GraphQLView.as_view(graphiql=True)),
+    url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     url(r'', include('apps.accounts.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.trips.urls')),
     url(r'', include('apps.integrations.urls')),
-    # url(r'^admin/', include(admin.site.urls)),
-    # (r'^search/', include('haystack.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

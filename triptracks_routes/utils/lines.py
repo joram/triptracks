@@ -21,8 +21,6 @@ def lines_from_gpx(filepath):
     with open(filepath) as f:
       gpx = gpxpy.parse(f)
   except Exception as e:
-    print(filepath)
-    print(e)
     return []
   lines = []
   for track in gpx.tracks:

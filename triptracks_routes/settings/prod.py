@@ -16,7 +16,7 @@ STRAVA_REFRESH_TOKEN = os.environ.get("TT_STRAVA_REFRESH_TOKEN")
 STRAVA_VERIFY_TOKEN = os.environ.get("TT_STRAVA_VERIFY_TOKEN")
 
 
-# DATABASES = {'default': dj_database_url.config(env="TT_DATABASE_URL")}
+DATABASES = {'default': dj_database_url.config(env="TT_DATABASE_URL")}
 # DATABASES["default"]["NAME"] = DATABASES["default"].get("NAME", "").rstrip("\r")
 # DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 # DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}

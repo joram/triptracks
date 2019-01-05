@@ -112,6 +112,5 @@ class BaseScraper(object):
             try:
                 yield self.get_content(url)
             except Exception as e:
-                print(e)
                 pass
 
