@@ -6,8 +6,22 @@ from graphene_django.types import DjangoObjectType
 
 
 class UserType(DjangoObjectType):
+  profile_image = graphene.String()
+  name = graphene.String()
+
+  def resolve_profile_image(self, info):
+    if self.google_credentials is None:
+      return None
+    return self.google_credentials.get("picture")
+
+  def resolve_name(self, info):
+    print(self.google_credentials)
+    if self.google_credentials is None:
+      return None
+    return self.google_credentials.get("name")
 
   class Meta:
+    exclude_fields = ('password', 'email', 'googleCredentials')
     model = User
 
 
@@ -15,18 +29,25 @@ class TripPlanType(DjangoObjectType):
   owner = graphene.Field(UserType)
   attendees = graphene.List(lambda: UserType)
 
+  @classmethod
+  def get_node(cls, id, info):
+    try:
+      post = cls._meta.model.objects.get(id=id)
+    except cls._meta.model.DoesNotExist:
+      return None
+
+    if post.published or info.context.user == post.owner:
+      return post
+    return None
+
   def resolve_owner(self, info, *args, **kwargs):
-    print(args)
-    print(kwargs)
-    print(dir(info.to_dict()))
-    print(vars(info))
     return User.objects.all()[0]
 
   def resolve_attendees(self, info):
     return User.objects.all()
 
   class Meta:
-        model = Plan
+    model = Plan
 
 
 class Query(graphene.ObjectType):
@@ -39,6 +60,8 @@ class Query(graphene.ObjectType):
     return get_cache(zoom).get(geohash)
 
   def resolve_trip_plans(self, info):
+    user = info.context.user
+    user.is_anonymous
     return Plan.objects.all()
 
   def resolve_trip_plan(self, info, pub_id):
