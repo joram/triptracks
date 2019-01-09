@@ -3,8 +3,9 @@ import uuid
 import random
 import graphene
 from utils.lines import lines_from_gpx
-from models.user import User
-
+from apps.accounts.models import User
+from django.conf import settings
+from schema import UserType
 ZOOM_LEVELS = {
     0: 1,
     1: 1,
@@ -32,23 +33,28 @@ ZOOM_LEVELS = {
 
 def get_cache(zoom=1):
     max_verts = ZOOM_LEVELS[zoom]
-    from stores.s3Routes import S3RoutesStore
-    from stores.cached_routes import CachedRoutesStore
+    from routes.stores import S3RoutesStore
+    from routes.stores import CachedRoutesStore
     return CachedRoutesStore(max_verts, S3RoutesStore())
 
 
 class Route(graphene.ObjectType):
+
     pub_id = graphene.ID()
+    owner_pub_id = graphene.String()
     name = graphene.String()
     geohash = graphene.String()
     zoom = graphene.Int()
     description = graphene.String()
     lines = graphene.JSONString()
-    owner = graphene.Field(User)
+    owner = graphene.Field(UserType)
     is_public = graphene.Boolean()
 
     def resolve_owner(self, info):
-        return User(pub_id="user_???", name="bob")
+        return User(pub_id=self.owner_pub_id)
+
+    def resolve_geohash(self, info):
+        return self._geohash()
 
     @classmethod
     def from_data(cls, data):
@@ -60,10 +66,10 @@ class Route(graphene.ObjectType):
         )
         return route
 
-    def __init__(self, lines, name=None, description=None, pub_id=None, geohash=None, zoom=None):
+    def __init__(self, lines, name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None):
         super(Route, self).__init__()
         self.pub_id = pub_id
-        # self.geohash = geohash
+        self.owner_pub_id = owner_pub_id
         self.zoom = zoom
         self.name = name
         self.description = description
@@ -79,13 +85,12 @@ class Route(graphene.ObjectType):
           "name": self.name,
           "description": self.description,
           "pub_id": self.pub_id,
-          "lines": self.lines,
+          "lines": self.vertices(max_vertices),
         }
 
     def __str__(self):
-        geohash=self.geohash()
+        geohash = self._geohash()
         if geohash.endswith("000"):
-            # geohash = self.gpx
             geohash = "unknown"
 
         return u"{uuid}[{name}]{geohash}".format(
@@ -97,8 +102,8 @@ class Route(graphene.ObjectType):
     def __unicode__(self):
         return self.__str__()
 
-    def geohash(self):
-        ((lat1, lng1), (lat2, lng2)) = self.bbox()
+    def _geohash(self):
+        (lat1, lng1), (lat2, lng2) = self.bbox()
         h1 = geohash2.encode(lat1, lng1)
         h2 = geohash2.encode(lat2, lng2)
         i = 0
@@ -127,7 +132,7 @@ class Route(graphene.ObjectType):
                 max_lat = max(max_lat, lat)
                 min_lng = min(min_lng, lng)
                 max_lng = max(max_lng, lng)
-        return ((min_lat, min_lng), (max_lat, max_lng))
+        return (min_lat, min_lng), (max_lat, max_lng)
 
     def vertices(self, max_verts=None):
         if self.lines is None or len(self.lines) == 0:
@@ -147,7 +152,7 @@ class Route(graphene.ObjectType):
     
     @property
     def static_tile_image_src(self):
-
+        # deprecated func
         path = "color:0x0000ff|weight:5"
         for p in self.vertices(30):
             path += "|%s,%s" % (p[1], p[0])

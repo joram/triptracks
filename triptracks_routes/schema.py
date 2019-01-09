@@ -1,28 +1,10 @@
 import graphene
-from models.route import Route, get_cache
-from apps.trips.models import Plan, TripAttendee
+from apps.accounts.schema.user import UserType
+from routes.models.route import get_cache
+from apps.trips.models import Plan
 from apps.accounts.models import User
 from graphene_django.types import DjangoObjectType
-
-
-class UserType(DjangoObjectType):
-  profile_image = graphene.String()
-  name = graphene.String()
-
-  def resolve_profile_image(self, info):
-    if self.google_credentials is None:
-      return None
-    return self.google_credentials.get("picture")
-
-  def resolve_name(self, info):
-    print(self.google_credentials)
-    if self.google_credentials is None:
-      return None
-    return self.google_credentials.get("name")
-
-  class Meta:
-    exclude_fields = ('password', 'email', 'googleCredentials')
-    model = User
+from routes.models.route import Route
 
 
 class TripPlanType(DjangoObjectType):
@@ -51,17 +33,23 @@ class TripPlanType(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
+
+  route = graphene.List(Route, pub_id=graphene.String())
   routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
   # users = graphene.List(UserType)
 
+  def resolve_route(self, info, pub_id):
+    return get_cache(0).get_by_pub_id(pub_id)
+
   def resolve_routes(self, info, geohash, zoom):
     return get_cache(zoom).get(geohash)
 
   def resolve_trip_plans(self, info):
-    user = info.context.user
-    user.is_anonymous
+    if info.context is not None:
+      user = info.context.user
+      user.is_anonymous
     return Plan.objects.all()
 
   def resolve_trip_plan(self, info, pub_id):

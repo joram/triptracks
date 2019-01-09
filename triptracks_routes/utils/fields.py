@@ -20,7 +20,7 @@ class ShortUUIDField(models.CharField):
 
         uuid = uuid[:self.max_length]
 
-        return unicode(uuid)
+        return uuid
 
     def get_default(self):
         uuid = self.create_uuid()

@@ -14,7 +14,7 @@ class CachedRoutesStore(object):
   
   def get(self, geohash):
     print("getting ", geohash)
-    from models.route import Route
+    from routes.models.route import Route
     path = os.path.join(self.base_path, "{}.json".format(geohash))
     content = self._get_s3_content(path)
     if content is not None:
@@ -32,6 +32,9 @@ class CachedRoutesStore(object):
         })
     self._write_s3_content(path, json.dumps(routes))
     return self.get(geohash)
+
+  def get_by_pub_id(self, pub_id):
+    return self.base_store.get_by_pub_id(pub_id)
 
   def _write_s3_content(self, key, content):
     s3 = boto3.resource('s3')

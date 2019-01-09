@@ -12,7 +12,7 @@ class User(AbstractBaseUser):
 
     objects = UserManager()
 
-    google_credentials = JSONField()
+    google_credentials = JSONField(null=True, blank=True)
     email = models.CharField(max_length=256, unique=True)
     is_admin = models.BooleanField(default=False)
     pub_id = ShortUUIDField(prefix="user", max_length=128)
@@ -35,6 +35,12 @@ class User(AbstractBaseUser):
         if self.google_credentials is None:
             return ""
         return self.google_credentials.get("short_name", self.email)
+
+    @property
+    def name(self):
+        if self.google_credentials is None:
+            return ""
+        return self.google_credentials.get("name", self.email)
 
     @property
     def is_staff(self):

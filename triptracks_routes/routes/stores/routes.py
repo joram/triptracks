@@ -1,6 +1,6 @@
 import os
 import json
-from models.route import Route
+from routes.models.route import Route
 
 
 class RoutesStore(object):
@@ -18,17 +18,19 @@ class RoutesStore(object):
         d = os.path.dirname(os.path.realpath(__file__))
         self.dir = os.path.join(d, "../../data/routes_store/")
         self.count = 0
-        pass
+        self.route_paths = {}
 
     def _path(self, geohash):
         return os.path.join(self.dir, "/".join(geohash))
 
     def add(self, route):
-        if route.geohash().endswith("000"):
+        if route._geohash().endswith("000"):
             return
         self.count += 1
-        path = self._path(route.geohash())
+        path = self._path(route._geohash())
         filepath = os.path.join(path, route.pub_id)+".json"
+
+        self.route_paths[route.pub_id] = filepath
 
         if not os.path.exists(path):
             os.makedirs(path)
@@ -61,6 +63,23 @@ class RoutesStore(object):
               lines=data["lines"],
               # gpx=data["gpx"],
             )
+
+    def get_by_pub_id(self, pub_id):
+        print(pub_id)
+        print(self.route_paths)
+        filepath = self.route_paths.get(pub_id)
+        if filepath is None:
+            return None
+
+        with open(filepath) as f:
+            content = f.read()
+        data = json.loads(content)
+        yield Route(
+            name=data["name"],
+            pub_id=data["pub_id"],
+            description=data["description"],
+            lines=data["lines"],
+        )
 
     @staticmethod
     def _parent_geohashes(geohash):

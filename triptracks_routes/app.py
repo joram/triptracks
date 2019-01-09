@@ -3,8 +3,8 @@ import os
 import json
 from flask import render_template, Flask, request, send_from_directory
 import geohash2
-from stores.cached_routes import CachedRoutesStore
-from stores.s3Routes import S3RoutesStore
+from routes.stores import CachedRoutesStore
+from routes.stores import S3RoutesStore
 from flask_graphql import GraphQLView
 from schema import schema
 app = Flask(__name__)

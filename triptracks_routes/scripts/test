@@ -1,0 +1,7 @@
+#!/bin/bash
+export DJANGO_SETTINGS_MODULE=settings.test
+export PYTHONPATH=$PWD
+
+rm db.sqlite3
+python ./manage.py migrate -v=0
+pytest -x

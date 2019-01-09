@@ -60,7 +60,7 @@ LOGGING = {
             'propagate': True,
         },
         'django.db.backends': {
-            'handlers': ['console'],
+            'handlers': ['null'],
             'propagate': False,
             'level':'DEBUG',
         },
