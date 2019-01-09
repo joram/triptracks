@@ -2,6 +2,8 @@
 export DJANGO_SETTINGS_MODULE=settings.test
 export PYTHONPATH=$PWD
 
+find . -name '*.pyc' -delete
+find . -name '*__pycache__' -delete
 rm db.sqlite3
 python ./manage.py migrate -v=0
-pytest -x
+pytest -x $@

@@ -28,5 +28,13 @@ urlpatterns = [
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.trips.urls')),
     url(r'', include('apps.integrations.urls')),
+    # url(r'^favicon.ico$',
+    #     RedirectView.as_view( # the redirecting function
+    #         url=staticfiles_storage.url('img/favicon.ico'), # converts the static directory + our favicon into a URL
+    #         # in my case, the result would be http://www.tumblingprogrammer.com/static/img/favicon.ico
+    #     ),
+    #     name="favicon" # name of our view
+    # ),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 

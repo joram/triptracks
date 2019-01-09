@@ -18,8 +18,6 @@ class PackingList(models.Model):
         total_kg = total_g/1000
         return "%.2fKg" % total_kg
 
-
-
     @property
     def items(self):
         pl_items = PackingListItem.objects.filter(packing_list_pub_id=self.pub_id)

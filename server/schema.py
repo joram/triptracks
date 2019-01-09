@@ -1,35 +1,10 @@
 import graphene
-from apps.accounts.schema.user import UserType
-from routes.models.route import get_cache
+from routes.stores import get_cache
 from apps.trips.models import Plan
-from apps.accounts.models import User
-from graphene_django.types import DjangoObjectType
 from routes.models.route import Route
-
-
-class TripPlanType(DjangoObjectType):
-  owner = graphene.Field(UserType)
-  attendees = graphene.List(lambda: UserType)
-
-  @classmethod
-  def get_node(cls, id, info):
-    try:
-      post = cls._meta.model.objects.get(id=id)
-    except cls._meta.model.DoesNotExist:
-      return None
-
-    if post.published or info.context.user == post.owner:
-      return post
-    return None
-
-  def resolve_owner(self, info, *args, **kwargs):
-    return User.objects.all()[0]
-
-  def resolve_attendees(self, info):
-    return User.objects.all()
-
-  class Meta:
-    model = Plan
+from apps.trips.schema import TripPlanType
+from apps.packing.schema import PackingListType
+from apps.packing.models import PackingList
 
 
 class Query(graphene.ObjectType):
@@ -38,7 +13,8 @@ class Query(graphene.ObjectType):
   routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
-  # users = graphene.List(UserType)
+  packing_lists = graphene.List(PackingListType)
+  packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
 
   def resolve_route(self, info, pub_id):
     return get_cache(0).get_by_pub_id(pub_id)
@@ -54,6 +30,12 @@ class Query(graphene.ObjectType):
 
   def resolve_trip_plan(self, info, pub_id):
     return Plan.objects.get(pub_id=pub_id)
+
+  def resolve_packing_lists(self, info):
+    return PackingList.objects.all()
+
+  def resolve_packing_list(self, info, pub_id):
+    return PackingList.objects.get(pub_id=pub_id)
 
 
 schema = graphene.Schema(query=Query)

@@ -1,7 +1,7 @@
 from routes.models.route import Route
+from apps.accounts.models import User
 import random
 import names
-import uuid
 import mock
 
 
@@ -11,9 +11,14 @@ class BaseFactory(object):
     self.random = random.Random()
     self.random.seed(seed)
     self.pub_id_prefix = pub_id_prefix
+    self.generated = 0
+    self.base_owner, _ = User.objects.get_or_create(email="original@owner.com", pub_id="user_route_system_owner")
+
 
   def pub_id(self):
-    return "{}_{}".format(self.pub_id_prefix, str(uuid.UUID(int=self.random.getrandbits(128))).replace("-", ""))
+    s = "{}_{}".format(self.pub_id_prefix, str(self.generated))
+    self.generated += 1
+    return s
 
 
   def name(self):
@@ -48,6 +53,7 @@ class RouteFactory(BaseFactory):
       description=self.description(),
       pub_id=self.pub_id(),
       zoom=self.random.randint(0, 20),
+      owner_pub_id=self.base_owner.pub_id,
     )
     return route
 

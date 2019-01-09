@@ -66,21 +66,10 @@ class Item(models.Model):
                 return v
 
         if self._weight is None:
+            if self.attributes == "":
+                return 0
             for key in self.attributes.keys():
                 if key.lower() == "weight":
                     self._weight = grams(self.attributes[key])
                     break
-
         return self._weight
-
-    @property
-    def json(self):
-        return {
-            'pub_id': self.pub_id,
-            'name': self.name,
-            'description': self.description,
-            'price': self.price,
-            'attributes': self.attributes,
-            'href': self.href,
-            'img_href': self.img_href,
-        }
