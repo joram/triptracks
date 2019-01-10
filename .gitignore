@@ -8,6 +8,7 @@ node_modules/*
 */generated-js/*
 */compiled-js/*
 data/*
+data*
 scripts/.*
 scripts/data*
 scripts/scrapers/*

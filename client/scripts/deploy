@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+npm run build
+aws s3 cp dist/favicon.ico s3://triptracks/client/
+aws s3 cp dist/index.html s3://triptracks/client/
+aws s3 cp dist/main.js s3://triptracks/client/
