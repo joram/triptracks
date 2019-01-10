@@ -1,9 +1,11 @@
 {
   "dev": {
+    "project_name": "triptracks",
     "s3_bucket": "triptracks-zappa",
     "aws_region": "us-west-2",
-    "app_function": "app.app",
-    "lets_encrypt_key": "s3://triptracks-zappa-secrets/le-account.key",
-    "domain": "app.triptracks.io"
+    "django_settings": "settings.prod",
+    "domain": "app.triptracks.io",
+    "remote_env": "s3://triptracks-zappa-secrets/secrets.json",
+    "certificate_arn": "arn:aws:acm:us-east-1:431568096872:certificate/89f1ef32-4d83-4687-8245-7b5dd7a477db"
   }
 }

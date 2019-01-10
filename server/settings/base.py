@@ -15,7 +15,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis',
+    # 'django.contrib.gis',
     'graphene_django',
     'apps.accounts',
     # 'apps.routes',
@@ -87,4 +87,5 @@ ALLOWED_HOSTS = [
     'triptracks.herokuapp.com',
     'localhost',
     '199.245.58.143',
+    'o5qrbmrckh.execute-api.us-west-2.amazonaws.com',
 ]

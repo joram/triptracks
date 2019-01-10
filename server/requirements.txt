@@ -1,6 +1,4 @@
 zappa
-flask
-flask-graphql
 graphene
 graphene_django
 geohash2

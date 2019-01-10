@@ -15,26 +15,20 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
-from django.conf import settings
-from django.conf.urls.static import static
-admin.autodiscover()
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
+import views as route_file_views
 
 urlpatterns = [
+    url(r'^$', route_file_views.home),
+    url(r'^favicon.ico$', route_file_views.favicon),
+    url(r'^index.html$', route_file_views.home),
+    url(r'^main.js$', route_file_views.home_js),
     url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     url(r'', include('apps.accounts.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.trips.urls')),
     url(r'', include('apps.integrations.urls')),
-    # url(r'^favicon.ico$',
-    #     RedirectView.as_view( # the redirecting function
-    #         url=staticfiles_storage.url('img/favicon.ico'), # converts the static directory + our favicon into a URL
-    #         # in my case, the result would be http://www.tumblingprogrammer.com/static/img/favicon.ico
-    #     ),
-    #     name="favicon" # name of our view
-    # ),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
 
