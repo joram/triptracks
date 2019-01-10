@@ -4,22 +4,11 @@ django.setup()
 import pprint
 import mock
 from schema import schema
-from routes.stores.routes import RoutesStore
-from routes.models.test_utils import RouteFactory
+from routes.models.test_utils import mock_get_cache
 from collections import OrderedDict
 from apps.trips.models import Plan, TripAttendee
 from apps.accounts.models import User
 from apps.packing.models import  PackingList, PackingListItem, Item
-
-
-
-def mock_get_cache(zoom):
-  route_store = RoutesStore()
-  route_store.dir = route_store.dir.replace("routes_store", "routes_store_test")
-  route_factory = RouteFactory()
-  for i in range(0, 10):
-    route_store.add(route_factory.get())
-  return route_store
 
 
 @mock.patch('schema.get_cache', mock_get_cache)
@@ -43,17 +32,17 @@ def test_single_route():
 
   expected = OrderedDict([('data',
       OrderedDict([('route',
-          [OrderedDict([('pubId',
-               'route_0'),
-              ('name', 'Christopher Dryer'),
-              ('lines',
-               '[[[48.4284, -123.3656, null], '
-               '[48.4285, -123.3656, null], '
-               '[48.4285, -123.3657, null]]]'),
-              ('owner',
-               OrderedDict([('pubId', None),
-                    ('profileImage',
-                     None)]))])])]))])
+          OrderedDict([('pubId', 'route_0'),
+             ('name', 'Christopher Dryer'),
+             ('lines',
+              '[[[48.4284, -123.3656, null], '
+              '[48.4285, -123.3656, null], '
+              '[48.4285, -123.3657, null]]]'),
+             ('owner',
+              OrderedDict([('pubId', None),
+                 ('profileImage',
+                  None)]))]))]))])
+  pprint.pprint(result.to_dict())
   assert result.to_dict() == expected
 
 

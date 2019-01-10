@@ -2,8 +2,11 @@ from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
-# from apps.routes.models import Route, TracksFile
+from routes.models.route import Route
+from routes.stores import S3RoutesStore
 from apps.accounts.models import User
+from utils.lines import lines_from_gpx_string
+from routes.stores import get_cache
 
 
 class StravaAccount(models.Model):
@@ -82,31 +85,33 @@ class StravaActivityManager(models.Manager):
 
     def get_or_create_from_strava_activity(self, strava_athlete_id, strava_activity_id, strava_activity_name, user_pub_id):
         qs = StravaActivity.objects.filter(strava_id=strava_activity_id)
-        # if qs.exists():
-        #     return qs[0], False
-        #
-        # account = StravaAccount.objects.get(strava_athlete_id=strava_athlete_id)
-        # gpx_data = account.get_client().get_gpx_file(strava_activity_id)
-        # if gpx_data is None:
-        #     print("no tracks")
-        #     return None, False
-        #
-        # try:
-        #     tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data,
-        #                                                              "{}.gpx".format(strava_activity_name))
-        #     route = Route.objects.create_from_route(tracks_file, strava_activity_name)
-        #     route.is_public = False
-        #     route.owner_pub_id = user_pub_id
-        #     route.save()
-        # except Exception as e:
-        #     print(e)
-        #     return None, False
-        #
-        # return StravaActivity.objects.create(
-        #     strava_account_pub_id=account.pub_id,
-        #     strava_id=strava_activity_id,
-        #     route_pub_id=route.pub_id
-        # ), True
+        if qs.exists():
+            return qs[0], False
+
+        account = StravaAccount.objects.get(strava_athlete_id=strava_athlete_id)
+        gpx_data = account.get_client().get_gpx_file(strava_activity_id)
+        if gpx_data is None:
+            print("no tracks")
+            return None, False
+
+        try:
+            lines = lines_from_gpx_string(gpx_data)
+            route = Route(
+                lines=lines,
+                owner_pub_id=user_pub_id,
+                name=strava_activity_name,
+                is_public=False,
+            )
+            get_cache(0).add(route)
+        except Exception as e:
+            print(e)
+            return None, False
+
+        return StravaActivity.objects.create(
+            strava_account_pub_id=account.pub_id,
+            strava_id=strava_activity_id,
+            route_pub_id=route.pub_id
+        ), True
 
 
 class StravaActivity(models.Model):
@@ -123,11 +128,13 @@ class StravaActivity(models.Model):
 
     @property
     def route(self):
-        # return Route.objects.get(pub_id=self.route_pub_id)
-        return None
+        return get_cache(0).get_by_pub_id(pub_id=self.route_pub_id)
 
     def __str__(self):
-        return u"strava_activity:{}".format(self.route.name)
+        s = self.pub_id
+        if self.route is not None:
+            s = self.route.name
+        return u"strava_activity:{}".format(s)
 
     def __unicode__(self):
         return self.__str__()

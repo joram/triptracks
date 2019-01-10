@@ -14,6 +14,11 @@ def geohash(bbox):
   return matching
 
 
+def lines_from_gpx_string(content):
+  gpx = gpxpy.parse(content)
+  return _lines_from_gpx(gpx)
+
+
 def lines_from_gpx(filepath):
   try:
     if filepath.endswith(".json"):
@@ -22,6 +27,10 @@ def lines_from_gpx(filepath):
       gpx = gpxpy.parse(f)
   except Exception as e:
     return []
+  return _lines_from_gpx(gpx)
+
+
+def _lines_from_gpx(gpx):
   lines = []
   for track in gpx.tracks:
     for segment in track.segments:

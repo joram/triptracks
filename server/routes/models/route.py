@@ -36,7 +36,7 @@ class Route(graphene.ObjectType):
         )
         return route
 
-    def __init__(self, lines, name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None):
+    def __init__(self, lines, name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None, is_public=False):
         super(Route, self).__init__()
         self.pub_id = pub_id
         self.owner_pub_id = owner_pub_id
@@ -44,6 +44,7 @@ class Route(graphene.ObjectType):
         self.name = name
         self.description = description
         self.lines = lines
+        self.is_public = is_public
 
         if self.pub_id is None:
           rd = random.Random()
@@ -56,6 +57,8 @@ class Route(graphene.ObjectType):
           "description": self.description,
           "pub_id": self.pub_id,
           "lines": self.vertices(max_vertices),
+          "owner_pub_id": self.owner_pub_id,
+          "is_public": self.is_public,
         }
 
     def __str__(self):

@@ -1,8 +1,21 @@
 from routes.models.route import Route
+from routes.stores.routes import RoutesStore
 from apps.accounts.models import User
 import random
 import names
 import mock
+
+route_store = None
+
+def mock_get_cache(zoom):
+  global route_store
+  if route_store is None:
+    route_store = RoutesStore()
+    route_store.dir = route_store.dir.replace("routes_store", "routes_store_test")
+    route_factory = RouteFactory()
+    for i in range(0, 10):
+      route_store.add(route_factory.get())
+  return route_store
 
 
 class BaseFactory(object):

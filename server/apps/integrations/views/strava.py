@@ -64,7 +64,6 @@ def webhooks(request):
 
     account = qs[0]
     activity = account.get_client().get_activity(object_id)
-
     qs = StravaActivity.objects.filter(strava_id=activity.id)
     if qs.exists():
         print("TODO: update activity")

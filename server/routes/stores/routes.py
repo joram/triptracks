@@ -24,6 +24,7 @@ class RoutesStore(object):
         return os.path.join(self.dir, "/".join(geohash))
 
     def add(self, route):
+        print("adding route ", route)
         if route._geohash().endswith("000"):
             return
         self.count += 1
@@ -65,8 +66,6 @@ class RoutesStore(object):
             )
 
     def get_by_pub_id(self, pub_id):
-        print(pub_id)
-        print(self.route_paths)
         filepath = self.route_paths.get(pub_id)
         if filepath is None:
             return None
@@ -74,12 +73,20 @@ class RoutesStore(object):
         with open(filepath) as f:
             content = f.read()
         data = json.loads(content)
-        yield Route(
+        return Route(
             name=data["name"],
             pub_id=data["pub_id"],
             description=data["description"],
             lines=data["lines"],
+            owner_pub_id=data.get("owner_pub_id"),
+            is_public=data.get("is_public", False)
         )
+
+    def delete(self, pub_id):
+        filepath = self.route_paths.get(pub_id)
+        if filepath is None:
+            return None
+        os.remove(filepath)
 
     @staticmethod
     def _parent_geohashes(geohash):

@@ -9,7 +9,7 @@ from apps.packing.models import PackingList
 
 class Query(graphene.ObjectType):
 
-  route = graphene.List(Route, pub_id=graphene.String())
+  route = graphene.Field(Route, pub_id=graphene.String())
   routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
