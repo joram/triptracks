@@ -16,7 +16,7 @@ export class Routes extends Component {
 
   getMoreRoutes(hash, zoom){
     let fetched_key = `${hash}_${zoom}`;
-    let url =  "http://localhost:8000/graphql"; //"https://app.triptracks.io/graphql";
+    let url =  "https://app.triptracks.io/graphql";
     if(this.fetched.indexOf(fetched_key) >= 0){
       console.log("already got");
       return
