@@ -20,4 +20,4 @@ STRAVA_VERIFY_TOKEN = os.environ.get(u"TT_STRAVA_VERIFY_TOKEN")
 DATABASES = {'default': dj_database_url.config(env=u"TT_DATABASE_URL")}
 
 DEBUG = False
-
+CORS_ORIGIN_ALLOW_ALL = DEBUG

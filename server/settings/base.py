@@ -22,6 +22,7 @@ INSTALLED_APPS = (
     'apps.packing',
     'apps.trips',
     'apps.integrations',
+    'corsheaders',
 )
 
 GRAPHENE = {'SCHEMA': 'schema.schema'}

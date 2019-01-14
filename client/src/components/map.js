@@ -1,36 +1,52 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
-import RouteContainer from "./route.js"
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+} from "react-google-maps";
+import Routes from "./routes.js"
+import Geohash from "latlon-geohash";
+
 
 export class MapContainer extends Component {
+
   constructor(props) {
     super(props);
-    this.state = {
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: {}
-    };
+    this.map = React.createRef();
+    this.routes = React.createRef();
   }
-  render() {
-    if (!this.props.google) {
-      return <div>Loading...</div>;
-    }
 
-    return (
-      <div
-        style={{
-          position: "relative",
-          height: "calc(100vh - 20px)"
-        }}
-      >
-        <Map style={{}} google={this.props.google} zoom={14}>
-        </Map>
-          <RouteContainer/>
-      </div>
-    );
+  _currentBboxGeohash() {
+    let ne = this.map.getBounds().getNorthEast();
+    let sw = this.map.getBounds().getSouthWest();
+    let h1 = Geohash.encode(ne.lat(), ne.lng());
+    let h2 = Geohash.encode(sw.lat(), sw.lng());
+
+    let h = "";
+    for (let i = 0; i < h1.length; i++) {
+      if (h1[i] !== h2[i])
+        break;
+      h += h1[i]
+    }
+    return h
+  }
+
+
+  onIdle(){
+    this.routes.current.getMoreRoutes(this._currentBboxGeohash(), this.map.getZoom())
+  }
+
+  render() {
+    return (<GoogleMap
+      ref={map => {this.map = map;}}
+      defaultZoom={13}
+      defaultCenter={{lat: 48.4284, lng: -123.3656}}
+      onIdle={this.onIdle.bind(this)}
+    >
+      <Routes ref={ this.routes } />
+    </GoogleMap>)
   }
 }
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g",
-  v: "3.30"
-})(MapContainer);
+
+const Map = withScriptjs(withGoogleMap(MapContainer))
+export default Map
