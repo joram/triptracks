@@ -4,14 +4,17 @@ This project is under development. The goal is to have a unified site to manage 
 ## Setup
 - pull the project: `git clone https://github.com/joram/triptracks.git`
 
-![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FTLmaK0%2Fgravizo%2Fmaster%2FREADME.md)
+![Alt text](https://g.gravizo.com/source/triptracks_tldr?https%3A%2F%2Fraw.githubusercontent.com%2Fjoram%2Ftriptracks%2Fmaster%2FREADME.md)
 <details> 
+<summary></summary>
+triptracks_tldr
   digraph G {
     React Client [shape=box];
     React Client -> GraphQL Lambda;
     GraphQL Lambda -> Django Models;
     GraphQL Lambda -> Geohash S3 Routes Store;
   }
+triptracks_tldr
 </details>
 
 ### pyenv
