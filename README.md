@@ -9,10 +9,10 @@ This project is under development. The goal is to have a unified site to manage 
 <summary></summary>
 triptracks_tldr
   digraph G {
-    React Client [shape=box];
-    React Client -> GraphQL Lambda;
-    GraphQL Lambda -> Django Models;
-    GraphQL Lambda -> Geohash S3 Routes Store;
+    "React Client";
+    "React Client" -> "GraphQL Lambda";
+    "GraphQL Lambda" -> "Django Models";
+    "GraphQL Lambda" -> "Geohash S3 Routes Store";
   }
 triptracks_tldr
 </details>
