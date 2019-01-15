@@ -1,8 +1,9 @@
 # Triptracks
 This project is under development. The goal is to have a unified site to manage trip plans and reports for outdoor trips.
 
-## Setup
-- pull the project: `git clone https://github.com/joram/triptracks.git`
+The high level architecture is:
+- A react client, that makes graphql calls to get its data from the server
+- A graphql server, running in lambda, backed by a postgres DB and a geohash S3 storage mechanism.
 
 ![Alt text](https://g.gravizo.com/source/triptracks_tldr?https%3A%2F%2Fraw.githubusercontent.com%2Fjoram%2Ftriptracks%2Fmaster%2FREADME.md)
 <details> 
@@ -11,13 +12,26 @@ triptracks_tldr
   digraph G {
     "React Client";
     "React Client" -> "GraphQL Lambda";
-    "GraphQL Lambda" -> "Django Models";
-    "GraphQL Lambda" -> "Geohash S3 Routes Store";
+    "GraphQL Lambda" -> "Django Models" [shape=cylinder];
+    "GraphQL Lambda" -> "Geohash S3 Routes Store"  [shape=cylinder];
   }
 triptracks_tldr
 </details>
 
-### pyenv
+## Client
+### environment setup
+```
+cd ./client
+npm install -g
+```
+### running
+```
+cd ./client
+npm run start
+```
+
+## Server
+### environment setup
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 - install python
     ```
@@ -26,18 +40,21 @@ triptracks_tldr
     pyenv activate tt
     pip install -r requirements.txt
     ```
-
-### secrets
-create the file `scripts/.env`
-inside it add:
+- create the file `scripts/.env` and inside it add:
+    ```
+    TT_GOOGLE_MAPS_API_KEY=...
+    TT_GOOGLE_CLIENT_ID=...
+    TT_DATABASE_URL=postgresql://docker:docker@localhost:25432/tripplanner
+    TT_STRAVA_CLIENT_SECRET=...
+    TT_STRAVA_ACCESS_TOKEN=...
+    TT_STRAVA_REFRESH_TOKEN=...
+    PORT=8000
+    ```
+### running
 ```
-TT_GOOGLE_MAPS_API_KEY=...
-TT_GOOGLE_CLIENT_ID=...
-TT_DATABASE_URL=postgresql://docker:docker@localhost:25432/tripplanner
-TT_STRAVA_CLIENT_SECRET=...
-TT_STRAVA_ACCESS_TOKEN=...
-TT_STRAVA_REFRESH_TOKEN=...
-PORT=8000
+source ./scripts/.env
+cd ./server
+./manage.py runserver
 ```
 
 #### notes:
