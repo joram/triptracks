@@ -3,10 +3,16 @@ This project is under development. The goal is to have a unified site to manage 
 
 ## Setup
 - pull the project: `git clone https://github.com/joram/triptracks.git`
-- install the project dependencies
-```bash
-sudo apt-get install libgdal-dev
-```
+
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FTLmaK0%2Fgravizo%2Fmaster%2FREADME.md)
+<details> 
+  digraph G {
+    React Client [shape=box];
+    React Client -> GraphQL Lambda;
+    GraphQL Lambda -> Django Models;
+    GraphQL Lambda -> Geohash S3 Routes Store;
+  }
+</details>
 
 ### pyenv
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
@@ -17,13 +23,6 @@ sudo apt-get install libgdal-dev
     pyenv activate tt
     pip install -r requirements.txt
     ```
-
-### More Setup
-- build the docker container `bash ./scripts/services/start`
-- migrate your database `./scripts/manage migrate`
-- run the server `./scripts/run`
-- (optional) load in some gpx files with `./scripts/load/routes` and `./scripts/load/items`
-- visit in the browser <a href="http://localhost:8000">localhost:8000</a>
 
 ### secrets
 create the file `scripts/.env`
