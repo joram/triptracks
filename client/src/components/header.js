@@ -37,7 +37,6 @@ class ProfileMenu extends React.Component {
   }
 
   loginSuccess(resp) {
-    console.log("successful login ", resp);
     this.setState({
       isLoggedIn: true,
       googleData: resp,

@@ -1,4 +1,4 @@
-from routes.stores.s3Routes import S3RoutesStore
+from routes.stores.s3_routes import S3RoutesStore
 from routes.stores.cached_routes import CachedRoutesStore
 
 ZOOM_LEVELS = {

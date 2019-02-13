@@ -21,16 +21,15 @@ export class MapContainer extends Component {
     this.toCenterOn = urlParams.get('route');
   }
 
-  centerOnRoute(){
+  async centerOnRoute(){
       let urlParams = new URLSearchParams(history.location.search);
       let pubId = urlParams.get('route');
       if(pubId===null){
         return
       }
       let hash = this._currentBboxGeohash();
-      let bbox = this.routes.current.getBounds(hash, pubId);
-      console.log("centering on ", hash, bbox);
-      this.map.fitBounds(hash, bbox);
+      let bbox = await this.routes.current.getBounds(hash, pubId);
+      this.map.fitBounds(bbox);
   }
 
   _currentBboxGeohash() {
@@ -52,7 +51,6 @@ export class MapContainer extends Component {
   onIdle(){
     this.routes.current.getMoreRoutes(this._currentBboxGeohash(), this.map.getZoom())
     if(this.toCenterOn !== null){
-      console.log("centering on ", this.toCenterOn);
       this.centerOnRoute();
       this.toCenterOn = null;
     }
