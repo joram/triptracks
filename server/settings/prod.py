@@ -21,3 +21,8 @@ DATABASES = {'default': dj_database_url.config(env=u"TT_DATABASE_URL")}
 
 DEBUG = False
 CORS_ORIGIN_ALLOW_ALL = DEBUG
+CORS_ORIGIN_WHITELIST = (
+    'http//:localhost:8000',
+    'http//:127.0.0.1:8000',
+    BASE_URL,
+)

@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import {Polyline} from "react-google-maps";
+import history from "../history";
 
-export class Route extends Component {
+export class TrailRoute extends Component {
   constructor(props) {
     super(props);
+    let lines = [];
+    if (this.props.data.lines !== undefined){
+      lines = JSON.parse(this.props.data.lines);
+    }
     this.state = {
       pubId: this.props.pubId,
-      lines: JSON.parse(this.props.data.lines),
+      lines: lines,
       zoom: this.props.zoom,
     }
+  }
+
+  clicked(){
+    console.log("map:", this.map)
+    history.push('/?route='+this.state.pubId);
   }
 
   render() {
@@ -22,6 +32,7 @@ export class Route extends Component {
           key={this.state.pubId}
           path={coordinates}
           geodesic={true}
+          onClick={this.clicked.bind(this)}
           options={{
             strokeColor: "#ff2527",
             strokeOpacity: 0.75,
@@ -34,4 +45,4 @@ export class Route extends Component {
 }
 
 
-export default Route;
+export default TrailRoute;

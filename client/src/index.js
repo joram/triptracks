@@ -1,25 +1,35 @@
+"use strict";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import Favicon from 'react-favicon';
 import Header from "./components/header";
-import Map from "./components/map";
+import Body from "./components/body"
 require('../assets/images/favicon.ico');
+require("babel-core/register");
+require("babel-polyfill");
 
 class Index extends React.Component {
-  render() {
-    const styles = {
-      width: window.innerWidth,
-      height: window.innerHeight-54
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      view: "home",
+    };
+  }
+
+  changeView(view){
+    if(view === 2){
+      this.setState({view: "settings"})
     }
+  }
+
+  render() {
     return (<div>
       <Favicon url="/favicon.ico"/>
-      <Header/>
-      <Map
-        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
-        loadingElement={<div style={styles} />}
-        containerElement={<div style={styles} />}
-        mapElement={<div style={styles} />}
-      />
+      <Header root={this} />
+      <Body view={this.state.view} history={history} />
     </div>)
   }
 }

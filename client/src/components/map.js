@@ -6,7 +6,7 @@ import {
 } from "react-google-maps";
 import Routes from "./routes.js"
 import Geohash from "latlon-geohash";
-
+import history from "../history";
 
 export class MapContainer extends Component {
 
@@ -14,6 +14,23 @@ export class MapContainer extends Component {
     super(props);
     this.map = React.createRef();
     this.routes = React.createRef();
+    history.listen((location, action) => {
+      this.centerOnRoute()
+    });
+    let urlParams = new URLSearchParams(history.location.search);
+    this.toCenterOn = urlParams.get('route');
+  }
+
+  centerOnRoute(){
+      let urlParams = new URLSearchParams(history.location.search);
+      let pubId = urlParams.get('route');
+      if(pubId===null){
+        return
+      }
+      let hash = this._currentBboxGeohash();
+      let bbox = this.routes.current.getBounds(hash, pubId);
+      console.log("centering on ", hash, bbox);
+      this.map.fitBounds(hash, bbox);
   }
 
   _currentBboxGeohash() {
@@ -34,6 +51,11 @@ export class MapContainer extends Component {
 
   onIdle(){
     this.routes.current.getMoreRoutes(this._currentBboxGeohash(), this.map.getZoom())
+    if(this.toCenterOn !== null){
+      console.log("centering on ", this.toCenterOn);
+      this.centerOnRoute();
+      this.toCenterOn = null;
+    }
   }
 
   render() {
@@ -48,5 +70,5 @@ export class MapContainer extends Component {
   }
 }
 
-const Map = withScriptjs(withGoogleMap(MapContainer))
+const Map = withScriptjs(withGoogleMap(MapContainer));
 export default Map

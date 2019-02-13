@@ -1,8 +1,15 @@
 import React from "react";
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem, Image} from "react-bootstrap";
-import { GoogleLogin } from 'react-google-login';
+import {Navbar, Nav, NavDropdown, MenuItem, Image} from "react-bootstrap";
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
-class MenuTitle extends React.Component {
+const PROFILE_MENU_ACTIONS = {
+  ROUTES: 0,
+  PLANS: 1,
+  SETTINGS: 2,
+  LOGOUT: 3,
+};
+
+class ProfileMenuTitle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +28,7 @@ class MenuTitle extends React.Component {
   }
 }
 
-class Menu extends React.Component {
+class ProfileMenu extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -29,9 +36,8 @@ class Menu extends React.Component {
     }
   }
 
-
   loginSuccess(resp) {
-    console.log("successful login ", resp)
+    console.log("successful login ", resp);
     this.setState({
       isLoggedIn: true,
       googleData: resp,
@@ -39,36 +45,42 @@ class Menu extends React.Component {
   }
 
   loginFailure(resp) {
-    console.log("failed login ",resp)
+    console.log("failed login ",resp);
     this.setState({isLoggedIn: false})
   }
 
   logoutSuccess(resp) {
-    console.log("logout success ",resp)
+    console.log("logout success ",resp);
     this.setState({isLoggedIn: false})
   }
 
   render() {
     if (this.state.isLoggedIn) {
       return (<Nav pullRight>
-        <NavDropdown eventKey={3} title={<MenuTitle
+        <NavDropdown eventKey={3} title={<ProfileMenuTitle
             name={this.state.googleData.profileObj.name}
             imageUrl={this.state.googleData.profileObj.imageUrl}
           />} id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}>Action</MenuItem>
-          <MenuItem eventKey={3.2}>Another action</MenuItem>
-          <MenuItem eventKey={3.3}>Something else here</MenuItem>
-          <MenuItem divider/>
-          <MenuItem eventKey={3.4}>Separated link</MenuItem>
+          <MenuItem eventKey={PROFILE_MENU_ACTIONS.ROUTES}>My Routes</MenuItem>
+          <MenuItem eventKey={PROFILE_MENU_ACTIONS.PLANS}>My Plans</MenuItem>
+          <MenuItem eventKey={PROFILE_MENU_ACTIONS.SETTINGS}>Settings</MenuItem>
+          <MenuItem eventKey={PROFILE_MENU_ACTIONS.LOGOUT}>
+            <GoogleLogout
+              buttonText="Logout"
+              onLogoutSuccess={this.logoutSuccess.bind(this)}
+              render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
+            ></GoogleLogout>
+          </MenuItem>
         </NavDropdown>
       </Nav>)
     }
     return (<Nav pullRight><GoogleLogin
-    clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
-    buttonText="Login"
-    onSuccess={this.loginSuccess.bind(this)}
-    onFailure={this.loginFailure.bind(this)}
-    onLogoutSuccess={this.logoutSuccess.bind(this)}
+      clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
+      buttonText="Login"
+      onSuccess={this.loginSuccess.bind(this)}
+      onFailure={this.loginFailure.bind(this)}
+      onLogoutSuccess={this.logoutSuccess.bind(this)}
+      isSignedIn={true}
     /></Nav>)
 
   }
@@ -78,9 +90,26 @@ class Menu extends React.Component {
 
 class Header extends React.Component {
 
+  constructor(props){
+    super(props);
+  }
+
+  menuSelect(eventKey) {
+    console.log("eventKey", eventKey);
+    if(eventKey === PROFILE_MENU_ACTIONS.LOGOUT){
+      console.log("logged out")
+      return
+    }
+    this.props.root.changeView(eventKey);
+  }
+
   render(){
     return (
-      <Navbar inverse style={{margin:0}}>
+      <Navbar
+        inverse
+        style={{margin:0}}
+        onSelect={this.menuSelect.bind(this)}
+      >
         <Navbar.Header>
           <Navbar.Brand style={{display: "flex", alignItems: "center"}} >
             <a href="#home">
@@ -89,7 +118,7 @@ class Header extends React.Component {
             </a>
           </Navbar.Brand>
         </Navbar.Header>
-        <Menu />
+        <ProfileMenu />
       </Navbar>)
   }
 }
