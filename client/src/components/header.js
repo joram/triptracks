@@ -59,10 +59,8 @@ class ProfileMenu extends React.Component {
         <NavDropdown eventKey={3} title={<ProfileMenuTitle
             name={this.state.googleData.profileObj.name}
             imageUrl={this.state.googleData.profileObj.imageUrl}
-            style={{
-              padding: 7
-            }}
-          />} id="basic-nav-dropdown">
+          />} id="basic-nav-dropdown"
+        >
           <MenuItem eventKey={PROFILE_MENU_ACTIONS.ROUTES}>My Routes</MenuItem>
           <MenuItem eventKey={PROFILE_MENU_ACTIONS.PLANS}>My Plans</MenuItem>
           <MenuItem eventKey={PROFILE_MENU_ACTIONS.SETTINGS}>Settings</MenuItem>
