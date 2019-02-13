@@ -19,8 +19,8 @@ export class Routes extends Component {
     this.state = {
       routeData: {},
     };
-    this.url = "http://127.0.0.1:8000/graphql";
-    // this.url = "https://app.triptracks.io/graphql";
+    // this.url = "http://127.0.0.1:8000/graphql";
+    this.url = "https://app.triptracks.io/graphql";
     this.fetched = [];
   }
 
