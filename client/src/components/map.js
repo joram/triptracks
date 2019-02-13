@@ -62,6 +62,9 @@ export class MapContainer extends Component {
       defaultZoom={13}
       defaultCenter={{lat: 48.4284, lng: -123.3656}}
       onIdle={this.onIdle.bind(this)}
+      defaultOptions={{
+        mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
+      }}
     >
       <Routes ref={ this.routes } />
     </GoogleMap>)
