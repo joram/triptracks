@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, NavDropdown, MenuItem, Image} from "react-bootstrap";
+import {Navbar, Nav, NavDropdown, MenuItem, Image, Form, FormControl, Button} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const PROFILE_MENU_ACTIONS = {
@@ -24,6 +24,18 @@ class ProfileMenuTitle extends React.Component {
         {this.state.name}
         <Image src={this.state.imageUrl} style={{width:35, marginLeft:5, padding:0, border:0}} thumbnail/>
       </span>
+    )
+  }
+}
+
+class RoutesSearch extends React.Component {
+  render() {
+    return (
+      <Nav>
+        <Form style={{padding:7}}>
+          <FormControl type="text" placeholder="Search Routes" className="mr-sm-2" />
+        </Form>
+      </Nav>
     )
   }
 }
@@ -90,14 +102,8 @@ class ProfileMenu extends React.Component {
 
 class Header extends React.Component {
 
-  constructor(props){
-    super(props);
-  }
-
   menuSelect(eventKey) {
-    console.log("eventKey", eventKey);
     if(eventKey === PROFILE_MENU_ACTIONS.LOGOUT){
-      console.log("logged out")
       return
     }
     this.props.root.changeView(eventKey);
@@ -105,20 +111,15 @@ class Header extends React.Component {
 
   render(){
     return (
-      <Navbar
-        inverse
-        style={{margin:0}}
-        onSelect={this.menuSelect.bind(this)}
-      >
-        <Navbar.Header>
-          <Navbar.Brand style={{display: "flex", alignItems: "center"}} >
-            <a href="#home">
-              Triptracks
-              <Image src="/favicon.ico" style={{width:35, marginTop: -7, float:"left", marginRight:5}} thumbnail/>
-            </a>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <ProfileMenu />
+      <Navbar inverse style={{margin:0}} onSelect={this.menuSelect.bind(this)}>
+        <Navbar.Brand>
+          <a href="#home">
+            Triptracks
+            <Image src="/favicon.ico" style={{width:35, marginTop: -7, float:"left", marginRight:5}} thumbnail/>
+          </a>
+        </Navbar.Brand>
+        <RoutesSearch/>
+        <ProfileMenu/>
       </Navbar>)
   }
 }

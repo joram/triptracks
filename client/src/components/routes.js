@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Cookies from "js-cookie";
 import TrailRoute from "./trailRoute.js"
-import history from "../history";
 
 function log_graphql_errors(data){
   if(data.errors !== undefined){
@@ -19,8 +17,10 @@ export class Routes extends Component {
     this.state = {
       routeData: {},
     };
-    // this.url = "http://127.0.0.1:8000/graphql";
     this.url = "https://app.triptracks.io/graphql";
+    if(window.location.hostname==="localhost"){
+      this.url = "http://127.0.0.1:8000/graphql";
+    }
     this.fetched = [];
   }
 
