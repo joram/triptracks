@@ -31,10 +31,8 @@ class ProfileMenuTitle extends React.Component {
 class RoutesSearch extends React.Component {
   render() {
     return (
-      <Nav>
-        <Form style={{padding:7}}>
-          <FormControl type="text" placeholder="Search Routes" className="mr-sm-2" />
-        </Form>
+      <Nav  style={{ paddingTop:"7px", paddingLeft:"25%" }}>
+        <FormControl type="text" placeholder="Search Routes" className="mr-sm-2"/>
       </Nav>
     )
   }
