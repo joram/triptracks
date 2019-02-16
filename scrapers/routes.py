@@ -1,7 +1,7 @@
 import json
 from scrapers.trailpeak_details import ScrapeTrailPeakDetails
-from routes.models.route import Route, lines_from_gpx
-from routes.stores import S3RoutesStore
+from apps.routes.models import Route, lines_from_gpx
+from apps.routes.stores import S3RoutesStore
 
 
 # store = RoutesStore()

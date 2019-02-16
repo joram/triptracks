@@ -54,7 +54,6 @@ class ProfileMenuTitle extends React.Component {
 class RouteSearchResults extends React.Component {
 
   render() {
-    console.log(this.props.results.length);
     if(this.props.results.length === 0) {
       return null
     }
@@ -126,10 +125,10 @@ class RoutesSearch extends React.Component {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors(data);
-      console.log(data.data);
       this.setState({
         results: data.data.routesSearch
       });
+      console.log(this.state)
     });
 
   }, 200);
