@@ -1,6 +1,6 @@
 import os
 import json
-from routes.models.route import Route
+from apps.routes.models import Route
 
 
 class RoutesStore(object):

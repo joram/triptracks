@@ -1,5 +1,5 @@
-from routes.models.route import Route
-from routes.stores.routes import RoutesStore
+from apps.routes import Route
+from apps.routes.stores import RoutesStore
 from apps.accounts.models import User
 import random
 import names

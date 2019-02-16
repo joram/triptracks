@@ -1,12 +1,9 @@
 import json
 import mock
-import datetime
-from routes.models.route import Route
-from routes.models.test_utils import mock_get_cache
+from apps.routes import mock_get_cache
 from apps.accounts.models import User
 from apps.integrations.views.strava import webhooks as strava_webhook_view
 from apps.integrations.models.strava import StravaAccount, StravaActivity
-from stravalib.model import Activity
 
 
 def mock_get_activity(self, activity_id):

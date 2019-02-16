@@ -2,11 +2,10 @@ from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
-from routes.models.route import Route
-from routes.stores import S3RoutesStore
+from apps.routes.models import Route
 from apps.accounts.models import User
 from utils.lines import lines_from_gpx_string
-from routes.stores import get_cache
+from apps.routes.stores import get_cache
 
 
 class StravaAccount(models.Model):

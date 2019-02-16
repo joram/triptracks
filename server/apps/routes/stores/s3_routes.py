@@ -1,4 +1,4 @@
-from routes.models.route import Route
+from apps.routes.models import Route
 import os
 import boto3
 import json

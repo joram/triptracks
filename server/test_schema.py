@@ -4,7 +4,7 @@ django.setup()
 import pprint
 import mock
 from schema import schema
-from routes.models.test_utils import mock_get_cache
+from apps.routes import mock_get_cache
 from collections import OrderedDict
 from apps.trips.models import Plan, TripAttendee
 from apps.accounts.models import User

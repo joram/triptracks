@@ -1,8 +1,8 @@
 import graphene
 from apps.accounts.schema import UserType
 from apps.trips.models import Plan, TripAttendee
-from routes.models.route import Route
-from routes.stores import get_cache
+from apps.routes import Route
+from apps.routes.stores import get_cache
 from apps.accounts.models import User
 from apps.packing.schema import PackingListType, PackingList
 from graphene_django.types import DjangoObjectType

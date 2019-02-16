@@ -1,7 +1,7 @@
 import graphene
-from routes.stores import get_cache
+from apps.routes.stores import get_cache
 from apps.trips.models import Plan
-from routes.models.route import Route
+from apps.routes import Route
 from apps.trips.schema import TripPlanType
 from apps.packing.schema import PackingListType
 from apps.packing.models import PackingList
