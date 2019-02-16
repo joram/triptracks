@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, NavDropdown, MenuItem, Image, Form, FormControl, Button} from "react-bootstrap";
+import {Navbar, Nav, NavDropdown, MenuItem, Image, Form, FormControl, Button, Dropdown} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const PROFILE_MENU_ACTIONS = {
@@ -9,12 +9,35 @@ const PROFILE_MENU_ACTIONS = {
   LOGOUT: 3,
 };
 
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+function log_graphql_errors(data){
+  if(data.errors !== undefined){
+    data.errors.forEach(function(err){
+      console.log("error: ",err.message);
+    });
+  }
+}
+
 class ProfileMenuTitle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: this.props.name,
-      imageUrl: this.props.imageUrl
+      imageUrl: this.props.imageUrl,
     }
   }
 
@@ -28,12 +51,106 @@ class ProfileMenuTitle extends React.Component {
   }
 }
 
+class RouteSearchResults extends React.Component {
+
+  render() {
+    console.log(this.props.results.length);
+    if(this.props.results.length === 0) {
+      return null
+    }
+
+    let result_lis = this.props.results.map((result) =>
+      <li key={result.pubId}>{result.name}</li>
+    );
+    return (
+      <div style={{
+        position: "absolute",
+        zIndex: 99,
+        color: "#33",
+        backgroundColor: "white",
+        width: "300px",
+        marginTop:"34px",
+      }} className="rounded-bottom">
+      <ul>
+        {result_lis}
+      </ul>
+      </div>
+    )
+  }
+}
+
 class RoutesSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: [],
+    }
+
+    this.url = "https://app.triptracks.io/graphql";
+    if(window.location.hostname==="localhost"){
+      this.url = "http://127.0.0.1:8000/graphql";
+    }
+
+  }
+
+  search = debounce(function (searchtext){
+    console.log("searching for ", searchtext);
+
+    // cleared search
+    if(searchtext === ""){
+      this.setState({
+        results: []
+      });
+      return
+    }
+
+    let query = `
+      query {
+        routesSearch(searchText:"${searchtext}"){
+          pubId
+          name
+        }
+      }
+    `;
+
+    let body = JSON.stringify({query});
+    return fetch(this.url, {
+      method: 'POST',
+      mode: "cors",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: body
+    })
+    .then(r => r.json())
+    .then(data => {
+      log_graphql_errors(data);
+      console.log(data.data);
+      this.setState({
+        results: data.data.routesSearch
+      });
+    });
+
+  }, 200);
+
+  handleChange(e){
+    this.search(e.target.value);
+  }
+
   render() {
     return (
-      <Nav  style={{ paddingTop:"7px", paddingLeft:"25%" }}>
-        <FormControl type="text" placeholder="Search Routes" className="mr-sm-2"/>
-      </Nav>
+      <div style={{ paddingTop:"7px", paddingLeft:"25%", width:"300px", float:"left"}}>
+          <FormControl
+            style={{ width:"300px", float:"left"}}
+            type="text"
+            placeholder="Search Routes"
+            className="mr-sm-2"
+            id="routes_search"
+            onChange={this.handleChange.bind(this)}
+          />
+          <RouteSearchResults results={this.state.results}/>
+      </div>
     )
   }
 }

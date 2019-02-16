@@ -11,6 +11,7 @@ class Query(graphene.ObjectType):
 
   route = graphene.Field(Route, pub_id=graphene.String())
   routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
+  routes_search = graphene.List(Route, search_text=graphene.String())
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
   packing_lists = graphene.List(PackingListType)
@@ -21,6 +22,13 @@ class Query(graphene.ObjectType):
 
   def resolve_routes(self, info, geohash, zoom):
     return get_cache(zoom).get(geohash)
+
+  def resolve_routes_search(self, info, search_text):
+    print(f"searching for {search_text}")
+    return [get_cache(0).get_by_pub_id(pub_id) for pub_id in [
+      "route_18be4c4655534e879399aff2b092d56c",
+      "route_ecca0aac862ea29f8d0f06d4a1dcdc61",
+    ]]
 
   def resolve_trip_plans(self, info):
     if info.context is not None:
