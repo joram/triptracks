@@ -14,7 +14,7 @@ class CachedRoutesStore(object):
   
   def get(self, geohash):
     print("getting ", geohash)
-    from apps.routes import Route
+    from apps.routes.models import Route
     path = os.path.join(self.base_path, "{}.json".format(geohash))
     content = self._get_s3_content(path)
     if content is not None:

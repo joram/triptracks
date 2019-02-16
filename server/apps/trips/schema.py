@@ -1,7 +1,7 @@
 import graphene
 from apps.accounts.schema import UserType
 from apps.trips.models import Plan, TripAttendee
-from apps.routes import Route
+from apps.routes.models import Route
 from apps.routes.stores import get_cache
 from apps.accounts.models import User
 from apps.packing.schema import PackingListType, PackingList

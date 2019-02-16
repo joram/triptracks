@@ -10,6 +10,7 @@ class S3RoutesStore(object):
     self.bucket = "triptracks"
     self.base_path = "routes/raw"
     self.manifiest_filename = "manifest.json"
+    self._manifest = None
 
   def get(self, geohash):
     for key in self._get_matching_s3_keys(self._path(geohash)):
@@ -23,10 +24,14 @@ class S3RoutesStore(object):
       )
       yield route
 
+  def get_manifest(self):
+    if self._manifest is None:
+      manifest = self._get_s3_content(os.path.join(self.base_path, self.manifiest_filename))
+      self._manifest = json.loads(manifest)
+    return self._manifest
+
   def get_by_pub_id(self, pub_id):
-    manifest = self._get_s3_content(os.path.join(self.base_path, self.manifiest_filename))
-    manifest = json.loads(manifest)
-    geohash = manifest.get(pub_id)
+    geohash = self.get_manifest().get(pub_id)
     for route in self.get(geohash):
       if route.pub_id == pub_id:
         return route
