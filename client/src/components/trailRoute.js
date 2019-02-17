@@ -17,7 +17,6 @@ export class TrailRoute extends Component {
   }
 
   clicked(){
-    console.log("map:", this.map)
     history.push('/?route='+this.state.pubId);
   }
 

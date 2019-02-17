@@ -1,6 +1,8 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown, MenuItem, Image, Form, FormControl, Button, Dropdown} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import Map from './map.js';
+import history from "../history";
 
 const PROFILE_MENU_ACTIONS = {
   ROUTES: 0,
@@ -51,6 +53,24 @@ class ProfileMenuTitle extends React.Component {
   }
 }
 
+class RouteSearchResult extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <i onClick={this.handleClick.bind(this)} >{this.props.name}</i>
+        <br/>
+      </div>
+    )
+  }
+
+  handleClick(e){
+    history.push('/?route='+this.props.pubId);
+  }
+
+
+}
+
 class RouteSearchResults extends React.Component {
 
   render() {
@@ -59,7 +79,7 @@ class RouteSearchResults extends React.Component {
     }
 
     let result_lis = this.props.results.map((result) =>
-      <li key={result.pubId}>{result.name}</li>
+      <RouteSearchResult key={result.pubId}  pubId={result.pubId} name={result.name} />
     );
     return (
       <div style={{
