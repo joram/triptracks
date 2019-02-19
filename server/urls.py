@@ -18,13 +18,15 @@ from django.conf.urls import include, url
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 import views as route_file_views
+from utils.decorators import timed_calls
+
 
 urlpatterns = [
     url(r'^$', route_file_views.home),
     url(r'^favicon.ico$', route_file_views.favicon),
     url(r'^index.html$', route_file_views.home),
     url(r'^main.js$', route_file_views.home_js),
-    url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    url(r'^graphql', timed_calls(csrf_exempt(GraphQLView.as_view(graphiql=True)))),
     url(r'', include('apps.accounts.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.trips.urls')),

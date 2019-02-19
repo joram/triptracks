@@ -71,7 +71,7 @@ export class Routes extends Component {
     this.fetched.push(fetched_key);
 
     let query = `
-      query {
+      query get_single_route {
         route(pubId:"${pubId}"){
           pubId
           name
@@ -119,7 +119,7 @@ export class Routes extends Component {
     this.fetched.push(fetched_key);
 
     let query = `
-      query {
+      query get_more_routes {
         routes(geohash:"${hash}", zoom:${zoom}){
           pubId
           name

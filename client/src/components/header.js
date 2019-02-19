@@ -124,7 +124,7 @@ class RoutesSearch extends React.Component {
     }
 
     let query = `
-      query {
+      query route_search {
         routesSearch(searchText:"${searchtext}"){
           pubId
           name
