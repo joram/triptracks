@@ -3,6 +3,9 @@ from apps.accounts.models import User
 import datetime
 from functools import wraps
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class UnnamedGraphqlQueryException(Exception):
@@ -25,7 +28,7 @@ def timed_calls(view_func):
         end = datetime.datetime.now()
         delta = end - start
 
-        print(f"'{name}' took {delta.microseconds/1000}ms")
+        logger.info(f"'{name}' took {delta.microseconds/1000}ms")
         return resp
 
     return wraps(view_func)(wrapped_view)

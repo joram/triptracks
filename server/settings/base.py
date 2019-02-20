@@ -51,22 +51,28 @@ LOGGING = {
         },
         'null': {
             'level': 'DEBUG',
-            'class':'logging.NullHandler',
+            'class': 'logging.NullHandler',
+        },
+        'papertrail': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.SysLogHandler',
+            'formatter': 'simple',
+            'address': ('logs3.papertrailapp.com', 45905)
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],
+            'handlers': ['papertrail', 'console'],
             'level': 'DEBUG',
             'propagate': True,
         },
         'django.db.backends': {
             'handlers': ['null'],
             'propagate': False,
-            'level':'DEBUG',
+            'level': 'DEBUG',
         },
         'django.request': {
-            'handlers': ['console'],
+            'handlers': ['papertrail', 'console'],
             'level': 'DEBUG',
             'propagate': True,
         },
@@ -80,13 +86,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_ROUTE)
 import re
 from django.template import base
 base.tag_re = re.compile(base.tag_re.pattern, re.DOTALL)
-# from django.template.context_processors import request
-# TEMPLATES[0]["OPTIONS"]["context_processors"] += ""
 
 ALLOWED_HOSTS = [
     'app.triptracks.io',
-    'triptracks.herokuapp.com',
     'localhost',
-    '199.245.58.143',
-    'o5qrbmrckh.execute-api.us-west-2.amazonaws.com',
 ]
