@@ -44,6 +44,7 @@ export class MapContainer extends Component {
         break;
       h += h1[i]
     }
+    console.log(h1, h2, h);
     return h
   }
 
@@ -66,7 +67,7 @@ export class MapContainer extends Component {
         mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
       }}
     >
-      <Routes ref={ this.routes } />
+      <Routes ref={ this.routes }/>
     </GoogleMap>)
   }
 }
