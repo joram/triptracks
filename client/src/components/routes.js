@@ -185,7 +185,7 @@ export class RoutesContainer extends Component {
   }
 
   processNewRoutes(data, hash, zoom){
-    if (data.data.routes === undefined){
+    if (data.data === undefined || data.data.routes === undefined){
       return
     }
 
