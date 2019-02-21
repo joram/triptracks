@@ -11,6 +11,7 @@ export class TrailRoute extends Component {
       lines: {},
       zoom: this.props.zoom,
       bbox: undefined,
+      previous_zoom: undefined,
     };
     this.addNewData()
   }
@@ -84,9 +85,10 @@ export class TrailRoute extends Component {
     }
     let a = this.state.lines[this.props.zoom];
     if(a !== undefined){
+      this.previous_zoom = this.props.zoom;
       return a
     }
-    a = this.state.lines[this.curr_zoom];
+    a = this.state.lines[this.previous_zoom];
     if(a !== undefined){
       return a
     }

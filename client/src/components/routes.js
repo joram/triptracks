@@ -167,7 +167,7 @@ export class RoutesContainer extends Component {
     `;
 
     let body = JSON.stringify({query});
-
+    console.log(`getting more routes ${hash} ${zoom}`);
     fetch(this.url, {
       method: 'POST',
       mode: "cors",
