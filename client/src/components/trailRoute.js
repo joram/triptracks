@@ -59,7 +59,16 @@ export class TrailRoute extends Component {
     if(this.state.lines[this.props.zoom] !== undefined) {
       this.curr_zoom = this.props.zoom
     }
-    return this.state.lines[this.curr_zoom];
+    let a = this.state.lines[this.props.zoom];
+    if(a !== undefined){
+      return a
+    }
+    a = this.state.lines[this.curr_zoom];
+    if(a !== undefined){
+      return a
+    }
+    console.log("had no route for "+this.state.pubId, "at zoom", this.curr_zoom);
+    return null;
   }
 }
 

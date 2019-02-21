@@ -28,34 +28,41 @@ export class RoutesContainer extends Component {
       this.url = "http://127.0.0.1:8000/graphql";
     }
 
+    history.listen((location, action) => {
+      this.centerOnRoute()
+    });
+
+    let urlParams = new URLSearchParams(history.location.search);
+    this.to_center_on = urlParams.get('route');
     this.map = React.createRef();
     this.to_process = {};
     this.routes_at_hash = {};
     this.first = true;
   }
 
-  async getRouteData(hash, pubId){
-    if (this.state.routeData.length === 0){
-      await this.getRoute(hash, pubId, 5)
-    }
-
-    let zoom = Object.keys(this.state.routeData)[0];
-    if(zoom === null){
-      await this.getRoute(hash, pubId, zoom)
-    }
-
-    if (
-      this.state.routeData[zoom] === undefined ||
-      this.state.routeData[zoom][pubId] === undefined
-    ){
-      return await this.getRoute(hash, pubId, zoom);
-    }
-
-    return this.state.routeData[zoom][pubId];
-  }
+  // async getRouteData(hash, pubId){
+  //   if (this.state.routeData.length === 0){
+  //     await this.getRoute(hash, pubId, 5)
+  //   }
+  //
+  //   let zoom = Object.keys(this.state.routeData)[0];
+  //   if(zoom === null){
+  //     await this.getRoute(hash, pubId, zoom)
+  //   }
+  //
+  //   if (
+  //     this.state.routeData[zoom] === undefined ||
+  //     this.state.routeData[zoom][pubId] === undefined
+  //   ){
+  //     return await this.getRoute(hash, pubId, zoom);
+  //   }
+  //
+  //   return this.state.routeData[zoom][pubId];
+  // }
 
   async getBounds(hash, pubId){
-    let data = await this.getRouteData(hash, pubId);
+    let data = await this.getRoute(hash, pubId);
+    console.log("data for getBounds", data);
     let lines = [];
     if(data !== undefined && data.lines !== undefined){
       lines = JSON.parse(data.lines);
@@ -75,9 +82,6 @@ export class RoutesContainer extends Component {
 
   async getRoute(hash, pubId, zoom){
     let fetched_key = `${hash}_${zoom}`;
-    if(this.state.fetched.indexOf(fetched_key) >= 0){
-      return
-    }
     this.state.fetched.push(fetched_key);
 
     let query = `
@@ -106,7 +110,9 @@ export class RoutesContainer extends Component {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors(data);
-      return this.processNewRoute(data.data.route, hash, zoom)
+      this.processNewRoute(data.data.route, hash, zoom);
+      console.log("data in getRoute:", data);
+      return data.data.route;
     });
   }
 
@@ -202,6 +208,7 @@ export class RoutesContainer extends Component {
     }
     let hash = this._currentBboxGeohash();
     let bbox = await this.getBounds(hash, pubId);
+    console.log("centering on ",hash, pubId, bbox);
     this.map.fitBounds(bbox);
   }
 
@@ -222,9 +229,9 @@ export class RoutesContainer extends Component {
 
   onIdle(){
     this.getMoreRoutes(this._currentBboxGeohash(), this.map.getZoom())
-    if(this.toCenterOn !== null){
+    if(this.to_center_on !== null){
       this.centerOnRoute();
-      this.toCenterOn = null;
+      this.to_center_on = null;
     }
   }
 
@@ -267,47 +274,3 @@ const Routes = withScriptjs(withGoogleMap(RoutesContainer));
 
 export default Routes;
 
-
-
-
-  //   let routes = [];
-  //
-  //   this.to_process.forEach(function (routes_blob){
-  //     let routes_data = routes_blob.data;
-  //     let hash = routes_blob.hash;
-  //     let zoom = routes_blob.zoom;
-  //     routes_data.data.routes.forEach(function(route_data){
-  //
-  //       routes.push(<TrailRoute
-  //         pubId={route_data.pubId}
-  //         key={route_data.pubId}
-  //         zoom={zoom}
-  //         data={route_data}
-  //       />);
-  //
-  //       // store geohash
-  //       if(this.state.routesInGeohash[hash] === undefined){
-  //         this.state.routesInGeohash[hash] = {};
-  //       }
-  //       if(this.state.routesInGeohash[hash][zoom] === undefined){
-  //         this.state.routesInGeohash[hash][zoom] = [];
-  //       }
-  //       if(this.state.routesInGeohash[hash][zoom].indexOf(route_data.pubId) === -1){
-  //         this.state.routesInGeohash[hash][zoom].push(route_data.pubId);
-  //       }
-  //     }.bind(this));
-  //   }.bind(this));
-  //
-  //
-  //   let hash = this.curr_hash;
-  //   let zoom = this.curr_zoom;
-  //   if(this.state.routesInGeohash[hash] === undefined){return null}
-  //   if(this.state.routesInGeohash[hash][zoom] === undefined){return null}
-  //
-  //   this.state.routesInGeohash[hash][zoom].forEach(function(pubId){
-  //     routes.push(<TrailRoute key={pubId} pubId={pubId} zoom={zoom} />)
-  //   });
-  //   console.log("rendering "+routes.length+" routes");
-  //   return routes;
-  // }
-  //
