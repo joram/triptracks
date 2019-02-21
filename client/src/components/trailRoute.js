@@ -10,6 +10,7 @@ export class TrailRoute extends Component {
       pubId: this.props.pubId,
       lines: {},
       zoom: this.props.zoom,
+      bbox: undefined,
     };
     this.addNewData()
   }
@@ -27,12 +28,16 @@ export class TrailRoute extends Component {
     let lines = JSON.parse(data.lines);
 
     let polyLines = [];
+    let bounds = new google.maps.LatLngBounds();
     Object.keys(lines).map(i => {
       let coordinates = [];
       Object.keys(lines[i]).map(j => {
-        coordinates.push(
-          {lat: lines[i][j][0], lng: lines[i][j][1]}
-        )
+        let coord = {lat: lines[i][j][0], lng: lines[i][j][1]};
+        coordinates.push(coord);
+        if(this.state.bbox === undefined){
+          bounds.extend(new google.maps.LatLng(coord));
+        }
+
       });
       polyLines.push(<Polyline
         key={this.state.pubId}
@@ -47,6 +52,9 @@ export class TrailRoute extends Component {
       />);
     });
 
+    if(this.state.bbox === undefined) {
+      this.state.bbox = bounds;
+    }
     this.state.lines[zoom] = polyLines;
   }
 
@@ -54,8 +62,23 @@ export class TrailRoute extends Component {
     history.push('/?route='+this.state.pubId);
   }
 
+  isVisible() {
+    let c1 = this.state.bbox.getNorthEast();
+    let c2 = this.state.bbox.getSouthWest();
+
+    let map = this.props.map;
+    let view_bbox = map.getBounds();
+    return view_bbox.contains(c1) || view_bbox.contains(c2);
+  }
+
+
   render() {
     this.addNewData();
+
+    if(!this.isVisible()){
+      return null;
+    }
+
     if(this.state.lines[this.props.zoom] !== undefined) {
       this.curr_zoom = this.props.zoom
     }

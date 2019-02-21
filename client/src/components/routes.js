@@ -111,7 +111,6 @@ export class RoutesContainer extends Component {
     .then(data => {
       log_graphql_errors(data);
       this.processNewRoute(data.data.route, hash, zoom);
-      console.log("data in getRoute:", data);
       return data.data.route;
     });
   }
@@ -149,12 +148,10 @@ export class RoutesContainer extends Component {
   getMoreRoutes(hash, zoom){
     let fetched_key = `${hash}_${zoom}`;
     if(this.state.fetched.indexOf(fetched_key) !== -1){
-      console.log("have cached routes at "+fetched_key);
       this.forceUpdate();
       return
     }
     this.state.fetched.push(fetched_key);
-    console.log("getting routes at zoom "+fetched_key+"\t"+this.state.fetched);
 
     let query = `
       query get_more_routes {
@@ -196,7 +193,6 @@ export class RoutesContainer extends Component {
       this.processNewRoute(route, hash, zoom);
     }.bind(this));
 
-    console.log("got "+data.data.routes.length+" routes at zoom "+zoom);
     this.forceUpdate();
   }
 
@@ -245,7 +241,13 @@ export class RoutesContainer extends Component {
       this.routes_at_hash[this.hash()].forEach(function(pubId){
         if(route_pubIds.indexOf(pubId) === -1) {
           let new_data = this.to_process[pubId];
-          routes.push(<TrailRoute pubId={pubId} key={pubId} newData={new_data} zoom={this.zoom()}/>);
+          routes.push(<TrailRoute
+            pubId={pubId}
+            key={pubId}
+            newData={new_data}
+            zoom={this.zoom()}
+            map={this.map}
+          />);
           route_pubIds.push(pubId);
         }
       }.bind(this));

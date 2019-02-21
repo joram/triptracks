@@ -21,6 +21,7 @@ class Query(graphene.ObjectType):
     return get_cache(0).get_by_pub_id(pub_id)
 
   def resolve_routes(self, info, geohash, zoom):
+    print(f"getting {geohash}::{zoom}")
     return get_cache(zoom).get(geohash)
 
   def resolve_routes_search(self, info, search_text, limit=10):
