@@ -32,33 +32,26 @@ export class RoutesContainer extends Component {
       this.centerOnRoute()
     });
 
+    this.map_center = {lat: 48.4284, lng: -123.3656};
     let urlParams = new URLSearchParams(history.location.search);
-    this.to_center_on = urlParams.get('route');
+    let bbox = urlParams.get('bbox');
+    if(bbox !== undefined){
+      let parts = bbox.split(",");
+      let n = parseFloat(parts[0]);
+      let e = parseFloat(parts[1]);
+      let s = parseFloat(parts[2]);
+      let w = parseFloat(parts[3]);
+      let center_lat = (e+w)/2;
+      let center_lng = (n+s)/2;
+      this.map_center = {lat: center_lat, lng: center_lng};
+    }
+
     this.map = React.createRef();
     this.to_process = {};
     this.routes_at_hash = {};
     this.first = true;
   }
 
-  // async getRouteData(hash, pubId){
-  //   if (this.state.routeData.length === 0){
-  //     await this.getRoute(hash, pubId, 5)
-  //   }
-  //
-  //   let zoom = Object.keys(this.state.routeData)[0];
-  //   if(zoom === null){
-  //     await this.getRoute(hash, pubId, zoom)
-  //   }
-  //
-  //   if (
-  //     this.state.routeData[zoom] === undefined ||
-  //     this.state.routeData[zoom][pubId] === undefined
-  //   ){
-  //     return await this.getRoute(hash, pubId, zoom);
-  //   }
-  //
-  //   return this.state.routeData[zoom][pubId];
-  // }
 
   async getBounds(hash, pubId){
     let data = await this.getRoute(hash, pubId);
@@ -197,15 +190,16 @@ export class RoutesContainer extends Component {
   }
 
   async centerOnRoute(){
+    console.log("centering");
     let urlParams = new URLSearchParams(history.location.search);
     let pubId = urlParams.get('route');
-    if(pubId===null){
-      return
+    if(pubId !== null){
+      let hash = this._currentBboxGeohash();
+      let bbox = await this.getBounds(hash, pubId);
+      console.log("centering on ",hash, pubId, bbox);
+      this.map.fitBounds(bbox);
     }
-    let hash = this._currentBboxGeohash();
-    let bbox = await this.getBounds(hash, pubId);
-    console.log("centering on ",hash, pubId, bbox);
-    this.map.fitBounds(bbox);
+
   }
 
   _currentBboxGeohash() {
@@ -251,7 +245,10 @@ export class RoutesContainer extends Component {
           route_pubIds.push(pubId);
         }
       }.bind(this));
+
+    } else {
     }
+
     this.first = false;
 
     return (<GoogleMap
@@ -259,7 +256,7 @@ export class RoutesContainer extends Component {
         this.map = map;
       }}
       defaultZoom={13}
-      defaultCenter={{lat: 48.4284, lng: -123.3656}}
+      defaultCenter={this.map_center}
       onIdle={this.onIdle.bind(this)}
       defaultOptions={{
         mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
