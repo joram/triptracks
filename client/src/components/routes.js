@@ -35,7 +35,7 @@ export class RoutesContainer extends Component {
     this.map_center = {lat: 48.4284, lng: -123.3656};
     let urlParams = new URLSearchParams(history.location.search);
     let bbox = urlParams.get('bbox');
-    if(bbox !== undefined){
+    if(bbox !== null){
       let parts = bbox.split(",");
       let n = parseFloat(parts[0]);
       let e = parseFloat(parts[1]);
