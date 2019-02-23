@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import Favicon from 'react-favicon';
 import Header from "./components/header";
 import Body from "./components/body"
-import {Container, Row, Col} from "react-bootstrap";
+import Footer from "./components/footer";
 
 require('../assets/images/favicon.ico');
 require("babel-core/register");
@@ -28,10 +28,11 @@ class Index extends React.Component {
   }
 
   render() {
-    return (<div>
+    return (<div id="index">
       <Favicon url="/favicon.ico"/>
       <Header root={this} />
       <Body view={this.state.view} history={history} />
+      <Footer />
     </div>)
   }
 }

@@ -55,7 +55,6 @@ export class RoutesContainer extends Component {
 
   async getBounds(hash, pubId){
     let data = await this.getRoute(pubId);
-    console.log("data for getBounds", data);
     let lines = [];
     if(data !== undefined && data.lines !== undefined){
       lines = JSON.parse(data.lines);
@@ -248,18 +247,19 @@ export class RoutesContainer extends Component {
     this.first = false;
 
     return <GoogleMap
-      ref={map => {
-        this.map = map;
-      }}
-      defaultZoom={13}
-      defaultCenter={this.map_center}
-      onIdle={this.onIdle.bind(this)}
-      defaultOptions={{
-        mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
-      }}
-    >
-      {routes}
-    </GoogleMap>;
+        ref={map => {
+          this.map = map;
+        }}
+        defaultZoom={13}
+        defaultCenter={this.map_center}
+        onIdle={this.onIdle.bind(this)}
+        containerElement={<div style={{width: "100%", marginLeft: 0 }} />}
+        defaultOptions={{
+          mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
+        }}
+      >
+        {routes}
+      </GoogleMap>;
   }
 
 }

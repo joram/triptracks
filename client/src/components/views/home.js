@@ -8,20 +8,18 @@ class RouteDetails extends React.Component {
 
   constructor(props) {
     super(props);
+    let urlParams = new URLSearchParams(history.location.search);
     this.url = "https://app.triptracks.io/graphql";
     if (window.location.hostname === "localhost") {
       this.url = "http://127.0.0.1:8000/graphql";
     }
     this.state = {
-      route: null
+      route: null,
+      pubId: urlParams.get('route'),
     }
 
-    let urlParams = new URLSearchParams(history.location.search);
-    let showingPubId = urlParams.get('route');
-    if (showingPubId !== null) {
-      this.getRoute(showingPubId).then(routeData => {
-        console.log("showing route " + showingPubId + routeData);
-        console.log(routeData);
+    if (this.state.pubId !== null) {
+      this.getRoute(this.state.pubId).then(routeData => {
         this.state.route = routeData;
         this.forceUpdate()
       });
@@ -60,6 +58,20 @@ class RouteDetails extends React.Component {
   }
 
   render() {
+    if(this.state.pubId === null){
+      return null;
+    }
+    if(this.state.route === null){
+      return <div key="route_details" id="route_details" style={{
+        float: "left",
+        width:"300px",
+        borderRight: "solid thin black",
+        height: "50px",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+      }} />
+    }
+
     let style = {
       float: "left",
       width:"300px",
@@ -67,41 +79,16 @@ class RouteDetails extends React.Component {
       height: "100%",
       overflow: "hidden",
       textOverflow: "ellipsis",
+      maxHeight: "inherit",
+      boxSizing: "border-box",
+      padding: "5px",
     }
-    if(this.state.route === null){
-      return <div key="route_details" id="route_details" style={{
-      float: "left",
-      width:"300px",
-      borderRight: "solid thin black",
-      height: "50px",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-    }}></div>
-    }
-    return <div key="route_details" id="route_details" style={{
-      float: "left",
-      width:"300px",
-      borderRight: "solid thin black",
-      height: "100%",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-    }}>
-      <div style={{
-        float: "left",
-        width:"300px",
-        borderRight: "solid thin black",
-        height: "100%",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        position: "absolute",
-      }} >
-        <h1>{this.state.route.name}</h1>
-        <div  style={style}>
-          <p  style={style}>{this.state.route.description}</p>
-        </div>
-      </div>
-    </div>
 
+    return <div key="route_details" id="route_details" style={style}>
+      <h3 style={{ width:"300px" }}>{this.state.route.name}</h3>
+
+      {this.state.route.description}
+    </div>
   }
 }
 
@@ -114,10 +101,12 @@ class Home extends React.Component {
     };
 
     return (
-      <div>
-        <RouteDetails />
-        <Container fluid style={{padding: 0}}>
-          <Row>
+      <div id="home">
+        <Container fluid style={{padding: "0",
+          width: "100%",
+          height: "100%",
+        }}>
+          <Row style={{margin: 0}}>
             <Col xs={12} style={{padding: 0}}>
               <Routes
                 key="routes"
