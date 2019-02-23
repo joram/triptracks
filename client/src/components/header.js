@@ -1,7 +1,6 @@
 import React from "react";
-import {Navbar, Nav, NavDropdown, MenuItem, Image, Form, FormControl, Button, Dropdown} from "react-bootstrap";
+import {Navbar, Nav, NavDropdown, MenuItem, Image, FormControl} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import Map from './map.js';
 import history from "../history";
 
 const PROFILE_MENU_ACTIONS = {
@@ -153,6 +152,18 @@ class RoutesSearch extends React.Component {
   }
 }
 
+class ProfileMenuTitle extends React.Component {
+
+  render() {
+    return (
+      <span>
+        {this.props.name}
+        <Image src={this.props.imageUrl} style={{width:35, marginLeft:5, padding:0, border:0}} thumbnail/>
+      </span>
+    )
+  }
+}
+
 class ProfileMenu extends React.Component {
   constructor(props){
     super(props);
@@ -179,38 +190,34 @@ class ProfileMenu extends React.Component {
   }
 
   render() {
-    // if (this.state.isLoggedIn) {
-    //   return <Nav>
-    //     <NavDropdown eventKey={3} title={<ProfileMenuTitle
-    //         name={this.state.googleData.profileObj.name}
-    //         imageUrl={this.state.googleData.profileObj.imageUrl}
-    //       />} id="basic-nav-dropdown"
-    //     >
-    //       <MenuItem eventKey={PROFILE_MENU_ACTIONS.ROUTES}>My Routes</MenuItem>
-    //       <MenuItem eventKey={PROFILE_MENU_ACTIONS.PLANS}>My Plans</MenuItem>
-    //       <MenuItem eventKey={PROFILE_MENU_ACTIONS.SETTINGS}>Settings</MenuItem>
-    //       <MenuItem eventKey={PROFILE_MENU_ACTIONS.LOGOUT}>
-    //         <GoogleLogout
-    //           buttonText="Logout"
-    //           onLogoutSuccess={this.logoutSuccess.bind(this)}
-    //           render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
-    //         />
-    //       </MenuItem>
-    //     </NavDropdown>
-    //   </Nav>
-    // }
+    let content = <GoogleLogin
+      clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
+      buttonText="Login"
+      onSuccess={this.loginSuccess.bind(this)}
+      onFailure={this.loginFailure.bind(this)}
+      onLogoutSuccess={this.logoutSuccess.bind(this)}
+      isSignedIn={true}
+    />;
+    if (this.state.isLoggedIn) {
+      let title = <ProfileMenuTitle
+        name={this.state.googleData.profileObj.name}
+        imageUrl={this.state.googleData.profileObj.imageUrl}
+      />;
+      content = <NavDropdown eventkey={3} title={title} id="basic-nav-dropdown">
+        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.ROUTES}>My Routes</NavDropdown.Item>
+        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.PLANS}>My Plans</NavDropdown.Item>
+        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.SETTINGS}>Settings</NavDropdown.Item>
+        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.LOGOUT}>
+          <GoogleLogout
+            buttonText="Logout"
+            onLogoutSuccess={this.logoutSuccess.bind(this)}
+            render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
+          />
+        </NavDropdown.Item>
+      </NavDropdown>;
+    }
 
-    return <Nav className="justify-content-end" >
-      <GoogleLogin
-        clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
-        buttonText="Login"
-        onSuccess={this.loginSuccess.bind(this)}
-        onFailure={this.loginFailure.bind(this)}
-        onLogoutSuccess={this.logoutSuccess.bind(this)}
-        isSignedIn={true}
-      />
-    </Nav>
-
+    return <Nav className="justify-content-end" >{content}</Nav>
   }
 
 
