@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 import Favicon from 'react-favicon';
 import Header from "./components/header";
 import Body from "./components/body"
+import {Container, Row, Col} from "react-bootstrap";
+
 require('../assets/images/favicon.ico');
 require("babel-core/register");
 require("babel-polyfill");

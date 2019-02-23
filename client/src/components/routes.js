@@ -54,7 +54,7 @@ export class RoutesContainer extends Component {
 
 
   async getBounds(hash, pubId){
-    let data = await this.getRoute(hash, pubId);
+    let data = await this.getRoute(pubId);
     console.log("data for getBounds", data);
     let lines = [];
     if(data !== undefined && data.lines !== undefined){
@@ -73,15 +73,14 @@ export class RoutesContainer extends Component {
     return bounds
   }
 
-  async getRoute(hash, pubId, zoom){
-    let fetched_key = `${hash}_${zoom}`;
-    this.state.fetched.push(fetched_key);
+  async getRoute(pubId){
 
     let query = `
       query get_single_route {
         route(pubId:"${pubId}"){
           pubId
           name
+          description
           lines
           owner{
             pubId
@@ -103,7 +102,6 @@ export class RoutesContainer extends Component {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors(data);
-      this.processNewRoute(data.data.route, hash, zoom);
       return data.data.route;
     });
   }
@@ -178,7 +176,7 @@ export class RoutesContainer extends Component {
   }
 
   processNewRoutes(data, hash, zoom){
-    if (data.data === undefined || data.data.routes === undefined){
+    if (data.data === undefined || data.data.routes === null){
       return
     }
 
@@ -245,13 +243,11 @@ export class RoutesContainer extends Component {
           route_pubIds.push(pubId);
         }
       }.bind(this));
-
-    } else {
     }
 
     this.first = false;
 
-    return (<GoogleMap
+    return <GoogleMap
       ref={map => {
         this.map = map;
       }}
@@ -263,7 +259,7 @@ export class RoutesContainer extends Component {
       }}
     >
       {routes}
-    </GoogleMap>);
+    </GoogleMap>;
   }
 
 }
