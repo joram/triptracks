@@ -26,12 +26,14 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.4.5",
     "file-loader": "^3.0.1",
     "history": "^4.7.2",
     "js-cookie": "^2.2.0",
     "latlon-geohash": "^1.1.0",
-    "react": "^16.7.0",
+    "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
+    "react-bootstrap-sidebar": "0.0.1",
     "react-dom": "^16.7.0",
     "react-favicon": "0.0.14",
     "react-google-login": "^4.0.1",

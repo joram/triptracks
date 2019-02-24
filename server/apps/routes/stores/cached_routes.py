@@ -33,7 +33,9 @@ class CachedRoutesStore(object):
     return self.get(geohash)
 
   def get_by_pub_id(self, pub_id):
-    return self.base_store.get_by_pub_id(pub_id)
+    route = self.base_store.get_by_pub_id(pub_id)
+    print("cached getting ", route)
+    return route
 
   def _write_s3_content(self, key, content):
     s3 = boto3.resource('s3')

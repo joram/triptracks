@@ -60,6 +60,7 @@ export class TrailRoute extends Component {
   }
 
   clicked(){
+    console.log(`clicked on ${this.state.pubId}`);
     history.push(`/?route=${this.state.pubId}&bbox=${this.state.bbox.toUrlValue()}`);
   }
 

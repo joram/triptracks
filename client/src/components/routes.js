@@ -1,26 +1,31 @@
 import React, { Component } from "react";
 import TrailRoute from "./trailRoute.js"
+import RouteDetails from "./routeDetails"
 import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps";
 import history from "../history";
 import Geohash from "latlon-geohash";
 
-function log_graphql_errors(data){
+
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+
+
+function log_graphql_errors(query_name, data){
   if(data.errors !== undefined){
     data.errors.forEach(function(err){
-      console.log("error: ",err.message);
+      console.log(query_name, " error: ", err.message);
     });
   }
 }
 
-export class RoutesContainer extends Component {
+export class Routes extends Component {
 
   constructor(props) {
     super(props);
 
-    // routData[zoom][pubId] = rawData
     this.state = {
       routeData: {},
       routesInGeohash: {},
+      currentRoute: null,
       fetched: [],
     };
     this.url = "https://app.triptracks.io/graphql";
@@ -28,32 +33,21 @@ export class RoutesContainer extends Component {
       this.url = "http://127.0.0.1:8000/graphql";
     }
 
-    history.listen((location, action) => {
-      this.centerOnRoute()
+    history.listen((a, b) => {
+      this.updateCurrentRoute();
+      this.centerOnRoute();
     });
 
-    this.map_center = {lat: 48.4284, lng: -123.3656};
-    let urlParams = new URLSearchParams(history.location.search);
-    let bbox = urlParams.get('bbox');
-    if(bbox !== null){
-      let parts = bbox.split(",");
-      let n = parseFloat(parts[0]);
-      let e = parseFloat(parts[1]);
-      let s = parseFloat(parts[2]);
-      let w = parseFloat(parts[3]);
-      let center_lat = (e+w)/2;
-      let center_lng = (n+s)/2;
-      this.map_center = {lat: center_lat, lng: center_lng};
-    }
-
+    this.updateCurrentRoute();
     this.map = React.createRef();
+    this.map_bounds = null;
+    this.map_center = {lat: 48.4284, lng: -123.3656};
     this.to_process = {};
     this.routes_at_hash = {};
     this.first = true;
   }
 
-
-  async getBounds(hash, pubId){
+  async getBounds(pubId){
     let data = await this.getRoute(pubId);
     let lines = [];
     if(data !== undefined && data.lines !== undefined){
@@ -73,7 +67,7 @@ export class RoutesContainer extends Component {
   }
 
   async getRoute(pubId){
-
+    console.log("getting route "+pubId);
     let query = `
       query get_single_route {
         route(pubId:"${pubId}"){
@@ -81,9 +75,6 @@ export class RoutesContainer extends Component {
           name
           description
           lines
-          owner{
-            pubId
-          }
         }
       }
     `;
@@ -100,14 +91,18 @@ export class RoutesContainer extends Component {
     })
     .then(r => r.json())
     .then(data => {
-      log_graphql_errors(data);
+      log_graphql_errors("get_single_route", data);
       return data.data.route;
     });
   }
 
-  hash() {
-    let ne = this.map.getBounds().getNorthEast();
-    let sw = this.map.getBounds().getSouthWest();
+  hash(){
+    let bounds = this.map.getBounds();
+    if(bounds === null){
+      return null
+    }
+    let ne = bounds.getNorthEast();
+    let sw = bounds.getSouthWest();
     let h1 = Geohash.encode(ne.lat(), ne.lng());
     let h2 = Geohash.encode(sw.lat(), sw.lng());
 
@@ -122,6 +117,36 @@ export class RoutesContainer extends Component {
 
   zoom(){
     return this.map.getZoom()
+  }
+
+  bbox(){
+    let urlParams = new URLSearchParams(history.location.search);
+    let bbox = urlParams.get('bbox');
+    let parts = bbox.split(",");
+    let n = parseFloat(parts[0]);
+    let e = parseFloat(parts[1]);
+    let s = parseFloat(parts[2]);
+    let w = parseFloat(parts[3]);
+    let se = new google.maps.LatLng({lat:s, lng:e});
+    let nw = new google.maps.LatLng({lat:n, lng:w});
+
+    let bounds = new google.maps.LatLngBounds();
+    bounds.extend(se);
+    bounds.extend(nw);
+    return bounds
+  }
+
+  updateCurrentRoute(){
+    let urlParams = new URLSearchParams(history.location.search);
+    let pubId = urlParams.get('route');
+    if(pubId === null){
+      return
+    }
+
+    this.getRoute(pubId).then((route) => {
+      this.state.currentRoute = route;
+      this.forceUpdate()
+    })
   }
 
   processNewRoute(route, hash, zoom) {
@@ -147,17 +172,12 @@ export class RoutesContainer extends Component {
       query get_more_routes {
         routes(geohash:"${hash}", zoom:${zoom}){
           pubId
-          name
           lines
-          owner{
-            pubId
-          }
         }
       }
     `;
 
     let body = JSON.stringify({query});
-    console.log(`getting more routes ${hash} ${zoom}`);
     fetch(this.url, {
       method: 'POST',
       mode: "cors",
@@ -169,7 +189,7 @@ export class RoutesContainer extends Component {
     })
     .then(r => r.json())
     .then(data => {
-      log_graphql_errors(data);
+      log_graphql_errors("get_more_routes", data);
       this.processNewRoutes(data, hash, zoom)
     });
   }
@@ -186,86 +206,116 @@ export class RoutesContainer extends Component {
     this.forceUpdate();
   }
 
-  async centerOnRoute(){
-    console.log("centering");
-    let urlParams = new URLSearchParams(history.location.search);
-    let pubId = urlParams.get('route');
-    if(pubId !== null){
-      let hash = this._currentBboxGeohash();
-      let bbox = await this.getBounds(hash, pubId);
-      console.log("centering on ",hash, pubId, bbox);
-      this.map.fitBounds(bbox);
-    }
-
-  }
-
-  _currentBboxGeohash() {
-    let ne = this.map.getBounds().getNorthEast();
-    let sw = this.map.getBounds().getSouthWest();
-    let h1 = Geohash.encode(ne.lat(), ne.lng());
-    let h2 = Geohash.encode(sw.lat(), sw.lng());
-
-    let h = "";
-    for (let i = 0; i < h1.length; i++) {
-      if (h1[i] !== h2[i])
-        break;
-      h += h1[i]
-    }
-    return h
+  centerOnRoute(){
+    let c = this.bbox().getCenter();
+    this.map_bounds = this.bbox();
+    this.map_center = {lat: c.lat(), lng: c.lng()};
+    this.forceUpdate()
   }
 
   onIdle(){
-    this.getMoreRoutes(this._currentBboxGeohash(), this.map.getZoom())
+    this.getMoreRoutes(this.hash(), this.map.getZoom());
     if(this.to_center_on !== null){
       this.centerOnRoute();
       this.to_center_on = null;
     }
   }
 
-  render() {
+  visibleRoutes(){
     let routes = [];
     let route_pubIds = [];
-    if(!this.first){
-      if(this.routes_at_hash[this.hash()] === undefined){
-        this.routes_at_hash[this.hash()] = [];
-      }
-      this.routes_at_hash[this.hash()].forEach(function(pubId){
-        if(route_pubIds.indexOf(pubId) === -1) {
-          let new_data = this.to_process[pubId];
-          routes.push(<TrailRoute
-            pubId={pubId}
-            key={pubId}
-            newData={new_data}
-            zoom={this.zoom()}
-            map={this.map}
-          />);
-          route_pubIds.push(pubId);
-        }
-      }.bind(this));
+    if(this.routes_at_hash[this.hash()] === undefined){
+      this.routes_at_hash[this.hash()] = [];
     }
+    this.routes_at_hash[this.hash()].forEach(function(pubId){
+      if(route_pubIds.indexOf(pubId) === -1) {
+        let new_data = this.to_process[pubId];
+        routes.push(<TrailRoute
+          pubId={pubId}
+          key={pubId}
+          newData={new_data}
+          zoom={this.zoom()}
+          map={this.map}
+        />);
+        route_pubIds.push(pubId);
+      }
+    }.bind(this));
+    return routes;
+  }
 
+  render(){
+    let routes = [];
+    if(!this.first){
+      routes = this.visibleRoutes();
+    }
     this.first = false;
 
-    return <GoogleMap
-        ref={map => {
-          this.map = map;
-        }}
-        defaultZoom={13}
-        defaultCenter={this.map_center}
-        onIdle={this.onIdle.bind(this)}
-        containerElement={<div style={{width: "100%", marginLeft: 0 }} />}
-        defaultOptions={{
-          mapTypeId: 'terrain',//google.maps.MapTypeId.TERRAIN,
-        }}
-      >
-        {routes}
-      </GoogleMap>;
+    const styles = {
+      width: "100%",
+      height: `${window.innerHeight-100}px`
+    };
+
+    let container_style = {
+      width: "100%",
+      marginLeft: "0px",
+    };
+    if(this.state.currentRoute !== null){
+      container_style.marginLeft = "300px";
+      container_style.width = `${window.innerWidth-300}px`;
+      container_style.height = `${window.innerHeight}px`
+    }
+
+    if(this.map_bounds !== null){
+      if(this.map !== null && this.map !== undefined){
+        this.map.fitBounds(this.map_bounds);
+        this.map_bounds = null;
+      }
+    }
+    return <div id="map_and_route_details" style={{styles}} >
+      <RouteDetails route={this.state.currentRoute} />
+      <RoutesMap
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
+        loadingElement={<div id="map_loading_element" style={styles} />}
+        containerElement={<div id="map_container" style={container_style} />}
+        mapElement={<div id="map_element" style={styles} />}
+
+        parent={this}
+        routes={routes}
+        map_center={this.map_center}
+      />
+    </div>;
   }
 
 }
 
+export class RoutesMapContainer extends Component {
 
-const Routes = withScriptjs(withGoogleMap(RoutesContainer));
+  constructor(props) {
+    super(props);
+    this.map = React.createRef();
+  }
+
+  onIdle(){
+    this.props.parent.onIdle()
+  }
+
+  render(){
+      return <GoogleMap
+          ref={map => {
+            this.map = map;
+            this.props.parent.map = map;
+          }}
+          defaultZoom={13}
+          onIdle={this.onIdle.bind(this)}
+          defaultCenter={this.props.map_center}
+          defaultOptions={{mapTypeId: 'terrain'}}
+        >
+          {this.props.routes}
+        </GoogleMap>
+  }
+}
+
+const RoutesMap = withScriptjs(withGoogleMap(RoutesMapContainer));
 
 export default Routes;
 
