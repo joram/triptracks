@@ -252,7 +252,7 @@ export class Routes extends Component {
 
     const styles = {
       width: "100%",
-      height: `${window.innerHeight-100}px`
+      height: `${window.innerHeight-95}px`
     };
 
     let container_style = {

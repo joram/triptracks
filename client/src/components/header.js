@@ -236,7 +236,7 @@ class Header extends React.Component {
     return (
       <Navbar onSelect={this.menuSelect.bind(this)} bg="dark" variant="dark">
         <Navbar.Brand>
-          <a href="#home" style={{color: "#AAAAAA"}}>
+          <a href="#home" style={{color: "#AAAAAA", fontSize:"28px"}}>
             Triptracks
             <Image src="/favicon.ico" style={{width:35, float:"left", marginRight:5}} thumbnail/>
           </a>

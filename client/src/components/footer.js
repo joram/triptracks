@@ -7,7 +7,7 @@ class Footer extends React.Component {
   render(){
     return (
       <Navbar fixed="bottom" bg="dark" variant="dark">
-        <div style={{margin:"auto", color: "#aaaaaa"}}>this is a footer, nobody bothers reading these. poop.</div>
+        <div style={{margin:"auto", color: "#aaaaaa", fontSize:"10px"}}>this is a footer, nobody bothers reading these. poop.</div>
       </Navbar>
     )
   }
