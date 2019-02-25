@@ -53,15 +53,14 @@ export class Routes extends Component {
     if(data !== undefined && data.lines !== undefined){
       lines = JSON.parse(data.lines);
     }
-    let num_verts = 0;
     let bounds = new google.maps.LatLngBounds();
-    Object.keys(lines).map(i => {
-      Object.keys(lines[i]).map(j => {
-        let lat = lines[i][j][0];
-        let lng = lines[i][j][1];
-        num_verts += 1;
+    lines.forEach((line) => {
+      line.forEach((coord) => {
+        let lat = parseFloat(coord[0]);
+        let lng = parseFloat(coord[1]);
+        console.log(lat, lng);
         bounds.extend(new google.maps.LatLng({lat:lat, lng:lng}));
-      });
+      })
     });
     return bounds
   }
@@ -101,8 +100,12 @@ export class Routes extends Component {
     if(bounds === null){
       return null
     }
+
     let ne = bounds.getNorthEast();
     let sw = bounds.getSouthWest();
+    if(ne.lat() !== 0){
+      return null
+    }
     let h1 = Geohash.encode(ne.lat(), ne.lng());
     let h2 = Geohash.encode(sw.lat(), sw.lng());
 
@@ -122,6 +125,7 @@ export class Routes extends Component {
   bbox(){
     let urlParams = new URLSearchParams(history.location.search);
     let bbox = urlParams.get('bbox');
+    if(bbox===null){return null}
     let parts = bbox.split(",");
     let n = parseFloat(parts[0]);
     let e = parseFloat(parts[1]);
@@ -207,9 +211,12 @@ export class Routes extends Component {
   }
 
   centerOnRoute(){
-    let c = this.bbox().getCenter();
-    this.map_bounds = this.bbox();
-    this.map_center = {lat: c.lat(), lng: c.lng()};
+    let bbox = this.bbox();
+    if(bbox !== null){
+      let c = bbox.getCenter();
+      this.map_bounds = this.bbox();
+      this.map_center = {lat: c.lat(), lng: c.lng()};
+    }
     this.forceUpdate()
   }
 
