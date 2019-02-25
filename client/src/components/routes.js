@@ -28,6 +28,7 @@ export class Routes extends Component {
       currentRoute: null,
       fetched: [],
     };
+
     this.url = "https://app.triptracks.io/graphql";
     if(window.location.hostname==="localhost"){
       this.url = "http://127.0.0.1:8000/graphql";
@@ -95,17 +96,16 @@ export class Routes extends Component {
     });
   }
 
-  hash(){
-    let bounds = this.map.getBounds();
+  hash(bounds){
     if(bounds === null){
+      bounds = this.map_bbox()
+    }
+    if(bounds === null) {
       return null
     }
 
     let ne = bounds.getNorthEast();
     let sw = bounds.getSouthWest();
-    if(ne.lat() !== 0){
-      return null
-    }
     let h1 = Geohash.encode(ne.lat(), ne.lng());
     let h2 = Geohash.encode(sw.lat(), sw.lng());
 
@@ -122,10 +122,19 @@ export class Routes extends Component {
     return this.map.getZoom()
   }
 
-  bbox(){
+  map_bbox(){
+    if(this.map === undefined){
+      return null
+    }
+    return this.map.getBounds()
+  }
+
+  url_bbox(){
     let urlParams = new URLSearchParams(history.location.search);
     let bbox = urlParams.get('bbox');
-    if(bbox===null){return null}
+    if(bbox===null){
+      return null
+    }
     let parts = bbox.split(",");
     let n = parseFloat(parts[0]);
     let e = parseFloat(parts[1]);
@@ -164,7 +173,10 @@ export class Routes extends Component {
     this.routes_at_hash[hash].push(route.pubId);
   }
 
-  getMoreRoutes(hash, zoom){
+  getMoreRoutes(){
+    let bbox = this.map_bbox();
+    let hash = this.hash(bbox);
+    let zoom = this.zoom();
     let fetched_key = `${hash}_${zoom}`;
     if(this.state.fetched.indexOf(fetched_key) !== -1){
       this.forceUpdate();
@@ -194,7 +206,7 @@ export class Routes extends Component {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors("get_more_routes", data);
-      this.processNewRoutes(data, hash, zoom)
+      this.processNewRoutes(data, hash, zoom);
     });
   }
 
@@ -211,17 +223,17 @@ export class Routes extends Component {
   }
 
   centerOnRoute(){
-    let bbox = this.bbox();
+    let bbox = this.url_bbox();
     if(bbox !== null){
       let c = bbox.getCenter();
-      this.map_bounds = this.bbox();
+      this.map_bounds = bbox;
       this.map_center = {lat: c.lat(), lng: c.lng()};
+      this.forceUpdate()
     }
-    this.forceUpdate()
   }
 
   onIdle(){
-    this.getMoreRoutes(this.hash(), this.map.getZoom());
+    this.getMoreRoutes();
     if(this.to_center_on !== null){
       this.centerOnRoute();
       this.to_center_on = null;
@@ -231,10 +243,12 @@ export class Routes extends Component {
   visibleRoutes(){
     let routes = [];
     let route_pubIds = [];
-    if(this.routes_at_hash[this.hash()] === undefined){
-      this.routes_at_hash[this.hash()] = [];
+    let bbox = this.map_bbox();
+    let hash = this.hash(bbox);
+    if(this.routes_at_hash[hash] === undefined){
+      this.routes_at_hash[hash] = [];
     }
-    this.routes_at_hash[this.hash()].forEach(function(pubId){
+    this.routes_at_hash[hash].forEach(function(pubId){
       if(route_pubIds.indexOf(pubId) === -1) {
         let new_data = this.to_process[pubId];
         routes.push(<TrailRoute
