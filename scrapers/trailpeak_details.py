@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import os
-from base import BaseScraper
+from scrapers.base import BaseScraper
 from bs4 import BeautifulSoup
 import json
 from trailpeak_raw_html import ScrapeTrailPeakRawHTML
@@ -65,7 +65,6 @@ class ScrapeTrailPeakDetails(BaseScraper):
         id = int(url.replace(self.base_url, ""))
         id = str(id).rjust(5, "0")
         return os.path.abspath(os.path.join(self.data_dir, "./{}.json".format(id)))
-
 
 
 if __name__ == "__main__":

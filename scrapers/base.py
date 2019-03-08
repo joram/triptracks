@@ -13,6 +13,7 @@ class BaseScraper(object):
     FILETYPE = "json"
 
     def __init__(self, debug=False):
+        print("initing base details")
         self.debug = debug
         self.wait = 1
         self.items_count = 0
@@ -63,7 +64,7 @@ class BaseScraper(object):
         resp = requests.get(url)
         if resp.status_code != 200:
             raise FailedRequest(resp.content)
-        return resp.content
+        return str(resp.content)
 
     def get_content(self, url):
 
@@ -108,9 +109,12 @@ class BaseScraper(object):
         return data
 
     def run(self):
+        print("running base")
         for url in self.item_urls():
+            print(f"running {url}")
             try:
                 yield self.get_content(url)
             except Exception as e:
-                pass
-
+                print(f"failed on {url}")
+                print(e)
+        print("ran base")
