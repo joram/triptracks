@@ -2,6 +2,7 @@ import os
 import re
 import time
 import requests
+import json
 from bs4 import BeautifulSoup
 
 
@@ -13,7 +14,6 @@ class BaseScraper(object):
     FILETYPE = "json"
 
     def __init__(self, debug=False):
-        print("initing base details")
         self.debug = debug
         self.wait = 1
         self.items_count = 0
@@ -56,6 +56,14 @@ class BaseScraper(object):
 
     def item_cache_filepath(self, url):
         raise NotImplemented()
+
+    def items(self):
+        for url in self.item_urls():
+            yield self.get_content(url)
+
+    def json_items(self):
+        for url in self.item_urls():
+            yield json.loads(self.get_content(url))
 
     def get_uncached_content(self, url):
         if self.debug:
@@ -107,14 +115,3 @@ class BaseScraper(object):
             data[key] = val
 
         return data
-
-    def run(self):
-        print("running base")
-        for url in self.item_urls():
-            print(f"running {url}")
-            try:
-                yield self.get_content(url)
-            except Exception as e:
-                print(f"failed on {url}")
-                print(e)
-        print("ran base")

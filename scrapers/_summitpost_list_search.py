@@ -11,7 +11,7 @@ class ScrapeSummitRoutesSearchRawHTML(BaseScraper):
 
     def item_urls(self):
         url = "https://www.summitpost.org/object_list.php?search_in=name_only&continent_2=North+America&route_type_2={}&map_2=1&order_type=DESC&object_type=2&orderby=distance&page={}"
-        for (activity, num_pages) in [("Hiking", 496), ("Mountaineering", 92)]:
+        for (activity, num_pages) in [("Hiking", 77), ("Mountaineering", 48)]:
             for page in range(1, num_pages):
                 yield url.format(activity, page)
 
@@ -20,8 +20,6 @@ class ScrapeSummitRoutesSearchRawHTML(BaseScraper):
         return html
 
     def item_cache_filepath(self, url):
-        import pprint
-
         route_type = ""
         page = -1
         params = url.split("&")

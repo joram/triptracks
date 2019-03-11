@@ -2,7 +2,7 @@
 import json
 import os
 from base import BaseScraper
-from summitpost_details import ScrapeSummitPostDetails
+from summitpost_route_details import ScrapeSummitPostDetails
 
 
 class ScrapeSummitPostGPX(BaseScraper):
