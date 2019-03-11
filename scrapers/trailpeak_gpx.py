@@ -31,7 +31,7 @@ class ScrapeTrailPeakGPX(BaseScraper):
             if "GPX_URL" in line:
                 name = line.split("\"")[1]
                 if name is not "":
-                    gpx_url = "https://www.trailpeak.com/content/gpsData/gps{}-{}.gpx".format(trail_id, name)
+                    gpx_url = f"https://www.trailpeak.com/content/gpsData/gps{trail_id}-{name}.gpx"
                     data = BaseScraper.get_uncached_content(self, gpx_url)
                     return data
         return ""
@@ -46,5 +46,5 @@ class ScrapeTrailPeakGPX(BaseScraper):
 if __name__ == "__main__":
     s = ScrapeTrailPeakGPX()
     s.debug = True
-    for data in s.run():
-        print(data)
+    for gpx_file in s.items():
+        print(gpx_file)
