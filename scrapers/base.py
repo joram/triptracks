@@ -51,6 +51,20 @@ class BaseScraper(object):
         with open(filepath, "r") as f:
             return f.read()
 
+    def item_urls(self):
+        raise NotImplemented()
+
+    def item_cache_filepath(self, url):
+        raise NotImplemented()
+
+    def items(self):
+        for url in self.item_urls():
+            yield self.get_content(url)
+
+    def json_items(self):
+        for url in self.item_urls():
+            yield json.loads(self.get_content(url))
+
     def get_uncached_content(self, url):
         if self.debug:
             print("downloading {}".format(url))

@@ -3,8 +3,8 @@ from util import setup_env
 setup_env()
 from apps.routes.models import Route, TracksFile
 import json
-from scrapers.trailpeak_details import ScrapeTrailPeakDetails
-from scrapers.trailpeak_gpx import ScrapeTrailPeakGPX
+from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
+from scrapers.trailpeak_route_gpx import ScrapeTrailPeakGPX
 from scrapers.strava_gpx import StravaGPX
 from django.conf import settings
 

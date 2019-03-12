@@ -1,9 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 import os
-from scrapers.base import BaseScraper
+from base import BaseScraper
 from bs4 import BeautifulSoup
 import json
-from trailpeak_gpx import ScrapeTrailPeakGPX
 
 
 class ScrapeTrailPeakRawHTML(BaseScraper):
@@ -30,7 +29,6 @@ class ScrapeTrailPeakDetails(BaseScraper):
     def __init__(self, debug):
         BaseScraper.__init__(self)
         self.html_scraper = ScrapeTrailPeakRawHTML()
-        self.gpx_scraper = ScrapeTrailPeakGPX()
         self.html_scraper.debug = debug
         self.debug = debug
         self.base_url = "https://www.trailpeak.com/index.jsp?con=trail&val="
@@ -70,7 +68,13 @@ class ScrapeTrailPeakDetails(BaseScraper):
         except:
             pass
 
-        self.gpx_scraper.get_content(url)
+        gpx_filename = ""
+        for line in html.split("\\n"):
+            if "GPX_URL" in line:
+                parts = line.split("\"")
+                gpx_filename = f"gps{trail_id}-{parts[1]}.gpx"
+                break
+
         details = {
             "description": description,
             "directions": directions,
@@ -78,7 +82,8 @@ class ScrapeTrailPeakDetails(BaseScraper):
             "trail_id": trail_id,
             "trail_image_url": image_url,
             "url": url,
-            "gpx_filepath": self.gpx_scraper.item_filepath(trail_id),
+            "metadata": self.get_metadata(bs),
+            "gpx_url": f"https://www.trailpeak.com/content/gpsData/{gpx_filename}",
         }
         return json.dumps(details, sort_keys=True, indent=4, separators=(',', ': '))
 
@@ -92,3 +97,5 @@ if __name__ == "__main__":
     s = ScrapeTrailPeakDetails(True)
     for route in s.json_items():
         print(route.keys())
+        print(route.get("name"))
+        print(route.get("metadata"))
