@@ -6,6 +6,7 @@ gpxpy
 pykml
 bs4
 dj_database_url
+newrelic==2.84.0.64
 psycopg2-binary
 shortuuid
 jsonfield

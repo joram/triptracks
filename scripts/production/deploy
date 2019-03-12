@@ -1,9 +1,0 @@
-#!/bin/bash
-
-docker build . -t joram87/triptracks
-docker push joram87/triptracks:latest
-hyper pull joram87/triptracks:latest
-hyper service rolling-update --image joram87/triptracks triptracks
-sleep 10
-hyper rmi $(hyper images -f "dangling=true" -q)
-
