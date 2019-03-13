@@ -9,7 +9,6 @@ let routes = require('../routes_store');
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 
-
 export class Routes extends Component {
 
   constructor(props) {
@@ -26,11 +25,7 @@ export class Routes extends Component {
       this.updateCurrentRoute();
       this.centerOnRoute();
     });
-    console.log("subscribed");
-    routes.subscribe(function(route){
-      console.log("got something!")
-      console.log(route)
-    });
+    routes.subscribe(this.newRoute.bind(this));
     this.updateCurrentRoute();
     this.map = React.createRef();
     this.map_bounds = null;
@@ -40,22 +35,12 @@ export class Routes extends Component {
     this.first = true;
   }
 
-  async getBounds(pubId){
-    let data = await this.getRoute(pubId);
-    let lines = [];
-    if(data !== undefined && data.lines !== undefined){
-      lines = JSON.parse(data.lines);
+  newRoute(route){
+    if (route.bounds) {
+      if (this.map_bbox().intersects(route.bounds)) {
+        console.log(`in bounds ${route.name}`)
+      }
     }
-    let bounds = new google.maps.LatLngBounds();
-    lines.forEach((line) => {
-      line.forEach((coord) => {
-        let lat = parseFloat(coord[0]);
-        let lng = parseFloat(coord[1]);
-        console.log(lat, lng);
-        bounds.extend(new google.maps.LatLng({lat:lat, lng:lng}));
-      })
-    });
-    return bounds
   }
 
   hash(bounds){
@@ -235,6 +220,7 @@ export class RoutesMapContainer extends Component {
           ref={map => {
             this.map = map;
             this.props.parent.map = map;
+            console.log("setting parent route map")
           }}
           defaultZoom={13}
           onIdle={this.onIdle.bind(this)}

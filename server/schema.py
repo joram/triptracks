@@ -27,7 +27,7 @@ class Query(graphene.ObjectType):
     route_metas = list(RouteMetadata.objects.filter(pub_id__in=[r.pub_id for r in routes]))
     bounds = {}
     for rm in route_metas:
-      bounds[rm.pub_id] = bounds
+      bounds[rm.pub_id] = rm.bounds
 
     routes_with_bounds = []
     for route in routes:

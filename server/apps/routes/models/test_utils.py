@@ -1,11 +1,12 @@
-from apps.routes import Route
-from apps.routes.stores import RoutesStore
+from apps.routes.models.route import Route
+from apps.routes.stores.local_routes import RoutesStore
 from apps.accounts.models import User
 import random
 import names
 import mock
 
 route_store = None
+
 
 def mock_get_cache(zoom):
   global route_store
@@ -27,12 +28,10 @@ class BaseFactory(object):
     self.generated = 0
     self.base_owner, _ = User.objects.get_or_create(email="original@owner.com", pub_id="user_route_system_owner")
 
-
   def pub_id(self):
     s = "{}_{}".format(self.pub_id_prefix, str(self.generated))
     self.generated += 1
     return s
-
 
   def name(self):
     with mock.patch("names.random", self.random):

@@ -4,11 +4,11 @@ django.setup()
 import pprint
 import mock
 from schema import schema
-from apps.routes import mock_get_cache
+from apps.routes.models.test_utils import mock_get_cache
 from collections import OrderedDict
 from apps.trips.models import Plan, TripAttendee
 from apps.accounts.models import User
-from apps.packing.models import  PackingList, PackingListItem, Item
+from apps.packing.models import PackingList, PackingListItem, Item
 
 
 @mock.patch('schema.get_cache', mock_get_cache)
@@ -146,10 +146,6 @@ def test_trip_plans():
   query = '''query {
     tripPlans{
       pubId
-      owner{
-        pubId
-        profileImage
-      }
       attendees {
         pubId
         profileImage
@@ -162,11 +158,6 @@ def test_trip_plans():
   expected = OrderedDict([('data',
       OrderedDict([('tripPlans',
           [OrderedDict([('pubId', 'plan_testtesttest'),
-              ('owner',
-               OrderedDict([('pubId',
-                   'user_testtesttest'),
-                  ('profileImage',
-                   None)])),
               ('attendees',
                [OrderedDict([('pubId',
                     'user_testtesttest'),

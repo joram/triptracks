@@ -12,7 +12,9 @@ if(window.location.hostname==="localhost") {
 function log_graphql_errors(query_name, data){
   if(data.errors !== undefined){
     data.errors.forEach(function(err){
-      console.log(query_name, " error: ", err.message);
+      if(err.message !== "Circular reference detected"){
+        console.log(query_name, " error: ", err.message);
+      }
     });
   }
 }
@@ -43,6 +45,7 @@ module.exports = {
           pubId
           lines
           bounds
+          name
         }
       }
     `;
@@ -66,10 +69,19 @@ module.exports = {
       routes_by_hash[hash][zoom] = routes;
       routes.forEach(function(route){
         route.lines = JSON.parse(route.lines);
+        let b = JSON.parse(route.bounds);
+        let lat_1 = parseFloat(b[0][0]);
+        let lng_1 = parseFloat(b[0][1]);
+        let lat_2 = parseFloat(b[1][0]);
+        let lng_2 = parseFloat(b[1][1]);
+        route.bounds = new google.maps.LatLngBounds();
+        route.bounds.extend({lat: lat_1, lng: lng_1});
         route.hash = hash;
         route.zoom = zoom;
         emitter.emit("route", route)
       });
+    }).catch(e => {
+      console.log(e);
     });
 
   },
