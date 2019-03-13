@@ -43,6 +43,13 @@ def _lines_from_gpx(gpx):
     for point in route.points:
       line.append((point.latitude, point.longitude, point.elevation))
     lines.append(line)
+
+  # fallback to waypoints
+  if len(lines) == 0:
+    for point in gpx.waypoints:
+      line = [(point.latitude, point.longitude, point.elevation)]
+      lines.append(line)
+
   return lines
 
 

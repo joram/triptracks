@@ -22,13 +22,29 @@ class Query(graphene.ObjectType):
 
   def resolve_routes(self, info, geohash, zoom):
     print(f"getting {geohash}::{zoom}")
-    return get_cache(zoom).get(geohash)
+    routes = get_cache(zoom).get(geohash)
+
+    route_metas = list(RouteMetadata.objects.filter(pub_id__in=[r.pub_id for r in routes]))
+    bounds = {}
+    for rm in route_metas:
+      bounds[rm.pub_id] = bounds
+
+    routes_with_bounds = []
+    for route in routes:
+      route.bounds = bounds[route.pub_id]
+      routes_with_bounds.append(route)
+    return routes_with_bounds
 
   def resolve_routes_search(self, info, search_text, limit=10):
     limit = min(limit, 10)
     cache = get_cache(0)
     route_metas = RouteMetadata.objects.filter(name__icontains=search_text)[:limit]
-    return [cache.get_by_pub_id(rm.pub_id) for rm in route_metas]
+    routes = []
+    for rm in route_metas:
+      route = cache.get_by_pub_id(rm.pub_id)
+      route.bounds = rm.bounds
+      routes.append(route)
+    return routes
 
   def resolve_trip_plans(self, info):
     if info.context is not None:

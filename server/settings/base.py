@@ -1,7 +1,7 @@
 from settings.default import *
 import os
 import newrelic.agent
-newrelic.agent.initialize('newrelic.ini')
+# newrelic.agent.initialize('newrelic.ini')
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (

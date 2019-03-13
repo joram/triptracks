@@ -72,7 +72,7 @@ class BaseScraper(object):
         resp = requests.get(url)
         if resp.status_code != 200:
             raise FailedRequest(resp.content)
-        return str(resp.content)
+        return str(resp.text)
 
     def get_content(self, url):
 
@@ -89,7 +89,7 @@ class BaseScraper(object):
         path = os.path.dirname(cache_filepath)
         if not os.path.exists(path):
             os.makedirs(path)
-        with open(cache_filepath, "w+") as f:
+        with open(cache_filepath, "w") as f:
             f.write(content)
 
         return content

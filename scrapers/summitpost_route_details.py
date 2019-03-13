@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from base import BaseScraper
 from summitpost_mountain_routes_list import ScrapeSummitPostMountainRoutesList
 from summitpost_base import BaseSummitPostScraper
+from apps.routes.models.route_metadata import RouteMetadata
 
 
 class ScrapeSummitPostRawHTML(BaseScraper):

@@ -1,21 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import TrailRoute from "./trailRoute.js"
 import RouteDetails from "./routeDetails"
-import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps";
-import history from "../history";
-import Geohash from "latlon-geohash";
-
+import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
+import history from "../history"
+import Geohash from "latlon-geohash"
+let routes = require('../routes_store');
 
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 
-function log_graphql_errors(query_name, data){
-  if(data.errors !== undefined){
-    data.errors.forEach(function(err){
-      console.log(query_name, " error: ", err.message);
-    });
-  }
-}
 
 export class Routes extends Component {
 
@@ -29,16 +22,15 @@ export class Routes extends Component {
       fetched: [],
     };
 
-    this.url = "https://app.triptracks.io/graphql";
-    if(window.location.hostname==="localhost"){
-      this.url = "http://127.0.0.1:8000/graphql";
-    }
-
     history.listen((a, b) => {
       this.updateCurrentRoute();
       this.centerOnRoute();
     });
-
+    console.log("subscribed");
+    routes.subscribe(function(route){
+      console.log("got something!")
+      console.log(route)
+    });
     this.updateCurrentRoute();
     this.map = React.createRef();
     this.map_bounds = null;
@@ -64,36 +56,6 @@ export class Routes extends Component {
       })
     });
     return bounds
-  }
-
-  async getRoute(pubId){
-    console.log("getting route "+pubId);
-    let query = `
-      query get_single_route {
-        route(pubId:"${pubId}"){
-          pubId
-          name
-          description
-          lines
-        }
-      }
-    `;
-
-    let body = JSON.stringify({query});
-    return fetch(this.url, {
-      method: 'POST',
-      mode: "cors",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: body
-    })
-    .then(r => r.json())
-    .then(data => {
-      log_graphql_errors("get_single_route", data);
-      return data.data.route;
-    });
   }
 
   hash(bounds){
@@ -162,64 +124,12 @@ export class Routes extends Component {
     })
   }
 
-  processNewRoute(route, hash, zoom) {
-    if(this.routes_at_hash[hash] === undefined){
-      this.routes_at_hash[hash] = [];
-    }
-    if(this.to_process[route.pubId] === undefined){
-      this.to_process[route.pubId] = {};
-    }
-    this.to_process[route.pubId][zoom] = route;
-    this.routes_at_hash[hash].push(route.pubId);
-  }
-
   getMoreRoutes(){
     let bbox = this.map_bbox();
     let hash = this.hash(bbox);
     let zoom = this.zoom();
-    let fetched_key = `${hash}_${zoom}`;
-    if(this.state.fetched.indexOf(fetched_key) !== -1){
-      this.forceUpdate();
-      return
-    }
-    this.state.fetched.push(fetched_key);
-
-    let query = `
-      query get_more_routes {
-        routes(geohash:"${hash}", zoom:${zoom}){
-          pubId
-          lines
-        }
-      }
-    `;
-
-    let body = JSON.stringify({query});
-    fetch(this.url, {
-      method: 'POST',
-      mode: "cors",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: body
-    })
-    .then(r => r.json())
-    .then(data => {
-      log_graphql_errors("get_more_routes", data);
-      this.processNewRoutes(data, hash, zoom);
-    });
-  }
-
-  processNewRoutes(data, hash, zoom){
-    if (data.data === undefined || data.data.routes === null){
-      return
-    }
-
-    data.data.routes.forEach(function(route){
-      this.processNewRoute(route, hash, zoom);
-    }.bind(this));
-
-    this.forceUpdate();
+    console.log("getting more routes");
+    routes.getRoutesByHash(hash, zoom, false)
   }
 
   centerOnRoute(){

@@ -15,6 +15,7 @@ class Route(graphene.ObjectType):
     name = graphene.String()
     geohash = graphene.String()
     zoom = graphene.Int()
+    bounds = graphene.JSONString()
     description = graphene.String()
     lines = graphene.JSONString()
     owner = graphene.Field(UserType)
