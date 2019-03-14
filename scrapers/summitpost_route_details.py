@@ -5,6 +5,11 @@ from bs4 import BeautifulSoup
 from base import BaseScraper
 from summitpost_mountain_routes_list import ScrapeSummitPostMountainRoutesList
 from summitpost_base import BaseSummitPostScraper
+from utils.lines import lines_from_gpx_string, geohash, bbox
+
+import django
+django.setup()
+
 from apps.routes.models.route_metadata import RouteMetadata
 
 
@@ -56,9 +61,20 @@ class ScrapeSummitPostDetails(BaseSummitPostScraper):
         if bs.find("div", {"class": "full-content"}) is None:
             return json.dumps({})
 
+        name = bs.find("h1", {"class": "adventure-title"}).string
+
+        breadcrumbs = bs.find("ul", {"class": "breadcrumbs"})
+        mountain_name = breadcrumbs.find_all("li")[1].find("a").text
+
+        # clarify generic names
+        if name.lower() in ["west ridge"]:
+            name = f"{name} of {mountain_name}"
+            print(name)
+
         details = {
             "url": url,
-            "title": bs.find("h1", {"class": "adventure-title"}).string,
+            "title": name,
+            "mountain_name": mountain_name,
             "description": self._description(bs),
             "details": self._details(bs),
         }
@@ -66,10 +82,31 @@ class ScrapeSummitPostDetails(BaseSummitPostScraper):
 
 
 if __name__ == "__main__":
-    s = ScrapeSummitPostDetails(False)
+    from summitpost_route_gpx import ScrapeSummitPostGPX
+    s = ScrapeSummitPostDetails(True)
+    s_gpx = ScrapeSummitPostGPX()
     for route in s.json_items():
-        gpx_file = route.get("details", {}).get("gpx file")
-        if gpx_file is not None:
-            print("\t", gpx_file, "\t", route.get("title"))
-        else:
-            print("\t", route.get("title"))
+        try:
+            rm = RouteMetadata.objects.get(name=route.get("title"))
+            if rm.source != "summitpost":
+                if rm.source_url is not None and "summitpost" in rm.source_url:
+                    rm.source = "summitpost"
+                    rm.save()
+                    continue
+                print(f"{rm.name} comes from both sources")
+                continue
+        except RouteMetadata.DoesNotExist:
+            gpx_file = route.get("details", {}).get("gpx file")
+            if gpx_file:
+                import pprint
+                pprint.pprint(route)
+                gpx_content = s_gpx.get_content(gpx_file)
+                lines = lines_from_gpx_string(gpx_content)
+                rm = RouteMetadata.objects.create(
+                    name=route.get("title"),
+                    geohash=geohash(bbox(lines)),
+                    bounds=bbox(lines),
+                    description=route.get("description"),
+                    source_url=route.get("url"),
+                    source="summitpost",
+                )

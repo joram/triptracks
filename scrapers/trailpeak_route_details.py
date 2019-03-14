@@ -3,8 +3,7 @@ import json
 import os
 from base import BaseScraper, FailedRequest
 from bs4 import BeautifulSoup
-import geohash2
-from utils.lines import lines_from_gpx_string
+from utils.lines import lines_from_gpx_string, geohash, bbox
 
 import django
 django.setup()
@@ -61,7 +60,12 @@ class ScrapeTrailPeakDetails(BaseScraper):
 
         directions = ""
         if "Directions:" in description:
-            description, directions = description.split("Directions:")
+            parts = description.split("Directions:")
+            if len(parts) > 2:
+                # TODO: handle this situation
+                return json.dumps({})
+                
+            description, directions = parts
 
         name = "trail: {}".format(trail_id)
         subheading = ""
@@ -107,39 +111,6 @@ class ScrapeTrailPeakDetails(BaseScraper):
         return os.path.abspath(os.path.join(self.data_dir, "./{}.json".format(id)))
 
 
-def get_bbox(lines):
-    min_lat = None
-    max_lat = None
-    min_lng = None
-    max_lng = None
-    for line in lines:
-        for coord in line:
-            lat = coord[0]
-            lng = coord[1]
-            if min_lat is None:
-                min_lat = lat
-                max_lat = lat
-                min_lng = lng
-                max_lng = lng
-            min_lat = min(min_lat, lat)
-            max_lat = max(max_lat, lat)
-            min_lng = min(min_lng, lng)
-            max_lng = max(max_lng, lng)
-    return (min_lat, min_lng), (max_lat, max_lng)
-
-
-def get_geohash(bbox):
-    (lat1, lng1), (lat2, lng2) = bbox
-    h1 = geohash2.encode(lat1, lng1)
-    h2 = geohash2.encode(lat2, lng2)
-    i = 0
-    for c in h1:
-        if h2[i] == c:
-            i += 1
-    matching = h1[:i]
-    return matching
-
-
 if __name__ == "__main__":
     from trailpeak_route_gpx import ScrapeTrailPeakGPX
     i = 0
@@ -149,6 +120,7 @@ if __name__ == "__main__":
         if route.get("name") is None:
             continue
 
+        rm = None
         try:
             rm = RouteMetadata.objects.get(name=route.get("name"))
             rm.source_url = route.get("url")
@@ -164,20 +136,23 @@ if __name__ == "__main__":
                 print(f'failed to get gpx file for {route.get("name")}\t{route.get("gpx_url")}')
                 continue
 
-            lines = lines_from_gpx_string(gpx_content)
-            bbox = get_bbox(lines)
-            rm = RouteMetadata.objects.create(
-                name=route.get("name"),
-                geohash=get_geohash(bbox),
-                bounds=bbox,
-                description=route.get("description"),
-                source_url=route.get("url"),
-                source="trailpeak",
-            )
+            try:
+                lines = lines_from_gpx_string(gpx_content)
+                rm = RouteMetadata.objects.create(
+                    name=route.get("name"),
+                    geohash=geohash(bbox(lines)),
+                    bounds=bbox(lines),
+                    description=route.get("description"),
+                    source_url=route.get("url"),
+                    source="trailpeak",
+                )
+                import pprint
+                pprint.pprint(vars(rm))
+            except Exception as e:
+                print(e)
+                print("error for: ", route.get("url"))
 
-            import pprint
-            pprint.pprint(vars(rm))
-
-        print(f"{i}\t{rm.name}")
+        if rm is not None:
+            print(f"{i}\t{rm.name}")
 
         i += 1

@@ -3,6 +3,12 @@ import React from "react";
 
 class RouteDetails extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {route: []}
+  //  todo: register for emits, and on url change, ask for route details
+  }
+
   render() {
 
     let style = {
@@ -20,8 +26,8 @@ class RouteDetails extends React.Component {
     }
 
     return <div key="route_details" id="route_details" style={style}>
-      <h3 style={{ width:"300px" }}>{this.props.route.name}</h3>
-      {this.props.route.description}
+      <h3 style={{ width:"300px" }}>{this.state.route.name}</h3>
+      {this.state.route.description}
     </div>
   }
 }

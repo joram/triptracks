@@ -14,6 +14,27 @@ def geohash(bbox):
   return matching
 
 
+def bbox(lines):
+  min_lat = None
+  max_lat = None
+  min_lng = None
+  max_lng = None
+  for line in lines:
+    for coord in line:
+      lat = coord[0]
+      lng = coord[1]
+      if min_lat is None:
+        min_lat = lat
+        max_lat = lat
+        min_lng = lng
+        max_lng = lng
+      min_lat = min(min_lat, lat)
+      max_lat = max(max_lat, lat)
+      min_lng = min(min_lng, lng)
+      max_lng = max(max_lng, lng)
+  return (min_lat, min_lng), (max_lat, max_lng)
+
+
 def lines_from_gpx_string(content):
   gpx = gpxpy.parse(content)
   return _lines_from_gpx(gpx)

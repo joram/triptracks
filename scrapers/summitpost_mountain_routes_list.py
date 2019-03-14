@@ -16,7 +16,8 @@ class ScrapeSummitPostMountainRoutesListRawHTML(BaseScraper):
     def item_urls(self):
         for mountain in self.mountain_details_scraper.json_items():
             if "routes_url" in mountain:
-                print(mountain.get("title"))
+                if self.debug:
+                    print(f'Mountain: {mountain.get("title")}')
                 yield mountain.get("routes_url")
 
     def item_content(self, url):
@@ -32,15 +33,19 @@ class ScrapeSummitPostMountainRoutesListRawHTML(BaseScraper):
 
 class ScrapeSummitPostMountainRoutesList(BaseSummitPostScraper):
 
-    def __init__(self):
+    def __init__(self, debug=False):
         BaseScraper.__init__(self)
         self.raw_html_scraper = ScrapeSummitPostMountainRoutesListRawHTML()
         self.mountain_details_scraper = ScrapeSummitPostMountainDetails()
+        self.raw_html_scraper.debug = debug
+        self.mountain_details_scraper.debug = debug
+        self.debug = debug
         self._current_mountain = None
 
     def item_urls(self):
         for mountain in self.mountain_details_scraper.json_items():
-            print(mountain.get("title"))
+            if self.debug:
+                print(f'Mountain: {mountain.get("title")}')
             if mountain.get("routes_url") is not None:
                 self._current_mountain = mountain
                 yield mountain.get("routes_url")

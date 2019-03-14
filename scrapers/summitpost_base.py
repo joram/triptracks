@@ -8,6 +8,8 @@ class BaseSummitPostScraper(BaseScraper):
         descriptionDiv = bs.find("div", {"class": "full-content"})
         section_title = ""
         section_content = []
+        if descriptionDiv is None:
+            return ""
         for child in descriptionDiv.contents:
             if child.name == "h2":
                 if section_title != "":
@@ -23,8 +25,11 @@ class BaseSummitPostScraper(BaseScraper):
         return description
 
     def _details(self, bs):
-        details = {}
         table = bs.find("table", {"class": "object-properties-table"})
+        if table is None:
+            return {}
+
+        details = {}
         rows = table.find_all("tr")
         for tr in rows:
             key = tr.find("th")

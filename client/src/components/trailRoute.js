@@ -8,25 +8,15 @@ export class TrailRoute extends Component {
     super(props);
     this.state = {
       pubId: this.props.pubId,
-      lines: {},
       zoom: this.props.zoom,
-      bbox: undefined,
-      previous_zoom: undefined,
+      bbox: this.props.bbox,
+      lines: {},
     };
-    this.addNewData()
   }
 
-  addNewData(){
-    let newData = this.props.newData;
-    Object.keys(newData).forEach(function(zoom){
-      let data = newData[zoom];
-      this.addLines(data, zoom);
-    }.bind(this))
-
-  }
-
-  addLines(data, zoom){
-    let lines = JSON.parse(data.lines);
+  addLines(){
+    let zoom = this.props.zoom;
+    let lines = this.props.data.lines;
 
     let polyLines = [];
     let bounds = new google.maps.LatLngBounds();
@@ -64,22 +54,9 @@ export class TrailRoute extends Component {
     history.push(`/?route=${this.state.pubId}&bbox=${this.state.bbox.toUrlValue()}`);
   }
 
-  isVisible() {
-    let c1 = this.state.bbox.getNorthEast();
-    let c2 = this.state.bbox.getSouthWest();
-
-    let map = this.props.map;
-    let view_bbox = map.getBounds();
-    return view_bbox.contains(c1) || view_bbox.contains(c2);
-  }
-
 
   render() {
-    this.addNewData();
-
-    if(!this.isVisible()){
-      return null;
-    }
+    this.addLines()
 
     if(this.state.lines[this.props.zoom] !== undefined) {
       this.curr_zoom = this.props.zoom
@@ -93,7 +70,7 @@ export class TrailRoute extends Component {
     if(a !== undefined){
       return a
     }
-    console.log("had no route for "+this.state.pubId, "at zoom", this.curr_zoom);
+    console.log("had no route for "+this.state.pubId, "at zoom", this.zoom);
     return null;
   }
 }

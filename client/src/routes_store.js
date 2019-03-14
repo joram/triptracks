@@ -22,19 +22,14 @@ function log_graphql_errors(query_name, data){
 
 module.exports = {
 
-  getRoutesByHash: function(hash, zoom, emit_cached) {
+  getRoutesByHash2: function(hash, zoom) {
+    return routes_by_hash[hash][zoom]
+  },
+
+  getRoutesByHash: function(hash, zoom) {
 
     if(routes_by_hash[hash] !== undefined && routes_by_hash[hash][zoom] !== undefined){
-      if(emit_cached){
-        routes_by_hash[hash][zoom].forEach(function(route) {
-          if (routes_by_hash[hash] === undefined) {
-            routes_by_hash[hash] = {}
-          }
-          route.hash = hash;
-          route.zoom = zoom;
-          emitter.emit("route_by_hash", route);
-        })
-      }
+      emitter.emit("got_routes", {hash:hash, zoom:zoom});
       return
     }
 
@@ -63,10 +58,14 @@ module.exports = {
     .then(data => {
       log_graphql_errors("get_more_routes", data);
       let routes = data.data.routes;
-      if(routes_by_hash[hash] === undefined){
-        routes_by_hash[hash]={}
+      if(routes === null){
+        console.log("failed to get routes")
+        return
       }
-      routes_by_hash[hash][zoom] = routes;
+      if(routes_by_hash[hash] === undefined){
+        routes_by_hash[hash] = {};
+      }
+      routes_by_hash[hash][zoom] = [];
       routes.forEach(function(route){
         route.lines = JSON.parse(route.lines);
         let b = JSON.parse(route.bounds);
@@ -76,12 +75,12 @@ module.exports = {
         let lng_2 = parseFloat(b[1][1]);
         route.bounds = new google.maps.LatLngBounds();
         route.bounds.extend({lat: lat_1, lng: lng_1});
+        route.bounds.extend({lat: lat_2, lng: lng_2});
         route.hash = hash;
         route.zoom = zoom;
-        emitter.emit("route", route)
+        routes_by_hash[hash][zoom].push(route);
       });
-    }).catch(e => {
-      console.log(e);
+      emitter.emit("got_routes", {hash:hash, zoom:zoom})
     });
 
   },
@@ -116,7 +115,6 @@ module.exports = {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors("get_single_route", data);
-      console.log(data);
       routes_by_pub_id[pub_id] = data.route
       emitter.emit("route", data.route)
     });
@@ -124,10 +122,10 @@ module.exports = {
   },
 
   subscribe: function(callback) {
-    emitter.addListener("route", callback);
+    emitter.addListener("got_routes", callback);
   },
 
   unsubscribe: function(callback) {
-    emitter.removeListener("route", callback);
+    emitter.removeListener("got_routes", callback);
   },
 };
