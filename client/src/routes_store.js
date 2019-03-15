@@ -85,19 +85,25 @@ module.exports = {
 
   },
 
+  getRouteByID2: function(pub_id){
+    console.log(pub_id)
+    console.log(routes_by_pub_id)
+    return routes_by_pub_id[pub_id]
+  },
+
   getRouteByID: function(pub_id) {
     if(routes_by_pub_id[pub_id] !== undefined){
-      emitter.emit("route", data.route);
+      emitter.emit("got_route", data.route);
       return
     }
 
     let query = `
       query get_single_route {
-        route(pubId:"${pubId}"){
+        route(pubId:"${pub_id}"){
           pubId
           name
           description
-          lines
+          bounds
         }
       }
     `;
@@ -115,17 +121,27 @@ module.exports = {
     .then(r => r.json())
     .then(data => {
       log_graphql_errors("get_single_route", data);
-      routes_by_pub_id[pub_id] = data.route
-      emitter.emit("route", data.route)
+      let route = data.data.route;
+      let b = JSON.parse(route.bounds);
+      let lat_1 = parseFloat(b[0][0]);
+      let lng_1 = parseFloat(b[0][1]);
+      let lat_2 = parseFloat(b[1][0]);
+      let lng_2 = parseFloat(b[1][1]);
+      route.bounds = new google.maps.LatLngBounds();
+      route.bounds.extend({lat: lat_1, lng: lng_1});
+      route.bounds.extend({lat: lat_2, lng: lng_2});
+      routes_by_pub_id[pub_id] = route;
+      emitter.emit("got_route", data.data.route);
     });
 
   },
 
-  subscribe: function(callback) {
+  subscribeGotRoutes: function(callback) {
     emitter.addListener("got_routes", callback);
   },
 
-  unsubscribe: function(callback) {
-    emitter.removeListener("got_routes", callback);
+  subscribeGotRoute: function(callback) {
+    emitter.addListener("got_route", callback);
   },
+
 };

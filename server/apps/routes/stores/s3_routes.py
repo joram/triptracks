@@ -31,14 +31,26 @@ class S3RoutesStore(object):
     return self._manifest
 
   def get_by_pub_id(self, pub_id):
-    geohash = self.get_manifest().get(pub_id)
-    for route in self.get(geohash):
-      if route.pub_id == pub_id:
-        return route
+    from apps.routes.models.route_metadata import RouteMetadata
+    rm = RouteMetadata.objects.get(pub_id=pub_id)
+    # filepath = self.route_paths.get(pub_id)
+    # if filepath is None:
+    #     return None
+    #
+    # with open(filepath) as f:
+    #     content = f.read()
+    # data = json.loads(content)
+    return Route(
+      name=rm.name,
+      pub_id=pub_id,
+      description=rm.description,
+      bounds=rm.bounds,
+      # owner_pub_id=data.get("owner_pub_id"),
+      # is_public=data.get("is_public", False)
+    )
 
   def add(self, route):
     key = os.path.join(self._path(route.geohash()), "{}.json".format(route.pub_id))
-    print("adding {}".format(key))
     s3 = boto3.resource('s3')
     object = s3.Object(bucket_name=self.bucket, key=key)
     object.put(Body=json.dumps(route.details()))
@@ -47,8 +59,6 @@ class S3RoutesStore(object):
     return os.path.join(self.base_path, "/".join(geohash))
 
   def _update_manifest(self):
-    print("updating manifest")
-
     routes = {}
     for key in self._get_matching_s3_keys(self.base_path):
       if "route_" in key:

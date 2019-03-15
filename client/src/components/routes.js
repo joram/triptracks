@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 import TrailRoute from "./trailRoute.js"
-import RouteDetails from "./routeDetails"
 import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
 import history from "../history"
 import Geohash from "latlon-geohash"
-let routes = require('../routes_store');
+import routes_store from '../routes_store'
 
 
 export class RoutesMapContainer extends Component {
@@ -14,17 +13,11 @@ export class RoutesMapContainer extends Component {
     this.map = React.createRef();
     this.map_center = {lat: 48.4284, lng: -123.3656};
     this.state = {visible_routes: []}
-    routes.subscribe(this.gotRoutes.bind(this));
-
-    history.listen((a, b) => {
-      // this.updateCurrentRoute();
-      this.centerOnRoute();
-    });
-
+    routes_store.subscribeGotRoutes(this.gotRoutes.bind(this));
+    routes_store.subscribeGotRoute(this.gotRoute.bind(this));
   }
 
   onIdle(){
-    console.log("idling, so getting more routes")
     this.getMoreRoutes();
   }
 
@@ -32,16 +25,15 @@ export class RoutesMapContainer extends Component {
     let bbox = this.map_bbox();
     let hash = this.hash(bbox);
     let zoom = this.zoom();
-    routes.getRoutesByHash(hash, zoom, false)
+    routes_store.getRoutesByHash(hash, zoom, false)
   }
 
   gotRoutes(data){
-    console.log(data)
     let visible_routes = [];
     let visible_route_pub_ids = [];
     let zoom = this.zoom();
     let hash = this.hash(this.map_bbox());
-    let routes_in_hash = routes.getRoutesByHash2(hash, zoom);
+    let routes_in_hash = routes_store.getRoutesByHash2(hash, zoom);
     routes_in_hash.forEach( (route) => {
       if(visible_route_pub_ids.indexOf(route.pubId) !== -1){
         return
@@ -61,14 +53,11 @@ export class RoutesMapContainer extends Component {
     this.setState({visible_routes:visible_routes})
   }
 
-  centerOnRoute(){
-    let bbox = this.url_bbox();
-    if(bbox !== null){
-      let c = bbox.getCenter();
-      this.map_bounds = bbox;
-      this.map_center = {lat: c.lat(), lng: c.lng()};
-      this.forceUpdate()
-    }
+  gotRoute(data) {
+    let urlParams = new URLSearchParams(history.location.search);
+    let url_pub_id = urlParams.get('route');
+    let route = routes_store.getRouteByID2(url_pub_id)
+    this.map.fitBounds(route.bounds)
   }
 
   url_bbox(){
@@ -128,9 +117,7 @@ export class RoutesMapContainer extends Component {
   }
 
   render(){
-    return <div id="map_and_route_details" >
-      <RouteDetails route={this.state.currentRoute} />
-      <GoogleMap
+    return <GoogleMap
         ref={map => {this.map = map}}
         defaultZoom={13}
         defaultCenter={this.map_center}
@@ -139,7 +126,6 @@ export class RoutesMapContainer extends Component {
       >
         {this.state.visible_routes}
       </GoogleMap>
-    </div>;
   }
 }
 

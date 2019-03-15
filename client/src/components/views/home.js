@@ -1,6 +1,8 @@
 import React from "react";
 import Routes from "../routes";
 import history from "../../history";
+import RouteDetails from "../routeDetails"
+
 
 class Home extends React.Component {
 
@@ -10,6 +12,7 @@ class Home extends React.Component {
     history.listen((a, b) => {
       this.setState({showing_route_details: this.pub_id_in_url()})
     });
+    window.addEventListener('resize', this.onResize.bind(this))
   }
 
   pub_id_in_url(){
@@ -18,6 +21,9 @@ class Home extends React.Component {
     return pubId !== null;
   }
 
+  onResize(){
+    this.forceUpdate()
+  }
 
   render(){
     const styles = {
@@ -35,12 +41,15 @@ class Home extends React.Component {
       container_style.height = `${window.innerHeight}px`
     }
 
-    return <Routes
-      googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
-      loadingElement={<div id="map_loading_element" style={styles} />}
-      containerElement={<div id="map_container" style={container_style} />}
-      mapElement={<div id="map_element" style={styles} />}
-      key="routes" />
+    return <div>
+      <RouteDetails/>
+      <Routes
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
+        loadingElement={<div id="map_loading_element" style={styles} />}
+        containerElement={<div id="map_container" style={container_style} />}
+        mapElement={<div id="map_element" style={styles} />}
+        key="routes" />
+      </div>
   }
 }
 
