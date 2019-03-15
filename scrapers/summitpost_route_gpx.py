@@ -2,14 +2,14 @@
 import json
 import os
 from base import BaseScraper
-from summitpost_route_details import ScrapeSummitPostDetails
+from summitpost_route_details import ScrapeSummitPostRouteDetails
 
 
-class ScrapeSummitPostGPX(BaseScraper):
+class ScrapeSummitPostRouteGPX(BaseScraper):
 
     def __init__(self, debug=True):
         BaseScraper.__init__(self, debug)
-        self.details_scraper = ScrapeSummitPostDetails(False)
+        self.details_scraper = ScrapeSummitPostRouteDetails(False)
         self.base_url = "https://www.summitpost.org/"
 
     def item_urls(self):
@@ -29,7 +29,7 @@ class ScrapeSummitPostGPX(BaseScraper):
 
 
 if __name__ == "__main__":
-    s = ScrapeSummitPostGPX(False)
+    s = ScrapeSummitPostRouteGPX(False)
     print("running gpx scraper")
     for url in s.item_urls():
         s.get_content(url)

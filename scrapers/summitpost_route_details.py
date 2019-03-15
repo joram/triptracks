@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import json
 import os
+import cssutils
 from bs4 import BeautifulSoup
 from base import BaseScraper
 from summitpost_mountain_routes_list import ScrapeSummitPostMountainRoutesList
@@ -13,7 +14,7 @@ django.setup()
 from apps.routes.models.route_metadata import RouteMetadata
 
 
-class ScrapeSummitPostRawHTML(BaseScraper):
+class ScrapeSummitPostRouteRawHTML(BaseScraper):
 
     def __init__(self):
         BaseScraper.__init__(self)
@@ -34,12 +35,12 @@ class ScrapeSummitPostRawHTML(BaseScraper):
         return os.path.abspath(os.path.join(self.data_dir, "./{}.html".format(id)))
 
 
-class ScrapeSummitPostDetails(BaseSummitPostScraper):
+class ScrapeSummitPostRouteDetails(BaseSummitPostScraper):
 
     def __init__(self, debug=True):
         BaseScraper.__init__(self, debug)
         self.routes_list_scraper = ScrapeSummitPostMountainRoutesList()
-        self.route_html_scraper = ScrapeSummitPostRawHTML()
+        self.route_html_scraper = ScrapeSummitPostRouteRawHTML()
         self.base_url = "https://www.summitpost.org/"
 
     def item_urls(self):
@@ -62,29 +63,40 @@ class ScrapeSummitPostDetails(BaseSummitPostScraper):
             return json.dumps({})
 
         name = bs.find("h1", {"class": "adventure-title"}).string
-
         breadcrumbs = bs.find("ul", {"class": "breadcrumbs"})
         mountain_name = breadcrumbs.find_all("li")[1].find("a").text
+        gpx_file = self._details(bs).get("gpx file")
 
         # clarify generic names
         if name.lower() in ["west ridge"]:
             name = f"{name} of {mountain_name}"
-            print(name)
+
+        cover_image_div = bs.find("div", {"class": "cover-image"})
+        div_style = cover_image_div['style']
+        style = cssutils.parseStyle(div_style)
+        trail_image_url = style['background-image'].lstrip("url(").rstrip(")")
+        description = self._description(bs)
 
         details = {
+            "description": description.get("Route Description"),
+            "directions": description.get("Approach"),
+            "suggested_gear": description.get("Essential Gear"),
+            "gpx_url": gpx_file,
+            "metadata": self._details(bs),
+            "name": name,
+            "subheading": "",
+            "trail_image_url": trail_image_url,
+
             "url": url,
-            "title": name,
             "mountain_name": mountain_name,
-            "description": self._description(bs),
-            "details": self._details(bs),
         }
         return json.dumps(details)
 
 
 if __name__ == "__main__":
-    from summitpost_route_gpx import ScrapeSummitPostGPX
-    s = ScrapeSummitPostDetails(True)
-    s_gpx = ScrapeSummitPostGPX()
+    from summitpost_route_gpx import ScrapeSummitPostRouteGPX
+    s = ScrapeSummitPostRouteDetails(True)
+    s_gpx = ScrapeSummitPostRouteGPX()
     for route in s.json_items():
         try:
             rm = RouteMetadata.objects.get(name=route.get("title"))
@@ -103,7 +115,7 @@ if __name__ == "__main__":
                 gpx_content = s_gpx.get_content(gpx_file)
                 lines = lines_from_gpx_string(gpx_content)
                 rm = RouteMetadata.objects.create(
-                    name=route.get("title"),
+                    name=route.get("name"),
                     geohash=geohash(bbox(lines)),
                     bounds=bbox(lines),
                     description=route.get("description"),

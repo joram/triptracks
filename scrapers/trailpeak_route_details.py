@@ -32,7 +32,7 @@ class ScrapeTrailPeakRawHTML(BaseScraper):
 
 class ScrapeTrailPeakDetails(BaseScraper):
 
-    def __init__(self, debug):
+    def __init__(self, debug=False):
         BaseScraper.__init__(self)
         self.html_scraper = ScrapeTrailPeakRawHTML()
         self.html_scraper.debug = debug
@@ -97,7 +97,6 @@ class ScrapeTrailPeakDetails(BaseScraper):
             "directions": directions,
             "name": name,
             "subheading": subheading,
-            "trail_id": trail_id,
             "trail_image_url": image_url,
             "url": url,
             "metadata": self.get_metadata(bs),
