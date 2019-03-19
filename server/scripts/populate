@@ -2,23 +2,103 @@
 import django
 django.setup()
 import pprint
+from scrapers.trailpeak_route_gpx import ScrapeTrailPeakGPX
 from scrapers.summitpost_route_details import ScrapeSummitPostRouteDetails
 from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
+from apps.routes.models.route_metadata import RouteMetadata
+from utils.lines import lines_from_gpx_string, geohash, bbox, reduced_lines, max_vertices
 
+def get_or_create_route(data, source, i):
+    # expected keys
+    # "description","directions","name",
+    # "mountain_name","subheading",
+    # "trail_image_url","url","metadata", "gpx_url",
 
-def get_or_create_route(data):
-    pprint.pprint(data)
-    print()
+    # TODO: create RouteMetadata object
+    # TODO: push to S3 gpx file
+    # TODO: push to S3 image file
+    if data.get("gpx_url") is None or data.get("gpx_url").endswith("-.gpx"):
+#        print("skip")
+        return
 
+    try:
+        gpx_content = ScrapeTrailPeakGPX().get_content(data.get("gpx_url"))
+    except:
+        return
+
+    lines = lines_from_gpx_string(gpx_content)
+    if len(lines) == 0:
+#        print("skip")
+        return
+
+    try:
+        rm = RouteMetadata.objects.get(
+            name=data.get("name"),
+        )
+        print("have", source, i, "\t", rm.name)
+        rm.mountain_name = data.get("mountain_name")
+        rm.geohash = geohash(bbox(lines))
+        rm.bounds = bbox(lines)
+        rm.description = data.get("description")
+        rm.suggested_gear = data.get("suggested_gear", "")
+
+        rm.source = source
+        rm.source_url = data.get("url")
+        rm.source_image_url = data.get("trail_image_url")
+        rm.source_gpx_url = data.get("gpx_url")
+
+    except RouteMetadata.DoesNotExist:
+        bb = bbox(lines)
+        rm = RouteMetadata.objects.create(
+            name=data.get("name"),
+            mountain_name=data.get("mountain_name"),
+            geohash=geohash(bb),
+            bounds=bbox(lines),
+            description=data.get("description"),
+            suggested_gear=data.get("suggested_gear"),
+
+            source=source,
+            source_url=data.get("url"),
+            source_image_url=data.get("source_image_url"),
+            source_gpx_url=data.get("source_gpx_url"),
+        )
+        print("created", source, i, "\t", rm.name)
+    set_lines(rm, lines)
+    rm.save()
+
+def set_lines(rm, lines):
+    rm.lines_zoom_1 = reduced_lines(lines, max_vertices(1))
+    rm.lines_zoom_2 = reduced_lines(lines, max_vertices(2))
+    rm.lines_zoom_3 = reduced_lines(lines, max_vertices(3))
+    rm.lines_zoom_4 = reduced_lines(lines, max_vertices(4))
+    rm.lines_zoom_5 = reduced_lines(lines, max_vertices(5))
+    rm.lines_zoom_6 = reduced_lines(lines, max_vertices(6))
+    rm.lines_zoom_7 = reduced_lines(lines, max_vertices(7))
+    rm.lines_zoom_8 = reduced_lines(lines, max_vertices(8))
+    rm.lines_zoom_9 = reduced_lines(lines, max_vertices(9))
+    rm.lines_zoom_10 = reduced_lines(lines, max_vertices(10))
+    rm.lines_zoom_11 = reduced_lines(lines, max_vertices(11))
+    rm.lines_zoom_12 = reduced_lines(lines, max_vertices(12))
+    rm.lines_zoom_13 = reduced_lines(lines, max_vertices(13))
+    rm.lines_zoom_14 = reduced_lines(lines, max_vertices(14))
+    rm.lines_zoom_15 = reduced_lines(lines, max_vertices(15))
+    rm.lines_zoom_16 = reduced_lines(lines, max_vertices(16))
+    rm.lines_zoom_17 = reduced_lines(lines, max_vertices(17))
+    rm.lines_zoom_18 = reduced_lines(lines, max_vertices(18))
+    rm.lines_zoom_19 = reduced_lines(lines, max_vertices(19))
+    rm.lines_zoom_20 = reduced_lines(lines, max_vertices(20))
 
 if __name__ == "__main__":
     sp_scraper = ScrapeSummitPostRouteDetails()
     tp_scraper = ScrapeTrailPeakDetails()
-    scrapers = [sp_scraper, tp_scraper]
+    scrapers = [
+      (tp_scraper.json_items(), "trailpeak"),
+      (sp_scraper.json_items(), "summitpost"),
+    ]
 
-    for scraper in scrapers:
-        print(scraper.__class__.__name__)
-        for data in scraper.json_items():
-            get_or_create_route(data)
-            break
-        print()
+    i = 0
+    while True:
+        scraper, source = scrapers[i%2]
+        data = scraper.__next__()
+        get_or_create_route(data, source, i)
+        i += 1

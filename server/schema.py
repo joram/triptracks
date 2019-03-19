@@ -18,32 +18,43 @@ class Query(graphene.ObjectType):
   packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
 
   def resolve_route(self, info, pub_id):
-    return get_cache(0).get_by_pub_id(pub_id)
+    rm = RouteMetadata.objects.get(pub_id=pub_id)
+    return rm.route(zoom=14)
 
   def resolve_routes(self, info, geohash, zoom):
     print(f"getting {geohash}::{zoom}")
-    routes = get_cache(zoom).get(geohash)
-
-    route_metas = list(RouteMetadata.objects.filter(pub_id__in=[r.pub_id for r in routes]))
-    bounds = {}
-    for rm in route_metas:
-      bounds[rm.pub_id] = rm.bounds
-
-    routes_with_bounds = []
-    for route in routes:
-      route.bounds = bounds[route.pub_id]
-      routes_with_bounds.append(route)
-    return routes_with_bounds
+    route_metas = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
+      f"lines_zoom_{zoom}",
+      "name",
+      "description",
+      "pub_id",
+      "bounds",
+    )
+    routes = [Route(
+      lines=data[0],
+      name=data[1],
+      description=data[2],
+      pub_id=data[3],
+      bounds=data[4],
+    ) for data in route_metas]
+    return routes
 
   def resolve_routes_search(self, info, search_text, limit=10):
     limit = min(limit, 10)
-    cache = get_cache(0)
-    route_metas = RouteMetadata.objects.filter(name__icontains=search_text)[:limit]
-    routes = []
-    for rm in route_metas:
-      route = cache.get_by_pub_id(rm.pub_id)
-      route.bounds = rm.bounds
-      routes.append(route)
+    route_metas = RouteMetadata.objects.filter(name__icontains=search_text).values_list(
+      f"lines_zoom_15",
+      "name",
+      "description",
+      "pub_id",
+      "bounds",
+    )[:limit]
+    routes = [Route(
+      lines=data[0],
+      name=data[1],
+      description=data[2],
+      pub_id=data[3],
+      bounds=data[4],
+    ) for data in route_metas]
     return routes
 
   def resolve_trip_plans(self, info):

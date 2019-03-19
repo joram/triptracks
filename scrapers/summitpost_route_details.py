@@ -16,8 +16,9 @@ from apps.routes.models.route_metadata import RouteMetadata
 
 class ScrapeSummitPostRouteRawHTML(BaseScraper):
 
-    def __init__(self):
+    def __init__(self, debug=False):
         BaseScraper.__init__(self)
+        self.debug = debug
         self.base_url = "https://www.summitpost.org/undefined-behaviour/"
 
     def item_urls(self):
@@ -37,7 +38,7 @@ class ScrapeSummitPostRouteRawHTML(BaseScraper):
 
 class ScrapeSummitPostRouteDetails(BaseSummitPostScraper):
 
-    def __init__(self, debug=True):
+    def __init__(self, debug=False):
         BaseScraper.__init__(self, debug)
         self.routes_list_scraper = ScrapeSummitPostMountainRoutesList()
         self.route_html_scraper = ScrapeSummitPostRouteRawHTML()
@@ -95,7 +96,7 @@ class ScrapeSummitPostRouteDetails(BaseSummitPostScraper):
 
 if __name__ == "__main__":
     from summitpost_route_gpx import ScrapeSummitPostRouteGPX
-    s = ScrapeSummitPostRouteDetails(True)
+    s = ScrapeSummitPostRouteDetails(False)
     s_gpx = ScrapeSummitPostRouteGPX()
     for route in s.json_items():
         try:

@@ -75,6 +75,12 @@ class ScrapeTrailPeakDetails(BaseScraper):
         except:
             pass
 
+        mountain_name = ""
+        try:
+            mountain_name = bs.find("div", {"class": "TableHeader"}).find("h2").text
+        except:
+            pass
+
         image_url = ""
         try:
             image_url = bs.find("img", {"alt": "trail-image"}).attrMap["src"]
@@ -96,6 +102,7 @@ class ScrapeTrailPeakDetails(BaseScraper):
             "description": description,
             "directions": directions,
             "name": name,
+            "mountain_name": mountain_name,
             "subheading": subheading,
             "trail_image_url": image_url,
             "url": url,
