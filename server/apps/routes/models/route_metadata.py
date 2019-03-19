@@ -77,6 +77,7 @@ class RouteMetadata(models.Model):
             pub_id=self.pub_id,
             zoom=1,
             bounds=self.bounds,
+            source_image_url=self.source_image_url,
 
             # TODO
             owner_pub_id="user_whoknows",

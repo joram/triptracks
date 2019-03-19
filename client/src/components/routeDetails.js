@@ -51,9 +51,8 @@ class RouteDetails extends React.Component {
     }
 
     return <div key="route_details" id="route_details" style={style}>
-      <h3 style={{ width:"300px" }}>{this.state.route.name}</h3>
-      <img src={this.state.route.sourceImageUrl} />
-      "{this.state.route.sourceImageUrl}"
+      <h3 style={{ width:"300px", fontSize:"20px", marginBottom:"0px", paddingTop:"5px", textAlign:"center"}}>{this.state.route.name}</h3>
+      <img src={this.state.route.sourceImageUrl} style={{width:"100%", padding:"5px"}}/>
       {this.state.route.description}
     </div>
   }
