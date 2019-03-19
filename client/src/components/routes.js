@@ -33,21 +33,28 @@ export class RoutesMapContainer extends Component {
     let visible_route_pub_ids = [];
     let zoom = this.zoom();
     let hash = this.hash(this.map_bbox());
+    // if(data.zoom !== zoom || data.hash !== hash){
+    //   console.log("got old data")
+    //   return
+    // }
     let routes_in_hash = routes_store.getRoutesByHash2(hash, zoom);
     routes_in_hash.forEach( (route) => {
       if(visible_route_pub_ids.indexOf(route.pubId) !== -1){
         return
       }
-      visible_route_pub_ids.push(route.pubId)
-      if (route.bounds) {
-        if (this.map_bbox().intersects(route.bounds)) {
-          visible_routes.push(<TrailRoute
-            key={route.pubId}
-            pubId={route.pubId}
-            zoom={zoom}
-            data={route}
-          />)
-        }
+      if (
+        route.bounds &&
+        this.map_bbox().intersects(route.bounds) &&
+        route.lines !== null
+      ) {
+        visible_route_pub_ids.push(route.pubId)
+        visible_routes.push(<TrailRoute
+          key={"route_"+route.pubId}
+          pubId={route.pubId}
+          bounds={route.bounds}
+          zoom={zoom}
+          data={route}
+        />)
       }
     });
     this.setState({visible_routes:visible_routes})
@@ -117,6 +124,16 @@ export class RoutesMapContainer extends Component {
   }
 
   render(){
+    this.state.visible_routes.forEach((r) => {
+      let state = r.state
+      if(state  !== undefined ){
+        let refresh = state.refresh
+        if(refresh === undefined){ refresh = true}
+        state.refresh = !refresh
+        r.setState(state)
+      }
+    })
+
     return <GoogleMap
         ref={map => {this.map = map}}
         defaultZoom={13}
