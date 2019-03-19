@@ -1,6 +1,6 @@
 import React from "react";
 import history from "../history";
-import routes_store from '../routes_store'
+import routeStore from '../routeStore'
 
 
 class RouteDetails extends React.Component {
@@ -8,22 +8,21 @@ class RouteDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {route: {}};
-    routes_store.subscribeGotRoute(this.gotRoute.bind(this));
+    routeStore.subscribeGotRoute(this.gotRoute.bind(this));
 
     history.listen((a, b) => {
       let pub_id = this.url_pub_id();
       if(pub_id !== undefined){
-        routes_store.getRouteByID(pub_id);
+        routeStore.getRouteByID(pub_id);
       }
     });
 
     let pub_id = this.url_pub_id();
     if(pub_id !== undefined){
-      routes_store.getRouteByID(pub_id);
+      routeStore.getRouteByID(pub_id);
     }
 
   }
-
 
   url_pub_id(){
     let urlParams = new URLSearchParams(history.location.search);
@@ -31,7 +30,7 @@ class RouteDetails extends React.Component {
   }
 
   gotRoute(){
-    let route = routes_store.getRouteByID2(this.url_pub_id());
+    let route = routeStore.getRouteByID2(this.url_pub_id());
     this.setState({route: route})
   }
 
@@ -53,6 +52,8 @@ class RouteDetails extends React.Component {
 
     return <div key="route_details" id="route_details" style={style}>
       <h3 style={{ width:"300px" }}>{this.state.route.name}</h3>
+      <img src={this.state.route.sourceImageUrl} />
+      "{this.state.route.sourceImageUrl}"
       {this.state.route.description}
     </div>
   }

@@ -9,7 +9,6 @@ module.exports = {
     let bounds = new google.maps.LatLngBounds();
     bounds.extend({lat: lat_1, lng: lng_1});
     bounds.extend({lat: lat_2, lng: lng_2});
-    console.log("converted", s, "to", bounds);
     return bounds
   },
 

@@ -17,6 +17,7 @@ class Route(graphene.ObjectType):
     zoom = graphene.Int()
     bounds = graphene.JSONString()
     description = graphene.String()
+    source_image_url = graphene.String()
     lines = graphene.JSONString()
     owner = graphene.Field(UserType)
     is_public = graphene.Boolean()
@@ -37,7 +38,7 @@ class Route(graphene.ObjectType):
         )
         return route
 
-    def __init__(self, lines=[], name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None, is_public=False, bounds=None):
+    def __init__(self, lines=[], name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None, is_public=False, bounds=None, source_image_url=None):
         super(Route, self).__init__()
         self.pub_id = pub_id
         self.owner_pub_id = owner_pub_id
@@ -47,6 +48,7 @@ class Route(graphene.ObjectType):
         self.lines = lines
         self.bounds = bounds
         self.is_public = is_public
+        self.source_image_url = source_image_url
 
         if self.pub_id is None:
           rd = random.Random()

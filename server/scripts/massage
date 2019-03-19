@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import django
 django.setup()
+
 import pprint
 from scrapers.trailpeak_route_gpx import ScrapeTrailPeakGPX
 from scrapers.summitpost_route_details import ScrapeSummitPostRouteDetails
@@ -8,6 +9,7 @@ from scrapers.summitpost_route_gpx import ScrapeSummitPostRouteGPX
 from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
 from apps.routes.models.route_metadata import RouteMetadata
 from utils.lines import lines_from_gpx_string, geohash, bbox, reduced_lines, max_vertices
+
 
 def set_lines(rm, lines):
     rm.lines_zoom_1 = reduced_lines(lines, max_vertices(1))
@@ -32,7 +34,7 @@ def set_lines(rm, lines):
     rm.lines_zoom_20 = reduced_lines(lines, max_vertices(20))
 
 
-def massage(rm):
+def _massage_lines(rm):
     gpx_scraper = {
         "trailpeak": ScrapeTrailPeakGPX(),
         "summitpost": ScrapeSummitPostRouteGPX(),
@@ -50,12 +52,32 @@ def massage(rm):
     set_lines(rm, lines)
     rm.save()
 
+
+def massage(data):
+    try:
+        name = data.get("name")
+        img_url = data.get("trail_image_url")
+        src_url = data.get("url")
+        rm = RouteMetadata.objects.get(name=name)
+        if img_url != "":
+            print(name, "\t", img_url, "\t", src_url)
+    except RouteMetadata.DoesNotExist:
+        pass
+
+
 if __name__ == "__main__":
+    sp_scraper = ScrapeSummitPostRouteDetails()
+    tp_scraper = ScrapeTrailPeakDetails()
+    scrapers = [
+      (tp_scraper.json_items(), "trailpeak"),
+      (sp_scraper.json_items(), "summitpost"),
+    ]
+
     i = 0
-    total = RouteMetadata.objects.all().count()
-    print(f"processing {total} routes")
+    # total = RouteMetadata.objects.all().count()
+    # print(f"processing {total} routes")
     while True:
-        for rm  in RouteMetadata.objects.all()[i:min(i+100, total-1)]:
-            print(i, "\t", rm.name)
-            massage(rm)
-            i += 1
+        scraper, source = scrapers[i % 2]
+        data = scraper.__next__()
+        massage(data)
+        i += 1

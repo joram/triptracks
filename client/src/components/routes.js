@@ -3,7 +3,7 @@ import TrailRoute from "./trailRoute.js"
 import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
 import history from "../history"
 import Geohash from "latlon-geohash"
-import routes_store from '../routes_store'
+import routeStore from '../routeStore'
 
 
 export class RoutesMapContainer extends Component {
@@ -13,8 +13,8 @@ export class RoutesMapContainer extends Component {
     this.map = React.createRef();
     this.map_center = {lat: 48.4284, lng: -123.3656};
     this.state = {visible_routes: []}
-    routes_store.subscribeGotRoutes(this.gotRoutes.bind(this));
-    routes_store.subscribeGotRoute(this.gotRoute.bind(this));
+    routeStore.subscribeGotRoutes(this.gotRoutes.bind(this));
+    routeStore.subscribeGotRoute(this.gotRoute.bind(this));
   }
 
   onIdle(){
@@ -25,7 +25,7 @@ export class RoutesMapContainer extends Component {
     let bbox = this.map_bbox();
     let hash = this.hash(bbox);
     let zoom = this.zoom();
-    routes_store.getRoutesByHash(hash, zoom, false)
+    routeStore.getRoutesByHash(hash, zoom, false)
   }
 
   gotRoutes(data){
@@ -37,7 +37,7 @@ export class RoutesMapContainer extends Component {
     //   console.log("got old data")
     //   return
     // }
-    let routes_in_hash = routes_store.getRoutesByHash2(hash, zoom);
+    let routes_in_hash = routeStore.getRoutesByHash2(hash, zoom);
     routes_in_hash.forEach( (route) => {
       if(visible_route_pub_ids.indexOf(route.pubId) !== -1){
         return
@@ -63,7 +63,7 @@ export class RoutesMapContainer extends Component {
   gotRoute(data) {
     let urlParams = new URLSearchParams(history.location.search);
     let url_pub_id = urlParams.get('route');
-    let route = routes_store.getRouteByID2(url_pub_id)
+    let route = routeStore.getRouteByID2(url_pub_id)
     this.map.fitBounds(route.bounds)
   }
 

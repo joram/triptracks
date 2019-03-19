@@ -16,7 +16,7 @@ class RoutesStore(object):
 
     def __init__(self):
         d = os.path.dirname(os.path.realpath(__file__))
-        self.dir = os.path.join(d, "../../../data/routes_store/")
+        self.dir = os.path.join(d, "../../../data/routesStore/")
         self.count = 0
         self.route_paths = {}
 

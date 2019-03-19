@@ -5,18 +5,18 @@ import random
 import names
 import mock
 
-route_store = None
+routeStore = None
 
 
 def mock_get_cache(zoom):
-  global route_store
-  if route_store is None:
-    route_store = RoutesStore()
-    route_store.dir = route_store.dir.replace("routes_store", "routes_store_test")
+  global routeStore
+  if routeStore is None:
+    routeStore = RoutesStore()
+    routeStore.dir = routeStore.dir.replace("routesStore", "routeStore_test")
     route_factory = RouteFactory()
     for i in range(0, 10):
-      route_store.add(route_factory.get())
-  return route_store
+      routeStore.add(route_factory.get())
+  return routeStore
 
 
 class BaseFactory(object):

@@ -1,6 +1,7 @@
 import React from "react";
 import history from "../history";
 import {FormControl, Nav} from "react-bootstrap";
+import routeStore from '../routeStore'
 
 function debounce(func, wait, immediate) {
 	var timeout;
@@ -15,33 +16,13 @@ function debounce(func, wait, immediate) {
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
 	};
-};
-
-function log_graphql_errors(data){
-  if(data.errors !== undefined){
-    data.errors.forEach(function(err){
-      console.log("error: ",err.message);
-    });
-  }
 }
+
 
 class RouteSearchResult extends React.Component {
 
-  bbox(){
-    let lines = JSON.parse(this.props.route.lines);
-    let bounds = new google.maps.LatLngBounds();
-    lines.forEach((line) => {
-      line.forEach((coord) => {
-        let lat = parseFloat(coord[0]);
-        let lng = parseFloat(coord[1]);
-        bounds.extend(new google.maps.LatLng({lat:lat, lng:lng}));
-      })
-    });
-    return bounds
-  }
-
   handleClick(e){
-    history.push(`/?route=${this.props.route.pubId}&bbox=${this.bbox().toUrlValue()}`)
+    history.push(`/?route=${this.props.route.pubId}&bbox=${this.props.route.bounds.toUrlValue()}`);
     this.props.parent.resultClicked()
   }
 
@@ -55,6 +36,7 @@ class RouteSearchResult extends React.Component {
   }
 }
 
+
 class RouteSearchResults extends React.Component {
 
   constructor(props) {
@@ -65,7 +47,7 @@ class RouteSearchResults extends React.Component {
   }
 
   resultClicked(){
-    this.state.show = false
+    this.state.show = false;
     this.forceUpdate()
   }
 
@@ -101,63 +83,32 @@ class RoutesSearch extends React.Component {
     this.state = {
       results: [],
       searchText: null,
-    }
+    };
+    routeStore.subscribeGotSearch(this.gotResults.bind(this))
+  }
 
-    this.url = "https://app.triptracks.io/graphql";
-    if(window.location.hostname==="localhost"){
-      this.url = "http://127.0.0.1:8000/graphql";
+  gotResults(data){
+    if(data.search_text !== this.state.searchText){
+      return
     }
+    this.setState({
+      results: routeStore.getRoutesBySearch2(data.search_text)
+    })
 
   }
 
   search = debounce(function (){
-    console.log("searching for ", this.state.searchText);
-    let searchtext = this.state.searchText;
-
-    // cleared search
-    if(searchtext === ""){
-      this.setState({
-        results: []
-      });
-      return
-    }
-
-    let query = `
-      query route_search {
-        routesSearch(searchText:"${searchtext}"){
-          pubId
-          name
-          lines
-        }
-      }
-    `;
-
-    let body = JSON.stringify({query});
-    return fetch(this.url, {
-      method: 'POST',
-      mode: "cors",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: body
-    })
-    .then(r => r.json())
-    .then(data => {
-      log_graphql_errors(data);
-      if(searchtext!==this.state.searchText){
-        return
-      }
-      this.setState({
-        results: data.data.routesSearch
-      });
-    });
-
+    routeStore.getRoutesBySearch(this.state.searchText);
   }, 200);
 
   handleChange(e){
-    this.state.searchText = e.target.value;
-    this.search(e.target.value);
+    let searchText = e.target.value;
+    this.state.searchText = searchText;
+    this.setState({results: []});
+    if(searchText.length < 3){
+      return
+    }
+    this.search(searchText);
   }
 
   render() {

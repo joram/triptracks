@@ -29,6 +29,7 @@ class Query(graphene.ObjectType):
       "description",
       "pub_id",
       "bounds",
+      "source_image_url",
     )
     routes = [Route(
       lines=data[0],
@@ -36,6 +37,7 @@ class Query(graphene.ObjectType):
       description=data[2],
       pub_id=data[3],
       bounds=data[4],
+      source_image_url=data[5],
     ) for data in route_metas]
     return routes
 

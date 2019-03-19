@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown, MenuItem, Image} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import RoutesSearch from './route_search'
+import RoutesSearch from './routeSearch'
 
 
 const PROFILE_MENU_ACTIONS = {
