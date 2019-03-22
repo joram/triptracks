@@ -14,38 +14,41 @@ def get_or_create_route(data, source, i):
     # "mountain_name","subheading",
     # "trail_image_url","url","metadata", "gpx_url",
 
-    # TODO: create RouteMetadata object
     # TODO: push to S3 gpx file
     # TODO: push to S3 image file
     if data.get("gpx_url") is None or data.get("gpx_url").endswith("-.gpx"):
-#        print("skip")
+        print(f"skip {i}, no gpx_url {data.get('url')}")
         return
 
     try:
         gpx_content = ScrapeTrailPeakGPX().get_content(data.get("gpx_url"))
     except:
+        print(f"skip {i}, bad gpx_url")
         return
 
     lines = lines_from_gpx_string(gpx_content)
     if len(lines) == 0:
-#        print("skip")
+        print(f"skip {i}, no lines")
         return
 
     try:
         rm = RouteMetadata.objects.get(
             name=data.get("name"),
         )
-        print("have", source, i, "\t", rm.name)
         rm.mountain_name = data.get("mountain_name")
         rm.geohash = geohash(bbox(lines))
         rm.bounds = bbox(lines)
         rm.description = data.get("description")
         rm.suggested_gear = data.get("suggested_gear", "")
-
         rm.source = source
         rm.source_url = data.get("url")
         rm.source_image_url = data.get("trail_image_url")
         rm.source_gpx_url = data.get("gpx_url")
+        set_lines(rm, lines)
+        rm.save()
+
+        print("have", source, i, len(lines), "\t", lengths(rm), "\t", rm.name)
+
 
     except RouteMetadata.DoesNotExist:
         bb = bbox(lines)
@@ -62,9 +65,33 @@ def get_or_create_route(data, source, i):
             source_image_url=data.get("source_image_url"),
             source_gpx_url=data.get("source_gpx_url"),
         )
-        print("created", source, i, "\t", rm.name)
-    set_lines(rm, lines)
-    rm.save()
+        set_lines(rm, lines)
+        rm.save()
+        print("created", source, i, len(lines[0]), lengths(rm), "\t", rm.name)
+
+def lengths(rm):
+    return ", ".join([
+        str(len(rm.lines_zoom_1[0])),
+        str(len(rm.lines_zoom_2[0])),
+        str(len(rm.lines_zoom_3[0])),
+        str(len(rm.lines_zoom_4[0])),
+        str(len(rm.lines_zoom_5[0])),
+        str(len(rm.lines_zoom_6[0])),
+        str(len(rm.lines_zoom_7[0])),
+        str(len(rm.lines_zoom_8[0])),
+        str(len(rm.lines_zoom_9[0])),
+        str(len(rm.lines_zoom_10[0])),
+        str(len(rm.lines_zoom_11[0])),
+        str(len(rm.lines_zoom_12[0])),
+        str(len(rm.lines_zoom_13[0])),
+        str(len(rm.lines_zoom_14[0])),
+        str(len(rm.lines_zoom_15[0])),
+        str(len(rm.lines_zoom_16[0])),
+        str(len(rm.lines_zoom_17[0])),
+        str(len(rm.lines_zoom_18[0])),
+        str(len(rm.lines_zoom_19[0])),
+        str(len(rm.lines_zoom_20[0])),
+    ])
 
 def set_lines(rm, lines):
     rm.lines_zoom_1 = reduced_lines(lines, max_vertices(1))
@@ -93,12 +120,12 @@ if __name__ == "__main__":
     tp_scraper = ScrapeTrailPeakDetails()
     scrapers = [
       (tp_scraper.json_items(), "trailpeak"),
-      (sp_scraper.json_items(), "summitpost"),
+#      (sp_scraper.json_items(), "summitpost"),
     ]
 
     i = 0
     while True:
-        scraper, source = scrapers[i%2]
+        scraper, source = scrapers[0]
         data = scraper.__next__()
         get_or_create_route(data, source, i)
         i += 1

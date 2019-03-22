@@ -16,9 +16,7 @@ let routes_by_search = {};
 function log_graphql_errors(query_name, data){
   if(data.errors !== undefined){
     data.errors.forEach(function(err){
-      if(err.message !== "Circular reference detected"){
-        console.log(query_name, " error: ", err.message);
-      }
+      console.log(query_name, " error: ", err.message);
     });
   }
 }
@@ -26,15 +24,13 @@ function log_graphql_errors(query_name, data){
 function routes_from_graphql_response(routes, hasLines){
   let results = [];
   routes.forEach(function(route){
+    if(route.lines === null){
+      return
+    }
     if(hasLines){
       route.lines = JSON.parse(route.lines);
     }
-    try {
-      route.bounds = line_utils.string_to_bbox(route.bounds);
-    } catch (e) {
-      console.log("error")
-      console.log(e)
-    }
+    route.bounds = line_utils.string_to_bbox(route.bounds);
     results.push(route);
   });
   return results
@@ -48,7 +44,11 @@ module.exports = {
 
   getRoutesByHash: function(hash, zoom) {
 
-    if(routes_by_hash[hash] !== undefined && routes_by_hash[hash][zoom] !== undefined){
+    if(
+      routes_by_hash[hash] !== undefined &&
+      routes_by_hash[hash][zoom] !== undefined &&
+      routes_by_hash[hash][zoom] !== null)
+    {
       emitter.emit("got_routes", {hash:hash, zoom:zoom});
       return
     }
@@ -76,6 +76,7 @@ module.exports = {
     })
     .then(r => r.json())
     .then(data => {
+      console.log(data);
       log_graphql_errors("get_more_routes", data);
       let routes = data.data.routes;
       if(routes === null){

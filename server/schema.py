@@ -1,5 +1,4 @@
 import graphene
-from apps.routes.stores import get_cache
 from apps.trips.models import Plan
 from apps.routes.models import Route, RouteMetadata
 from apps.trips.schema import TripPlanType
@@ -8,7 +7,6 @@ from apps.packing.models import PackingList
 
 
 class Query(graphene.ObjectType):
-
   route = graphene.Field(Route, pub_id=graphene.String())
   routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
   routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
@@ -23,21 +21,18 @@ class Query(graphene.ObjectType):
 
   def resolve_routes(self, info, geohash, zoom):
     print(f"getting {geohash}::{zoom}")
+
     route_metas = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
-      f"lines_zoom_{zoom}",
       "name",
-      "description",
       "pub_id",
       "bounds",
-      "source_image_url",
+      f"lines_zoom_{zoom}",
     )
     routes = [Route(
-      lines=data[0],
-      name=data[1],
-      description=data[2],
-      pub_id=data[3],
-      bounds=data[4],
-      source_image_url=data[5],
+      name=data[0],
+      pub_id=data[1],
+      bounds=data[2],
+      lines=data[3],
     ) for data in route_metas]
     return routes
 

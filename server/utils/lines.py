@@ -82,10 +82,17 @@ def reduced_lines(original_lines, max_vertices):
     if max_vertices == 0:
       continue
     step = int(total_vertices / max_vertices)
+
     line = []
+    line.append(original_line[0])
     for i in range(0, len(original_line) - 1, step):
       line.append(original_line[i])
     line.append(original_line[-1])
+
+    if len(line) <= 1:
+      print(len(line), max_vertices, original_lines)
+      raise Exception()
+
     lines.append(line)
   return lines
 
