@@ -8,7 +8,7 @@ class RouteDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {route: {}};
-    routeStore.subscribeGotRoute(this.gotRoute.bind(this));
+    routeStore.subscribeGotRouteByPubId(this.gotRoute.bind(this));
 
     history.listen((a, b) => {
       let pub_id = this.url_pub_id();

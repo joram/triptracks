@@ -24,10 +24,7 @@ function log_graphql_errors(query_name, data){
 function routes_from_graphql_response(routes, hasLines){
   let results = [];
   routes.forEach(function(route){
-    if(route.lines === null){
-      return
-    }
-    if(hasLines){
+    if(route.lines !== null && hasLines){
       route.lines = JSON.parse(route.lines);
     }
     route.bounds = line_utils.string_to_bbox(route.bounds);
@@ -36,63 +33,100 @@ function routes_from_graphql_response(routes, hasLines){
   return results
 }
 
+async function getRoutesPage(hash, zoom, first, skip){
+  let query = `
+    query get_routes_by_geohash {
+      routes(geohash:"${hash}", zoom:${zoom}, first:${first}, skip:${skip}){
+        pubId
+        bounds
+        lines
+      }
+    }
+  `;
+  let body = JSON.stringify({query});
+  return fetch(url, {
+    method: 'POST',
+    mode: "cors",
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: body
+  })
+  .then(r => r.json())
+  .then(data => {
+    log_graphql_errors("get_routes_page", data);
+    let routes = data.data.routes;
+    if(routes === null){
+      console.log("failed to get routes");
+      return []
+    }
+    return routes_from_graphql_response(data.data.routes, true);
+  });
+}
+
 module.exports = {
 
-  getRoutesByHash2: function(hash, zoom) {
-    return routes_by_hash[hash][zoom]
+  // getRoutesByHash2: function(hash, zoom) {
+  //   if(
+  //     routes_by_hash[hash] === undefined ||
+  //     routes_by_hash[hash][zoom] === undefined ||
+  //     routes_by_hash[hash][zoom] === null)
+  //   {
+  //     console.log(`sorry, don't have ${hash}::${zoom}`)
+  //     return []
+  //   }
+  //
+  //   return routes_by_hash[hash][zoom]
+  // },
+  //
+  getRouteByHashZoomAndPubID: function(hash, zoom, pubId) {
+    let key = `${hash}::${zoom}`;
+    return routes_by_hash[key].routes[pubId]
   },
 
   getRoutesByHash: function(hash, zoom) {
+    let key = `${hash}::${zoom}`;
+    if(routes_by_hash[key] === undefined){
+      routes_by_hash[key] = {
+        complete: false,
+        routes: {},
+      }
+    }
 
-    if(
-      routes_by_hash[hash] !== undefined &&
-      routes_by_hash[hash][zoom] !== undefined &&
-      routes_by_hash[hash][zoom] !== null)
-    {
-      emitter.emit("got_routes", {hash:hash, zoom:zoom});
+    if(routes_by_hash[key].complete){
+      Object(routes_by_hash[key]["complete"]).keys().forEach((pubId) => {
+          emitter.emit("got_routes", {hash:hash, zoom:zoom, pubId:pubId});
+          emitter.emit(`got_route_${pubId}`, {hash:hash, zoom:zoom, pubId:pubId});
+      });
+      emitter.emit("finished_getting_routes");
       return
     }
 
-    // cache miss
-    let query = `
-      query get_routes_by_geohash {
-        routes(geohash:"${hash}", zoom:${zoom}){
-          pubId
-          lines
-          bounds
-          name
+    function get_page(page, first, skip){
+      getRoutesPage(hash,zoom, first, skip).then( routes => {
+        routes.forEach((route) => {
+          routes_by_hash[key].routes[route.pubId] = route;
+          emitter.emit("got_routes", {hash:hash, zoom:zoom, pubId:route.pubId});
+          emitter.emit(`got_route_${route.pubId}`, {hash:hash, zoom:zoom, pubId:route.pubId});
+        });
+        if(routes.length === first){
+          get_page(page+1, first, skip+first)
+        } else {
+          emitter.emit("finished_getting_routes");
         }
-      }
-    `;
-    let body = JSON.stringify({query});
-    fetch(url, {
-      method: 'POST',
-      mode: "cors",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: body
-    })
-    .then(r => r.json())
-    .then(data => {
-      console.log(data);
-      log_graphql_errors("get_more_routes", data);
-      let routes = data.data.routes;
-      if(routes === null){
-        console.log("failed to get routes");
-        return
-      }
-      if(routes_by_hash[hash] === undefined){
-        routes_by_hash[hash] = {};
-      }
-      routes_by_hash[hash][zoom] = routes_from_graphql_response(data.data.routes, true);
-      emitter.emit("got_routes", {hash:hash, zoom:zoom})
-    });
+      })
+    }
 
+    get_page(0,100, 0);
   },
 
   getRouteByID2: function(pub_id){
+    if(routes_by_pub_id[pub_id] === undefined){
+      console.log(`sorry, don't have ${pub_id}`)
+      return {}
+    }
+
     return routes_by_pub_id[pub_id]
   },
 
@@ -101,7 +135,7 @@ module.exports = {
       return
     }
     if(routes_by_pub_id[pub_id] !== undefined){
-      emitter.emit("got_route", data.route);
+      emitter.emit("got_route", pub_id);
       return
     }
 
@@ -136,7 +170,7 @@ module.exports = {
       }
       route.bounds = line_utils.string_to_bbox(route.bounds);
       routes_by_pub_id[pub_id] = route;
-      emitter.emit("got_route", data.data.route);
+      emitter.emit("got_route", pub_id);
     });
 
   },
@@ -145,7 +179,6 @@ module.exports = {
     return routes_by_search[search_text];
   },
 
-  // TODO, make this work with route_search.js
   getRoutesBySearch: function(search_text) {
     let query = `
       query route_search {
@@ -178,11 +211,20 @@ module.exports = {
 
 
   },
+
   subscribeGotRoutes: function(callback) {
     emitter.addListener("got_routes", callback);
   },
 
-  subscribeGotRoute: function(callback) {
+  subscribeGotRoutesWithPubId: function(callback, pubId) {
+    emitter.addListener(`got_route_${pubId}`, callback);
+  },
+
+  subscribeFinishedGettingRoutes: function(callback) {
+    emitter.addListener("finished_getting_routes", callback);
+  },
+
+  subscribeGotRouteByPubId: function(callback) {
     emitter.addListener("got_route", callback);
   },
 

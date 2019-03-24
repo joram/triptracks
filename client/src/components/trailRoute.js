@@ -1,32 +1,44 @@
 import React, { Component } from "react";
 import {Polyline} from "react-google-maps";
 import history from "../history";
+import routeStore from "../routeStore";
+import map_zoom_emitter from "../map_zoom_emitter";
 
 export class TrailRoute extends Component {
 
   constructor(props) {
     super(props);
+    this.pubId = this.props.pubId;
+    this.map = this.props.map;
     this.state = {
-      pubId: this.props.pubId,
-      zoom: this.props.zoom,
-      bounds: this.props.bounds,
-      lines: {},
+      lines: {},  // key'ed on zoom
+      current_zoom: this.props.zoom,
+      showing_zoom: -1,
     };
+    routeStore.subscribeGotRoutesWithPubId(this.moreDataForThisRoute.bind(this), this.pubId);
+    map_zoom_emitter.subscribeZoomChange(this.zoomChanged.bind(this));
+    this.addLines(this.props.hash, this.props.zoom);
   }
 
-  addLines(){
-    if(this.state.lines[this.props.data.zoom] !== undefined){
+  zoomChanged(data){
+    this.state.current_zoom = data.zoom;
+  }
+
+  moreDataForThisRoute(data) {
+    this.addLines(data.hash, data.zoom);
+  }
+
+  addLines(hash, zoom){
+    if(this.state.lines[zoom] !== undefined){
       return
     }
-
-    let lines = this.props.data.lines;
 
     let polyLines = [];
-    if(lines === null){
+    let route = routeStore.getRouteByHashZoomAndPubID(hash, zoom, this.pubId);
+    if(route.lines == null){
       return
     }
-
-    lines.forEach( (line) => {
+    route.lines.forEach( (line) => {
       if(line === null){
         return
       }
@@ -48,7 +60,10 @@ export class TrailRoute extends Component {
         }}
       />);
     });
-    this.state.lines[this.props.data.zoom] = polyLines;
+    this.state.lines[zoom] = polyLines;
+    if(zoom !== this.state.showing_zoom){
+      this.forceUpdate()
+    }
   }
 
   clicked(){
@@ -56,8 +71,12 @@ export class TrailRoute extends Component {
   }
 
   render() {
-    this.addLines()
-    return this.state.lines[this.props.data.zoom];
+    let component = this.state.lines[this.state.current_zoom];
+    if(component === undefined){
+      return null
+    }
+    this.state.showing_zoom = this.state.current_zoom;
+    return component
   }
 }
 

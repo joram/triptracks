@@ -4,60 +4,52 @@ import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
 import history from "../history"
 import Geohash from "latlon-geohash"
 import routeStore from '../routeStore'
+import map_zoom_emitter from "../map_zoom_emitter"
 
-
-export class RoutesMapContainer extends Component {
+class RoutesMapContainer extends Component {
 
   constructor(props) {
     super(props);
     this.map = React.createRef();
     this.map_center = {lat: 48.4284, lng: -123.3656};
-    this.state = {visible_routes: []}
+    this.state = {
+      route_components: {},
+    };
     routeStore.subscribeGotRoutes(this.gotRoutes.bind(this));
-    routeStore.subscribeGotRoute(this.gotRoute.bind(this));
+    routeStore.subscribeGotRouteByPubId(this.gotRoute.bind(this));
+    routeStore.subscribeFinishedGettingRoutes(this.finishedGettingRoutes.bind(this));
   }
 
   onIdle(){
-    this.getMoreRoutes();
+    if(this.map === undefined || this.map.current === null){
+      return
+    }
+    routeStore.getRoutesByHash(this.hash(this.map_bbox()), this.zoom())
   }
 
-  getMoreRoutes(){
-    let bbox = this.map_bbox();
-    let hash = this.hash(bbox);
-    let zoom = this.zoom();
-    routeStore.getRoutesByHash(hash, zoom, false)
+  onZoomChanged(){
+    this.state.visible_route_pub_ids = [];
+    this.state.visible_routes = [];
+    routeStore.getRoutesByHash(this.hash(this.map_bbox()), this.zoom());
+    map_zoom_emitter.zoomChanged(this.zoom());
   }
 
   gotRoutes(data){
-    let visible_routes = [];
-    let visible_route_pub_ids = [];
-    let zoom = this.zoom();
-    let hash = this.hash(this.map_bbox());
-    // if(data.zoom !== zoom || data.hash !== hash){
-    //   console.log("got old data")
-    //   return
-    // }
-    let routes_in_hash = routeStore.getRoutesByHash2(hash, zoom);
-    routes_in_hash.forEach( (route) => {
-      if(visible_route_pub_ids.indexOf(route.pubId) !== -1){
-        return
-      }
-      if (
-        route.bounds &&
-        this.map_bbox().intersects(route.bounds) &&
-        route.lines !== null
-      ) {
-        visible_route_pub_ids.push(route.pubId)
-        visible_routes.push(<TrailRoute
-          key={"route_"+route.pubId}
-          pubId={route.pubId}
-          bounds={route.bounds}
-          zoom={zoom}
-          data={route}
-        />)
-      }
-    });
-    this.setState({visible_routes:visible_routes})
+    // already got route
+    if(this.state.route_components[data.pubId] !== undefined) {
+      return
+    }
+
+    // new route found
+    this.state.route_components[data.pubId] = {
+      data: data,
+      component: <TrailRoute key={"route_"+data.pubId} pubId={data.pubId} hash={data.hash} zoom={this.zoom()} map={this.map} />,
+    };
+  }
+
+  finishedGettingRoutes(data){
+    console.log("finished getting routes for the hash");
+    this.forceUpdate();
   }
 
   gotRoute(data) {
@@ -110,7 +102,7 @@ export class RoutesMapContainer extends Component {
   }
 
   zoom(){
-    if(this.map === undefined){
+    if(this.map === undefined || this.map.current === null){
       return 13
     }
     return this.map.getZoom()
@@ -124,15 +116,10 @@ export class RoutesMapContainer extends Component {
   }
 
   render(){
-    this.state.visible_routes.forEach((r) => {
-      let state = r.state
-      if(state  !== undefined ){
-        let refresh = state.refresh
-        if(refresh === undefined){ refresh = true}
-        state.refresh = !refresh
-        r.setState(state)
-      }
-    })
+    let route_components = [];
+    Object.keys(this.state.route_components).forEach( pubId => {
+        route_components.push(this.state.route_components[pubId].component);
+    });
 
     return <GoogleMap
         ref={map => {this.map = map}}
@@ -140,14 +127,15 @@ export class RoutesMapContainer extends Component {
         defaultCenter={this.map_center}
         defaultOptions={{mapTypeId: 'terrain'}}
         onIdle={this.onIdle.bind(this)}
+        onZoomChanged={this.onZoomChanged.bind(this)}>
       >
-        {this.state.visible_routes}
+        {route_components}
       </GoogleMap>
   }
-}
 
+
+}
 
 const Routes = withScriptjs(withGoogleMap(RoutesMapContainer));
 
 export default Routes;
-

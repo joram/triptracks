@@ -8,7 +8,13 @@ from apps.packing.models import PackingList
 
 class Query(graphene.ObjectType):
   route = graphene.Field(Route, pub_id=graphene.String())
-  routes = graphene.List(Route, geohash=graphene.String(), zoom=graphene.Int())
+  routes = graphene.List(
+    Route,
+    geohash=graphene.String(),
+    zoom=graphene.Int(),
+    first=graphene.Int(),
+    skip=graphene.Int(),
+  )
   routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
@@ -19,21 +25,30 @@ class Query(graphene.ObjectType):
     rm = RouteMetadata.objects.get(pub_id=pub_id)
     return rm.route(zoom=14)
 
-  def resolve_routes(self, info, geohash, zoom):
-    print(f"getting {geohash}::{zoom}")
+  def resolve_routes(self, info, geohash, zoom, first, skip):
+    print(f"getting {geohash}::{zoom} from {first} to {first+skip}")
 
-    route_metas = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
+    qs = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
       "name",
       "pub_id",
       "bounds",
       f"lines_zoom_{zoom}",
     )
+
+    if skip:
+      qs = qs[skip:]
+
+    if first:
+      qs = qs[:first]
+
     routes = [Route(
       name=data[0],
       pub_id=data[1],
       bounds=data[2],
       lines=data[3],
-    ) for data in route_metas]
+    ) for data in qs]
+    print(len(routes))
+
     return routes
 
   def resolve_routes_search(self, info, search_text, limit=10):

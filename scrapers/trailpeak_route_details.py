@@ -83,7 +83,9 @@ class ScrapeTrailPeakDetails(BaseScraper):
 
         image_url = ""
         try:
-            image_url = bs.find("img", {"alt": "trail-image"}).attrMap["src"]
+            gallery = bs.find("div", {"id": "imageGallery"})
+            src = gallery.find("img").attrs["src"]
+            image_url = f"https://www.trailpeak.com/{src}"
         except:
             pass
 
