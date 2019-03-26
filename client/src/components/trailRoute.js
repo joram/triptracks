@@ -68,9 +68,6 @@ export class TrailRoute extends Component {
       />);
     });
     this.state.lines[zoom] = polyLines;
-    if(zoom !== this.state.showing_zoom){
-      this.forceUpdate()
-    }
   }
 
   clicked(){
@@ -78,10 +75,19 @@ export class TrailRoute extends Component {
   }
 
   render() {
-    let component = this.state.lines[this.state.current_zoom];
-    if(component === undefined){
+    if(this.state.showing_zoom === this.state.current_zoom){
       return null
     }
+
+    let component = this.state.lines[this.state.current_zoom];
+    if(component === undefined){
+      let old_component = this.state.lines[this.state.showing_zoom];
+      if(old_component !== undefined){
+        return old_component
+      }
+      return null
+    }
+
     this.state.showing_zoom = this.state.current_zoom;
     return component
   }

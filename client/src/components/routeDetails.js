@@ -7,7 +7,7 @@ class RouteDetails extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {route: {}};
+    this.state = {route: null};
     routeStore.subscribeGotRouteByPubId(this.gotRoute.bind(this));
 
     history.listen((a, b) => {
@@ -47,7 +47,7 @@ class RouteDetails extends React.Component {
     };
 
     if(this.state.route === null) {
-      return <div key="route_details" id="route_details" style={style}/>
+      return null
     }
 
     return <div key="route_details" id="route_details" style={style}>

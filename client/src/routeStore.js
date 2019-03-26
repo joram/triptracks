@@ -90,21 +90,15 @@ module.exports = {
 
   getRoutesByHash: function(hash, zoom) {
     let key = `${hash}::${zoom}`;
-    if(routes_by_hash[key] === undefined){
-      routes_by_hash[key] = {
-        complete: false,
-        routes: {},
-      }
-    }
-
-    if(routes_by_hash[key].complete){
-      Object(routes_by_hash[key]["complete"]).keys().forEach((pubId) => {
-          emitter.emit("got_routes", {hash:hash, zoom:zoom, pubId:pubId});
-          emitter.emit(`got_route_${pubId}`, {hash:hash, zoom:zoom, pubId:pubId});
-      });
-      emitter.emit("finished_getting_routes");
+    if(routes_by_hash[key] !== undefined){
       return
     }
+
+    routes_by_hash[key] = {
+      complete: false,
+      routes: {},
+    }
+
 
     let routes_got = 0;
     function get_page(page){
@@ -118,8 +112,7 @@ module.exports = {
         if(!data.lastPage){
           get_page(page+1)
         } else {
-          console.log(`got ${routes_got} routes at ${hash}::${zoom}`);
-          emitter.emit(`finished_getting_routes`);
+          emitter.emit(`finished_getting_routes`, {hash:hash, zoom:zoom, num:routes_got});
         }
       })
     }

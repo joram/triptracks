@@ -59,8 +59,10 @@ def massage(data):
         img_url = data.get("trail_image_url")
         src_url = data.get("url")
         rm = RouteMetadata.objects.get(name=name)
-        if img_url != "":
-            print(name, "\t", img_url, "\t", src_url)
+        _massage_lines(rm)
+        print(rm.pub_id, rm.name)
+        # if img_url != "":
+        #     print(name, "\t", img_url, "\t", src_url)
     except RouteMetadata.DoesNotExist:
         pass
 

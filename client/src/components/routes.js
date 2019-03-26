@@ -14,6 +14,7 @@ class RoutesMapContainer extends Component {
     this.map_center = {lat: 48.4284, lng: -123.3656};
     this.state = {
       route_components: {},
+      rendered: false,
     };
     routeStore.subscribeGotRoutes(this.gotRoutes.bind(this));
     routeStore.subscribeGotRouteByPubId(this.gotRoute.bind(this));
@@ -24,13 +25,28 @@ class RoutesMapContainer extends Component {
     if(this.map === undefined || this.map.current === null){
       return
     }
-    routeStore.getRoutesByHash(this.hash(this.map_bbox()), this.zoom())
+    let hash = this.hash(this.map_bbox());
+    if(hash.length > 0){
+      routeStore.getRoutesByHash(hash, this.zoom())
+    } else {
+      let ne = this.map_bbox().getNorthEast();
+      let sw = this.map_bbox().getSouthWest();
+      let h1 = Geohash.encode(ne.lat(), ne.lng());
+      let h2 = Geohash.encode(sw.lat(), sw.lng());
+      h1 = h1.substring(0,1);
+      h2 = h2.substring(0,1);
+      if(h1 !== h2){
+        routeStore.getRoutesByHash(h1, this.zoom());
+        routeStore.getRoutesByHash(h2, this.zoom());
+      } else {
+        routeStore.getRoutesByHash('', this.zoom());
+      }
+    }
   }
 
   onZoomChanged(){
     this.state.visible_route_pub_ids = [];
     this.state.visible_routes = [];
-    routeStore.getRoutesByHash(this.hash(this.map_bbox()), this.zoom());
     map_zoom_emitter.zoomChanged(this.zoom());
   }
 
@@ -53,8 +69,10 @@ class RoutesMapContainer extends Component {
   }
 
   finishedGettingRoutes(data){
-    console.log("finished getting routes for the hash");
-    this.forceUpdate();
+    console.log(`finished getting ${data.num} routes ${data.hash}::${data.zoom}`);
+    if(this.state.rendered){
+      this.forceUpdate()
+    }
   }
 
   gotRoute(data) {
@@ -125,6 +143,7 @@ class RoutesMapContainer extends Component {
     Object.keys(this.state.route_components).forEach( pubId => {
         route_components.push(this.state.route_components[pubId].component);
     });
+    this.state.rendered = true;
 
     return <GoogleMap
         ref={map => {this.map = map}}
