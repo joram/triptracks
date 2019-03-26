@@ -1,7 +1,7 @@
 let EventEmitter = require('events').EventEmitter;
 
 let emitter = new EventEmitter();
-emitter.setMaxListeners(1000);
+emitter.setMaxListeners(10000000);
 
 
 module.exports = {

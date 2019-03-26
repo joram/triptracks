@@ -24,19 +24,31 @@ function log_graphql_errors(query_name, data){
 function routes_from_graphql_response(routes, hasLines){
   let results = [];
   routes.forEach(function(route){
+    if(route === null){
+      console.log(`bad route: ${route}`);
+      return
+    }
+
     if(route.lines !== null && hasLines){
       route.lines = JSON.parse(route.lines);
     }
+
+    if(route.bounds === "{}"){
+      console.log(`bad route: ${route.pubId}`);
+      return
+    }
     route.bounds = line_utils.string_to_bbox(route.bounds);
+
     results.push(route);
   });
   return results
 }
 
-async function getRoutesPage(hash, zoom, first, skip){
+async function getRoutesPage(hash, zoom, page){
+  let page_size = 500;
   let query = `
     query get_routes_by_geohash {
-      routes(geohash:"${hash}", zoom:${zoom}, first:${first}, skip:${skip}){
+      routes(geohash:"${hash}", zoom:${zoom}, page:${page}, pageSize:${page_size}){
         pubId
         bounds
         lines
@@ -59,27 +71,18 @@ async function getRoutesPage(hash, zoom, first, skip){
     let routes = data.data.routes;
     if(routes === null){
       console.log("failed to get routes");
-      return []
+      console.log(data);
+      return {routes:[], lastPage: true}
     }
-    return routes_from_graphql_response(data.data.routes, true);
+    return {
+      routes:routes_from_graphql_response(data.data.routes, true),
+      lastPage: routes.length !== page_size
+    };
   });
 }
 
 module.exports = {
 
-  // getRoutesByHash2: function(hash, zoom) {
-  //   if(
-  //     routes_by_hash[hash] === undefined ||
-  //     routes_by_hash[hash][zoom] === undefined ||
-  //     routes_by_hash[hash][zoom] === null)
-  //   {
-  //     console.log(`sorry, don't have ${hash}::${zoom}`)
-  //     return []
-  //   }
-  //
-  //   return routes_by_hash[hash][zoom]
-  // },
-  //
   getRouteByHashZoomAndPubID: function(hash, zoom, pubId) {
     let key = `${hash}::${zoom}`;
     return routes_by_hash[key].routes[pubId]
@@ -103,22 +106,25 @@ module.exports = {
       return
     }
 
-    function get_page(page, first, skip){
-      getRoutesPage(hash,zoom, first, skip).then( routes => {
-        routes.forEach((route) => {
+    let routes_got = 0;
+    function get_page(page){
+      getRoutesPage(hash,zoom, page).then( data => {
+        data.routes.forEach((route) => {
           routes_by_hash[key].routes[route.pubId] = route;
           emitter.emit("got_routes", {hash:hash, zoom:zoom, pubId:route.pubId});
           emitter.emit(`got_route_${route.pubId}`, {hash:hash, zoom:zoom, pubId:route.pubId});
+          routes_got += 1;
         });
-        if(routes.length === first){
-          get_page(page+1, first, skip+first)
+        if(!data.lastPage){
+          get_page(page+1)
         } else {
-          emitter.emit("finished_getting_routes");
+          console.log(`got ${routes_got} routes at ${hash}::${zoom}`);
+          emitter.emit(`finished_getting_routes`);
         }
       })
     }
 
-    get_page(0,100, 0);
+    get_page(0);
   },
 
   getRouteByID2: function(pub_id){

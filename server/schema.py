@@ -12,8 +12,8 @@ class Query(graphene.ObjectType):
     Route,
     geohash=graphene.String(),
     zoom=graphene.Int(),
-    first=graphene.Int(),
-    skip=graphene.Int(),
+    page=graphene.Int(),
+    page_size=graphene.Int(),
   )
   routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
   trip_plans = graphene.List(TripPlanType)
@@ -25,8 +25,7 @@ class Query(graphene.ObjectType):
     rm = RouteMetadata.objects.get(pub_id=pub_id)
     return rm.route(zoom=14)
 
-  def resolve_routes(self, info, geohash, zoom, first, skip):
-    print(f"getting {geohash}::{zoom} from {first} to {first+skip}")
+  def resolve_routes(self, info, geohash, zoom, page, page_size):
 
     qs = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
       "name",
@@ -35,11 +34,11 @@ class Query(graphene.ObjectType):
       f"lines_zoom_{zoom}",
     )
 
-    if skip:
-      qs = qs[skip:]
-
-    if first:
-      qs = qs[:first]
+    # paginating
+    print(f"serving {qs.count()} routes at {geohash}::{zoom}. from {page_size*page} to {page_size*(page+1)}")
+    a = page_size * page
+    b = page_size * (page + 1)
+    qs = qs[a:b]
 
     routes = [Route(
       name=data[0],
@@ -47,8 +46,6 @@ class Query(graphene.ObjectType):
       bounds=data[2],
       lines=data[3],
     ) for data in qs]
-    print(len(routes))
-
     return routes
 
   def resolve_routes_search(self, info, search_text, limit=10):

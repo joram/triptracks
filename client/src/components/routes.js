@@ -43,7 +43,12 @@ class RoutesMapContainer extends Component {
     // new route found
     this.state.route_components[data.pubId] = {
       data: data,
-      component: <TrailRoute key={"route_"+data.pubId} pubId={data.pubId} hash={data.hash} zoom={this.zoom()} map={this.map} />,
+      component: <TrailRoute
+        key={"route_"+data.pubId}
+        pubId={data.pubId}
+        hash={data.hash}
+        zoom={this.zoom()}
+      />,
     };
   }
 

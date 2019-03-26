@@ -9,10 +9,10 @@ export class TrailRoute extends Component {
   constructor(props) {
     super(props);
     this.pubId = this.props.pubId;
-    this.map = this.props.map;
     this.state = {
       lines: {},  // key'ed on zoom
       current_zoom: this.props.zoom,
+      bounds: [],
       showing_zoom: -1,
     };
     routeStore.subscribeGotRoutesWithPubId(this.moreDataForThisRoute.bind(this), this.pubId);
@@ -22,6 +22,9 @@ export class TrailRoute extends Component {
 
   zoomChanged(data){
     this.state.current_zoom = data.zoom;
+    if(this.state.showing_zoom !== data.zoom){
+      this.forceUpdate()
+    }
   }
 
   moreDataForThisRoute(data) {
@@ -35,7 +38,11 @@ export class TrailRoute extends Component {
 
     let polyLines = [];
     let route = routeStore.getRouteByHashZoomAndPubID(hash, zoom, this.pubId);
-    if(route.lines == null){
+    if(route === undefined) {
+      return
+    }
+    this.state.bounds = route.bounds;
+    if(route.lines === null){
       return
     }
     route.lines.forEach( (line) => {
@@ -67,7 +74,7 @@ export class TrailRoute extends Component {
   }
 
   clicked(){
-    history.push(`/?route=${this.state.pubId}&bbox=${this.state.bounds.toUrlValue()}`);
+    history.push(`/?route=${this.pubId}&bbox=${this.state.bounds.toUrlValue()}`);
   }
 
   render() {
