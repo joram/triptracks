@@ -1,9 +1,10 @@
 import graphene
 from apps.trips.models import Plan
-from apps.routes.models import Route, RouteMetadata
+from apps.routes.models import Route, RouteMetadata, BucketListRoute
 from apps.trips.schema import TripPlanType
 from apps.packing.schema import PackingListType
 from apps.packing.models import PackingList
+from apps.accounts.schema import UserType, CreateUser
 
 
 class Query(graphene.ObjectType):
@@ -16,6 +17,7 @@ class Query(graphene.ObjectType):
     page_size=graphene.Int(),
   )
   routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
+  my_bucket_list_routes = graphene.List(Route)
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
   packing_lists = graphene.List(PackingListType)
@@ -51,12 +53,34 @@ class Query(graphene.ObjectType):
   def resolve_routes_search(self, info, search_text, limit=10):
     limit = min(limit, 10)
     route_metas = RouteMetadata.objects.filter(name__icontains=search_text).values_list(
-      f"lines_zoom_15",
+      "lines_zoom_15",
       "name",
       "description",
       "pub_id",
       "bounds",
     )[:limit]
+    routes = [Route(
+      lines=data[0],
+      name=data[1],
+      description=data[2],
+      pub_id=data[3],
+      bounds=data[4],
+    ) for data in route_metas]
+    return routes
+
+  def resolve_bucket_list_routes(self, info):
+    if info.context is None:
+      return []
+
+    user = info.context.user
+    qs = BucketListRoute.objects.filter(user_pub_id=user.pub_id)
+    route_metas = RouteMetadata.ojbects.filter(id__in=[blr.route_pub_id for blr in qs]).values_list(
+      "lines_zoom_15",
+      "name",
+      "description",
+      "pub_id",
+      "bounds",
+    )
     routes = [Route(
       lines=data[0],
       name=data[1],
@@ -82,4 +106,8 @@ class Query(graphene.ObjectType):
     return PackingList.objects.get(pub_id=pub_id)
 
 
-schema = graphene.Schema(query=Query)
+class Mutations(graphene.ObjectType):
+    create_user = CreateUser.Field()
+
+
+schema = graphene.Schema(query=Query, mutation=Mutations)

@@ -83,6 +83,36 @@ async function getRoutesPage(hash, zoom, page){
 
 module.exports = {
 
+  createUser: function(googleCreds) {
+    console.log("creating a user");
+    googleCreds = JSON.stringify({googleCreds}).replace(/"/g, '\\"');
+    let query = `mutation {
+      createUser(googleCredentials: "${googleCreds}"){
+        ok
+        user {
+          pubId
+        }
+      }
+    }`;
+    console.log(query);
+
+    let body = JSON.stringify({query});
+    return fetch(url, {
+      method: 'POST',
+      mode: "cors",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: body
+    })
+    .then(r => r.json())
+    .then(data => {
+      log_graphql_errors("create_user", data);
+      console.log(data)
+    });
+
+  },
   getRouteByHashZoomAndPubID: function(hash, zoom, pubId) {
     let key = `${hash}::${zoom}`;
     return routes_by_hash[key].routes[pubId]

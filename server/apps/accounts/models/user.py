@@ -13,6 +13,7 @@ class User(AbstractBaseUser):
     objects = UserManager()
 
     google_credentials = JSONField(null=True, blank=True)
+    name = models.CharField(max_length=256, blank=True)
     email = models.CharField(max_length=256, unique=True)
     is_admin = models.BooleanField(default=False)
     pub_id = ShortUUIDField(prefix="user", max_length=128)
@@ -62,6 +63,3 @@ class User(AbstractBaseUser):
             "profile_image": self.profile_image,
             "pub_id": self.pub_id,
         }
-
-    class Meta:
-        app_label = 'accounts'

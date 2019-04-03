@@ -1,7 +1,8 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown, MenuItem, Image} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import RoutesSearch from './routeSearch'
+import RoutesSearch from './routeSearch';
+import routeStore from '../routeStore'
 
 
 const PROFILE_MENU_ACTIONS = {
@@ -32,6 +33,8 @@ class ProfileMenu extends React.Component {
   }
 
   loginSuccess(resp) {
+    console.log("login success ",resp);
+    routeStore.createUser(resp);
     this.setState({
       isLoggedIn: true,
       googleData: resp,
