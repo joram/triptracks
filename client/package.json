@@ -1,7 +1,7 @@
 {
   "name": "triptracks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hiking and Mountaineering Trails",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
