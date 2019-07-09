@@ -113,6 +113,7 @@ module.exports = {
     });
 
   },
+
   getRouteByHashZoomAndPubID: function(hash, zoom, pubId) {
     let key = `${hash}::${zoom}`;
     return routes_by_hash[key].routes[pubId]

@@ -12,6 +12,8 @@
     "@types/markerclustererplus": "^2.1.33",
     "@types/react": "^16.8.23",
     "expo": "^33.0.0",
+    "expo-location": "^5.0.1",
+    "latlon-geohash": "^2.0.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "^0.60.0",
