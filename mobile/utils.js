@@ -27,7 +27,7 @@ function routes_from_graphql_response(routes, hasLines){
       console.log(`bad route: ${route.pubId}`);
       return
     }
-    route.bounds = line_utils.string_to_bbox(route.bounds);
+    // route.bounds = line_utils.string_to_bbox(route.bounds);
 
     results.push(route);
   });
@@ -84,6 +84,24 @@ async function get_routes_page(hash, zoom, page){
   });
 }
 
+async function get_routes(hash, zoom){
+
+    let routes = [];
+    function get_page(page){
+      return get_routes_page(hash,zoom, page).then( data => {
+        routes = routes.concat(data.routes);
+        if(!data.lastPage){
+          let more_routes = get_page(page+1);
+          routes = routes.concat(more_routes);
+        }
+        return routes;
+      })
+    }
+
+    return get_page(0);
+
+}
+
 function lines(){
 
     return [<Polyline
@@ -107,3 +125,5 @@ function lines(){
 		strokeWidth={6}
 	/>]
 }
+
+export { hash, get_routes_page, get_routes }
