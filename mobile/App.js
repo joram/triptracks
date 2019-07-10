@@ -11,6 +11,7 @@ class TriptracksApp extends Component {
         super(props);
         this.map = null;
         this.current_hash = null;
+        this._routes_cache = {};
         this.state = {
             msg: "Hello World",
             got_routes: false,
@@ -60,6 +61,16 @@ class TriptracksApp extends Component {
 
     }
 
+    async getCachedRoutes(h, zoom){
+        let key = `${h}_${zoom}`;
+        let routes = this._routes_cache[key];
+        if(routes !== undefined){ return routes}
+        return await get_routes(h, 10).then(data => {
+            this._routes_cache[key] = data;
+            return data
+        })
+    }
+
     regionChanged(region){
         if(!this.state.mounted){ return }
 
@@ -71,7 +82,7 @@ class TriptracksApp extends Component {
         if(h === this.current_hash){ return }
         this.current_hash = h;
 
-        get_routes(h, 10).then(data => {
+        this.getCachedRoutes(h, 10).then(data => {
             let {routes, msg} = data;
             this.setState({
                 msg: msg,
