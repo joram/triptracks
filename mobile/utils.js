@@ -91,7 +91,8 @@ async function get_routes(hash, zoom){
     while(true){
       let data = await get_routes_page(hash,zoom, page);
       routes = routes.concat(data.routes);
-      let msg = `got a page of routes: ${Object.keys(data)} for page ${page}\n${data.lastPage}`;
+      let dt = ''+Date.now();
+      let msg = `dt:${dt}\npage:${page}\nroutes:${routes.length}\nhash:${hash}\nzoom:${zoom}`;
       if(data.lastPage){
         return {routes:routes, msg:msg};
       }

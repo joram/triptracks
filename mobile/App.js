@@ -10,6 +10,7 @@ class TriptracksApp extends Component {
     constructor(props){
         super(props);
         this.map = null;
+        this.current_hash = null;
         this.state = {
             msg: "Hello World",
             got_routes: false,
@@ -62,32 +63,25 @@ class TriptracksApp extends Component {
     regionChanged(region){
         if(!this.state.mounted){ return }
 
-        // todo: debounce
-        if(!this.state.got_routes){
+        let ne_lat = region.latitude - region.latitudeDelta;
+        let ne_lng = region.longitude - region.longitudeDelta;
+        let sw_lat = region.latitude + region.latitudeDelta;
+        let sw_lng = region.longitude + region.longitudeDelta;
+        let h = hash(ne_lat, ne_lng, sw_lat, sw_lng);
+        if(h === this.current_hash){ return }
+        this.current_hash = h;
 
-            let state = this.state;
-            state.got_routes = true;
-            this.setState(state);
-
-            let ne_lat = region.latitude - region.latitudeDelta;
-            let ne_lng = region.longitude - region.longitudeDelta;
-            let sw_lat = region.latitude + region.latitudeDelta;
-            let sw_lng = region.longitude + region.longitudeDelta;
-            let h = hash(ne_lat, ne_lng, sw_lat, sw_lng);
-
-            get_routes(h, 10).then(data => {
-                let {routes, msg} = data;
-                this.setState({
-                    msg: msg,
-                    routes: routes,
-                    got_routes: true,
-                });
+        get_routes(h, 10).then(data => {
+            let {routes, msg} = data;
+            this.setState({
+                msg: msg,
+                routes: routes,
+                got_routes: true,
             });
-        }
+        });
     }
 
     routes(){
-        if(!this.state.got_routes){ return []; }
         if(this.state.routes === undefined){ return []; }
 
         let routes = [];
