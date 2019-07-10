@@ -95,17 +95,20 @@ class TriptracksApp extends Component {
         this.state.routes.forEach(data => {
             if(data.lines === null){ return }
             if(data.lines === undefined){ return }
-            if(existingKeys.includes(data.pubId)){ return }
+
+            let i = 0;
             let coordinates = [];
             data.lines.forEach(line => {
+                let key = `${data.pubId}_${i}`;
+                if(existingKeys.includes(key)){ return }
                 line.forEach(coord => {
                    coordinates.push({latitude: coord[0], longitude: coord[1]})
                 });
+                let route = <Polyline key={key} coordinates={coordinates} />;
+                existingKeys.push(key);
+                routes.push(route);
 
             })
-            let route = <Polyline key={data.pubId} coordinates={coordinates} />;
-            existingKeys.push(data.pubId);
-            routes.push(route);
         });
         return routes;
     }
