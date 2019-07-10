@@ -65,7 +65,7 @@ class TriptracksApp extends Component {
         let key = `${h}_${zoom}`;
         let routes = this._routes_cache[key];
         if(routes !== undefined){ return routes}
-        return await get_routes(h, 10).then(data => {
+        return await get_routes(h, zoom).then(data => {
             this._routes_cache[key] = data;
             return data
         })
@@ -79,11 +79,17 @@ class TriptracksApp extends Component {
         let sw_lat = region.latitude + region.latitudeDelta;
         let sw_lng = region.longitude + region.longitudeDelta;
         let h = hash(ne_lat, ne_lng, sw_lat, sw_lng);
-        if(h === this.current_hash){ return }
-        this.current_hash = h;
+        let delta = Math.min(region.longitudeDelta, region.latitudeDelta);
+        let inverse_zoom = Math.round(delta*1.5/0.03);
+        let zoom = 20 - Math.max(1, Math.min(inverse_zoom, 20));
 
-        this.getCachedRoutes(h, 10).then(data => {
+        if(h + zoom === this.current_hash){ return }
+        this.current_hash = h + zoom;
+
+        this.getCachedRoutes(h, zoom).then(data => {
             let {routes, msg} = data;
+            msg += `\ndelta:${delta}\n$inverse_zoom:${inverse_zoom}\nzoom:${zoom}`;
+
             this.setState({
                 msg: msg,
                 routes: routes,
