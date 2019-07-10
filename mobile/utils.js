@@ -86,19 +86,18 @@ async function get_routes_page(hash, zoom, page){
 
 async function get_routes(hash, zoom){
 
+    let page = 0;
     let routes = [];
-    function get_page(page){
-      return get_routes_page(hash,zoom, page).then( data => {
-        routes = routes.concat(data.routes);
-        if(!data.lastPage){
-          let more_routes = get_page(page+1);
-          routes = routes.concat(more_routes);
-        }
-        return routes;
-      })
+    while(true){
+      let data = await get_routes_page(hash,zoom, page);
+      routes = routes.concat(data.routes);
+      let msg = `got a page of routes: ${Object.keys(data)} for page ${page}\n${data.lastPage}`;
+      if(data.lastPage){
+        return {routes:routes, msg:msg};
+      }
+      page = page + 1
     }
 
-    return get_page(0);
 
 }
 

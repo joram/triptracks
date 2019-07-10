@@ -75,9 +75,10 @@ class TriptracksApp extends Component {
             let sw_lng = region.longitude + region.longitudeDelta;
             let h = hash(ne_lat, ne_lng, sw_lat, sw_lng);
 
-            get_routes(h, 10).then(routes => {
+            get_routes(h, 10).then(data => {
+                let {routes, msg} = data;
                 this.setState({
-                    msg: `got new region\n${JSON.stringify(region)}\nhash = ${h}\ndata=${JSON.stringify(routes[0])}`,
+                    msg: msg,
                     routes: routes,
                     got_routes: true,
                 });
@@ -86,25 +87,25 @@ class TriptracksApp extends Component {
     }
 
     routes(){
-        let renderedRoutes = {};
-        let routes = [];
         if(!this.state.got_routes){ return []; }
         if(this.state.routes === undefined){ return []; }
 
+        let routes = [];
+        let existingKeys = [];
         this.state.routes.forEach(data => {
             if(data.lines === null){ return }
             if(data.lines === undefined){ return }
-            if(renderedRoutes[data.pubId]){ return }
+            if(existingKeys.includes(data.pubId)){ return }
+            let coordinates = [];
             data.lines.forEach(line => {
-                let coordinates = [];
                 line.forEach(coord => {
                    coordinates.push({latitude: coord[0], longitude: coord[1]})
                 });
 
-                let route = <Polyline key={data.pubId} coordinates={coordinates} />;
-                routes.push(route);
-                renderedRoutes[data.pubId] = true;
             })
+            let route = <Polyline key={data.pubId} coordinates={coordinates} />;
+            existingKeys.push(data.pubId);
+            routes.push(route);
         });
         return routes;
     }
