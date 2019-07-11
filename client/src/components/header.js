@@ -73,7 +73,7 @@ class Header extends React.Component {
 
 
     return (
-      <Menu inverted={true} basic compact style={{width: "100%", borderRadius:0}}>
+      <Menu inverted={true} compact style={{width: "100%", borderRadius:0}}>
         <Menu.Item name='home' style={{color: "#AAAAAA", fontSize:"28px", padding:5}}>
           <Image src="/favicon.ico" size="mini" floated="left"/>
           Triptracks

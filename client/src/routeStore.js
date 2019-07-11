@@ -94,7 +94,7 @@ module.exports = {
         }
       }
     }`;
-    console.log(query);
+    // console.log(query);
 
     let body = JSON.stringify({query});
     return fetch(url, {

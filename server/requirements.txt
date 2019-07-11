@@ -15,3 +15,4 @@ django-extensions
 django-cors-headers
 -e git://github.com/joram/stravalib.git#egg=stravalib
 -e git://github.com/wckd/python-yr.git#egg=python-yr
+newrelic
