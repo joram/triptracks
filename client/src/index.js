@@ -28,11 +28,12 @@ class Index extends React.Component {
   }
 
   render() {
+    let row_stype = {padding: 0, margin:0};
     return (<div id="index">
       <Favicon url="/favicon.ico"/>
-      <Header root={this} />
-      <Body view={this.state.view} history={history} />
-      <Footer />
+          <Header root={this} />
+          <Body view={this.state.view} history={history} />
+          <Footer />
     </div>)
   }
 }

@@ -1,30 +1,11 @@
 import React from "react";
-import {Navbar, Nav, NavDropdown, MenuItem, Image} from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import RoutesSearch from './routeSearch';
 import routeStore from '../routeStore'
+import {Menu, Input, Image, Dropdown} from "semantic-ui-react";
 
 
-const PROFILE_MENU_ACTIONS = {
-  ROUTES: 0,
-  PLANS: 1,
-  SETTINGS: 2,
-  LOGOUT: 3,
-};
+class Header extends React.Component {
 
-class ProfileMenuTitle extends React.Component {
-
-  render() {
-    return (
-      <span>
-        {this.props.name}
-        <Image src={this.props.imageUrl} style={{width:35, marginLeft:5, padding:0, border:0}} thumbnail/>
-      </span>
-    )
-  }
-}
-
-class ProfileMenu extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -51,61 +32,59 @@ class ProfileMenu extends React.Component {
     this.setState({isLoggedIn: false})
   }
 
-  render() {
-    let content = <GoogleLogin
-      clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
-      buttonText="Login"
-      onSuccess={this.loginSuccess.bind(this)}
-      onFailure={this.loginFailure.bind(this)}
-      onLogoutSuccess={this.logoutSuccess.bind(this)}
-      isSignedIn={true}
-    />;
-    if (this.state.isLoggedIn) {
-      let title = <ProfileMenuTitle
-        name={this.state.googleData.profileObj.name}
-        imageUrl={this.state.googleData.profileObj.imageUrl}
-      />;
-      content = <NavDropdown eventkey={3} title={title} id="basic-nav-dropdown">
-        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.ROUTES}>My Routes</NavDropdown.Item>
-        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.PLANS}>My Plans</NavDropdown.Item>
-        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.SETTINGS}>Settings</NavDropdown.Item>
-        <NavDropdown.Item eventKey={PROFILE_MENU_ACTIONS.LOGOUT}>
-          <GoogleLogout
-            buttonText="Logout"
-            onLogoutSuccess={this.logoutSuccess.bind(this)}
-            render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
-          />
-        </NavDropdown.Item>
-      </NavDropdown>;
-    }
-
-    return <Nav className="justify-content-end" >{content}</Nav>
-  }
-
-
-}
-
-class Header extends React.Component {
-
-  menuSelect(eventKey) {
-    if(eventKey === PROFILE_MENU_ACTIONS.LOGOUT){
-      return
-    }
-    this.props.root.changeView(eventKey);
-  }
-
   render(){
+
+    let profile_menu = <Menu.Item position="right">
+      <GoogleLogin
+        clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={this.loginSuccess.bind(this)}
+        onFailure={this.loginFailure.bind(this)}
+        onLogoutSuccess={this.logoutSuccess.bind(this)}
+        isSignedIn={true}
+      />;
+    </Menu.Item>;
+    if (this.state.isLoggedIn) {
+      let trigger = <div>
+        <Image style={{marginBottom: 0}} src={this.state.googleData.profileObj.imageUrl} size="mini" floated="left" circular/>
+        <span style={{position:"relative", top:"8px"}}>{this.state.googleData.profileObj.name}</span>
+      </div>;
+
+      profile_menu =
+        <Dropdown item trigger={trigger} className="align right">
+          <Dropdown.Menu>
+            <Dropdown.Item>My Routes</Dropdown.Item>
+            <Dropdown.Item>My Plans</Dropdown.Item>
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Item>
+              <a href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40joram87/triptracks-143a3419688a427bbe352a8a35a99142-signed.apk">Android App</a>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <GoogleLogout
+                buttonText="Logout"
+                onLogoutSuccess={this.logoutSuccess.bind(this)}
+                render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
+              />
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+    }
+
+
+
     return (
-      <Navbar onSelect={this.menuSelect.bind(this)} bg="dark" variant="dark">
-        <Navbar.Brand>
-          <a href="#home" style={{color: "#AAAAAA", fontSize:"28px"}}>
-            Triptracks
-            <Image src="/favicon.ico" style={{width:35, float:"left", marginRight:5}} thumbnail/>
-          </a>
-        </Navbar.Brand>
-        <RoutesSearch/>
-        <ProfileMenu/>
-      </Navbar>
+      <Menu inverted={true} basic compact style={{width: "100%", borderRadius:0}}>
+        <Menu.Item name='home' style={{color: "#AAAAAA", fontSize:"28px", padding:5}}>
+          <Image src="/favicon.ico" size="mini" floated="left"/>
+          Triptracks
+        </Menu.Item>
+
+        <Menu.Item >
+          <Input icon='search' placeholder='Search...' />
+        </Menu.Item>
+
+        {profile_menu}
+      </Menu>
     )
   }
 }

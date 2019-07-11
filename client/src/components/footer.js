@@ -1,14 +1,14 @@
 import React from "react";
-import {Navbar} from "react-bootstrap";
+import {Segment} from "semantic-ui-react";
 
 
 class Footer extends React.Component {
 
   render(){
     return (
-      <Navbar fixed="bottom" bg="dark" variant="dark">
+      <Segment inverted basic style={{margin:0, padding:"8px"}} textAlign="center">
         <div style={{margin:"auto", color: "#aaaaaa", fontSize:"10px"}}>this is a footer, nobody bothers reading these. poop.</div>
-      </Navbar>
+      </Segment>
     )
   }
 }

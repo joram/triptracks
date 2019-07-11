@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MapView, { Polyline } from 'react-native-maps'
 import * as Location from 'expo-location';
 import { Text, View } from 'react-native';
-import { hash, get_routes, get_routes_page } from './utils';
+import { hash, get_routes } from './utils';
 
 
 class TriptracksApp extends Component {

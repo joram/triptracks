@@ -151,7 +151,7 @@ class RoutesMapContainer extends Component {
         defaultCenter={this.map_center}
         defaultOptions={{mapTypeId: 'terrain'}}
         onIdle={this.onIdle.bind(this)}
-        onZoomChanged={this.onZoomChanged.bind(this)}>
+        onZoomChanged={this.onZoomChanged.bind(this)}
       >
         {route_components}
       </GoogleMap>
