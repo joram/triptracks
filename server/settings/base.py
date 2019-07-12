@@ -64,9 +64,9 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['papertrail', 'console'],
+            'handlers': ['null'],
             'level': 'DEBUG',
-            'propagate': True,
+            'propagate': False,
         },
         'django.db.backends': {
             'handlers': ['null'],

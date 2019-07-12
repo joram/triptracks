@@ -1,6 +1,6 @@
 import React from "react";
 import {Grid, Row, Tabs, Tab, Image} from "react-bootstrap";
-require('../../../assets/images/connect_strava.svg');
+require('../../../../client_old/assets/images/connect_strava.svg');
 
 
 class Settings extends React.Component {

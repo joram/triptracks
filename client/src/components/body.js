@@ -1,16 +1,18 @@
 import React from "react";
 import Home from "./views/home";
-import Settings from "./views/settings"
+// import Settings from "./views/settings"
+// import 'semantic-ui-css';
 
 class Body extends React.Component {
 
-  render(){
-    if(this.props.view === "home")
-      return (<Home />);
+    render() {
+        return <Home/>;
 
-    if(this.props.view === "settings")
-      return (<Settings/>);
-  }
+        if (this.props.view === "settings"){
+            // return (<Settings/>);
+            return null
+        }
+    }
 }
 
 

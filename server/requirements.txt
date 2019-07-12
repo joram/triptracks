@@ -1,18 +1,19 @@
-zappa
+bs4
+django-cors-headers
+django-papertrail
+django-extensions
+dj_database_url
 graphene
 graphene_django
 geohash2
 gpxpy
+jsonfield
+newrelic
+oauth2client
 pykml
-bs4
-dj_database_url
 psycopg2-binary
 shortuuid
-jsonfield
 sendwithus
-oauth2client
-django-extensions
-django-cors-headers
+zappa
 -e git://github.com/joram/stravalib.git#egg=stravalib
 -e git://github.com/wckd/python-yr.git#egg=python-yr
-newrelic

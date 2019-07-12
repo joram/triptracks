@@ -1,6 +1,6 @@
 from settings.prod import *
 
 
-DEBUG = True
-CORS_ORIGIN_ALLOW_ALL = DEBUG
+DEBUG = False
+CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS += ["127.0.0.1"]
