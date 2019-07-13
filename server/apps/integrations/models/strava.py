@@ -59,7 +59,7 @@ class StravaAccount(models.Model):
         #
         #     try:
         #         tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data, "{}.gpx".format(str(activity.get("name"))))
-        #         route = TrailRoute.objects.create_from_route(tracks_file, activity.get("name"))
+        #         route = RouteMapLine.objects.create_from_route(tracks_file, activity.get("name"))
         #         route.is_public = False
         #         route.owner_pub_id = self.user_pub_id
         #         route.save()

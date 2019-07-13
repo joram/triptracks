@@ -13,7 +13,7 @@ triptracks_tldr
     "React Client";
     "React Client" -> "GraphQL Lambda";
     "GraphQL Lambda" -> "Django Models" [shape=cylinder];
-    "GraphQL Lambda" -> "Geohash S3 Routes Store"  [shape=cylinder];
+    "GraphQL Lambda" -> "Geohash S3 Routes_map Store"  [shape=cylinder];
   }
 triptracks_tldr
 </details>

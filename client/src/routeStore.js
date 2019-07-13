@@ -84,17 +84,15 @@ async function getRoutesPage(hash, zoom, page) {
 export default {
 
     createUser: function (googleCreds) {
-        console.log("creating a user");
         googleCreds = JSON.stringify({googleCreds}).replace(/"/g, '\\"');
         let query = `mutation {
-      createUser(googleCredentials: "${googleCreds}"){
-        ok
-        user {
-          pubId
-        }
-      }
-    }`;
-        // console.log(query);
+          createUser(googleCredentials: "${googleCreds}"){
+            ok
+            user {
+              pubId
+            }
+          }
+        }`;
 
         let body = JSON.stringify({query});
         return fetch(url, {
@@ -108,14 +106,14 @@ export default {
         })
             .then(r => r.json())
             .then(data => {
-                log_graphql_errors("create_user", data);
-                console.log(data)
+                // log_graphql_errors("create_user", data);
             });
 
     },
 
     getRouteByHashZoomAndPubID: function (hash, zoom, pubId) {
         let key = `${hash}::${zoom}`;
+        if(routes_by_hash[key]===undefined){ return undefined }
         return routes_by_hash[key].routes[pubId]
     },
 
@@ -154,7 +152,7 @@ export default {
 
     getRouteByID2: function (pub_id) {
         if (routes_by_pub_id[pub_id] === undefined) {
-            console.log(`sorry, don't have ${pub_id}`)
+            console.log(`sorry, don't have ${pub_id}`);
             return {}
         }
 
@@ -163,11 +161,11 @@ export default {
 
     getRouteByID: function (pub_id) {
         if (pub_id === null) {
-            return
+            return new Promise(null)
         }
         if (routes_by_pub_id[pub_id] !== undefined) {
             emitter.emit("got_route", pub_id);
-            return
+            return new Promise(() => { return routes_by_pub_id[pub_id]})
         }
 
         let query = `
@@ -197,11 +195,12 @@ export default {
                 log_graphql_errors("get_single_route", data);
                 let route = data.data.route;
                 if (route === null) {
-                    return
+                    return null
                 }
                 route.bounds = line_utils.string_to_bbox(route.bounds);
                 routes_by_pub_id[pub_id] = route;
                 emitter.emit("got_route", pub_id);
+                return route
             });
 
     },
@@ -238,6 +237,7 @@ export default {
                 log_graphql_errors("route_search", data);
                 routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, false);
                 emitter.emit("got_search", {search_text: search_text});
+                return data.data.routesSearch;
             });
 
 

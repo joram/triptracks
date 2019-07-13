@@ -1,8 +1,9 @@
 import React from "react";
 import {GoogleLogin, GoogleLogout} from 'react-google-login';
 import routeStore from '../routeStore'
-import {Dropdown, Image, Input, Menu} from "semantic-ui-react";
+import {Dropdown, Image, Menu} from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import RoutesSearch from "./route_search_box"
 
 
 class Header extends React.Component {
@@ -15,7 +16,6 @@ class Header extends React.Component {
     }
 
     loginSuccess(resp) {
-        console.log("login success ", resp);
         routeStore.createUser(resp);
         this.setState({
             isLoggedIn: true,
@@ -45,6 +45,7 @@ class Header extends React.Component {
                 isSignedIn={true}
             />
         </Menu.Item>;
+
         if (this.state.isLoggedIn) {
             let trigger = <div>
                 <Image style={{marginBottom: 0}} src={this.state.googleData.profileObj.imageUrl} size="mini"
@@ -55,7 +56,7 @@ class Header extends React.Component {
             let link_style = {color:"rgba(0,0,0,.87)"};
             profile_menu =
                 <Dropdown item trigger={trigger} className="align right">
-                    <Dropdown.Menu inverted >
+                    <Dropdown.Menu >
                         <Dropdown.Item><Link to="/routes" style={link_style}>My Routes</Link></Dropdown.Item>
                         <Dropdown.Item><Link to="/plans" style={link_style}>My Plans</Link></Dropdown.Item>
                         <Dropdown.Item><Link to="/settings" style={link_style}>Settings</Link></Dropdown.Item>
@@ -74,7 +75,6 @@ class Header extends React.Component {
                 </Dropdown>
         }
 
-
         return (
             <Menu inverted={true} compact style={{width: "100%", borderRadius: 0}}>
                 <Link to="/">
@@ -85,8 +85,9 @@ class Header extends React.Component {
                 </Link>
 
                 <Menu.Item>
-                    <Input icon='search' placeholder='Search...'/>
+                    <RoutesSearch></RoutesSearch>
                 </Menu.Item>
+
                 {profile_menu}
             </Menu>
         )

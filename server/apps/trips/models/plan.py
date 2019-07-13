@@ -1,7 +1,7 @@
 from django.db import models
 
 from apps.accounts.models import User
-# from apps.routes.models import TrailRoute
+# from apps.routes.models import RouteMapLine
 from apps.packing.models import PackingList
 
 from apps.integrations.yrno_forecast import get_daily_weather, get_icons
@@ -28,7 +28,7 @@ class Plan(models.Model):
     def route(self):
         return None
         # if self.route_pub_id:
-        #     return TrailRoute.objects.get(pub_id=self.route_pub_id)
+        #     return RouteMapLine.objects.get(pub_id=self.route_pub_id)
 
     @property
     def packing_list(self):

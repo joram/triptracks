@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import {Polyline} from "react-google-maps";
-import history from "../history";
 import routeStore from "../routeStore";
 import map_zoom_emitter from "../map_zoom_emitter";
+import {withRouter} from "react-router-dom";
 
-export class TrailRoute extends Component {
+
+export class RouteMapLine extends Component {
 
     constructor(props) {
         super(props);
@@ -20,10 +21,19 @@ export class TrailRoute extends Component {
         this.addLines(this.props.hash, this.props.zoom);
     }
 
+    componentDidMount() {
+    this._ismounted = true;
+    }
+
+    componentWillUnmount() {
+    this._ismounted = false;
+    }
+
     zoomChanged(data) {
-        this.state.current_zoom = data.zoom;
-        if (this.state.showing_zoom !== data.zoom) {
-            this.forceUpdate()
+        let state = this.state;
+        state.zoom = data.zoom;
+        if(this._ismounted){
+            this.setState(state);
         }
     }
 
@@ -41,12 +51,17 @@ export class TrailRoute extends Component {
         if (route === undefined) {
             return
         }
-        this.state.bounds = route.bounds;
+        let state = this.state;
+        state.bounds = route.bounds;
         if (route.lines === null) {
+            if(this._ismounted){
+                this.setState(state);
+            }
             return
         }
         route.lines.forEach((line) => {
             if (line === null) {
+                this.setState(state);
                 return
             }
 
@@ -67,31 +82,24 @@ export class TrailRoute extends Component {
                 }}
             />);
         });
-        this.state.lines[zoom] = polyLines;
+        state.lines[zoom] = polyLines;
+        if(this._ismounted){
+            this.setState(state);
+        }
     }
 
     clicked() {
-        history.push(`/?route=${this.pubId}&bbox=${this.state.bounds.toUrlValue()}`);
+        this.props.history.push(`/route/${this.pubId}`);
     }
 
     render() {
-        if (this.state.showing_zoom === this.state.current_zoom) {
+        let line = this.state.lines[this.state.current_zoom];
+        if(line === undefined){
             return null
         }
-
-        let component = this.state.lines[this.state.current_zoom];
-        if (component === undefined) {
-            let old_component = this.state.lines[this.state.showing_zoom];
-            if (old_component !== undefined) {
-                return old_component
-            }
-            return null
-        }
-
-        this.state.showing_zoom = this.state.current_zoom;
-        return component
+        return line
     }
 }
 
 
-export default TrailRoute;
+export default withRouter(RouteMapLine);
