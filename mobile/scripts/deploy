@@ -1,0 +1,3 @@
+#!/bin/bash
+
+expo build:android --type apk
