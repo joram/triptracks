@@ -1,7 +1,7 @@
 import {Polyline} from "react-native-maps";
 import React from "react";
 import Geohash from "latlon-geohash"
-let url = "https://app.triptracks.io/graphql";
+let url = "https://api.triptracks.io/graphql";
 
 function log_graphql_errors(query_name, data){
   if(data.errors !== undefined){
@@ -68,17 +68,18 @@ async function get_routes_page(hash, zoom, page){
     },
     body: body
   })
-  .then(r => r.json())
-  .then(data => {
+  .then(r => {
+      return r.json()
+  }).then(data => {
     log_graphql_errors("get_routes_page", data);
     let routes = data.data.routes;
-    if(routes === null){
+    if(routes === null || routes === undefined){
       console.log("failed to get routes");
       console.log(data);
       return {routes:[], lastPage: true}
     }
     return {
-      routes:routes_from_graphql_response(data.data.routes, true),
+      routes:routes_from_graphql_response(routes, true),
       lastPage: routes.length !== page_size
     };
   });
@@ -89,7 +90,7 @@ async function get_routes(hash, zoom){
     let page = 0;
     let routes = [];
     while(true){
-      let data = await get_routes_page(hash,zoom, page);
+      let data = await get_routes_page(hash,zoom, page)
       routes = routes.concat(data.routes);
       let dt = ''+Date.now();
       let msg = `dt:${dt}\npage:${page}\nroutes:${routes.length}\nhash:${hash}\nzoom:${zoom}`;

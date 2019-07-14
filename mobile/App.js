@@ -56,7 +56,10 @@ class TriptracksApp extends Component {
             this.map.animateCamera({latitude, longitude});
             this.map.animateToRegion(region);
         } else {
-            this.forceUpdate()
+            // if(this.state.mounted){
+            // this.forceUpdate()
+            //
+            // }
         }
 
     }
@@ -68,6 +71,10 @@ class TriptracksApp extends Component {
         return await get_routes(h, zoom).then(data => {
             this._routes_cache[key] = data;
             return data
+        }).catch(e => {
+            let state = this.state;
+            state.msg = e
+            this.setState(state)
         })
     }
 
@@ -79,16 +86,15 @@ class TriptracksApp extends Component {
         let sw_lat = region.latitude + region.latitudeDelta;
         let sw_lng = region.longitude + region.longitudeDelta;
         let h = hash(ne_lat, ne_lng, sw_lat, sw_lng);
-        let delta = Math.min(region.longitudeDelta, region.latitudeDelta);
-        let inverse_zoom = Math.round(delta*1.5/0.03);
-        let zoom = 20 - Math.max(1, Math.min(inverse_zoom, 20));
+        let zoom = this.calculateZoom(region);
 
         if(h + zoom === this.current_hash){ return }
         this.current_hash = h + zoom;
+        let delta = Math.min(region.longitudeDelta, region.latitudeDelta);
 
         this.getCachedRoutes(h, zoom).then(data => {
             let {routes, msg} = data;
-            msg += `\ndelta:${delta}\n$inverse_zoom:${inverse_zoom}\nzoom:${zoom}`;
+            msg += `\ndelta:${delta}\nzoom:${zoom}`;
 
             this.setState({
                 msg: msg,
@@ -96,6 +102,34 @@ class TriptracksApp extends Component {
                 got_routes: true,
             });
         });
+    }
+
+    calculateZoom(region){
+        let delta = Math.min(region.longitudeDelta, region.latitudeDelta);
+        let bestZoom = null;
+        [
+            0.01,
+            0.02,
+            0.03,
+            0.05,
+            0.07,
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            1,
+            2,
+            3,
+        ].forEach((threshold, i) => {
+            if(bestZoom === null && delta < threshold){
+                bestZoom = 20-i;
+            }
+        });
+        if(bestZoom === null){
+            return 1
+        }
+        return bestZoom;
     }
 
     routes(){
