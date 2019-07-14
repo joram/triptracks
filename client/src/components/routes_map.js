@@ -124,7 +124,7 @@ class RoutesMapContainer extends Component {
         }
 
         let center = default_center;
-        if(this.props.route !== null){
+        if(this.props.route !== null && this.props.route.bounds !== undefined){
             center = this.props.route.bounds.getCenter();
         }
 
