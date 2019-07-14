@@ -3,7 +3,7 @@ import line_utils from './line_utils'
 let EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 
-let url = "https://app.triptracks.io/graphql";
+let url = "https://api.triptracks.io/graphql";
 if (window.location.hostname === "localhost") {
     url = "http://127.0.0.1:8000/graphql";
 }

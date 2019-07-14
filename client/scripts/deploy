@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 npm run build
 aws s3 sync build s3://app.triptracks.io/
-# aws cloudfront create-invalidation --distribution-id= --paths=/index.html
+aws cloudfront create-invalidation --distribution-id=EO7AZ21ASPNPG --paths=/index.html

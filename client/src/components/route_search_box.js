@@ -34,8 +34,9 @@ class RouteSearchBox extends React.Component {
 
     }
 
-    onRouteSelect(data, {value}){
+    click(data, {value}){
         this.props.history.push(`/route/${value}`);
+        this.props.onRouteSelect(value);
     }
 
     render(){
@@ -49,7 +50,7 @@ class RouteSearchBox extends React.Component {
             search
             text='Search Routes...'
             onSearchChange={this.searchChanged.bind(this)}
-            onChange={this.onRouteSelect.bind(this)}
+            onChange={this.click.bind(this)}
         />
     }
 }

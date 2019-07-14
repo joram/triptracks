@@ -2,7 +2,7 @@ from settings.base import *
 import dj_database_url
 import os
 
-BASE_URL = "https://app.triptracks.io"
+BASE_URL = "https://www.triptracks.io"
 
 SECRET_KEY = os.environ.get("TT_SECRET_KEY", "youshouldntusethisoneinprod")
 GOOGLE_MAPS_API_KEY = os.environ.get("TT_GOOGLE_MAPS_API_KEY")

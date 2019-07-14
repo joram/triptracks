@@ -8,42 +8,21 @@ import map_zoom_emitter from "../map_zoom_emitter"
 
 
 let route_components = {};
-let map_center =  {lat: 48.4284, lng: -123.3656};
-
+let default_center =  {lat: 48.4284, lng: -123.3656};
+let centered_on_pub_id = null;
 
 class RoutesMapContainer extends Component {
     
     constructor(props) {
         super(props);
         this.map = React.createRef();
-        this.has_rendered_once = false;
-        this.state = {
-            rendered: false,
-            has_centered: false,
-        };
-
-
-        let pub_id = this.props.centerOnPubId;
-        if(pub_id !== undefined){
-            routeStore.getRouteByID(pub_id).then(route => {
-                map_center.lat = route.bounds.getCenter().lat();
-                map_center.lng = route.bounds.getCenter().lng();
-                this.map.fitBounds(route.bounds);
-                let state = this.state;
-                state.has_centered = true
-                this.setState(state)
-            });
-        }
+        this.state = {};
 
         routeStore.subscribeGotRoutes(this.gotRoutes.bind(this));
         routeStore.subscribeFinishedGettingRoutes(this.finishedGettingRoutes.bind(this));
     }
 
     onIdle() {
-        if (this.map === undefined || this.map.current === null || !this.has_rendered_once || this.map.getBounds() === null) {
-            return
-        }
-        console.log("hashing", this.map.getBounds())
         let hash = this.hash(this.map.getBounds());
         if (hash.length > 0) {
             routeStore.getRoutesByHash(hash, this.zoom())
@@ -68,7 +47,7 @@ class RoutesMapContainer extends Component {
         state.visible_route_pub_ids = [];
         state.visible_routes = [];
         this.setState(state);
-        map_zoom_emitter.zoomChanged(this.zoom());
+        map_zoom_emitter.zoomChanged(this.map.getZoom());
     }
 
     gotRoutes(data) {
@@ -85,6 +64,7 @@ class RoutesMapContainer extends Component {
                 pubId={data.pubId}
                 hash={data.hash}
                 zoom={this.zoom()}
+                onRouteSelect={this.props.onRouteSelect}
             />,
         };
     }
@@ -135,12 +115,19 @@ class RoutesMapContainer extends Component {
         Object.values(route_components).forEach( data => {
             routes.push(data.component);
         });
-        console.log(`rendering ${routes.length} routes for routesMap`);
-        console.log(`have ${Object.keys(route_components).length} route_components`)
-        // debugger
-        let center = map_center;
-        console.log("center: ", center);
-        this.has_rendered_once = true
+
+        if(this.props.route !== null){
+            if(this._ismounted && centered_on_pub_id !== this.props.route.pubId){
+                this.map.fitBounds(this.props.route.bounds);
+                centered_on_pub_id = this.props.route.pubId;
+            }
+        }
+
+        let center = default_center;
+        if(this.props.route !== null){
+            center = this.props.route.bounds.getCenter();
+        }
+
         return <GoogleMap
             ref={map => {
                 this.map = map

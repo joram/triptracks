@@ -8,11 +8,14 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      showing_route_details: props.pub_id
+    let pub_id = null;
+    if(this.props.route !== null){
+      pub_id = this.props.route.pub_id;
     }
-    window.addEventListener('resize', this.onResize.bind(this))
-    console.log(`constructor for home: ${props.pub_id}`)
+    this.state = {
+      routePubId: pub_id
+    }
+    window.addEventListener('resize', this.onResize.bind(this));
   }
 
   onResize(){
@@ -35,10 +38,11 @@ class Home extends React.Component {
       containerElement={<div id="map_container" style={container_style} />}
       mapElement={<div id="map_element" style={styles} />}
       key="routes"
-      centerOnPubId={this.props.pub_id}
+      route={this.props.route}
+      onRouteSelect={this.props.onRouteSelect}
     />;
 
-    if(this.props.pub_id === undefined){
+    if(this.props.route === null){
       return route_map
     }
 
@@ -46,7 +50,7 @@ class Home extends React.Component {
       <Grid>
         <Grid.Row>
           <Grid.Column width={4} style={{padding:0}}>
-            <RouteSidePanel pub_id={this.props.pub_id} />
+            <RouteSidePanel route={this.props.route}/>
           </Grid.Column>
             <Grid.Column width={12} style={{padding:0}}>
               {route_map}

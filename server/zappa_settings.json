@@ -4,8 +4,8 @@
     "s3_bucket": "triptracks-zappa",
     "aws_region": "us-west-2",
     "django_settings": "settings.prod",
-    "domain": "app.triptracks.io",
     "remote_env": "s3://triptracks-zappa-secrets/secrets.json",
-    "certificate_arn": "arn:aws:acm:us-east-1:431568096872:certificate/89f1ef32-4d83-4687-8245-7b5dd7a477db"
+    "certificate_arn": "arn:aws:acm:us-west-2:431568096872:certificate/bd93c694-f1d0-4ec5-b0a6-aab9357f21ed",
+    "domain": "api.triptracks.io"
   }
 }

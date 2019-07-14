@@ -85,7 +85,7 @@ class Header extends React.Component {
                 </Link>
 
                 <Menu.Item>
-                    <RoutesSearch></RoutesSearch>
+                    <RoutesSearch onRouteSelect={this.props.onRouteSelect} />
                 </Menu.Item>
 
                 {profile_menu}

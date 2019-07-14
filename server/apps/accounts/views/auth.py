@@ -35,3 +35,8 @@ def login(request):
 def logout(request):
     del request.session["user_pub_id"]
     return HttpResponse("ok")
+
+
+def home(request):
+    del request.session["user_pub_id"]
+    return HttpResponse("please visit <a href='app.triptracks.io'>app.triptracks.io</a>")

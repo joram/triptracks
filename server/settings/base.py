@@ -90,6 +90,6 @@ from django.template import base
 base.tag_re = re.compile(base.tag_re.pattern, re.DOTALL)
 
 ALLOWED_HOSTS = [
-    'app.triptracks.io',
+    'www.triptracks.io',
     'localhost',
 ]

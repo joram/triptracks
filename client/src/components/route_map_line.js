@@ -10,9 +10,9 @@ export class RouteMapLine extends Component {
     constructor(props) {
         super(props);
         this.pubId = this.props.pubId;
+        this.zoom = this.props.zoom;
         this.state = {
             lines: {},  // key'ed on zoom
-            current_zoom: this.props.zoom,
             bounds: [],
             showing_zoom: -1,
         };
@@ -30,11 +30,7 @@ export class RouteMapLine extends Component {
     }
 
     zoomChanged(data) {
-        let state = this.state;
-        state.zoom = data.zoom;
-        if(this._ismounted){
-            this.setState(state);
-        }
+        this.zoom = data.zoom;
     }
 
     moreDataForThisRoute(data) {
@@ -90,10 +86,11 @@ export class RouteMapLine extends Component {
 
     clicked() {
         this.props.history.push(`/route/${this.pubId}`);
+        this.props.onRouteSelect(this.pubId);
     }
 
     render() {
-        let line = this.state.lines[this.state.current_zoom];
+        let line = this.state.lines[this.zoom];
         if(line === undefined){
             return null
         }
