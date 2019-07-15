@@ -1,7 +1,7 @@
 import React from "react";
 import RoutesMap from "../routes_map";
 import RouteSidePanel from "../route_side_panel"
-import {Sidebar, Grid, Segment, Container} from "semantic-ui-react";
+import {Sidebar, Segment} from "semantic-ui-react";
 
 
 class Home extends React.Component {

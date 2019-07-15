@@ -159,13 +159,13 @@ export default {
         return routes_by_pub_id[pub_id]
     },
 
-    getRouteByID: function (pub_id) {
+    getRouteByID: async function (pub_id) {
         if (pub_id === null) {
-            return new Promise(null)
+            return null
         }
         if (routes_by_pub_id[pub_id] !== undefined) {
             emitter.emit("got_route", pub_id);
-            return new Promise(() => { return routes_by_pub_id[pub_id]})
+            return routes_by_pub_id[pub_id]
         }
 
         let query = `

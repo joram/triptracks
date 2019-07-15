@@ -1,6 +1,6 @@
 import React from "react";
-import {Grid, Row, Tabs, Tab, Image} from "react-bootstrap";
-require('../../../public/images/connect_strava.svg');
+import connect_strava_icon from '../../connect_strava.svg';
+import {Segment, Image, Button} from "semantic-ui-react";
 
 
 class Settings extends React.Component {
@@ -8,20 +8,13 @@ class Settings extends React.Component {
     console.log("connecting strava")
   }
 
+    //  style={{height:48, width:193, border:"solid thin gray"}} rounded
   render() {
-    return (
-      <Grid>
-        <Row className="show-grid">
-          <Tabs id="settings">
-            <Tab eventKey={1} title="integrations">
-              Strava
-              <br/>
-              <Image src="connect_strava.svg" onClick={this.connectStrava}  style={{height:48, width:193, border:"solid thin gray"}} rounded/>
-            </Tab>
-          </Tabs>
-        </Row>
-      </Grid>
-    );
+    return (<Segment>
+      <Button onClick={this.connectStrava}>
+        <Image src={connect_strava_icon} />
+      </Button>
+    </Segment>);
   }
 }
 

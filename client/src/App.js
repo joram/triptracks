@@ -5,6 +5,8 @@ import Home from "./components/views/home";
 import Footer from "./components/footer";
 import routeStore from "./routeStore";
 import { BrowserRouter, Route } from "react-router-dom";
+import Settings from "./components/views/settings";
+import MyRoutes from "./components/views/my_routes";
 
 class App extends React.Component {
 
@@ -22,13 +24,12 @@ class App extends React.Component {
     }
 
     onRouteSelect(pubId){
-        routeStore.getRouteByID(pubId).then(route => {
-            this.setState(
-                {
-                    route: route,
-                    pub_id: route.pub_id,
-                }
-            )
+        let a = routeStore.getRouteByID(pubId);
+        a.then(route => {
+            this.setState({
+                route: route,
+                pub_id: route.pub_id,
+            })
         });
     }
 
@@ -39,6 +40,8 @@ class App extends React.Component {
                 <Header onRouteSelect={this.onRouteSelect.bind(this)}/>
                 <Route exact path="/" render={() => home} />
                 <Route exact path={`/route/:pub_id`} render={() => home} />
+                <Route exact path="/settings" component={Settings} />
+                <Route exact path="/routes" render={ () => <MyRoutes onRouteSelect={this.onRouteSelect.bind(this)}/>} />
                 <Footer/>
             </BrowserRouter>
         </>
