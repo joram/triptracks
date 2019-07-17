@@ -1,16 +1,11 @@
-import json
-from urllib2 import Request, urlopen, URLError
-
-import settings
+import datetime
+from apps.accounts.models import SessionToken
 
 
-def auth_required(view):
-
-    def wrapper():
-        try:
-            get_google_userinfo()
-        except Unauthorized:
-            return redirect(url_for('auth.login'))
-        return view()
-
-    return wrapper
+def get_or_create_session_token(user):
+    duration = datetime.timedelta(days=1)
+    qs = SessionToken.objects.filter(user_pub_id=user.pub_id)
+    if qs.exists():
+        return qs[0], False
+    token = SessionToken.objects.create(expires=datetime.datetime.now() + duration, user_pub_id=user.pub_id)
+    return token, True

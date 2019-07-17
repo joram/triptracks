@@ -1,0 +1,5 @@
+#!/bin/bash
+source <(sed -E -n 's/[^#]+/export &/ p' scripts/.env)
+
+export DJANGO_SETTINGS_MODULE=settings.dev
+python ./manage.py migrate

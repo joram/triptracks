@@ -1,7 +1,5 @@
 from django.db import models
 from utils.fields import ShortUUIDField
-from django.contrib.postgres.fields import JSONField
-from apps.routes.models.route import Route
 
 
 class BucketListRoute(models.Model):

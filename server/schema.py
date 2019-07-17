@@ -4,7 +4,7 @@ from apps.routes.models import Route, RouteMetadata, BucketListRoute
 from apps.trips.schema import TripPlanType
 from apps.packing.schema import PackingListType
 from apps.packing.models import PackingList
-from apps.accounts.schema import UserType, CreateUser
+from apps.accounts.schema import CreateUser
 
 
 class Query(graphene.ObjectType):
@@ -17,7 +17,7 @@ class Query(graphene.ObjectType):
     page_size=graphene.Int(),
   )
   routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
-  my_bucket_list_routes = graphene.List(Route)
+  bucket_list_routes = graphene.List(Route)
   trip_plans = graphene.List(TripPlanType)
   trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
   packing_lists = graphene.List(PackingListType)
@@ -72,9 +72,12 @@ class Query(graphene.ObjectType):
     if info.context is None:
       return []
 
+    print(info)
+    print(info.context)
+    print(info.context.user)
     user = info.context.user
     qs = BucketListRoute.objects.filter(user_pub_id=user.pub_id)
-    route_metas = RouteMetadata.ojbects.filter(id__in=[blr.route_pub_id for blr in qs]).values_list(
+    route_metas = RouteMetadata.objects.filter(id__in=[blr.route_pub_id for blr in qs]).values_list(
       "lines_zoom_15",
       "name",
       "description",
