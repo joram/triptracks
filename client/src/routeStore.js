@@ -91,6 +91,10 @@ export default {
             user {
               pubId
             }
+            sessionToken {
+              pubId,
+              sessionKey
+            }
           }
         }`;
 
@@ -103,11 +107,12 @@ export default {
                 'Accept': 'application/json',
             },
             body: body
-        })
-            .then(r => r.json())
-            .then(data => {
-                // log_graphql_errors("create_user", data);
-            });
+        }).then(r => {
+            let data = r.json()
+            log_graphql_errors("create_user", data);
+            console.log(r)
+            data.then(d => console.log(d))
+        });
 
     },
 
@@ -211,16 +216,16 @@ export default {
 
     getRoutesBySearch: function (search_text) {
         let query = `
-      query route_search {
-        routesSearch(searchText:"${search_text}"){
-          pubId
-          name
-          description
-          bounds
-          sourceImageUrl
-        }
-      }
-    `;
+          query route_search {
+            routesSearch(searchText:"${search_text}"){
+              pubId
+              name
+              description
+              bounds
+              sourceImageUrl
+            }
+          }
+        `;
 
         let body = JSON.stringify({query});
         return fetch(url, {
@@ -231,16 +236,45 @@ export default {
                 'Accept': 'application/json',
             },
             body: body
-        })
-            .then(r => r.json())
-            .then(data => {
-                log_graphql_errors("route_search", data);
-                routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, false);
-                emitter.emit("got_search", {search_text: search_text});
-                return data.data.routesSearch;
-            });
+        }
+        ).then(r => r.json()
+        ).then(data => {
+            log_graphql_errors("route_search", data);
+            routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, false);
+            emitter.emit("got_search", {search_text: search_text});
+            return data.data.routesSearch;
+        });
+    },
 
+    getBucketListRoutes: function (){
+        let query = `
+          query bucket_list_routes {
+            bucketListRoutes{
+              pubId
+              name
+              description
+              bounds
+              sourceImageUrl
+            }
+          }
+        `;
 
+        let body = JSON.stringify({query});
+        return fetch(url, {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: body
+        }
+        ).then(r => r.json()
+        ).then(data => {
+            log_graphql_errors("bucket_list_routes", data);
+            console.log(data);
+            return {}; //data.data.bucketListRoute;
+        });
     },
 
     subscribeGotRoutes: function (callback) {
