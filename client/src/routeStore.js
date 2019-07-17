@@ -81,6 +81,19 @@ async function getRoutesPage(hash, zoom, page) {
         });
 }
 
+let sessionToken = null;
+
+function requestHeaders(){
+    let headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    };
+    if(sessionToken !== null){
+        headers["x-session-token"] = sessionToken
+    }
+    return headers
+}
+
 export default {
 
     createUser: function (googleCreds) {
@@ -110,8 +123,10 @@ export default {
         }).then(r => {
             let data = r.json()
             log_graphql_errors("create_user", data);
-            console.log(r)
-            data.then(d => console.log(d))
+            data.then(d => {
+                sessionToken = d.data.createUser.sessionToken.sessionKey;
+                emitter.emit("got_user");
+            });
         });
 
     },
@@ -231,10 +246,7 @@ export default {
         return fetch(url, {
             method: 'POST',
             mode: "cors",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
+            headers: requestHeaders(),
             body: body
         }
         ).then(r => r.json()
@@ -260,21 +272,45 @@ export default {
         `;
 
         let body = JSON.stringify({query});
+        let headers = requestHeaders();
+        console.log(headers);
         return fetch(url, {
             method: 'POST',
             mode: "cors",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
+            headers: headers,
             body: body
         }
         ).then(r => r.json()
         ).then(data => {
             log_graphql_errors("bucket_list_routes", data);
-            console.log(data);
-            return {}; //data.data.bucketListRoute;
+            console.log("got bucket list routes: ", data.data.bucketListRoutes);
+            let pubIds = [];
+            return pubIds;
         });
+    },
+
+    addToBucketList: function (route_pub_id){
+        console.log("adding to pubkcet list", route_pub_id)
+        let query = `mutation {
+              addBucketListRoute(routePubId: "${route_pub_id}"){ok}
+          }`;
+
+        let body = JSON.stringify({query});
+        return fetch(url, {
+            method: 'POST',
+            mode: "cors",
+            headers: requestHeaders(),
+            body: body
+        }).then(r => {
+            let data = r.json()
+            data.then( data2 =>{
+                console.log("added to bucket list", data2)
+            });
+            log_graphql_errors("add_to_bucket_list", data);
+        });
+
+
+
     },
 
     subscribeGotRoutes: function (callback) {
@@ -295,6 +331,10 @@ export default {
 
     subscribeGotSearch: function (callback) {
         emitter.addListener("got_search", callback);
+    },
+
+    subscribeGotUser: function (callback) {
+        emitter.addListener("got_user", callback);
     },
 
 };

@@ -17,6 +17,11 @@ class MyRoutes extends React.Component {
     super(props);
     this.state = {route_cards:[]};
     this.updateRouteCards(this.my_route_ids);
+    routeStore.subscribeGotUser(this.gotUser.bind(this))
+  }
+
+  gotUser(){
+    console.log("got user")
     this.routes = routeStore.getBucketListRoutes();
   }
 

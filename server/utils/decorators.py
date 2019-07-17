@@ -17,21 +17,16 @@ def timed_calls(view_func):
     def wrapped_view(*args, **kwargs):
         start = datetime.datetime.now()
         request = args[0]
-        name = ""
-        try:
-            query = json.loads(request.body).get("query")
-            name = query.split("{")[0].replace("query", "").strip()
-            if name == "":
-                raise UnnamedGraphqlQueryException()
-        except Exception as e:
-            print(e)
-            pass
+        query = json.loads(request.body).get("query")
+        name = query.split("{")[0].replace("query", "").strip()
+        if name == "":
+            raise UnnamedGraphqlQueryException()
 
         resp = view_func(*args, **kwargs)
 
         end = datetime.datetime.now()
         delta = end - start
-        logger.info(f"'{name}' took {delta.microseconds/1000}ms")
+        print(f"'{name}' took {delta.microseconds/1000}ms")
         return resp
 
     return wraps(view_func)(wrapped_view)

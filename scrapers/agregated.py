@@ -1,3 +1,4 @@
+#!/bin/env python
 from scrapers.summitpost_route_details import ScrapeSummitPostRouteDetails
 from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
 
@@ -13,3 +14,8 @@ def routes_generator():
         scraper, source = scrapers[i % len(scrapers)]
         route = scraper.__next__()
         yield route, source
+        i += 1
+
+
+for route, source in routes_generator():
+    print(source, "\t", route.get("name"))

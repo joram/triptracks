@@ -13,24 +13,17 @@ class CreateUser(graphene.Mutation):
     session_token = graphene.Field(lambda: SessionTokenGraphene)
 
     def mutate(self, info, google_credentials):
-        import pprint
         profile = google_credentials.get("googleCreds", {}).get("profileObj", {})
-        pprint.pprint(profile)
-
         qs = User.objects.filter(email=profile["email"])
         if qs.exists():
             user = qs[0]
-            print("getting token for ", user)
             token, created = get_or_create_session_token(user)
-            print(token, created)
             return CreateUser(user=qs[0], ok=True, session_token=token)
 
         user = User(google_credentials=google_credentials)
         user.save()
         token, created = get_or_create_session_token(user)
-        print(token, created)
-        ok = True
-        return CreateUser(user=user, ok=ok, session_token=token)
+        return CreateUser(user=user, ok=True, session_token=token)
 
 
 class UserType(DjangoObjectType):

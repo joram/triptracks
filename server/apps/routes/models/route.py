@@ -2,31 +2,40 @@ import geohash2
 import uuid
 import random
 import graphene
+from utils.fields import ShortUUIDField
 from utils.lines import lines_from_gpx
 from apps.accounts.models import User
 from django.conf import settings
 from apps.accounts.schema import UserType
+from django.db import models
+from graphene_django import DjangoObjectType
+from django.contrib.postgres.fields import JSONField
 
 
-class Route(graphene.ObjectType):
+class Route(models.Model):
+    _geohash = None
+    pub_id = ShortUUIDField(prefix="sess", max_length=32)
+    owner_pub_id = models.CharField(max_length=128)
+    name = models.CharField(max_length=1024)
+    description = models.CharField(max_length=1024*32)
+    lines = JSONField()
+    is_public = models.BooleanField()
 
-    pub_id = graphene.ID()
-    owner_pub_id = graphene.String()
-    name = graphene.String()
-    geohash = graphene.String()
-    zoom = graphene.Int()
-    bounds = graphene.JSONString()
-    description = graphene.String()
-    source_image_url = graphene.String()
-    lines = graphene.JSONString()
-    owner = graphene.Field(UserType)
-    is_public = graphene.Boolean()
+    geohash = models.CharField(max_length=32)
+    zoom = models.IntegerField()
+    bounds = JSONField()
+    source_image_url = models.CharField(max_length=1024*8)
 
-    def resolve_owner(self, info):
-        return User(pub_id=self.owner_pub_id)
-
-    def resolve_geohash(self, info):
-        return self._geohash()
+    # pub_id = graphene.ID()
+    # owner_pub_id = graphene.String()
+    # name = graphene.String()
+    # geohash = graphene.String()
+    # zoom = graphene.Int()
+    # bounds = graphene.JSONString()
+    # description = graphene.String()
+    # source_image_url = graphene.String()
+    # lines = graphene.JSONString()
+    # is_public = graphene.Boolean()
 
     @classmethod
     def from_data(cls, data):
@@ -79,38 +88,6 @@ class Route(graphene.ObjectType):
     def __unicode__(self):
         return self.__str__()
 
-    def _geohash(self):
-        (lat1, lng1), (lat2, lng2) = self.bbox()
-        h1 = geohash2.encode(lat1, lng1)
-        h2 = geohash2.encode(lat2, lng2)
-        i = 0
-        for c in h1:
-            if h2[i] == c:
-                i += 1
-        matching = h1[:i]
-        return matching
-
-    def bbox(self):
-        min_lat = None
-        max_lat = None
-        min_lng = None
-        max_lng = None
-        for line in self.lines:
-            for coord in line:
-                lat = coord[0]
-                lng = coord[1]
-                if min_lat is None:
-                    min_lat = lat
-                    max_lat = lat
-                    min_lng = lng
-                    max_lng = lng
-                    continue
-                min_lat = min(min_lat, lat)
-                max_lat = max(max_lat, lat)
-                min_lng = min(min_lng, lng)
-                max_lng = max(max_lng, lng)
-        return (min_lat, min_lng), (max_lat, max_lng)
-
     def vertices(self, max_verts=None):
         if self.lines is None or len(self.lines) == 0:
             return []
@@ -145,3 +122,50 @@ class Route(graphene.ObjectType):
               )
 
         return url
+
+
+class RouteGraphene(DjangoObjectType):
+    # owner = graphene.Field(UserType)
+    name = "route"
+
+    class Meta:
+        model = Route
+
+    def resolve_owner(self, info):
+        return User(pub_id=self.owner_pub_id)
+
+    def resolve_geohash(self, info):
+        return self._geohash()
+
+    def _geohash(self):
+        (lat1, lng1), (lat2, lng2) = self.bbox()
+        h1 = geohash2.encode(lat1, lng1)
+        h2 = geohash2.encode(lat2, lng2)
+        i = 0
+        for c in h1:
+            if h2[i] == c:
+                i += 1
+        matching = h1[:i]
+        return matching
+
+    def bbox(self):
+        min_lat = None
+        max_lat = None
+        min_lng = None
+        max_lng = None
+        for line in self.lines:
+            for coord in line:
+                lat = coord[0]
+                lng = coord[1]
+                if min_lat is None:
+                    min_lat = lat
+                    max_lat = lat
+                    min_lng = lng
+                    max_lng = lng
+                    continue
+                min_lat = min(min_lat, lat)
+                max_lat = max(max_lat, lat)
+                min_lng = min(min_lng, lng)
+                max_lng = max(max_lng, lng)
+        return (min_lat, min_lng), (max_lat, max_lng)
+

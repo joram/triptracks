@@ -1,4 +1,3 @@
-
 from django.db import models
 from graphene_django import DjangoObjectType
 from utils.fields import ShortUUIDField

@@ -1,27 +1,30 @@
 import graphene
 from apps.trips.models import Plan
-from apps.routes.models import Route, RouteMetadata, BucketListRoute
+from apps.routes.models import RouteGraphene, RouteMetadata, BucketListRoute
 from apps.trips.schema import TripPlanType
 from apps.packing.schema import PackingListType
 from apps.packing.models import PackingList
 from apps.accounts.schema import CreateUser
+from apps.routes.schema import AddBucketListRoute, RemoveBucketListRoute
+from utils.auth import get_authenticated_user
 
 
 class Query(graphene.ObjectType):
-  route = graphene.Field(Route, pub_id=graphene.String())
+  route = graphene.Field(RouteGraphene, pub_id=graphene.String())
   routes = graphene.List(
-    Route,
+    RouteGraphene,
     geohash=graphene.String(),
     zoom=graphene.Int(),
     page=graphene.Int(),
     page_size=graphene.Int(),
   )
-  routes_search = graphene.List(Route, search_text=graphene.String(), limit=graphene.Int())
-  bucket_list_routes = graphene.List(Route)
-  trip_plans = graphene.List(TripPlanType)
-  trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
-  packing_lists = graphene.List(PackingListType)
-  packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
+  routes_search = graphene.List(RouteGraphene, search_text=graphene.String(), limit=graphene.Int())
+  bucket_list_routes = graphene.List(RouteGraphene)
+
+  # trip_plans = graphene.List(TripPlanType)
+  # trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
+  # packing_lists = graphene.List(PackingListType)
+  # packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
 
   def resolve_route(self, info, pub_id):
     rm = RouteMetadata.objects.get(pub_id=pub_id)
@@ -42,7 +45,7 @@ class Query(graphene.ObjectType):
     b = page_size * (page + 1)
     qs = qs[a:b]
 
-    routes = [Route(
+    routes = [RouteGraphene(
       name=data[0],
       pub_id=data[1],
       bounds=data[2],
@@ -59,7 +62,7 @@ class Query(graphene.ObjectType):
       "pub_id",
       "bounds",
     )[:limit]
-    routes = [Route(
+    routes = [RouteGraphene(
       lines=data[0],
       name=data[1],
       description=data[2],
@@ -69,13 +72,9 @@ class Query(graphene.ObjectType):
     return routes
 
   def resolve_bucket_list_routes(self, info):
-    if info.context is None:
+    user = get_authenticated_user(info)
+    if user is None:
       return []
-
-    print(info)
-    print(info.context)
-    print(info.context.user)
-    user = info.context.user
     qs = BucketListRoute.objects.filter(user_pub_id=user.pub_id)
     route_metas = RouteMetadata.objects.filter(id__in=[blr.route_pub_id for blr in qs]).values_list(
       "lines_zoom_15",
@@ -84,7 +83,7 @@ class Query(graphene.ObjectType):
       "pub_id",
       "bounds",
     )
-    routes = [Route(
+    routes = [RouteGraphene(
       lines=data[0],
       name=data[1],
       description=data[2],
@@ -111,6 +110,8 @@ class Query(graphene.ObjectType):
 
 class Mutations(graphene.ObjectType):
     create_user = CreateUser.Field()
+    add_bucket_list_route = AddBucketListRoute.Field()
+    remove_bucket_list_route = RemoveBucketListRoute.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=Mutations)
