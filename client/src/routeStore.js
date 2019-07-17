@@ -21,16 +21,15 @@ function log_graphql_errors(query_name, data) {
     }
 }
 
-function routes_from_graphql_response(routes, hasLines) {
+function routes_from_graphql_response(routes, zoom, hasLines) {
     let results = [];
-    routes.forEach(function (route) {
+    routes.forEach(route => {
         if (route === null) {
             console.log(`bad route: ${route}`);
             return
         }
-
-        if (route.lines !== null && hasLines) {
-            route.lines = JSON.parse(route.lines);
+        if (route.lines !== null && hasLines && zoom !== null) {
+            route.lines = JSON.parse(route[`linesZoom${zoom}`]);
         }
 
         if (route.bounds === "{}") {
@@ -51,7 +50,8 @@ async function getRoutesPage(hash, zoom, page) {
       routes(geohash:"${hash}", zoom:${zoom}, page:${page}, pageSize:${page_size}){
         pubId
         bounds
-        lines
+        linesZoom${zoom}
+        sourceImageUrl
       }
     }
   `;
@@ -75,7 +75,7 @@ async function getRoutesPage(hash, zoom, page) {
                 return {routes: [], lastPage: true}
             }
             return {
-                routes: routes_from_graphql_response(data.data.routes, true),
+                routes: routes_from_graphql_response(data.data.routes, zoom,true),
                 lastPage: routes.length !== page_size
             };
         });
@@ -95,6 +95,8 @@ function requestHeaders(){
 }
 
 export default {
+
+    isLoggedIn: function (){ return sessionToken !== null},
 
     createUser: function (googleCreds) {
         googleCreds = JSON.stringify({googleCreds}).replace(/"/g, '\\"');
@@ -180,21 +182,24 @@ export default {
     },
 
     getRouteByID: async function (pub_id) {
+
         if (pub_id === null) {
+            console.log("dont have", pub_id)
             return null
         }
         if (routes_by_pub_id[pub_id] !== undefined) {
+            console.log("have:", routes_by_pub_id[pub_id])
             emitter.emit("got_route", pub_id);
             return routes_by_pub_id[pub_id]
         }
 
         let query = `
       query get_single_route {
-        route(pubId:"${pub_id}"){
+        route(pubId:"${pub_id}", zoom:15){
           pubId
           name
-          description
           bounds
+          description
           sourceImageUrl
         }
       }
@@ -217,12 +222,15 @@ export default {
                 if (route === null) {
                     return null
                 }
+                if(route.bounds === undefined){
+                    return null
+                }
                 route.bounds = line_utils.string_to_bbox(route.bounds);
                 routes_by_pub_id[pub_id] = route;
+
                 emitter.emit("got_route", pub_id);
                 return route
             });
-
     },
 
     getRoutesBySearch2: function (search_text) {
@@ -252,9 +260,9 @@ export default {
         ).then(r => r.json()
         ).then(data => {
             log_graphql_errors("route_search", data);
-            routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, false);
+            routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, null,false);
             emitter.emit("got_search", {search_text: search_text});
-            return data.data.routesSearch;
+            return routes_by_search[search_text];
         });
     },
 
@@ -283,9 +291,7 @@ export default {
         ).then(r => r.json()
         ).then(data => {
             log_graphql_errors("bucket_list_routes", data);
-            console.log("got bucket list routes: ", data.data.bucketListRoutes);
-            let pubIds = [];
-            return pubIds;
+            return routes_from_graphql_response(data.data.bucketListRoutes, null, "bucket_list_routes")
         });
     },
 

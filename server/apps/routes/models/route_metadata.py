@@ -1,7 +1,7 @@
 from django.db import models
 from utils.fields import ShortUUIDField
 from django.contrib.postgres.fields import JSONField
-from apps.routes.models.route import Route
+from graphene_django import DjangoObjectType
 
 
 class RouteMetadata(models.Model):
@@ -69,17 +69,23 @@ class RouteMetadata(models.Model):
             19: self.lines_zoom_19,
         }[zoom]
 
-    def route(self, zoom):
-        return Route(
-            lines=self.get_lines(zoom),
-            name=self.name,
-            description=self.description,
-            pub_id=self.pub_id,
-            zoom=1,
-            bounds=self.bounds,
-            source_image_url=self.source_image_url,
+    # def route(self, zoom):
+    #     return Route(
+    #         lines=self.get_lines(zoom),
+    #         name=self.name,
+    #         description=self.description,
+    #         pub_id=self.pub_id,
+    #         zoom=1,
+    #         bounds=self.bounds,
+    #         source_image_url=self.source_image_url,
+    #
+    #         # TODO
+    #         owner_pub_id="user_whoknows",
+    #         is_public=True,
+    #     )
 
-            # TODO
-            owner_pub_id="user_whoknows",
-            is_public=True,
-        )
+
+class RouteGraphene(DjangoObjectType):
+
+    class Meta:
+        model = RouteMetadata

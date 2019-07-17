@@ -24,8 +24,9 @@ class App extends React.Component {
     }
 
     onRouteSelect(pubId){
-        let a = routeStore.getRouteByID(pubId);
-        a.then(route => {
+        routeStore.getRouteByID(pubId).then(route => {
+            if(route === null){ return }
+            console.log(route)
             this.setState({
                 route: route,
                 pub_id: route.pub_id,

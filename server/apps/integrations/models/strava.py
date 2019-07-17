@@ -2,7 +2,7 @@ from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
 from utils.fields import ShortUUIDField
-from apps.routes.models import Route
+from apps.routes.models import RouteMetadata
 from apps.accounts.models import User
 from utils.lines import lines_from_gpx_string
 from apps.routes.stores import get_cache
@@ -95,7 +95,7 @@ class StravaActivityManager(models.Manager):
 
         try:
             lines = lines_from_gpx_string(gpx_data)
-            route = Route(
+            route = RouteMetadata(
                 lines=lines,
                 owner_pub_id=user_pub_id,
                 name=strava_activity_name,
