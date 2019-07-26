@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from "../../web/src/components/header";
-import Home from "../../web/src/components/views/home";
-import Footer from "../../web/src/components/footer";
-import routeStore from "../../web/src/api-client/routeStore";
+import Header from "./components/header";
+import Home from "./components/views/home";
+import Footer from "./components/footer";
+import routeStore from "./api-client/routeStore";
 import {BrowserRouter, Route} from "react-router-dom";
-import Settings from "../../web/src/components/views/settings";
-import MyRoutes from "../../web/src/components/views/my_routes";
+import Settings from "./components/views/settings";
+import MyRoutes from "./components/views/my_routes";
 
 class App extends React.Component {
 
