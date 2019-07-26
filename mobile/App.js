@@ -2,28 +2,20 @@ import React, { Component } from 'react';
 import MapView, { Polyline } from 'react-native-maps'
 import * as Location from 'expo-location';
 import { Text, View } from 'react-native';
-import { hash, get_routes } from './utils';
+import {hash} from "../api-client/utils.js"
 
-
-class TriptracksApp extends Component {
+class RoutesMap extends Component {
 
     constructor(props){
         super(props);
         this.map = null;
         this.current_hash = null;
         this._routes_cache = {};
+        this._routes_data = [];
         this.state = {
             msg: "Hello World",
-            got_routes: false,
             routes: [],
-            mounted: false,
-        }
-    }
-
-    componentDidMount() {
-        let state = this.state;
-        state.mounted = true;
-        this.setState(state);
+        };
 
         // monitor location
         let options = { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 };
@@ -51,17 +43,10 @@ class TriptracksApp extends Component {
             latitudeDelta: 0.004,
             longitudeDelta: 0.004,
         };
-
-        if(this.map !== null && !this.state.got_routes){
-            this.map.animateCamera({latitude, longitude});
+        if(this.map !== null){
             this.map.animateToRegion(region);
-        } else {
-            // if(this.state.mounted){
-            // this.forceUpdate()
-            //
-            // }
+            this.regionChanged(region);
         }
-
     }
 
     async getCachedRoutes(h, zoom){
@@ -71,16 +56,11 @@ class TriptracksApp extends Component {
         return await get_routes(h, zoom).then(data => {
             this._routes_cache[key] = data;
             return data
-        }).catch(e => {
-            let state = this.state;
-            state.msg = e
-            this.setState(state)
         })
     }
 
     regionChanged(region){
-        if(!this.state.mounted){ return }
-
+        if(this.map === null) { return }
         let ne_lat = region.latitude - region.latitudeDelta;
         let ne_lng = region.longitude - region.longitudeDelta;
         let sw_lat = region.latitude + region.latitudeDelta;
@@ -92,14 +72,13 @@ class TriptracksApp extends Component {
         this.current_hash = h + zoom;
         let delta = Math.min(region.longitudeDelta, region.latitudeDelta);
 
-        this.getCachedRoutes(h, zoom).then(data => {
-            let {routes, msg} = data;
+        this.getCachedRoutes(h, zoom).then( data => {
+            let { routes, msg} = data;
             msg += `\ndelta:${delta}\nzoom:${zoom}`;
-
+            console.log("routes are ", routes);
             this.setState({
                 msg: msg,
                 routes: routes,
-                got_routes: true,
             });
         });
     }
@@ -134,9 +113,9 @@ class TriptracksApp extends Component {
 
     routes(){
         if(this.state.routes === undefined){ return []; }
-
         let routes = [];
         let existingKeys = [];
+
         this.state.routes.forEach(data => {
             if(data.lines === null){ return }
             if(data.lines === undefined){ return }
@@ -155,6 +134,8 @@ class TriptracksApp extends Component {
 
             })
         });
+        console.log(`rendering ${routes.length} routes`);
+        console.log("example route: ", this.state.routes[0])
         return routes;
     }
 
@@ -169,9 +150,19 @@ class TriptracksApp extends Component {
             >
                 {this.routes()}
             </MapView>
+        </>);
 
+    }
+}
+
+class TriptracksApp extends Component {
+
+    render() {
+        return (<>
+            <RoutesMap/>
             <View style={{position:'absolute', backgroundColor: 'red', top: 150, width: "100%"}}>
-                <Text>{this.state.msg}</Text>
+                {/*<Text>{this.state.msg}</Text>*/}
+                <Text>no message for now</Text>
             </View>
         </>);
 

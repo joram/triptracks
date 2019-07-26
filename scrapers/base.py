@@ -71,7 +71,7 @@ class BaseScraper(object):
         time.sleep(self.wait)
         resp = requests.get(url)
         if resp.status_code != 200:
-            raise FailedRequest(resp.content)
+            print(FailedRequest(resp.content))
         return str(resp.text)
 
     def get_content(self, url):
