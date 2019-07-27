@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, CardGroup, Card, Image, Icon} from "semantic-ui-react";
+import {Container, CardGroup, Card, Image, Icon, Label, Segment} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import client from "../../api-client/client";
 import {withGoogleMap, withScriptjs} from "react-google-maps";
@@ -31,23 +31,31 @@ class MyRoutes extends React.Component {
 
   updateRouteCards(routes){
     let cards = [];
-    console.log(routes);
     routes.forEach(route => {
-      console.log(route);
+
       let card = <Card
         key={`my_routes_${route.pubId}`}
         onClick={() =>{this.props.onRouteSelect(route.pubId)}}
         as="div"
+        style={{marginRight:"15px"}}
       >
-        <Icon
-          size="large"
-          name="heart"
-          style={{position:"absolute", float:"right", right:0, zIndex:999}}
-          onClick={(e) =>{this.removeFavourite(e, route.pubId)}}
-        />
-        <Link to={`/route/${route.pubId}`} >
-          <Image src={route.sourceImageUrl} wrapped />
-        </Link>
+        <Container fluid style={{margin: "0!important"}} >
+          <Image fluid>
+            <Link to={`/route/${route.pubId}`}>
+              <img src={route.sourceImageUrl}  />
+            </Link>
+            <Label ribbon>
+              <Icon name="heart"/>
+            </Label>
+            <Label
+              corner="right"
+              circular
+              onClick={(e) => {this.removeFavourite(e, route.pubId)}}
+            >
+              <Icon name="remove circle" style={{top:"5px", right:"5px"}} />
+            </Label>
+          </Image>
+        </Container>
         <Card.Content>
           <Card.Header>{route.name}</Card.Header>
         </Card.Content>
@@ -57,14 +65,13 @@ class MyRoutes extends React.Component {
       let state = this.state;
       state.route_cards = cards;
       state.num_cards = cards.length;
-      console.log(state)
       this.setState(state);
     });
 
   }
 
   render() {
-    return (<Container style={{paddingTop:"15px"}}>
+    return (<Container style={{paddingTop:"15px", marginBottom:"20px"}}>
           <CardGroup>{this.state.route_cards}</CardGroup>
       </Container>
     );
