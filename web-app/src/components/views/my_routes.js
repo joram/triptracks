@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, CardGroup, Card, Image} from "semantic-ui-react";
+import {Container, CardGroup, Card, Image, Icon} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import client from "../../api-client/client";
 
@@ -32,10 +32,9 @@ class MyRoutes extends React.Component {
         key={`my_routes_${route.pubId}`}
         to={`/route/${route.pubId}`}
         onClick={() =>{this.props.onRouteSelect(route.pubId)}}
-         size="mini"
-        color="olive"
       >
-        <Image src={route.sourceImageUrl} wrapped ui={false} />
+        <Icon circular size={"large"} name="heart" style={{position:"relative", float:"right"}}/>
+        <Image src={route.sourceImageUrl} wrapped/>
         <Card.Content>
           <Card.Header>{route.name}</Card.Header>
         </Card.Content>

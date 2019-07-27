@@ -1,6 +1,5 @@
-import {Polyline} from "react-native-maps";
-import React from "react";
 import Geohash from "latlon-geohash"
+import auth from "./auth";
 
 let url = "https://api.triptracks.io/graphql";
 
@@ -10,6 +9,20 @@ function log_graphql_errors(query_name, data) {
             console.log(query_name, " error: ", err.message);
         });
     }
+}
+
+function do_graphql_call(query, name, authed=true){
+    let body = JSON.stringify({query});
+    return fetch(url, {
+        method: 'POST',
+        mode: "cors",
+        headers: auth.getRequestHeaders(),
+        body: body
+    }).then(r => {
+        let data = r.json();
+        log_graphql_errors(name, data);
+        return data
+    });
 }
 
 function routes_from_graphql_response(routes, zoom, hasLines) {
@@ -105,28 +118,4 @@ async function get_routes(hash, zoom) {
     return {routes: routes, msg: msg};
 }
 
-function lines() {
-
-    return [<Polyline
-        coordinates={[
-            {latitude: 37.8025259, longitude: -122.4351431},
-            {latitude: 37.7896386, longitude: -122.421646},
-            {latitude: 37.7665248, longitude: -122.4161628},
-            {latitude: 37.7734153, longitude: -122.4577787},
-            {latitude: 37.7948605, longitude: -122.4596065},
-            {latitude: 37.8025259, longitude: -122.4351431}
-        ]}
-        strokeColor="#000" // fallback for when `strokeColors` is not supported by the map-provider
-        strokeColors={[
-            '#7F0000',
-            '#00000000', // no color, creates a "long" gradient between the previous and next coordinate
-            '#B24112',
-            '#E5845C',
-            '#238C23',
-            '#7F0000'
-        ]}
-        strokeWidth={6}
-    />]
-}
-
-export {hash, get_routes_page, get_routes}
+export {hash, do_graphql_call, get_routes_page, get_routes, log_graphql_errors, routes_from_graphql_response}

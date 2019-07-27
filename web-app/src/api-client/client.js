@@ -1,5 +1,6 @@
 import line_utils from './line_utils'
 import auth from"./auth"
+import {do_graphql_call, log_graphql_errors, routes_from_graphql_response} from "./utils";
 
 let EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
@@ -13,36 +14,6 @@ let routes_by_hash = {};
 let routes_by_pub_id = {};
 let routes_by_search = {};
 
-
-function log_graphql_errors(query_name, data) {
-    if (data.errors !== undefined) {
-        data.errors.forEach(function (err) {
-            console.log(query_name, " error: ", err.message);
-        });
-    }
-}
-
-function routes_from_graphql_response(routes, zoom, hasLines) {
-    let results = [];
-    routes.forEach(route => {
-        if (route === null) {
-            console.log(`bad route: ${route}`);
-            return
-        }
-        if (route.lines !== null && hasLines && zoom !== null) {
-            route.lines = JSON.parse(route[`linesZoom${zoom}`]);
-        }
-
-        if (route.bounds === "{}") {
-            console.log(`bad route: ${route.pubId}`);
-            return
-        }
-        route.bounds = line_utils.string_to_bbox(route.bounds);
-
-        results.push(route);
-    });
-    return results
-}
 
 async function getRoutesPage(hash, zoom, page) {
     let page_size = 500;
@@ -103,23 +74,10 @@ export default {
           }
         }`;
 
-        let body = JSON.stringify({query});
-        return fetch(url, {
-            method: 'POST',
-            mode: "cors",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-            body: body
-        }).then(r => {
-            let data = r.json();
-            log_graphql_errors("create_user", data);
-            data.then(d => {
-                let sessionToken = d.data.createUser.sessionToken.sessionKey;
-                auth.setSessionToken(sessionToken);
-                emitter.emit("got_user");
-            });
+        do_graphql_call(query, "create_user").then(data => {
+            let sessionToken = data.data.createUser.sessionToken.sessionKey;
+            auth.setSessionToken(sessionToken);
+            emitter.emit("got_user");
         });
 
     },
@@ -187,43 +145,31 @@ export default {
         }
 
         let query = `
-      query get_single_route {
-        route(pubId:"${pub_id}", zoom:15){
-          pubId
-          name
-          bounds
-          description
-          sourceImageUrl
-        }
-      }
-    `;
+          query get_single_route {
+            route(pubId:"${pub_id}", zoom:15){
+              pubId
+              name
+              bounds
+              description
+              sourceImageUrl
+            }
+          }
+        `;
+        do_graphql_call(query, "get_single_route").then(data => {
+            let route = data.data.route;
+            if (route === null) {
+                return null
+            }
+            if (route.bounds === undefined) {
+                return null
+            }
+            route.bounds = line_utils.string_to_bbox(route.bounds);
+            routes_by_pub_id[pub_id] = route;
 
-        let body = JSON.stringify({query});
-        return fetch(url, {
-            method: 'POST',
-            mode: "cors",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-            body: body
-        })
-            .then(r => r.json())
-            .then(data => {
-                log_graphql_errors("get_single_route", data);
-                let route = data.data.route;
-                if (route === null) {
-                    return null
-                }
-                if (route.bounds === undefined) {
-                    return null
-                }
-                route.bounds = line_utils.string_to_bbox(route.bounds);
-                routes_by_pub_id[pub_id] = route;
+            emitter.emit("got_route", pub_id);
+            return route
 
-                emitter.emit("got_route", pub_id);
-                return route
-            });
+        });
     },
 
     getRoutesBySearch2: function (search_text) {
@@ -242,17 +188,7 @@ export default {
             }
           }
         `;
-
-        let body = JSON.stringify({query});
-        return fetch(url, {
-                method: 'POST',
-                mode: "cors",
-                headers: auth.getRequestHeaders(),
-                body: body
-            }
-        ).then(r => r.json()
-        ).then(data => {
-            log_graphql_errors("route_search", data);
+        do_graphql_call(query, "route_search").then(data => {
             routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, null, false);
             emitter.emit("got_search", {search_text: search_text});
             return routes_by_search[search_text];
