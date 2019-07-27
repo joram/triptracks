@@ -7,6 +7,7 @@ import APIClient from "./api-client/client";
 import {BrowserRouter, Route} from "react-router-dom";
 import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
+import RoutesMap from "./components/routes_map";
 
 class App extends React.Component {
 
@@ -44,7 +45,13 @@ class App extends React.Component {
                 <Route exact path="/" render={() => home}/>
                 <Route exact path={`/route/:pub_id`} render={() => home}/>
                 <Route exact path="/settings" component={Settings}/>
-                <Route exact path="/routes" render={() => <MyRoutes onRouteSelect={this.onRouteSelect.bind(this)}/>}/>
+                <Route exact path="/routes" render={() =>
+                    <MyRoutes onRouteSelect={this.onRouteSelect.bind(this)}
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
+                        loadingElement={<div id="map_loading_element" />}
+                        containerElement={<div id="map_container" />}
+                        mapElement={<div id="map_element"/>}
+                    />}/>
                 <Footer/>
             </BrowserRouter>
         </>

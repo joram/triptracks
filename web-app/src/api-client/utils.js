@@ -1,5 +1,7 @@
 import Geohash from "latlon-geohash"
 import auth from "./auth";
+import {string_to_bbox} from "./line_utils";
+
 
 let url = "https://api.triptracks.io/graphql";
 
@@ -42,7 +44,10 @@ function routes_from_graphql_response(routes, zoom, hasLines=true) {
             console.log(`bad route: ${route.pubId}`);
             return
         }
-        // route.bounds = line_utils.string_to_bbox(route.bounds);
+        let old = route.bounds;
+        route.bounds = string_to_bbox(route.bounds);
+        // route.bounds = JSON.parse(route.bounds);
+        console.log(route.pubId, old, route.bounds)
 
         results.push(route);
     });

@@ -1,9 +1,12 @@
+// import {LatLngBounds} from "react-google-maps";
+
 module.exports = {
     string_to_bbox: function (s) {
         const google = window.google;
-        if (google === undefined) {
-            return
-        }
+        // if (google === undefined) {
+        //     console.log("no google");
+        //     return
+        // }
         let b = JSON.parse(s);
         let lat_1 = parseFloat(b[0][0]);
         let lng_1 = parseFloat(b[0][1]);
