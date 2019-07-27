@@ -155,7 +155,7 @@ export default {
             }
           }
         `;
-        do_graphql_call(query, "get_single_route").then(data => {
+        return do_graphql_call(query, "get_single_route").then(data => {
             let route = data.data.route;
             if (route === null) {
                 return null
@@ -165,7 +165,6 @@ export default {
             }
             route.bounds = line_utils.string_to_bbox(route.bounds);
             routes_by_pub_id[pub_id] = route;
-
             emitter.emit("got_route", pub_id);
             return route
 
@@ -188,7 +187,7 @@ export default {
             }
           }
         `;
-        do_graphql_call(query, "route_search").then(data => {
+        return do_graphql_call(query, "route_search").then(data => {
             routes_by_search[search_text] = routes_from_graphql_response(data.data.routesSearch, null, false);
             emitter.emit("got_search", {search_text: search_text});
             return routes_by_search[search_text];
@@ -207,44 +206,23 @@ export default {
             }
           }
         `;
-
-        let body = JSON.stringify({query});
-        let headers = auth.getRequestHeaders();
-        console.log(headers);
-        return fetch(url, {
-                method: 'POST',
-                mode: "cors",
-                headers: headers,
-                body: body
-            }
-        ).then(r => r.json()
-        ).then(data => {
-            log_graphql_errors("bucket_list_routes", data);
-            return routes_from_graphql_response(data.data.bucketListRoutes, null, "bucket_list_routes")
+        return do_graphql_call(query, "bucket_list_routes").then(data => {
+            return routes_from_graphql_response(data.data.bucketListRoutes, null, false)
         });
     },
 
     addToBucketList: function (route_pub_id) {
-        console.log("adding to bucket list", route_pub_id);
-        let query = `mutation {
-              addBucketListRoute(routePubId: "${route_pub_id}"){ok}
-          }`;
+        let query = `mutation { addBucketListRoute(routePubId: "${route_pub_id}"){ok} }`;
+        let r = do_graphql_call(query, "add_to_bucket_list");
+        console.log(r);
+        return r
+    },
 
-        let body = JSON.stringify({query});
-        return fetch(url, {
-            method: 'POST',
-            mode: "cors",
-            headers: auth.getRequestHeaders(),
-            body: body
-        }).then(r => {
-            let data = r.json();
-            data.then(data2 => {
-                console.log("added to bucket list", data2)
-            });
-            log_graphql_errors("add_to_bucket_list", data);
-        });
-
-
+    removeFromBucketList: function (route_pub_id) {
+        let query = `mutation { removeBucketListRoute(routePubId: "${route_pub_id}"){ok} }`;
+        let r = do_graphql_call(query, "remove_from_bucket_list");
+        r.then(d => console.log(d));
+        return r
     },
 
     subscribeGotRoutes: function (callback) {

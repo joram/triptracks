@@ -9,7 +9,7 @@ class MyRoutes extends React.Component {
   constructor(props){
     super(props);
     this.state = {route_cards:[]};
-    client.subscribeGotUser(this.updateBucketList.bind(this))
+    client.subscribeGotUser(this.updateBucketList.bind(this));
     if(client.isLoggedIn()){
       this.updateBucketList()
     }
@@ -17,9 +17,18 @@ class MyRoutes extends React.Component {
 
   updateBucketList(){
     client.getBucketListRoutes().then(routes => {
-      console.log("my routes:", routes);
       this.updateRouteCards(routes);
+      console.log("updated bucket list")
     })
+  }
+
+  removeFavourite(e, pubId){
+    console.log(e)
+    client.removeFromBucketList(pubId).then(() => {
+      console.log("removed a favourite");
+      this.updateBucketList();
+    });
+    e.stopPropagation();
   }
 
   updateRouteCards(routes){
@@ -28,12 +37,18 @@ class MyRoutes extends React.Component {
     routes.forEach(route => {
       console.log(route);
       let card = <Card
-        as={Link}
+        // as={Link}
         key={`my_routes_${route.pubId}`}
-        to={`/route/${route.pubId}`}
+        // to={`/route/${route.pubId}`}
         onClick={() =>{this.props.onRouteSelect(route.pubId)}}
       >
-        <Icon circular size={"large"} name="heart" style={{position:"relative", float:"right"}}/>
+        <Icon
+          circular
+          size={"large"}
+          name="heart"
+          style={{position:"absolute", float:"right", right:0, zIndex:1}}
+          onClick={(e) =>{this.removeFavourite(e, route.pubId)}}
+        />
         <Image src={route.sourceImageUrl} wrapped/>
         <Card.Content>
           <Card.Header>{route.name}</Card.Header>
@@ -43,6 +58,8 @@ class MyRoutes extends React.Component {
       cards.push(card);
       let state = this.state;
       state.route_cards = cards;
+      state.num_cards = cards.length;
+      console.log(state)
       this.setState(state);
     });
 

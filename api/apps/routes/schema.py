@@ -36,6 +36,7 @@ class RemoveBucketListRoute(graphene.Mutation):
 
     def mutate(self, info, route_pub_id):
         user = get_authenticated_user(info)
+        print("", user, "removing from bucket list", route_pub_id)
         if user is None:
             return RemoveBucketListRoute(ok=False)
 
@@ -43,5 +44,7 @@ class RemoveBucketListRoute(graphene.Mutation):
         if not qs.exists():
             return RemoveBucketListRoute(ok=False)
 
-        BucketListRoute.objects.filter(user_pub_id=user.pub_id, route_pub_id=route_pub_id).delete()
+        qs = BucketListRoute.objects.filter(user_pub_id=user.pub_id, route_pub_id=route_pub_id)
+        print("removing %d" % qs.count())
+        qs.delete()
         return RemoveBucketListRoute(ok=True)

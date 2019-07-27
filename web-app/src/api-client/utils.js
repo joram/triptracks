@@ -25,7 +25,7 @@ function do_graphql_call(query, name, authed=true){
     });
 }
 
-function routes_from_graphql_response(routes, zoom, hasLines) {
+function routes_from_graphql_response(routes, zoom, hasLines=true) {
     let results = [];
     routes.forEach(function (route) {
         if (route === null) {
