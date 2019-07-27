@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Polyline} from "react-google-maps";
-import routeStore from "../api-client/routeStore";
+import routeStore from "../api-client/client";
 import map_zoom_emitter from "../map_zoom_emitter";
 import {withRouter} from "react-router-dom";
 

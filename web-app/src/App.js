@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/header";
 import Home from "./components/views/home";
 import Footer from "./components/footer";
-import routeStore from "./api-client/routeStore";
+import APIClient from "./api-client/client";
 import {BrowserRouter, Route} from "react-router-dom";
 import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
@@ -24,7 +24,7 @@ class App extends React.Component {
     }
 
     onRouteSelect(pubId) {
-        routeStore.getRouteByID(pubId).then(route => {
+        APIClient.getRouteByID(pubId).then(route => {
             if (route === null) {
                 return
             }

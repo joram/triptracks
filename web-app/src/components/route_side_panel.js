@@ -1,6 +1,6 @@
 import React from "react";
 import {Image, Header, Container, ButtonGroup, Button, Icon} from "semantic-ui-react";
-import routeStore from "../api-client/routeStore"
+import routeStore from "../api-client/client"
 
 
 class Route_side_panel extends React.Component {

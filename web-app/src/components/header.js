@@ -1,6 +1,6 @@
 import React from "react";
 import {GoogleLogin, GoogleLogout} from 'react-google-login';
-import routeStore from '../api-client/routeStore'
+import routeStore from '../api-client/client'
 import {Dropdown, Image, Menu} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import RoutesSearch from "./route_search_box"

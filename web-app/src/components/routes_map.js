@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import TrailRoute from "./route_map_line.js"
 import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
 import Geohash from "latlon-geohash"
-import routeStore from '../api-client/routeStore'
+import APIClient from '../api-client/client'
 import map_zoom_emitter from "../map_zoom_emitter"
 
 
@@ -17,14 +17,14 @@ class RoutesMapContainer extends Component {
         this.map = React.createRef();
         this.state = {};
 
-        routeStore.subscribeGotRoutes(this.gotRoutes.bind(this));
-        routeStore.subscribeFinishedGettingRoutes(this.finishedGettingRoutes.bind(this));
+        APIClient.subscribeGotRoutes(this.gotRoutes.bind(this));
+        APIClient.subscribeFinishedGettingRoutes(this.finishedGettingRoutes.bind(this));
     }
 
     onIdle() {
         let hash = this.hash(this.map.getBounds());
         if (hash.length > 0) {
-            routeStore.getRoutesByHash(hash, this.zoom())
+            APIClient.getRoutesByHash(hash, this.zoom())
         } else {
             let ne = this.map_bbox().getNorthEast();
             let sw = this.map_bbox().getSouthWest();
@@ -33,10 +33,10 @@ class RoutesMapContainer extends Component {
             h1 = h1.substring(0, 1);
             h2 = h2.substring(0, 1);
             if (h1 !== h2) {
-                routeStore.getRoutesByHash(h1, this.zoom());
-                routeStore.getRoutesByHash(h2, this.zoom());
+                APIClient.getRoutesByHash(h1, this.zoom());
+                APIClient.getRoutesByHash(h2, this.zoom());
             } else {
-                routeStore.getRoutesByHash('', this.zoom());
+                APIClient.getRoutesByHash('', this.zoom());
             }
         }
     }

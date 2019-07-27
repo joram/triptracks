@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, CardGroup, Card, Image} from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import routeStore from "../../api-client/routeStore";
+import client from "../../api-client/client";
 
 
 class MyRoutes extends React.Component {
@@ -9,14 +9,14 @@ class MyRoutes extends React.Component {
   constructor(props){
     super(props);
     this.state = {route_cards:[]};
-    routeStore.subscribeGotUser(this.updateBucketList.bind(this))
-    if(routeStore.isLoggedIn()){
+    client.subscribeGotUser(this.updateBucketList.bind(this))
+    if(client.isLoggedIn()){
       this.updateBucketList()
     }
   }
 
   updateBucketList(){
-    routeStore.getBucketListRoutes().then(routes => {
+    client.getBucketListRoutes().then(routes => {
       console.log("my routes:", routes);
       this.updateRouteCards(routes);
     })

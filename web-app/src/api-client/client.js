@@ -1,4 +1,5 @@
 import line_utils from './line_utils'
+import auth from"./auth"
 
 let EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
@@ -81,23 +82,10 @@ async function getRoutesPage(hash, zoom, page) {
         });
 }
 
-let sessionToken = null;
-
-function requestHeaders() {
-    let headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-    };
-    if (sessionToken !== null) {
-        headers["x-session-token"] = sessionToken
-    }
-    return headers
-}
-
 export default {
 
-    isLoggedIn: function () {
-        return sessionToken !== null
+    isLoggedIn: function(){
+        return auth.isAuthed()
     },
 
     createUser: function (googleCreds) {
@@ -128,7 +116,8 @@ export default {
             let data = r.json();
             log_graphql_errors("create_user", data);
             data.then(d => {
-                sessionToken = d.data.createUser.sessionToken.sessionKey;
+                let sessionToken = d.data.createUser.sessionToken.sessionKey;
+                auth.setSessionToken(sessionToken);
                 emitter.emit("got_user");
             });
         });
@@ -258,7 +247,7 @@ export default {
         return fetch(url, {
                 method: 'POST',
                 mode: "cors",
-                headers: requestHeaders(),
+                headers: auth.getRequestHeaders(),
                 body: body
             }
         ).then(r => r.json()
@@ -284,7 +273,7 @@ export default {
         `;
 
         let body = JSON.stringify({query});
-        let headers = requestHeaders();
+        let headers = auth.getRequestHeaders();
         console.log(headers);
         return fetch(url, {
                 method: 'POST',
@@ -300,7 +289,7 @@ export default {
     },
 
     addToBucketList: function (route_pub_id) {
-        console.log("adding to pubkcet list", route_pub_id);
+        console.log("adding to bucket list", route_pub_id);
         let query = `mutation {
               addBucketListRoute(routePubId: "${route_pub_id}"){ok}
           }`;
@@ -309,7 +298,7 @@ export default {
         return fetch(url, {
             method: 'POST',
             mode: "cors",
-            headers: requestHeaders(),
+            headers: auth.getRequestHeaders(),
             body: body
         }).then(r => {
             let data = r.json();
