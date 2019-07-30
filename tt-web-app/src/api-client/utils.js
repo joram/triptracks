@@ -44,11 +44,7 @@ function routes_from_graphql_response(routes, zoom, hasLines=true) {
             console.log(`bad route: ${route.pubId}`);
             return
         }
-        let old = route.bounds;
         route.bounds = string_to_bbox(route.bounds);
-        // route.bounds = JSON.parse(route.bounds);
-        console.log(route.pubId, old, route.bounds)
-
         results.push(route);
     });
     return results

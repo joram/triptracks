@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, CardGroup, Card, Image, Icon, Label, Segment} from "semantic-ui-react";
+import {CardGroup, Card, Image, Icon, Label, Segment} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import client from "../../api-client/client";
 import {withGoogleMap, withScriptjs} from "react-google-maps";
@@ -9,11 +9,26 @@ class MyRoutes extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {route_cards:[]};
-    client.subscribeGotUser(this.updateBucketList.bind(this));
+    this.state = {
+      route_cards:[],
+      owner_cards:[],
+    };
+    client.subscribeGotUser(() => {
+      this.updateStravaRoutes();
+      this.updateBucketList();
+    });
     if(client.isLoggedIn()){
+      this.updateStravaRoutes();
       this.updateBucketList()
     }
+  }
+
+  updateStravaRoutes(){
+    console.log("updating strava routes 1");
+    client.getStravaActivities().then(activity => {
+    console.log("updating strava routes 2");
+      console.log(activity);
+    })
   }
 
   updateBucketList(){
@@ -39,10 +54,9 @@ class MyRoutes extends React.Component {
         as="div"
         style={{marginRight:"15px"}}
       >
-        <Container fluid style={{margin: "0!important"}} >
           <Image fluid>
             <Link to={`/route/${route.pubId}`}>
-              <img src={route.sourceImageUrl}  />
+              <img src={route.sourceImageUrl} alt=""/>
             </Link>
             <Label ribbon>
               <Icon name="heart"/>
@@ -55,7 +69,6 @@ class MyRoutes extends React.Component {
               <Icon name="remove circle" style={{top:"5px", right:"5px"}} />
             </Label>
           </Image>
-        </Container>
         <Card.Content>
           <Card.Header>{route.name}</Card.Header>
         </Card.Content>
@@ -71,9 +84,10 @@ class MyRoutes extends React.Component {
   }
 
   render() {
-    return (<Container style={{paddingTop:"15px", marginBottom:"20px"}}>
+    return (<Segment basic style={{paddingTop:"15px"}}>
+          <CardGroup>{this.state.owner_cards}</CardGroup>
           <CardGroup>{this.state.route_cards}</CardGroup>
-      </Container>
+      </Segment>
     );
   }
 }

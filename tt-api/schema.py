@@ -6,10 +6,32 @@ from apps.packing.schema import PackingListType
 from apps.packing.models import PackingList
 from apps.accounts.schema import CreateUser
 from apps.routes.schema import AddBucketListRoute, RemoveBucketListRoute
+from apps.integrations.models.strava import StravaActivity, StravaAccount
+from apps.integrations.schema import StravaActivityGraphene
 from utils.auth import get_authenticated_user
 
 
-class Query(graphene.ObjectType):
+class FakeUser(object):
+    # pub_id = "user_3ffrCPmfjrQwrbh9FcKXcYqV"  # me
+   pub_id = "user_6tfBmhtFvPvXdCMmPVYr4QwS"  # matthieu
+
+
+class IntegrationsQuery(object):
+    strava_activities = graphene.List(StravaActivityGraphene)
+
+    def resolve_strava_activities(self, info):
+        try:
+          user = get_authenticated_user(info)
+          if user is None:
+            user = FakeUser()
+            # return []
+          account = StravaAccount.objects.get(user_pub_id=user.pub_id)
+          qs = StravaActivity.objects.filter(strava_account_pub_id=account.pub_id)
+          return qs
+        except Exception as e:
+          print(e)
+
+class RoutesQuery(object):
   route = graphene.Field(RouteGraphene, pub_id=graphene.String(), zoom=graphene.Int())
   routes = graphene.List(
     RouteGraphene,
@@ -20,11 +42,6 @@ class Query(graphene.ObjectType):
   )
   routes_search = graphene.List(RouteGraphene, search_text=graphene.String(), limit=graphene.Int())
   bucket_list_routes = graphene.List(RouteGraphene)
-
-  trip_plans = graphene.List(TripPlanType)
-  trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
-  packing_lists = graphene.List(PackingListType)
-  packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
 
   def resolve_route(self, info, pub_id, zoom):
     zoom_key = f"lines_zoom_{zoom}"
@@ -52,7 +69,6 @@ class Query(graphene.ObjectType):
     return rg
 
   def resolve_routes(self, info, geohash, zoom, page, page_size):
-    print(f"serving routes at {geohash}::{zoom}. from {page_size*page} to {page_size*(page+1)}")
     zoom_key = f"lines_zoom_{zoom}"
     qs = RouteMetadata.objects.filter(geohash__startswith=geohash).values_list(
       "name",
@@ -63,7 +79,6 @@ class Query(graphene.ObjectType):
     )
 
     # paginating
-    print(f"serving {qs.count()} routes at {geohash}::{zoom}. from {page_size*page} to {page_size*(page+1)}")
     a = page_size * page
     b = page_size * (page + 1)
     qs = qs[a:b]
@@ -121,19 +136,34 @@ class Query(graphene.ObjectType):
       source_image_url=source_image_url,
     ) for (name, pub_id, bounds, description, source_image_url) in qs]
 
-  def resolve_trip_plans(self, info):
-    if info.context is not None:
-      user = info.context.user
-    return Plan.objects.all()
 
-  def resolve_trip_plan(self, info, pub_id):
-    return Plan.objects.get(pub_id=pub_id)
+class TripQuery(object):
+    trip_plans = graphene.List(TripPlanType)
+    trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
 
-  def resolve_packing_lists(self, info):
-    return PackingList.objects.all()
+    def resolve_trip_plans(self, info):
+        if info.context is not None:
+            user = info.context.user
+        return Plan.objects.all()
 
-  def resolve_packing_list(self, info, pub_id):
-    return PackingList.objects.get(pub_id=pub_id)
+    def resolve_trip_plan(self, info, pub_id):
+        return Plan.objects.get(pub_id=pub_id)
+
+
+class PackingQuery(object):
+
+    packing_lists = graphene.List(PackingListType)
+    packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
+
+    def resolve_packing_lists(self, info):
+      return PackingList.objects.all()
+
+    def resolve_packing_list(self, info, pub_id):
+      return PackingList.objects.get(pub_id=pub_id)
+
+
+class Query(graphene.ObjectType, TripQuery, PackingQuery, RoutesQuery, IntegrationsQuery):
+    pass
 
 
 class Mutations(graphene.ObjectType):

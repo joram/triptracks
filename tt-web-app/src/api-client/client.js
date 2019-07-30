@@ -9,6 +9,7 @@ let url = "https://api.triptracks.io/graphql";
 if (window.location.hostname === "localhost") {
     url = "http://127.0.0.1:8000/graphql";
 }
+console.log("server:", url);
 
 let routes_by_hash = {};
 let routes_by_pub_id = {};
@@ -208,6 +209,23 @@ export default {
         `;
         return do_graphql_call(query, "bucket_list_routes").then(data => {
             return routes_from_graphql_response(data.data.bucketListRoutes, null, false)
+        });
+    },
+
+    getStravaActivities: function () {
+        let query = `
+          query strava_activities {
+            stravaActivities {
+              pubId,
+              routePubId,
+              stravaId,
+              stravaAccountPubId
+            }
+          }
+        `;
+        return do_graphql_call(query, "strava_activities").then(data => {
+            console.log(data);
+            return []
         });
     },
 

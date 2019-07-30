@@ -7,7 +7,7 @@ import APIClient from "./api-client/client";
 import {BrowserRouter, Route} from "react-router-dom";
 import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
-import RoutesMap from "./components/routes_map";
+
 
 class App extends React.Component {
 
