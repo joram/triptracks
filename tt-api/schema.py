@@ -141,6 +141,7 @@ class RoutesQuery(object):
 
     def resolve_owner_routes(self, info):
       user = get_authenticated_user(info)
+
       if user is None:
         user = FakeUser()
         # return []

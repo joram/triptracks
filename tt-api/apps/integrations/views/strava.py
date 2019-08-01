@@ -17,12 +17,30 @@ def connect(request):
     return HttpResponseRedirect(authorize_url)
 
 
-@login_required
+# @login_required
 def collect(request):
-    strava_account = StravaAccount.objects.get(user_pub_id=request.session.get("user_pub_id"))
+    if request.user is None:
+        return
+
+    qs = StravaAccount.objects.filter(user_pub_id=request.user.pub_id)
+    if qs.count() == 0:
+        print("no strava account for user", request.user)
+        return
+
+    strava_account = qs[0]
     for activity, created in strava_account.populate_activities():
         print(created, activity)
+
     return HttpResponse("collecting")
+
+
+# class FakeRequest():
+#     def __init__(self, u):
+#         self.user = u
+#
+# from apps.accounts.models import User
+# for user in User.objects.all():
+#     collect(FakeRequest(user))
 
 
 @csrf_exempt

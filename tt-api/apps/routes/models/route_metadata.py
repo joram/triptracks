@@ -8,6 +8,7 @@ class RouteMetadata(models.Model):
     SOURCE_CHOICES = (
         ("summitpost", 'Summitpost'),
         ("trailpeak", 'Trailpeak'),
+        ("strava", 'Strava'),
     )
 
     pub_id = ShortUUIDField(prefix="route", max_length=38, db_index=True)
@@ -68,21 +69,6 @@ class RouteMetadata(models.Model):
             18: self.lines_zoom_18,
             19: self.lines_zoom_19,
         }[zoom]
-
-    # def route(self, zoom):
-    #     return Route(
-    #         lines=self.get_lines(zoom),
-    #         name=self.name,
-    #         description=self.description,
-    #         pub_id=self.pub_id,
-    #         zoom=1,
-    #         bounds=self.bounds,
-    #         source_image_url=self.source_image_url,
-    #
-    #         # TODO
-    #         owner_pub_id="user_whoknows",
-    #         is_public=True,
-    #     )
 
 
 class RouteGraphene(DjangoObjectType):

@@ -10,8 +10,8 @@ class MyRoutes extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      route_cards:[],
-      owner_cards:[],
+      favourite_routes: [],
+      owner_routes: [],
     };
     client.subscribeGotUser(() => {
       this.updateStravaRoutes();
@@ -24,16 +24,18 @@ class MyRoutes extends React.Component {
   }
 
   updateStravaRoutes(){
-    console.log("updating strava routes 1");
-    client.getStravaActivities().then(activity => {
-    console.log("updating strava routes 2");
-      console.log(activity);
+    client.getStravaActivities().then(routes => {
+      let state = this.state;
+      state.owner_routes = routes;
+      this.setState(state);
     })
   }
 
   updateBucketList(){
     client.getBucketListRoutes().then(routes => {
-      this.updateRouteCards(routes);
+      let state = this.state;
+      state.favourite_routes = routes;
+      this.setState(state);
     })
   }
 
@@ -44,11 +46,13 @@ class MyRoutes extends React.Component {
     e.stopPropagation();
   }
 
-  updateRouteCards(routes){
-    let cards = [];
-    routes.forEach(route => {
+  removeOwned(e, pubId){
+    console.log("removing owned route", pubId);
+    e.stopPropagation();
+  }
 
-      let card = <Card
+  _favourite_card(route){
+      return <Card
         key={`my_routes_${route.pubId}`}
         onClick={() =>{this.props.onRouteSelect(route.pubId)}}
         as="div"
@@ -73,20 +77,50 @@ class MyRoutes extends React.Component {
           <Card.Header>{route.name}</Card.Header>
         </Card.Content>
       </Card>;
+  }
 
-      cards.push(card);
-      let state = this.state;
-      state.route_cards = cards;
-      state.num_cards = cards.length;
-      this.setState(state);
+  _owner_card(route){
+      return <Card
+        key={`my_routes_${route.pubId}`}
+        onClick={() =>{this.props.onRouteSelect(route.pubId)}}
+        as="div"
+        style={{marginRight:"15px"}}
+      >
+          <Image fluid>
+            <Link to={`/route/${route.pubId}`}>
+              <img src={route.sourceImageUrl} alt=""/>
+            </Link>
+            <Label ribbon>
+              <Icon name="user"/>
+            </Label>
+            <Label
+              corner="right"
+              circular
+              onClick={(e) => {this.removeOwned(e, route.pubId)}}
+            >
+              <Icon name="remove circle" style={{top:"5px", right:"5px"}} />
+            </Label>
+          </Image>
+        <Card.Content>
+          <Card.Header>{route.name}</Card.Header>
+        </Card.Content>
+      </Card>;
+  }
+
+  cards(){
+    let cards = [];
+    this.state.favourite_routes.forEach(route => {
+      cards.push(this._favourite_card(route))
     });
-
+    this.state.owner_routes.forEach(route => {
+      cards.push(this._owner_card(route))
+    });
+    return cards;
   }
 
   render() {
-    return (<Segment basic style={{paddingTop:"15px"}}>
-          <CardGroup>{this.state.owner_cards}</CardGroup>
-          <CardGroup>{this.state.route_cards}</CardGroup>
+    return (<Segment basic style={{paddingTop:"15px", paddingLeft:"25px"}}>
+          <CardGroup>{this.cards()}</CardGroup>
       </Segment>
     );
   }

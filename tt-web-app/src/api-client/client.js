@@ -195,24 +195,9 @@ export default {
     },
 
     getStravaActivities: function () {
-        // let example = fetch(
-        //     "http://localhost:8000/graphql",
-        //     {
-        //         "headers":{
-        //             "accept":"application/json",
-        //             "accept-language":"en-US,en;q=0.9",
-        //             "content-type":"application/json"
-        //         },
-        //         "body":"{\"query\":}",
-        //         "method":"POST",
-        //         "mode":"cors",
-        //     }
-        // ).then(data => {console.log(data)});
-
         let query = "query owner_routes { ownerRoutes {pubId, name, description, bounds, sourceImageUrl} }";
         return do_graphql_call(query, "owner_routes").then(data => {
-            console.log(data);
-            return []
+            return routes_from_graphql_response(data.data.ownerRoutes, null, false);
         });
     },
 

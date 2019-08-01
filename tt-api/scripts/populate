@@ -8,14 +8,13 @@ from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
 from apps.routes.models.route_metadata import RouteMetadata
 from utils.lines import lines_from_gpx_string, geohash, bbox, reduced_lines, max_vertices
 
+
 def get_or_create_route(data, source, i):
     # expected keys
     # "description","directions","name",
     # "mountain_name","subheading",
     # "trail_image_url","url","metadata", "gpx_url",
 
-    # TODO: push to S3 gpx file
-    # TODO: push to S3 image file
     if data.get("gpx_url") is None or data.get("gpx_url").endswith("-.gpx"):
         print(f"skip {i}, no gpx_url {data.get('url')}")
         return
@@ -48,7 +47,7 @@ def get_or_create_route(data, source, i):
         rm.save()
 
         print("have", source, i, len(lines), "\t", lengths(rm), "\t", rm.name)
-
+        return rm
 
     except RouteMetadata.DoesNotExist:
         bb = bbox(lines)
@@ -68,6 +67,7 @@ def get_or_create_route(data, source, i):
         set_lines(rm, lines)
         rm.save()
         print("created", source, i, len(lines[0]), lengths(rm), "\t", rm.name)
+        return rm
 
 def lengths(rm):
     return ", ".join([

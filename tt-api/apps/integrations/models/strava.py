@@ -1,11 +1,12 @@
 from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
-from utils.fields import ShortUUIDField
+
 from apps.routes.models import RouteMetadata
 from apps.accounts.models import User
-from utils.lines import lines_from_gpx_string
 from apps.routes.stores import get_cache
+from utils.fields import ShortUUIDField
+from utils.lines import lines_from_gpx_string, bbox, geohash
 
 
 class StravaAccount(models.Model):
@@ -38,6 +39,7 @@ class StravaAccount(models.Model):
             activities = resp.json()
 
             if len(activities) == 0:
+                print('no activities')
                 break
             print("--- new page [{}] count:{} ---".format(page, len(activities)))
             for activity in activities:
@@ -46,32 +48,37 @@ class StravaAccount(models.Model):
 
     def populate_activities(self):
         client = self.get_client()
-        # for activity in self.get_activities():
-        #     qs = StravaActivity.objects.filter(strava_id=activity.get("id"))
-        #     if qs.exists():
-        #         yield qs[0], False
-        #         continue
-        #
-        #     gpx_data = client.get_gpx_file(activity.get("id"))
-        #     if gpx_data is None:
-        #         print("no tracks")
-        #         continue
-        #
-        #     try:
-        #         tracks_file = TracksFile.objects.get_or_create_from_data(gpx_data, "{}.gpx".format(str(activity.get("name"))))
-        #         route = RouteMapLine.objects.create_from_route(tracks_file, activity.get("name"))
-        #         route.is_public = False
-        #         route.owner_pub_id = self.user_pub_id
-        #         route.save()
-        #     except Exception as e:
-        #         print(e)
-        #         continue
-        #
-        #     yield StravaActivity.objects.create(
-        #         strava_account_pub_id=self.pub_id,
-        #         strava_id=activity.get("id"),
-        #         route_pub_id=route.pub_id
-        #     ), True
+        for activity in self.get_activities():
+            qs = StravaActivity.objects.filter(strava_id=activity.get("id"))
+            if qs.exists():
+                yield qs[0], False
+                continue
+
+            try:
+                route = RouteMetadata.objects.get(name=activity.get("name"))
+            except RouteMetadata.DoesNotExist:
+                gpx_data = client.get_gpx_file(activity.get("id"))
+                if gpx_data is None:
+                    print("no tracks")
+                    continue
+
+                lines = lines_from_gpx_string(gpx_data)
+                bb = bbox(lines)
+                route = RouteMetadata.objects.create(
+                    name=activity.get("name"),
+                    geohash=geohash(bb),
+                    bounds=bb,
+                    source="strava",
+                )
+
+            print(self.pub_id)
+            print(activity.get("id"))
+            print(route.pub_id)
+            yield StravaActivity.objects.create(
+                strava_account_pub_id=self.pub_id,
+                strava_id=activity.get("id"),
+                route_pub_id=route.pub_id
+            ), True
 
     def __str__(self):
         return u"strava_account:{}".format(self.user.name)
@@ -116,7 +123,7 @@ class StravaActivityManager(models.Manager):
 class StravaActivity(models.Model):
     pub_id = ShortUUIDField(prefix="st_act", max_length=128)
     strava_account_pub_id = models.CharField(max_length=128)
-    strava_id = models.IntegerField()
+    strava_id = models.BigIntegerField()
     route_pub_id = models.CharField(max_length=128, null=True)
 
     objects = StravaActivityManager()
@@ -127,7 +134,7 @@ class StravaActivity(models.Model):
 
     @property
     def route(self):
-        return get_cache(0).get_by_pub_id(pub_id=self.route_pub_id)
+        return RouteMetadata.objects.get(pub_id=self.route_pub_id)
 
     def __str__(self):
         s = self.pub_id
