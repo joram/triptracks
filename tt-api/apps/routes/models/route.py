@@ -121,10 +121,6 @@ from apps.routes.models import RouteMetadata
 
 
 class RouteGraphene(DjangoObjectType):
-    # owner = graphene.Field(UserType)
-    # zoom = graphene.Field(graphene.Decimal)
-
-
     name = "route"
 
     class Meta:

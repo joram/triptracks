@@ -5,12 +5,6 @@ import {do_graphql_call, log_graphql_errors, routes_from_graphql_response} from 
 let EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 
-let url = "https://api.triptracks.io/graphql";
-if (window.location.hostname === "localhost") {
-    url = "http://127.0.0.1:8000/graphql";
-}
-console.log("server:", url);
-
 let routes_by_hash = {};
 let routes_by_pub_id = {};
 let routes_by_search = {};
@@ -19,40 +13,28 @@ let routes_by_search = {};
 async function getRoutesPage(hash, zoom, page) {
     let page_size = 500;
     let query = `
-    query get_routes_by_geohash {
-      routes(geohash:"${hash}", zoom:${zoom}, page:${page}, pageSize:${page_size}){
-        pubId
-        bounds
-        linesZoom${zoom}
-        sourceImageUrl
-      }
-    }
-  `;
-    let body = JSON.stringify({query});
-    return fetch(url, {
-        method: 'POST',
-        mode: "cors",
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        body: body
-    })
-        .then(r => r.json())
-        .then(data => {
-            log_graphql_errors("get_routes_page", data);
-            let routes = data.data.routes;
-            if (routes === null) {
-                console.log("failed to get routes");
-                console.log(data);
-                return {routes: [], lastPage: true}
-            }
-            return {
-                routes: routes_from_graphql_response(data.data.routes, zoom, true),
-                lastPage: routes.length !== page_size
-            };
-        });
+        query get_routes_by_geohash {
+          routes(geohash:"${hash}", zoom:${zoom}, page:${page}, pageSize:${page_size}){
+            pubId
+            bounds
+            linesZoom${zoom}
+            sourceImageUrl
+          }
+        }
+        `;
+    return do_graphql_call(query, "get routes page", false).then(data => {
+        log_graphql_errors("get_routes_page", data);
+        let routes = data.data.routes;
+        if (routes === null) {
+            return {routes: [], lastPage: true}
+        }
+        return {
+            routes: routes_from_graphql_response(data.data.routes, zoom, true),
+            lastPage: routes.length !== page_size
+        };
+    });
 }
+
 
 export default {
 
@@ -75,7 +57,7 @@ export default {
           }
         }`;
 
-        do_graphql_call(query, "create_user").then(data => {
+        do_graphql_call(query, "create-user").then(data => {
             let sessionToken = data.data.createUser.sessionToken.sessionKey;
             auth.setSessionToken(sessionToken);
             emitter.emit("got_user");
@@ -213,17 +195,22 @@ export default {
     },
 
     getStravaActivities: function () {
-        let query = `
-          query strava_activities {
-            stravaActivities {
-              pubId,
-              routePubId,
-              stravaId,
-              stravaAccountPubId
-            }
-          }
-        `;
-        return do_graphql_call(query, "strava_activities").then(data => {
+        // let example = fetch(
+        //     "http://localhost:8000/graphql",
+        //     {
+        //         "headers":{
+        //             "accept":"application/json",
+        //             "accept-language":"en-US,en;q=0.9",
+        //             "content-type":"application/json"
+        //         },
+        //         "body":"{\"query\":}",
+        //         "method":"POST",
+        //         "mode":"cors",
+        //     }
+        // ).then(data => {console.log(data)});
+
+        let query = "query owner_routes { ownerRoutes {pubId, name, description, bounds, sourceImageUrl} }";
+        return do_graphql_call(query, "owner_routes").then(data => {
             console.log(data);
             return []
         });

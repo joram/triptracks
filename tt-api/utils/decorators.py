@@ -20,13 +20,13 @@ def timed_calls(view_func):
         query = json.loads(request.body).get("query")
         name = query.split("{")[0].replace("query", "").strip()
         if name == "":
-            raise UnnamedGraphqlQueryException()
+            name = "unnamed query"
 
         resp = view_func(*args, **kwargs)
 
         end = datetime.datetime.now()
         delta = end - start
-        print(f"'{name}' took {delta.microseconds/1000}ms")
+        print(f"{delta.microseconds/1000}ms\tquery:{name}")
         return resp
 
     return wraps(view_func)(wrapped_view)

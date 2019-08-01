@@ -4,6 +4,9 @@ import {string_to_bbox} from "./line_utils";
 
 
 let url = "https://api.triptracks.io/graphql";
+if (window.location.hostname === "localhost") {
+    url = "http://127.0.0.1:8000/graphql";
+}
 
 function log_graphql_errors(query_name, data) {
     if (data.errors !== undefined) {
@@ -14,13 +17,16 @@ function log_graphql_errors(query_name, data) {
 }
 
 function do_graphql_call(query, name, authed=true){
-    let body = JSON.stringify({query});
-    return fetch(url, {
-        method: 'POST',
-        mode: "cors",
-        headers: auth.getRequestHeaders(),
-        body: body
-    }).then(r => {
+    let body = JSON.stringify({"query": query});
+    return fetch(
+        url,
+        {
+            "headers": auth.getRequestHeaders(),
+            "body": body,
+            "method":"POST",
+            "mode":"cors",
+        }
+    ).then(r => {
         let data = r.json();
         log_graphql_errors(name, data);
         return data

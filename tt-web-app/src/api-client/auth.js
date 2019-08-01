@@ -14,7 +14,7 @@ export default {
     getRequestHeaders: function() {
         let headers = {
             'Content-Type': 'application/json',
-            'Accept': 'application/json',
+            'Accept': 'application/json'
         };
         if (sessionToken !== null) {
             headers["x-session-token"] = sessionToken
