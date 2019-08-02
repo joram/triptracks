@@ -48,6 +48,9 @@ class MyRoutes extends React.Component {
 
   removeOwned(e, pubId){
     console.log("removing owned route", pubId);
+    client.removeOwnedRoute(pubId).then(()=>{
+      this.updateStravaRoutes();
+    });
     e.stopPropagation();
   }
 
