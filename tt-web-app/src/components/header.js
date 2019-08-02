@@ -16,7 +16,7 @@ class Header extends React.Component {
     }
 
     loginSuccess(resp) {
-        routeStore.createUser(resp);
+        routeStore.getOrCreateUser(resp);
         this.setState({
             isLoggedIn: true,
             googleData: resp,

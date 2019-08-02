@@ -48,16 +48,25 @@ class StravaAccount(models.Model):
 
     def populate_activities(self):
         client = self.get_client()
-        for activity in self.get_activities():
-            qs = StravaActivity.objects.filter(strava_id=activity.get("id"))
+        for activity_data in self.get_activities():
+            qs = StravaActivity.objects.filter(strava_id=activity_data.get("id"))
             if qs.exists():
-                yield qs[0], False
+                activity = qs[0]
+                try:
+                    route = RouteMetadata.objects.get(pub_id=activity.pub_id)
+                    gpx_data = client.get_gpx_file(activity_data.get("id"))
+                    lines = lines_from_gpx_string(gpx_data)
+                    route.set_lines(lines)
+                    route.save()
+                except:
+                    print("no route for", activity)
+                yield activity, False
                 continue
 
             try:
-                route = RouteMetadata.objects.get(name=activity.get("name"))
+                route = RouteMetadata.objects.get(name=activity_data.get("name"))
             except RouteMetadata.DoesNotExist:
-                gpx_data = client.get_gpx_file(activity.get("id"))
+                gpx_data = client.get_gpx_file(activity_data.get("id"))
                 if gpx_data is None:
                     print("no tracks")
                     continue
@@ -65,18 +74,18 @@ class StravaAccount(models.Model):
                 lines = lines_from_gpx_string(gpx_data)
                 bb = bbox(lines)
                 route = RouteMetadata.objects.create(
-                    name=activity.get("name"),
+                    name=activity_data.get("name"),
                     geohash=geohash(bb),
                     bounds=bb,
                     source="strava",
+                    owner_pub_id=self.user_pub_id,
                 )
+                route.set_lines(lines)
+                route.save()
 
-            print(self.pub_id)
-            print(activity.get("id"))
-            print(route.pub_id)
             yield StravaActivity.objects.create(
                 strava_account_pub_id=self.pub_id,
-                strava_id=activity.get("id"),
+                strava_id=activity_data.get("id"),
                 route_pub_id=route.pub_id
             ), True
 

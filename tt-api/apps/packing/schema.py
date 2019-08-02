@@ -39,3 +39,15 @@ class PackingListItemType(DjangoObjectType):
 
   class Meta:
     model = PackingListItem
+
+
+class PackingQuery(object):
+    packing_lists = graphene.List(PackingListType)
+    packing_list = graphene.Field(PackingListType, pub_id=graphene.String())
+
+    def resolve_packing_lists(self, info):
+      return PackingList.objects.all()
+
+    def resolve_packing_list(self, info, pub_id):
+      return PackingList.objects.get(pub_id=pub_id)
+

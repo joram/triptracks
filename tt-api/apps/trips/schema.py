@@ -30,3 +30,17 @@ class TripPlanType(DjangoObjectType):
 
   class Meta:
     model = Plan
+
+
+class TripQuery(object):
+    trip_plans = graphene.List(TripPlanType)
+    trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
+
+    def resolve_trip_plans(self, info):
+      if info.context is not None:
+        user = info.context.user
+      return Plan.objects.all()
+
+    def resolve_trip_plan(self, info, pub_id):
+      return Plan.objects.get(pub_id=pub_id)
+

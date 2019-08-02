@@ -34,10 +34,14 @@ def collect(request):
     return HttpResponse("collecting")
 
 
-# class FakeRequest():
+# class FakeRequest(object):
 #     def __init__(self, u):
 #         self.user = u
 #
+#
+# from apps.routes.models import RouteMetadata
+# StravaActivity.objects.all().delete()
+# RouteMetadata.objects.filter(source="strava").delete()
 # from apps.accounts.models import User
 # for user in User.objects.all():
 #     collect(FakeRequest(user))

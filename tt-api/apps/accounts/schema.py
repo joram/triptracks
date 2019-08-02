@@ -4,7 +4,7 @@ from graphene_django.types import DjangoObjectType
 from utils.auth import get_or_create_session_token
 
 
-class CreateUser(graphene.Mutation):
+class GetOrCreateUser(graphene.Mutation):
     class Arguments:
         google_credentials = graphene.JSONString()
 
@@ -18,12 +18,12 @@ class CreateUser(graphene.Mutation):
         if qs.exists():
             user = qs[0]
             token, created = get_or_create_session_token(user)
-            return CreateUser(user=qs[0], ok=True, session_token=token)
+            return GetOrCreateUser(user=qs[0], ok=True, session_token=token)
 
         user = User(google_credentials=google_credentials)
         user.save()
         token, created = get_or_create_session_token(user)
-        return CreateUser(user=user, ok=True, session_token=token)
+        return GetOrCreateUser(user=user, ok=True, session_token=token)
 
 
 class UserType(DjangoObjectType):

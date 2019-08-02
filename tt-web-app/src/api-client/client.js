@@ -42,10 +42,10 @@ export default {
         return auth.isAuthed()
     },
 
-    createUser: function (googleCreds) {
+    getOrCreateUser: function (googleCreds) {
         googleCreds = JSON.stringify({googleCreds}).replace(/"/g, '\\"');
         let query = `mutation {
-          createUser(googleCredentials: "${googleCreds}"){
+          getOrCreateUser(googleCredentials: "${googleCreds}"){
             ok
             user {
               pubId
@@ -57,8 +57,8 @@ export default {
           }
         }`;
 
-        do_graphql_call(query, "create-user").then(data => {
-            let sessionToken = data.data.createUser.sessionToken.sessionKey;
+        do_graphql_call(query, "get-or-create-user").then(data => {
+            let sessionToken = data.data.getOrCreateUser.sessionToken.sessionKey;
             auth.setSessionToken(sessionToken);
             emitter.emit("got_user");
         });
@@ -203,16 +203,17 @@ export default {
 
     addToBucketList: function (route_pub_id) {
         let query = `mutation { addBucketListRoute(routePubId: "${route_pub_id}"){ok} }`;
-        let r = do_graphql_call(query, "add_to_bucket_list");
-        console.log(r);
-        return r
+        return do_graphql_call(query, "add_to_bucket_list");
     },
 
     removeFromBucketList: function (route_pub_id) {
         let query = `mutation { removeBucketListRoute(routePubId: "${route_pub_id}"){ok} }`;
-        let r = do_graphql_call(query, "remove_from_bucket_list");
-        r.then(d => console.log(d));
-        return r
+        return do_graphql_call(query, "remove_from_bucket_list");
+    },
+
+    removeOwnedRoute: function (route_pub_id) {
+        let query = `mutation { removeOwnedRoute(routePubId: "${route_pub_id}"){ok} }`;
+        return do_graphql_call(query, "remove_from_bucket_list");
     },
 
     subscribeGotRoutes: function (callback) {
