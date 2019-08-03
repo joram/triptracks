@@ -2,7 +2,6 @@ import graphene
 from apps.accounts.schema import UserType
 from apps.trips.models import Plan, TripAttendee
 from apps.routes.models import RouteGraphene
-from apps.routes.stores import get_cache
 from apps.accounts.models import User
 from apps.packing.schema import PackingListType, PackingList
 from graphene_django.types import DjangoObjectType
@@ -18,7 +17,8 @@ class TripPlanType(DjangoObjectType):
     return User.objects.get(pub_id=self.user_pub_id)
 
   def resolve_route(self, info, *args, **kwargs):
-    return get_cache(0).get_by_pub_id(self.route_pub_id)
+    return None
+    # return get_cache(0).get_by_pub_id(self.route_pub_id)
 
   def resolve_attendees(self, info):
     attendees = TripAttendee.objects.filter(plan_pub_id=self.pub_id)

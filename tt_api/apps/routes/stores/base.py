@@ -29,20 +29,9 @@ class BaseS3Store(object):
     return os.path.join(self.base_path, filename)
 
   def _get_s3_content(self, key):
-    s3 = boto3.resource('s3')
-    obj = s3.Object(self.bucket, key)
-    return obj.get()['Body'].read().decode('utf-8')
-
-
-class GPXS3Store(BaseS3Store):
-
-  def __init__(self):
-    BaseS3Store.__init__(self)
-    self.base_path = "routes/gpx"
-
-
-class ImageS3Store(BaseS3Store):
-
-  def __init__(self):
-    BaseS3Store.__init__(self)
-    self.base_path = "routes/image"
+    try:
+      s3 = boto3.resource('s3')
+      obj = s3.Object(self.bucket, key)
+      return obj.get()['Body'].read().decode('utf-8')
+    except:
+      return None

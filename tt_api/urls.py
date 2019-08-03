@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^index.html$', route_file_views.home),
     url(r'^graphql', timed_calls(csrf_exempt(GraphQLView.as_view(graphiql=True)))),
     # url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    url(r'', include('apps.routes.urls')),
     url(r'', include('apps.accounts.urls')),
     url(r'', include('apps.packing.urls')),
     url(r'', include('apps.trips.urls')),

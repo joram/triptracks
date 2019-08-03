@@ -127,11 +127,6 @@ class RouteMetadata(models.Model):
         self.lines_zoom_20 = reduced_lines(lines, max_vertices(20))
 
 
-qs = RouteMetadata.objects.filter(source="strava")
-qs.update(is_public=False)
-print(f"made private {qs.count()} routes")
-
-
 class RouteGraphene(DjangoObjectType):
 
     class Meta:

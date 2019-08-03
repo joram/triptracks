@@ -4,7 +4,7 @@ from jsonfield import JSONField
 
 from apps.routes.models import RouteMetadata
 from apps.accounts.models import User
-from apps.routes.stores import get_cache
+# from apps.routes.stores import get_cache
 from utils.fields import ShortUUIDField
 from utils.lines import lines_from_gpx_string, bbox, geohash
 
@@ -117,7 +117,7 @@ class StravaActivityManager(models.Manager):
                 name=strava_activity_name,
                 is_public=False,
             )
-            get_cache(0).add(route)
+            # get_cache(0).add(route)
         except Exception as e:
             print(e)
             return None, False
