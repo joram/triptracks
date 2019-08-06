@@ -35,3 +35,24 @@ class BaseS3Store(object):
       return obj.get()['Body'].read().decode('utf-8')
     except:
       return None
+
+
+class BaseLocalStore(object):
+
+  def __init__(self, folder):
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    self.base_path = os.path.join(dir_path, "../../../../data/%s/" % folder)
+    self.base_path = os.path.abspath(self.base_path)
+    if not os.path.exists(self.base_path):
+        os.makedirs(self.base_path)
+
+  def get(self, filename):
+    try:
+      with open(os.path.join(self.base_path, filename)) as f:
+        return f.read()
+    except FileNotFoundError:
+      return None
+
+  def put(self, filename, content):
+    with open(os.path.join(self.base_path, filename), "w") as f:
+      f.write(content)

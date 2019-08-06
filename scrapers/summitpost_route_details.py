@@ -3,10 +3,10 @@ import json
 import os
 import cssutils
 from bs4 import BeautifulSoup
-from base import BaseScraper
-from summitpost_mountain_routes_list import ScrapeSummitPostMountainRoutesList
-from summitpost_base import BaseSummitPostScraper
-from utils.lines import lines_from_gpx_string, geohash, bbox
+from scrapers.base import BaseScraper
+from scrapers.summitpost_mountain_routes_list import ScrapeSummitPostMountainRoutesList
+from scrapers.summitpost_base import BaseSummitPostScraper
+from tt_api.utils.lines import lines_from_gpx_string, geohash, bbox
 
 import django
 django.setup()

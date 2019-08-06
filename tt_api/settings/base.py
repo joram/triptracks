@@ -55,12 +55,6 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.NullHandler',
         },
-        'papertrail': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.SysLogHandler',
-            'formatter': 'simple',
-            'address': ('logs3.papertrailapp.com', 45905)
-        },
     },
     'loggers': {
         'django': {
@@ -74,7 +68,7 @@ LOGGING = {
             'level': 'DEBUG',
         },
         'django.request': {
-            'handlers': ['papertrail', 'console'],
+            'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
         },

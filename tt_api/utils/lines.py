@@ -1,5 +1,6 @@
 import gpxpy.gpx
 import geohash2
+import geopy.distance
 
 
 def geohash(bbox):
@@ -36,7 +37,10 @@ def bbox(lines):
 
 
 def lines_from_gpx_string(content):
-  gpx = gpxpy.parse(content)
+  try:
+    gpx = gpxpy.parse(content)
+  except:
+    return []
   return _lines_from_gpx(gpx)
 
 
@@ -74,52 +78,63 @@ def _lines_from_gpx(gpx):
   return lines
 
 
-def reduced_lines(original_lines, max_vertices):
-  lines = []
-  for original_line in original_lines:
-    total_vertices = len(original_line)
-    max_vertices = min(max_vertices, total_vertices)
-    if max_vertices == 0:
-      continue
-    step = int(total_vertices / max_vertices)
+def _max_verts(line, zoom):
+  verts_per_km = {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 1,
+    6: 1,
+    7: 1,
+    8: 1,
+    9: 1,
+    10: 5,
+    11: 5,
+    12: 5,
+    13: 10,
+    14: 10,
+    15: 20,
+    16: 20,
+    17: 50,
+    18: 50,
+    19: 100,
+    20: 100,
+  }[zoom]
+  d = km(line)
+  x = max(1, int(verts_per_km * d))
+  return x
 
-    line = []
-    line.append(original_line[0])
-    for i in range(0, len(original_line) - 1, step):
-      line.append(original_line[i])
-    line.append(original_line[-1])
 
-    if len(line) <= 1:
-      print(len(line), max_vertices, original_lines)
-      raise Exception()
-
-    lines.append(line)
-  return lines
+def reduced_lines(lines, zoom):
+  new_lines = []
+  for line in lines:
+    new_lines.append(reduced_line(line, _max_verts(line, zoom)))
+  return new_lines
 
 
-def max_vertices(zoom):
-    if zoom not in range(1, 21):
-        raise Exception()
-    return {
-      20: 1000,
-      19: 1000,
-      18: 1000,
-      17: 100,
-      16: 100,
-      15: 50,
-      14: 50,
-      13: 20,
-      12: 20,
-      11: 10,
-      10: 10,
-      9: 5,
-      8: 5,
-      7: 5,
-      6: 1,
-      5: 1,
-      4: 1,
-      3: 1,
-      2: 1,
-      1: 1,
+def km(line):
+  length = 0
+  for i in range(0, (len(line)-1)):
+    try:
+      length += geopy.distance.vincenty(line[i], line[i+1]).km
+    except:
+      pass
+  return length
 
-    }[zoom]
+
+def reduced_line(line, max_vertices):
+  if max_vertices == 0:
+    max_vertices = 1
+
+  if len(line) < max_vertices:
+    return line
+
+  step = int(len(line) / max_vertices)
+  new_line = [line[0]]
+  i = 0
+  for i in range(0, len(line) - 1, step):
+    new_line.append(line[i])
+  if i != len(line):
+    new_line.append(line[-1])
+  return new_line

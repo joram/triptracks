@@ -3,7 +3,7 @@ from django.db import models
 from utils.fields import ShortUUIDField
 from django.contrib.postgres.fields import JSONField
 from graphene_django import DjangoObjectType
-from utils.lines import reduced_lines, max_vertices
+from utils.lines import reduced_lines
 
 
 class RouteMetadata(models.Model):
@@ -105,26 +105,26 @@ class RouteMetadata(models.Model):
         }[zoom]
 
     def set_lines(self, lines):
-        self.lines_zoom_1 = reduced_lines(lines, max_vertices(1))
-        self.lines_zoom_2 = reduced_lines(lines, max_vertices(2))
-        self.lines_zoom_3 = reduced_lines(lines, max_vertices(3))
-        self.lines_zoom_4 = reduced_lines(lines, max_vertices(4))
-        self.lines_zoom_5 = reduced_lines(lines, max_vertices(5))
-        self.lines_zoom_6 = reduced_lines(lines, max_vertices(6))
-        self.lines_zoom_7 = reduced_lines(lines, max_vertices(7))
-        self.lines_zoom_8 = reduced_lines(lines, max_vertices(8))
-        self.lines_zoom_9 = reduced_lines(lines, max_vertices(9))
-        self.lines_zoom_10 = reduced_lines(lines, max_vertices(10))
-        self.lines_zoom_11 = reduced_lines(lines, max_vertices(11))
-        self.lines_zoom_12 = reduced_lines(lines, max_vertices(12))
-        self.lines_zoom_13 = reduced_lines(lines, max_vertices(13))
-        self.lines_zoom_14 = reduced_lines(lines, max_vertices(14))
-        self.lines_zoom_15 = reduced_lines(lines, max_vertices(15))
-        self.lines_zoom_16 = reduced_lines(lines, max_vertices(16))
-        self.lines_zoom_17 = reduced_lines(lines, max_vertices(17))
-        self.lines_zoom_18 = reduced_lines(lines, max_vertices(18))
-        self.lines_zoom_19 = reduced_lines(lines, max_vertices(19))
-        self.lines_zoom_20 = reduced_lines(lines, max_vertices(20))
+        self.lines_zoom_1 = reduced_lines(lines, 1)
+        self.lines_zoom_2 = reduced_lines(lines, 2)
+        self.lines_zoom_3 = reduced_lines(lines, 3)
+        self.lines_zoom_4 = reduced_lines(lines, 4)
+        self.lines_zoom_5 = reduced_lines(lines, 5)
+        self.lines_zoom_6 = reduced_lines(lines, 6)
+        self.lines_zoom_7 = reduced_lines(lines, 7)
+        self.lines_zoom_8 = reduced_lines(lines, 8)
+        self.lines_zoom_9 = reduced_lines(lines, 9)
+        self.lines_zoom_10 = reduced_lines(lines, 10)
+        self.lines_zoom_11 = reduced_lines(lines, 11)
+        self.lines_zoom_12 = reduced_lines(lines, 12)
+        self.lines_zoom_13 = reduced_lines(lines, 13)
+        self.lines_zoom_14 = reduced_lines(lines, 14)
+        self.lines_zoom_15 = reduced_lines(lines, 15)
+        self.lines_zoom_16 = reduced_lines(lines, 16)
+        self.lines_zoom_17 = reduced_lines(lines, 17)
+        self.lines_zoom_18 = reduced_lines(lines, 18)
+        self.lines_zoom_19 = reduced_lines(lines, 19)
+        self.lines_zoom_20 = reduced_lines(lines, 20)
 
 
 class RouteGraphene(DjangoObjectType):

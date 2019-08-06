@@ -125,4 +125,4 @@ async function get_routes(hash, zoom) {
     return {routes: routes, msg: msg};
 }
 
-export {hash, do_graphql_call, get_routes_page, get_routes, log_graphql_errors, routes_from_graphql_response}
+export {hash, do_graphql_call, get_routes_page, get_routes, log_graphql_errors, routes_from_graphql_response, url}
