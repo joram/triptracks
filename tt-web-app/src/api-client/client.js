@@ -216,6 +216,45 @@ export default {
         return do_graphql_call(query, "remove_from_bucket_list");
     },
 
+    createOrUpdatePlan: function (pub_id, name, summary, route_pub_id, packing_list_pub_id, start_datetime, end_datetime) {
+        let start = new Date().getTime() / 1000;
+        let end = new Date().getTime() / 1000;
+        let query = `mutation { createOrUpdateTripPlan(
+            pubId:"${pub_id}",
+            name:"${name}",
+            summary:"${summary}",
+            routePubId:"${route_pub_id}",
+            packingListPubId:"${packing_list_pub_id}",
+            startDatetime:${start},
+            endDatetime:${end},
+        ){ok, pubId} }`;
+        console.log(query);
+        return do_graphql_call(query, "create_or_update_plan");
+    },
+
+    getTripPlans: function () {
+        let query = `query trip_plans {
+            tripPlans {
+                pubId,
+                name,
+                summary,
+                startDatetime,
+                endDatetime,
+                route {
+                    pubId,
+                    name,
+                    description,
+                    bounds,
+                    sourceImageUrl,
+                },
+            }
+        }`;
+        return do_graphql_call(query, "trip_plans").then(data => {
+            log_graphql_errors("trip_plans", data);
+            return data.data.tripPlans;
+        });
+    },
+
     subscribeGotRoutes: function (callback) {
         emitter.addListener("got_routes", callback);
     },

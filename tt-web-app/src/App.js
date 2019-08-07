@@ -7,6 +7,8 @@ import APIClient from "./api-client/client";
 import {BrowserRouter, Route} from "react-router-dom";
 import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
+import MyPlans from "./components/views/my_plans";
+import CreatePlan from "./components/views/create_plan";
 
 
 class App extends React.Component {
@@ -29,7 +31,6 @@ class App extends React.Component {
             if (route === null) {
                 return
             }
-            console.log(route);
             this.setState({
                 route: route,
                 pub_id: route.pub_id,
@@ -46,12 +47,10 @@ class App extends React.Component {
                 <Route exact path={`/route/:pub_id`} render={() => home}/>
                 <Route exact path="/settings" component={Settings}/>
                 <Route exact path="/routes" render={() =>
-                    <MyRoutes onRouteSelect={this.onRouteSelect.bind(this)}
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyANDvIT7YDXDjP-LW0bFRdoFwm9QeL9q1g"
-                        loadingElement={<div id="map_loading_element" />}
-                        containerElement={<div id="map_container" />}
-                        mapElement={<div id="map_element"/>}
-                    />}/>
+                    <MyRoutes onRouteSelect={this.onRouteSelect.bind(this)} />
+                }/>
+                <Route exact path="/plans" component={MyPlans} />
+                <Route exact path="/plan/create" component={CreatePlan} />
                 <Footer/>
             </BrowserRouter>
         </>

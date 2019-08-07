@@ -53,7 +53,6 @@ class RoutesQuery(object):
       return RouteMetadata.objects.filter(pub_id__in=route_pub_ids)
 
 
-
 class AddBucketListRoute(graphene.Mutation):
     class Arguments:
         route_pub_id = graphene.String()

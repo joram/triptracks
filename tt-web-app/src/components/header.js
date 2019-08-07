@@ -58,7 +58,7 @@ class Header extends React.Component {
                 <Dropdown item trigger={trigger} className="align right">
                     <Dropdown.Menu >
                         <Dropdown.Item><Link to="/routes" style={link_style}>My Routes</Link></Dropdown.Item>
-                        {/*<Dropdown.Item><Link to="/plans" style={link_style}>My Plans</Link></Dropdown.Item>*/}
+                        <Dropdown.Item><Link to="/plans" style={link_style}>My Plans</Link></Dropdown.Item>
                         <Dropdown.Item><Link to="/settings" style={link_style}>Settings</Link></Dropdown.Item>
                         <Dropdown.Item>
                             <a href="/mobile_app/android/triptracks-v1.0.0.apk" style={link_style}>Download

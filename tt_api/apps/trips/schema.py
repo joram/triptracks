@@ -1,10 +1,11 @@
 import graphene
 from apps.accounts.schema import UserType
 from apps.trips.models import Plan, TripAttendee
-from apps.routes.models import RouteGraphene
+from apps.routes.models import RouteGraphene, RouteMetadata
 from apps.accounts.models import User
 from apps.packing.schema import PackingListType, PackingList
 from graphene_django.types import DjangoObjectType
+from utils.auth import get_authenticated_user
 
 
 class TripPlanType(DjangoObjectType):
@@ -17,8 +18,10 @@ class TripPlanType(DjangoObjectType):
     return User.objects.get(pub_id=self.user_pub_id)
 
   def resolve_route(self, info, *args, **kwargs):
-    return None
-    # return get_cache(0).get_by_pub_id(self.route_pub_id)
+    try:
+      return RouteMetadata.objects.get(pub_id=self.route_pub_id)
+    except RouteMetadata.DoesNotExist:
+      return RouteGraphene()
 
   def resolve_attendees(self, info):
     attendees = TripAttendee.objects.filter(plan_pub_id=self.pub_id)
@@ -37,10 +40,12 @@ class TripQuery(object):
     trip_plan = graphene.Field(TripPlanType, pub_id=graphene.String())
 
     def resolve_trip_plans(self, info):
-      if info.context is not None:
-        user = info.context.user
-      return Plan.objects.all()
+      user = get_authenticated_user(info)
+      if user is None:
+        return []
+      return Plan.objects.filter(user_pub_id=user.pub_id).order_by("-start_datetime")
 
     def resolve_trip_plan(self, info, pub_id):
       return Plan.objects.get(pub_id=pub_id)
+
 

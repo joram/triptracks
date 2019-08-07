@@ -2,7 +2,6 @@ import React from "react";
 import {Image, Header, Container, ButtonGroup, Button, Icon} from "semantic-ui-react";
 import client from "../api-client/client"
 import {url} from "../api-client/utils"
-import {Link} from "react-router-dom";
 
 class Route_side_panel extends React.Component {
 
