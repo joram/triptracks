@@ -216,19 +216,18 @@ export default {
         return do_graphql_call(query, "remove_from_bucket_list");
     },
 
-    createOrUpdatePlan: function (pub_id, name, summary, route_pub_id, packing_list_pub_id, start_datetime, end_datetime) {
-        let start = new Date().getTime() / 1000;
-        let end = new Date().getTime() / 1000;
+    createOrUpdatePlan: function (pub_id, name, summary, start_datetime, end_datetime) {
+        let start = Date.parse(start_datetime);
+        let end = Date.parse(end_datetime);
         let query = `mutation { createOrUpdateTripPlan(
             pubId:"${pub_id}",
             name:"${name}",
             summary:"${summary}",
-            routePubId:"${route_pub_id}",
-            packingListPubId:"${packing_list_pub_id}",
-            startDatetime:${start},
-            endDatetime:${end},
-        ){ok, pubId} }`;
-        console.log(query);
+            routePubId:"",
+            packingListPubId:"",
+            startDatetime:${start/1000},
+            endDatetime:${end/1000},
+        ){ok, pubId, reason} }`;
         return do_graphql_call(query, "create_or_update_plan");
     },
 
@@ -253,6 +252,34 @@ export default {
             log_graphql_errors("trip_plans", data);
             return data.data.tripPlans;
         });
+    },
+
+    getTripPlan: function(pub_id){
+        let query = `query trip_plan {
+            tripPlan(pubId:"${pub_id}") {
+                pubId,
+                name,
+                summary,
+                startDatetime,
+                endDatetime,
+                route {
+                    pubId,
+                    name,
+                    description,
+                    bounds,
+                    sourceImageUrl,
+                },
+            }
+        }`;
+        return do_graphql_call(query, "trip_plan").then(data => {
+            log_graphql_errors("trip_plan", data);
+            return data.data.tripPlan;
+        });
+    },
+
+    deleteTripPlan: function(pub_id) {
+        let query = `mutation { deleteTripPlan(pubId: "${pub_id}"){ok} }`;
+        return do_graphql_call(query, "delete_plan");
     },
 
     subscribeGotRoutes: function (callback) {

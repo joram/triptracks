@@ -9,7 +9,7 @@ import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
 import MyPlans from "./components/views/my_plans";
 import CreatePlan from "./components/views/create_plan";
-
+import EditPlan from "./components/views/edit_plan";
 
 class App extends React.Component {
 
@@ -51,6 +51,7 @@ class App extends React.Component {
                 }/>
                 <Route exact path="/plans" component={MyPlans} />
                 <Route exact path="/plan/create" component={CreatePlan} />
+                <Route exact path={`/plan/:pub_id`} component={EditPlan} />
                 <Footer/>
             </BrowserRouter>
         </>

@@ -1,8 +1,10 @@
 import React from "react";
-import {Segment, List} from "semantic-ui-react";
+import {Segment, List, Icon, Button} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import client from "../../api-client/client";
 import {log_graphql_errors} from "../../api-client/utils";
+
+const dateformat = require('dateformat');
 
 
 class MyPlans extends React.Component {
@@ -29,6 +31,13 @@ class MyPlans extends React.Component {
     });
   }
 
+  deletePlan(e, pub_id){
+    e.preventDefault();
+    client.deleteTripPlan(pub_id).then(data => {
+      this.getTripPlans();
+    })
+  }
+
   cards(){
     let cards = [];
     cards.push(
@@ -47,7 +56,6 @@ class MyPlans extends React.Component {
         let s = new Date(plan.startDatetime);
         let e = new Date(plan.endDatetime);
         let diffDays = parseInt((e-s)/(24*3600*1000));
-        const dateformat = require('dateformat');
         datetime_str = `${dateformat(plan.startDatetime, "mmmm dS, yyyy")} (${diffDays} days)`
       }
 
@@ -62,6 +70,9 @@ class MyPlans extends React.Component {
         </List.Content>
         <List.Content floated="right">
           {datetime_str}
+          <Button icon onClick={(e) => {this.deletePlan(e, plan.pubId)}} color="red" style={{marginLeft:"10px"}}>
+            <Icon name='delete' />
+          </Button>
         </List.Content>
       </List.Item>
 
