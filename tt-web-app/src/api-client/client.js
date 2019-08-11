@@ -282,6 +282,11 @@ export default {
         return do_graphql_call(query, "delete_plan");
     },
 
+    connectToStrava: function(code) {
+        let query = `mutation { connectToStrava(code: "${code}"){ok, message} }`;
+        return do_graphql_call(query, "connect_to_strava");
+    },
+
     subscribeGotRoutes: function (callback) {
         emitter.addListener("got_routes", callback);
     },

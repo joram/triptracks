@@ -14,6 +14,19 @@ function debounce(func, wait, immediate) {
     };
 }
 
+function get_params(props){
+    let params = props.location.search;
+    params = params.replace("?", "");
+    params = params.split("&");
+    let args = {};
+    params.forEach(s => {
+      let parts = s.split("=", 2);
+      args[parts[0]] = parts[1]
+    });
+    return args
+}
+
 export {
-    debounce
+    debounce,
+    get_params
 }

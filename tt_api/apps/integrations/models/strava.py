@@ -4,7 +4,6 @@ from jsonfield import JSONField
 
 from apps.routes.models import RouteMetadata
 from apps.accounts.models import User
-# from apps.routes.stores import get_cache
 from utils.fields import ShortUUIDField
 from utils.lines import lines_from_gpx_string, bbox, geohash
 
@@ -13,6 +12,8 @@ class StravaAccount(models.Model):
     pub_id = ShortUUIDField(prefix="strava", max_length=128)
     user_pub_id = models.CharField(max_length=128)
     access_token = models.CharField(max_length=256)
+    refresh_token = models.CharField(max_length=256)
+    expires_at = models.DateTimeField()
     strava_athlete_id = models.IntegerField()
     attributes = JSONField()
 
@@ -21,6 +22,7 @@ class StravaAccount(models.Model):
         return User.objects.get(pub_id=self.user_pub_id)
 
     def get_client(self):
+        print("access token in get_client()", self.access_token)
         return StravaClient(access_token=str(self.access_token))
 
     def get_activities(self):
@@ -104,6 +106,7 @@ class StravaActivityManager(models.Manager):
             return qs[0], False
 
         account = StravaAccount.objects.get(strava_athlete_id=strava_athlete_id)
+
         gpx_data = account.get_client().get_gpx_file(strava_activity_id)
         if gpx_data is None:
             print("no tracks")
@@ -111,13 +114,15 @@ class StravaActivityManager(models.Manager):
 
         try:
             lines = lines_from_gpx_string(gpx_data)
-            route = RouteMetadata(
-                lines=lines,
+            route = RouteMetadata.objects.create(
                 owner_pub_id=user_pub_id,
                 name=strava_activity_name,
                 is_public=False,
+                bounds=bbox(lines),
+
             )
-            # get_cache(0).add(route)
+            route.set_lines(lines)
+            route.save()
         except Exception as e:
             print(e)
             return None, False

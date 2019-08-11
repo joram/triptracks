@@ -8,7 +8,7 @@ from apps.routes.models.route_metadata import RouteMetadata
 from utils.lines import lines_from_gpx_string
 
 
-for (pub_id, source_gpx_url) in RouteMetadata.objects.all().values_list("pub_id", "source_gpx_url"):
+for (pub_id, source_gpx_url) in RouteMetadata.objects.filter(source__not_in=["strava"]).values_list("pub_id", "source_gpx_url"):
     if source_gpx_url is None:
         print("no gpx file for %s" % pub_id)
         RouteMetadata.objects.filter(pub_id=pub_id).delete()

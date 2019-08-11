@@ -115,6 +115,7 @@ def set_lines(rm, lines):
     rm.lines_zoom_19 = reduced_lines(lines, max_vertices(19))
     rm.lines_zoom_20 = reduced_lines(lines, max_vertices(20))
 
+
 if __name__ == "__main__":
     sp_scraper = ScrapeSummitPostRouteDetails()
     tp_scraper = ScrapeTrailPeakDetails()
