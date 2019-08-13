@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "expo": "^33.0.7",
+    "expo-location": "^6.0.0",
     "latlon-geohash": "^2.0.0",
     "react": "^16.8.6",
     "react-native": "^0.60.4",

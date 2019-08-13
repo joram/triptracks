@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import MapView, { Polyline } from 'react-native-maps'
 import * as Location from 'expo-location';
 import { Text, View } from 'react-native';
-import {hash} from "../api-client/utils.js"
+import {hash, get_routes} from "./api-client/utils"
+
 
 class RoutesMap extends Component {
 
@@ -75,7 +76,6 @@ class RoutesMap extends Component {
         this.getCachedRoutes(h, zoom).then( data => {
             let { routes, msg} = data;
             msg += `\ndelta:${delta}\nzoom:${zoom}`;
-            console.log("routes are ", routes);
             this.setState({
                 msg: msg,
                 routes: routes,
@@ -135,7 +135,6 @@ class RoutesMap extends Component {
             })
         });
         console.log(`rendering ${routes.length} routes`);
-        console.log("example route: ", this.state.routes[0])
         return routes;
     }
 
