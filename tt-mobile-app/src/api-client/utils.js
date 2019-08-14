@@ -110,20 +110,17 @@ async function get_routes_page(hash, zoom, page) {
 
 async function get_routes(hash, zoom) {
 
-    let msg = "";
     let page = 0;
     let routes = [];
     while (true) {
         let data = await get_routes_page(hash, zoom, page);
         routes = routes.concat(data.routes);
-        let dt = '' + Date.now();
-        msg = `dt:${dt}\npage:${page}\nroutes:${routes.length}\nhash:${hash}\nzoom:${zoom}`;
         if (data.lastPage) {
             break
         }
         page = page + 1
     }
-    return {routes: routes, msg: msg};
+    return routes;
 }
 
 export {hash, do_graphql_call, get_routes_page, get_routes, log_graphql_errors, routes_from_graphql_response, url}

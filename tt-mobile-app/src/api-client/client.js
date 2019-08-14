@@ -1,5 +1,5 @@
 import line_utils from './line_utils'
-import auth from"./auth"
+import auth from "./auth"
 import {do_graphql_call, log_graphql_errors, routes_from_graphql_response} from "./utils";
 
 let EventEmitter = require('events').EventEmitter;
