@@ -7,7 +7,7 @@ from scrapers.trailpeak_route_gpx import ScrapeTrailPeakGPX
 from scrapers.summitpost_route_details import ScrapeSummitPostRouteDetails
 from scrapers.summitpost_route_gpx import ScrapeSummitPostRouteGPX
 from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
-from apps.routes.models.route_metadata import RouteMetadata
+from apps.routes.models.route import Route
 from utils.lines import lines_from_gpx_string, geohash, bbox, reduced_lines, max_vertices
 
 
@@ -58,12 +58,12 @@ def massage(data):
         name = data.get("name")
         img_url = data.get("trail_image_url")
         src_url = data.get("url")
-        rm = RouteMetadata.objects.get(name=name)
+        rm = Route.objects.get(name=name)
         _massage_lines(rm)
         print(rm.pub_id, rm.name)
         # if img_url != "":
         #     print(name, "\t", img_url, "\t", src_url)
-    except RouteMetadata.DoesNotExist:
+    except Route.DoesNotExist:
         pass
 
 

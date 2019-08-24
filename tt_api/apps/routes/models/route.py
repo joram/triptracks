@@ -1,166 +1,146 @@
-import geohash2
-import uuid
-import random
+from django.conf import settings
+from django.db import models
+from django.contrib.postgres.fields import JSONField
 import graphene
 from graphene_django import DjangoObjectType
-from django.contrib.postgres.fields import JSONField
 
-from apps.routes.models import RouteMetadata
-
-# class Route(models.Model):
-#     _geohash = None
-#     pub_id = ShortUUIDField(prefix="sess", max_length=32)
-#     owner_pub_id = models.CharField(max_length=128)
-#     name = models.CharField(max_length=1024)
-#     description = models.CharField(max_length=1024*32)
-#     lines = JSONField()
-#     is_public = models.BooleanField()
-#
-#     geohash = models.CharField(max_length=32)
-#     zoom = models.IntegerField()
-#     bounds = JSONField()
-#     source_image_url = models.CharField(max_length=1024*8)
-#
-#     # pub_id = graphene.ID()
-#     # owner_pub_id = graphene.String()
-#     # name = graphene.String()
-#     # geohash = graphene.String()
-#     # zoom = graphene.Int()
-#     # bounds = graphene.JSONString()
-#     # description = graphene.String()
-#     # source_image_url = graphene.String()
-#     # lines = graphene.JSONString()
-#     # is_public = graphene.Boolean()
-#
-#     @classmethod
-#     def from_data(cls, data):
-#         filepath = data["gpx_filepath"].replace(".json", ".gpx")
-#         route = Route(
-#           lines=lines_from_gpx(filepath),
-#           name=data["name"].strip("\n "),
-#           description=data["description"],
-#         )
-#         return route
-#
-#     def __init__(self, lines=[], name=None, description=None, pub_id=None, zoom=None, owner_pub_id=None, is_public=False, bounds=None, source_image_url=None):
-#         super(Route, self).__init__()
-#         self.pub_id = pub_id
-#         self.owner_pub_id = owner_pub_id
-#         self.zoom = zoom
-#         self.name = name
-#         self.description = description
-#         self.lines = lines
-#         self.bounds = bounds
-#         self.is_public = is_public
-#         self.source_image_url = source_image_url
-#
-#         if self.pub_id is None:
-#           rd = random.Random()
-#           rd.seed(name)
-#           self.pub_id = "route_" + str(uuid.UUID(int=rd.getrandbits(128))).replace("-", "")
-#
-#     def details(self, max_vertices=100000000):
-#         return {
-#           "name": self.name,
-#           "description": self.description,
-#           "pub_id": self.pub_id,
-#           "lines": self.vertices(max_vertices),
-#           "owner_pub_id": self.owner_pub_id,
-#           "is_public": self.is_public,
-#         }
-#
-#     def __str__(self):
-#         geohash = self._geohash()
-#         if geohash.endswith("000"):
-#             geohash = "unknown"
-#
-#         return u"{uuid}[{name}]{geohash}".format(
-#             uuid=self.pub_id,
-#             name=self.name,
-#             geohash=geohash,
-#         )
-#
-#     def __unicode__(self):
-#         return self.__str__()
-#
-#     def vertices(self, max_verts=None):
-#         if self.lines is None or len(self.lines) == 0:
-#             return []
-#
-#         line = self.lines[0]
-#         if not max_verts:
-#             return list(line)
-#         if type(line) == float:
-#             print("????  "+str(line))
-#             return []
-#         nth_vertex = len(line)
-#         if max_verts:
-#             nth_vertex = max(1, int(len(line)/max_verts))
-#         vertices = line[0::nth_vertex]
-#         return [vertices]
-#
-#     @property
-#     def static_tile_image_src(self):
-#         # deprecated func
-#         path = "color:0x0000ff|weight:5"
-#         for p in self.vertices(30):
-#             path += "|%s,%s" % (p[1], p[0])
-#
-#         url = "https://maps.googleapis.com/maps/api/staticmap?" \
-#               "zoom={zoom}&size={size}&maptype={maptype}&key={key}&center={center}&path={path}".format(
-#                     zoom=13,
-#                     size="200x200",
-#                     maptype="roadmap",
-#                     key=settings.GOOGLE_MAPS_API_KEY,
-#                     center="{},{}".format(self.center.y, self.center.x),
-#                     path=path,
-#               )
-#
-#         return url
-#
+from apps.routes.models import RouteLines
+from utils.fields import ShortUUIDField
+from utils.lines import reduced_lines
 
 
-class RouteGraphene(DjangoObjectType):
-    name = "route"
+class Route(models.Model):
+    SOURCE_CHOICES = (
+        ("summitpost", 'Summitpost'),
+        ("trailpeak", 'Trailpeak'),
+        ("strava", 'Strava'),
+    )
+
+    pub_id = ShortUUIDField(prefix="route", max_length=38, db_index=True)
+    name = models.CharField(max_length=256, db_index=True)
+    mountain_name = models.CharField(max_length=256)
+    geohash = models.CharField(max_length=32, db_index=True)
+    bounds = JSONField()
+    description = models.TextField(null=True, blank=True)
+    suggested_gear = models.TextField(null=True, blank=True)
+    has_image = models.BooleanField(default=False)
+    has_gpx = models.BooleanField(default=False)
+
+    source = models.CharField(max_length=16, choices=SOURCE_CHOICES)
+    source_url = models.TextField(null=True, blank=True)
+    source_image_url = models.TextField(null=True, blank=True)
+    source_gpx_url = models.TextField(null=True, blank=True)
+
+    owner_pub_id = models.CharField(max_length=128, default="user_3ffrCPmfjrQwrbh9FcKXcYqV")
+    is_public = models.BooleanField(default=True)
+
+    def _lines(self, zoom):
+        return RouteLines.objects.get(route_pub_id=self.pub_id, zoom=zoom).lines
+
+    def image(self, width=290, height=386):
+        if self.source_image_url not in ["", None]:
+            return self.source_image_url
+
+        vertices = []
+        if self.lines_zoom_10 is not None:
+            for line in self.lines_zoom_10:
+                for p in line:
+                    vertices.append(f"{p[0]},{p[1]}")
+        path = f"color:0x0000ff|weight:5|{'|'.join(vertices)}"
+        url = f"https://maps.googleapis.com/maps/api/staticmap?size={width}x{height}&maptype=roadmap&key={settings.GOOGLE_MAPS_API_KEY}&path={path}"
+        return url
+
+    def get_lines(self, zoom):
+        return {
+            1: self.lines_zoom_1,
+            2: self.lines_zoom_2,
+            3: self.lines_zoom_3,
+            4: self.lines_zoom_4,
+            5: self.lines_zoom_5,
+            6: self.lines_zoom_6,
+            7: self.lines_zoom_7,
+            8: self.lines_zoom_8,
+            9: self.lines_zoom_9,
+            10: self.lines_zoom_10,
+            11: self.lines_zoom_11,
+            12: self.lines_zoom_12,
+            13: self.lines_zoom_13,
+            14: self.lines_zoom_14,
+            15: self.lines_zoom_15,
+            16: self.lines_zoom_16,
+            17: self.lines_zoom_17,
+            18: self.lines_zoom_18,
+            19: self.lines_zoom_19,
+        }[zoom]
+
+    def set_lines(self, lines):
+        RouteLines.objects.filter(route_pub_id=self.pub_id).delete()
+        for zoom in range(1, 21):
+            RouteLines.objects.create(route_pub_id=self.pub_id, zoom=zoom, lines=reduced_lines(lines, zoom))
+
+
+class RouteType(DjangoObjectType):
+    lines_zoom_13 = graphene.Field(graphene.JSONString)
+
+    def resolve_lines_zoom_1(self, info, *args, **kwargs):
+        return self._lines(1)
+
+    def resolve_lines_zoom_2(self, info, *args, **kwargs):
+        return self._lines(2)
+
+    def resolve_lines_zoom_3(self, info, *args, **kwargs):
+        return self._lines(3)
+
+    def resolve_lines_zoom_4(self, info, *args, **kwargs):
+        return self._lines(4)
+
+    def resolve_lines_zoom_5(self, info, *args, **kwargs):
+        return self._lines(5)
+
+    def resolve_lines_zoom_6(self, info, *args, **kwargs):
+        return self._lines(6)
+
+    def resolve_lines_zoom_7(self, info, *args, **kwargs):
+        return self._lines(7)
+
+    def resolve_lines_zoom_8(self, info, *args, **kwargs):
+        return self._lines(8)
+
+    def resolve_lines_zoom_9(self, info, *args, **kwargs):
+        return self._lines(9)
+
+    def resolve_lines_zoom_10(self, info, *args, **kwargs):
+        return self._lines(10)
+
+    def resolve_lines_zoom_11(self, info, *args, **kwargs):
+        return self._lines(11)
+
+    def resolve_lines_zoom_12(self, info, *args, **kwargs):
+        return self._lines(12)
+
+    def resolve_lines_zoom_13(self, info, *args, **kwargs):
+        return self._lines(13)
+
+    def resolve_lines_zoom_14(self, info, *args, **kwargs):
+        return self._lines(14)
+
+    def resolve_lines_zoom_15(self, info, *args, **kwargs):
+        return self._lines(15)
+
+    def resolve_lines_zoom_16(self, info, *args, **kwargs):
+        return self._lines(16)
+
+    def resolve_lines_zoom_17(self, info, *args, **kwargs):
+        return self._lines(17)
+
+    def resolve_lines_zoom_18(self, info, *args, **kwargs):
+        return self._lines(18)
+
+    def resolve_lines_zoom_19(self, info, *args, **kwargs):
+        return self._lines(19)
+
+    def resolve_lines_zoom_20(self, info, *args, **kwargs):
+        return self._lines(20)
 
     class Meta:
-        model = RouteMetadata
-
-    # def resolve_owner(self, info):
-    #     return User(pub_id=self.owner_pub_id)
-    #
-    # def resolve_geohash(self, info):
-    #     return self._geohash()
-    #
-    # def _geohash(self):
-    #     (lat1, lng1), (lat2, lng2) = self.bbox()
-    #     h1 = geohash2.encode(lat1, lng1)
-    #     h2 = geohash2.encode(lat2, lng2)
-    #     i = 0
-    #     for c in h1:
-    #         if h2[i] == c:
-    #             i += 1
-    #     matching = h1[:i]
-    #     return matching
-    #
-    # def bbox(self):
-    #     min_lat = None
-    #     max_lat = None
-    #     min_lng = None
-    #     max_lng = None
-    #     for line in self.lines:
-    #         for coord in line:
-    #             lat = coord[0]
-    #             lng = coord[1]
-    #             if min_lat is None:
-    #                 min_lat = lat
-    #                 max_lat = lat
-    #                 min_lng = lng
-    #                 max_lng = lng
-    #                 continue
-    #             min_lat = min(min_lat, lat)
-    #             max_lat = max(max_lat, lat)
-    #             min_lng = min(min_lng, lng)
-    #             max_lng = max(max_lng, lng)
-    #     return (min_lat, min_lng), (max_lat, max_lng)
-
+        model = Route

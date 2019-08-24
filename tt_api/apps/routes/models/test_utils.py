@@ -1,4 +1,4 @@
-from apps.routes.models.route import Route
+from apps.routes.models.route_old import Route
 from apps.routes.stores.local_routes import RoutesStore
 from apps.accounts.models import User
 import random

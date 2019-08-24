@@ -1,7 +1,7 @@
 import graphene
 from apps.accounts.schema import UserType
 from apps.trips.models import Plan, TripAttendee
-from apps.routes.models import RouteGraphene, RouteMetadata
+from apps.routes.models import RouteType, Route
 from apps.accounts.models import User
 from apps.packing.schema import PackingListType, PackingList
 from graphene_django.types import DjangoObjectType
@@ -9,7 +9,7 @@ from utils.auth import get_authenticated_user
 
 
 class TripPlanType(DjangoObjectType):
-  route = graphene.Field(RouteGraphene)
+  route = graphene.Field(RouteType)
   owner = graphene.Field(UserType)
   attendees = graphene.List(lambda: UserType)
   packing_list = graphene.Field(PackingListType)
@@ -19,9 +19,9 @@ class TripPlanType(DjangoObjectType):
 
   def resolve_route(self, info, *args, **kwargs):
     try:
-      return RouteMetadata.objects.get(pub_id=self.route_pub_id)
-    except RouteMetadata.DoesNotExist:
-      return RouteGraphene()
+      return Route.objects.get(pub_id=self.route_pub_id)
+    except Route.DoesNotExist:
+      return RouteType()
 
   def resolve_attendees(self, info):
     attendees = TripAttendee.objects.filter(plan_pub_id=self.pub_id)

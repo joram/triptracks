@@ -4,21 +4,21 @@ django.setup()
 
 import requests
 from apps.routes.stores.gpx import GPXS3Store, GPXLocalStore
-from apps.routes.models.route_metadata import RouteMetadata
+from apps.routes.models.route import Route
 from utils.lines import lines_from_gpx_string
 
 
-for (pub_id, source_gpx_url) in RouteMetadata.objects.filter(source__not_in=["strava"]).values_list("pub_id", "source_gpx_url"):
+for (pub_id, source_gpx_url) in Route.objects.filter(source__not_in=["strava"]).values_list("pub_id", "source_gpx_url"):
     if source_gpx_url is None:
         print("no gpx file for %s" % pub_id)
-        RouteMetadata.objects.filter(pub_id=pub_id).delete()
+        Route.objects.filter(pub_id=pub_id).delete()
         continue
 
     filename = "%s.gpx" % pub_id
     content = GPXLocalStore().get(filename)
     if content is not None:
         from utils.lines import _max_verts
-        route = RouteMetadata.objects.get(pub_id=pub_id)
+        route = Route.objects.get(pub_id=pub_id)
         lines = lines_from_gpx_string(content)
         max_verts = []
         for zoom in range(1, 21):
@@ -37,6 +37,6 @@ for (pub_id, source_gpx_url) in RouteMetadata.objects.filter(source__not_in=["st
         content = resp.content
         GPXS3Store().put(filename, content)
 
-    route = RouteMetadata.objects.get(pub_id=pub_id)
+    route = Route.objects.get(pub_id=pub_id)
     route.set_lines(lines_from_gpx_string(content))
     route.save()

@@ -5,7 +5,7 @@ import pprint
 from scrapers.trailpeak_route_gpx import ScrapeTrailPeakGPX
 from scrapers.summitpost_route_details import ScrapeSummitPostRouteDetails
 from scrapers.trailpeak_route_details import ScrapeTrailPeakDetails
-from apps.routes.models.route_metadata import RouteMetadata
+from apps.routes.models.route import Route
 from utils.lines import lines_from_gpx_string, geohash, bbox, reduced_lines, max_vertices
 
 
@@ -31,7 +31,7 @@ def get_or_create_route(data, source, i):
         return
 
     try:
-        rm = RouteMetadata.objects.get(
+        rm = Route.objects.get(
             name=data.get("name"),
         )
         rm.mountain_name = data.get("mountain_name")
@@ -49,9 +49,9 @@ def get_or_create_route(data, source, i):
         print("have", source, i, len(lines), "\t", lengths(rm), "\t", rm.name)
         return rm
 
-    except RouteMetadata.DoesNotExist:
+    except Route.DoesNotExist:
         bb = bbox(lines)
-        rm = RouteMetadata.objects.create(
+        rm = Route.objects.create(
             name=data.get("name"),
             mountain_name=data.get("mountain_name"),
             geohash=geohash(bb),

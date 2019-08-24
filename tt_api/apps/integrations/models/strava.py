@@ -2,7 +2,7 @@ from stravalib import Client as StravaClient
 from django.db import models
 from jsonfield import JSONField
 
-from apps.routes.models import RouteMetadata
+from apps.routes.models import Route
 from apps.accounts.models import User
 from utils.fields import ShortUUIDField
 from utils.lines import lines_from_gpx_string, bbox, geohash
@@ -55,7 +55,7 @@ class StravaAccount(models.Model):
             if qs.exists():
                 activity = qs[0]
                 try:
-                    route = RouteMetadata.objects.get(pub_id=activity.pub_id)
+                    route = Route.objects.get(pub_id=activity.pub_id)
                     gpx_data = client.get_gpx_file(activity_data.get("id"))
                     lines = lines_from_gpx_string(gpx_data)
                     route.set_lines(lines)
@@ -66,8 +66,8 @@ class StravaAccount(models.Model):
                 continue
 
             try:
-                route = RouteMetadata.objects.get(name=activity_data.get("name"))
-            except RouteMetadata.DoesNotExist:
+                route = Route.objects.get(name=activity_data.get("name"))
+            except Route.DoesNotExist:
                 gpx_data = client.get_gpx_file(activity_data.get("id"))
                 if gpx_data is None:
                     print("no tracks")
@@ -75,7 +75,7 @@ class StravaAccount(models.Model):
 
                 lines = lines_from_gpx_string(gpx_data)
                 bb = bbox(lines)
-                route = RouteMetadata.objects.create(
+                route = Route.objects.create(
                     name=activity_data.get("name"),
                     geohash=geohash(bb),
                     bounds=bb,
@@ -114,7 +114,7 @@ class StravaActivityManager(models.Manager):
 
         try:
             lines = lines_from_gpx_string(gpx_data)
-            route = RouteMetadata.objects.create(
+            route = Route.objects.create(
                 owner_pub_id=user_pub_id,
                 name=strava_activity_name,
                 is_public=False,
@@ -148,7 +148,7 @@ class StravaActivity(models.Model):
 
     @property
     def route(self):
-        return RouteMetadata.objects.get(pub_id=self.route_pub_id)
+        return Route.objects.get(pub_id=self.route_pub_id)
 
     def __str__(self):
         s = self.pub_id

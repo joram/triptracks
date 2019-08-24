@@ -1,12 +1,12 @@
 import requests
 from django.http.response import HttpResponse, FileResponse
 from django.urls import path, re_path
-from apps.routes.models import RouteMetadata
+from apps.routes.models import Route
 from apps.routes.stores.gpx import GPXS3Store
 
 
 def download_gpx(request, pub_id):
-    route = RouteMetadata.objects.get(pub_id=pub_id)
+    route = Route.objects.get(pub_id=pub_id)
     if route is None:
         return HttpResponse("route missing")
 
