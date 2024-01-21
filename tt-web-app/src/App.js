@@ -4,13 +4,14 @@ import Header from "./components/header";
 import Home from "./components/views/home";
 import Footer from "./components/footer";
 import APIClient from "./api-client/client";
-import {Switch, BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Settings from "./components/views/settings";
 import MyRoutes from "./components/views/my_routes";
 import MyPlans from "./components/views/my_plans";
 import CreatePlan from "./components/views/create_plan";
 import EditPlan from "./components/views/edit_plan";
-import RoutesMap from "./components/routes_map";
+import MyPackingLists from "./components/views/my_packing_lists";
+import CreatePackingList from "./components/views/create_packing_list";
 
 class App extends React.Component {
 
@@ -55,6 +56,8 @@ class App extends React.Component {
                         onRouteSelect={this.onRouteSelect.bind(this)} />
                 }/>
                 <Route exact path="/plans" component={MyPlans} />
+                <Route exact path="/packing_lists" component={MyPackingLists} />
+                <Route exact path="/packing_list/create" component={CreatePackingList} />
             <Switch>
                 <Route exact path="/plan/create" component={CreatePlan} />
                 <Route exact path={`/plan/:pub_id`} component={EditPlan} />

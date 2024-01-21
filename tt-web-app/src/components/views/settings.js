@@ -1,6 +1,6 @@
 import React from "react";
 import connect_strava_icon from '../../connect_strava.svg';
-import {Segment, Image, Button, Grid} from "semantic-ui-react";
+import {Grid, Image, Segment} from "semantic-ui-react";
 import {get_params} from "../../utils";
 import client from "../../api-client/client";
 
