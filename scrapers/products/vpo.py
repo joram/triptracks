@@ -81,6 +81,27 @@ class VPOScraper(BaseScraper):
                 s = s.split("-")[0].strip()
             price_cents = int(s)*100
 
+        def _get_specs():
+            spec_p = soup.find("p", {"id": "specsId"})
+            if spec_p is not None:
+                specs = []
+                content = str(spec_p)
+                content = content.replace("<br>", "\n")
+                content = content.replace("<br/>", "\n")
+                content = content.replace("<p id=\"specsId\">", "")
+                content = content.replace("</p>", "")
+                lines = content.split("\n")
+                for line in lines:
+                    if ":" in line:
+                        parts = line.split(":")
+                        key = parts[0].strip("* ")
+                        value = parts[1].strip().split("/")[0].strip()
+                        if value == "":
+                            continue
+                        specs.append(Spec(key=key, value=value))
+                return specs
+            return []
+
         try:
             return Product(
                 name=og_data["title"].replace(" | FREE SHIPPING in Canada |", ""),
@@ -88,12 +109,14 @@ class VPOScraper(BaseScraper):
                 url=url,
                 price_cents=price_cents,
                 img_hrefs=[og_data["image"]],
-                specs=[],
+                specs=_get_specs(),
             )
         except:
             return None
 
     def products(self):
+        for url in ["https://vpo.ca/product/301460/sirocco-helmet"]:
+            yield self.get_product(url), url
         for url in self.item_urls():
             yield self.get_product(url), url
 

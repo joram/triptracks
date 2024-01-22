@@ -1,4 +1,5 @@
 import dataclasses
+import re
 from typing import Optional
 
 
@@ -34,6 +35,16 @@ class Product:
                 continue
             if "weight" in spec.key.lower():
                 value = spec.value.lower()
+                #convert a-b to the average
+                if "-" in value:
+                    regex = re.compile(r"(\d+)-(\d+)")
+                    match = regex.search(value)
+                    if match:
+                        a = float(match.group(1))
+                        b = float(match.group(2))
+                        v = (a+b)/2
+                        value = regex.sub(value, f"{v}")
+
                 if " " in value:
                     value = value.split(" ")[0]
                 if value.endswith("kg"):

@@ -85,6 +85,7 @@ def _get_lines(csv_file):
 def flesh_out_csv(csv_file):
     """Flesh out the CSV file with the missing data."""
     total_weight = 0
+    category_wegihts = {}
     for (category, short_name, full_name, quantity, weight) in _get_lines(csv_file):
         product = None
         if weight is None:
@@ -98,9 +99,14 @@ def flesh_out_csv(csv_file):
         print(f"{category.ljust(20)} {name.ljust(50)}\t{weight} x {quantity}  \t{product_name}")
         if weight is not None:
             total_weight += weight*quantity
+            if category not in category_wegihts:
+                category_wegihts[category] = 0
+            category_wegihts[category] += weight*quantity
         else:
             print(f"Could not find weight for: {name}\t{product.url if product is not None else ''}")
     print(f"Total weight: {total_weight}")
+    for category, weight in category_wegihts.items():
+        print(f"\t{category.ljust(20)} {weight}")
 
 
 curr_dir = os.path.dirname(os.path.realpath(__file__))
