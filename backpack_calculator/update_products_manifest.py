@@ -17,22 +17,24 @@ def update_products_manifest():
 
     manifest = []
     curr_dir = os.path.dirname(os.path.realpath(__file__))
-    mec_dir = os.path.join(curr_dir, "../products/data/mec")
-    for filename in os.listdir(mec_dir):
-        filepath = os.path.join(mec_dir, filename)
-        if not os.path.isfile(filepath):
-            continue
-        with open(filepath) as f:
-            data = f.read()
-            data = json.loads(data)
-            manifest.append({
-              "title": data["name"],
-              "description": data["description"],
-              "image": data["img_hrefs"][0],
-              "weights": get_weights(data),
-            })
+    site_names = os.listdir(os.path.join(curr_dir, "../products/data"))
+    for site_name in site_names:
+        dir_path = os.path.join(curr_dir, "../products/data/", site_name)
+        for filename in os.listdir(dir_path):
+            filepath = os.path.join(dir_path, filename)
+            if not os.path.isfile(filepath):
+                continue
+            with open(filepath) as f:
+                data = f.read()
+                data = json.loads(data)
+                manifest.append({
+                  "title": data["name"],
+                  "description": data["description"],
+                  "image": data["img_hrefs"][0],
+                  "weights": get_weights(data),
+                })
 
-    with open(os.path.join(curr_dir, "./src/components/views/products_manifest.json"), "w") as f:
+    with open(os.path.join(curr_dir, "./products_manifest.json"), "w") as f:
         f.write(json.dumps(manifest, indent=2, sort_keys=True))
 
 
