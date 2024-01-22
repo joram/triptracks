@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "164 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/333777/ovik-t-shirt-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Alpine Chill Zero Shorts, 7\" Inseam - Mens",
   "price_cents": 649900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346499/alpine-chill-zero-shorts-7-inseam-mens"
 }

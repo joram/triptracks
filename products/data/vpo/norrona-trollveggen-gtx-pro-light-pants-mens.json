@@ -5,6 +5,11 @@
   ],
   "name": "Norrona Trollveggen GTX Pro Light Pants - Mens",
   "price_cents": 6800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "476 g (Size L)"
+    }
+  ],
   "url": "https://vpo.ca/product/363215/trollveggen-gtx-pro-light-pants-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Rab Alpha Flash Jacket - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "94% Polyester 6% Elastane"
+    },
+    {
+      "key": "Secondary",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "Polartec\u00ae Alpha\u2122 Direct 120"
+    },
+    {
+      "key": "Weight",
+      "value": "273 g"
+    }
+  ],
   "url": "https://vpo.ca/product/303427/alpha-flash-jacket-mens"
 }

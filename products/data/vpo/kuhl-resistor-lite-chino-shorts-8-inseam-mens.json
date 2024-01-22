@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Resistor Lite Chino Shorts, 8\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Xkanvas Lite - 70% Cotton, 25% Nylon, 5% Spandex - 176\u00a0g"
+    },
+    {
+      "key": "Inseam",
+      "value": "8 in"
+    },
+    {
+      "key": "Seven pockets",
+      "value": "two front chino, one coin, two double welt at back, and two drop in cell phone pockets"
+    }
+  ],
   "url": "https://vpo.ca/product/343257/resistor-lite-chino-shorts-8-inseam-mens"
 }

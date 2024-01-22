@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Coefficient 1/4-Zip Hoody - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec Power Dry Fleece"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "27.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/341511/coefficient-14-zip-hoody-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Bridgedale Cross Country Merino Endurance Socks - Mens",
   "price_cents": 299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "18% Merino Wool, 23% New Wool, 39% Nylon"
+    },
+    {
+      "key": "\u00a0Height",
+      "value": "Boot"
+    }
+  ],
   "url": "https://vpo.ca/product/314366/cross-country-merino-endurance-socks-mens"
 }

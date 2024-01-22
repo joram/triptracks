@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Classic T-Shirt - Mens",
   "price_cents": 489500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "106 g"
+    },
+    {
+      "key": "Back length",
+      "value": "27.6 in"
+    }
+  ],
   "url": "https://vpo.ca/product/326982/classic-t-shirt-mens"
 }

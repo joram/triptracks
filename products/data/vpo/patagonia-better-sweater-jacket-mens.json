@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Better Sweater Jacket - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "10-oz 100% recycled polyester knit fleece dyed with a low-impact process that significantly reduces the use of dyestuffs, energy and water compared to conventional dyeing methods"
+    },
+    {
+      "key": "Weight",
+      "value": "638 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323565/better-sweater-jacket-mens"
 }

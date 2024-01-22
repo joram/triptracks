@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Midsummer Jacket - Mens",
   "price_cents": 2750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Air Stretch",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "360 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325418/abisko-midsummer-jacket-mens"
 }

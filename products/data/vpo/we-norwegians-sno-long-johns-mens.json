@@ -5,6 +5,19 @@
   ],
   "name": "We Norwegians Sno Long Johns - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "98% Merino, 2% Creora Eco Soft"
+    },
+    {
+      "key": "Fit",
+      "value": "Tight"
+    },
+    {
+      "key": "Care",
+      "value": "Machine wash cold, delicate"
+    }
+  ],
   "url": "https://vpo.ca/product/344842/sno-long-johns-mens"
 }

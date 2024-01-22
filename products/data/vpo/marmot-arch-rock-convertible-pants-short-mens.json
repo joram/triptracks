@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Arch Rock Convertible Pants, Short - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342552/arch-rock-convertible-pants-short-mens"
 }

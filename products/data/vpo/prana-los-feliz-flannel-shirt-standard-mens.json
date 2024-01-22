@@ -5,6 +5,11 @@
   ],
   "name": "Prana Los Feliz Flannel Shirt - Standard - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "80% Organic Cotton, 20% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/336359/los-feliz-flannel-shirt-standard-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Mountaineer Maximum Cushion Tall Crew Socks - Mens",
   "price_cents": 379500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "77% Merino Wool, 10% Nylon, 12% Recycled Nylon, 1% Elastane"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Maximum Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "Tall Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/349276/mountaineer-maximum-cushion-tall-crew-socks-mens"
 }

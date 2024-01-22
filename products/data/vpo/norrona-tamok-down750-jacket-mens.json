@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Tamok Down750 Jacket - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "45D 100% recycled nylon"
+    },
+    {
+      "key": "Down",
+      "value": "Down 750 FP with RDS 2.0"
+    },
+    {
+      "key": "Weight",
+      "value": "620 g"
+    },
+    {
+      "key": "Down Weight",
+      "value": "200 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Technical"
+    }
+  ],
   "url": "https://vpo.ca/product/322124/tamok-down750-jacket-mens"
 }

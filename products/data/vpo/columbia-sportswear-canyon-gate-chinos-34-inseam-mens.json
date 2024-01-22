@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Canyon Gate Chinos, 34\" Inseam - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "96% Nylon, 4% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/349716/canyon-gate-chinos-34-inseam-mens"
 }

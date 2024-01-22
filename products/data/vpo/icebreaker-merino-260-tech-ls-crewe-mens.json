@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 260 Tech LS Crewe - Mens",
   "price_cents": 1160000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310272/merino-260-tech-ls-crewe-mens"
 }

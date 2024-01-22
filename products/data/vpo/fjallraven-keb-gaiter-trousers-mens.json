@@ -5,6 +5,35 @@
   ],
   "name": "Fjallraven Keb Gaiter Trousers - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Stretch",
+      "value": "63% polyamide, 26% polyester, 11% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "640 g"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Yes"
+    },
+    {
+      "key": "Stretch panels",
+      "value": "Yes"
+    },
+    {
+      "key": "Leg type",
+      "value": "Zip-Off legs"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed length"
+    }
+  ],
   "url": "https://vpo.ca/product/318564/keb-gaiter-trousers-mens"
 }

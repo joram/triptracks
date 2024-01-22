@@ -5,6 +5,19 @@
   ],
   "name": "Rab Arc Eco Jacket - Mens",
   "price_cents": 3900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Recycled Pertex\u00ae Shield Revolve 3-Layer construction waterproof technology with Fluorocarbon-free DWR (50D)"
+    },
+    {
+      "key": "Weight - Size M",
+      "value": "428 g"
+    },
+    {
+      "key": "Center back length - Size M",
+      "value": "30.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336518/arc-eco-jacket-mens"
 }

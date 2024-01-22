@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Lightweight Fjord Flannel LS Shirt - Mens",
   "price_cents": 654000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4.8-oz 100% Cotton in Conversion double-sided brushed flannel"
+    },
+    {
+      "key": "Weight",
+      "value": "306 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339650/lightweight-fjord-flannel-ls-shirt-mens"
 }

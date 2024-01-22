@@ -5,6 +5,39 @@
   ],
   "name": "Mammut Broad Peak IN Hooded Jacket - Mens",
   "price_cents": 3272000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Filling",
+      "value": "white goose down, US90"
+    },
+    {
+      "key": "Denier",
+      "value": "20D X 20D"
+    },
+    {
+      "key": "Filling 1",
+      "value": "90% Down, 10% Feather"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyamide Woven - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "Pertex\u00ae Quantum - 100% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    },
+    {
+      "key": "Back length",
+      "value": "81cm"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/310036/broad-peak-in-hooded-jacket-mens"
 }

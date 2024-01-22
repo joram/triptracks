@@ -5,6 +5,11 @@
   ],
   "name": "Ortovox 185 Rock`N`Wool Long Pants - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Virgin Merino Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/340688/185-rocknwool-long-pants-mens"
 }

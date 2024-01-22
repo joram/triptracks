@@ -5,6 +5,39 @@
   ],
   "name": "Fjallraven Bergtagen Eco-Shell Trousers - Mens",
   "price_cents": 5950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Eco-Shell 3 L Ripstop Stretch, 100% polyester, 85% polyamide, 15% polyester"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Water column",
+      "value": "30 000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "26 000 g"
+    },
+    {
+      "key": "Fit/Waist",
+      "value": "Regular fit"
+    },
+    {
+      "key": "Leg Ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full Leg"
+    },
+    {
+      "key": "Weight",
+      "value": "650 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337167/bergtagen-eco-shell-trousers-mens"
 }

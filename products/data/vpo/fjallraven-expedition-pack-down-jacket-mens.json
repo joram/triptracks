@@ -5,6 +5,35 @@
   ],
   "name": "Fjallraven Expedition Pack Down Jacket - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Fill",
+      "value": "90% Goose Down, 10% Feather"
+    },
+    {
+      "key": "Fill power",
+      "value": "700 in\u00b3"
+    },
+    {
+      "key": "Fill weight",
+      "value": "100 g"
+    },
+    {
+      "key": "Weight",
+      "value": "415 g"
+    },
+    {
+      "key": "Back length",
+      "value": "78 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/328837/expedition-pack-down-jacket-mens"
 }

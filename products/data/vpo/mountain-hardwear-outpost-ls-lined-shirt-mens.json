@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Outpost LS Lined Shirt - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Woven Twill With Grid Fleece Lining"
+    },
+    {
+      "key": "Shell",
+      "value": "98% Polyester, 2% Elastane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/349013/outpost-ls-lined-shirt-mens"
 }

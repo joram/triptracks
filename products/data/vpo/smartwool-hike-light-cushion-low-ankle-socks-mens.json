@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Light Cushion Low Ankle Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "57% Merino Wool, 30% Recycled Nylon, 11% Nylon, 2% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Low Ankle"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Light"
+    }
+  ],
   "url": "https://vpo.ca/product/339129/hike-light-cushion-low-ankle-socks-mens"
 }

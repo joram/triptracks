@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Rebel Roamer Pants, 30\" Inseam, Extended - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Nylon 210T taffeta, Omni-Tech\u2122 coated 100% Nylon"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349638/rebel-roamer-pants-30-inseam-extended-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Airshed Pro Pullover - Mens",
   "price_cents": 1014000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "1.5-oz Pertex\u00ae Quantum 100% nylon (54% recycled) stretch taffeta with a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Hood and sleeves",
+      "value": "2.3-oz 100% recycled polyester double knit with miDori\u2122 bioSoft for added wicking and softness, and HeiQ\u00ae Pure odor control\u00a0- Fair Trade Certified\u2122 sewn"
+    }
+  ],
   "url": "https://vpo.ca/product/341740/airshed-pro-pullover-mens"
 }

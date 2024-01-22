@@ -5,6 +5,15 @@
   ],
   "name": "Rab Kangri GTX Pants, Short - Mens",
   "price_cents": 4600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "435 g"
+    },
+    {
+      "key": "HH",
+      "value": "28,000mm"
+    }
+  ],
   "url": "https://vpo.ca/product/336811/kangri-gtx-pants-short-mens"
 }

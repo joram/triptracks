@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker ZoneKnit Insulated Vest - Mens",
   "price_cents": 3400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "600 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/340048/zoneknit-insulated-vest-mens"
 }

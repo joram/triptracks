@@ -5,6 +5,15 @@
   ],
   "name": "Marmot Arch Rock Pants, Reg - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "11.64 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "32.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316255/arch-rock-pants-reg-mens"
 }

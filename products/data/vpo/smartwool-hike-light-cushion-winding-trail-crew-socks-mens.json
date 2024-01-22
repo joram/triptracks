@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Hike Light Cushion Winding Trail Crew Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 12% Nylon, 30% Recycled Nylon, 2% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Light Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "8 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349222/hike-light-cushion-winding-trail-crew-socks-mens"
 }

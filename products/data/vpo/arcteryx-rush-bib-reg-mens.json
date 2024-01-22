@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rush Bib, Reg - Mens",
   "price_cents": 8500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "3L GORE-TEX PRO Most Rugged",
+      "value": "70D plain weave, 100% Nylon face - bluesign Approved Material"
+    },
+    {
+      "key": "Weight",
+      "value": "536 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/350584/rush-bib-reg-mens"
 }

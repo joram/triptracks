@@ -5,6 +5,11 @@
   ],
   "name": "Arcteryx Beta Pants, Reg - Mens",
   "price_cents": 3039600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "330 g"
+    }
+  ],
   "url": "https://vpo.ca/product/342316/beta-pants-reg-mens"
 }

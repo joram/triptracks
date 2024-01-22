@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Aenergy Light SO Pants, Reg - Mens",
   "price_cents": 1599600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Light Weight Double Weave"
+    },
+    {
+      "key": "Denier (Main Material)",
+      "value": "40D x 40D"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Light Weight Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "260 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343298/aenergy-light-so-pants-reg-mens"
 }

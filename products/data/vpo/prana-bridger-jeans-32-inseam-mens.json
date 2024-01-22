@@ -5,6 +5,19 @@
   ],
   "name": "Prana Bridger Jeans, 32\" Inseam - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "All Other Colors",
+      "value": "75% Organic Cotton, 23% Polyester, 2% Elastane"
+    },
+    {
+      "key": "Denim",
+      "value": "79% Organic Cotton, 19% Polyester, 2% Elastane"
+    },
+    {
+      "key": "Denim",
+      "value": "Enzyme washed stretch blend denim twill - 8 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/290442/bridger-jeans-32-inseam-mens"
 }

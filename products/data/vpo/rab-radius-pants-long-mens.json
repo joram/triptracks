@@ -5,6 +5,15 @@
   ],
   "name": "Rab Radius Pants, Long - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "96% Cotton 4% Elastane - 241 g"
+    },
+    {
+      "key": "Weight",
+      "value": "492 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333203/radius-pants-long-mens"
 }

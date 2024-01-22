@@ -5,6 +5,27 @@
   ],
   "name": "Rab Talus Windstopper Tights - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Secondary Fabric",
+      "value": "Matrix\u2122 Double Weave Outer Fabric (218 g"
+    },
+    {
+      "key": "Main",
+      "value": "100% Recycled Polyester, ePTFE Membrane, 100% Recycled Polyester Backer"
+    },
+    {
+      "key": "Second",
+      "value": "68% Polyamide, 32% Lycra, 82% Polyamide, 18% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Secondary Fabric",
+      "value": "Matrix\u2122 Double Weave Outer Fabric (218 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349905/talus-windstopper-tights-mens"
 }

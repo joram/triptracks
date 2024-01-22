@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Merino Winter Leggings - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Jersey - 50% merino wool 40% nylon 10% elastane - 310gsm"
+    }
+  ],
   "url": "https://vpo.ca/product/350029/merino-winter-leggings-mens"
 }

@@ -5,6 +5,35 @@
   ],
   "name": "Aku Rock DFS GTX - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining Description",
+      "value": "Waterproof Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Approach"
+    },
+    {
+      "key": "Footbed",
+      "value": "Ortholite Hybrid"
+    },
+    {
+      "key": "Lasting board (stiffness)",
+      "value": "Soft Flex"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual Density EVA &amp; PU"
+    },
+    {
+      "key": "Upper",
+      "value": "1.6mm Suede Leather, Air 8000 &amp; Microfiber"
+    },
+    {
+      "key": "Fit Tip",
+      "value": "To get the appropriate fit for the best performance we recommend ordering a 1"
+    }
+  ],
   "url": "https://vpo.ca/product/340351/rock-dfs-gtx-mens"
 }

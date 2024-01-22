@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Shifter Pants, 30\" Inseam - Mens",
   "price_cents": 1360000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "88% Wool, 9% Nylon, 3% Elastane"
+    },
+    {
+      "key": "Rib",
+      "value": "98% Wool, 2% Elastane - - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310337/shifter-pants-30-inseam-mens"
 }

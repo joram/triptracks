@@ -5,6 +5,11 @@
   ],
   "name": "tentree Hemp Step Hem T-Shirt - Mens",
   "price_cents": 550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Hemp, 45% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/332007/hemp-step-hem-t-shirt-mens"
 }

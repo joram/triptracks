@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven High Coast Hike Shorts - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch"
+    },
+    {
+      "key": "Inseam",
+      "value": "11 in"
+    },
+    {
+      "key": "Weight",
+      "value": "200 g"
+    }
+  ],
   "url": "https://vpo.ca/product/318523/high-coast-hike-shorts-mens"
 }

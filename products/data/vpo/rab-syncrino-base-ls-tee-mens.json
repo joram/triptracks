@@ -5,6 +5,19 @@
   ],
   "name": "Rab Syncrino Base LS Tee - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Syncrino\u2122 125 Merino"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "70.5 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/349168/syncrino-base-ls-tee-mens"
 }

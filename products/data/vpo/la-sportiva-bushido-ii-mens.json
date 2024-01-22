@@ -5,6 +5,47 @@
   ],
   "name": "La Sportiva Bushido II - Mens",
   "price_cents": 1849500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Air Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Mesh"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Midsole",
+      "value": "4mm LaSpEVA"
+    },
+    {
+      "key": "Sole",
+      "value": "Dual Density FriXion\u00ae XT V-Groove2\u2122 with Impact Brake System\u2122"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Midsole"
+    },
+    {
+      "key": "Last",
+      "value": "Racing Lite Ergo"
+    },
+    {
+      "key": "Fit",
+      "value": "Performance"
+    },
+    {
+      "key": "Drop",
+      "value": "Drop 6mm"
+    },
+    {
+      "key": "Stack",
+      "value": "Heel"
+    }
+  ],
   "url": "https://vpo.ca/product/318188/bushido-ii-mens"
 }

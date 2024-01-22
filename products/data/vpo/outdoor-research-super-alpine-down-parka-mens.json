@@ -5,6 +5,31 @@
   ],
   "name": "Outdoor Research Super Alpine Down Parka - Mens",
   "price_cents": 6499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "bluesign\u00ae approved Pertex\u00ae Quantum Pro 100% Nylon 30D Ripstop With Highly Water Resistant Polyurethane Coating"
+    },
+    {
+      "key": "Lining",
+      "value": "bluesign\u00aeapproved 30D 100% Nylon Plainweave"
+    },
+    {
+      "key": "Insulation",
+      "value": "800 Fill Power, Responsibly Sourced Goose Down"
+    },
+    {
+      "key": "Weight (size L)",
+      "value": "29.1 oz"
+    },
+    {
+      "key": "Back Length",
+      "value": "33.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330436/super-alpine-down-parka-mens"
 }

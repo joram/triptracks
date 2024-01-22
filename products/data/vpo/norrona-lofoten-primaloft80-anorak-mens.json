@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Lofoten Primaloft80 Anorak - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "30D 100% Nylon Cordura"
+    },
+    {
+      "key": "Secondary",
+      "value": "2-Layer 60D Recycled Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "Primaloft\u00ae Gold With Cross Core Technology"
+    },
+    {
+      "key": "Weight",
+      "value": "658 g"
+    },
+    {
+      "key": "Waterproof",
+      "value": "min. 20,000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/333652/lofoten-primaloft80-anorak-mens"
 }

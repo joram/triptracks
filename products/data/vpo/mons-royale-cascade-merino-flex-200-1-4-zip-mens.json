@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Cascade Merino Flex 200 1/4 Zip - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Flex - 81% Merino Wool 12% Nylon 7% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/338952/cascade-merino-flex-200-14-zip-mens"
 }

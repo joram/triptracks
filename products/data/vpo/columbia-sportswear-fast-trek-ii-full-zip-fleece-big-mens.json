@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Fast Trek II Full Zip Fleece - Big - Mens",
   "price_cents": 749900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% polyester microfleece"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "31 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349626/fast-trek-ii-full-zip-fleece-big-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeBlend Classic Henley LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "45% Recycled Polyester, 30% Tencel\u2122 Lyocell, 25% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/332008/treeblend-classic-henley-ls-mens"
 }

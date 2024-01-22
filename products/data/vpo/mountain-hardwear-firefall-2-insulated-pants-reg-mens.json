@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear FireFall/2 Insulated Pants, Reg - Mens",
   "price_cents": 2159600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Dry.Q\u00ae 70D Textured Weave 2-layer - Solids"
+    },
+    {
+      "key": "Insulation",
+      "value": "60 g Polyester insulation"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "580 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337547/firefall2-insulated-pants-reg-mens"
 }

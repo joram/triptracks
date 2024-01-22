@@ -1,10 +1,15 @@
 {
-  "description": "Classic denim looks with extra mobility. Sounds too good to be true, but give the men's Hillgard Jean a tug and you'll instantly feel that superb stretch.<br><br>Part of the performance stretch denim collection, this style has the features you want in an active jean. Like a gusseted inseam and a classic standard fit.<br><br>Best of all, this organic-cotton jean is made using a waterless wash, giving you that same denim look without using excessive natural resources.",
+  "description": "A timeless-looking style made using responsible modern-day methods, the Hillgard Jean is an easy outfitting choice for weekdays, weekends, and everywhere you want to be.<br><br>Made with our signature Traditional Stretch Denim, this style offers the best of both worlds\u2014the classic jean texture you know and love plus just the right amount of added elasticity for much-needed comfort.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/329620.jpg"
+    "https://vpo.ca/images/product/large/348192.jpg"
   ],
   "name": "Prana Hillgard Jeans, 32\" Inseam - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/329620/hillgard-jeans-32-inseam-mens"
+  "price_cents": 1032000,
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "99% Organic Cotton, 1% LYCRA\u00aeElastane"
+    }
+  ],
+  "url": "https://vpo.ca/product/348192/hillgard-jeans-32-inseam-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Kor AirShell Full Zip Jacket - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pertex\u00ae Quantum Air\u2122 20D Stretch Ripstop - 59% Recycled Nylon, 41% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "4.7 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342879/kor-airshell-full-zip-jacket-mens"
 }

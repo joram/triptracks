@@ -5,6 +5,39 @@
   ],
   "name": "Salewa Mountain Trainer Lite Mid GTX - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Footbed",
+      "value": "Salewa footbed"
+    },
+    {
+      "key": "Insole",
+      "value": "Mid stiff"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort"
+    },
+    {
+      "key": "Midsole",
+      "value": "EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Pomoca MTN trainer Lite"
+    },
+    {
+      "key": "Upper",
+      "value": "Highly wear-resistant fabric, 1.6mm suede leather, 3F System with Steel Cables"
+    },
+    {
+      "key": "Drop",
+      "value": "13mm (Heel Stack Height"
+    },
+    {
+      "key": "Fit",
+      "value": "Wide"
+    }
+  ],
   "url": "https://vpo.ca/product/340710/mountain-trainer-lite-mid-gtx-mens"
 }

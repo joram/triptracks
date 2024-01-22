@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Nevadan Down Parka - Mens",
   "price_cents": 4299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "45D Nylon Ripstop - 100% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "650-\ufb01ll RDS\u00ae-certi\ufb01ed down"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "1 lb 15 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349009/nevadan-down-parka-mens"
 }

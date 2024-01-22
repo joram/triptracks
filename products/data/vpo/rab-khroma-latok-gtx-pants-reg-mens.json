@@ -5,6 +5,31 @@
   ],
   "name": "Rab Khroma Latok GTX Pants, Reg - Mens",
   "price_cents": 7800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Face",
+      "value": "100% Recycled Polyamide, ePTFE Membrane"
+    },
+    {
+      "key": "Backer",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "771 g"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "80D Recycled GORE-TEX Pro Most Breathable 3-Layer construction with Gore DWR (154 g"
+    },
+    {
+      "key": "Strategic pocket placement for skiing (3 external pockets",
+      "value": "2x thigh pockets, and 1x rear pocket)"
+    }
+  ],
   "url": "https://vpo.ca/product/349145/khroma-latok-gtx-pants-reg-mens"
 }

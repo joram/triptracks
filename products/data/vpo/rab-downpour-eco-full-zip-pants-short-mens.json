@@ -5,6 +5,15 @@
   ],
   "name": "Rab Downpour Eco Full Zip Pants, Short - Mens",
   "price_cents": 1600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Recycled Pertex\u00ae Shield Revolve 2.5-Layer construction waterproof technology with fluorocarbon-free DWR (50D)"
+    },
+    {
+      "key": "Weight",
+      "value": "273g"
+    }
+  ],
   "url": "https://vpo.ca/product/342719/downpour-eco-full-zip-pants-short-mens"
 }

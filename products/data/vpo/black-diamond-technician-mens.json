@@ -5,6 +5,63 @@
   ],
   "name": "Black Diamond Technician - Mens",
   "price_cents": 1399700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Enduro Knit upper, Forefoot Internal Fit Bootie, Strobel anchored microcord midfoot cage, TPU instep lace lock, Welded TPU protectiverand overlay, Sticky rubber toe cap"
+    },
+    {
+      "key": "Lining",
+      "value": "Soft Touch Fully Lined"
+    },
+    {
+      "key": "Midsole",
+      "value": "Low profile EVA Midsole, Dual Density Heel"
+    },
+    {
+      "key": "Rubber",
+      "value": "BD BlackLabel Mountain"
+    },
+    {
+      "key": "Footbed",
+      "value": "Molded open cell performance EVA"
+    },
+    {
+      "key": "Closure",
+      "value": "Velcro Strap"
+    },
+    {
+      "key": "Weight (Per Shoe)",
+      "value": "315 g"
+    },
+    {
+      "key": "Heel-Ball Drop",
+      "value": "8 mm"
+    },
+    {
+      "key": "Stack Height- Forefoot/ Heel",
+      "value": "10 mm"
+    },
+    {
+      "key": "Width-Forefoot",
+      "value": "Medium"
+    },
+    {
+      "key": "Width-Heel",
+      "value": "Medium"
+    },
+    {
+      "key": "Last",
+      "value": "BD Flat Camber Approach"
+    },
+    {
+      "key": "Usage/Terrain",
+      "value": "Fast and Technical Approach, Climb, Walk"
+    },
+    {
+      "key": "3D Wrap Construction",
+      "value": "free floating compression fit"
+    }
+  ],
   "url": "https://vpo.ca/product/327054/technician-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Arcteryx Atlin Chino Pants, Reg - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "7.5oz (255g"
+    },
+    {
+      "key": "Weight",
+      "value": "420 g"
+    }
+  ],
   "url": "https://vpo.ca/product/338013/atlin-chino-pants-reg-mens"
 }

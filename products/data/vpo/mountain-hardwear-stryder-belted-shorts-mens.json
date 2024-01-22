@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Stryder Belted Shorts - Mens",
   "price_cents": 639600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular 7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343066/stryder-belted-shorts-mens"
 }

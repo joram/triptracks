@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research SuperStrand LT Vest - Mens",
   "price_cents": 1519600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell and Lining",
+      "value": "bluesign\u00ae approved, 100% Nylon 12D Rip Stop"
+    },
+    {
+      "key": "Insulation",
+      "value": "VerticalX\u2122 SuperStrand Insulation 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342447/superstrand-lt-vest-mens"
 }

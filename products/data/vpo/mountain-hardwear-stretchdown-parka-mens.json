@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear StretchDown Parka - Mens",
   "price_cents": 4499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "20D Durable Stretch Doubleweave -\u00a086% Nylon, 14% Elastane"
+    },
+    {
+      "key": "Insulation",
+      "value": "700-\ufb01ll RDS\u00ae-certi\ufb01ed down -\u00a085% Down, 15% Feather"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "725 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337647/stretchdown-parka-mens"
 }

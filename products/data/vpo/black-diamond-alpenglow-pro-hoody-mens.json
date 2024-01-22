@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Alpenglow Pro Hoody - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nylon stretch jersey with Empel DWR finish - 92% Nylon, 8% Elastane, 158 g"
+    },
+    {
+      "key": "Weight",
+      "value": "189 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/334376/alpenglow-pro-hoody-mens"
 }

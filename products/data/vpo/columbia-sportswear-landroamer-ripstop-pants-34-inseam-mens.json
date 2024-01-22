@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Landroamer Ripstop Pants, 34\" Inseam - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "96% Nylon, 4% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, easy fit for comfortable range of motion"
+    }
+  ],
   "url": "https://vpo.ca/product/363895/landroamer-ripstop-pants-34-inseam-mens"
 }

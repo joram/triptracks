@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Snowboard Targeted Cushion Piste Machine Over The Calf Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Merino Wool, 11% Nylon, 27% Recycled Nylon, 2% Elastane"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Targeted Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "Over-the-Calf"
+    },
+    {
+      "key": "Overall Height",
+      "value": "14 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349321/snowboard-targeted-cushion-piste-machine-over-the-calf-socks-mens"
 }

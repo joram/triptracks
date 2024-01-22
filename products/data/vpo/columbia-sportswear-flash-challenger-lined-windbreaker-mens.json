@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Flash Challenger Lined Windbreaker - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Lining",
+      "value": "91% Polyester, 9% Elastane."
+    }
+  ],
   "url": "https://vpo.ca/product/350181/flash-challenger-lined-windbreaker-mens"
 }

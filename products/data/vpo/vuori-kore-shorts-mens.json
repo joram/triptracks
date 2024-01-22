@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Kore Shorts - Mens",
   "price_cents": 910000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "46% Recycled Polyester, 44% Polyester, 10% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "7.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332705/kore-shorts-mens"
 }

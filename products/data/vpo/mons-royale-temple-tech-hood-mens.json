@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Temple Tech Hood - Mens",
   "price_cents": 1279600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Air-Con - 83% Merino Wool 13% Nylon 4% Elastane, 140 gsm"
+    }
+  ],
   "url": "https://vpo.ca/product/339034/temple-tech-hood-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia Stormstride Pants - Mens",
   "price_cents": 5590000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "3-layer, 3.5-oz 40-denier Pertex\u00ae Shield 100% nylon (54% recycled) plain weave with two-way stretch, a soft polyester knit backer and a DWR (durable water repellent) finish"
+    }
+  ],
   "url": "https://vpo.ca/product/341388/stormstride-pants-mens"
 }

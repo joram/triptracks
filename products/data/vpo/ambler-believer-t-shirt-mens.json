@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  Believer T-Shirt - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/328180/believer-t-shirt-mens"
 }

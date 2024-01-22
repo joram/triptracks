@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Elche Joggers - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "88% Nylon, 12% Elastane, Plain weave, 194g"
+    },
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular - Mid Rise"
+    },
+    {
+      "key": "Inseam",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342588/elche-joggers-mens"
 }

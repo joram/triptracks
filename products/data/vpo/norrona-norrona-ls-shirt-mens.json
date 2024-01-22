@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Norrona LS Shirt - Mens",
   "price_cents": 1102600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "68% organic cotton, 27% recycled nylon, 5% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "308 g"
+    }
+  ],
   "url": "https://vpo.ca/product/334154/norrona-ls-shirt-mens"
 }

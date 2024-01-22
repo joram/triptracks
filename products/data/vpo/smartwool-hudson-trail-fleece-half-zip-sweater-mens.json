@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hudson Trail Fleece Half Zip Sweater - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "45% Wool, 45% Polyester, 5% Nylon, 5% Other Fibers"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/339227/hudson-trail-fleece-half-zip-sweater-mens"
 }

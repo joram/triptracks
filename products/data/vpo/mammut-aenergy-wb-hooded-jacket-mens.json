@@ -5,6 +5,31 @@
   ],
   "name": "Mammut Aenergy WB Hooded Jacket - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Pertex Equilibrium Double Weave"
+    },
+    {
+      "key": "Denier (Main Material)",
+      "value": "20D x 20D"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Light Weight Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "147 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "79"
+    }
+  ],
   "url": "https://vpo.ca/product/343302/aenergy-wb-hooded-jacket-mens"
 }

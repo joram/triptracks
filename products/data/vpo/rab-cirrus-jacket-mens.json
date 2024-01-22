@@ -5,6 +5,27 @@
   ],
   "name": "Rab Cirrus Jacket - Mens",
   "price_cents": 2500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Recycled 30D nylon Pertex Quantum, 50g"
+    },
+    {
+      "key": "Lining",
+      "value": "Recycled 20D nylon, 41g"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% Recycled PrimaLoft\u00ae Silver Insulation Luxe\u2122"
+    },
+    {
+      "key": "Composition",
+      "value": "100% Recycled Polyamide Outer with 100% Recycled Polyamide Lining"
+    },
+    {
+      "key": "Weight",
+      "value": "461.5 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329490/cirrus-jacket-mens"
 }

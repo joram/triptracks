@@ -5,6 +5,11 @@
   ],
   "name": "Bogs Classic Mid - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Height",
+      "value": "11\u201d"
+    }
+  ],
   "url": "https://vpo.ca/product/307964/classic-mid-mens"
 }

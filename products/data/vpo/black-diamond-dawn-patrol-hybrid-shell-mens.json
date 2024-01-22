@@ -5,6 +5,39 @@
   ],
   "name": "Black Diamond Dawn Patrol Hybrid Shell - Mens",
   "price_cents": 4499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "BD.Dry Stretch Nylon 3L with GTT Empel DWR Finish - 138g"
+    },
+    {
+      "key": "\u00a0Face",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Back",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Shell 2",
+      "value": "4 way Stretch Nylon Double Weave with GTT Empel DWR Finish - 169 g"
+    },
+    {
+      "key": "Weight",
+      "value": "500 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "30 1"
+    },
+    {
+      "key": "Front Length",
+      "value": "29.5 in from high point of shoulder"
+    }
+  ],
   "url": "https://vpo.ca/product/330147/dawn-patrol-hybrid-shell-mens"
 }

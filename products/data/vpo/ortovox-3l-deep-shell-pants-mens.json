@@ -5,6 +5,43 @@
   ],
   "name": "Ortovox 3L Deep Shell Pants - Mens",
   "price_cents": 6000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inner",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Inserts",
+      "value": "Outer"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inner",
+      "value": "100% virgin wool (MERINO-OWP)"
+    },
+    {
+      "key": "Weight",
+      "value": "554 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Loose"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/340847/3l-deep-shell-pants-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Ambush Cargo Shorts, 12\" Inseam - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "\u00dcberk\u00fchl\u00ae Stretch 68% Cotton, 29% Nylon, 3% Spandex 5.2 oz"
+    },
+    {
+      "key": "Bottom Leg Opening",
+      "value": "22 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "12 in"
+    }
+  ],
   "url": "https://vpo.ca/product/308391/ambush-cargo-shorts-12-inseam-mens"
 }

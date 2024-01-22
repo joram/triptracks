@@ -5,6 +5,11 @@
   ],
   "name": "Roark Secondwind 2.0 Jacket - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/347289/secondwind-20-jacket-mens"
 }

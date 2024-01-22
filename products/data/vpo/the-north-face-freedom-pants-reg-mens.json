@@ -5,6 +5,39 @@
   ],
   "name": "The North Face Freedom Pants, Reg - Mens",
   "price_cents": 2399900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Solid",
+      "value": "160D x 140D 133 g"
+    },
+    {
+      "key": "Print",
+      "value": "75D x 160D 123 g"
+    },
+    {
+      "key": "Kickpatches",
+      "value": "420D x 500D 235 g"
+    },
+    {
+      "key": "Lining",
+      "value": "105 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "60 g Heatseeker\u2122 Eco 90% post-consumer recycled polyester"
+    },
+    {
+      "key": "Average Weight",
+      "value": "1 lb 3.37 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "S 30 in, R 32 in, L 34 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/341395/freedom-pants-reg-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Ohana - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Water-resistant synthetic straps with quick-drying jersey knit lining and soft nylon toe post create an ultra-comfy fit"
+    },
+    {
+      "key": "Footbed",
+      "value": "The compression-molded EVA midsole with a smooth drop-in ICEVA footbed provides an anatomical fit for all-day comfort"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking rubber outsole with coral lug design for added grip"
+    }
+  ],
   "url": "https://vpo.ca/product/266343/ohana-mens"
 }

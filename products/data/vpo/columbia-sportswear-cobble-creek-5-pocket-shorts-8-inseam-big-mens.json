@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Cobble Creek 5 Pocket Shorts, 8\" Inseam - Big - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "59% Cotton, 37% Polyester, 4% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "8\""
+    }
+  ],
   "url": "https://vpo.ca/product/346796/cobble-creek-5-pocket-shorts-8-inseam-big-mens"
 }

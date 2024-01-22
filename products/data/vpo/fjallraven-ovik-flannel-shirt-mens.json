@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Ovik Flannel Shirt - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/323899/ovik-flannel-shirt-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Sno 3/4 Pants - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% SUPERFINE merino wool, 2% Creora-Eco-Soft"
+    }
+  ],
   "url": "https://vpo.ca/product/348164/sno-34-pants-mens"
 }

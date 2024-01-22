@@ -1,10 +1,39 @@
 {
-  "description": "Robust on the outside, warm and soft on the inside. The Aconcagua Jacket is made from Polartec\u00ae Power Stretch Pro\u00ae material and is the ideal technical solution for mountaineers looking for a lightweight insulating fleece. Its quick-drying material has a nylon surface and is abrasion-proof. The jacket also features two backpack- and climbing harness-compatible zipper pockets.",
+  "description": "The Aconcagua is a classic fleece jacket for sporty lifestyles. Now in its third generation, it still holds its own on expeditions, long and short outdoor adventures and is also suitable for everyday wear. The Polartec\u00ae Power Stretch\u00ae Pro material is comfortable and ensures you can always move freely thanks to its flexible 4-way stretch material. The fleece fabric keeps you warm, efficiently wicks away moisture and dries quickly. The Aconcagua has a tight fit, making it your go-to mid-layer for wearing under a hardshell layer. Its tried and tested features and timeless design also make the jacket perfect for wearing on its own when hiking, climbing or just enjoying your free time. The Aconcagua is made to offer superior quality, is extremely rugged and always keeps its shape.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/330849.jpg"
+    "https://vpo.ca/images/product/large/350272.jpg"
   ],
   "name": "Mammut Aconcagua ML Jacket - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/330849/aconcagua-ml-jacket-mens"
+  "price_cents": 2350000,
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "polartec\u00ae power stretch pro\u00ae"
+    },
+    {
+      "key": "Main material",
+      "value": "52% Polyester, 39% Polyamide, 9% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "recycled polyester mesh"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "polartec\u00ae power stretch pro\u00ae"
+    },
+    {
+      "key": "UV protection (UPF)",
+      "value": "UPF 50+"
+    },
+    {
+      "key": "Weight",
+      "value": "367 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
+  "url": "https://vpo.ca/product/350272/aconcagua-ml-jacket-mens"
 }

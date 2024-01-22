@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Active Merino 150 Brief - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 44% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "56 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "4 in"
+    }
+  ],
   "url": "https://vpo.ca/product/339334/active-merino-150-brief-mens"
 }

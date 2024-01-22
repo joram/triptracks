@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Koster Sweater - Mens",
   "price_cents": 2250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00aeOriginal",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "545 g"
+    }
+  ],
   "url": "https://vpo.ca/product/278102/koster-sweater-mens"
 }

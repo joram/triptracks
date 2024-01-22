@@ -5,6 +5,15 @@
   ],
   "name": "Saxx Underwear Quest Quick Dry Mesh Long Leg Fly, 8\" Inseam - Mens",
   "price_cents": 311600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "77% Nylon, 14% Elastane, 9% Polyester"
+    },
+    {
+      "key": "Please note",
+      "value": "All underwear are final sale"
+    }
+  ],
   "url": "https://vpo.ca/product/333511/quest-quick-dry-mesh-long-leg-fly-8-inseam-mens"
 }

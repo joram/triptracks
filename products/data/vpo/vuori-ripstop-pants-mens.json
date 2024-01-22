@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Ripstop Pants - Mens",
   "price_cents": 1310000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "98% Organic Cotton, 2% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336297/ripstop-pants-mens"
 }

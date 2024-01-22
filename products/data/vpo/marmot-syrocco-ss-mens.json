@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Syrocco SS - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester AirExchange Plain Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "4.6 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316482/syrocco-ss-mens"
 }

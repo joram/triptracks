@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Ski Zero Cushion Logo Over The Calf Socks - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Merino Wool, 10% Nylon, 31% Recycled Nylon, 4% Elastane"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Zero Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "Over-the-Calf"
+    },
+    {
+      "key": "Overall Height",
+      "value": "14 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349322/ski-zero-cushion-logo-over-the-calf-socks-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Keen Targhee III WP - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "KEEN.DRY",
+      "value": "A proprietary waterproof, breathable membrane that lets vapor out without letting water in"
+    },
+    {
+      "key": "Metatomical Footbed Design",
+      "value": "This internal support mechanism is anatomically engineered to provide excellent arch support and cradle the natural contours of the foot"
+    }
+  ],
   "url": "https://vpo.ca/product/309255/targhee-iii-wp-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Expedition Pack Down Hoodie - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill",
+      "value": "90% goose down, 10% feather"
+    },
+    {
+      "key": "Fill power",
+      "value": "700 in\u00b3"
+    },
+    {
+      "key": "Fill weight",
+      "value": "110 g"
+    },
+    {
+      "key": "Weight",
+      "value": "490 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328835/expedition-pack-down-hoodie-mens"
 }

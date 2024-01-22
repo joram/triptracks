@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Bergtagen Thinwool LS T-Shirt - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Weight",
+      "value": "185 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325449/bergtagen-thinwool-ls-t-shirt-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Lifestyle Fine Gauge Crew Socks - Stripe - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fiber micron",
+      "value": "Merino Wool 19.5 micron"
+    },
+    {
+      "key": "Content",
+      "value": "Merino Wool 69%, Nylon 29%, LYCRA\u00ae 2%"
+    },
+    {
+      "key": "Sock Height",
+      "value": "Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/339989/lifestyle-fine-gauge-crew-socks-stripe-mens"
 }

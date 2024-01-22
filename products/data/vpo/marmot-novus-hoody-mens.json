@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Novus Hoody - Mens",
   "price_cents": 2160000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lbs 4 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342665/novus-hoody-mens"
 }

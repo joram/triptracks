@@ -5,6 +5,19 @@
   ],
   "name": "Vibram Five Fingers V-Trail 2.0 - Black / Yellow -  Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "6.4 oz"
+    },
+    {
+      "key": "Usage",
+      "value": "Ideal for running in nature, on trails or during obstacle races - the ultimate tool for moving on unpredictable surfaces"
+    },
+    {
+      "key": "Care Instructions",
+      "value": "Machine Wash Cold"
+    }
+  ],
   "url": "https://vpo.ca/product/336588/v-trail-20-black-yellow-mens"
 }

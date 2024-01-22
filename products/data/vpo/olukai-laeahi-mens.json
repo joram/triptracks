@@ -5,6 +5,23 @@
   ],
   "name": "Olukai LaeAhi - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Durable mesh forefoot accented by a water-resistant synthetic heel and quarter, and microfiber suede heel and logo badge, and lined with a soft breathable microfiber"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual-density anatomical PU footbed with a gel insert and removable and washable soft microfiber footbed cover"
+    },
+    {
+      "key": "Outsole",
+      "value": "Lightweight EVA midsole with a non-marking \u2018Wet Grip Rubber\u2019 outsole, siping and articulating features for added traction on wet surfaces"
+    },
+    {
+      "key": "Features",
+      "value": "Embossed hooks in heel with quarter details"
+    }
+  ],
   "url": "https://vpo.ca/product/326760/laeahi-mens"
 }

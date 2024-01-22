@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Greenland Canvas Jeans - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "570 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Leg Ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full Leg"
+    }
+  ],
   "url": "https://vpo.ca/product/318034/greenland-canvas-jeans-mens"
 }

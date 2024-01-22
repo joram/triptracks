@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Natural Provisions Graphic SS Tee - Mens",
   "price_cents": 600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 44% Recycled Polyester. Exclusive of Decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/349606/natural-provisions-graphic-ss-tee-mens"
 }

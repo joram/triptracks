@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Run Targeted Cushion Pattern Ankle Socks - Mens",
   "price_cents": 207600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Merino Wool, 32% Nylon, 13% Recycled Nylon, 3% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Ankle (3.25\" overall height)"
+    }
+  ],
   "url": "https://vpo.ca/product/343705/run-targeted-cushion-pattern-ankle-socks-mens"
 }

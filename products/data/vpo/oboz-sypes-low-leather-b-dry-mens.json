@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Sypes Low Leather B-Dry - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "LWG gold certified PFC-free waterproof nubuck leather + Mesh + TPU Overlay; B-DRY Waterproof Membrane, 100% RPET Repreve\u00ae Laces, 100% RPET Webbing, 100% recycled collar &amp; tongue lining"
+    },
+    {
+      "key": "Insole",
+      "value": "O FIT Insole\u00ae"
+    },
+    {
+      "key": "Midsole",
+      "value": "ACT Impact"
+    },
+    {
+      "key": "Outsole",
+      "value": "Bend"
+    },
+    {
+      "key": "Construction",
+      "value": "Board lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Regular"
+    },
+    {
+      "key": "Volume",
+      "value": "Medium"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "8mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "15.7 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/337063/sypes-low-leather-b-dry-mens"
 }

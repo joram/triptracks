@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Trail Stretch Trousers, Reg - Mens",
   "price_cents": 2250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "89% Polyamide, 11% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "390 g - size 50"
+    }
+  ],
   "url": "https://vpo.ca/product/363458/abisko-trail-stretch-trousers-reg-mens"
 }

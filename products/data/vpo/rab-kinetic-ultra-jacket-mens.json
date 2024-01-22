@@ -5,6 +5,23 @@
   ],
   "name": "Rab Kinetic Ultra Jacket - Mens",
   "price_cents": 3150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Proflex\u2122 3-layer recycled polyester stretch knit face with PU membrane (120 g/m\u00b2) with Fluorocarbon-free DWR. HH",
+      "value": "10,000 mm \\ MVTR"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "74 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "277 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348923/kinetic-ultra-jacket-mens"
 }

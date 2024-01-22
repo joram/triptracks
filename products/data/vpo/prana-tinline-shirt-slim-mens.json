@@ -5,6 +5,11 @@
   ],
   "name": "Prana Tinline Shirt - Slim - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Shell"
+    }
+  ],
   "url": "https://vpo.ca/product/340322/tinline-shirt-slim-mens"
 }

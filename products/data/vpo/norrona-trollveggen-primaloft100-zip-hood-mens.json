@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Trollveggen Primaloft100 Zip Hood - Mens",
   "price_cents": 4199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insulation",
+      "value": "Primaloft\u00ae Gold with Cross Core Techology"
+    },
+    {
+      "key": "Weight",
+      "value": "528 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Technical"
+    }
+  ],
   "url": "https://vpo.ca/product/322120/trollveggen-primaloft100-zip-hood-mens"
 }

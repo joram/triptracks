@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Nui - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "High-character, premium antiqued full-grain leather or tumbled waxed nubuck leather with a quick-drying jersey knit lining and a soft nylon toe post"
+    },
+    {
+      "key": "Footbed",
+      "value": "Compression molded EVA midsole covered in full-grain leather provides anatomically correct contour for a personalized fit and sustained comfort over time"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking rubber outsole with island inspired traction pods for enhanced grip and flexibility"
+    }
+  ],
   "url": "https://vpo.ca/product/293956/nui-mens"
 }

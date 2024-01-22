@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Conveyor Tee SS - Mens",
   "price_cents": 280000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "100% Polyester Single Jersey Heather"
+    },
+    {
+      "key": "Weight",
+      "value": "5.64 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.75 in"
+    }
+  ],
   "url": "https://vpo.ca/product/325671/conveyor-tee-ss-mens"
 }

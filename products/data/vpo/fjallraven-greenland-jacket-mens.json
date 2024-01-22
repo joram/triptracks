@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Greenland Jacket - Mens",
   "price_cents": 2600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae",
+      "value": "65% polyester (recycled), 35% cotton (organic)"
+    },
+    {
+      "key": "Reinforcement areas",
+      "value": "Shoulders, Elbows"
+    },
+    {
+      "key": "Weight",
+      "value": "750 g"
+    },
+    {
+      "key": "Back length",
+      "value": "78 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/308237/greenland-jacket-mens"
 }

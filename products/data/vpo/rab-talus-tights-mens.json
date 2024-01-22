@@ -5,6 +5,19 @@
   ],
   "name": "Rab Talus Tights - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main fabric",
+      "value": "68% Polyamide, 32% Elastane"
+    },
+    {
+      "key": "Second fabric",
+      "value": "85% Polyamide, 15% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342745/talus-tights-mens"
 }

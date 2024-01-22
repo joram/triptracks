@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Organic Cotton Midweight Fjord Flannel LS Shirt - Mens",
   "price_cents": 875000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "5.9-oz 100% organic cotton flannel"
+    },
+    {
+      "key": "Weight",
+      "value": "454 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337214/organic-cotton-midweight-fjord-flannel-ls-shirt-mens"
 }

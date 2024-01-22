@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Alaska GTX - Mens",
   "price_cents": 5100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Fuora"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1640 g (Pair - size 8)"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/281365/alaska-gtx-mens"
 }

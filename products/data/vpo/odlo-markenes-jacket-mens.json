@@ -5,6 +5,23 @@
   ],
   "name": "Odlo Markenes Jacket - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "84% Polyester, 16% Polyurethane"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "84% Polyester, 16% Polyurethane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insert I",
+      "value": "94% Polyester, 6% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/342530/markenes-jacket-mens"
 }

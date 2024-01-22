@@ -5,6 +5,39 @@
   ],
   "name": "Asolo ELDO GV - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Technical seamless polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex Extended Comfort Footwear"
+    },
+    {
+      "key": "Anatomic Footbed",
+      "value": "Asolo"
+    },
+    {
+      "key": "Sole",
+      "value": "Asolo"
+    },
+    {
+      "key": "Fit",
+      "value": "Mens"
+    },
+    {
+      "key": "Weight",
+      "value": "290 (g) (1"
+    },
+    {
+      "key": "Size",
+      "value": "7-12.5 UK"
+    },
+    {
+      "key": "Resoling",
+      "value": "The model can get resoled"
+    }
+  ],
   "url": "https://vpo.ca/product/349214/eldo-gv-mens"
 }

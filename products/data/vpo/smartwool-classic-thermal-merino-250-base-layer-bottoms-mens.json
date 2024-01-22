@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Classic Thermal Merino 250 Base Layer Bottoms - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "250 g"
+    },
+    {
+      "key": "Weight",
+      "value": "228 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Size medium inseam"
+    }
+  ],
   "url": "https://vpo.ca/product/330238/classic-thermal-merino-250-base-layer-bottoms-mens"
 }

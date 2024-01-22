@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Active Hoodie - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 44% Polyester (exclusive of decoration)"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/344583/active-hoodie-mens"
 }

@@ -5,6 +5,39 @@
   ],
   "name": "Ortovox 3L Deep Shell Jacket - Mens",
   "price_cents": 7199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inner",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Inserts",
+      "value": "Outer"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inner",
+      "value": "100% virgin wool (MERINO-OWP)"
+    },
+    {
+      "key": "Weight",
+      "value": "573 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Loose"
+    }
+  ],
   "url": "https://vpo.ca/product/340845/3l-deep-shell-jacket-mens"
 }

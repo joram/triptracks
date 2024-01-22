@@ -5,6 +5,19 @@
   ],
   "name": "Swix Corvara Pants - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Soft-shell",
+      "value": "94% Polyester-6% Spandex"
+    },
+    {
+      "key": "Back",
+      "value": "Micro fleece 100% Polyester"
+    },
+    {
+      "key": "Inserts",
+      "value": "Stretch"
+    }
+  ],
   "url": "https://vpo.ca/product/341705/corvara-pants-mens"
 }

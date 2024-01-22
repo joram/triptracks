@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Moloa Slipper - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Heavily waxed nubuck leather, genuine shearling lining, and elastic gore panels create an ultra-comfy and customized fit"
+    },
+    {
+      "key": "Footbed",
+      "value": "The dual-density PU footbed, cushy gel insert, and removable"
+    },
+    {
+      "key": "Outsole",
+      "value": "The non-marking gum rubber outsole with a buffed \ufb01nish offers a durable surface and modern feel"
+    }
+  ],
   "url": "https://vpo.ca/product/335667/moloa-slipper-mens"
 }

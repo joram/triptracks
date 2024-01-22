@@ -5,6 +5,11 @@
   ],
   "name": "tentree tentree Logo Hoodie - Mens",
   "price_cents": 780000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/341407/tentree-logo-hoodie-mens"
 }

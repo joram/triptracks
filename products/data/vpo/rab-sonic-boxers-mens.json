@@ -5,6 +5,19 @@
   ],
   "name": "Rab Sonic Boxers - Mens",
   "price_cents": 425000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "50g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342747/sonic-boxers-mens"
 }

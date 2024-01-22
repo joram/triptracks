@@ -5,6 +5,39 @@
   ],
   "name": "HanWag Tatra II GTX, Wide - Mens",
   "price_cents": 4700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Outer Sole",
+      "value": "Vibram\u00ae AW Integral"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1520 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Wide"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/308268/tatra-ii-gtx-wide-mens"
 }

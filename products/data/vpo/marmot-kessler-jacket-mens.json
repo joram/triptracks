@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Kessler Jacket - Mens",
   "price_cents": 3080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342607/kessler-jacket-mens"
 }

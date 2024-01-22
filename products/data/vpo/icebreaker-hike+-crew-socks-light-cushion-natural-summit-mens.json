@@ -5,6 +5,23 @@
   ],
   "name": "Icebreaker Hike+ Crew Socks - Light Cushion - Natural Summit - Mens",
   "price_cents": 280000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "59% Merino Wool, 38% Nylon, 3% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushion",
+      "value": "Light"
+    }
+  ],
   "url": "https://vpo.ca/product/348103/hike-crew-socks-light-cushion-natural-summit-mens"
 }

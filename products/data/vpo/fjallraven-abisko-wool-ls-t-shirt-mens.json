@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Wool LS T-Shirt - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Merino Wool, 50% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "155 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325432/abisko-wool-ls-t-shirt-mens"
 }

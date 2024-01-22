@@ -5,6 +5,27 @@
   ],
   "name": "Patagonia Dual Aspect Bibs - Mens",
   "price_cents": 4990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "3-layer, 3.4-oz 30-denier ECONYL\u00ae 100% recycled nylon ripstop face with a slick jersey backer, a waterproof"
+    },
+    {
+      "key": "Bibs",
+      "value": "1.7-oz 100% polyester (87% recycled) plain weave with four-way mechanical stretch and a PFC-free DWR finish"
+    },
+    {
+      "key": "Scuff guards",
+      "value": "7.3-oz 59% recycled polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "312 g"
+    },
+    {
+      "key": "Four-Way-Stretch Suspenders",
+      "value": "Low-profile, bike-inspired four-way-stretch suspenders are secure and enhance comfort while wearing a harness"
+    }
+  ],
   "url": "https://vpo.ca/product/341817/dual-aspect-bibs-mens"
 }

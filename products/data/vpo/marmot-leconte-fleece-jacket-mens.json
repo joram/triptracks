@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Leconte Fleece Jacket - Mens",
   "price_cents": 1100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "94% Polyester, 6% Elastane, Jacquard, 225g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342619/leconte-fleece-jacket-mens"
 }

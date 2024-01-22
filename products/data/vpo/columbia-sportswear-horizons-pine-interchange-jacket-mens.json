@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Horizons Pine Interchange Jacket - Mens",
   "price_cents": 3099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% nylon 210T taffeta, 100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "80g Omni-Heat\u2122 Thermal Insulation 50% Polyester, 50% Recycled Polyester, Omni-Tech\u2122 Matte Melange 2L 100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/350401/horizons-pine-interchange-jacket-mens"
 }

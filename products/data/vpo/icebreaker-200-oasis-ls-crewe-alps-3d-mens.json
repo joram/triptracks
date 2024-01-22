@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker 200 Oasis LS Crewe - Alps 3D - Mens",
   "price_cents": 1300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/347527/200-oasis-ls-crewe-alps-3d-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Run+ Mini Socks - Ultralight Cushion - Mens",
   "price_cents": 184000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "45% Wool, 53% Nylon, 2% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "50 g"
+    },
+    {
+      "key": "Height",
+      "value": "Mini"
+    }
+  ],
   "url": "https://vpo.ca/product/305691/run-mini-socks-ultralight-cushion-mens"
 }

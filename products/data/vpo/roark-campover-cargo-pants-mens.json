@@ -5,6 +5,11 @@
   ],
   "name": "Roark Campover Cargo Pants - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Cotton, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/337311/campover-cargo-pants-mens"
 }

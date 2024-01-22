@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Day Hike SS T-Shirt - Mens",
   "price_cents": 650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "110 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325403/abisko-day-hike-ss-t-shirt-mens"
 }

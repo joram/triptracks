@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Olympus Leggings - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/339023/olympus-leggings-mens"
 }

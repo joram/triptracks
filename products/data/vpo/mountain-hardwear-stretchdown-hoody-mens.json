@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear StretchDown Hoody - Mens",
   "price_cents": 3160000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "20D Durable Stretch Doubleweave -\u00a0Solids"
+    },
+    {
+      "key": "Insulation",
+      "value": "700-\ufb01ll RDS\u00ae-certi\ufb01ed down -\u00a085% Down, 15% Feather"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "501 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337637/stretchdown-hoody-mens"
 }

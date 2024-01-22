@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Eisfeld SO Hybrid Hooded Jacket - Mens",
   "price_cents": 4399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Polyamide Woven Double Weave - 93% Polyamide, 7% Elastene"
+    },
+    {
+      "key": "Weight",
+      "value": "530 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330809/eisfeld-so-hybrid-hooded-jacket-mens"
 }

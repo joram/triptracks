@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Minimalist GTX Jacket - Big - Mens",
   "price_cents": 2800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex Paclite\u00ae 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lbs"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346966/minimalist-gtx-jacket-big-mens"
 }

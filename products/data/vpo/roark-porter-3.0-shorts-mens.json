@@ -5,6 +5,11 @@
   ],
   "name": "Roark Porter 3.0 Shorts - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Cotton, 26% Nylon, 4% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/347296/porter-30-shorts-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Keb Fleece Hoodie - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "73% polyester, 20% wool, 7% elastane"
+    },
+    {
+      "key": "G-1000\u00ae Eco",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "510 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313447/keb-fleece-hoodie-mens"
 }

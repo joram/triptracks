@@ -5,6 +5,47 @@
   ],
   "name": "Oboz Firebrand II Low B-Dry - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "LWG gold certified PFC-free waterproof nubuck leather + Abrasion-resistant Mesh, B-DRY Waterproof Membrane, Molded rubber toe cap &amp; heel counter"
+    },
+    {
+      "key": "Footbed",
+      "value": "O Fit Insole\u2122"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual Density Compression Molded EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Sawtooth"
+    },
+    {
+      "key": "Construction",
+      "value": "Board Lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Regular"
+    },
+    {
+      "key": "Volume",
+      "value": "Medium"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "15mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "18.3 oz"
+    },
+    {
+      "key": "Fit Tip",
+      "value": "Length runs true to size. Form hugging heel cup, sculpted mid-foot, and a wider forefoot &amp; toe box"
+    }
+  ],
   "url": "https://vpo.ca/product/274634/firebrand-ii-low-b-dry-mens"
 }

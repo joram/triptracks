@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Alpine Chill Zero SS Crew - Big - Mens",
   "price_cents": 549900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Polyester Lightweight Pointelle Knit"
+    }
+  ],
   "url": "https://vpo.ca/product/346504/alpine-chill-zero-ss-crew-big-mens"
 }

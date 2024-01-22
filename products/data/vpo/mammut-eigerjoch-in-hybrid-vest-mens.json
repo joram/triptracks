@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Eigerjoch IN Hybrid Vest - Mens",
   "price_cents": 2799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Polartec\u00ae Alpha\u00ae Direct - 100% Polyester"
+    },
+    {
+      "key": "Main Fabric 1",
+      "value": "Polyamide Woven - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Polyester-Wool Fleece - 67% Polyester, 26% Wool, 7% Elasthan"
+    },
+    {
+      "key": "Practical",
+      "value": "front pockets with cross-over access"
+    }
+  ],
   "url": "https://vpo.ca/product/330819/eigerjoch-in-hybrid-vest-mens"
 }

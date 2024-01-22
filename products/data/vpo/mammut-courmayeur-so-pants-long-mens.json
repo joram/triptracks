@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Courmayeur SO Pants, Long - Mens",
   "price_cents": 2950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Schoeller\u00ae double weave fabric with four-way stretch - 90% Polyamide, 10% Elasthan"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Robust Double Weave Fabric with Four-Way Stretch - 93% Polyamide, 7% Elastene"
+    },
+    {
+      "key": "Lining",
+      "value": "punched polyester-elastane woven"
+    },
+    {
+      "key": "Weight",
+      "value": "381 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/333072/courmayeur-so-pants-long-mens"
 }

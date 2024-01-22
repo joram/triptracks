@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Mammut Core ML Crew Neck Logo - Mens",
   "price_cents": 680000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "3% Spandex, 97% Bio cotton"
+    },
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "34% Polyester, 66% Organic cotton"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "78 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "456 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343375/mammut-core-ml-crew-neck-logo-mens"
 }

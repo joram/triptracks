@@ -5,6 +5,11 @@
   ],
   "name": "Devold Svalbard Wool High Neck - Unisex",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% pure new wool"
+    }
+  ],
   "url": "https://vpo.ca/product/344933/svalbard-wool-high-neck-unisex"
 }

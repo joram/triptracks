@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Highline Stretch Shell - Mens",
   "price_cents": 3199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BD.dry Stretch Nylon 3L with GTT DWR finish (Self"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "360 g"
+    },
+    {
+      "key": "Front Length",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/327034/highline-stretch-shell-mens"
 }

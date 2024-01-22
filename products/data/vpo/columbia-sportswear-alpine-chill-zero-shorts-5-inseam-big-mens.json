@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Alpine Chill Zero Shorts, 5\" Inseam - Big - Mens",
   "price_cents": 649900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346492/alpine-chill-zero-shorts-5-inseam-big-mens"
 }

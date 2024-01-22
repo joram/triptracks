@@ -5,6 +5,35 @@
   ],
   "name": "La Sportiva Aequilibrium LT GTX - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Nubuck Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex Performance Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Hybrid Carbon-Nylon Weave"
+    },
+    {
+      "key": "Midsole",
+      "value": "High-Cushion PU Inserts"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Mont Rubber Compound w"
+    },
+    {
+      "key": "Last",
+      "value": "Aequilibrium"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/334136/aequilibrium-lt-gtx-mens"
 }

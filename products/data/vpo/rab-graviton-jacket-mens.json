@@ -5,6 +5,27 @@
   ],
   "name": "Rab Graviton Jacket - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Thermic\u2122 G (225 g"
+    },
+    {
+      "key": "Second",
+      "value": "96% Recycled Polyester, 4% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "376.5 g"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "71cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/349128/graviton-jacket-mens"
 }

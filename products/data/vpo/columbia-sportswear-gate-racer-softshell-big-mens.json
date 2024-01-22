@@ -5,6 +5,27 @@
   ],
   "name": "Columbia Sportswear Gate Racer Softshell - Big - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester microfleece"
+    },
+    {
+      "key": "Insulation",
+      "value": "80g Microtemp XF II"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350205/gate-racer-softshell-big-mens"
 }

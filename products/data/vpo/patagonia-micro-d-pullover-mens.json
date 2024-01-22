@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia Micro D Pullover - Mens",
   "price_cents": 850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "258 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329655/micro-d-pullover-mens"
 }

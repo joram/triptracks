@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Abisko Midsummer Zip-Off Trousers - Mens",
   "price_cents": 2250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Air Stretch",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "330 g (Size 48)"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Knees, rear, pockets"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed length"
+    }
+  ],
   "url": "https://vpo.ca/product/333760/abisko-midsummer-zip-off-trousers-mens"
 }

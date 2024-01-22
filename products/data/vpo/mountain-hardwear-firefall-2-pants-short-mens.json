@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Firefall/2 Pants, Short - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70D Textured Weave - 100% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Weight",
+      "value": "550 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348978/firefall2-pants-short-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Kor Strata Jacket - Mens",
   "price_cents": 2159600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "59% Recycled Nylon, 41% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "55% Recycled Polyester, 45% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "321.5 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337569/kor-strata-jacket-mens"
 }

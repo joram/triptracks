@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Acadia Pants, Reg - Mens",
   "price_cents": 879600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Recycled 2.5 L Ripstop (100% Recycled Nylon)"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "12.3 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/322383/acadia-pants-reg-mens"
 }

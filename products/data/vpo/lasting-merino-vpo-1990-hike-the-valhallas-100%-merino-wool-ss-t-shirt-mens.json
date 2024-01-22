@@ -5,6 +5,11 @@
   ],
   "name": "Lasting Merino VPO \"1990 Hike the Valhallas\" 100% Merino Wool SS T-Shirt - Mens",
   "price_cents": 559700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "160 g - 16.5 microns 100% Merino wool"
+    }
+  ],
   "url": "https://vpo.ca/product/338474/vpo-1990-hike-the-valhallas-100-merino-wool-ss-t-shirt-mens"
 }

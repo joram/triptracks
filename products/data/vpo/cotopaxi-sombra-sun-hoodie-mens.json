@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Sombra Sun Hoodie - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "knit, 100% Recycled Polyester, UPF 50+"
+    },
+    {
+      "key": "Shell 2",
+      "value": "Stretch Woven, 85% Nylon, 15% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/345264/sombra-sun-hoodie-mens"
 }

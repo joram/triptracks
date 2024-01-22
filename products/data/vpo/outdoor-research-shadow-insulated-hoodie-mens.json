@@ -5,6 +5,27 @@
   ],
   "name": "Outdoor Research Shadow Insulated Hoodie - Mens",
   "price_cents": 2749500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell and Lining",
+      "value": "bluesign\u00ae approved 90% Nylon, 10% Spandex, 20D Stretch Woven"
+    },
+    {
+      "key": "Insulation",
+      "value": "VerticalX Eco SR\u2122, 55% Repreve\u00ae Recycled Polyester, 35% Sorona\u00ae, 10% Polyester, 60 G"
+    },
+    {
+      "key": "Weight",
+      "value": "473 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336937/shadow-insulated-hoodie-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Iceline Ridge Jacket - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Plain Weave 2L 100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "Thermarator\u2122 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350404/iceline-ridge-jacket-mens"
 }

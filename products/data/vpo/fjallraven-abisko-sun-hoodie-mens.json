@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Sun-Hoodie - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "180 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325427/abisko-sun-hoodie-mens"
 }

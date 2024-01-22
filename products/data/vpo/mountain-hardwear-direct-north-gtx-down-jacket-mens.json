@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Direct North GTX Down Jacket - Mens",
   "price_cents": 5600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Insulation (Body &amp; Sleeves)",
+      "value": "75% Duck Down, 25% Duck Feather"
+    },
+    {
+      "key": "Insulation",
+      "value": "(Hood &amp; Side Panels)"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "31.5 in 80 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "1182 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337537/direct-north-gtx-down-jacket-mens"
 }

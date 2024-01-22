@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Ranger Micro Crew Midweight Cushion Socks - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "62% Merino Wool, 36% Nylon, 2% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "A well-deserved beer, hiking shoes, hiking boots"
+    }
+  ],
   "url": "https://vpo.ca/product/344636/ranger-micro-crew-midweight-cushion-socks-mens"
 }

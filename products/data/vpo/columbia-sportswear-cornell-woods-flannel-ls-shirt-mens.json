@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Cornell Woods Flannel LS Shirt - Mens",
   "price_cents": 649500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "97% Cotton, 3% Elastane Flannel"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350033/cornell-woods-flannel-ls-shirt-mens"
 }

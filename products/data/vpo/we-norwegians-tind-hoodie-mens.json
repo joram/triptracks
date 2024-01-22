@@ -5,6 +5,15 @@
   ],
   "name": "We Norwegians Tind Hoodie - Mens",
   "price_cents": 2799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool, Rib"
+    },
+    {
+      "key": "Fit",
+      "value": "Fits true to size"
+    }
+  ],
   "url": "https://vpo.ca/product/344852/tind-hoodie-mens"
 }

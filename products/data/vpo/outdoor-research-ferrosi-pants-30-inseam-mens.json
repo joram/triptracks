@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Ferrosi Pants, 30\" Inseam - Mens",
   "price_cents": 1249500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 48% Recycled Nylon, 38% Nylon, 14% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    },
+    {
+      "key": "Weight",
+      "value": "10.7oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342245/ferrosi-pants-30-inseam-mens"
 }

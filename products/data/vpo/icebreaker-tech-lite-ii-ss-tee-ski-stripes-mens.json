@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Tech Lite II SS Tee - Ski Stripes - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "1670 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/348763/tech-lite-ii-ss-tee-ski-stripes-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Teca Calido Reversible Vest - Mens",
   "price_cents": 1279600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell/lining",
+      "value": "repurposed polyester taffeta with DWR finish and 600 mm PU backer"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% recycled polyester (60 gsm)"
+    }
+  ],
   "url": "https://vpo.ca/product/340062/teca-calido-reversible-vest-mens"
 }

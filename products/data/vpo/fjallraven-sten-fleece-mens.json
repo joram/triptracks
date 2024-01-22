@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Sten Fleece - Mens",
   "price_cents": 1650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Reinforcements",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g"
+    }
+  ],
   "url": "https://vpo.ca/product/283218/sten-fleece-mens"
 }

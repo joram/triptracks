@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Utilizer Printed Woven SS, Tall - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/363403/utilizer-printed-woven-ss-tall-mens"
 }

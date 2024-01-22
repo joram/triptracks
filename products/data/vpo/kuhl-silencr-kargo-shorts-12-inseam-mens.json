@@ -5,6 +5,23 @@
   ],
   "name": "Kuhl Silencr Kargo Shorts, 12\" Inseam - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Reflex Softshell\u00a0- 56% New Polyester, 44% Polyester\u00a0- 164 g"
+    },
+    {
+      "key": "Bottom Opening",
+      "value": "20.25 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "12 in"
+    },
+    {
+      "key": "Seven pockets",
+      "value": "two front hand, two side with zipper closure, two back, one stealth cell phone pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/314562/silencr-kargo-shorts-12-inseam-mens"
 }

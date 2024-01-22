@@ -5,6 +5,23 @@
   ],
   "name": "Rab Argon Pants, Reg - Mens",
   "price_cents": 3050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "30D 100% Recycled Pertex Quantum fabric (50 g"
+    },
+    {
+      "key": "Secondary",
+      "value": "20D 100% Recycled Pertex\u00ae Quantum with Fluorocarbon Free DWR (38 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "800FP European Goose Down with Nikwax Fluorocarbon-Free Hydrophobic Finish (160 g"
+    },
+    {
+      "key": "Weight",
+      "value": "375 g"
+    }
+  ],
   "url": "https://vpo.ca/product/296866/argon-pants-reg-mens"
 }

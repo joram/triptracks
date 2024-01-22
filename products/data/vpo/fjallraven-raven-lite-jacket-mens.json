@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Raven Lite Jacket - Mens",
   "price_cents": 2029700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Air"
+    },
+    {
+      "key": "Weight",
+      "value": "520 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/325506/raven-lite-jacket-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "tentree Atlas Sweatpants - Mens",
   "price_cents": 780000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/323775/atlas-sweatpants-mens"
 }

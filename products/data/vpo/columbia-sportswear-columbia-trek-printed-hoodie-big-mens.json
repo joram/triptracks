@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Columbia Trek Printed Hoodie - Big - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/349974/columbia-trek-printed-hoodie-big-mens"
 }

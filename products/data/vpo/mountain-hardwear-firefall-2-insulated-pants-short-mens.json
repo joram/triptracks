@@ -5,6 +5,31 @@
   ],
   "name": "Mountain Hardwear FireFall/2 Insulated Pants, Short - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Dry.Q\u00ae 70D Textured Weave 2-layer"
+    },
+    {
+      "key": "Solids",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Prints",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "60 g Polyester insulation"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "580 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348976/firefall2-insulated-pants-short-mens"
 }

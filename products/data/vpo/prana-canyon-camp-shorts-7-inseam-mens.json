@@ -5,6 +5,15 @@
   ],
   "name": "Prana Canyon Camp Shorts, 7\" Inseam - Mens",
   "price_cents": 792000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials, Shell",
+      "value": "99% Organic Cotton, 1% LYCRA\u00ae Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/340110/canyon-camp-shorts-7-inseam-mens"
 }

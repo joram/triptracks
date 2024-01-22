@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Snowcat Trek LS Graphic Tee - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 44% Recycled Polyester. Exclusive of Decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/349609/snowcat-trek-ls-graphic-tee-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Prana Wensley Crew - Slim - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "77% Recycled Polyester, 23% Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/348355/wensley-crew-slim-mens"
 }

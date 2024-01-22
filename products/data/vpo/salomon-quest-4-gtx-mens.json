@@ -5,6 +5,39 @@
   ],
   "name": "Salomon Quest 4 GTX - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inlay sole",
+      "value": "Textile"
+    },
+    {
+      "key": "Lining",
+      "value": "Textile MCL"
+    },
+    {
+      "key": "Outsole",
+      "value": "Rubber"
+    },
+    {
+      "key": "Upper",
+      "value": "Leather"
+    },
+    {
+      "key": "Drop",
+      "value": "12 in mm"
+    },
+    {
+      "key": "Heel stack Height",
+      "value": "34 mm"
+    },
+    {
+      "key": "Forefoot Stack Height",
+      "value": "22 mm"
+    },
+    {
+      "key": "Weight",
+      "value": "655 g"
+    }
+  ],
   "url": "https://vpo.ca/product/334691/quest-4-gtx-mens"
 }

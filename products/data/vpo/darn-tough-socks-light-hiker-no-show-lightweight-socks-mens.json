@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Light Hiker No Show Lightweight Socks - Mens",
   "price_cents": 249500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Nylon, 41% Merino Wool, 3 % Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "No Show"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking shoes, trail runners, hiking sandals"
+    }
+  ],
   "url": "https://vpo.ca/product/337156/light-hiker-no-show-lightweight-socks-mens"
 }

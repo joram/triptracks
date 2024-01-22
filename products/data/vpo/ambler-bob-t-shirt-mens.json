@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  BOB T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/337747/bob-t-shirt-mens"
 }

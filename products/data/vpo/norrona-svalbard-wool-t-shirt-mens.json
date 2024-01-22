@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Svalbard Wool T-Shirt - Mens",
   "price_cents": 792000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "47% Merino Wool, 33% Recycled Polyester, 20% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "140 g"
+    }
+  ],
   "url": "https://vpo.ca/product/317950/svalbard-wool-t-shirt-mens"
 }

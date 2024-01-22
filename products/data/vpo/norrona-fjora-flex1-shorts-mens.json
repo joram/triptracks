@@ -5,6 +5,23 @@
   ],
   "name": "Norrona Fjora Flex1 Shorts - Mens",
   "price_cents": 1401000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "62% Recycled Nylon, 32% Nylon, 6% Elastane"
+    },
+    {
+      "key": "Secondary",
+      "value": "69% Recycled Nylon, 19% Recycled Polyester, 12% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "274 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "39 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/325930/fjora-flex1-shorts-mens"
 }

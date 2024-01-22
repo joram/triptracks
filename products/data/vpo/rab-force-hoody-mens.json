@@ -5,6 +5,23 @@
   ],
   "name": "Rab Force Hoody - Mens",
   "price_cents": 850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Polyester (56% Recycled)"
+    },
+    {
+      "key": "Weight",
+      "value": "164 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "70 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342686/force-hoody-mens"
 }

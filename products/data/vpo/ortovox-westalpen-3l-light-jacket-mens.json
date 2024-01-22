@@ -5,6 +5,31 @@
   ],
   "name": "Ortovox Westalpen 3L Light Jacket - Mens",
   "price_cents": 4480000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamid"
+    },
+    {
+      "key": "Inserts",
+      "value": "85% Virgin Wool (OWP-Merino), 15% Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "280 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327878/westalpen-3l-light-jacket-mens"
 }

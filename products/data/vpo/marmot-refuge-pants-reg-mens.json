@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Refuge Pants, Reg - Mens",
   "price_cents": 1650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "MemBrain \u00ae 2 L 100% Nylon Oxford 5.4 oz"
+    },
+    {
+      "key": "Weight",
+      "value": "737.2 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/330677/refuge-pants-reg-mens"
 }

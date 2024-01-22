@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Apollo Rain Jacket - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Ventia\u2122 2.5L, 100% Nylon, 70D Ripstop"
+    },
+    {
+      "key": "Weight (Large)",
+      "value": "340 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/315368/apollo-rain-jacket-mens"
 }

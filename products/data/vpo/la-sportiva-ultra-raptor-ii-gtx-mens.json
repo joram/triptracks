@@ -5,6 +5,47 @@
   ],
   "name": "La Sportiva Ultra Raptor II GTX - Mens",
   "price_cents": 2249500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "High-Weave AirMesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort with Gore-Flex\u00ae"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Midsole",
+      "value": "Injection-molded MEMlex"
+    },
+    {
+      "key": "Sole",
+      "value": "FriXion\u00ae XF 2.0 X-Axis\u2122 with Impact Brake System\u2122"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Midsole"
+    },
+    {
+      "key": "Drop",
+      "value": "12mm"
+    },
+    {
+      "key": "Last",
+      "value": "Tempo 2"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/347327/ultra-raptor-ii-gtx-mens"
 }

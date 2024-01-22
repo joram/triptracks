@@ -5,6 +5,19 @@
   ],
   "name": "Rab Ascendor AS Pants, Short - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Matrix\u2122 double weave outer fabric with soft brushed back and fluorocarbon-free DWR - 207 g"
+    },
+    {
+      "key": "Weight",
+      "value": "449 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/348913/ascendor-as-pants-short-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "HanWag Lhasa II, Wide - Mens",
   "price_cents": 4900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Tibetan yak leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Chrome-free leather"
+    },
+    {
+      "key": "Outer Sole",
+      "value": "Vibram\u00ae AW Integral"
+    },
+    {
+      "key": "Weight (Pair)",
+      "value": "1520 g"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    }
+  ],
   "url": "https://vpo.ca/product/318855/lhasa-ii-wide-mens"
 }

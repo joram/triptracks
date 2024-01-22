@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Cascade Leggings - AOP - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Flex 200 - 81% Merino Wool, 12% Nylon, 7% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/338964/cascade-leggings-aop-mens"
 }

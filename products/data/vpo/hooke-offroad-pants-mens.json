@@ -5,6 +5,11 @@
   ],
   "name": "Hooke Offroad Pants - Mens",
   "price_cents": 1649900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "65% Recycled Polyester, \u00a035% Cotton Canvas"
+    }
+  ],
   "url": "https://vpo.ca/product/346116/offroad-pants-mens"
 }

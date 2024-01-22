@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox Swisswool Piz Cartas Vest - Mens",
   "price_cents": 1999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Pertex\u00ae Quantum"
+    },
+    {
+      "key": "Padding",
+      "value": "88% Virgin Wool (SwissWool), 12% Polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "Pertex\u00ae Quantum"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "286 g"
+    }
+  ],
   "url": "https://vpo.ca/product/326787/swisswool-piz-cartas-vest-mens"
 }

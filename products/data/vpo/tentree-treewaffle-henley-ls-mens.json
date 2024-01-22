@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeWaffle Henley LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "56% Organic Cotton, 41% Tencel\u2122 Lyocell, 3% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/332404/treewaffle-henley-ls-mens"
 }

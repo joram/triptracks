@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Falketind Down750 Hood - Mens",
   "price_cents": 4399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "20D 100% recycled nylon"
+    },
+    {
+      "key": "Secondary",
+      "value": "45D 100% recycled nylon"
+    },
+    {
+      "key": "Down",
+      "value": "Down 750\u00a0FP with\u00a0RDS 2.0"
+    },
+    {
+      "key": "Weight",
+      "value": "444 g"
+    },
+    {
+      "key": "Down Weight",
+      "value": "100 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328267/falketind-down750-hood-mens"
 }

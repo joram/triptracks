@@ -5,6 +5,19 @@
   ],
   "name": "Rab Downpour Plus 2.0 Jacket - Mens",
   "price_cents": 2950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Recycled 40D polyamide 2.5 L with PU membrane"
+    },
+    {
+      "key": "Weight",
+      "value": "375 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "30.7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333251/downpour-plus-20-jacket-mens"
 }

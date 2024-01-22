@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals PURE Tree SS T-Shirt, Pima Cotton - Mens",
   "price_cents": 279700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348055/pure-tree-ss-t-shirt-pima-cotton-mens"
 }

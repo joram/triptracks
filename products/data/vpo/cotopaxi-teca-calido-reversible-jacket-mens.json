@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Teca Calido Reversible Jacket - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell/Lining",
+      "value": "Repurposed polyester taffeta with DWR finish and 600 mm PU backer"
+    }
+  ],
   "url": "https://vpo.ca/product/340375/teca-calido-reversible-jacket-mens"
 }

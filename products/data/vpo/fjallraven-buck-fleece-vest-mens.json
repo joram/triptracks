@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Buck Fleece Vest - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Reinforcements",
+      "value": "G-1000\u00ae Original 65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "470 g"
+    },
+    {
+      "key": "Back length",
+      "value": "74 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/313339/buck-fleece-vest-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Microdini 1/2 Zip Pullover - Mens",
   "price_cents": 954000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "5.7-oz 100% recycled polyester velOur lightweight fleece"
+    },
+    {
+      "key": "Collar and pocket",
+      "value": "1.2-oz 100% recycled nylon ripstop with a PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Weight",
+      "value": "284 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339762/microdini-12-zip-pullover-mens"
 }

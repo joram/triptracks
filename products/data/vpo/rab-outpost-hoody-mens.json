@@ -5,6 +5,27 @@
   ],
   "name": "Rab Outpost Hoody - Mens",
   "price_cents": 1900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "100% Polyester Second"
+    },
+    {
+      "key": "Secondary Fabric",
+      "value": "Matrix\u2122 double weave stretch fabric overlay for added protection (182 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "75 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "768 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349164/outpost-hoody-mens"
 }

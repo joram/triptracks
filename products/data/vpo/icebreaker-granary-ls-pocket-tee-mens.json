@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Granary LS Pocket Tee - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "213 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339978/granary-ls-pocket-tee-mens"
 }

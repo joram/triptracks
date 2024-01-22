@@ -5,6 +5,27 @@
   ],
   "name": "Tecnica  Plasma Mid GTX - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.6 mm Suede Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-TexR Extended Comfort"
+    },
+    {
+      "key": "Outsole",
+      "value": "VibramR Plasma with Megagrip\u2122 compound"
+    },
+    {
+      "key": "Midsole",
+      "value": "Agile system; Dual Density EVA plus TPU shank"
+    },
+    {
+      "key": "Footbed",
+      "value": "C.A.S. Customizable \u2013 Hiking"
+    }
+  ],
   "url": "https://vpo.ca/product/337284/plasma-mid-gtx-mens"
 }

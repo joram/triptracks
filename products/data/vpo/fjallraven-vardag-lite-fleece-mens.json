@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Vardag Lite Fleece - Mens",
   "price_cents": 1550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "313 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339950/vardag-lite-fleece-mens"
 }

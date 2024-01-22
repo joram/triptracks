@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Hike+ Crew Socks - Heavy Cushion - Mens",
   "price_cents": 264000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "66% Merino Wool, 32% Nylon, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/328670/hike-crew-socks-heavy-cushion-mens"
 }

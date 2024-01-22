@@ -5,6 +5,11 @@
   ],
   "name": "Vuori Echo Insulated Jacket - Mens",
   "price_cents": 1960000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348610/echo-insulated-jacket-mens"
 }

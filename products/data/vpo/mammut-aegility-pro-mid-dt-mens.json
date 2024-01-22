@@ -5,6 +5,47 @@
   ],
   "name": "Mammut Aegility Pro Mid DT - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Dry-Technology"
+    },
+    {
+      "key": "Soles",
+      "value": "High rebound EVA wedge"
+    },
+    {
+      "key": "Weight (UK 8.5)",
+      "value": "390 g"
+    },
+    {
+      "key": "Flex index",
+      "value": "A4"
+    },
+    {
+      "key": "Heel drop",
+      "value": "8 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "Speed"
+    },
+    {
+      "key": "Last index",
+      "value": "multifunction"
+    },
+    {
+      "key": "Easy Entry System",
+      "value": "Easy to put on and take off shoe. Can be operating while wearing thick gloves"
+    },
+    {
+      "key": "Speed Lace System",
+      "value": "Efficient, precise speed lace system. Elastic loops hold laces in lace zone"
+    },
+    {
+      "key": "Mammut DRYtechnology",
+      "value": "10.000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/343289/aegility-pro-mid-dt-mens"
 }

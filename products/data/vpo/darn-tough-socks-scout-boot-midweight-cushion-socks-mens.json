@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Scout Boot Midweight Cushion Socks - Mens",
   "price_cents": 379500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "65% Merino Wool, 33% Nylon, 2% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, backpacking boots, walking boots"
+    }
+  ],
   "url": "https://vpo.ca/product/331666/scout-boot-midweight-cushion-socks-mens"
 }

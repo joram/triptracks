@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aegility FL LS - Mens",
   "price_cents": 760000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Lightweight Polyester Knit - 82% Polyester, 18% Polypropylene"
+    },
+    {
+      "key": "Weight",
+      "value": "132 g"
+    },
+    {
+      "key": "Back length",
+      "value": "29.5 in"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/326897/aegility-fl-ls-mens"
 }

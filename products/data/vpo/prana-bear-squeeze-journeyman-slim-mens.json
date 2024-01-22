@@ -5,6 +5,15 @@
   ],
   "name": "Prana Bear Squeeze Journeyman - Slim - Mens",
   "price_cents": 391600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/340087/bear-squeeze-journeyman-slim-mens"
 }

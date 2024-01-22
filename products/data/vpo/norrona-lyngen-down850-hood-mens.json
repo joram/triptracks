@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Lyngen Down850 Hood - Mens",
   "price_cents": 5800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "10D 100% recycled nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "Down 850\u00a0FP with\u00a0RDS 2.0"
+    },
+    {
+      "key": "Down Weight",
+      "value": "175 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "382 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328271/lyngen-down850-hood-mens"
 }

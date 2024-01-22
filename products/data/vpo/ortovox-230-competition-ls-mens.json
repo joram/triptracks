@@ -5,6 +5,11 @@
   ],
   "name": "Ortovox 230 Competition LS - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "57% Virgin Merino Wool, 41% polyamide, 2% elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/340775/230-competition-ls-mens"
 }

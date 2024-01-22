@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Yukon - Mens",
   "price_cents": 5000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Fuora"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather"
+    },
+    {
+      "key": "Weight",
+      "value": "3 lbs 9 oz"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    }
+  ],
   "url": "https://vpo.ca/product/281367/yukon-mens"
 }

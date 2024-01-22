@@ -5,6 +5,11 @@
   ],
   "name": "tentree Colville Quilted Shacket - Mens",
   "price_cents": 1080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Recycled Polyester, 45% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/339068/colville-quilted-shacket-mens"
 }

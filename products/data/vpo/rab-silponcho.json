@@ -5,6 +5,19 @@
   ],
   "name": "Rab SilPoncho",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "283 g"
+    },
+    {
+      "key": "Packed size",
+      "value": "8 x 15 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/300708/silponcho"
 }

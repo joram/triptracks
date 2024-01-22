@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Polartec High Loft Pants, Reg - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae High Loft\u00ae Fleece - 64% Recycled Polyester, 33% Polyester, 3% Elastane"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "12.77 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/331092/polartec-high-loft-pants-reg-mens"
 }

@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Lhasa II - Mens",
   "price_cents": 4900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Yak leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae AW Integral"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather (chromium-free)"
+    },
+    {
+      "key": "Weight (Pair)",
+      "value": "1520 g"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/318853/lhasa-ii-mens"
 }

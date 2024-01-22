@@ -5,6 +5,23 @@
   ],
   "name": "Devold Nibba Merino Jacket - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inside",
+      "value": "210 g"
+    },
+    {
+      "key": "Outside",
+      "value": "210 g"
+    },
+    {
+      "key": "Outside",
+      "value": "17.5 micron"
+    },
+    {
+      "key": "Inside",
+      "value": "20.5 micron"
+    }
+  ],
   "url": "https://vpo.ca/product/344910/nibba-merino-jacket-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Bedford Vest - Mens",
   "price_cents": 2700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "NanoPro\u2122 94% Polyester, 6% Elastane Plain weave"
+    },
+    {
+      "key": "Insulation",
+      "value": "700 Fill Down"
+    },
+    {
+      "key": "Weight",
+      "value": "869 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336612/bedford-vest-mens"
 }

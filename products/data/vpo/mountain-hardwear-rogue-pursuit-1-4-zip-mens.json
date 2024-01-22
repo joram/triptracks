@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Rogue Pursuit 1/4 Zip - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Weight",
+      "value": "160 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337615/rogue-pursuit-14-zip-mens"
 }

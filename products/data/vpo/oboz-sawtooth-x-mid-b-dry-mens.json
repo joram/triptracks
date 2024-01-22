@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Sawtooth X Mid B-Dry - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Oiled nubuck, Cordura Fabric mesh, TPU heel counter, B-DRY Waterproof Membrane, 100% RPET Repreve Laces, 100% RPET Repreve Webbing, Micro-injected PU window underlay"
+    },
+    {
+      "key": "Insole",
+      "value": "O FIT Insole"
+    },
+    {
+      "key": "Midsole",
+      "value": "Rubber-blended adaptive foam, TPU Shank, Heel puck"
+    },
+    {
+      "key": "Outsole",
+      "value": "Trail Tread"
+    },
+    {
+      "key": "Construction",
+      "value": "Strobel-Lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Regular"
+    },
+    {
+      "key": "Volume",
+      "value": "Medium"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "8mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "19.4 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/343116/sawtooth-x-mid-b-dry-mens"
 }

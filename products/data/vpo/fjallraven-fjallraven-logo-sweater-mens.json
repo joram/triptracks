@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Fjallraven Logo Sweater - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "490 g"
+    },
+    {
+      "key": "Back length",
+      "value": "69 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/337171/fjallraven-logo-sweater-mens"
 }

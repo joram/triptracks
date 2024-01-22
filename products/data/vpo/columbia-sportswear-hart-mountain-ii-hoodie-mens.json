@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Hart Mountain II Hoodie - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Cotton, 40% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/350310/hart-mountain-ii-hoodie-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Winter Alpine Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "90D x 250D Nylon Stretch Double Weave with DWR finish (310 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "620 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/316783/winter-alpine-pants-mens"
 }

@@ -1,10 +1,27 @@
 {
-  "description": "The Albula IN Hooded is a sustainably manufactured insulated jacket. A PFC-free DWR coating and recycled Ecodown\u00ae synthetic fiber filling all reduce the jacket\u2019s carbon footprint through environmentally conscious manufacturing. The Albula benefits from an excellent heat/weight ratio and its easy-care material.",
+  "description": "The Albula is among their most sustainable insulated jackets. It is made almost entirely of recycled materials: outer fabric made of recycled polyester, lining made of recycled polyamide. The Thermore\u00ae Ecodown\u00ae synthetic fiber filling is made from recycled PET bottles, making it the vegan, wash-and-wear alternative to down. It boasts excellent fill power as well as a high thermal rating even in damp conditions. The Albula is both comfortable and versatile. Its excellent warmth-to-weight ratio makes it great for hiking or everyday wear. On cold days, the loose cut makes it easy to combine with other garments and wear over a thick mid-layer.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/330823.jpg"
+    "https://vpo.ca/images/product/large/350218.jpg"
   ],
   "name": "Mammut Albula IN Hooded Jacket - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/330823/albula-in-hooded-jacket-mens"
+  "price_cents": 2899500,
+  "specs": [
+    {
+      "key": "Filling",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Main material",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "476 g"
+    }
+  ],
+  "url": "https://vpo.ca/product/350218/albula-in-hooded-jacket-mens"
 }

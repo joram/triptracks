@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Centerport II Jacket - Big - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 Rebound Stretch 100% Polyester."
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Insulation",
+      "value": "80g Microtemp XF II 85% Recycled Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "60g Microtemp XF II 85% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/349912/centerport-ii-jacket-big-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Marmot WarmCube Active Novus - Mens",
   "price_cents": 3040000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lbs 2 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347982/warmcube-active-novus-mens"
 }

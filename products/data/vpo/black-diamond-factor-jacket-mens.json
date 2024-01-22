@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Factor Jacket - Mens",
   "price_cents": 1749500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "460 g"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347743/factor-jacket-mens"
 }

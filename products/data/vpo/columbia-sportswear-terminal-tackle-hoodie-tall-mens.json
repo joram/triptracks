@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Terminal Tackle Hoodie, Tall - Mens",
   "price_cents": 650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "34 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349642/terminal-tackle-hoodie-tall-mens"
 }

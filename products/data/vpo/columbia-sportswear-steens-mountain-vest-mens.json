@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Steens Mountain Vest - Mens",
   "price_cents": 449500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyester MTR filament fleece 250g, MTR Fleece 100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular*"
+    },
+    {
+      "key": "Length",
+      "value": "27.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349658/steens-mountain-vest-mens"
 }

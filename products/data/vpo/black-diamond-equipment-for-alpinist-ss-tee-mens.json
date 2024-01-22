@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Equipment for Alpinist SS Tee - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton Stretch Jersey - 96% Organic Cotton, 4% Elastane, 160 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    }
+  ],
   "url": "https://vpo.ca/product/297626/equipment-for-alpinist-ss-tee-mens"
 }

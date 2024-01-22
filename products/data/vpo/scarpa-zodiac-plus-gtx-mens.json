@@ -5,6 +5,39 @@
   ],
   "name": "Scarpa Zodiac Plus GTX - Mens",
   "price_cents": 3352000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.8mm Suede Perwanger"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Pro-Fiber 20"
+    },
+    {
+      "key": "Midsole",
+      "value": "PU + 3D EVA-MP"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Drumlin"
+    },
+    {
+      "key": "Last",
+      "value": "BZH"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "545 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Italy"
+    }
+  ],
   "url": "https://vpo.ca/product/300888/zodiac-plus-gtx-mens"
 }

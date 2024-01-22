@@ -5,6 +5,39 @@
   ],
   "name": "Mammut Albula HS Pants, Long - Mens",
   "price_cents": 1759600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main 1",
+      "value": "Polyester edye 2,5 L - 100% Polyester"
+    },
+    {
+      "key": "Denier",
+      "value": "50D x 50D"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyurethane"
+    },
+    {
+      "key": "Length",
+      "value": "Long"
+    },
+    {
+      "key": "Weight",
+      "value": "238 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Water column",
+      "value": "10000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "10.000 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333062/albula-hs-pants-long-mens"
 }

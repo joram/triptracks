@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Aconcagua ML Hooded Jacket - Mens",
   "price_cents": 2490000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "\u00a0Main Fabric 1 (B2B)",
+      "value": "polartec\u00ae power stretch pro\u00ae"
+    },
+    {
+      "key": "\u00a0Lining 1 (B2B)",
+      "value": "recycled polyester mesh"
+    },
+    {
+      "key": "\u00a0Main Fabric 2 (B2B)",
+      "value": "polartec\u00ae power stretch pro\u00ae"
+    }
+  ],
   "url": "https://vpo.ca/product/350209/aconcagua-ml-hooded-jacket-mens"
 }

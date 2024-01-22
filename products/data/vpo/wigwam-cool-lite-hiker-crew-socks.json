@@ -5,6 +5,11 @@
   ],
   "name": "Wigwam Cool-Lite Hiker Crew Socks",
   "price_cents": 229500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "37% Polyester, 33% X2O\u00ae Acrylic, 23% Stretch Nylon, 6% Tencel\u00ae, 1% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/363826/cool-lite-hiker-crew-socks"
 }

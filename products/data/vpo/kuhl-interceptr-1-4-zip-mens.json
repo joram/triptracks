@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Interceptr 1/4 Zip - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Alfpaca\u2122",
+      "value": "78% Acrylic, 22% Polyester\u00a0- 305 g"
+    },
+    {
+      "key": "Kashmira\u2122",
+      "value": "70% Acrylic, 30% Polyester\u00a0- 210 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328912/interceptr-14-zip-mens"
 }

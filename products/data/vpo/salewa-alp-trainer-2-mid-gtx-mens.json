@@ -5,6 +5,35 @@
   ],
   "name": "Salewa Alp Trainer 2 Mid GTX - Mens",
   "price_cents": 3099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "3F System with Steel Cables, Protective rand, Stretch fabric, Suede 1.4-1.6 mm"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Mid Stiff - Nylon"
+    },
+    {
+      "key": "Footbed",
+      "value": "MFF+"
+    },
+    {
+      "key": "Midsole",
+      "value": "EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram Alpine Hiking"
+    },
+    {
+      "key": "Drop",
+      "value": "8 mm (Heel Stack Height 24 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/334178/alp-trainer-2-mid-gtx-mens"
 }

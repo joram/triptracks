@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Alpine Way Graphic Tee - Tall - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Cotton, 34% Polyester, 11% Rayon"
+    }
+  ],
   "url": "https://vpo.ca/product/346561/alpine-way-graphic-tee-tall-mens"
 }

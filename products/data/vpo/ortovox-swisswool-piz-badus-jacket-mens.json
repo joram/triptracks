@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Swisswool Piz Badus Jacket - Mens",
   "price_cents": 3199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Inserts",
+      "value": "64% Recycled polyester, 30% Virgin Merino Wool, 6% elastane"
+    },
+    {
+      "key": "Padding",
+      "value": "70% Swisswool, 30% polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    }
+  ],
   "url": "https://vpo.ca/product/340693/swisswool-piz-badus-jacket-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Sormland Tapered Trousers - Mens",
   "price_cents": 1439600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Silent Eco"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "370 g"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full Leg"
+    },
+    {
+      "key": "Fit / Waist",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Leg Ending",
+      "value": "Fixed Length"
+    }
+  ],
   "url": "https://vpo.ca/product/313641/sormland-tapered-trousers-mens"
 }

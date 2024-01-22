@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Central Classic SS Tee - Mens",
   "price_cents": 800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Merino Wool 50% Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348550/central-classic-ss-tee-mens"
 }

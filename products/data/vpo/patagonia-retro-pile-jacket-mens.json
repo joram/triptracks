@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Retro Pile Jacket - Mens",
   "price_cents": 1323000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "8.7-oz Polartec\u00ae 100% recycled polyester double-sided shearling fleece"
+    },
+    {
+      "key": "Pocket bags",
+      "value": "3.5-oz 100% recycled polyester warp-knit brushed mesh"
+    }
+  ],
   "url": "https://vpo.ca/product/323721/retro-pile-jacket-mens"
 }

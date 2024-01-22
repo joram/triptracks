@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Lava Canyon Jacket - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 coated 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "Comfy Jersey Lining 100% polyester"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, easy fit for comfortable range of motion"
+    }
+  ],
   "url": "https://vpo.ca/product/363909/lava-canyon-jacket-mens"
 }

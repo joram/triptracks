@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Microchill 2.0 Zip T - Mens",
   "price_cents": 559600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric Body",
+      "value": "Velous Micro\u2122 Fleece - 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/297927/microchill-20-zip-t-mens"
 }

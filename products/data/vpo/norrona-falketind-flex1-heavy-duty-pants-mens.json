@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Falketind Flex1 Heavy Duty Pants - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Nylon, 91% Recycled Nylon, 9% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "526 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "86 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/325927/falketind-flex1-heavy-duty-pants-mens"
 }

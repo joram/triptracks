@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Eiger Nordwand ML Hybrid Hooded Jacket - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining 1",
+      "value": "Polartec\u00ae Alpha\u00ae direct"
+    },
+    {
+      "key": "Filling",
+      "value": "Softshell with fleece backer"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "recycled polyester Pontetorto\u00ae Tecnostretch grid fleece"
+    },
+    {
+      "key": "Main Fabric 1",
+      "value": "Pertex\u00ae Quantum\u00ae Air stretch woven"
+    },
+    {
+      "key": "Weight",
+      "value": "254 g"
+    }
+  ],
   "url": "https://vpo.ca/product/363734/eiger-nordwand-ml-hybrid-hooded-jacket-mens"
 }

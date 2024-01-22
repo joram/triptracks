@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Light Cushion Striped Mid Crew Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Merino Wool, 30% Recycled Nylon, 12% Nylon, 3% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Mid Crew (6.5\")"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Light"
+    }
+  ],
   "url": "https://vpo.ca/product/339149/hike-light-cushion-striped-mid-crew-socks-mens"
 }

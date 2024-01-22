@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Northern Utilizer Jacket - Tall - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Textured Nylon Poplin 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester MTR filament fleece, 250g"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% polyester lightweight insulation, 40g"
+    },
+    {
+      "key": "Back Length",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347684/northern-utilizer-jacket-tall-mens"
 }

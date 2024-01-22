@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Ultra Super Soft Boxer Brief Fly, 5\" Inseam - Mens - 2 Pack",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "95% Viscose, 5% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/310401/ultra-super-soft-boxer-brief-fly-5-inseam-mens-2-pack"
 }

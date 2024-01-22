@@ -5,6 +5,23 @@
   ],
   "name": "Marmot PreCip Eco Pants, Short - Mens",
   "price_cents": 1300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122 Eco 100% Recycled Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "8 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    },
+    {
+      "key": "Waterproof",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/316439/precip-eco-pants-short-mens"
 }

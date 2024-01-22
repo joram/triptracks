@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Fleece Plus Anorak - Mens",
   "price_cents": 3750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer Inserts",
+      "value": "100 % Polyurethane"
+    },
+    {
+      "key": "Inner Inserts",
+      "value": "67 % Polyester + 26 % Virgin Wool + 7 % Elastane"
+    },
+    {
+      "key": "Pocket Lining",
+      "value": "72 % Polyester + 28 % Virgin Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/349412/fleece-plus-anorak-mens"
 }

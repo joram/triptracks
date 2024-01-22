@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Bergtagen Lite Eco-Shell Jacket - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Eco-Shell 3 L"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "375 g"
+    },
+    {
+      "key": "Water column",
+      "value": "20000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "30000 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325439/bergtagen-lite-eco-shell-jacket-mens"
 }

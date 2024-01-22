@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Aerobora LS - Mens",
   "price_cents": 900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester, Plain weave, 115g"
+    },
+    {
+      "key": "Weight",
+      "value": "9 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316243/aerobora-ls-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Chaco Z/Cloud - Mens",
   "price_cents": 909700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "15.06 oz"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/309431/zcloud-mens"
 }

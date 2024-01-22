@@ -5,6 +5,11 @@
   ],
   "name": "Roark Layover Trail Shorts,18\" Inseam - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Nylon, 40% Polyester, 8% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/347301/layover-trail-shorts18-inseam-mens"
 }

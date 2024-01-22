@@ -5,6 +5,27 @@
   ],
   "name": "Rab Conduit Hoody - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Thermic\u2122 G (160 g"
+    },
+    {
+      "key": "Second",
+      "value": "92% Recycled Polyester, 8% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "73 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "231 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349194/conduit-hoody-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Falketind Warmwool2 Stretch Zip Hood - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "76% Recycled Polyester, 18% Wool, 6% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "560 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325931/falketind-warmwool2-stretch-zip-hood-mens"
 }

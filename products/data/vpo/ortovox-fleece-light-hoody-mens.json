@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Fleece Light Hoody - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "67% Polyester, 26% Virgin Wool (Merino), 7% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "338 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/327883/fleece-light-hoody-mens"
 }

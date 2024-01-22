@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Fish Kingdom Pima Cotton T-Shirt - Mens",
   "price_cents": 272700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348059/valhalla-kingdom-fish-kingdom-pima-cotton-t-shirt-mens"
 }

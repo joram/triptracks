@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear MHW Logo LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Lightweight Jersey Logowear - 100% cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "6 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342897/mhw-logo-ls-mens"
 }

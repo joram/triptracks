@@ -5,6 +5,43 @@
   ],
   "name": "Scarpa Kailash Plus GTX - Mens",
   "price_cents": 3990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.8mm Nubuck Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Comfort-Flex"
+    },
+    {
+      "key": "Midsole",
+      "value": "Light PU"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Biometric"
+    },
+    {
+      "key": "Last",
+      "value": "TM"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "623 g"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Origin",
+      "value": "Italy"
+    }
+  ],
   "url": "https://vpo.ca/product/307508/kailash-plus-gtx-mens"
 }

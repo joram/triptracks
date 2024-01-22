@@ -5,6 +5,23 @@
   ],
   "name": "Keen Howser III Slide - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "8.11oz"
+    },
+    {
+      "key": "Slips On, Stays On",
+      "value": "A quick-cinch bungee closure creates a more secure fit around the foot"
+    },
+    {
+      "key": "Sturdy Sole",
+      "value": "Durable, higher-traction rubber outsole made for outside"
+    },
+    {
+      "key": "Famous Comfort Fit",
+      "value": "Our iconic KEEN fit with generous space across your forefoot for toes to spread out"
+    }
+  ],
   "url": "https://vpo.ca/product/347511/howser-iii-slide-mens"
 }

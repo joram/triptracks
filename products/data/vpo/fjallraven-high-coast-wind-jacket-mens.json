@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven High Coast Wind Jacket - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "HC-Lite"
+    },
+    {
+      "key": "Weight",
+      "value": "345 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/325481/high-coast-wind-jacket-mens"
 }

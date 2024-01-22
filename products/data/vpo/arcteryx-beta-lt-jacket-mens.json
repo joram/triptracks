@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Beta LT Jacket - Mens",
   "price_cents": 5500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "N40d 3L Gore-Tex fabric with tricot backer technology"
+    },
+    {
+      "key": "Weight",
+      "value": "460 g"
+    },
+    {
+      "key": "Centre back length",
+      "value": "76 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/334324/beta-lt-jacket-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Solution 150 Merino Baselayer Crew - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Merino Wool Blend Single Jersey\u00a0-\u00a078% Merino Wool, 22% Polyester\u00a0- 150 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "190 g"
+    }
+  ],
   "url": "https://vpo.ca/product/324308/solution-150-merino-baselayer-crew-mens"
 }

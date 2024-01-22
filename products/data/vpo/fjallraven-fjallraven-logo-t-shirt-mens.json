@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Fjallraven Logo T-Shirt - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% cotton, 40% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/325455/fjallraven-logo-t-shirt-mens"
 }

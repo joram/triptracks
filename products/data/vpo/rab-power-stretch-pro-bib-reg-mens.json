@@ -5,6 +5,15 @@
   ],
   "name": "Rab Power Stretch Pro Bib, Reg - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Power Stretch\u00ae Pro"
+    },
+    {
+      "key": "Weight",
+      "value": "337 g"
+    }
+  ],
   "url": "https://vpo.ca/product/300693/power-stretch-pro-bib-reg-mens"
 }

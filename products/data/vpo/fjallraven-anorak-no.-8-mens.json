@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Anorak No. 8 - Mens",
   "price_cents": 6500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Eco",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "G-1000\u00ae HeavyDuty",
+      "value": "65% polyester, 35% cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/313311/anorak-no-8-mens"
 }

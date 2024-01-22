@@ -5,6 +5,11 @@
   ],
   "name": "Duer Stay Dry Performance Denim Jean Jacket - Mens",
   "price_cents": 1590000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Cotton, 28% Coolmax\u00ae All Season Polyester, 2% LYCRA\u00ae Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/349227/stay-dry-performance-denim-jean-jacket-mens"
 }

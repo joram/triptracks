@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Kipuka Hulu - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Pebbled nubuck full grain leather upper with genuine sheepskin shearling lining and elastic gore panels for customized \ufb01t and comfort"
+    },
+    {
+      "key": "Foot Bed",
+      "value": "Dual-density PU footbed with a gel insert and a wool blend footbed cover. Removable and washable"
+    },
+    {
+      "key": "Outsole",
+      "value": "Cross hatched and substantive slipper outsole design, toe and heel bumpers with non-marking rubber outsole"
+    }
+  ],
   "url": "https://vpo.ca/product/338450/kipuka-hulu-mens"
 }

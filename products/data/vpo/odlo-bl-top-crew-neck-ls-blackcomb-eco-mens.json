@@ -5,6 +5,15 @@
   ],
   "name": "Odlo BL Top Crew Neck LS Blackcomb Eco - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Slim fit",
+      "value": "slim fit garments are cut close to the body. For a looser fit, they suggest you size up"
+    },
+    {
+      "key": "Temperature control system",
+      "value": "Highly functional sportswear with excellent thermal insulation that keeps the body warm when it's cold outside. With the fabric's effective moisture wicking properties, the skin is kept dry and warm. Warm thermal quality is ideal for all winter activities"
+    }
+  ],
   "url": "https://vpo.ca/product/342819/bl-top-crew-neck-ls-blackcomb-eco-mens"
 }

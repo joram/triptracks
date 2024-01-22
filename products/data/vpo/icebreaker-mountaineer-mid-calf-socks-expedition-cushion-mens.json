@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Mountaineer Mid Calf Socks - Expedition Cushion - Mens",
   "price_cents": 312000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "80% Merino Wool, 19% Nylon, 1% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/283874/mountaineer-mid-calf-socks-expedition-cushion-mens"
 }

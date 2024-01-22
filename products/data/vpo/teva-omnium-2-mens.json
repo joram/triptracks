@@ -5,6 +5,15 @@
   ],
   "name": "Teva Omnium 2 - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "13.25 oz (Size 9)"
+    },
+    {
+      "key": "Best for",
+      "value": "Day hikes"
+    }
+  ],
   "url": "https://vpo.ca/product/327933/omnium-2-mens"
 }

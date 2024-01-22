@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Columbia Trek Crew - Big - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Back Length",
+      "value": "31.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346856/columbia-trek-crew-big-mens"
 }

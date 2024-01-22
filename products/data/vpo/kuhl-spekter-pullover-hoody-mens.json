@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Spekter Pullover Hoody - Mens",
   "price_cents": 1850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "59% Polyester, 25% Cotton, 12% Lyocell, 4% Elastane - 270 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337780/spekter-pullover-hoody-mens"
 }

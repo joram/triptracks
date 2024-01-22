@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Runbold Light Pants, Short - Mens",
   "price_cents": 1190000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Polyamide-Elasthane Woven - 82% Polyamide, 18% Elasthan"
+    },
+    {
+      "key": "Lining",
+      "value": "Recycled Polyester Mesh - 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "251 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333095/runbold-light-pants-short-mens"
 }

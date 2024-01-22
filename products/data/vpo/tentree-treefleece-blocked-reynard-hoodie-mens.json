@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeFleece Blocked Reynard Hoodie - Mens",
   "price_cents": 784000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Organic Cotton, 26% Recycled Polyester, 19% Tencel\u2122 Lyocell"
+    }
+  ],
   "url": "https://vpo.ca/product/328292/treefleece-blocked-reynard-hoodie-mens"
 }

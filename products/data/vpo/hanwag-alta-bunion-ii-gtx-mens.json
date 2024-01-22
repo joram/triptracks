@@ -5,6 +5,19 @@
   ],
   "name": "HanWag Alta Bunion II GTX - Mens",
   "price_cents": 4000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Nubuck, Suede Fabric"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae"
+    },
+    {
+      "key": "Weight",
+      "value": "1250 g (pair)"
+    }
+  ],
   "url": "https://vpo.ca/product/337251/alta-bunion-ii-gtx-mens"
 }

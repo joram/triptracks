@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox 185 Merino Way To Powder T-Shirt - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Virgin Wool (OWP-Merino)"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "178 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340823/185-merino-way-to-powder-t-shirt-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Prana Mojo Shorts, 10\" Inseam - Mens",
   "price_cents": 790000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/150742/mojo-shorts-10-inseam-mens"
 }

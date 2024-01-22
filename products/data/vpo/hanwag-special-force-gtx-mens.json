@@ -5,6 +5,19 @@
   ],
   "name": "HanWag Special Force GTX - Mens",
   "price_cents": 4300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Smooth full grain leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae laminate"
+    },
+    {
+      "key": "Outer Sole",
+      "value": "Vibram\u00ae Fuora"
+    }
+  ],
   "url": "https://vpo.ca/product/281537/special-force-gtx-mens"
 }

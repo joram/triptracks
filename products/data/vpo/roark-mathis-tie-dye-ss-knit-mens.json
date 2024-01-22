@@ -5,6 +5,11 @@
   ],
   "name": "Roark Mathis Tie Dye SS Knit - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% Polyester, 15% Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/347290/mathis-tie-dye-ss-knit-mens"
 }

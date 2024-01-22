@@ -5,6 +5,43 @@
   ],
   "name": "Fjallraven Ovik Heavy Flannel Shirt - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "430 g"
+    },
+    {
+      "key": "Back length",
+      "value": "80 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed"
+    },
+    {
+      "key": "Sleeve type",
+      "value": "Long sleeve"
+    },
+    {
+      "key": "Closing",
+      "value": "Buttons"
+    },
+    {
+      "key": "Clothing layer",
+      "value": "First layer, Mid layer"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "2"
+    },
+    {
+      "key": "Pockets",
+      "value": "Chest pocket(s)"
+    }
+  ],
   "url": "https://vpo.ca/product/323897/ovik-heavy-flannel-shirt-mens"
 }

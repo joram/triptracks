@@ -5,6 +5,19 @@
   ],
   "name": "Darn Tough Socks Hiker Micro Crew Midweight Cushion Socks - Mens",
   "price_cents": 329500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "61% Merino Wool, 36% Nylon, 3% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    }
+  ],
   "url": "https://vpo.ca/product/321771/hiker-micro-crew-midweight-cushion-socks-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Rab Talus Active Shorts, 7\" Inseam - Mens",
   "price_cents": 900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Motiv\u2122 Aero Single Jersey Fabric with Subtle Mesh Structure (85 g"
+    },
+    {
+      "key": "Main",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester (56% Recycled Polyester, 44% Conventional)"
+    },
+    {
+      "key": "Weight",
+      "value": "99 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342742/talus-active-shorts-7-inseam-mens"
 }

@@ -5,6 +5,35 @@
   ],
   "name": "Mammut Rime Light IN Flex Hooded Jacket - Mens",
   "price_cents": 3250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Pertex\u00ae Quantum Air - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric 1",
+      "value": "Polyamid woven downproof - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Polartec Polyester Knit - 89% Polyester, 11% Spandex"
+    },
+    {
+      "key": "Filling",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Center Back length",
+      "value": "28.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/338248/rime-light-in-flex-hooded-jacket-mens"
 }

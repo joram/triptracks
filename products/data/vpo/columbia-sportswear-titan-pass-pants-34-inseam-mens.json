@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Titan Pass Pants, 34\" Inseam - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "90% Recycled Polyester, 10% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Active"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347674/titan-pass-pants-34-inseam-mens"
 }

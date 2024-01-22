@@ -5,6 +5,11 @@
   ],
   "name": "Ortovox 150 Essential Trunks - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "48% Virgin Wool (OWP Merino), 30% Lyocell (Tencel\u2122), 14% Polyamide, 8% Elastane (LYCRA\u00ae)"
+    }
+  ],
   "url": "https://vpo.ca/product/349359/150-essential-trunks-mens"
 }

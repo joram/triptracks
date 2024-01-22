@@ -5,6 +5,11 @@
   ],
   "name": "tentree Sasquatch Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Heather Fleece - 60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/339818/sasquatch-hoodie-mens"
 }

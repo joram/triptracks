@@ -5,6 +5,43 @@
   ],
   "name": "HanWag Sirius II GTX - Mens",
   "price_cents": 6000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Suede"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Alpin Light"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1940 g"
+    },
+    {
+      "key": "Crampon suitability",
+      "value": "Step-in"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Mountaineering"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    },
+    {
+      "key": "Robust upper",
+      "value": "Suede, 3\u20133.2 mm thick"
+    }
+  ],
   "url": "https://vpo.ca/product/296808/sirius-ii-gtx-mens"
 }

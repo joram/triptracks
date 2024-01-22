@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Fleet Pants - Mens",
   "price_cents": 1720000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "79% Recycled Polyamide, 21% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/335504/fleet-pants-mens"
 }

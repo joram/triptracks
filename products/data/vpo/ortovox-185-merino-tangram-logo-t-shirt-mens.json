@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox 185 Merino Tangram Logo T-Shirt - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100 % virgin wool (Merino)"
+    },
+    {
+      "key": "Weight",
+      "value": "178 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349360/185-merino-tangram-logo-t-shirt-mens"
 }

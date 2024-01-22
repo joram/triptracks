@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven High Coast Hike Trousers, Reg - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "84% polyamide, 16% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g (Size 48)"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/318524/high-coast-hike-trousers-reg-mens"
 }

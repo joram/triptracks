@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Watertight II Jacket, Tall - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 coated 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "Fine Mesh 100% polyester"
+    },
+    {
+      "key": "Back Length",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347353/watertight-ii-jacket-tall-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Rab Phantom Pull-On - Mens",
   "price_cents": 3000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyamide with polyurethane coating - 7D Pertex\u00ae Shield 2.5L fabric with stretch (40 g"
+    },
+    {
+      "key": "Weight",
+      "value": "86 g"
+    },
+    {
+      "key": "Packed Size",
+      "value": "8 cm x 10 cm"
+    },
+    {
+      "key": "Centre back length (Size 10)",
+      "value": "68 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/325556/phantom-pull-on-mens"
 }

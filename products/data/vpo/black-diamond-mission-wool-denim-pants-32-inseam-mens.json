@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Mission Wool Denim Pants, 32\" Inseam - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Wool Blend Stretch Denim with DWR Finish - 83% Cotton, 16% Wool, 1% Elastane, 432gsm"
+    },
+    {
+      "key": "Leg Opening",
+      "value": "15 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/337719/mission-wool-denim-pants-32-inseam-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Outdoor Research Helium Gaiters - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper Leg Panel",
+      "value": "Pertex\u00ae Shield Diamond Fuse 2.5L, bluesign\u00ae approved 100% nylon, 30D ripstop upper leg panel, 100% nylon 420D Pack cloth with PU Coating Foot Panel"
+    },
+    {
+      "key": "Fit",
+      "value": "Low Profile Hiking Boots &amp; Trail Shoes"
+    },
+    {
+      "key": "Weight",
+      "value": "139 g"
+    },
+    {
+      "key": "Top Edge Circumference",
+      "value": "17 in (S)"
+    },
+    {
+      "key": "Gaiter Height at Back",
+      "value": "15in (S)"
+    }
+  ],
   "url": "https://vpo.ca/product/332430/helium-gaiters-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Tashi - Mens",
   "price_cents": 6300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Yak leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Chrome-free leather"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Tessin"
+    },
+    {
+      "key": "Weight",
+      "value": "1520 g"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike, Traditional"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/287366/tashi-mens"
 }

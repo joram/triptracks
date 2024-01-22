@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Lake 22 Down Hooded Jacket - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyester, 650 Fill Power Down Insulation, RDS Certified"
+    },
+    {
+      "key": "Insulation",
+      "value": "GDD 650FP 80"
+    },
+    {
+      "key": "Fit",
+      "value": "Active*"
+    },
+    {
+      "key": "Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350472/lake-22-down-hooded-jacket-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Rab Graviton Hoody - Mens",
   "price_cents": 1800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Thermic\u2122 G (225 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "410 g"
+    },
+    {
+      "key": "Centre back length (Size M)",
+      "value": "70 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/349126/graviton-hoody-mens"
 }

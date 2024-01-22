@@ -5,6 +5,23 @@
   ],
   "name": "Rab Stance Mountain Peak Tee - Mens",
   "price_cents": 420000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Organic Cotton Jersey (180g"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Centre back length",
+      "value": "68 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342820/stance-mountain-peak-tee-mens"
 }

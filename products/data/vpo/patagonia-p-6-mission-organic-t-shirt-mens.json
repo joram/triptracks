@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia P-6 Mission Organic T-Shirt - Mens",
   "price_cents": 385000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4.6 oz 100% organic cotton jersey"
+    },
+    {
+      "key": "Weight",
+      "value": "153 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337217/p-6-mission-organic-t-shirt-mens"
 }

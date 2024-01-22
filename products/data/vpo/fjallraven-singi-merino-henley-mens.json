@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Singi Merino Henley - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "91% Merino Wool, 9% polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "251 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323887/singi-merino-henley-mens"
 }

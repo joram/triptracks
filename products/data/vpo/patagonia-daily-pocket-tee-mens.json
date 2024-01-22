@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Daily Pocket Tee - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "4.6 oz 100% Regenerative Organic Certified\u2122 cotton* jersey *Pending certification"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/339807/daily-pocket-tee-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Taiss SO Pants, Long - Mens",
   "price_cents": 2350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "robust double weave fabric with four-way stretch - 93% Polyamide, 7% Spandex"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "472 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343420/taiss-so-pants-long-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Black Diamond Flatiron Shorts - Mens",
   "price_cents": 849500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Light Weight Stretch Nylon with PFC-Free DWR Finish",
+      "value": "88% Nylon, 12% Elastane, 67gsm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/341526/flatiron-shorts-mens"
 }

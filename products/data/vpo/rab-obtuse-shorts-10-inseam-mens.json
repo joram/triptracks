@@ -5,6 +5,23 @@
   ],
   "name": "Rab Obtuse Shorts, 10\" Inseam - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "93% polyamide, 7% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "158 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342740/obtuse-shorts-10-inseam-mens"
 }

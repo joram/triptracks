@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Ski+ Over The Calf Socks - Light Cushion - Ski Heritage - Mens",
   "price_cents": 350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "55% Wool, 42% Nylon, 3% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "170 g"
+    },
+    {
+      "key": "Height",
+      "value": "Over The Calf"
+    }
+  ],
   "url": "https://vpo.ca/product/328712/ski-over-the-calf-socks-light-cushion-ski-heritage-mens"
 }

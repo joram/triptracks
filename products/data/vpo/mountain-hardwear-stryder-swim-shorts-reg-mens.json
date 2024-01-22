@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Stryder Swim Shorts, Reg - Mens",
   "price_cents": 780000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular 7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343069/stryder-swim-shorts-reg-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Lada Round-Neck Sweater - Mens",
   "price_cents": 1599600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "80% wool, 20% polyamide, G-1000\u00ae Eco"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back length",
+      "value": "69 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "595 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337185/lada-round-neck-sweater-mens"
 }

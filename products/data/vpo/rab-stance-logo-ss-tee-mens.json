@@ -5,6 +5,15 @@
   ],
   "name": "Rab Stance Logo SS Tee - Mens",
   "price_cents": 420000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    }
+  ],
   "url": "https://vpo.ca/product/316464/stance-logo-ss-tee-mens"
 }

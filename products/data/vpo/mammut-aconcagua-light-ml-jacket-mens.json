@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aconcagua Light ML Jacket - Mens",
   "price_cents": 1590000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Main Fabric"
+    },
+    {
+      "key": "Weight",
+      "value": "321 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back length",
+      "value": "28.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333035/aconcagua-light-ml-jacket-mens"
 }

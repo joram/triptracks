@@ -5,6 +5,19 @@
   ],
   "name": "HanWag Alta Bunion II LL - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather, Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Endurance Pro"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather (chromium-free)"
+    }
+  ],
   "url": "https://vpo.ca/product/349244/alta-bunion-ii-ll-mens"
 }

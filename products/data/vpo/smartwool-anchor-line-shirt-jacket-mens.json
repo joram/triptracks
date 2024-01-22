@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Anchor Line Shirt Jacket - Mens",
   "price_cents": 2350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "79% Merino Wool, 20% Nylon, 1% Other Fibers"
+    },
+    {
+      "key": "Lining",
+      "value": "57% Cotton, 38% Polyester, 5% Elastane - Exclusive of Decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "595 g"
+    }
+  ],
   "url": "https://vpo.ca/product/296331/anchor-line-shirt-jacket-mens"
 }

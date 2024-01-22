@@ -5,6 +5,15 @@
   ],
   "name": "Prana Alameda Shorts, 7\" Inseam - Mens",
   "price_cents": 792000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "95% Recycled Nylon, 5% Spandex"
+    },
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332309/alameda-shorts-7-inseam-mens"
 }

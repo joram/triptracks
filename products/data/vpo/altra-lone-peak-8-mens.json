@@ -5,6 +5,47 @@
   ],
   "name": "Altra Lone Peak 8 - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "10.7 oz"
+    },
+    {
+      "key": "Midsole",
+      "value": "Altra EGO\u2122"
+    },
+    {
+      "key": "Outsole",
+      "value": "MaxTrac\u2122"
+    },
+    {
+      "key": "Cushion",
+      "value": "Moderate"
+    },
+    {
+      "key": "Stack Height",
+      "value": "25 mm"
+    },
+    {
+      "key": "Drop",
+      "value": "0 mm"
+    },
+    {
+      "key": "Upper",
+      "value": "Ripstop mesh"
+    },
+    {
+      "key": "Natural Fit",
+      "value": "These shoes have a roomy toe box and zero to low drop, built to keep you comfortable and keep you running. Move the way you were designed to."
+    },
+    {
+      "key": "Altra Ego\u2122",
+      "value": "These original Altra EGO\u2122 foam is designed to harmonize the balance between responsiveness and comfort."
+    },
+    {
+      "key": "Maxtrac\u2122",
+      "value": "These grippy MaxTrac\u2122 outsole provides the perfect combination of grip, traction, and durability on all types of terrain."
+    }
+  ],
   "url": "https://vpo.ca/product/363744/lone-peak-8-mens"
 }

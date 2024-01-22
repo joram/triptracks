@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Tech Lite II SS Tee - Skiing Yeti - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "157 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348777/tech-lite-ii-ss-tee-skiing-yeti-mens"
 }

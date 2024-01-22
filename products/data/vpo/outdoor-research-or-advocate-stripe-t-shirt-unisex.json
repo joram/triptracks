@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research OR Advocate Stripe T-Shirt - Unisex",
   "price_cents": 359600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/348862/or-advocate-stripe-t-shirt-unisex"
 }

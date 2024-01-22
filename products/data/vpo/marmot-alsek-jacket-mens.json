@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Alsek Jacket - Mens",
   "price_cents": 2200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Nylon, 34% Polyester, 10% Elastane Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 12 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/330443/alsek-jacket-mens"
 }

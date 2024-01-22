@@ -5,6 +5,19 @@
   ],
   "name": "Rab Boundary Shirt - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Brushed 100% Cotton Fabric - 193 g"
+    },
+    {
+      "key": "Centre back length - Size M",
+      "value": "30.3 in"
+    },
+    {
+      "key": "Weight - Size Medium",
+      "value": "448 g"
+    }
+  ],
   "url": "https://vpo.ca/product/336610/boundary-shirt-mens"
 }

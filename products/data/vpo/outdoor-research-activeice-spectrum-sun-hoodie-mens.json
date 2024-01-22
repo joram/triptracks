@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research ActiveIce Spectrum Sun Hoodie - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "94% Polyester, 6% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/341733/activeice-spectrum-sun-hoodie-mens"
 }

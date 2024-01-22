@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Trovat T-Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Drirelease\u00ae Cotton - 81% Polyester, 14% Cotton, 5% Elasthan"
+    },
+    {
+      "key": "Weight",
+      "value": "195 g"
+    },
+    {
+      "key": "Back length",
+      "value": "27.2 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333060/trovat-t-shirt-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Rab Momentum Shorts, 9\" Inseam - Mens",
   "price_cents": 800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "85% Polyamide, 15% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "162 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "9 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342739/momentum-shorts-9-inseam-mens"
 }

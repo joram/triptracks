@@ -5,6 +5,35 @@
   ],
   "name": "Mammut Photics HS Thermo Bomber Jacket - Unisex",
   "price_cents": 7800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "DryTechnology 2-Layer - 100% Polyester"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyester woven - 100% Polyester"
+    },
+    {
+      "key": "Filling",
+      "value": "white goose down, US90"
+    },
+    {
+      "key": "Weight",
+      "value": "804 g"
+    },
+    {
+      "key": "Water column",
+      "value": "20,000 mm"
+    },
+    {
+      "key": "Laser Fuse Technology",
+      "value": "Laser welded seams without stitching to avoid down leakage; narrow seams reduce cold spots for better heat retention"
+    }
+  ],
   "url": "https://vpo.ca/product/330804/photics-hs-thermo-bomber-jacket-unisex"
 }

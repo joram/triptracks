@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Strato LS Tech Tee - Mens",
   "price_cents": 860000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "96% Polyester, 4% Elastane"
+    },
+    {
+      "key": "Body Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343073/strato-ls-tech-tee-mens"
 }

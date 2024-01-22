@@ -5,6 +5,23 @@
   ],
   "name": "Norrona Lofoten GTX Insulated Jacket - Mens",
   "price_cents": 6800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Gore-Tex\u00ae, 2-Layer 70D Recycled Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "70% recycled polyester, 30% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "920 g"
+    },
+    {
+      "key": "Waterproof",
+      "value": "min. 20,000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/311560/lofoten-gtx-insulated-jacket-mens"
 }

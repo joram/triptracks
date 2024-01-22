@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Preon Jacket - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pontetorto 94% Recycled Polyester, 6% Elastane Denier gradient"
+    },
+    {
+      "key": "Weight",
+      "value": "16 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336621/preon-jacket-mens"
 }

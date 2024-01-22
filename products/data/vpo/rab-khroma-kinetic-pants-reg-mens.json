@@ -1,10 +1,31 @@
 {
-  "description": "Looking for an off-piste waterproof ski pant with advanced movement and breathability? Their new Khroma Kinetic Pant with high-stretch, waterproof Proflex\u2122 is purpose-built for ski mountaineers who love the up as much as the down.<br><br>Their multi-purpose Khroma Kinetic Pant is designed to satisfy every element of your big mountain adventure. Built from new 3-layer Proflex\u2122 fabric, it uses a DWR-coated outer with a tough, woven face and a water-repellancy rating of 20000mm HH for extreme weather protection. The high-gauge inner knit also wicks away moisture fast and, with integrated elastane, the \u2018soft\u2019 hardshell texture offers all the mobility you need for technical climbs and high-energy descents. For additional mountain utility, the Khroma Kinetic Pant features ski-ready pockets, an adjustable waist, side-venting zips, removable braces and reinforced kick patches for ski buckles and edges.<br><br>Soft, reliable and liberating, the waterproof Khroma Kinetic Pant has the flexibility and moisture management to change the way you layer for high-energy pursuits in mixed mountain weather.",
+  "description": "Built with 3-layer Proflex these are the ultimate soft feel, high stretch, lightweight ski pants. With outstanding breathability, these quiet-to-wear, waterproof ski pants offer freedom to explore steep chutes and mountain faces in all conditions.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/329501.jpg"
+    "https://vpo.ca/images/product/large/348926.jpg"
   ],
   "name": "Rab Khroma Kinetic Pants, Reg - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/329501/khroma-kinetic-pants-reg-mens"
+  "price_cents": 4400000,
+  "specs": [
+    {
+      "key": "Main",
+      "value": "90% Polyamide, 10% Elastane, Polyurethane Membrane"
+    },
+    {
+      "key": "Backer",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "579 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "20D Proflex Stretch Woven Nylon 3-layer Waterproof Technology with flurocarbon-free DWR (149g/m\u00b2) HH",
+      "value": "20,000mm and MVTR"
+    }
+  ],
+  "url": "https://vpo.ca/product/348926/khroma-kinetic-pants-reg-mens"
 }

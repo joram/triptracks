@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear StretchDown Light Jacket - Mens",
   "price_cents": 3350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "20D Durable Stretch Doubleweave -\u00a0Solids"
+    },
+    {
+      "key": "Insulation",
+      "value": "700-\ufb01ll RDS\u00ae-certi\ufb01ed down - 85% Down, 15% Feather"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "13.7 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/337641/stretchdown-light-jacket-mens"
 }

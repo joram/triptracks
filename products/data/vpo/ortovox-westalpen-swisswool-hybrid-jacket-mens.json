@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox Westalpen Swisswool Hybrid Jacket - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main material",
+      "value": "66% Polyester, 21% Wool (Merino), 7% Polyamide, 6% Elastane"
+    },
+    {
+      "key": "Outer Inserts",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Padding",
+      "value": "75% virgin wool (Swisswool), 25% Polylactide"
+    },
+    {
+      "key": "Weight",
+      "value": "330 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/329296/westalpen-swisswool-hybrid-jacket-mens"
 }

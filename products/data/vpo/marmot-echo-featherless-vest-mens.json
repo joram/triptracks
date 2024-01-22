@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Echo Featherless Vest - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Econyl 100% Recycled Nylon Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "4 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "27 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347797/echo-featherless-vest-mens"
 }

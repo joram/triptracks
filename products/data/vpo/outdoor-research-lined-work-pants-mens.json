@@ -5,6 +5,27 @@
   ],
   "name": "Outdoor Research Lined Work Pants - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Body",
+      "value": "98% Cotton, 2% Spandex Waterproof Scrim"
+    },
+    {
+      "key": "Lining (Knees, Seat)",
+      "value": "100% Polypropylene"
+    },
+    {
+      "key": "Pocket Bags",
+      "value": "Feedback Lightweight Flannel Lining, 60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "723 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/335262/lined-work-pants-mens"
 }

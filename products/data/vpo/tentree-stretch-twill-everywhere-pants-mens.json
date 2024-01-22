@@ -5,6 +5,15 @@
   ],
   "name": "tentree Stretch Twill Everywhere Pants - Mens",
   "price_cents": 944000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "97% Organic Cotton, 3% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/334810/stretch-twill-everywhere-pants-mens"
 }

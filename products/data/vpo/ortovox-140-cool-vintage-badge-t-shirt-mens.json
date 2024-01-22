@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox 140 Cool Vintage Badge T-Shirt - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "144 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/343521/140-cool-vintage-badge-t-shirt-mens"
 }

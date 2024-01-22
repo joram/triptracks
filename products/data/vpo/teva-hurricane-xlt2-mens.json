@@ -5,6 +5,15 @@
   ],
   "name": "Teva Hurricane XLT2 - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "10.25 oz"
+    },
+    {
+      "key": "Best for",
+      "value": "Day hikes, Light hikes"
+    }
+  ],
   "url": "https://vpo.ca/product/318164/hurricane-xlt2-mens"
 }

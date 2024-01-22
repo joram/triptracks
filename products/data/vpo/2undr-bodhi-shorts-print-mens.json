@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Bodhi Shorts - Print - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "48 % Polyester, 42% Recycled Polyester, 10% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/363181/bodhi-shorts-print-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 260 Tech LS Turtleneck - Mens",
   "price_cents": 1550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/347552/merino-260-tech-ls-turtleneck-mens"
 }

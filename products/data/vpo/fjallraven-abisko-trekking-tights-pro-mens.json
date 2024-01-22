@@ -5,6 +5,51 @@
   ],
   "name": "Fjallraven Abisko Trekking Tights Pro - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "71% polyester, 29% elastane. 90% polyamide, 10% elastane"
+    },
+    {
+      "key": "Inseam length",
+      "value": "70 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Waist",
+      "value": "Mid waist"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim Fit"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full leg pants"
+    },
+    {
+      "key": "Leg endings",
+      "value": "Fixed length"
+    },
+    {
+      "key": "Pre-shaped knees",
+      "value": "No"
+    },
+    {
+      "key": "Boot hook",
+      "value": "No"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "2"
+    },
+    {
+      "key": "Pockets",
+      "value": "Map pocket, Mesh pocket(s)"
+    }
+  ],
   "url": "https://vpo.ca/product/339913/abisko-trekking-tights-pro-mens"
 }

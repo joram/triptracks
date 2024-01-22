@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Flow Shift Boxer Briefs, 6\" Inseam - Solid - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "46% Polyester 45% Modal 9% Lycra"
+    }
+  ],
   "url": "https://vpo.ca/product/345356/flow-shift-boxer-briefs-6-inseam-solid-mens"
 }

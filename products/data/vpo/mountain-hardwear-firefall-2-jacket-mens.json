@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Firefall/2 Jacket - Mens",
   "price_cents": 3699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Dry.Q\u00ae 70D Textured Weave 2-layer - Solids"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "31 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "790 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337549/firefall2-jacket-mens"
 }

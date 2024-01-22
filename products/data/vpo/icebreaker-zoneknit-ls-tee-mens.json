@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker ZoneKnit LS Tee - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "60% TENCEL\u2122, 40% Merino Wool, - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "191 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/348799/zoneknit-ls-tee-mens"
 }

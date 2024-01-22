@@ -5,6 +5,35 @@
   ],
   "name": "Merrell Moab 3 Mid WTPF - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Pigskin leather and mesh"
+    },
+    {
+      "key": "Arch Shank",
+      "value": "Molded nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Recycled Mesh"
+    },
+    {
+      "key": "Midsole",
+      "value": "Lightweight EVA foam"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae TC5+ rubber"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "2 lbs 4 oz"
+    },
+    {
+      "key": "Lug",
+      "value": "5mm"
+    }
+  ],
   "url": "https://vpo.ca/product/345489/moab-3-mid-wtpf-mens"
 }

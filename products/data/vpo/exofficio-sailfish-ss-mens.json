@@ -5,6 +5,19 @@
   ],
   "name": "ExOfficio Sailfish SS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "14.46 oz"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "51% Nylon, 49% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30.1 in"
+    }
+  ],
   "url": "https://vpo.ca/product/337095/sailfish-ss-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Shade Lite LS Shirt - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Plain weave stretch woven 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.625 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/342944/shade-lite-ls-shirt-mens"
 }

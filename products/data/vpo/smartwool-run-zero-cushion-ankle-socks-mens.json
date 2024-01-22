@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Run Zero Cushion Ankle Socks - Mens",
   "price_cents": 249500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "47% Merino Wool, 12% Nylon, 37% Recycled Nylon, 4% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Ankle (3.25 overall height)"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Zero Cushion"
+    }
+  ],
   "url": "https://vpo.ca/product/344193/run-zero-cushion-ankle-socks-mens"
 }

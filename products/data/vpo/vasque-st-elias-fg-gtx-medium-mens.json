@@ -5,6 +5,35 @@
   ],
   "name": "Vasque St Elias FG GTX, Medium - Mens",
   "price_cents": 2699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric / Material",
+      "value": "Nappa Leather Collar"
+    },
+    {
+      "key": "Waterproof",
+      "value": "GORE-TEX\u00ae With Performance Comfort Technology"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual Density EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "A.T.C. (All Terrain Compound) Midsole With EVA Cushioning Pods TPU Shank"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vasque Exclusive Vibram\u00ae Frontier With XSTrek Compound"
+    },
+    {
+      "key": "Last",
+      "value": "Summit"
+    },
+    {
+      "key": "Leather Type",
+      "value": "Full Grain, Waterproof"
+    }
+  ],
   "url": "https://vpo.ca/product/318209/st-elias-fg-gtx-medium-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Arnside - Mens",
   "price_cents": 2500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather (waxed), Suede, Fabric"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Hanwag MTR"
+    },
+    {
+      "key": "Lining",
+      "value": "Textile"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 11 oz"
+    },
+    {
+      "key": "Cut",
+      "value": "Low"
+    },
+    {
+      "key": "Lace length",
+      "value": "UK 6-9=110cm"
+    }
+  ],
   "url": "https://vpo.ca/product/344411/arnside-mens"
 }

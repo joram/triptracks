@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Ascender Softshell Jacket, Extended - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nexgen Contour Soft-Shell - 100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "31 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346600/ascender-softshell-jacket-extended-mens"
 }

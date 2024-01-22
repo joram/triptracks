@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Highlander Down Hoody - Mens",
   "price_cents": 1960000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Pertex Quantum\u00a9 100% Recycled Polyester Mini Ripstop 1.3 oz"
+    },
+    {
+      "key": "Insulation Type",
+      "value": "700 Fill Down with Down Defender"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lbs 4.46 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    }
+  ],
   "url": "https://vpo.ca/product/322410/highlander-down-hoody-mens"
 }

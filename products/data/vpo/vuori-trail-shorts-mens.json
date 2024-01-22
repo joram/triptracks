@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Trail Shorts - Mens",
   "price_cents": 1040000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "92% Polyester, 8% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "6.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332706/trail-shorts-mens"
 }

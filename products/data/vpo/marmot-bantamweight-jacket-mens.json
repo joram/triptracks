@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Bantamweight Jacket - Mens",
   "price_cents": 3250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "6 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342559/bantamweight-jacket-mens"
 }

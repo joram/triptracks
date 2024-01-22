@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Classic Edition Zero Cushion Liner Crew Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "59% Merino Wool, 30% Recycled Nylon, 8% Nylon, 2% Elastane, 1% Polyester"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Zero Cushion"
+    }
+  ],
   "url": "https://vpo.ca/product/339081/hike-classic-edition-zero-cushion-liner-crew-socks-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Persuadr SS - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Polyester - 106\u00a0g"
+    }
+  ],
   "url": "https://vpo.ca/product/343251/persuadr-ss-mens"
 }

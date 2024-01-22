@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Shadow Jacket - Mens",
   "price_cents": 3400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insulation",
+      "value": "700\u2011fill Down"
+    },
+    {
+      "key": "Weight",
+      "value": "1151 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "33 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/322632/shadow-jacket-mens"
 }

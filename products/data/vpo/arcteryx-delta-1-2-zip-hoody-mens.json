@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Delta 1/2 Zip Hoody - Mens",
   "price_cents": 2200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "9067 Power Dry Midwarmth grid backed jersey w"
+    },
+    {
+      "key": "Fit",
+      "value": "Fitted"
+    },
+    {
+      "key": "Weight",
+      "value": "265 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350171/delta-12-zip-hoody-mens"
 }

@@ -5,6 +5,39 @@
   ],
   "name": "Fjallraven Vidda Pro Ventilated Trousers, Reg - Mens",
   "price_cents": 1575000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Eco",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Stretch",
+      "value": "63% polyamide, 26% polyester, 11% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "565 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full Leg"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Yes"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/323879/vidda-pro-ventilated-trousers-reg-mens"
 }

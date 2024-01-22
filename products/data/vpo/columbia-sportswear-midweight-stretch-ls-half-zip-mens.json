@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Midweight Stretch LS Half Zip - Mens",
   "price_cents": 749500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "85% Polyester, 15% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/350630/midweight-stretch-ls-half-zip-mens"
 }

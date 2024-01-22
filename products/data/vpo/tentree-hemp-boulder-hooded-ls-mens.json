@@ -5,6 +5,11 @@
   ],
   "name": "tentree Hemp Boulder Hooded LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Hemp, 45% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/332006/hemp-boulder-hooded-ls-mens"
 }

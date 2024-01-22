@@ -5,6 +5,19 @@
   ],
   "name": "Rab Kangri GTX Jacket - Mens",
   "price_cents": 6100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main - Recycled 50D polyester 2.5L with polyester membrane / Pertex Shield/ 98 g/m\u00b2/ HH",
+      "value": "20,000mm"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "524 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "30.7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336808/kangri-gtx-jacket-mens"
 }

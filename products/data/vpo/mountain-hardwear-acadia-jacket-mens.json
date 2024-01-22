@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Acadia Jacket - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Recycled 2.5L Ripstop (100% Recycled Nylon)"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Weight",
+      "value": "10.16 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/322679/acadia-jacket-mens"
 }

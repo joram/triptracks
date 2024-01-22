@@ -5,6 +5,35 @@
   ],
   "name": "Mammut Yatna II High GTX - Mens",
   "price_cents": 1959700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "GORE-TEX Performance Comfort Footwear"
+    },
+    {
+      "key": "Soles",
+      "value": "Vibram\u00ae Tront"
+    },
+    {
+      "key": "(Size UK 8.5)",
+      "value": "630 g"
+    },
+    {
+      "key": "Flex index",
+      "value": "A8"
+    },
+    {
+      "key": "Heel drop",
+      "value": "10 mm"
+    },
+    {
+      "key": "2 Zone Lacing",
+      "value": "Individual 2-zone lacing. Can be adjusted to person and situation"
+    },
+    {
+      "key": "Last index",
+      "value": "backpacking"
+    }
+  ],
   "url": "https://vpo.ca/product/338321/yatna-ii-high-gtx-mens"
 }

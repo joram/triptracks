@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Run No Show Tab Ultralight Socks - Mens",
   "price_cents": 229500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Nylon, 40% Merino Wool, 5% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "No Show Tab"
+    },
+    {
+      "key": "Weight",
+      "value": "Ultra-Lightweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Running shoes, trail runners, athletic sneakers"
+    }
+  ],
   "url": "https://vpo.ca/product/344373/run-no-show-tab-ultralight-socks-mens"
 }

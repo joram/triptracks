@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Vardag Pile Fleece Vest - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% polyester - G-1000\u00ae Eco"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "552 g in size M"
+    }
+  ],
   "url": "https://vpo.ca/product/349904/vardag-pile-fleece-vest-mens"
 }

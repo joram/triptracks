@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Expedition Latt Hoodie - Mens",
   "price_cents": 2750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill Weight",
+      "value": "158 g"
+    },
+    {
+      "key": "Weight",
+      "value": "495 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328892/expedition-latt-hoodie-mens"
 }

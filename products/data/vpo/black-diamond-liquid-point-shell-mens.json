@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Liquid Point Shell - Mens",
   "price_cents": 3399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Gore-Tex\u00ae Paclite\u00ae 2.5 L, 75D plain-weave face with DWR finish - 125 gsm, 100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "395 g"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "30 1"
+    }
+  ],
   "url": "https://vpo.ca/product/299563/liquid-point-shell-mens"
 }

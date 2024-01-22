@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Crater Lake LS Crew - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "88 % Polyester, 12% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.25 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "6 oz"
+    },
+    {
+      "key": "Uses",
+      "value": "Superlight Backcountry, Rock Climbing, Backpacking"
+    }
+  ],
   "url": "https://vpo.ca/product/342855/crater-lake-ls-crew-mens"
 }

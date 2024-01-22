@@ -5,6 +5,43 @@
   ],
   "name": "Mammut Sertig II Mid GTX - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Soles",
+      "value": "EVA wedge"
+    },
+    {
+      "key": "Material",
+      "value": "Air-Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex Footwear"
+    },
+    {
+      "key": "Weight",
+      "value": "385 g"
+    },
+    {
+      "key": "Flex index",
+      "value": "A4"
+    },
+    {
+      "key": "Heel drop",
+      "value": "7 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "Standard lacing"
+    },
+    {
+      "key": "Last index",
+      "value": "multifunction"
+    },
+    {
+      "key": "Suitable for",
+      "value": "Mountain Training, Hiking"
+    }
+  ],
   "url": "https://vpo.ca/product/350312/sertig-ii-mid-gtx-mens"
 }

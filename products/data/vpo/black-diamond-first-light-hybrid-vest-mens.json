@@ -5,6 +5,35 @@
   ],
   "name": "Black Diamond First Light Hybrid Vest - Mens",
   "price_cents": 1879600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Schoeller\u00ae stretch-woven nylon with Eco-Repel Bio\u00ae PFC-Free DWR Technology (80 gsm, 93% nylon, 7% Elastane)"
+    },
+    {
+      "key": "Insulation",
+      "value": "PrimaLoft\u00ae Silver Insulation Active (60 gsm, 100% polyester)"
+    },
+    {
+      "key": "Body",
+      "value": "Blended merino wool (300 gsm, 100% nylon face, 100% merino wool backer)"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "311 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "28.5 in"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/310838/first-light-hybrid-vest-mens"
 }

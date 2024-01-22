@@ -5,6 +5,19 @@
   ],
   "name": "Rab Incline Light Pants, Reg - Mens",
   "price_cents": 1370000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "93% Polyamide, 7% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "237 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342727/incline-light-pants-reg-mens"
 }

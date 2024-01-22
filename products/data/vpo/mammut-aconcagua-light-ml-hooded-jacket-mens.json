@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aconcagua Light ML Hooded Jacket - Mens",
   "price_cents": 1253000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Main Fabric"
+    },
+    {
+      "key": "Weight",
+      "value": "345 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "30.8 in 78 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/333033/aconcagua-light-ml-hooded-jacket-mens"
 }

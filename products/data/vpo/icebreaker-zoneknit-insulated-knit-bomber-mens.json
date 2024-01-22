@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker ZoneKnit Insulated Knit Bomber - Mens",
   "price_cents": 4000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "770 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348645/zoneknit-insulated-knit-bomber-mens"
 }

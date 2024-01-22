@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Sawtooth X Low B-Dry, Wide - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Oiled nubuck, Cordura Fabric mesh, TPU heel counter, B-DRY Waterproof Membrane, 100% RPET Repreve Laces, 100% RPET Repreve Webbing, Micro-injected PU window underlay"
+    },
+    {
+      "key": "Insole",
+      "value": "O FIT Insole"
+    },
+    {
+      "key": "Midsole",
+      "value": "Rubber-blended adaptive foam, TPU Shank, Heel puck"
+    },
+    {
+      "key": "Outsole",
+      "value": "Trail Tread Rubber"
+    },
+    {
+      "key": "Construction",
+      "value": "Strobel-Lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    },
+    {
+      "key": "Volume",
+      "value": "High"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "8mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "16.9 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/343113/sawtooth-x-low-b-dry-wide-mens"
 }

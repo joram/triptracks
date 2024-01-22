@@ -5,6 +5,31 @@
   ],
   "name": "Outdoor Research Coldfront Down Hoodie - Mens",
   "price_cents": 2359600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell and Lining",
+      "value": "bluesign\u00ae approved Pertex\u00ae Quantum Eco 100% Polyester (53% Recycled) 30D Double Rip Stop"
+    },
+    {
+      "key": "Main Body Insulation",
+      "value": "700+ Fill Power Responsibly Sourced Down"
+    },
+    {
+      "key": "Other Insulation (Tops Of Shoulders, Wrist Cuffs)",
+      "value": "VerticalX Eco\u2122 100% Polyester (85% Recycled) Insulation 150 G"
+    },
+    {
+      "key": "Weight",
+      "value": "585 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336856/coldfront-down-hoodie-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Rab Force LS Tee - Mens",
   "price_cents": 850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric Main",
+      "value": "100% polyester (56% Recycled)"
+    },
+    {
+      "key": "Weight",
+      "value": "138 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "70.5 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "138g"
+    }
+  ],
   "url": "https://vpo.ca/product/342776/force-ls-tee-mens"
 }

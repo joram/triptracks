@@ -5,6 +5,11 @@
   ],
   "name": "tentree inMotion T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "88% REPREVE\u00ae Recycled Polyester, 12% TENCEL\u2122 Lyocell"
+    }
+  ],
   "url": "https://vpo.ca/product/346319/inmotion-t-shirt-mens"
 }

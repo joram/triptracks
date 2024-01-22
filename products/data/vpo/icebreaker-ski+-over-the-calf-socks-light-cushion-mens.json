@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Ski+ Over The Calf Socks - Light Cushion - Mens",
   "price_cents": 288000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Dual Sourced"
+    }
+  ],
   "url": "https://vpo.ca/product/321945/ski-over-the-calf-socks-light-cushion-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Watertight II Jacket, Extended - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 coated 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "Fine Mesh 100% polyester"
+    },
+    {
+      "key": "Back Length",
+      "value": "31 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347352/watertight-ii-jacket-extended-mens"
 }

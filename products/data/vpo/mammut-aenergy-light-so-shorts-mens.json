@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aenergy Light SO Shorts - Mens",
   "price_cents": 973000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "light weight double weave"
+    },
+    {
+      "key": "Denier (main material)",
+      "value": "40Dx40D"
+    },
+    {
+      "key": "Weight",
+      "value": "156 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343299/aenergy-light-so-shorts-mens"
 }

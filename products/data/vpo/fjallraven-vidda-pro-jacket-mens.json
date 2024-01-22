@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Vidda Pro Jacket - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "850 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323892/vidda-pro-jacket-mens"
 }

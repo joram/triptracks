@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Eco Shift Boxer Briefs, 6\" Inseam - Print - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Sustainable Luxury- 95% Tencel, 5% Elastane, Tencel\u2122 Blend- 95% Tencel, 5% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/335823/eco-shift-boxer-briefs-6-inseam-print-mens"
 }

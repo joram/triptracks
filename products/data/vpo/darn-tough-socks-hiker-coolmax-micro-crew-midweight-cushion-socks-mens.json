@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Hiker Coolmax Micro Crew Midweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Coolmax Polyester, 37% Nylon, 5% Acrylic, 3% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking shoes, hiking boots, trail runners"
+    }
+  ],
   "url": "https://vpo.ca/product/346970/hiker-coolmax-micro-crew-midweight-cushion-socks-mens"
 }

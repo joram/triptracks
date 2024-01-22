@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Tind Crew Neck - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Merino Wool, Rib"
+    }
+  ],
   "url": "https://vpo.ca/product/350093/tind-crew-neck-mens"
 }

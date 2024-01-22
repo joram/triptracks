@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Canada Wool Padded Jacket - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "65% wool, 30% polyester, 5% other fiber"
+    },
+    {
+      "key": "Secondary",
+      "value": "80% wool, 20% polylactide"
+    },
+    {
+      "key": "Reinforcements",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "867 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Comfort"
+    }
+  ],
   "url": "https://vpo.ca/product/324200/canada-wool-padded-jacket-mens"
 }

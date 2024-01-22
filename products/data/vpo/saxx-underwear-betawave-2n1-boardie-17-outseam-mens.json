@@ -5,6 +5,19 @@
   ],
   "name": "Saxx Underwear Betawave 2n1 Boardie, 17\" Outseam - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "88% Polyester, 12% Elastane"
+    },
+    {
+      "key": "Liner",
+      "value": "87% Polyester, 13% Elastane"
+    },
+    {
+      "key": "Outseam",
+      "value": "17 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336982/betawave-2n1-boardie-17-outseam-mens"
 }

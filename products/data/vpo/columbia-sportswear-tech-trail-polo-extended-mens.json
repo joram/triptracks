@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Tech Trail Polo, Extended - Mens",
   "price_cents": 550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "94% Polyester, 6% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349672/tech-trail-polo-extended-mens"
 }

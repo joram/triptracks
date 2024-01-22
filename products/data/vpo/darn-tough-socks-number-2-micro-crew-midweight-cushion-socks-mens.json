@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Number 2 Micro Crew Midweight Cushion Socks - Mens",
   "price_cents": 329500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "63% Merino Wool, 35% Nylon, 2% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, hiking shoes, covert bathroom breaks"
+    }
+  ],
   "url": "https://vpo.ca/product/331665/number-2-micro-crew-midweight-cushion-socks-mens"
 }

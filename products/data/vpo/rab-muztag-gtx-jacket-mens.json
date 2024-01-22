@@ -5,6 +5,23 @@
   ],
   "name": "Rab Muztag GTX Jacket - Mens",
   "price_cents": 7000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "467 g"
+    },
+    {
+      "key": "Centre Back",
+      "value": "80 cm"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "30D Gore-Tex Pro (Most Breathable), 110g"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "40D Gore-Tex Pro (Most Breathable), 114g"
+    }
+  ],
   "url": "https://vpo.ca/product/329505/muztag-gtx-jacket-mens"
 }

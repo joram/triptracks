@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Bergtagen Thinwool Long Johns - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Weight",
+      "value": "165 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325447/bergtagen-thinwool-long-johns-mens"
 }

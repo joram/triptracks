@@ -5,6 +5,23 @@
   ],
   "name": "Rab Cubit Stretch Down Hoody - Mens",
   "price_cents": 4500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Lightweight and Soft Pertex\u00aeQuantum\u00ae 3DWeave Pre-Woven Baffle with Fluorocarbon-free DWR (128 g"
+    },
+    {
+      "key": "Composition",
+      "value": "100% Polyamide with TPU Membrane"
+    },
+    {
+      "key": "Weight - Size Medium",
+      "value": "564 g"
+    },
+    {
+      "key": "Center back length - Size M",
+      "value": "29.1 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336644/cubit-stretch-down-hoody-mens"
 }

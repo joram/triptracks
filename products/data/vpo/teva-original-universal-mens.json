@@ -5,6 +5,15 @@
   ],
   "name": "Teva Original Universal - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "6.5 oz"
+    },
+    {
+      "key": "Best for",
+      "value": "All-day wear , Festival wear, Getting around town, Water activities"
+    }
+  ],
   "url": "https://vpo.ca/product/286544/original-universal-mens"
 }

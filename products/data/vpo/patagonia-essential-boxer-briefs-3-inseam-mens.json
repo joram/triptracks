@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Essential Boxer Briefs, 3\" Inseam - Mens",
   "price_cents": 315000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "5.7 oz - 95% Tencel\u00ae Lyocell, 5% Spandex jersey"
+    },
+    {
+      "key": "Inseam",
+      "value": "3 in"
+    },
+    {
+      "key": "Weight",
+      "value": "91 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327376/essential-boxer-briefs-3-inseam-mens"
 }

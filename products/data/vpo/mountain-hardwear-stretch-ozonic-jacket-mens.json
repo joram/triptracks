@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Stretch Ozonic Jacket - Mens",
   "price_cents": 1499700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Dry\u00b7Q\u00ae Active-Stretch 40D 2.5L (100% Nylon)"
+    },
+    {
+      "key": "Center of Back",
+      "value": "28 in"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    }
+  ],
   "url": "https://vpo.ca/product/307487/stretch-ozonic-jacket-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Sparwood Stripe Crew Sweater - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "55% Polyester, 30% Merino Wool, 15% Nylon. Exclusive Of Decoration."
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "341 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341629/sparwood-stripe-crew-sweater-mens"
 }

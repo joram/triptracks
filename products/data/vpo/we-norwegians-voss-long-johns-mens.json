@@ -5,6 +5,15 @@
   ],
   "name": "We Norwegians Voss Long Johns - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "17.5 Microns - 94% Superfine Merino, 6% Creora Eco Soft"
+    },
+    {
+      "key": "Care",
+      "value": "Machine wash cold, delicate"
+    }
+  ],
   "url": "https://vpo.ca/product/344861/voss-long-johns-mens"
 }

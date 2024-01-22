@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Columbia Trek Joggers, Extended - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Inseam",
+      "value": "31 in"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, Easy Fit for Comfortable Range of Motion"
+    }
+  ],
   "url": "https://vpo.ca/product/346883/columbia-trek-joggers-extended-mens"
 }

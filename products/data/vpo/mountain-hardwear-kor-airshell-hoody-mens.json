@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Kor AirShell Hoody - Mens",
   "price_cents": 1279600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pertex\u00ae Quantum Air\u2122 20D Stretch Ripstop -\u00a059% Recycled Nylon, 41% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "5.1 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342881/kor-airshell-hoody-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox 120 Comp Light Hoody - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Virgin OWP Merino Wool, 30% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "142 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    }
+  ],
   "url": "https://vpo.ca/product/349465/120-comp-light-hoody-mens"
 }

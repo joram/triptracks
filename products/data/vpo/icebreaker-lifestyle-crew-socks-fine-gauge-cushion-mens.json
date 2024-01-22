@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker LifeStyle Crew Socks - Fine Gauge Cushion - Mens",
   "price_cents": 260000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "63% Wool, 35% Nylon, 2% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "46 g"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/328678/lifestyle-crew-socks-fine-gauge-cushion-mens"
 }

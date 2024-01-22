@@ -5,6 +5,23 @@
   ],
   "name": "Arcteryx Beta LT Pants, Reg - Mens",
   "price_cents": 4499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "375 g"
+    },
+    {
+      "key": "Size Small",
+      "value": "32 in"
+    },
+    {
+      "key": "Size Medium",
+      "value": "32.5 in"
+    },
+    {
+      "key": "Size Large/XL/XXL",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/338015/beta-lt-pants-reg-mens"
 }

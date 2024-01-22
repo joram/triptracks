@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Cascade 3/4 Leggings - MBM Graffiti AOP - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Flex - 81% Merino Wool 12% Nylon 7% Elastane - 180gsm"
+    },
+    {
+      "key": "Weight",
+      "value": "193 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350015/cascade-34-leggings-mbm-graffiti-aop-mens"
 }

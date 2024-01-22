@@ -5,6 +5,23 @@
   ],
   "name": "Kuhl Renegade Shorts, 10\" Inseam - Mens",
   "price_cents": 840000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Duralux Softshell\u00a0- 95% Nylon, 5% Spandex DWR\u00a0- 170 g"
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "21.38 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    },
+    {
+      "key": "Eight pockets",
+      "value": "two front hand, two side with zipper closure, two back with Velcro closure, one stealth cell phone and one 3D pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/301354/renegade-shorts-10-inseam-mens"
 }

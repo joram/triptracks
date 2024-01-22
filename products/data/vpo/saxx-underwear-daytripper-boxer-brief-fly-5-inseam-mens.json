@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Daytripper Boxer Brief Fly, 5\" Inseam - Mens",
   "price_cents": 289500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "97% polyester, 3% elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/331714/daytripper-boxer-brief-fly-5-inseam-mens"
 }

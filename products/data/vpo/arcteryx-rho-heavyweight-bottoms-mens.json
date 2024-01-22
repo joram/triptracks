@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rho Heavyweight Bottoms - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Power Stretch\u00ae Pro - 53% polyester, 38% nylon, 9% elastane - bluesign Approved Material"
+    },
+    {
+      "key": "Weight",
+      "value": "250 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Next to Skin"
+    }
+  ],
   "url": "https://vpo.ca/product/350499/rho-heavyweight-bottoms-mens"
 }

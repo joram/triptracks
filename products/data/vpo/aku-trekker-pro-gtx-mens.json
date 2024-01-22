@@ -5,6 +5,43 @@
   ],
   "name": "Aku Trekker Pro GTX - Mens",
   "price_cents": 2639600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Waterproof Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram Curcuma Mountain Sole"
+    },
+    {
+      "key": "Footbed",
+      "value": "AKU Custom Fit Insole"
+    },
+    {
+      "key": "Lasting board (stiffness)",
+      "value": "6.4mm Nylon &amp; Die Cut EVA for Rock Protection &amp; Stability"
+    },
+    {
+      "key": "Midsole",
+      "value": "Light Polyurethane"
+    },
+    {
+      "key": "Upper",
+      "value": "Leather Suede &amp; Air8000 with Welded PU Film"
+    },
+    {
+      "key": "Gore-Tex",
+      "value": "Keep your feet dry with the integrated waterproof GORE-TEX Performance Comfort membrane with added breathability"
+    },
+    {
+      "key": "Vibram Curcuma",
+      "value": "The VIBRAM Curcuma mountain sole is designed to carry you through any terrain. From rugged trails to steep snow and ice, it is there for you"
+    },
+    {
+      "key": "AKU Elica Technology",
+      "value": "ELICA Technology ensures an anatomical fit to provide better stability and weight distribution across your boot sole to reduce pressure points and encourage better hiking form"
+    }
+  ],
   "url": "https://vpo.ca/product/335200/trekker-pro-gtx-mens"
 }

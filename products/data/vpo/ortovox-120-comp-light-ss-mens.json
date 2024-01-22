@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox 120 Comp Light SS - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Merino Wool, 30% Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Weight",
+      "value": "88 g"
+    }
+  ],
   "url": "https://vpo.ca/product/317571/120-comp-light-ss-mens"
 }

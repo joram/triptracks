@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Active Ultralite SS - Mens",
   "price_cents": 600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Merino Wool, 47% Lyocell (exclusive of decoration)"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    }
+  ],
   "url": "https://vpo.ca/product/344578/active-ultralite-ss-mens"
 }

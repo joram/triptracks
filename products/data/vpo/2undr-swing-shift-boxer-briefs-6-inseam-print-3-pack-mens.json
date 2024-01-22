@@ -5,6 +5,15 @@
   ],
   "name": "2Undr Swing Shift Boxer Briefs, 6\" Inseam - Print - 3-Pack - Mens",
   "price_cents": 518000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "95% Lenzing Modal, 5% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "6 in"
+    }
+  ],
   "url": "https://vpo.ca/product/340860/swing-shift-boxer-briefs-6-inseam-print-3-pack-mens"
 }

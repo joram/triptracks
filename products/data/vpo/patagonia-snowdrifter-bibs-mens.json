@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Snowdrifter Bibs - Mens",
   "price_cents": 3800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "3-layer, 5-oz 75-denier 100% polyester (70% recycled) solid stretch ripstop with a polyester knit backer and a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Bib upper",
+      "value": "6.5-oz 63% recycled nylon, 26% polyester, 11% spandex double weave with fOur-way stretch and a DWR finish"
+    }
+  ],
   "url": "https://vpo.ca/product/323735/snowdrifter-bibs-mens"
 }

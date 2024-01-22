@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Olympus LS - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Wool 250 - 97% Merino Wool, 3% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/339026/olympus-ls-mens"
 }

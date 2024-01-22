@@ -5,6 +5,15 @@
   ],
   "name": "Chlorophylle Transit SS Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% recycled polyester, 15% spandex"
+    },
+    {
+      "key": "Length",
+      "value": "29 1"
+    }
+  ],
   "url": "https://vpo.ca/product/346512/transit-ss-shirt-mens"
 }

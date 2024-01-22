@@ -5,6 +5,11 @@
   ],
   "name": "Roark Explorer 2.0 Shorts - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "92% Polyester, 8% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/339387/explorer-20-shorts-mens"
 }

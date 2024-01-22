@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Innominata ML Hybrid Jacket - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Filling",
+      "value": "Ajungilak Oti\u2122 Element - 100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyamide Woven - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric 1",
+      "value": "Polartec\u00ae Thermal Pro\u00ae - 100% Polyester"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Pertex\u00ae Quantum - 100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/338211/innominata-ml-hybrid-jacket-mens"
 }

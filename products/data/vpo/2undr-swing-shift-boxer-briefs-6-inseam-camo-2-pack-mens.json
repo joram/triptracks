@@ -5,6 +5,15 @@
   ],
   "name": "2Undr Swing Shift Boxer Briefs, 6\" Inseam - Camo - 2-Pack - Mens",
   "price_cents": 479600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "95% Lenzing Modal, 5% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "6 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333495/swing-shift-boxer-briefs-6-inseam-camo-2-pack-mens"
 }

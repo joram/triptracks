@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Vidda Pro Trousers, Reg - Mens",
   "price_cents": 1469600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "590 g"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full leg"
+    },
+    {
+      "key": "Reinforcements",
+      "value": "Yes"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/285465/vidda-pro-trousers-reg-mens"
 }

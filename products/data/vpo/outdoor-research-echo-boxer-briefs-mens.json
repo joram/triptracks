@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research Echo Boxer Briefs - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 100% Recycled Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Next to Skin Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342044/echo-boxer-briefs-mens"
 }

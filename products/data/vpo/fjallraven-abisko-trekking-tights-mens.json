@@ -5,6 +5,35 @@
   ],
   "name": "Fjallraven Abisko Trekking Tights - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Stretch",
+      "value": "82% polyamide, 18% elastane"
+    },
+    {
+      "key": "Stretch 2",
+      "value": "88% polyamide, 12% elastane"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "62% polyamide, 16% aramid, 12% elastane, 10% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Fit/Waist",
+      "value": "High Waist"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full leg"
+    }
+  ],
   "url": "https://vpo.ca/product/313308/abisko-trekking-tights-mens"
 }

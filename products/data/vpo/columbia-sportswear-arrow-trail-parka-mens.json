@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Arrow Trail Parka - Mens",
   "price_cents": 3299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 Rebound Stretch 100% polyester."
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Insulation",
+      "value": "Omni-Heat \u2122 Synthetic Down 100% Recycled Polyester."
+    }
+  ],
   "url": "https://vpo.ca/product/349314/arrow-trail-parka-mens"
 }

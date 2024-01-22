@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Foray II Jacket - Mens",
   "price_cents": 2399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved Gore-Tex with Paclite\u00ae Technology 2L, bluesign\u00ae approved 100% Polyester 50D Plain Weave"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "11.85 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342261/foray-ii-jacket-mens"
 }

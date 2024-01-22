@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Revolt Jeans, Tapered, 30\" Inseam - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "89% Cotton, 9% Polyester, 2% Spandex - 284 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Tapered"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/337753/revolt-jeans-tapered-30-inseam-mens"
 }

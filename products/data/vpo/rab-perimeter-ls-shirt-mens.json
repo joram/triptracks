@@ -5,6 +5,19 @@
   ],
   "name": "Rab Perimeter LS Shirt - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Heavy Weight Blend of 75% Polyester and 25% Wool Fabric (226 g"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "456 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "30.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336839/perimeter-ls-shirt-mens"
 }

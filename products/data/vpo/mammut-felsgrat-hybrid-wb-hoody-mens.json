@@ -5,6 +5,35 @@
   ],
   "name": "Mammut Felsgrat Hybrid WB Hoody - Mens",
   "price_cents": 2443000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "pertex equilibrium double weave"
+    },
+    {
+      "key": "Lining 1 (B2B)",
+      "value": "polyamide-elastane mesh"
+    },
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "high abrasion resistant 3l drytechnology performance laminate"
+    },
+    {
+      "key": "Weight",
+      "value": "180 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "79 cm"
+    },
+    {
+      "key": "Collection",
+      "value": "Eiger Extreme"
+    }
+  ],
   "url": "https://vpo.ca/product/343353/felsgrat-hybrid-wb-hoody-mens"
 }

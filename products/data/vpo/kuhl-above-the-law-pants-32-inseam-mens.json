@@ -5,6 +5,23 @@
   ],
   "name": "Kuhl Above The Law Pants, 32\" Inseam - Mens",
   "price_cents": 2150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "98% Cotton, 2% Spandex - 10.3 oz."
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "17 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Nine pockets",
+      "value": "two front hand, one coin, two stealth cargo, two back, one stealth cell phone, and one 3D gusseted pocket with zipper"
+    }
+  ],
   "url": "https://vpo.ca/product/323521/above-the-law-pants-32-inseam-mens"
 }

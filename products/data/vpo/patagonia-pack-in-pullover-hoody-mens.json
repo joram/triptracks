@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Pack In Pullover Hoody - Mens",
   "price_cents": 2490000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "3.7-oz 91% recycled polyester, 9% spandex plain weave with a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Lining",
+      "value": "2.3-oz 100% recycled polyester double knit with miDori\u2122 bioSoft for added wicking and softness, and HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Insulation",
+      "value": "60-g FullRange\u00ae 100% polyester (40% recycled) with four-way stretch"
+    },
+    {
+      "key": "Weight",
+      "value": "448 g"
+    }
+  ],
   "url": "https://vpo.ca/product/342018/pack-in-pullover-hoody-mens"
 }

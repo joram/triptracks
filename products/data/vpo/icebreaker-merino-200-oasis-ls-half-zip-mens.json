@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Merino 200 Oasis LS Half Zip - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Inseam",
+      "value": "68.9cm - based on size M"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/310249/merino-200-oasis-ls-half-zip-mens"
 }

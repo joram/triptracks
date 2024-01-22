@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Blood and Guts IV Woven LS - Mens",
   "price_cents": 850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular*"
+    },
+    {
+      "key": "Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346704/blood-and-guts-iv-woven-ls-mens"
 }

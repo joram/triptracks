@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Canyon LS Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Canyon Dobby - 100% Polyester"
+    },
+    {
+      "key": "Center of Back",
+      "value": "29 in"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "86 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/294235/canyon-ls-shirt-mens"
 }

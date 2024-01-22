@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Mountain Active Pants, Reg - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "91% Recycled Nylon, 9% Elastane Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "10 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342648/mountain-active-pants-reg-mens"
 }

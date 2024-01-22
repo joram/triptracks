@@ -5,6 +5,59 @@
   ],
   "name": "Fjallraven Keb Padded Hoodie - Mens",
   "price_cents": 2600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "G-Loft Supreme"
+    },
+    {
+      "key": "Fill weight",
+      "value": "60 g"
+    },
+    {
+      "key": "Weight",
+      "value": "510 g"
+    },
+    {
+      "key": "Back length",
+      "value": "75 cm"
+    },
+    {
+      "key": "Sleeve type",
+      "value": "Long sleeve"
+    },
+    {
+      "key": "Hood",
+      "value": "Yes"
+    },
+    {
+      "key": "Hood features",
+      "value": "Drawcord adjustment, Fixed"
+    },
+    {
+      "key": "Closing",
+      "value": "Two-way zipper"
+    },
+    {
+      "key": "Clothing layer",
+      "value": "Mid layer, Outerwear"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "4"
+    },
+    {
+      "key": "Pockets",
+      "value": "Chest pocket(s) with zipper, Hand pocket(s), Inner mesh pocket(s)"
+    }
+  ],
   "url": "https://vpo.ca/product/313461/keb-padded-hoodie-mens"
 }

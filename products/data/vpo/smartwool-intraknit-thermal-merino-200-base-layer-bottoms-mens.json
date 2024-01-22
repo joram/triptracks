@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Intraknit Thermal Merino 200 Base Layer Bottoms - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Merino Wool, 44% Polyester, 2% Elastane, 2% Polyamide. Exclusive Of Decoration"
+    },
+    {
+      "key": "Featuring Intraknit\u2122 technology",
+      "value": "Insulation, articulation, and ventilation are seamlessly integrated to amplify movement and comfort during high-intensity activities"
+    },
+    {
+      "key": "Size medium inseam",
+      "value": "28.75 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/349790/intraknit-thermal-merino-200-base-layer-bottoms-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "We Norwegians Tind Pants - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Fit",
+      "value": "Fits true to size"
+    }
+  ],
   "url": "https://vpo.ca/product/344858/tind-pants-mens"
 }

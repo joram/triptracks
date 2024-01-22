@@ -5,6 +5,15 @@
   ],
   "name": "ON Running Cloudrock 2 Waterproof - Mens",
   "price_cents": 2799900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "485g"
+    },
+    {
+      "key": "Heel to toe drop",
+      "value": "9mm"
+    }
+  ],
   "url": "https://vpo.ca/product/363732/cloudrock-2-waterproof-mens"
 }

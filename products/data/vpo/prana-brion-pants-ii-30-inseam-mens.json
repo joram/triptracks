@@ -5,6 +5,15 @@
   ],
   "name": "Prana Brion Pants II, 30\" Inseam - Mens",
   "price_cents": 1190000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials, Shell",
+      "value": "95% Recycled Nylon, 5% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/340094/brion-pants-ii-30-inseam-mens"
 }

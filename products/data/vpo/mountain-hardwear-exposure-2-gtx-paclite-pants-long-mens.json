@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Exposure/2 GTX Paclite Pants, Long - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX\u00ae PACLITE\u00ae 2L Recycled Plain Weave - 100% recycled polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "11 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342867/exposure2-gtx-paclite-pants-long-mens"
 }

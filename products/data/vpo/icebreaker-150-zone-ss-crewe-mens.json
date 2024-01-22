@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker 150 Zone SS Crewe - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "83% Wool, 12% Nylon, 5% Elastane"
+    },
+    {
+      "key": "Mesh",
+      "value": "84% Wool, 15% Nylon, 1% Elastane - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310213/150-zone-ss-crewe-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Berrino Jacket - Mens",
   "price_cents": 3599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "79 % polyamide, \u00a011 % wool (OWP-MERINO), 10 % elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Weight",
+      "value": "302 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329282/berrino-jacket-mens"
 }

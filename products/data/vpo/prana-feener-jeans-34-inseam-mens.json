@@ -5,6 +5,19 @@
   ],
   "name": "Prana Feener Jeans, 34\" Inseam - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Denim",
+      "value": "79% Organic Cotton | 19% Polyester | 2% Elastane"
+    },
+    {
+      "key": "All other colorways",
+      "value": "75% Organic Cotton | 23% Polyester | 2% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    }
+  ],
   "url": "https://vpo.ca/product/325251/feener-jeans-34-inseam-mens"
 }

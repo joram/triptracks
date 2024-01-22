@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox 230 Competition Long Pants - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "57% virgin Merino wool, 41% polyamide, 2% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "166 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Long"
+    }
+  ],
   "url": "https://vpo.ca/product/340838/230-competition-long-pants-mens"
 }

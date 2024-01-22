@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia R1 Pullover - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "6.9-oz Polartec\u00ae Power Grid\u00ae 93% recycled polyester, 7% spandex with Polygiene\u00ae permanent odor control"
+    },
+    {
+      "key": "Weight",
+      "value": "332 g"
+    },
+    {
+      "key": "Supporting the People Who Made This Product",
+      "value": "Fair Trade Certified\u2122 sewn, which means the people who made it earned a premium for their labor"
+    }
+  ],
   "url": "https://vpo.ca/product/317247/r1-pullover-mens"
 }

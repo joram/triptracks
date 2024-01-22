@@ -5,6 +5,27 @@
   ],
   "name": "Rab Capacitor Pull-On - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary Fabric",
+      "value": "Recycled knit face brushed fleece, 200g"
+    },
+    {
+      "key": "Side panels",
+      "value": "Thermic stretch fleece with brushed back, 175g"
+    },
+    {
+      "key": "Composition",
+      "value": "100% recycled Polyester with 94% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "355.5 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/329471/capacitor-pull-on-mens"
 }

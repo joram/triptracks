@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Pure Pima Cotton T-Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348063/valhalla-kingdom-pure-pima-cotton-t-shirt-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Keen Targhee III WP, Wide - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Waterproof leather and performance mesh"
+    },
+    {
+      "key": "Outsole",
+      "value": "Keen All-Terrain rubber for high-traction grip"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual-density, compression-molded EVA"
+    },
+    {
+      "key": "Lining",
+      "value": "Breathable mesh"
+    },
+    {
+      "key": "Footbed",
+      "value": "Removable metatomical dual-density EVA"
+    }
+  ],
   "url": "https://vpo.ca/product/327468/targhee-iii-wp-wide-mens"
 }

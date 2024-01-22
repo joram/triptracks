@@ -5,6 +5,19 @@
   ],
   "name": "Darn Tough Socks Highline Micro Crew Midweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "61% Merino Wool 36% Nylon 3% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    }
+  ],
   "url": "https://vpo.ca/product/348684/highline-micro-crew-midweight-cushion-socks-mens"
 }

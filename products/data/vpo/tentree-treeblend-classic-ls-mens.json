@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeBlend Classic LS - Mens",
   "price_cents": 399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "45% Recycled Polyester, 30% Tencel Lyocell, 25% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/328291/treeblend-classic-ls-mens"
 }

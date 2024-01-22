@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear CSC Basic Logo SS - Tall - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic cotton, 60% Organic Cotton, 40% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Uses",
+      "value": "Hiking"
+    }
+  ],
   "url": "https://vpo.ca/product/347276/csc-basic-logo-ss-tall-mens"
 }

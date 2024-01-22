@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Temple Tech LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Air-Con 140 - 83% Merino Wool 13% Nylon 4% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/339035/temple-tech-ls-mens"
 }

@@ -5,6 +5,35 @@
   ],
   "name": "Darn Tough Socks Spey Fly Crew Lightweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "51% Nylon, 47% Merino Wool, 2% Spandex Lycra"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    },
+    {
+      "key": "Performance Fit",
+      "value": "No slipping, no bunching, and no blisters"
+    },
+    {
+      "key": "Fine Gauge Knitting",
+      "value": "Unprecedented durability and Darn Tough's unique \u201cput it on, forget it\u2019s on\u201d feel"
+    },
+    {
+      "key": "Fast Action Wicking",
+      "value": "Pulls moisture away from skin. Fast drying"
+    },
+    {
+      "key": "All Weather Performance",
+      "value": "Cool in the summer, warm in the winter"
+    }
+  ],
   "url": "https://vpo.ca/product/344377/spey-fly-crew-lightweight-cushion-socks-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Royal Robbins Redwood Plaid SS - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Back length",
+      "value": "31 in"
+    },
+    {
+      "key": "Weight",
+      "value": "5.4 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard fit"
+    },
+    {
+      "key": "Sleeve type",
+      "value": "Short sleeve"
+    },
+    {
+      "key": "Closing",
+      "value": "Buttons"
+    }
+  ],
   "url": "https://vpo.ca/product/346083/redwood-plaid-ss-mens"
 }

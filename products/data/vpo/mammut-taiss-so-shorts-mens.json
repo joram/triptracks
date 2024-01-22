@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Taiss SO Shorts - Mens",
   "price_cents": 1480000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "robust double weave fabric with four-way stretch"
+    },
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "robust double weave fabric with four-way stretch"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "254 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343426/taiss-so-shorts-mens"
 }

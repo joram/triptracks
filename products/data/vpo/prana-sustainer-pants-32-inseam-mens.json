@@ -5,6 +5,11 @@
   ],
   "name": "Prana Sustainer Pants, 32\" Inseam - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/310726/sustainer-pants-32-inseam-mens"
 }

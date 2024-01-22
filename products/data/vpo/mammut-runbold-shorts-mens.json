@@ -5,6 +5,31 @@
   ],
   "name": "Mammut Runbold Shorts - Mens",
   "price_cents": 959600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "polyamide-elastane woven with midori\u00ae"
+    },
+    {
+      "key": "Lining 1 (B2B)",
+      "value": "polyamide mesh"
+    },
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "polyamide-elastane woven with midori\u00ae"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "216 g"
+    },
+    {
+      "key": "Low packing volume",
+      "value": "perfect for taking anywhere"
+    }
+  ],
   "url": "https://vpo.ca/product/343410/runbold-shorts-mens"
 }

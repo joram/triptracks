@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Run Targeted Cushion Mid Crew Socks - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Merino Wool, 13% Nylon, 29% Recycled Nylon, 3% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Mid Crew (overall 6.5\")"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Targeted Cushion"
+    }
+  ],
   "url": "https://vpo.ca/product/343946/run-targeted-cushion-mid-crew-socks-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Iceventure Bibs, Reg - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Plain Weave 2L 100% Polyester"
+    },
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Generation Dobby 100% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/350420/iceventure-bibs-reg-mens"
 }

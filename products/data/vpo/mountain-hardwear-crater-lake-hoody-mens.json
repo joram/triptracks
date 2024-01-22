@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Crater Lake Hoody - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "\u00a0Materials",
+      "value": "88% Polyester, 12% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.25 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "6 oz"
+    },
+    {
+      "key": "Uses",
+      "value": "Superlight Backcountry, Rock Climbing, Backpacking"
+    }
+  ],
   "url": "https://vpo.ca/product/342859/crater-lake-hoody-mens"
 }

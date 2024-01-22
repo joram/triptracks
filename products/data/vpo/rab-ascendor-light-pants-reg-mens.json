@@ -5,6 +5,19 @@
   ],
   "name": "Rab Ascendor Light Pants, Reg - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary fabric",
+      "value": "Matrix\u2122 single weave stretch nylon (108 g"
+    },
+    {
+      "key": "Secondary",
+      "value": "91% Polyamide, 9% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "313 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333219/ascendor-light-pants-reg-mens"
 }

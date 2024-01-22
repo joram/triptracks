@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Fleece Jacket - Mens",
   "price_cents": 1999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "64% Recycled polyester, 30% virgin Merino wool, 6% elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "100% Virgin Merino Wool"
+    },
+    {
+      "key": "Weight",
+      "value": "454 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340685/fleece-jacket-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Mitre Peak GTX Jacket - Mens",
   "price_cents": 5100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342643/mitre-peak-gtx-jacket-mens"
 }

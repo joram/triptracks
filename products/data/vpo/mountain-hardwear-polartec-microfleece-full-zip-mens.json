@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Polartec Microfleece Full Zip - Mens",
   "price_cents": 959600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec 100 Microfleece"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.25 in"
+    },
+    {
+      "key": "Weight",
+      "value": "9.5 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342937/polartec-microfleece-full-zip-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox 150 Cool Mountain Face T-Shirt - Mens",
   "price_cents": 1039600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "140 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/340680/150-cool-mountain-face-t-shirt-mens"
 }

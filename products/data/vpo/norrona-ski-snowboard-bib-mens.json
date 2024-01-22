@@ -5,6 +5,39 @@
   ],
   "name": "Norrona Ski/Snowboard Bib - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% Polyamide (Nylon), 15% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "124 g"
+    },
+    {
+      "key": "NOTE",
+      "value": "The zipper length for matching the pants has these measurements per size"
+    },
+    {
+      "key": "S",
+      "value": "88 cm"
+    },
+    {
+      "key": "M",
+      "value": "94 cm"
+    },
+    {
+      "key": "L",
+      "value": "100 cm"
+    },
+    {
+      "key": "XL",
+      "value": "106 cm"
+    },
+    {
+      "key": "XXL",
+      "value": "112 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/333656/skisnowboard-bib-mens"
 }

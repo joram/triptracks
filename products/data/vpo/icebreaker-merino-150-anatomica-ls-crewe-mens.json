@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Merino 150 Anatomica LS Crewe - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "83% Wool, 12% Nylon, 5% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "269 g"
+    }
+  ],
   "url": "https://vpo.ca/product/292891/merino-150-anatomica-ls-crewe-mens"
 }

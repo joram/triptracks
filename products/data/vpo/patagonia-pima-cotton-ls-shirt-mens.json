@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Pima Cotton LS Shirt - Mens",
   "price_cents": 763000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4-oz 100% organic pima cotton yarn-dyed twill"
+    },
+    {
+      "key": "Weight",
+      "value": "272 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340230/pima-cotton-ls-shirt-mens"
 }

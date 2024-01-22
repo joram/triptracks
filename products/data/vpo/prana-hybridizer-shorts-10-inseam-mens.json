@@ -5,6 +5,11 @@
   ],
   "name": "Prana Hybridizer Shorts, 10\" Inseam - Mens",
   "price_cents": 1090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Shell"
+    }
+  ],
   "url": "https://vpo.ca/product/300230/hybridizer-shorts-10-inseam-mens"
 }

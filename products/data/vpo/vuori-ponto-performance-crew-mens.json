@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Ponto Performance Crew - Mens",
   "price_cents": 1176000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "89% Recycled Polyester, 11% Elastane"
+    },
+    {
+      "key": "Body Length",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/330129/ponto-performance-crew-mens"
 }

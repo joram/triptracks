@@ -5,6 +5,19 @@
   ],
   "name": "Devold Sula Merino 130 Tee - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fiber",
+      "value": "Superfine wool 17.5 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Areas of use",
+      "value": "Lifestyle"
+    }
+  ],
   "url": "https://vpo.ca/product/346843/sula-merino-130-tee-mens"
 }

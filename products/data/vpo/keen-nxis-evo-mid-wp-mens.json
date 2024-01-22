@@ -5,6 +5,19 @@
   ],
   "name": "Keen Nxis Evo Mid WP - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Famous Comfort Fit",
+      "value": "18 years in the making, our original fit is built to hold your heel firmly in place and give your toes room to spread out"
+    },
+    {
+      "key": "Iconic Toe Protection",
+      "value": "Move fast over a variety of surfaces with confidence, not stubbed toes"
+    },
+    {
+      "key": "All-Terrain Tread",
+      "value": "Our proprietary horseshoe tread pattern grips from heel brake to toe roll"
+    }
+  ],
   "url": "https://vpo.ca/product/344212/nxis-evo-mid-wp-mens"
 }

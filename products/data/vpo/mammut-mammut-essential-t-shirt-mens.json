@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Mammut Essential T-Shirt - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BioRE\u00ae Organic Cotton - 100% Bio Cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "144 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333048/mammut-essential-t-shirt-mens"
 }

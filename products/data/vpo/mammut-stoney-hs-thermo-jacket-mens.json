@@ -5,6 +5,43 @@
   ],
   "name": "Mammut Stoney HS Thermo Jacket - Mens",
   "price_cents": 6200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "DryTechnology Pro 2-Layer - 88% Polyamide, 12% Spandex"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyurethane"
+    },
+    {
+      "key": "Insert",
+      "value": "88% Polyamide, 12% Spandex"
+    },
+    {
+      "key": "Insert Membrane",
+      "value": "100% Polyurethane"
+    },
+    {
+      "key": "Lining",
+      "value": "57% Polyester, 43% Polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "1.04 kg"
+    },
+    {
+      "key": "Breathability",
+      "value": "20.000 g"
+    },
+    {
+      "key": "Water column",
+      "value": "20000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/330779/stoney-hs-thermo-jacket-mens"
 }

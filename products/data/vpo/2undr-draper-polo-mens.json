@@ -5,6 +5,15 @@
   ],
   "name": "2Undr Draper Polo - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Cotton 40% Polyester 4% Lycra"
+    },
+    {
+      "key": "Modern Fit",
+      "value": "Close Fitting without being constricting through the chest, body and sleeves"
+    }
+  ],
   "url": "https://vpo.ca/product/345650/draper-polo-mens"
 }

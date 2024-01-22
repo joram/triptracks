@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Mt Eyak/2 Jacket - Mens",
   "price_cents": 1619700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "20D Semi Matte Ripstop (100% Recycled Nylon)"
+    },
+    {
+      "key": "Insulation",
+      "value": "600-Fill RDS-Certified Down (75% Duck Down, 25% Duck Feather)"
+    },
+    {
+      "key": "Weight",
+      "value": "8.47 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/329978/mt-eyak2-jacket-mens"
 }

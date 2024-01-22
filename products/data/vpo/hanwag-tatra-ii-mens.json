@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Tatra II - Mens",
   "price_cents": 4700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae AW Integral"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather"
+    },
+    {
+      "key": "Weight",
+      "value": "1520 g"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/318889/tatra-ii-mens"
 }

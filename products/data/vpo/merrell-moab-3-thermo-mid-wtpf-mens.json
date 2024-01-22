@@ -5,6 +5,15 @@
   ],
   "name": "Merrell Moab 3 Thermo Mid WTPF - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "1 lb 3 oz"
+    },
+    {
+      "key": "Lug",
+      "value": "5mm"
+    }
+  ],
   "url": "https://vpo.ca/product/347493/moab-3-thermo-mid-wtpf-mens"
 }

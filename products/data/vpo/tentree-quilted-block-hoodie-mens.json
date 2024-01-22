@@ -5,6 +5,11 @@
   ],
   "name": "tentree Quilted Block Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Quilted Fleece - 78% Organic Cotton, 22% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/338501/quilted-block-hoodie-mens"
 }

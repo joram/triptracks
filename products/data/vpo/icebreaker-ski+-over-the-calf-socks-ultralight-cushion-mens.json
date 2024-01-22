@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Ski+ Over The Calf Socks - Ultralight Cushion - Mens",
   "price_cents": 248000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "63% Merino Wool, 35% Nylon, 2% LYCRA\u00ae - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Height",
+      "value": "Over The Calf"
+    }
+  ],
   "url": "https://vpo.ca/product/321953/ski-over-the-calf-socks-ultralight-cushion-mens"
 }

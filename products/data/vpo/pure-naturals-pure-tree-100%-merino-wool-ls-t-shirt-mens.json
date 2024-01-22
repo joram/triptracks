@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals PURE Tree 100% Merino Wool LS T-Shirt - Mens",
   "price_cents": 629700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Australian Merino wool jersey (16.5 microns,160 g)"
+    }
+  ],
   "url": "https://vpo.ca/product/349096/pure-tree-100-merino-wool-ls-t-shirt-mens"
 }

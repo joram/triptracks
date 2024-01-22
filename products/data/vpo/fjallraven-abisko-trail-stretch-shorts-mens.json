@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Abisko Trail Stretch Shorts - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "89% Polyamide, 11% Elastane"
+    },
+    {
+      "key": "Leg type",
+      "value": "Shorts"
+    },
+    {
+      "key": "Weight",
+      "value": "200 g - size 50"
+    }
+  ],
   "url": "https://vpo.ca/product/363455/abisko-trail-stretch-shorts-mens"
 }

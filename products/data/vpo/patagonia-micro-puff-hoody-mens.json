@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Micro Puff Hoody - Mens",
   "price_cents": 4090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell and lining",
+      "value": "Pertex\u00ae Quantum 0.8-oz 10-denier NetPlus\u00ae 100% postconsumer recycled nylon ripstop made from recycled fishing nets to help reduce ocean plastic pollution; with a PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Insulation",
+      "value": "65-g PlumaFill 100% recycled polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348796/micro-puff-hoody-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Prana Mountain Drift LS - Standard - Mens",
   "price_cents": 872000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348256/mountain-drift-ls-standard-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Ski Targeted Cushion Always Explore Print Over The Calf Socks - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "57% Merino Wool, 10% Nylon, 30% Recycled Nylon, 2% Elastane, 1% Polyester"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Targeted Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "Over-the-Calf"
+    },
+    {
+      "key": "Overall Height",
+      "value": "14 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349280/ski-targeted-cushion-always-explore-print-over-the-calf-socks-mens"
 }

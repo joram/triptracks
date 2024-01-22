@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Ovik Lite Padded Shirt - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Silent Eco",
+      "value": "65% polyester, 35% cotton- 100% cotton"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Filling",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "803 g in size M"
+    }
+  ],
   "url": "https://vpo.ca/product/349891/ovik-lite-padded-shirt-mens"
 }

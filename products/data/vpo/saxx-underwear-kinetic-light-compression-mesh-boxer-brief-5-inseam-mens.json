@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Kinetic Light-Compression Mesh Boxer Brief, 5\" Inseam - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% Nylon, 15% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/327972/kinetic-light-compression-mesh-boxer-brief-5-inseam-mens"
 }

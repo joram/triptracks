@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox 185 Rock`N`Wool Boxer - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Virgin Wool (OWP-Merino)"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Medium"
+    },
+    {
+      "key": "Weight",
+      "value": "92 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340824/185-rocknwool-boxer-mens"
 }

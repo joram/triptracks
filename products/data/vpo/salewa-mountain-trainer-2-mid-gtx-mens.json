@@ -5,6 +5,35 @@
   ],
   "name": "Salewa Mountain Trainer 2 Mid GTX - Mens",
   "price_cents": 3599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Highly wear-resistant fabric, 1.6 mm suede leather, 360 degree full rubber rand, 3F System with Steel Cables"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Mid Stiff - Nylon"
+    },
+    {
+      "key": "Footbed",
+      "value": "MFF+"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual density expanded PU"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram WTC 2"
+    },
+    {
+      "key": "Drop",
+      "value": "12 mm (Heel Stack Height"
+    }
+  ],
   "url": "https://vpo.ca/product/345121/mountain-trainer-2-mid-gtx-mens"
 }

@@ -5,6 +5,43 @@
   ],
   "name": "Mammut Alto Guide HS Hooded Jacket - Mens",
   "price_cents": 4250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining 1 (B2B)",
+      "value": "Polyamide-Elastane Warp Knit"
+    },
+    {
+      "key": "Denier (main material)",
+      "value": "40D x 40D"
+    },
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "Polyamide 3L Laminate with Bio Based Membrane"
+    },
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "Polyamide 3L Laminate with Bio Based Membrane"
+    },
+    {
+      "key": "Weight",
+      "value": "472 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "82 cm"
+    },
+    {
+      "key": "Breathability",
+      "value": "20.000 g"
+    },
+    {
+      "key": "Water column",
+      "value": "20000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/343341/alto-guide-hs-hooded-jacket-mens"
 }

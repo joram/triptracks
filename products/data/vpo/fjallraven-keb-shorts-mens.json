@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Keb Shorts - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Stretch",
+      "value": "63% polyamide, 26% polyester, 11% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g (Size 48)"
+    },
+    {
+      "key": "Inseam",
+      "value": "10.5 in"
+    },
+    {
+      "key": "Reinforcment",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/325501/keb-shorts-mens"
 }

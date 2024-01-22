@@ -5,6 +5,31 @@
   ],
   "name": "La Sportiva TX4 Mid GTX - Mens",
   "price_cents": 3070000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort"
+    },
+    {
+      "key": "Midsole",
+      "value": "Traverse Injection MEMlex"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Mega-Grip\u2122 Traverse with Impact Brake System\u2122"
+    },
+    {
+      "key": "Construction",
+      "value": "Board Lasted"
+    },
+    {
+      "key": "Last",
+      "value": "Traverse"
+    }
+  ],
   "url": "https://vpo.ca/product/299819/tx4-mid-gtx-mens"
 }

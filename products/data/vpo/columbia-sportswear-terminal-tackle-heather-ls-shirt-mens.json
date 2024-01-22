@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Terminal Tackle Heather LS Shirt - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular*"
+    },
+    {
+      "key": "Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349665/terminal-tackle-heather-ls-shirt-mens"
 }

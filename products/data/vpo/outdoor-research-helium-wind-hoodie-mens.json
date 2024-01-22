@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Helium Wind Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bbluesign\u00ae approved Pertex\u00ae Quantum with Diamond Fuse Technology 100% nylon 30D ripstop"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332563/helium-wind-hoodie-mens"
 }

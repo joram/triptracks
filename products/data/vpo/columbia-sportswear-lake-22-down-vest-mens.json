@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Lake 22 Down Vest - Mens",
   "price_cents": 1199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Insulation",
+      "value": "650 Fill Power Down Insulation, RDS Certified."
+    }
+  ],
   "url": "https://vpo.ca/product/350475/lake-22-down-vest-mens"
 }

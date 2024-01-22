@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 175 Everyday LS Half Zip - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310225/merino-175-everyday-ls-half-zip-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Rab Infinity Jacket - Mens",
   "price_cents": 7000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Zoned Gore-Tex Infinium\u2122 Windstopper\u00ae fabrics, 30D (64 g"
+    },
+    {
+      "key": "Lining",
+      "value": "20D recycled (38 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "800FP European Goose Down with Nikwax Fluorocarbon-Free Hydrophobic Finish (250g"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "805 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "31.1 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336797/infinity-jacket-mens"
 }

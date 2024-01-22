@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Classic Retro-X Jacket - Mens",
   "price_cents": 2850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "13-oz 100% polyester (solids"
+    },
+    {
+      "key": "Pocket bags",
+      "value": "3.2-oz 100% polyester (50% recycled) warp-knit mesh with a windproof barrier and HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Chest pocket, outer collar and wind flap",
+      "value": "3.4-oz 100% nylon plain weave with a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Weight",
+      "value": "773.94 g"
+    }
+  ],
   "url": "https://vpo.ca/product/297741/classic-retro-x-jacket-mens"
 }

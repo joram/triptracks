@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Ultimate VII SO Jacket - Mens",
   "price_cents": 3399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "3L Gore-Tex Infinium\u2122 Windstopper\u00ae - 100% Polyester (recycled)"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polytetrafluoroethylene"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "79 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "454 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343441/ultimate-vii-so-jacket-mens"
 }

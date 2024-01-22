@@ -5,6 +5,31 @@
   ],
   "name": "Outdoor Research Astroman Sun Hoodie - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 84% Nylon, 16% Spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "160 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "30.25 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Light Colors",
+      "value": "UPF 30"
+    },
+    {
+      "key": "Dark Colors",
+      "value": "UPF 50"
+    }
+  ],
   "url": "https://vpo.ca/product/332606/astroman-sun-hoodie-mens"
 }

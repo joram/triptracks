@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Valepp - Mens",
   "price_cents": 6100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Full-grain leather, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Vi-Lite"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather (chromium-free)"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 15.5 oz"
+    },
+    {
+      "key": "Upper Material Processing",
+      "value": "waxed"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike, Travel, Traditional"
+    }
+  ],
   "url": "https://vpo.ca/product/344424/valepp-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Rab Sonic Tee - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyester (56% Recycled Polyester 44% Conventional)"
+    },
+    {
+      "key": "Weight",
+      "value": "96 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "70 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342809/sonic-tee-mens"
 }

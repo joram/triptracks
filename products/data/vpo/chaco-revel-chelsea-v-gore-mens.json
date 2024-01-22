@@ -5,6 +5,11 @@
   ],
   "name": "Chaco Revel Chelsea V-Gore - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "9.81 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/337901/revel-chelsea-v-gore-mens"
 }

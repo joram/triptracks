@@ -5,6 +5,15 @@
   ],
   "name": "Duer Performance Denim Slim Jeans, 30\" Inseam - Wash - Mens",
   "price_cents": 1490000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "70% Cotton, 28% Coolmax\u00ae Polyester, 2% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343612/performance-denim-slim-jeans-30-inseam-wash-mens"
 }

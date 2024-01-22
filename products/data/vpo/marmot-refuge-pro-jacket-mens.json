@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Refuge Pro Jacket - Mens",
   "price_cents": 5250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 12 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347912/refuge-pro-jacket-mens"
 }

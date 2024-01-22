@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Acrux TR GTX - Mens",
   "price_cents": 2719600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard Width"
+    },
+    {
+      "key": "Weight",
+      "value": "550 g"
+    },
+    {
+      "key": "Activity",
+      "value": "Hiking"
+    }
+  ],
   "url": "https://vpo.ca/product/325013/acrux-tr-gtx-mens"
 }

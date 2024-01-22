@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Stealth SS - Mens",
   "price_cents": 760000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Polyester - 80 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343270/stealth-ss-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Bridgedale Hike Midweight Merino Endurance Boot Socks - Mens",
   "price_cents": 339500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Height",
+      "value": "Boot"
+    }
+  ],
   "url": "https://vpo.ca/product/314364/hike-midweight-merino-endurance-boot-socks-mens"
 }

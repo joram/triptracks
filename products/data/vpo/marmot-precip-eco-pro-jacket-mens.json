@@ -5,6 +5,23 @@
   ],
   "name": "Marmot PreCip Eco Pro Jacket - Mens",
   "price_cents": 2200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "14 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342695/precip-eco-pro-jacket-mens"
 }

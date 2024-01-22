@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Cascade Merino Flex 200 LS - AOP - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Flex - 81% Merino Wool 12% Nylon 7% Elastane - 180gsm"
+    },
+    {
+      "key": "Weight",
+      "value": "251 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350013/cascade-merino-flex-200-ls-aop-mens"
 }

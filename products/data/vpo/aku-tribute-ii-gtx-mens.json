@@ -5,6 +5,43 @@
   ],
   "name": "Aku Tribute II GTX - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Performance Comfort"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram Sendera"
+    },
+    {
+      "key": "Footbed",
+      "value": "AKU Felt"
+    },
+    {
+      "key": "Stiffness",
+      "value": "Medium"
+    },
+    {
+      "key": "Lasting board",
+      "value": "TPU"
+    },
+    {
+      "key": "Midsole",
+      "value": "Injected PU"
+    },
+    {
+      "key": "Upper",
+      "value": "2.0mm Full Grain Leather"
+    },
+    {
+      "key": "Resoleable",
+      "value": "No"
+    },
+    {
+      "key": "Gore-Tex",
+      "value": "Keep your feet dry in all conditions with the integrated waterproof GORE-TEX Performance Comfort membrane"
+    }
+  ],
   "url": "https://vpo.ca/product/335140/tribute-ii-gtx-mens"
 }

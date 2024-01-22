@@ -5,6 +5,39 @@
   ],
   "name": "NRS Canada Recoil GTX Pro Dry Bib - Mens",
   "price_cents": 10950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "3-Layer GORE-TEX Pro"
+    },
+    {
+      "key": "Weight",
+      "value": "1 kg"
+    },
+    {
+      "key": "Waterproof",
+      "value": "Yes"
+    },
+    {
+      "key": "Breathable",
+      "value": "Yes"
+    },
+    {
+      "key": "Waist System",
+      "value": "Full-height bib with 13"
+    },
+    {
+      "key": "Ankle Closures",
+      "value": "Gathered elastic"
+    },
+    {
+      "key": "Pockets",
+      "value": "1 - Zippered thigh"
+    },
+    {
+      "key": "Latex Ankle Gaskets",
+      "value": "No"
+    }
+  ],
   "url": "https://vpo.ca/product/346302/recoil-gtx-pro-dry-bib-mens"
 }

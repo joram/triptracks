@@ -5,6 +5,15 @@
   ],
   "name": "Mammut Hiking Shorts - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polyamide-Elastane Woven (94% Polyamide, 6% Elastane)"
+    },
+    {
+      "key": "Weight",
+      "value": "168 g"
+    }
+  ],
   "url": "https://vpo.ca/product/315849/hiking-shorts-mens"
 }

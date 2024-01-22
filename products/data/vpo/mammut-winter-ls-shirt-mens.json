@@ -5,6 +5,11 @@
   ],
   "name": "Mammut Winter LS Shirt - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "269 g"
+    }
+  ],
   "url": "https://vpo.ca/product/324534/winter-ls-shirt-mens"
 }

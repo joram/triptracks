@@ -5,6 +5,15 @@
   ],
   "name": "Saxx Underwear 3Six Five Pants, 29\" Inseam - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "56% Cotton, 38% Modal, 6% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/341496/3six-five-pants-29-inseam-mens"
 }

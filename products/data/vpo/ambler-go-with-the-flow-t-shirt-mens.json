@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  Go With the Flow T-Shirt - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/337746/go-with-the-flow-t-shirt-mens"
 }

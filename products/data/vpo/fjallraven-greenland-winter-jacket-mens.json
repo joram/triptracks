@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Greenland Winter Jacket - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "Supreme Microloft"
+    },
+    {
+      "key": "Fill weight",
+      "value": "115 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1260 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313402/greenland-winter-jacket-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Falketind Thermo40 Shorts - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "20D 100% recycled nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "20D 100% recycled nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% recycled polyester"
+    },
+    {
+      "key": "Inseam length",
+      "value": "30 cm (size L)"
+    },
+    {
+      "key": "Weight",
+      "value": "218 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348091/falketind-thermo40-shorts-mens"
 }

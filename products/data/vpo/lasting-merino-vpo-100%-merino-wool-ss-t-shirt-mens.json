@@ -5,6 +5,11 @@
   ],
   "name": "Lasting Merino VPO 100% Merino Wool SS T-Shirt - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Merino Wool, 160 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328491/vpo-100-merino-wool-ss-t-shirt-mens"
 }

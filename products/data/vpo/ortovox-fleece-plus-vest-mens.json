@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Fleece Plus Vest - Mens",
   "price_cents": 3250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Material",
+      "value": "50 % Polyester + 41 % Virgin Wool + 9 % Elastane"
+    },
+    {
+      "key": "Outer Inserts",
+      "value": "100 % Polyurethane"
+    },
+    {
+      "key": "Inner Inserts",
+      "value": "67 % Polyester + 26 % Virgin Wool + 7 % Elastane"
+    },
+    {
+      "key": "Pocket Lining",
+      "value": "72 % Polyester + 28 % Virgin Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/349416/fleece-plus-vest-mens"
 }

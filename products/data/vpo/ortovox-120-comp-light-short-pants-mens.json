@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox 120 Comp Light Short Pants - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Virgin Merino Wool, 30% Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Weight",
+      "value": "64 g"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Short"
+    }
+  ],
   "url": "https://vpo.ca/product/316215/120-comp-light-short-pants-mens"
 }

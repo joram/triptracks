@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker ZoneKnit Shorts - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Main Body"
+    }
+  ],
   "url": "https://vpo.ca/product/348810/zoneknit-shorts-mens"
 }

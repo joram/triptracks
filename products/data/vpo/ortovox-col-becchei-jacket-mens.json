@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Col Becchei Jacket - Mens",
   "price_cents": 4699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "75% Polyamide, 18% Wool (Owp-merino), 7% Elastane"
+    },
+    {
+      "key": "Front Inserts",
+      "value": "79% Polyamide, 21% Elastane"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyurethane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/349474/col-becchei-jacket-mens"
 }

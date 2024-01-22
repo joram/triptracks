@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Space T-Shirt Print - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/333772/space-t-shirt-print-mens"
 }

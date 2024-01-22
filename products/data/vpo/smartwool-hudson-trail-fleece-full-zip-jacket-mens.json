@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Hudson Trail Fleece Full Zip Jacket - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Solid",
+      "value": "45% Wool, 45% Polyester, 5% Nylon, 5% Other Fibers"
+    },
+    {
+      "key": "Fairisle",
+      "value": "55% Wool, 35% Polyester, 5% Nylon, 5% Other Fibers"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/339226/hudson-trail-fleece-full-zip-jacket-mens"
 }

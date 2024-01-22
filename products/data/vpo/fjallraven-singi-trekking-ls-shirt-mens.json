@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Singi Trekking LS Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    }
+  ],
   "url": "https://vpo.ca/product/285463/singi-trekking-ls-shirt-mens"
 }

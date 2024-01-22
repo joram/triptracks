@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Terminal Tackle LS Shirt, Extended - Mens",
   "price_cents": 550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Omni-Shade, Omni-Wick 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "32 in"
+    },
+    {
+      "key": "Uses",
+      "value": "Fishing"
+    }
+  ],
   "url": "https://vpo.ca/product/350021/terminal-tackle-ls-shirt-extended-mens"
 }

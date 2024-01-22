@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Quandary Pants, Short - Mens",
   "price_cents": 763000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4.2-oz 95% nylon (65% recycled), 5% spandex with a DWR (durable water repellent) finish and 40+ UPF sun protection"
+    },
+    {
+      "key": "Weight",
+      "value": "269 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316890/quandary-pants-short-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Hiker Coolmax Boot Midweight Cushion Socks - Mens",
   "price_cents": 379500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "39% Coolmax Polyester, 30% Nylon, 28% Acrylic, 3% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, backpacking boots, walking boots"
+    }
+  ],
   "url": "https://vpo.ca/product/346973/hiker-coolmax-boot-midweight-cushion-socks-mens"
 }

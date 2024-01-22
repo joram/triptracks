@@ -5,6 +5,19 @@
   ],
   "name": "Marmot PreCip Eco Full Zip Pants, Reg - Mens",
   "price_cents": 1600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122, 100% Pre-Consumer Recycled Nylon, Ripstop, 78g"
+    },
+    {
+      "key": "Weight",
+      "value": "11 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316430/precip-eco-full-zip-pants-reg-mens"
 }

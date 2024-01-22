@@ -5,6 +5,19 @@
   ],
   "name": "The North Face Wander SS Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Solid",
+      "value": "96% recycled polyester, 4% elastane-knit jersey with FlashDry\u2122 - 141 g"
+    },
+    {
+      "key": "Heather",
+      "value": "47%recycled polyester, 47%polyester, 6% elastane-knit jersey with FlashDry - 149 g"
+    },
+    {
+      "key": "Center Back",
+      "value": "27 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343467/wander-ss-shirt-mens"
 }

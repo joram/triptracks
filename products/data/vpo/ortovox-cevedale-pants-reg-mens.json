@@ -5,6 +5,31 @@
   ],
   "name": "Ortovox Cevedale Pants, Reg - Mens",
   "price_cents": 4499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Material",
+      "value": "79% polyamide, 11% wool (OWP-MERINO), 10% elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "Outer"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inside",
+      "value": "100% nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "454 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/343254/cevedale-pants-reg-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Hold `em Shorty Boxer - Mens",
   "price_cents": 650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Merino Air-Con 140 - 83% Merino Wool, 13% Nylon, 4% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "140 gsm"
+    }
+  ],
   "url": "https://vpo.ca/product/338995/hold-em-shorty-boxer-mens"
 }

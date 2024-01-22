@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Eldridge SS - Mens",
   "price_cents": 700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "61% Modal, 22% Recycled Polyester, 17% Polyester, 187g"
+    },
+    {
+      "key": "Weight",
+      "value": "14.11 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.25 in"
+    }
+  ],
   "url": "https://vpo.ca/product/265577/eldridge-ss-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "ON Running Cloudvista - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "280 g"
+    },
+    {
+      "key": "Heel Toe Drop",
+      "value": "7 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/346587/cloudvista-mens"
 }

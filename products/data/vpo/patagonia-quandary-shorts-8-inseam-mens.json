@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia Quandary Shorts, 8\" Inseam - Mens",
   "price_cents": 510000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "4.2-oz 95% nylon (65% recycled), 5% spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/317221/quandary-shorts-8-inseam-mens"
 }

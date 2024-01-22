@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Phantom Down Jacket - Mens",
   "price_cents": 3999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Pertex \u00ae 20D Diamond Fused Ripstop (100% Nylon)"
+    },
+    {
+      "key": "Insulation",
+      "value": "800-Fill RDS-Certified Down"
+    },
+    {
+      "key": "Fit",
+      "value": "Alpine"
+    },
+    {
+      "key": "Center Back",
+      "value": "28 in"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 0.5 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/331343/phantom-down-jacket-mens"
 }

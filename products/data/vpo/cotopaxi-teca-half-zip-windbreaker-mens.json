@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Teca Half-Zip Windbreaker - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "Repurposed Polyester Taffeta with DWR Finish and 600 mm PU Backer"
+    },
+    {
+      "key": "Shell 2",
+      "value": "Repurposed Polyester Ripstop with DWR Finish and 600 mm PU Backer"
+    }
+  ],
   "url": "https://vpo.ca/product/344457/teca-half-zip-windbreaker-mens"
 }

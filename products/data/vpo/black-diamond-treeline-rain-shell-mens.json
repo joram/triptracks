@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Treeline Rain Shell - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50D Nylon Ripstop BD.dry\u2122 2.5L with PFC-Free DWR finish (100% Nylon, 95 g"
+    },
+    {
+      "key": "Weight",
+      "value": "254 g"
+    },
+    {
+      "key": "Front Length",
+      "value": "29.5 in from High Shoulder Point"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/334427/treeline-rain-shell-mens"
 }

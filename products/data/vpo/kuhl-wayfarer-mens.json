@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Wayfarer - Mens",
   "price_cents": 479600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wildfibre\u2122 Organic Cotton - 4.7 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/315020/wayfarer-mens"
 }

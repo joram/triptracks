@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Moloa - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Antiqued, waxed nubuck leather with soft, moisture-wicking microfiber lining and elastic gore panels for comfort and customized fit"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual-density PU footbed with a gel insert and a soft microfiber footbed cover. Removable and washable"
+    },
+    {
+      "key": "Outsole",
+      "value": "All-weather, non-marking rubber outsole is wrapped with premium full-grain leather and features outsole pods for flexibility and traction"
+    }
+  ],
   "url": "https://vpo.ca/product/272125/moloa-mens"
 }

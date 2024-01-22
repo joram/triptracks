@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Notion Shorts - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch Cotton Twill - 98% Organic Cotton, 2 % Elastane, 195 gsm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "298 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "11 in"
+    }
+  ],
   "url": "https://vpo.ca/product/319346/notion-shorts-mens"
 }

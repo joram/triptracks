@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear J Tree Shorts, 7\" Inseam - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Summer Stretch Ripstop (96% Cotton, 4% Elastane)"
+    },
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "4.8 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/326035/j-tree-shorts-7-inseam-mens"
 }

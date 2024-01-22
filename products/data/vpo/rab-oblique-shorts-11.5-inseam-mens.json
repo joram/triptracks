@@ -5,6 +5,15 @@
   ],
   "name": "Rab Oblique Shorts, 11.5\" Inseam - Mens",
   "price_cents": 900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "231 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "11.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/325553/oblique-shorts-115-inseam-mens"
 }

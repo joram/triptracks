@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Round-Neck Sweater - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% wool, G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "365 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329372/ovik-round-neck-sweater-mens"
 }

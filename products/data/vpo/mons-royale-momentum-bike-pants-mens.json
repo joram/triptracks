@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Momentum Bike Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Micro Grid"
+    }
+  ],
   "url": "https://vpo.ca/product/346348/momentum-bike-pants-mens"
 }

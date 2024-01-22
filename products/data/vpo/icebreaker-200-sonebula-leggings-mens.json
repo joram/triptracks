@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker 200 Sonebula Leggings - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "200 g"
+    }
+  ],
   "url": "https://vpo.ca/product/336529/200-sonebula-leggings-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Snow Liner Over The Calf Socks - Light Cushion - Mens",
   "price_cents": 270000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "61% Merino Wool, 37% Nylon, 2% LYCRA\u00ae - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "74 g"
+    },
+    {
+      "key": "Height",
+      "value": "Over The Calf"
+    }
+  ],
   "url": "https://vpo.ca/product/303059/snow-liner-over-the-calf-socks-light-cushion-mens"
 }

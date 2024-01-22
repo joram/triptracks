@@ -5,6 +5,19 @@
   ],
   "name": "Keen Newport H2 - Mens",
   "price_cents": 1120000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "No Stubbed Toes",
+      "value": "Our iconic toe bumper helps keep toes protected from rocks and debris"
+    },
+    {
+      "key": "Out-of-the-Box Comfort",
+      "value": "Generous space across the forefoot and a secure heel fit"
+    },
+    {
+      "key": "10-Point Fit",
+      "value": "Quick-cinch bungee lacing for an instant secure fit, whether in whitewater or navigating a rocky trail"
+    }
+  ],
   "url": "https://vpo.ca/product/309218/newport-h2-mens"
 }

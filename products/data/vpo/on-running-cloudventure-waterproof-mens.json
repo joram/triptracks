@@ -5,6 +5,31 @@
   ],
   "name": "ON Running Cloudventure Waterproof - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "325 g"
+    },
+    {
+      "key": "Heel-Toe-Offset",
+      "value": "6 mm"
+    },
+    {
+      "key": "Surface",
+      "value": "Mixed"
+    },
+    {
+      "key": "Activity",
+      "value": "Training"
+    },
+    {
+      "key": "Stability",
+      "value": "Neutral"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Moderate"
+    }
+  ],
   "url": "https://vpo.ca/product/324782/cloudventure-waterproof-mens"
 }

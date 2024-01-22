@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Compressor Hoody - Mens",
   "price_cents": 3399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "85% Recycled Polyester, 15% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    },
+    {
+      "key": "Weight",
+      "value": "420 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337535/compressor-hoody-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Capilene Midweight Bottoms - Mens",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4.3-oz (147-g) 100% recycled polyester diamond-grid double knit with HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Weight",
+      "value": "164 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323547/capilene-midweight-bottoms-mens"
 }

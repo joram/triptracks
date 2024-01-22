@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Falketind GTX Paclite Jacket - Mens",
   "price_cents": 4399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Gore-Tex\u00ae paclite 4, 20D recycled nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "258 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341919/falketind-gtx-paclite-jacket-mens"
 }

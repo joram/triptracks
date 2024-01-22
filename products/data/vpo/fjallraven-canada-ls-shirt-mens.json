@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Canada LS Shirt - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "45% acrylic, 25% polyester, 25% wool, 5% other fibers"
+    },
+    {
+      "key": "Details",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "600 g"
+    }
+  ],
   "url": "https://vpo.ca/product/283178/canada-ls-shirt-mens"
 }

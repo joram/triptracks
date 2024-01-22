@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Liquid Point Pants - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex Paclite 2.5 L, 75d plain weave face with PFG-Free DWR finish - 125 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "275 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316663/liquid-point-pants-mens"
 }

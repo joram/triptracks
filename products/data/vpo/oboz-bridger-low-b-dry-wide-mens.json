@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Bridger Low B-Dry, Wide - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Waterproof Nubuck Leather + Abrasion-resistant Mesh, B-DRY Waterproof Membrane, Molded rubber toe cap &amp; heel counter"
+    },
+    {
+      "key": "Insole",
+      "value": "O Fit Insole\u2122"
+    },
+    {
+      "key": "Midsole",
+      "value": "Single Density Compression Molded EVA, TPU Chassis, Nylon Shank"
+    },
+    {
+      "key": "Outsole",
+      "value": "Granite Peak"
+    },
+    {
+      "key": "Construction",
+      "value": "Board lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    },
+    {
+      "key": "Volume",
+      "value": "High"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "15 mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "17.7 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/330118/bridger-low-b-dry-wide-mens"
 }

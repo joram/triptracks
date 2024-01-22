@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Snowdrifter Jacket - Mens",
   "price_cents": 4232000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "3-layer, 5-oz 75-denier 100% polyester (70% recycled) solid stretch ripstop with a soft polyester knit backer and a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Zippered pockets",
+      "value": "two handwarmers, one chest with secure media pocket with cable routing and internal access, one bicep pocket for pass and one interior drop-in"
+    }
+  ],
   "url": "https://vpo.ca/product/323737/snowdrifter-jacket-mens"
 }

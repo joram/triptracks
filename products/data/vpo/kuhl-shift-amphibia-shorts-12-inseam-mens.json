@@ -5,6 +5,23 @@
   ],
   "name": "Kuhl Shift Amphibia Shorts, 12\" Inseam - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "54% Nylon, 41% Polyester, 5% Spandex - 145 g"
+    },
+    {
+      "key": "Bottom Opening",
+      "value": "21 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "12 in"
+    },
+    {
+      "key": "Six pockets",
+      "value": "two front hand, one coin, two back and one stealth cell phone"
+    }
+  ],
   "url": "https://vpo.ca/product/301373/shift-amphibia-shorts-12-inseam-mens"
 }

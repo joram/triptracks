@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Icon T-Shirt - Mt Hand - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Air-Con - 83% Merino Wool 13% Nylon 4% Elastane - 140gsm"
+    },
+    {
+      "key": "Weight",
+      "value": "144 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349981/icon-t-shirt-mt-hand-mens"
 }

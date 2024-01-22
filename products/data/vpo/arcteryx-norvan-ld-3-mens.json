@@ -5,6 +5,23 @@
   ],
   "name": "Arcteryx Norvan LD 3 - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% EVA"
+    },
+    {
+      "key": "Weight (1/2 Pair)",
+      "value": "265 g"
+    },
+    {
+      "key": "Footwear Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Drop (Stack)",
+      "value": "6mm (29mm"
+    }
+  ],
   "url": "https://vpo.ca/product/342458/norvan-ld-3-mens"
 }

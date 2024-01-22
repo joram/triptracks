@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Lifestyle No Show Socks - Fine Gauge - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "55% Wool, 43% Nylon, 2% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Height",
+      "value": "Micro"
+    },
+    {
+      "key": "Weight",
+      "value": "25 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339990/lifestyle-no-show-socks-fine-gauge-mens"
 }

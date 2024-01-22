@@ -5,6 +5,11 @@
   ],
   "name": "Black Diamond Rocklock Climb Pants - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/341548/rocklock-climb-pants-mens"
 }

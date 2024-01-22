@@ -5,6 +5,15 @@
   ],
   "name": "Prana Vaha Straight Pants, 32\" Inseam - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Hemp, 44% Recycled Polyester, 3% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/329618/vaha-straight-pants-32-inseam-mens"
 }

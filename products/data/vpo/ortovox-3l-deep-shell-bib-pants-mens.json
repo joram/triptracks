@@ -5,6 +5,35 @@
   ],
   "name": "Ortovox 3L Deep Shell Bib Pants - Mens",
   "price_cents": 6399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Inner",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Inserts",
+      "value": "74% polyamide + 15% wool (OWP-Merino) + 11% elastane Inserts"
+    },
+    {
+      "key": "Weight",
+      "value": "644 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Loose"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/340843/3l-deep-shell-bib-pants-mens"
 }

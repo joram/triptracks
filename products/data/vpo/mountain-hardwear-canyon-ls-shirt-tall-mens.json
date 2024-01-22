@@ -5,6 +5,11 @@
   ],
   "name": "Mountain Hardwear Canyon LS Shirt, Tall - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Canyon Dobby - 100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/325903/canyon-ls-shirt-tall-mens"
 }

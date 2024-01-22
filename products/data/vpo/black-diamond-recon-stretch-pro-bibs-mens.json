@@ -5,6 +5,27 @@
   ],
   "name": "Black Diamond Recon Stretch Pro Bibs - Mens",
   "price_cents": 6499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "BD.dry\u2122 3L, 70d Nylon 4 Way Stretch with DWR Finish - 84% Nylon, 16% Elastane, 189 g"
+    },
+    {
+      "key": "Shell 2",
+      "value": "BD.dry\u2122 3L, 160d Ripstop Nylon 4 way stretch with DWR Finish - 87% Nylon, 13% Elastane, 298 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Weight",
+      "value": "903 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/347798/recon-stretch-pro-bibs-mens"
 }

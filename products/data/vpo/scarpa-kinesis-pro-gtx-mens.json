@@ -5,6 +5,39 @@
   ],
   "name": "Scarpa Kinesis Pro GTX - Mens",
   "price_cents": 4690000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "2.4mm Smoothout Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Performance Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "Activ Plus"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D PU"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Biometric"
+    },
+    {
+      "key": "Last",
+      "value": "BD"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "850 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Italy"
+    }
+  ],
   "url": "https://vpo.ca/product/268731/kinesis-pro-gtx-mens"
 }

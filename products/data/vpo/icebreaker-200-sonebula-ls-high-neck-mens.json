@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker 200 Sonebula LS High Neck - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/336531/200-sonebula-ls-high-neck-mens"
 }

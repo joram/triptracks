@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Waypoint Crewe Sweater - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "497 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/310379/waypoint-crewe-sweater-mens"
 }

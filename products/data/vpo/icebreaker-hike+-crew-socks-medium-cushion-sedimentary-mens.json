@@ -5,6 +5,23 @@
   ],
   "name": "Icebreaker Hike+ Crew Socks - Medium Cushion - Sedimentary - Mens",
   "price_cents": 248000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "58% Merino Wool, 40% Nylon, 2% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushion",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/348101/hike-crew-socks-medium-cushion-sedimentary-mens"
 }

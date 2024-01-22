@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Hardwear AP Pants, 34\" Inseam - Mens",
   "price_cents": 879600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch Cotton Nylon Sanded Canvas (75% Cotton, 23% Nylon, 2% Elastane)"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "6 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/303743/hardwear-ap-pants-34-inseam-mens"
 }

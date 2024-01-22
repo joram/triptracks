@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Covert Cardigan - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Alpenex II\u2122 - 100% Recycled Polyester - bluesign Approved Material"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "535 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350165/covert-cardigan-mens"
 }

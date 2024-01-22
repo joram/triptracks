@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Tech Lite II SS Polo - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "182 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/336720/tech-lite-ii-ss-polo-mens"
 }

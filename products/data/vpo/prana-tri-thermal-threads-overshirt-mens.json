@@ -5,6 +5,15 @@
   ],
   "name": "Prana Tri Thermal Threads Overshirt - Mens",
   "price_cents": 1519600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "75% Recycled Polyester, 25% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/329588/tri-thermal-threads-overshirt-mens"
 }

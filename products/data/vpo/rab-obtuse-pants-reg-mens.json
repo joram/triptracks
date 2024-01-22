@@ -5,6 +5,19 @@
   ],
   "name": "Rab Obtuse Pants, Reg - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "93% polyamide, 7% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "249 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342728/obtuse-pants-reg-mens"
 }

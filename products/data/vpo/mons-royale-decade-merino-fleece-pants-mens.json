@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Decade Merino Fleece Pants - Mens",
   "price_cents": 1599600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Merino Fleece - 59% Recycled Polyester 36% Merino Wool 5% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed"
+    }
+  ],
   "url": "https://vpo.ca/product/339017/decade-merino-fleece-pants-mens"
 }

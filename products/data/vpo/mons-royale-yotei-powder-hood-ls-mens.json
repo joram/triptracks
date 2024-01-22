@@ -1,10 +1,19 @@
 {
-  "description": "100% natural warmth. The technical performance of merino matched with uncompromised style, the Yotei can be worn on its own or over a baselayer. Made using their 100% Merino 200, which is warm, breathable and odour resistant.",
+  "description": "The original loose fitting base layer with 100% natural warmth. The technical performance of merino matched with uncompromised style, the Yotei can be worn on its own or over a base layer. Made using our 100% Merino, which is warm, breathable and odour resistant.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/339031.jpg"
+    "https://vpo.ca/images/product/large/349998.jpg"
   ],
   "name": "Mons Royale Yotei Powder Hood LS - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/339031/yotei-powder-hood-ls-mens"
+  "price_cents": 1999500,
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "190gsm"
+    },
+    {
+      "key": "Blend",
+      "value": "100% Merino Wool"
+    }
+  ],
+  "url": "https://vpo.ca/product/349998/yotei-powder-hood-ls-mens"
 }

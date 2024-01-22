@@ -5,6 +5,51 @@
   ],
   "name": "Black Diamond Technician Leather - Mens",
   "price_cents": 1949500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Suede Leather upper, Forefoot Internal Fit Bootie, Strobel anchored microcord midfoot cage, TPU instep lace lock, Welded TPU protective rand overlay, Sticky rubber toe cap"
+    },
+    {
+      "key": "Footbed",
+      "value": "Molded, Open Cell Performance EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "Low profile EVA Midsole, Dual Density Heel"
+    },
+    {
+      "key": "Rubber",
+      "value": "BD BlackLabel Mountain"
+    },
+    {
+      "key": "Weight",
+      "value": "315 g"
+    },
+    {
+      "key": "Heel - Drop",
+      "value": "8 mm"
+    },
+    {
+      "key": "Last",
+      "value": "BD Flat Camber Approach"
+    },
+    {
+      "key": "Stack height- Forefoot/ Heel",
+      "value": "10mm"
+    },
+    {
+      "key": "Width - Heel",
+      "value": "Narrow"
+    },
+    {
+      "key": "Width - Forefoot",
+      "value": "Medium"
+    },
+    {
+      "key": "Usage / Terrain",
+      "value": "Fast and Technical Approach, Climb, Walk"
+    }
+  ],
   "url": "https://vpo.ca/product/337756/technician-leather-mens"
 }

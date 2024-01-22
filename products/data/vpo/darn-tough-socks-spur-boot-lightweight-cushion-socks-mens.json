@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Spur Boot Lightweight Cushion Socks - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Nylon, 45% Merino Wool, 5% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, backpacking boots, hiking shoes"
+    }
+  ],
   "url": "https://vpo.ca/product/321797/spur-boot-lightweight-cushion-socks-mens"
 }

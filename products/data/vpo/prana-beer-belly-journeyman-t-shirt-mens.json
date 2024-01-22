@@ -5,6 +5,11 @@
   ],
   "name": "Prana Beer Belly Journeyman T-Shirt - Mens",
   "price_cents": 279700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/325195/beer-belly-journeyman-t-shirt-mens"
 }

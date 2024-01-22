@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Venga Rock Pants, Reg - Mens",
   "price_cents": 945000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "6.6-oz 93% Regenerative Organic Certified\u2122 cotton"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Weight",
+      "value": "417 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339882/venga-rock-pants-reg-mens"
 }

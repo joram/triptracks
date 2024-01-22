@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Capilene Midweight Zip Neck - Mens",
   "price_cents": 1090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% recycled polyester diamond-grid double knit with HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Weight",
+      "value": "204 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323550/capilene-midweight-zip-neck-mens"
 }

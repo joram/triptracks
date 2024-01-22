@@ -5,6 +5,11 @@
   ],
   "name": "Roark Gonzo Viaje SS Woven - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "70% Organic Cotton, 30% Linen"
+    }
+  ],
   "url": "https://vpo.ca/product/348098/gonzo-viaje-ss-woven-mens"
 }

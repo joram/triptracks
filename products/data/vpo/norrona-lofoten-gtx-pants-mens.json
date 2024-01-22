@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Lofoten GTX Pants - Mens",
   "price_cents": 6800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex\u00ae 3-Layer, 70D X 160D Recycled Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "718 g"
+    },
+    {
+      "key": "Waterproof",
+      "value": "min. 28,000 mm"
+    },
+    {
+      "key": "Breathablility",
+      "value": "High, down to 6 RET"
+    },
+    {
+      "key": "Windproofness",
+      "value": "100%"
+    }
+  ],
   "url": "https://vpo.ca/product/334010/lofoten-gtx-pants-mens"
 }

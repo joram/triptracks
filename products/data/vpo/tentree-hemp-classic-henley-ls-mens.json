@@ -5,6 +5,11 @@
   ],
   "name": "tentree Hemp Classic Henley LS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Hemp Jersey - 55% Hemp, 45% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/335882/hemp-classic-henley-ls-mens"
 }

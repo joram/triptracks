@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Law Flannel LS - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "60% Organic Cotton, 40% Tencel"
+    }
+  ],
   "url": "https://vpo.ca/product/328960/law-flannel-ls-mens"
 }

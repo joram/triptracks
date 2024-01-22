@@ -5,6 +5,19 @@
   ],
   "name": "Rab Quest Pull-On - Mens",
   "price_cents": 1100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "383 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "28.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336878/quest-pull-on-mens"
 }

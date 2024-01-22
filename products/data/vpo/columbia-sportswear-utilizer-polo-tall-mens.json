@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Utilizer Polo, Tall - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349677/utilizer-polo-tall-mens"
 }

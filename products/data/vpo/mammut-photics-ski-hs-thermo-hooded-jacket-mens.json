@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Photics Ski HS Thermo Hooded Jacket - Mens",
   "price_cents": 12999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Denier (main material)",
+      "value": "7Dx7D"
+    },
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "light weight downproof fabric"
+    },
+    {
+      "key": "Lining 1 (B2B)",
+      "value": "light weight downproof fabric"
+    },
+    {
+      "key": "Laser Fuse Technology",
+      "value": "Laser welded seams without stitching to avoid down leakage; narrow seams reduce cold spots for better heat retention"
+    }
+  ],
   "url": "https://vpo.ca/product/350304/photics-ski-hs-thermo-hooded-jacket-mens"
 }

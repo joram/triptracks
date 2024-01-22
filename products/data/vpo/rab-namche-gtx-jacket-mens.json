@@ -5,6 +5,27 @@
   ],
   "name": "Rab Namche GTX Jacket - Mens",
   "price_cents": 3680000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Face",
+      "value": "100% Recycled Polyester, ePTFE Membrane"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "75D Recycled GORE-TEX 3-Layer construction waterproof technology with PFCec Free DWR (162gsm) HH"
+    },
+    {
+      "key": "Backer",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "434 g"
+    },
+    {
+      "key": "\u2022 Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/348924/namche-gtx-jacket-mens"
 }

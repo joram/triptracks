@@ -5,6 +5,15 @@
   ],
   "name": "Bridgedale Hike Lightweight Merino Endurance Boot Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "31% Merino wool, 9% New wool, 35% Nylon"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    }
+  ],
   "url": "https://vpo.ca/product/314361/hike-lightweight-merino-endurance-boot-socks-mens"
 }

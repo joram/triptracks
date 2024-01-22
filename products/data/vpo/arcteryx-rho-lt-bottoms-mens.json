@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rho LT Bottoms - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Torrent\u2122 190 with Polygiene\u00ae- 84% polyester, 16% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "180 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Next to Skin"
+    }
+  ],
   "url": "https://vpo.ca/product/338110/rho-lt-bottoms-mens"
 }

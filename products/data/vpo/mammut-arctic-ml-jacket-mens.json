@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Arctic ML Jacket - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "\u00a0 Materials",
+      "value": "Polartec\u00ae Thermal Pro\u00ae - 100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "590 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/310005/arctic-ml-jacket-mens"
 }

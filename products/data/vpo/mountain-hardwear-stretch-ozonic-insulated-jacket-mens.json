@@ -5,6 +5,31 @@
   ],
   "name": "Mountain Hardwear Stretch Ozonic Insulated Jacket - Mens",
   "price_cents": 2600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Dry.Q\u00ae 50D Stretch Ripstop 2-layer - 100.0% Recycled Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "100g Stretch Insulation"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 6 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349034/stretch-ozonic-insulated-jacket-mens"
 }

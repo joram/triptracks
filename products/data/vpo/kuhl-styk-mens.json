@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Styk - Mens",
   "price_cents": 719600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "71% Nylon, 29% Polyester, 115 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328531/styk-mens"
 }

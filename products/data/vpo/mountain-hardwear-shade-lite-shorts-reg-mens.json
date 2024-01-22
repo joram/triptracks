@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Shade Lite Shorts, Reg - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "PSW Tech Trail Stretch Solid - 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/342947/shade-lite-shorts-reg-mens"
 }

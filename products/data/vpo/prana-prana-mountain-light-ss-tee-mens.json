@@ -5,6 +5,11 @@
   ],
   "name": "Prana prAna Mountain Light SS Tee - Mens",
   "price_cents": 424000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348275/prana-mountain-light-ss-tee-mens"
 }

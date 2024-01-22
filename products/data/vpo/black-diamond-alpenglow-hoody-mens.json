@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Alpenglow Hoody - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polyester Stretch Textured Knit - 87% Polyester, 13% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "245 g"
+    }
+  ],
   "url": "https://vpo.ca/product/316665/alpenglow-hoody-mens"
 }

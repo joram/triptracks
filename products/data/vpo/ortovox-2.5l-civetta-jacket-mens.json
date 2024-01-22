@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox 2.5L Civetta Jacket - Mens",
   "price_cents": 3320000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyurethane - Toray Dermizax\u00ae DT"
+    },
+    {
+      "key": "Details",
+      "value": "85% Virgin Wool - Merino, 15% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "178 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343539/25l-civetta-jacket-mens"
 }

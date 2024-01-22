@@ -5,6 +5,39 @@
   ],
   "name": "HanWag Fjall Extreme GTX - Mens",
   "price_cents": 5600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "GORE-TEX"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather, Suede, Cordura"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Hanwag Icegrip Original"
+    },
+    {
+      "key": "Lining",
+      "value": "GLoft, GORE-TEX"
+    },
+    {
+      "key": "Weight",
+      "value": "1940 g"
+    },
+    {
+      "key": "Lace length",
+      "value": "UK 6 - 9 160cm | UK 9,5 - 12 = 170cm"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Winter hiking"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    }
+  ],
   "url": "https://vpo.ca/product/305338/fjall-extreme-gtx-mens"
 }

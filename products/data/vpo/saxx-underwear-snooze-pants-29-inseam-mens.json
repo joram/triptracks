@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Snooze Pants, 29\" Inseam - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "96% Modal\u00ae, 4% elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/326063/snooze-pants-29-inseam-mens"
 }

@@ -5,6 +5,51 @@
   ],
   "name": "La Sportiva Ultra Raptor II - Mens",
   "price_cents": 1949500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "High-Weave AirMesh"
+    },
+    {
+      "key": "Lining",
+      "value": "EZ-in \u2122 Heel Pocket"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Midsole",
+      "value": "Injection Molded MEMlex"
+    },
+    {
+      "key": "Sole",
+      "value": "Frixion \u00ae XF 2.0 X-Axis\u2122 w"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Midsole"
+    },
+    {
+      "key": "Last",
+      "value": "Tempo 2"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    },
+    {
+      "key": "Drop",
+      "value": "9mm"
+    },
+    {
+      "key": "Stack",
+      "value": "Toe"
+    }
+  ],
   "url": "https://vpo.ca/product/343190/ultra-raptor-ii-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Patagonia Reversible Bivy Down Vest - Mens",
   "price_cents": 1710000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "4.6-oz 100% recycled polyester plain weave with a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Yoke",
+      "value": "4.4-oz 100% recycled nylon with a PU coating and a DWR finish"
+    },
+    {
+      "key": "Lining",
+      "value": "8.7-oz 100% recycled polyester 0.25 in-pile fleece"
+    },
+    {
+      "key": "Insulation",
+      "value": "600-fill-power 100% Recycled Down (duck and goose down reclaimed from down products)"
+    },
+    {
+      "key": "Shell",
+      "value": "100% recycled polyester with a DWR (durable water repellent) finish; yoke"
+    }
+  ],
   "url": "https://vpo.ca/product/329761/reversible-bivy-down-vest-mens"
 }

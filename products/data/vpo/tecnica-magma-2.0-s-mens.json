@@ -5,6 +5,27 @@
   ],
   "name": "Tecnica  Magma 2.0 S - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Ventilated 3D mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Breathable mesh liner"
+    },
+    {
+      "key": "Outsole",
+      "value": "VibramR Megagrip\u2122 Litebase\u2122 XO Shield"
+    },
+    {
+      "key": "Midsole",
+      "value": "Compression molded EVA with high rebound compound"
+    },
+    {
+      "key": "Footbed",
+      "value": "Anatomical, Pre-Molded, EVA"
+    }
+  ],
   "url": "https://vpo.ca/product/337081/magma-20-s-mens"
 }

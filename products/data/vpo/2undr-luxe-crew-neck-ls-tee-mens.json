@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Luxe Crew Neck LS Tee - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "67% Modal, 30% Poly, 3% Lycra"
+    }
+  ],
   "url": "https://vpo.ca/product/325625/luxe-crew-neck-ls-tee-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Essential Boxers - Mens",
   "price_cents": 315000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "5.8-oz 95% Tencel\u00ae Lyocell, 5% Spandex jersey"
+    },
+    {
+      "key": "Weight",
+      "value": "122 g"
+    }
+  ],
   "url": "https://vpo.ca/product/317135/essential-boxers-mens"
 }

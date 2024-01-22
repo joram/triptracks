@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia P-6 Logo Responsibili-Tee LS - Mens",
   "price_cents": 414000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "255 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327425/p-6-logo-responsibili-tee-ls-mens"
 }

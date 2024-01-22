@@ -5,6 +5,19 @@
   ],
   "name": "Rab Downpour Plus 2.0 Pants, Short - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "90% Polyamide"
+    },
+    {
+      "key": "Second",
+      "value": "Recycled 40D Polyamide 2.5 L with PU Membrane\u00a0- 119 g"
+    },
+    {
+      "key": "Weight",
+      "value": "345 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333255/downpour-plus-20-pants-short-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Aenergy ML Half Zip Pullover - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main 1 &amp; 2",
+      "value": "Polartec Polyester knit - 89% Polyester, 11% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "230 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/338163/aenergy-ml-half-zip-pullover-mens"
 }

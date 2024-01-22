@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Ski+ Over The Calf Socks - Medium Cushion - Alpine Geo - Mens",
   "price_cents": 350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "52% Merino Wool, 46% Nylon, 2% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Height",
+      "value": "Over The Calf"
+    }
+  ],
   "url": "https://vpo.ca/product/348732/ski-over-the-calf-socks-medium-cushion-alpine-geo-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "tentree Kapok Colville Shirt - Mens",
   "price_cents": 980000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Kapok Flannel - 87% Organic Cotton, 13% Kapok"
+    }
+  ],
   "url": "https://vpo.ca/product/348339/kapok-colville-shirt-mens"
 }

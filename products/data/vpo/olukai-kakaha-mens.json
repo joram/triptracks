@@ -5,6 +5,23 @@
   ],
   "name": "Olukai Kakaha - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Designed with rich, smooth full- grain leather that is fully unlined, allowing the upper to conform to your foot over time"
+    },
+    {
+      "key": "Footbed",
+      "value": "The dual-density PU footbed and cushy gel insert deliver maximum comfort and support. Removable and washable"
+    },
+    {
+      "key": "Outsole",
+      "value": "K\u0101kaha sits atop a lightweight and cushioned EVA sole that features a water-wave pattern and two 'Wet Grip Rubber' pods strategically placed in high- wear areas for added underfoot support"
+    },
+    {
+      "key": "Features",
+      "value": "The raw-edge leather seam stitching on our signature Drop-In Heel\u00ae makes it effortless to slip on and off. Leather Working Group certi\ufb01ed supplier"
+    }
+  ],
   "url": "https://vpo.ca/product/345037/kakaha-mens"
 }

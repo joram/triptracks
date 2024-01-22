@@ -5,6 +5,15 @@
   ],
   "name": "Vuori The Rise Tee - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Pima Cotton"
+    },
+    {
+      "key": "Body Lenght",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/348069/the-rise-tee-mens"
 }

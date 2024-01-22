@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Law Fleece Lined Hoody - Mens",
   "price_cents": 2950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "98% Cotton, 2% Lycra\u00a0- 370 g"
+    },
+    {
+      "key": "Second",
+      "value": "100% Polyester\u00a0- 380 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328959/law-fleece-lined-hoody-mens"
 }

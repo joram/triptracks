@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aenergy SO Hybrid Pants, Long - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Material",
+      "value": "92% Polyamide, 8% Spandex"
+    },
+    {
+      "key": "Insert",
+      "value": "88% Polyester, 12% Spandex"
+    },
+    {
+      "key": "Insert 2",
+      "value": "83% Polyamide, 10% Polyester, 7% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "83% Polyamide, 17% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/348291/aenergy-so-hybrid-pants-long-mens"
 }

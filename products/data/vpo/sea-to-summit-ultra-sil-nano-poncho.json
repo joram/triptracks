@@ -5,6 +5,23 @@
   ],
   "name": "Sea To Summit Ultra-Sil Nano Poncho",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "15D Ultra-Sil Nano fabric"
+    },
+    {
+      "key": "Dimensions",
+      "value": "55 x 46 in"
+    },
+    {
+      "key": "Packed Size",
+      "value": "2.5 x 5.25 in"
+    },
+    {
+      "key": "Weight",
+      "value": "5.2 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/298370/ultra-sil-nano-poncho"
 }

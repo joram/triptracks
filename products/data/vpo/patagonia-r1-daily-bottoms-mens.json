@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia R1 Daily Bottoms - Mens",
   "price_cents": 1113000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "6.3-oz 94% recycled polyester, 6% spandex flat-faced fleece with miDori\u2122 bioSoft for added wicking and softness, and HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Inseam",
+      "value": "30.5 in."
+    }
+  ],
   "url": "https://vpo.ca/product/337225/r1-daily-bottoms-mens"
 }

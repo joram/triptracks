@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Polartec Double Brushed Full Zip Jacket - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec 200 Fleece"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "15.87 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342933/polartec-double-brushed-full-zip-jacket-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Devold Kolastinden Tee - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fiber",
+      "value": "Superfine wool 17.5 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    }
+  ],
   "url": "https://vpo.ca/product/346844/kolastinden-tee-mens"
 }

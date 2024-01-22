@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Vardag Jacket - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "G-1000\u00ae HeavyDuty Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "754 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339948/vardag-jacket-mens"
 }

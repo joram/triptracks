@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Raven Jacket - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000 Eco"
+    },
+    {
+      "key": "Material 2",
+      "value": "HC-Lite"
+    }
+  ],
   "url": "https://vpo.ca/product/318617/raven-jacket-mens"
 }

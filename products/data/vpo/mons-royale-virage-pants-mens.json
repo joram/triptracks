@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Virage Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "81% Recycled Polyester, 14% Merino Wool, 5% Elastane -137 gsm"
+    }
+  ],
   "url": "https://vpo.ca/product/346421/virage-pants-mens"
 }

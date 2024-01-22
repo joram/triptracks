@@ -5,6 +5,39 @@
   ],
   "name": "HanWag Banks Low Bunion LL - Mens",
   "price_cents": 3000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather, Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Hanwag Endurance Hike"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather (chromium-free)"
+    },
+    {
+      "key": "Weight",
+      "value": "860 g"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Fit",
+      "value": "Bunion"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike"
+    },
+    {
+      "key": "Cut",
+      "value": "Low"
+    }
+  ],
   "url": "https://vpo.ca/product/332360/banks-low-bunion-ll-mens"
 }

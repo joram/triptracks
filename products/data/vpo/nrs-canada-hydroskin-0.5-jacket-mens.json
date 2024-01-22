@@ -5,6 +5,31 @@
   ],
   "name": "NRS Canada HydroSkin 0.5 Jacket - Mens",
   "price_cents": 1275000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "6 oz premium nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "454 g"
+    },
+    {
+      "key": "Neoprene",
+      "value": "0.5 mm HydroSkin\u00ae"
+    },
+    {
+      "key": "Fit",
+      "value": "Form fit"
+    },
+    {
+      "key": "Seams",
+      "value": "Flat-lock stitched"
+    },
+    {
+      "key": "Entry Style",
+      "value": "YKK\u00ae front zipper"
+    }
+  ],
   "url": "https://vpo.ca/product/324619/hydroskin-05-jacket-mens"
 }

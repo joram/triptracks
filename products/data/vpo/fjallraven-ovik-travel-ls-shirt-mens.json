@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Travel LS Shirt - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Comfort"
+    },
+    {
+      "key": "Weight",
+      "value": "259 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339937/ovik-travel-ls-shirt-mens"
 }

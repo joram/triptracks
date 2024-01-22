@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Eisfeld Advanced SO Pants, Reg - Mens",
   "price_cents": 4250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Robust Double Weave fabric with four-way stretch - 93% Polyamide, 7% Elastene"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Woven DYneema Reinforcement - 78% Polyamide, 22% Polytetrafluoroethylene"
+    },
+    {
+      "key": "Collection",
+      "value": "Eiger Extreme"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330918/eisfeld-advanced-so-pants-reg-mens"
 }

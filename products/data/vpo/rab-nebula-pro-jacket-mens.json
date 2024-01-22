@@ -5,6 +5,39 @@
   ],
   "name": "Rab Nebula Pro Jacket - Mens",
   "price_cents": 3150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Recycled 30D nylon, 53g"
+    },
+    {
+      "key": "Lining",
+      "value": "Recycled 20D Atmos nylon, 41g"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% recycled PrimaLoft\u00ae Silver Insulation Luxe\u2122"
+    },
+    {
+      "key": "Composition",
+      "value": "100% recycled polyamide with polyurethane coating and 100% recycled polyamide lining"
+    },
+    {
+      "key": "Weight",
+      "value": "648 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "30.9 in"
+    },
+    {
+      "key": "Body mapped insulation to optimize warmth around core and durability in high wear areas. Main body",
+      "value": "100% recycled PrimaLoft\u00ae Silver Insulation Luxe\u2122"
+    },
+    {
+      "key": "Shoulder, cuffs and hood",
+      "value": "100% recycled PrimaLoft\u00ae Silver Insulation (sheet)"
+    }
+  ],
   "url": "https://vpo.ca/product/329486/nebula-pro-jacket-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Albula IN Hybrid Jacket - Mens",
   "price_cents": 2450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Polyamide woven light - 100% Polyamide"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Recycled polyester elastane knit - 94% Polyester, 6% Elasthan"
+    },
+    {
+      "key": "Filling",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyamide woven - 100% Polyamide"
+    }
+  ],
   "url": "https://vpo.ca/product/338168/albula-in-hybrid-jacket-mens"
 }

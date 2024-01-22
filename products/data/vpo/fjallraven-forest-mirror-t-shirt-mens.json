@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Forest Mirror T-Shirt - Mens",
   "price_cents": 399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/333764/forest-mirror-t-shirt-mens"
 }

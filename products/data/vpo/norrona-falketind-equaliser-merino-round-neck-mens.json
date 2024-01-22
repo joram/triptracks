@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Falketind Equaliser Merino Round Neck - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "47% merino wool, 33% recycled polyester, 20% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "164 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341916/falketind-equaliser-merino-round-neck-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven 1960 Logo T-Shirt - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% cotton, 40% polyester"
+    },
+    {
+      "key": "Back length",
+      "value": "69 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/325404/1960-logo-t-shirt-mens"
 }

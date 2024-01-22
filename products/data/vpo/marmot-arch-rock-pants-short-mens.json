@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Arch Rock Pants, Short - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "8 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342554/arch-rock-pants-short-mens"
 }

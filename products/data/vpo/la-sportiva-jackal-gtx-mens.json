@@ -5,6 +5,43 @@
   ],
   "name": "La Sportiva Jackal GTX - Mens",
   "price_cents": 1799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Sandwich Mesh (Toe"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Invisible Fit w"
+    },
+    {
+      "key": "Midsole",
+      "value": "4mm Ortholite Insole"
+    },
+    {
+      "key": "Sole",
+      "value": "FriXion\u00ae XT 2.0 w"
+    },
+    {
+      "key": "Cushioning",
+      "value": "EVA Midsole"
+    },
+    {
+      "key": "Drop",
+      "value": "7mm"
+    },
+    {
+      "key": "Stack",
+      "value": "Heel"
+    },
+    {
+      "key": "Last",
+      "value": "Tempo Ultra"
+    },
+    {
+      "key": "Fit",
+      "value": "Wide"
+    }
+  ],
   "url": "https://vpo.ca/product/330009/jackal-gtx-mens"
 }

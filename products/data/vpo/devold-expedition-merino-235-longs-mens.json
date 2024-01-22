@@ -5,6 +5,27 @@
   ],
   "name": "Devold Expedition Merino 235 Longs - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "235 g"
+    },
+    {
+      "key": "Inside",
+      "value": "100% Merino wool"
+    },
+    {
+      "key": "Outside",
+      "value": "90% Merino wool, 10% polyamide"
+    },
+    {
+      "key": "Fiber",
+      "value": "Fine wool - 18.7 micron"
+    },
+    {
+      "key": "Total Easy Care Merino wool",
+      "value": "machine wash and tumble dry"
+    }
+  ],
   "url": "https://vpo.ca/product/344953/expedition-merino-235-longs-mens"
 }

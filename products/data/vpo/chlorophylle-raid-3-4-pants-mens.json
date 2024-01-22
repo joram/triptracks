@@ -5,6 +5,15 @@
   ],
   "name": "Chlorophylle Raid 3/4 Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Traction - 94% nylon, 6% spandex"
+    },
+    {
+      "key": "Length",
+      "value": "43.5 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/337379/raid-34-pants-mens"
 }

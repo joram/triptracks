@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Greenland Down Liner Vest - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "80% goose down, 20% feather"
+    },
+    {
+      "key": "Fill power",
+      "value": "600 in\u00b3"
+    },
+    {
+      "key": "Fill weight",
+      "value": "110 g"
+    },
+    {
+      "key": "Back length",
+      "value": "69 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/324206/greenland-down-liner-vest-mens"
 }

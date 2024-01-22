@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Taiss Light ML Hooded Jacket - Mens",
   "price_cents": 2090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Polyamide, 32% Polyester, 12% Spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "358 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/350327/taiss-light-ml-hooded-jacket-mens"
 }

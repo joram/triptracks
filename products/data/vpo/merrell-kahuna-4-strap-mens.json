@@ -5,6 +5,27 @@
   ],
   "name": "Merrell Kahuna 4 Strap - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Suede leather and mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Neoprene"
+    },
+    {
+      "key": "Midsole",
+      "value": "Lightweight EVA foam"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae TC5+ rubber"
+    },
+    {
+      "key": "Weight",
+      "value": "1lbs 5 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/345025/kahuna-4-strap-mens"
 }

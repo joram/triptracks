@@ -5,6 +5,15 @@
   ],
   "name": "tentree Oberon Zip Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Marled Fleece",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    },
+    {
+      "key": "Heather Fleece",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/324159/oberon-zip-hoodie-mens"
 }

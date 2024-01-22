@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl The One Jacket - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "Mikro Air Stretch\u00a0- 100% Nylon Taffeta\u00a0- PFC Free DWR\u00a0- 54 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "Aeroknit - 100% Polyester"
+    },
+    {
+      "key": "Secondary",
+      "value": "69% Nylon, 31% Elastane\u00a0- 200 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "AeroKnit\u00a0- 100% Polyester\u00a0- 110 g"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g"
+    },
+    {
+      "key": "Center Front Zipper Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/328401/the-one-jacket-mens"
 }

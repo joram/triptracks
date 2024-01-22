@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Highlander Hoody - Mens",
   "price_cents": 3000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Post-Consumer Recycled Polyester, Ripstop, 47g"
+    },
+    {
+      "key": "Weight",
+      "value": "16 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Zippered hand pockets offers secure, convenient storage for your everyday, on-the-go essentials",
+      "value": "phone, keys, wallet, credit card &amp; more"
+    }
+  ],
   "url": "https://vpo.ca/product/347820/highlander-hoody-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Snoblast Pants, Reg - Mens",
   "price_cents": 1800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "NanoPro\u2122 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 6 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347934/snoblast-pants-reg-mens"
 }

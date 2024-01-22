@@ -5,6 +5,11 @@
   ],
   "name": "Lebent Core 200 3/4 Bottoms - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "66.5% Rayon from Bamboo, 28.5% Merino Wool, 5% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/334217/core-200-34-bottoms-mens"
 }

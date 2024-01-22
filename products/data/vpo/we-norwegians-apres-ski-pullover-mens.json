@@ -5,6 +5,15 @@
   ],
   "name": "We Norwegians Apres Ski Pullover - Mens",
   "price_cents": 3899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "90% Merino, 10% Cashmere - Linsieme yarn"
+    },
+    {
+      "key": "Fit",
+      "value": "Fits generous - they suggest to size down"
+    }
+  ],
   "url": "https://vpo.ca/product/344812/apres-ski-pullover-mens"
 }

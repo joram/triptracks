@@ -5,6 +5,19 @@
   ],
   "name": "Devold Eika Merino 150 SS Tee - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - 150 g"
+    },
+    {
+      "key": "Fiber",
+      "value": "Superfine - 17.5 micron"
+    },
+    {
+      "key": "Total Easy Care Merino wool",
+      "value": "machine wash and tumble dry"
+    }
+  ],
   "url": "https://vpo.ca/product/346451/eika-merino-150-ss-tee-mens"
 }

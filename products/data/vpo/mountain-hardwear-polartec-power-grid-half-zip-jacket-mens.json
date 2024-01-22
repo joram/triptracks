@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Polartec Power Grid Half Zip Jacket - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Power Grid\u2122 - 60% Recycled Polyester, 33% Polyester, 7% Elastane"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "12.1 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/342941/polartec-power-grid-half-zip-jacket-mens"
 }

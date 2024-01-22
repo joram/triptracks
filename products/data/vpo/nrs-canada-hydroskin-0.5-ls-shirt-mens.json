@@ -5,6 +5,27 @@
   ],
   "name": "NRS Canada Hydroskin 0.5 LS Shirt - Mens",
   "price_cents": 1087500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "6 oz premium nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "363 g"
+    },
+    {
+      "key": "Neoprene",
+      "value": "0.5 mm HydroSkin\u00ae"
+    },
+    {
+      "key": "Fit",
+      "value": "Form fit"
+    },
+    {
+      "key": "Seams",
+      "value": "Flat-lock stitched"
+    }
+  ],
   "url": "https://vpo.ca/product/338378/hydroskin-05-ls-shirt-mens"
 }

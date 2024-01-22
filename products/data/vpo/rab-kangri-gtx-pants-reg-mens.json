@@ -5,6 +5,19 @@
   ],
   "name": "Rab Kangri GTX Pants, Reg - Mens",
   "price_cents": 4600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Main"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "435 g"
+    },
+    {
+      "key": "HH",
+      "value": "28,000mm"
+    }
+  ],
   "url": "https://vpo.ca/product/336814/kangri-gtx-pants-reg-mens"
 }

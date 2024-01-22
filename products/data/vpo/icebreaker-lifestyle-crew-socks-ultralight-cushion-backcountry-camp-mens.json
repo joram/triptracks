@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker LifeStyle Crew Socks - Ultralight Cushion - Backcountry Camp - Mens",
   "price_cents": 250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Wool, 42% Nylon, 2% Elastane - Exclusive of decoration"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/328783/lifestyle-crew-socks-ultralight-cushion-backcountry-camp-mens"
 }

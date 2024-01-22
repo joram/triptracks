@@ -5,6 +5,31 @@
   ],
   "name": "Mammut Ultimate VII SO Hooded Jacket - Mens",
   "price_cents": 3799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Gore-tex\u00ae infinium\u2122 3-layer - 100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "recycled polyester mesh"
+    },
+    {
+      "key": "Main 2",
+      "value": "polyamide-elastane woven with midori\u00ae"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "79 cm"
+    },
+    {
+      "key": "Weight",
+      "value": "530 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343440/ultimate-vii-so-hooded-jacket-mens"
 }

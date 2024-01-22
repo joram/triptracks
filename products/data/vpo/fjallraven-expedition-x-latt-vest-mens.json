@@ -5,6 +5,47 @@
   ],
   "name": "Fjallraven Expedition X-Latt Vest - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill weight",
+      "value": "60 g"
+    },
+    {
+      "key": "Sleeve type",
+      "value": "Sleeveless"
+    },
+    {
+      "key": "Closing",
+      "value": "Two-way zipper"
+    },
+    {
+      "key": "Clothing layer",
+      "value": "Outerwear, Insulating layer"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "3"
+    },
+    {
+      "key": "Pockets",
+      "value": "Hand pocket(s), Inner pocket(s)"
+    },
+    {
+      "key": "Weight",
+      "value": "203 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340084/expedition-x-latt-vest-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Fjallglim Shirt - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "420 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313356/fjallglim-shirt-mens"
 }

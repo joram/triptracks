@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox Berrino Vest - Mens",
   "price_cents": 2699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "79% polyamide, 11% Merino wool OWP, 10% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "204 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329283/berrino-vest-mens"
 }

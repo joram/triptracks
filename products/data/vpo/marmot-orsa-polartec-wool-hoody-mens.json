@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Orsa Polartec Wool Hoody - Mens",
   "price_cents": 2500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Wool 52% Wool, 40% Polyester, 8% Nylon Thermal"
+    },
+    {
+      "key": "Weight",
+      "value": "11 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Center Back",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347885/orsa-polartec-wool-hoody-mens"
 }

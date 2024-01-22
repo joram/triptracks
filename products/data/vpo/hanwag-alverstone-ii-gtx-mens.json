@@ -5,6 +5,31 @@
   ],
   "name": "HanWag Alverstone II GTX - Mens",
   "price_cents": 5100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Suede, Microfiber"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Integral Light"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1460 g"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    }
+  ],
   "url": "https://vpo.ca/product/318849/alverstone-ii-gtx-mens"
 }

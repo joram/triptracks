@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Crag Hoody - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton Blend Jersey - 60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "291 g"
+    }
+  ],
   "url": "https://vpo.ca/product/316630/crag-hoody-mens"
 }

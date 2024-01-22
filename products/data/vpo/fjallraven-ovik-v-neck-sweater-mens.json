@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Ovik V-Neck Sweater - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Material",
+      "value": "100% wool G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329370/ovik-v-neck-sweater-mens"
 }

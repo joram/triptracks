@@ -1,10 +1,15 @@
 {
-  "description": "Embrace the wild. This tee was made using an eco-friendly blend of recycled polyester, organic cotton, and TENCEL\u2122 Lyocell.",
+  "description": "The trees you plant help the wild ones that roam this planet. This comfortable bear print t-shirt is made from sustainable materials.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/338481.jpg"
+    "https://vpo.ca/images/product/large/341693.jpg"
   ],
   "name": "tentree Bear Claw T-Shirt - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/338481/bear-claw-t-shirt-mens"
+  "price_cents": 449500,
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "45% Recycled Polyester, 30% Tencel Lyocell, 25% Organic Cotton"
+    }
+  ],
+  "url": "https://vpo.ca/product/341693/bear-claw-t-shirt-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Roark Nordsman Woven - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Polyester, 30% Recycled Fibers, 10% Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/326136/nordsman-woven-mens"
 }

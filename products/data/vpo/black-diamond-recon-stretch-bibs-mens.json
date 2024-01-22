@@ -5,6 +5,27 @@
   ],
   "name": "Black Diamond Recon Stretch Bibs - Mens",
   "price_cents": 5499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BD.dry\u2122, 3L Nylon stretch Woven with Jersey Backer and DWR finish - 84% Nylon, 16% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "919 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "\u00a0Leg opening",
+      "value": "21 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/324279/recon-stretch-bibs-mens"
 }

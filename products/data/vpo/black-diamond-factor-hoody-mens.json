@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Factor Hoody - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "891 g"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/329037/factor-hoody-mens"
 }

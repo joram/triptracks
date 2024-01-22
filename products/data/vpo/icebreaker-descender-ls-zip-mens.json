@@ -5,6 +5,23 @@
   ],
   "name": "Icebreaker Descender LS Zip - Mens",
   "price_cents": 2500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "84% Merino Wool, 9% Nylon, 7% LYCRA\u00ae"
+    },
+    {
+      "key": "Panels",
+      "value": "88% Merino Wool, 9% Nylon, 3% LYCRA\u00ae - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "399 g"
+    },
+    {
+      "key": "Back High Point Shoulder to Hem",
+      "value": "77cm based on size L"
+    }
+  ],
   "url": "https://vpo.ca/product/321891/descender-ls-zip-mens"
 }

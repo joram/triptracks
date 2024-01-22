@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Teca Fleece Pullover - Mens",
   "price_cents": 1080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Recycled Microfleece - 255 g"
+    },
+    {
+      "key": "Stripes",
+      "value": "Repurposed Polyester Taffeta with DWR Finish - 100% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/340361/teca-fleece-pullover-mens"
 }

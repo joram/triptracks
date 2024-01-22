@@ -5,6 +5,23 @@
   ],
   "name": "Rab Infinity Microlight Jacket - Mens",
   "price_cents": 4450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary Fabric",
+      "value": "13D Gore-Tex Infinium\u2122 Windstopper\u00ae product technology (45 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "700 fill-power recycled down with Nikwax hydrophobic finish"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "452 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "29.1 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336802/infinity-microlight-jacket-mens"
 }

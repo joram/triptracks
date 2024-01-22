@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Fleece Hoody - Mens",
   "price_cents": 2200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "64% Recycled polyester, 30% virgin Merino\u00a0wool, 6% elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "100% Virgin Merino Wool"
+    },
+    {
+      "key": "Weight",
+      "value": "500 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340683/fleece-hoody-mens"
 }

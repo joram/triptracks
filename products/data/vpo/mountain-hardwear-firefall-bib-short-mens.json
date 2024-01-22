@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear FireFall Bib, Short - Mens",
   "price_cents": 2479600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body Fabric",
+      "value": "70D Textured Weave - Solids"
+    },
+    {
+      "key": "Insulation",
+      "value": "KL4 60 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "29 oz"
+    },
+    {
+      "key": "Uses",
+      "value": "Ski"
+    }
+  ],
   "url": "https://vpo.ca/product/342950/firefall-bib-short-mens"
 }

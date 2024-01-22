@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Hike Liner Crew Socks - No Cushion - Mens",
   "price_cents": 260000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "59% Merino Wool, 38% Nylon, 3% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/302977/hike-liner-crew-socks-no-cushion-mens"
 }

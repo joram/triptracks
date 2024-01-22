@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Ghost Whisperer UL Hoody - Mens",
   "price_cents": 4320000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "5D X 7D Ripstop - 100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "1000-fill RDS\u00ae-certified down - 90% Goose Down, 10% Goose Feathers"
+    },
+    {
+      "key": "Fit",
+      "value": "Alpine"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "6.67 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/331337/ghost-whisperer-ul-hoody-mens"
 }

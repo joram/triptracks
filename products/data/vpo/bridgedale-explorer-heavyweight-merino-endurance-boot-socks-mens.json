@@ -5,6 +5,15 @@
   ],
   "name": "Bridgedale Explorer Heavyweight Merino Endurance Boot Socks - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "28% Merino Wool, 19% New Wool, 34% Nylon"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    }
+  ],
   "url": "https://vpo.ca/product/314357/explorer-heavyweight-merino-endurance-boot-socks-mens"
 }

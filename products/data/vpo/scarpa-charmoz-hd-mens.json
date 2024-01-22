@@ -5,6 +5,43 @@
   ],
   "name": "Scarpa Charmoz HD - Mens",
   "price_cents": 4690000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Nylon L-Tech &amp; Microtech"
+    },
+    {
+      "key": "Lining",
+      "value": "HDry\u00ae direct lamination + 37.5\u00ae"
+    },
+    {
+      "key": "Insole",
+      "value": "Pro-Fiber XT 20"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D PU + 2D EVA-MP"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Pentax Precision XT"
+    },
+    {
+      "key": "Last",
+      "value": "NAG"
+    },
+    {
+      "key": "Crampon Compatibility",
+      "value": "Semi-Automatic"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "770 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Italy"
+    }
+  ],
   "url": "https://vpo.ca/product/326513/charmoz-hd-mens"
 }

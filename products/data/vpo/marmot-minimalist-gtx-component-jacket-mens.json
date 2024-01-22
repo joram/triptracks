@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Minimalist GTX Component Jacket - Mens",
   "price_cents": 4700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX Paclite\u00ae 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "31.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "850 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/311122/minimalist-gtx-component-jacket-mens"
 }

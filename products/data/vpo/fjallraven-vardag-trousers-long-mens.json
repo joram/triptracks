@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Vardag Trousers, Long - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "G-1000\u00ae Eco Stretch"
+    },
+    {
+      "key": "Weight",
+      "value": "342 g"
+    },
+    {
+      "key": "Length",
+      "value": "Long 34 in"
+    },
+    {
+      "key": "Fit/Waist",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/339951/vardag-trousers-long-mens"
 }

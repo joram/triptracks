@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Terravia Alpine Pants, Reg - Mens",
   "price_cents": 1323000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "4.7-oz 86% recycled polyester, 14% spandex dobby"
+    },
+    {
+      "key": "Panels",
+      "value": "4.5-oz 85% recycled nylon, 15% recycled spandex"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g"
+    }
+  ],
   "url": "https://vpo.ca/product/334739/terravia-alpine-pants-reg-mens"
 }

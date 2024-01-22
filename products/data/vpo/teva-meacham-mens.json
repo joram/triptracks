@@ -5,6 +5,15 @@
   ],
   "name": "Teva Meacham - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "10.5 oz (Size 9)"
+    },
+    {
+      "key": "Best for",
+      "value": "Light hikes"
+    }
+  ],
   "url": "https://vpo.ca/product/345681/meacham-mens"
 }

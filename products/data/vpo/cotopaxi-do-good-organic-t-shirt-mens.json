@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Do Good Organic T-Shirt - Mens",
   "price_cents": 449500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/339846/do-good-organic-t-shirt-mens"
 }

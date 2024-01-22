@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Veza Adventure Shorts - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% nylon, 15% spandex stretch woven (137gsm)"
+    },
+    {
+      "key": "Inseam",
+      "value": "8 in"
+    }
+  ],
   "url": "https://vpo.ca/product/345334/veza-adventure-shorts-mens"
 }

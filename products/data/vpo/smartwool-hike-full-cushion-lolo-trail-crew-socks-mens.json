@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Hike Full Cushion Lolo Trail Crew Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "63% Merino Wool, 12% Nylon, 23% Recycled Nylon, 2% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Full Cushion"
+    },
+    {
+      "key": "Height",
+      "value": "8 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349221/hike-full-cushion-lolo-trail-crew-socks-mens"
 }

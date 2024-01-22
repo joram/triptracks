@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Helvetia Vest - Mens",
   "price_cents": 949900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Sherpa Pile - 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350374/helvetia-vest-mens"
 }

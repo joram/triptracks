@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Abisko Midsummer Trousers, Long - Mens",
   "price_cents": 1599600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Air Stretch",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Long (34\")"
+    }
+  ],
   "url": "https://vpo.ca/product/325423/abisko-midsummer-trousers-long-mens"
 }

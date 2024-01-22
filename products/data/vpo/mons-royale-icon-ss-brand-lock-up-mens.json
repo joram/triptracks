@@ -5,6 +5,19 @@
   ],
   "name": "Mons Royale Icon SS - Brand Lock Up - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Merino Air-Con - 83% Merino Wool, 13% Nylon, 4% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "140 gsm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/346345/icon-ss-brand-lock-up-mens"
 }

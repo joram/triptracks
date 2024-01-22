@@ -5,6 +5,11 @@
   ],
   "name": "tentree Woodgrain Ten T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "45% Recycled Polyester, 30% Tencel\u2122 Lyocell, 25% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/334812/woodgrain-ten-t-shirt-mens"
 }

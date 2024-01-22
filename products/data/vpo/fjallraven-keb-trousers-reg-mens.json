@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Keb Trousers, Reg - Mens",
   "price_cents": 1925000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Stretch",
+      "value": "63% polyamide, 26% polyester, 11% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "610 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/318584/keb-trousers-reg-mens"
 }

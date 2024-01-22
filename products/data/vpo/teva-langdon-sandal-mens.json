@@ -5,6 +5,15 @@
   ],
   "name": "Teva Langdon Sandal - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "10.75 oz (Size 9)"
+    },
+    {
+      "key": "Best for",
+      "value": "Light hikes"
+    }
+  ],
   "url": "https://vpo.ca/product/345680/langdon-sandal-mens"
 }

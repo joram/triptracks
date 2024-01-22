@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Technician Alpine Pants - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch Nylon woven with PFC-Free DWR finish - 96% Nylon, 4% Elastane, 151 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/341558/technician-alpine-pants-mens"
 }

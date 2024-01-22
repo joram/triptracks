@@ -5,6 +5,11 @@
   ],
   "name": "Devold Svalbard Wool Zip Neck - Unisex",
   "price_cents": 3199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Pure New Wool (32-36 micron)"
+    }
+  ],
   "url": "https://vpo.ca/product/344934/svalbard-wool-zip-neck-unisex"
 }

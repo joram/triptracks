@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research OR Advocate Hoodie - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "21.7 oz"
+    },
+    {
+      "key": "Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332572/or-advocate-hoodie-mens"
 }

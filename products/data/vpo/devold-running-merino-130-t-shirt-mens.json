@@ -5,6 +5,23 @@
   ],
   "name": "Devold Running Merino 130 T-Shirt - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "69% wool (Merino), 29% Tencel\u00ae, 2% Polyamide"
+    },
+    {
+      "key": "Fiber",
+      "value": "Superfine wool 17.5 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Areas of use",
+      "value": "Runnin"
+    }
+  ],
   "url": "https://vpo.ca/product/346841/running-merino-130-t-shirt-mens"
 }

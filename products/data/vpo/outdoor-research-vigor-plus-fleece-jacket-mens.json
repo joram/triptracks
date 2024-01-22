@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Vigor Plus Fleece Jacket - Mens",
   "price_cents": 1479600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved, 93% Recycled Polyester, 7% Spandex, 75D Stretch Woven Fleece with Grid Interior"
+    },
+    {
+      "key": "Weight",
+      "value": "445 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/336934/vigor-plus-fleece-jacket-mens"
 }

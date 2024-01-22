@@ -5,6 +5,11 @@
   ],
   "name": "Prana prAna Hooded LS T-Shirt - Mens",
   "price_cents": 720000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/306685/prana-hooded-ls-t-shirt-mens"
 }

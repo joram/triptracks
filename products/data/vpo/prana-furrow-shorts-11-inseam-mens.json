@@ -5,6 +5,11 @@
   ],
   "name": "Prana Furrow Shorts, 11\" Inseam - Mens",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Shell"
+    }
+  ],
   "url": "https://vpo.ca/product/273941/furrow-shorts-11-inseam-mens"
 }

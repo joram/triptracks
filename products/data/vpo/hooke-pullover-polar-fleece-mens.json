@@ -5,6 +5,11 @@
   ],
   "name": "Hooke Pullover Polar Fleece - Mens",
   "price_cents": 899900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Recycled Polyester Polar Fleece"
+    }
+  ],
   "url": "https://vpo.ca/product/346135/pullover-polar-fleece-mens"
 }

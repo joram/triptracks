@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Eiswand Advanced ML Hooded Jacket - Mens",
   "price_cents": 3550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric 1",
+      "value": "Polyester-Wool Fleece - 67% Polyester, 26% Wool, 7% Elasthan"
+    },
+    {
+      "key": "Main Fabric 2",
+      "value": "Polyester-Elastane Woven - 91% Polyester, 9% Elasthan"
+    },
+    {
+      "key": "Weight",
+      "value": "360 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/330841/eiswand-advanced-ml-hooded-jacket-mens"
 }

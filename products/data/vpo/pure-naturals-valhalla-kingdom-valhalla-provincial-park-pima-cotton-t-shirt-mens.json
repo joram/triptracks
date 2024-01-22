@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Valhalla Provincial Park Pima Cotton T-Shirt - Mens",
   "price_cents": 272700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348067/valhalla-kingdom-valhalla-provincial-park-pima-cotton-t-shirt-mens"
 }

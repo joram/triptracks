@@ -5,6 +5,11 @@
   ],
   "name": "Chaco Bodhi - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "9.56 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349743/bodhi-mens"
 }

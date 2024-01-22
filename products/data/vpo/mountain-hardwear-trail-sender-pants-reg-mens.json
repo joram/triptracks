@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Trail Sender Pants, Reg - Mens",
   "price_cents": 840000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Ultralight Ripstop - 100% Polyester"
+    },
+    {
+      "key": "Inseam",
+      "value": "31 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/343091/trail-sender-pants-reg-mens"
 }

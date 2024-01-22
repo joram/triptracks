@@ -5,6 +5,31 @@
   ],
   "name": "NRS Canada HydroSkin 0.5 Shorts - Mens",
   "price_cents": 712500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "6 oz premium nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "181 g"
+    },
+    {
+      "key": "Neoprene",
+      "value": "0.5 mm HydroSkin\u00ae"
+    },
+    {
+      "key": "Fit",
+      "value": "Form fit"
+    },
+    {
+      "key": "Seams",
+      "value": "Flat-lock stitched"
+    },
+    {
+      "key": "Inseam",
+      "value": "25 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/324621/hydroskin-05-shorts-mens"
 }

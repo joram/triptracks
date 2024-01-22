@@ -5,6 +5,11 @@
   ],
   "name": "Prana Dolberg Flannel Shirt - Standard - Mens",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/340081/dolberg-flannel-shirt-standard-mens"
 }

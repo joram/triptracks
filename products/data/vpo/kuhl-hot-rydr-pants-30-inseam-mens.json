@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Hot Rydr Pants, 30\" Inseam - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Exklusiv Eurotwill\u00a0- 98% Twill Cotton, 2% Lycra\u00a0- 365 g"
+    },
+    {
+      "key": "Six pockets",
+      "value": "two front, once coin, two back, one stealth cell phone"
+    }
+  ],
   "url": "https://vpo.ca/product/323594/hot-rydr-pants-30-inseam-mens"
 }

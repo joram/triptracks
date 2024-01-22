@@ -5,6 +5,11 @@
   ],
   "name": "Mountain Hardwear Yak in the Wild SS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/348931/yak-in-the-wild-ss-mens"
 }

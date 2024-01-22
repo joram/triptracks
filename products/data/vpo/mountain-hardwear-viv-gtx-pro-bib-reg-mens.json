@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Viv GTX Pro Bib, Reg - Mens",
   "price_cents": 8999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX\u00ae PRO Shell 30D 3-layer - 100% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 8 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349050/viv-gtx-pro-bib-reg-mens"
 }

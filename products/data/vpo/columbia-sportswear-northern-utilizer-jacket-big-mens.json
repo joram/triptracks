@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Northern Utilizer Jacket - Big - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Textured Nylon Poplin 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester MTR filament fleece, 250g"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% polyester lightweight insulation, 40g"
+    },
+    {
+      "key": "Back Length",
+      "value": "31 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347685/northern-utilizer-jacket-big-mens"
 }

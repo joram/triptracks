@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Canyon SS Shirt - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Canyon Dobby (100% Polyester)"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "2.5 oz"
+    },
+    {
+      "key": "Center of Back",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/294239/canyon-ss-shirt-mens"
 }

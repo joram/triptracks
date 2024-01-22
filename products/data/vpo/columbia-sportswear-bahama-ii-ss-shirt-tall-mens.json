@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Bahama II SS Shirt, Tall - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Tactel\u00ae Nylon"
+    },
+    {
+      "key": "Size",
+      "value": "Tall"
+    }
+  ],
   "url": "https://vpo.ca/product/346631/bahama-ii-ss-shirt-tall-mens"
 }

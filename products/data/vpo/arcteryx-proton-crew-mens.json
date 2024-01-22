@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Proton Crew - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Self",
+      "value": "Fortius\u2122 Air 50 - 84% nylon, 16% elastane - FC0 DWR, bluesign Approved Material"
+    },
+    {
+      "key": "Weight",
+      "value": "305 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/362986/proton-crew-mens"
 }

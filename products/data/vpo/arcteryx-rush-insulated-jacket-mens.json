@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rush Insulated Jacket - Mens",
   "price_cents": 9500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "20D 100% Nylon - bluesign Approved Material, Dope Dyed"
+    },
+    {
+      "key": "Weight",
+      "value": "560 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/362988/rush-insulated-jacket-mens"
 }

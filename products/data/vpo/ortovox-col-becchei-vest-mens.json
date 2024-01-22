@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Col Becchei Vest - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "OUTER MATERIAL",
+      "value": "75 % polyamide + 18 % wool (OWP-MERINO) + 7 % elastane"
+    },
+    {
+      "key": "FRONT INSERTS",
+      "value": "79 % polyamide + 21 % elastane MEMBRANE"
+    },
+    {
+      "key": "LINING",
+      "value": "100 % polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/349537/col-becchei-vest-mens"
 }

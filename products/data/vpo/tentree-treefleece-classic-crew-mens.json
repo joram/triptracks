@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeFleece Classic Crew - Mens",
   "price_cents": 780000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Organic Cotton, 26% Recycled Polyester, 19% Tencel\u2122 Lyocell"
+    }
+  ],
   "url": "https://vpo.ca/product/332013/treefleece-classic-crew-mens"
 }

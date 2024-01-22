@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Echo Featherless Hybrid - Mens",
   "price_cents": 2100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "11 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342584/echo-featherless-hybrid-mens"
 }

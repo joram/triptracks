@@ -5,6 +5,47 @@
   ],
   "name": "Fjallraven Abisko Lite Trekking Trousers, Reg - Mens",
   "price_cents": 1880000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "G-1000\u00ae Lite"
+    },
+    {
+      "key": "Stretch",
+      "value": "88% Polyamide, 12% Elastane"
+    },
+    {
+      "key": "G-1000 HeavyDuty",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "450 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Pre-shaped knees",
+      "value": "Yes"
+    },
+    {
+      "key": "Boot hook",
+      "value": "Yes"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "4"
+    },
+    {
+      "key": "Pockets",
+      "value": "2 or more thigh pockets, Hand pocket(s), Inner mesh pocket(s)"
+    },
+    {
+      "key": "Ventilation",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/293754/abisko-lite-trekking-trousers-reg-mens"
 }

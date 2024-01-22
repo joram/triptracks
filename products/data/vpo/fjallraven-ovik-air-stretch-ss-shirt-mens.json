@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Ovik Air Stretch SS Shirt - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Air Stretch"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed fit"
+    },
+    {
+      "key": "Weight",
+      "value": "238 g - size M"
+    }
+  ],
   "url": "https://vpo.ca/product/363515/ovik-air-stretch-ss-shirt-mens"
 }

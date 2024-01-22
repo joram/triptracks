@@ -5,6 +5,15 @@
   ],
   "name": "tentree Treefleece Atlas Sweatpants - Mens",
   "price_cents": 780000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "55% Organic Cotton, 26% Recycled Polyester, 19% TENCEL Lyocell"
+    },
+    {
+      "key": "Inseam",
+      "value": "29 1"
+    }
+  ],
   "url": "https://vpo.ca/product/335465/treefleece-atlas-sweatpants-mens"
 }

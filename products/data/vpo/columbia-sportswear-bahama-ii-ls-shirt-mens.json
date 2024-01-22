@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Bahama II LS Shirt - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Tactel\u00ae Nylon"
+    }
+  ],
   "url": "https://vpo.ca/product/346617/bahama-ii-ls-shirt-mens"
 }

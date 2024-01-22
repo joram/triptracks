@@ -5,6 +5,23 @@
   ],
   "name": "Rab Muztag GTX Gaiters - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "40D Gore-Tex Pro (Most Breathable), 114g"
+    },
+    {
+      "key": "Composition",
+      "value": "100% polyamide with ePTFE membrane"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "300D nylon with polyurethane coating"
+    },
+    {
+      "key": "Weight",
+      "value": "208 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329436/muztag-gtx-gaiters-mens"
 }

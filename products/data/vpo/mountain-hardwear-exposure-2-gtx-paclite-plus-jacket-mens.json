@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Exposure/2 GTX Paclite Plus Jacket - Mens",
   "price_cents": 3799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex Paclite\u00ae Plus 2L (100% Nylon)"
+    },
+    {
+      "key": "Weight",
+      "value": "9.07 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/326006/exposure2-gtx-paclite-plus-jacket-mens"
 }

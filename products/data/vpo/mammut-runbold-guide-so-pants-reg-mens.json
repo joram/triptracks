@@ -5,6 +5,15 @@
   ],
   "name": "Mammut Runbold Guide SO Pants, Reg - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "85% Polyamide, 15% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "polyamide mesh - 100% Polyamide"
+    }
+  ],
   "url": "https://vpo.ca/product/338261/runbold-guide-so-pants-reg-mens"
 }

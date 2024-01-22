@@ -5,6 +5,11 @@
   ],
   "name": "Chaco Ramble Puff Clog - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "6.35 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349732/ramble-puff-clog-mens"
 }

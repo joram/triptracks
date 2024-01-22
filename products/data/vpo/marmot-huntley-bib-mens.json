@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Huntley Bib - Mens",
   "price_cents": 5250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Gore-Tex\u00ae Products 3L with Cknit Technology 100% Nylon Plain Weave 3.9 oz"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lbs 0.9 oz"
+    },
+    {
+      "key": "Waterproof",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/330451/huntley-bib-mens"
 }

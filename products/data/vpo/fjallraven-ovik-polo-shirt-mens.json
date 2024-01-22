@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Polo Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "260 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/313553/ovik-polo-shirt-mens"
 }

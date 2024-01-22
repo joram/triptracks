@@ -5,6 +5,15 @@
   ],
   "name": "Marmot Rye Jacket - Mens",
   "price_cents": 1500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Center Back",
+      "value": "30.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347926/rye-jacket-mens"
 }

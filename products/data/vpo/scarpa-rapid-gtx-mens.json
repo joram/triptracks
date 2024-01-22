@@ -5,6 +5,59 @@
   ],
   "name": "Scarpa Rapid GTX - Mens",
   "price_cents": 1832000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Invisible Fit Technology"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite\u00ae Strobel and Footbed"
+    },
+    {
+      "key": "Midsole",
+      "value": "3D EVA-CM - 6mm drop"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Agility"
+    },
+    {
+      "key": "Last",
+      "value": "ARSA"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "320 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Vietnam"
+    },
+    {
+      "key": "Mesh &amp; PU Upper with GORE-TEX",
+      "value": "Breathable mesh with overlays of thermally welded PU film backed by GORE-TEX\u00ae Invisible Fit for lightweight waterproof protections with outstanding fit and comfort"
+    },
+    {
+      "key": "Toe Protection",
+      "value": "Asymmetric toe protection with spray rubber reinforcement for durability"
+    },
+    {
+      "key": "Dynamic Protection System (DPS)",
+      "value": "DPS insert in ESS adds protection, propulsion and edging capabilities"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual-density compression molded EVA with a TIP arch insert for torsion control"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae outsole with Megagrip rubber compound and medial forefoot edging zone for increase traction and friction"
+    }
+  ],
   "url": "https://vpo.ca/product/346885/rapid-gtx-mens"
 }

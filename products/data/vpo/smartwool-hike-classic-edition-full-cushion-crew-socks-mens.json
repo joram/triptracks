@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Classic Edition Full Cushion Crew Socks - Mens",
   "price_cents": 279500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "66% Merino Wool, 25% Recycled Nylon, 8% Nylon,\u00a01% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Full"
+    }
+  ],
   "url": "https://vpo.ca/product/339100/hike-classic-edition-full-cushion-crew-socks-mens"
 }

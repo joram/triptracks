@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Ski Mountaineering Hoody - Mens",
   "price_cents": 1149500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "Organic Cotton Terry Fleece - 100% Organic Cotton"
+    },
+    {
+      "key": "Shell 2",
+      "value": "Organic Cotton Stretch Rib - 96% Organic Cotton, 4% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "580 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/347810/ski-mountaineering-hoody-mens"
 }

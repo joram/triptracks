@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Echo Featherless Hoody - Mens",
   "price_cents": 2500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "1 lbs 4 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "27.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342582/echo-featherless-hoody-mens"
 }

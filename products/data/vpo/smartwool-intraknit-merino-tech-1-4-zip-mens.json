@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Intraknit Merino Tech 1/4 Zip - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "68% Merino Wool, 26% Recycled Polyester, 3% Polyamide, 3% Elastane. Exclusive of Decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Featuring Intraknit\u2122 technology",
+      "value": "Insulation, articulation and ventilation are seamlessly integrated to amplify movement and comfort during high-intensity activities"
+    }
+  ],
   "url": "https://vpo.ca/product/349566/intraknit-merino-tech-14-zip-mens"
 }

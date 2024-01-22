@@ -5,6 +5,15 @@
   ],
   "name": "Soul Comfort Sheepskin Hemp / Wool Insole - 700 Grams - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Merino Sheep wool on a Hemp"
+    },
+    {
+      "key": "700",
+      "value": "For gumboots and most work boots"
+    }
+  ],
   "url": "https://vpo.ca/product/284414/hemp-wool-insole-700-grams-mens"
 }

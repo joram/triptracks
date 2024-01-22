@@ -5,6 +5,55 @@
   ],
   "name": "Black Diamond Session Suede - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Top quality 1.8mm Suede leather, Slingshot stretch heel, fully lined for comfort. Sticky rubber toe cap"
+    },
+    {
+      "key": "Lining",
+      "value": "Soft Touch Fully Lined"
+    },
+    {
+      "key": "Midsole",
+      "value": "Low profile Comfort EVA mdisole"
+    },
+    {
+      "key": "Rubber",
+      "value": "BD BlackLabel Street"
+    },
+    {
+      "key": "Footbed",
+      "value": "Die Cut Comfort EVA"
+    },
+    {
+      "key": "Weight (Per Shoe)",
+      "value": "298 g"
+    },
+    {
+      "key": "Heel-Ball Drop",
+      "value": "9 mm"
+    },
+    {
+      "key": "Stack Height- Forefoot/ Heel",
+      "value": "9.5 mm"
+    },
+    {
+      "key": "Width-Forefoot",
+      "value": "Medium"
+    },
+    {
+      "key": "Width-Heel",
+      "value": "Medium"
+    },
+    {
+      "key": "Last",
+      "value": "BD Relaxed Approach"
+    },
+    {
+      "key": "Usage/Terrain",
+      "value": "Bouldering approach, Gym Session, Everyday, International Approach"
+    }
+  ],
   "url": "https://vpo.ca/product/334419/session-suede-mens"
 }

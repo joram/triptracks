@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Tornetrask T-Shirt - Mens",
   "price_cents": 399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% organic cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325511/tornetrask-t-shirt-mens"
 }

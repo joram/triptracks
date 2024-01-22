@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Nohea Mesh - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Lightweight, breathable mesh and minimally lined with soft, breathable microfiber lining"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual-density anatomical PU footbed with a gel insert and a soft microfiber footbed cover. Removable and washable"
+    },
+    {
+      "key": "Outsole",
+      "value": "All-weather, non-marking rubber and gum rubber outsole pods for flexibility and traction"
+    }
+  ],
   "url": "https://vpo.ca/product/281530/nohea-mesh-mens"
 }

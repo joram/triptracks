@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Sunrise T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "60% cotton, 40% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339943/sunrise-t-shirt-mens"
 }

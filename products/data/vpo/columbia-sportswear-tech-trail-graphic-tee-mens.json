@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Tech Trail Graphic Tee - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "94% Polyester, 6% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Active"
+    },
+    {
+      "key": "Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349696/tech-trail-graphic-tee-mens"
 }

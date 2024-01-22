@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Hemispheres II Bibs - Mens",
   "price_cents": 7999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "bluesign\u00ae approved Gore-Tex C-Knit Technology 3L, 100% Nylon 70D"
+    },
+    {
+      "key": "Elastane Panels",
+      "value": "Gore-Tex With Stretch Technology 2L 37%, Nylon 44%, Polyester 19%"
+    },
+    {
+      "key": "Scuff Guard",
+      "value": "85% Nylon, 15% Kevlar"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/348762/hemispheres-ii-bibs-mens"
 }

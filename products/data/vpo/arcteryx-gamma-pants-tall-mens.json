@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Gamma Pants, Tall - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Fortius\u2122 DW 2.0 - 88% Nylon, 12% Elastane - bluesign Approved Material"
+    },
+    {
+      "key": "Inseam",
+      "value": "35 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/363613/gamma-pants-tall-mens"
 }

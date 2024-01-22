@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Knit Sweater - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% wool"
+    },
+    {
+      "key": "Weight",
+      "value": "450 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313544/ovik-knit-sweater-mens"
 }

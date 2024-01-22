@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Sno Tee - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% merino wool"
+    }
+  ],
   "url": "https://vpo.ca/product/348162/sno-tee-mens"
 }

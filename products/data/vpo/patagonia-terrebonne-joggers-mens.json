@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Terrebonne Joggers - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "2.8-oz 100% recycled polyester stretch ripstop with a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Waistband and cuffs",
+      "value": "3.7-oz 91% recycled polyester, 9% spandex plain weave with a DWR finish"
+    },
+    {
+      "key": "Pocket bags",
+      "value": "2.5-oz 100% polyester tricot mesh"
+    }
+  ],
   "url": "https://vpo.ca/product/317299/terrebonne-joggers-mens"
 }

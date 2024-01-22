@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Shade Lite SS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "PSW Tech Trail Stretch Solid - 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.63 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/342959/shade-lite-ss-mens"
 }

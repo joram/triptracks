@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Methow Fleece Lined Pants, 30\" Inseam - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper Thigh &amp; Seat",
+      "value": "bluesign\u00ae approved - 92% Polyester, 8% Spandex"
+    },
+    {
+      "key": "Lower Legs",
+      "value": "bluesign\u00ae approved - 88% Nylon, 12% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/348816/methow-fleece-lined-pants-30-inseam-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Prana Cardiff Fleece Sweatpants, 30\" Inseam - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Hemp, 39% Recycled Polyester, 6% TENCEL\u2122 Lyocell"
+    }
+  ],
   "url": "https://vpo.ca/product/348134/cardiff-fleece-sweatpants-30-inseam-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Quantum III LS Zip - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "485"
+    }
+  ],
   "url": "https://vpo.ca/product/340003/quantum-iii-ls-zip-mens"
 }

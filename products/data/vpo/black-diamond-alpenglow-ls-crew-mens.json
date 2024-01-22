@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Alpenglow LS Crew - Mens",
   "price_cents": 1049500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polyester Stretch Textured Knit - 87% Polyester, 13% Elastane, 200gsm"
+    },
+    {
+      "key": "Weight",
+      "value": "187 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/334375/alpenglow-ls-crew-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Cobble Creek Utility Pants, 34\" Inseam - Big - Mens",
   "price_cents": 949500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "59% Cotton, 37% Polyester, 4% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "34\""
+    }
+  ],
   "url": "https://vpo.ca/product/346802/cobble-creek-utility-pants-34-inseam-big-mens"
 }

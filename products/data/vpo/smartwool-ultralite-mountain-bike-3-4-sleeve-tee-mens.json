@@ -5,6 +5,11 @@
   ],
   "name": "Smartwool Ultralite Mountain Bike 3/4 Sleeve Tee - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Merino Wool, 47% TENCEL\u2122 Lyocell (exclusive of decoration)"
+    }
+  ],
   "url": "https://vpo.ca/product/344349/ultralite-mountain-bike-34-sleeve-tee-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Hardwear AP Shorts, 11\" Inseam - Mens",
   "price_cents": 680000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch Cotton Nylon Sanded Canvas (75% Cotton, 23% Nylon, 2% Elastane)"
+    },
+    {
+      "key": "Inseam",
+      "value": "11 in"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "6 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/307289/hardwear-ap-shorts-11-inseam-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Icebreaker MerinoLoft Vest - Mens",
   "price_cents": 3700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Body",
+      "value": "100% Cotton"
+    },
+    {
+      "key": "Side Panels",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Filling",
+      "value": "88% Merino Wool, 12% Polylactide Exclusive Of Decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/348689/merinoloft-vest-mens"
 }

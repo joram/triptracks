@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Groove Ankle Socks - 3-Pack - Mens",
   "price_cents": 239500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Height",
+      "value": "Ankle"
+    }
+  ],
   "url": "https://vpo.ca/product/333484/groove-ankle-socks-3-pack-mens"
 }

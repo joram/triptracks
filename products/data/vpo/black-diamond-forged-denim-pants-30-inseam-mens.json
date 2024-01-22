@@ -5,6 +5,27 @@
   ],
   "name": "Black Diamond Forged Denim Pants, 30\" Inseam - Mens",
   "price_cents": 1279600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cordura Stretch Denim - 75% Cotton, 10% Nylon, 13% Polyester, 2% Elastane, 339 g"
+    },
+    {
+      "key": "Weight",
+      "value": "610 g"
+    },
+    {
+      "key": "Leg Opening",
+      "value": "15.5 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/322263/forged-denim-pants-30-inseam-mens"
 }

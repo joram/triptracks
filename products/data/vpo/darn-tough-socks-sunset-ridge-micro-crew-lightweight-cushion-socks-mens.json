@@ -5,6 +5,19 @@
   ],
   "name": "Darn Tough Socks Sunset Ridge Micro Crew Lightweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Nylon, 45% Merino Wool, 3% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    }
+  ],
   "url": "https://vpo.ca/product/340461/sunset-ridge-micro-crew-lightweight-cushion-socks-mens"
 }

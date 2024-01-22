@@ -5,6 +5,39 @@
   ],
   "name": "Vasque Breeze, Medium - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric / Material",
+      "value": "Recycled Polyester Mesh"
+    },
+    {
+      "key": "Waterproof",
+      "value": "VasqueDry\u00ae Waterproof"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual Density EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "Enduralast Bio EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vasque Trail Strider"
+    },
+    {
+      "key": "Last",
+      "value": "Arc Tempo+"
+    },
+    {
+      "key": "Leather Type",
+      "value": "Nubuck, Waterproof"
+    },
+    {
+      "key": "Leather Weight",
+      "value": "1.8-2.0mm"
+    }
+  ],
   "url": "https://vpo.ca/product/348755/breeze-medium-mens"
 }

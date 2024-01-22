@@ -5,6 +5,39 @@
   ],
   "name": "Scarpa Crux - Mens",
   "price_cents": 2090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.8mm Suede &amp; Polyester Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Recycled Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "70% Recycled Polypropylene"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D EVA MP"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram Vertical Approach"
+    },
+    {
+      "key": "Last",
+      "value": "BN"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "383 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Vietnam"
+    }
+  ],
   "url": "https://vpo.ca/product/307504/crux-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Cruiser Valley Softshell Jacket - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester Heather Softshell"
+    }
+  ],
   "url": "https://vpo.ca/product/350053/cruiser-valley-softshell-jacket-mens"
 }

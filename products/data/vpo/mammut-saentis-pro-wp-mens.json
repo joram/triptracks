@@ -5,6 +5,43 @@
   ],
   "name": "Mammut Saentis Pro WP - Mens",
   "price_cents": 1880000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Softshell, TPU protection"
+    },
+    {
+      "key": "Inner Lining",
+      "value": "Dry-Technology"
+    },
+    {
+      "key": "Sole",
+      "value": "Michelin Trail Cleat"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Flex index",
+      "value": "A5"
+    },
+    {
+      "key": "Heel drop",
+      "value": "7 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "Standard lacing"
+    },
+    {
+      "key": "Last index",
+      "value": "mtrTech"
+    },
+    {
+      "key": "Soft Shell",
+      "value": "Soft, breathable, water-repellent synthetic fabric"
+    }
+  ],
   "url": "https://vpo.ca/product/330974/saentis-pro-wp-mens"
 }

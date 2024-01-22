@@ -5,6 +5,11 @@
   ],
   "name": "Roark Bless Up Woven Shirt - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "68% Nylon, 32% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/335944/bless-up-woven-shirt-mens"
 }

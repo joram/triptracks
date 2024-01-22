@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Svalbard Flex1 Pants - Mens",
   "price_cents": 2320000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% recycled nylon 43% polyester, 7% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "646 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343330/svalbard-flex1-pants-mens"
 }

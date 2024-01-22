@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Canyon SS Shirt, Tall - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Canyon Dobby , 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "32 in"
+    },
+    {
+      "key": "Body Fabric Weight",
+      "value": "86 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325905/canyon-ss-shirt-tall-mens"
 }

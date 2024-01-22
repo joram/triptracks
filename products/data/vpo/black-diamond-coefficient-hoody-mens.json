@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Coefficient Hoody - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec Power Dry Fleece - 180 gsm, 51% Polyester, 36% Nylon, 13% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "284 g"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "27 1"
+    }
+  ],
   "url": "https://vpo.ca/product/330136/coefficient-hoody-mens"
 }

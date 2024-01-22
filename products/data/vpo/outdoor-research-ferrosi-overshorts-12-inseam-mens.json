@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Ferrosi Overshorts, 12\" Inseam - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 48% Recycled Nylon, 38% Nylon, 14% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "12 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342232/ferrosi-overshorts-12-inseam-mens"
 }

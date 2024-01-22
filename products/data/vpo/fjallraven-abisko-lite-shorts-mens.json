@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Abisko Lite Shorts - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch"
+    },
+    {
+      "key": "Weight",
+      "value": "250 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/285438/abisko-lite-shorts-mens"
 }

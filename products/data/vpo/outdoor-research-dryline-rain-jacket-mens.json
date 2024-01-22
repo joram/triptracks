@@ -5,6 +5,11 @@
   ],
   "name": "Outdoor Research Dryline Rain Jacket - Mens",
   "price_cents": 2149500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved Ventia\u2122 2.5L 100% Recycled Polyester 75D Plain Weave"
+    }
+  ],
   "url": "https://vpo.ca/product/342040/dryline-rain-jacket-mens"
 }

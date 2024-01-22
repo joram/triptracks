@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Travel SS Shirt - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% hemp, 45% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "183 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/333775/ovik-travel-ss-shirt-mens"
 }

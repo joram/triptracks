@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Latitude Mountain Pants, Reg - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "91% Nylon, 9% Elastane Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "9 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Zippered hand pockets offers secure, convenient storage for your everyday, on-the-go essentials",
+      "value": "phone, keys, wallet, credit card &amp; more"
+    }
+  ],
   "url": "https://vpo.ca/product/347842/latitude-mountain-pants-reg-mens"
 }

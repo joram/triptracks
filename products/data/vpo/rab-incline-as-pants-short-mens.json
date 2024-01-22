@@ -5,6 +5,15 @@
   ],
   "name": "Rab Incline AS Pants, Short - Mens",
   "price_cents": 1900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Matrix\u2122 Double Weave Outer Fabric with Soft Brushed Back and Fluorocarbon-free DWR (207 g"
+    },
+    {
+      "key": "Weight",
+      "value": "422 g"
+    }
+  ],
   "url": "https://vpo.ca/product/336695/incline-as-pants-short-mens"
 }

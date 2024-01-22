@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Intraknit Merino Fleece Hoodie - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "63% Merino Wool, 24% Polyester, 12% Nylon, 1% Elastane"
+    },
+    {
+      "key": "Pocket Bags",
+      "value": "57% Cotton, 38% Polyester, 5% Elastane. Exclusive Of Decoration"
+    },
+    {
+      "key": "Featuring Intraknit\u2122 technology",
+      "value": "Insulation, articulation, and ventilation are seamlessly integrated to amplify movement and comfort during high-intensity activities"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/349664/intraknit-merino-fleece-hoodie-mens"
 }

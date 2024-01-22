@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Aldercrest Down Hooded Jacket - Mens",
   "price_cents": 3199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "650 Fill Power Down Insulation, RDS Certified"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30\""
+    }
+  ],
   "url": "https://vpo.ca/product/349212/aldercrest-down-hooded-jacket-mens"
 }

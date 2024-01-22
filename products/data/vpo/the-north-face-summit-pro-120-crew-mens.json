@@ -5,6 +5,19 @@
   ],
   "name": "The North Face Summit Pro 120 Crew - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "120 g"
+    },
+    {
+      "key": "Weight",
+      "value": "160 g"
+    },
+    {
+      "key": "Center Back",
+      "value": "28.75 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347654/summit-pro-120-crew-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Ohana Koa - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Split strap, water-resistant, textured synthetic straps with ultra soft quick-drying jersey knit lining and a soft, comfortable nylon toe post"
+    },
+    {
+      "key": "Footbed",
+      "value": "Compression molded, EVA midsole with brushed drop-in ICEVA footbed provides anatomical \ufb01t for sustained comfort"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking rubber outsole with coral reef lug design for added grip"
+    }
+  ],
   "url": "https://vpo.ca/product/293974/ohana-koa-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research OR Lockup Chest Logo LS T-Shirt - Unisex",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/348867/or-lockup-chest-logo-ls-t-shirt-unisex"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Black Diamond Valley Shorts - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nylon four-way Stretch woven with DWR finish - 85% Nylon, 15% Elastane, 148gsm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/341564/valley-shorts-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Abisko Padded Vest - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "G-Loft Supreme"
+    },
+    {
+      "key": "Weight",
+      "value": "210 g"
+    },
+    {
+      "key": "Fill weight",
+      "value": "40 g"
+    },
+    {
+      "key": "Back length",
+      "value": "72 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/303780/abisko-padded-vest-mens"
 }

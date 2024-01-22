@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Norrona Zip-Off Pants - Mens",
   "price_cents": 1832000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "69% recycled nylon, 31% nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    }
+  ],
   "url": "https://vpo.ca/product/334155/norrona-zip-off-pants-mens"
 }

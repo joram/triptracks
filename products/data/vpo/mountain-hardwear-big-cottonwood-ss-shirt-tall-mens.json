@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Big Cottonwood SS Shirt, Tall - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Slubby Plaid (100% Cotton)"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "3.4 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/325878/big-cottonwood-ss-shirt-tall-mens"
 }

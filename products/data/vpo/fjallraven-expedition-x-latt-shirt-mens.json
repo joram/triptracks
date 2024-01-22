@@ -5,6 +5,55 @@
   ],
   "name": "Fjallraven Expedition X-Latt Shirt - Mens",
   "price_cents": 2350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed fit"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "269 g"
+    },
+    {
+      "key": "Sleeve type",
+      "value": "Long sleeve"
+    },
+    {
+      "key": "Hood",
+      "value": "No"
+    },
+    {
+      "key": "Closing",
+      "value": "Press buttons"
+    },
+    {
+      "key": "Clothing layer",
+      "value": "Mid layer, Insulating layer"
+    },
+    {
+      "key": "Number of pockets",
+      "value": "2"
+    },
+    {
+      "key": "Pockets",
+      "value": "Hand pocket(s)"
+    },
+    {
+      "key": "Ventilation",
+      "value": "No"
+    }
+  ],
   "url": "https://vpo.ca/product/349862/expedition-x-latt-shirt-mens"
 }

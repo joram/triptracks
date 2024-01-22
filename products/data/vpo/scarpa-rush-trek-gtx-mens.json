@@ -5,6 +5,67 @@
   ],
   "name": "Scarpa Rush Trek GTX - Mens",
   "price_cents": 2990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.8mm Suede &amp; Fabric"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Extended Comfort"
+    },
+    {
+      "key": "Insole",
+      "value": "DST TPU Frame"
+    },
+    {
+      "key": "Midsole",
+      "value": "3D EVA CM"
+    },
+    {
+      "key": "Outsole",
+      "value": "PRESA\u00ae HIK-001"
+    },
+    {
+      "key": "Last",
+      "value": "RHA"
+    },
+    {
+      "key": "Rand",
+      "value": "Partial"
+    },
+    {
+      "key": "Cuff Height",
+      "value": "High"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "555 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Romania"
+    },
+    {
+      "key": "Suede Leather Upper with GORE-TEX\u00ae",
+      "value": "Sueded leather upper for protection, support and abrasion resistance. GORE-TEX\u00ae Extended Comfort lining guarantees waterproof-breathable protection"
+    },
+    {
+      "key": "3D Auto-fit Ankle Collar",
+      "value": "Stretch fabric and molded foam, incorporated into the ankle collar provide a soft, comfortable fit with great support"
+    },
+    {
+      "key": "DST Frame",
+      "value": "Dynamic Stabilizer Torsion frame gives rearfoot stability and torsion control"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual-density compression molded EVA for lightweight cushioning and responsiveness"
+    },
+    {
+      "key": "Outsole",
+      "value": "PRESA\u00ae outsole works with the midsole to provide mechanical impact absorption, and our SuperGum rubber compound provides confidence-inspiring traction"
+    }
+  ],
   "url": "https://vpo.ca/product/343849/rush-trek-gtx-mens"
 }

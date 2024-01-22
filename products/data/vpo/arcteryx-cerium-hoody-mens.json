@@ -5,6 +5,27 @@
   ],
   "name": "Arcteryx Cerium Hoody - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Self",
+      "value": "FC0 DWR"
+    },
+    {
+      "key": "Lining",
+      "value": "60% Bio-derived material, FC0 DWR,"
+    },
+    {
+      "key": "Fill",
+      "value": "RDS Down"
+    },
+    {
+      "key": "Weight",
+      "value": "330 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Fitted"
+    }
+  ],
   "url": "https://vpo.ca/product/350128/cerium-hoody-mens"
 }

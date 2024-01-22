@@ -5,6 +5,11 @@
   ],
   "name": "Hooke Canadian Poncho - Mens",
   "price_cents": 1099900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% recycled polyester heavyweight flannel"
+    }
+  ],
   "url": "https://vpo.ca/product/346070/canadian-poncho-mens"
 }

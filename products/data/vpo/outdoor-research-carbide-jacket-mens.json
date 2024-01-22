@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Carbide Jacket - Mens",
   "price_cents": 3199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00aeapproved Pertex\u00ae Shield 3L 100% Nylon 40D Face With Tricot Knit Backer"
+    },
+    {
+      "key": "Weight",
+      "value": "608 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330428/carbide-jacket-mens"
 }

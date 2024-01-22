@@ -5,6 +5,11 @@
   ],
   "name": "Arcteryx Aerios FL 2 Mid GTX - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Footwear Width",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/349929/aerios-fl-2-mid-gtx-mens"
 }

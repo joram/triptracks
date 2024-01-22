@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Icon LS - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Air-Con - 83% Merino Wool 13% Nylon 4% Elastane - 140gsm"
+    },
+    {
+      "key": "Weight",
+      "value": "175 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350004/icon-ls-mens"
 }

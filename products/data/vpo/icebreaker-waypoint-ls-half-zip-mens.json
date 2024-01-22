@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Waypoint LS Half Zip - Mens",
   "price_cents": 2120000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool -\u00a0Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "534.8 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/321966/waypoint-ls-half-zip-mens"
 }

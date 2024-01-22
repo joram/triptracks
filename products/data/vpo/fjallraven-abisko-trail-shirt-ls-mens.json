@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Abisko Trail Shirt LS - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Air Stretch"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed fit"
+    },
+    {
+      "key": "Weight",
+      "value": "325 g - size M"
+    }
+  ],
   "url": "https://vpo.ca/product/363454/abisko-trail-shirt-ls-mens"
 }

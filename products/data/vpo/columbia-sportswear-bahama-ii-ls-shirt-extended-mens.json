@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Bahama II LS Shirt, Extended - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Tactel\u00ae Nylon"
+    },
+    {
+      "key": "Size",
+      "value": "Big"
+    }
+  ],
   "url": "https://vpo.ca/product/346614/bahama-ii-ls-shirt-extended-mens"
 }

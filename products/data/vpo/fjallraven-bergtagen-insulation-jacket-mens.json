@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Bergtagen Insulation Jacket - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body &amp; Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "G-Loft Supreme"
+    },
+    {
+      "key": "Fill weight",
+      "value": "100 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313320/bergtagen-insulation-jacket-mens"
 }

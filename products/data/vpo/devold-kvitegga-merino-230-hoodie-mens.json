@@ -5,6 +5,19 @@
   ],
   "name": "Devold Kvitegga Merino 230 Hoodie - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool - 230 g"
+    },
+    {
+      "key": "Fiber",
+      "value": "Fine 18.7 micron"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/344949/kvitegga-merino-230-hoodie-mens"
 }

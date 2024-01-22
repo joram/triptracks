@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Greenland Jeans, Reg - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "390 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular fit"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed length"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full Leg"
+    }
+  ],
   "url": "https://vpo.ca/product/313383/greenland-jeans-reg-mens"
 }

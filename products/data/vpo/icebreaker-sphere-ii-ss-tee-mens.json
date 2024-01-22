@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Sphere II SS Tee - Mens",
   "price_cents": 720000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "60% Lyocell, 40% Merino Wool, Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/340011/sphere-ii-ss-tee-mens"
 }

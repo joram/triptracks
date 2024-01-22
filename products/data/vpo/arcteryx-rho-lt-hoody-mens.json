@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rho LT Hoody - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Torrent\u2122 190 with Polygiene\u00ae- 84% polyester, 16% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "265 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Fitted"
+    }
+  ],
   "url": "https://vpo.ca/product/338113/rho-lt-hoody-mens"
 }

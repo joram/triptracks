@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Nature T-Shirt - Mens",
   "price_cents": 550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339934/nature-t-shirt-mens"
 }

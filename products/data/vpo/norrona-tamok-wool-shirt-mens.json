@@ -5,6 +5,23 @@
   ],
   "name": "Norrona Tamok Wool Shirt - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "70% Reprocessed Wool"
+    },
+    {
+      "key": "Weight",
+      "value": "478 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Relaxed"
+    },
+    {
+      "key": "UPF",
+      "value": "50+"
+    }
+  ],
   "url": "https://vpo.ca/product/322130/tamok-wool-shirt-mens"
 }

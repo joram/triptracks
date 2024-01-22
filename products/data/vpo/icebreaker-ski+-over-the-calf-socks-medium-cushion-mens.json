@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Ski+ Over The Calf Socks - Medium Cushion - Mens",
   "price_cents": 390000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Merino Wool, 45% Nylon, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/321950/ski-over-the-calf-socks-medium-cushion-mens"
 }

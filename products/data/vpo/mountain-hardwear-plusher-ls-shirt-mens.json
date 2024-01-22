@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Plusher LS Shirt - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Organic Heavy Flannel - 100% Organic Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "8.8 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/332001/plusher-ls-shirt-mens"
 }

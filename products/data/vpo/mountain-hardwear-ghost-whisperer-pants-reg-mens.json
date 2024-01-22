@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Ghost Whisperer Pants, Reg - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Whisperer 15D Ripstop - 100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "800-fill RDS\u00ae-certi\ufb01ed down - 90% Goose Down, 10% Goose Feather"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "9.6 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/323338/ghost-whisperer-pants-reg-mens"
 }

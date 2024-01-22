@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Resistor Lite Chinos Tapered, 32\" Inseam - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "70% Cotton, 25% Nylon, 5% Spandex - 170 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Tapered"
+    }
+  ],
   "url": "https://vpo.ca/product/333268/resistor-lite-chinos-tapered-32-inseam-mens"
 }

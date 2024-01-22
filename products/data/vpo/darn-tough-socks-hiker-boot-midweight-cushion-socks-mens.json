@@ -5,6 +5,19 @@
   ],
   "name": "Darn Tough Socks Hiker Boot Midweight Cushion Socks - Mens",
   "price_cents": 359500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "64% Merino Wool, 33% Nylon, 3% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    }
+  ],
   "url": "https://vpo.ca/product/321759/hiker-boot-midweight-cushion-socks-mens"
 }

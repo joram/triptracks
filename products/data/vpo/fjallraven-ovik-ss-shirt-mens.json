@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik SS Shirt - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "65% Polyester, 35% Organic Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "170 g (size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/309042/ovik-ss-shirt-mens"
 }

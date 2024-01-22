@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Falketind Octa Jacket - Mens",
   "price_cents": 2034600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Pertex\u00ae 51% Recycled Nylon, 49% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "52% recycled polyester, 48% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "264 g"
+    }
+  ],
   "url": "https://vpo.ca/product/326268/falketind-octa-jacket-mens"
 }

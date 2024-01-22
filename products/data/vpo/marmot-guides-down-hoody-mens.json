@@ -5,6 +5,31 @@
   ],
   "name": "Marmot Guides Down Hoody - Mens",
   "price_cents": 2560000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insulation Type",
+      "value": "Down"
+    },
+    {
+      "key": "Lining Fabric",
+      "value": "100% Polyester Embossed WR 1.8 oz"
+    },
+    {
+      "key": "Main Fabric",
+      "value": "100% Polyester, Ripstop, 55g"
+    },
+    {
+      "key": "Weight",
+      "value": "658 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/275746/guides-down-hoody-mens"
 }

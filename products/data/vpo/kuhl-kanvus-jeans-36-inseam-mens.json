@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl Kanvus Jeans, 36\" Inseam - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "98% Cotton, 2% Spandex -\u00a06.3 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Klassik"
+    },
+    {
+      "key": "Knee Opening",
+      "value": "18 in"
+    },
+    {
+      "key": "Bottom Leg",
+      "value": "16.2 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "36 in"
+    },
+    {
+      "key": "Six pockets",
+      "value": "two front hand, one coin, two back, one stealth cell phone pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/313489/kanvus-jeans-36-inseam-mens"
 }

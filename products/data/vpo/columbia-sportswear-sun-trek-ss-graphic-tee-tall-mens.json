@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Sun Trek SS Graphic Tee - Tall - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "56% Polyester, 37% Cotton, 7% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Active"
+    }
+  ],
   "url": "https://vpo.ca/product/349701/sun-trek-ss-graphic-tee-tall-mens"
 }

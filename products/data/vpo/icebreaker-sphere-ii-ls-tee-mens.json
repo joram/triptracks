@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Sphere II LS Tee - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Lyocell, 40% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "206 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340008/sphere-ii-ls-tee-mens"
 }

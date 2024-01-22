@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Sport Ankle Socks - Mens",
   "price_cents": 99500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Polyester, 30% Cotton, 15% Acrylic, 5% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/343319/sport-ankle-socks-mens"
 }

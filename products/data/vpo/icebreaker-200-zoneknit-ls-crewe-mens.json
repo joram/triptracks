@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker 200 ZoneKnit LS Crewe - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "Medium = 250 g"
+    }
+  ],
   "url": "https://vpo.ca/product/347543/200-zoneknit-ls-crewe-mens"
 }

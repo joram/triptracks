@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Vigor Bottoms - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Grid-Back Fleece"
+    },
+    {
+      "key": "Weight",
+      "value": "283 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "30.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330484/vigor-bottoms-mens"
 }

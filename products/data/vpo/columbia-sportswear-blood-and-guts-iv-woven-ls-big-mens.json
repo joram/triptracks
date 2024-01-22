@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Blood and Guts IV Woven LS - Big - Mens",
   "price_cents": 849900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Omni-Shield\u2122 Release Twill -\u00a0100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346703/blood-and-guts-iv-woven-ls-big-mens"
 }

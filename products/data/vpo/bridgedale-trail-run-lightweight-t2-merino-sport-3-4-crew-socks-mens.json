@@ -5,6 +5,19 @@
   ],
   "name": "Bridgedale Trail Run Lightweight T2 Merino Sport 3/4 Crew Socks - Mens",
   "price_cents": 279500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "62% Nylon, 18% Merino Wool, 18% Polypropylene, 2% Lycra\u00ae"
+    },
+    {
+      "key": "Height",
+      "value": "3"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Lightweight"
+    }
+  ],
   "url": "https://vpo.ca/product/347062/trail-run-lightweight-t2-merino-sport-34-crew-socks-mens"
 }

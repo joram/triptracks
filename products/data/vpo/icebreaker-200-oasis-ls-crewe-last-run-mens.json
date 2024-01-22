@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker 200 Oasis LS Crewe - Last Run - Mens",
   "price_cents": 1040000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/347529/200-oasis-ls-crewe-last-run-mens"
 }

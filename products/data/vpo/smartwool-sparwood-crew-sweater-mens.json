@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Sparwood Crew Sweater - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "55% Polyester, 30% Merino Wool, 15% Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "294 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "26.75 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/330258/sparwood-crew-sweater-mens"
 }

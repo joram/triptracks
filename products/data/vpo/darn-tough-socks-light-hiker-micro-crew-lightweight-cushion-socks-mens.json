@@ -5,6 +5,19 @@
   ],
   "name": "Darn Tough Socks Light Hiker Micro Crew Lightweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "54% Nylon, 43% Merino Wool, 3% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    }
+  ],
   "url": "https://vpo.ca/product/323821/light-hiker-micro-crew-lightweight-cushion-socks-mens"
 }

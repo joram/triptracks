@@ -5,6 +5,23 @@
   ],
   "name": "Rab Vital Hoody - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Windproof 20D Atmos\u2122 Woven Nylon (48 g"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "75 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342688/vital-hoody-mens"
 }

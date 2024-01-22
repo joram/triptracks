@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Trift Half Zip LS - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Knitted Seamless Baselayer - 58% Polyamide, 40% Wolle, 2% Elastan"
+    },
+    {
+      "key": "Weight",
+      "value": "205 g"
+    },
+    {
+      "key": "Merino wool -polyamide blend",
+      "value": "a perfect balance of warmth, odor control, moisture management and durability"
+    }
+  ],
   "url": "https://vpo.ca/product/338295/trift-half-zip-ls-mens"
 }

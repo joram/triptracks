@@ -5,6 +5,23 @@
   ],
   "name": "Rab Kinetic Alpine 2.0 Jacket - Mens",
   "price_cents": 4500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Recycled polyester knit face 3L with PU membrane and polyester backer"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Stretch polyamide woven 3L"
+    },
+    {
+      "key": "Weight",
+      "value": "422.5g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333239/kinetic-alpine-20-jacket-mens"
 }

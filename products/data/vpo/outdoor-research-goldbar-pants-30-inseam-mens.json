@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Goldbar Pants, 30\" Inseam - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Cotton, 2% Spandex with DWR treatment"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    },
+    {
+      "key": "Weight",
+      "value": "680 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348723/goldbar-pants-30-inseam-mens"
 }

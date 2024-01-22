@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Goat Pima Cotton T-Shirt - Mens",
   "price_cents": 272700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348053/valhalla-kingdom-goat-pima-cotton-t-shirt-mens"
 }

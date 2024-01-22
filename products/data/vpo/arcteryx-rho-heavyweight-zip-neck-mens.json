@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Rho Heavyweight Zip Neck - Mens",
   "price_cents": 1900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Power Stretch\u00ae Pro - 53% Polyester, 38% Nylon, 9% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Fitted"
+    },
+    {
+      "key": "Weight",
+      "value": "285 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350505/rho-heavyweight-zip-neck-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Foray 3-in-1 Parka - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer Jacket",
+      "value": "bluesign\u00ae approved Gore-Tex with Paclite\u00ae Technology 2L, bluesign\u00ae approved 100% Polyester 50D Plain Weave"
+    },
+    {
+      "key": "Inner Jacket",
+      "value": "100% Nylon 20D Ripstop Shell and Lining, VerticalX Eco\u2122 100% Polyester (85% Recycled) Insulation 60 G"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/348709/foray-3-in-1-parka-mens"
 }

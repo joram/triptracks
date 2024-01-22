@@ -5,6 +5,11 @@
   ],
   "name": "Prana Ronnie Henley II - Mens",
   "price_cents": 1090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "80% Organic Cotton, 20% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348280/ronnie-henley-ii-mens"
 }

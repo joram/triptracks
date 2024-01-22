@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Norvan LD 3 GTX - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "295 g"
+    },
+    {
+      "key": "Footwear Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Drop (Stack)",
+      "value": "6mm (29mm"
+    }
+  ],
   "url": "https://vpo.ca/product/342476/norvan-ld-3-gtx-mens"
 }

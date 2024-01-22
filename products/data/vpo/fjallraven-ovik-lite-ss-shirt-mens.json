@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Ovik Lite SS Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Comfort"
+    },
+    {
+      "key": "Weight",
+      "value": "154 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339936/ovik-lite-ss-shirt-mens"
 }

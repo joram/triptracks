@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Falketind Flex1 Pants - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "69% Recycled Nylon, 19% Recycled Polyester, 12% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "426 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "81 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/325937/falketind-flex1-pants-mens"
 }

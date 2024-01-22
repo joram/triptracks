@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Hike Low Cut Socks - Cool-Lite - Mens",
   "price_cents": 260000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "35% Nylon, 33% Merino Wool, 30% Lyocell, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/317997/hike-low-cut-socks-cool-lite-mens"
 }

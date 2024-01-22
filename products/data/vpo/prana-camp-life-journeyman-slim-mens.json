@@ -5,6 +5,11 @@
   ],
   "name": "Prana Camp Life Journeyman - Slim - Mens",
   "price_cents": 391600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/340109/camp-life-journeyman-slim-mens"
 }

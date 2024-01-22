@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Cascade Leggings - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Merino Flex - 81% Merino Wool 12% Nylon 7% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/338962/cascade-leggings-mens"
 }

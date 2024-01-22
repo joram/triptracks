@@ -5,6 +5,35 @@
   ],
   "name": "Ortovox Swisswool Piz Boe Jacket - Mens",
   "price_cents": 4299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "332 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Outer",
+      "value": "Pertex\u00ae Quantum"
+    },
+    {
+      "key": "Padding",
+      "value": "88% virgin wool (Swisswool), 12% polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Recycled polyamide"
+    },
+    {
+      "key": "Inserts",
+      "value": "75% polyamide, 18% Merino wool, 7% elastane"
+    },
+    {
+      "key": "Naturetec light",
+      "value": "Elastic and breathable"
+    }
+  ],
   "url": "https://vpo.ca/product/329288/swisswool-piz-boe-jacket-mens"
 }

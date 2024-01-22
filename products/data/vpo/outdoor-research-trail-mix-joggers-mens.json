@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Trail Mix Joggers - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349467/trail-mix-joggers-mens"
 }

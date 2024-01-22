@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Greenland No. 1 Down Jacket - Mens",
   "price_cents": 6250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamid"
+    },
+    {
+      "key": "Fill power",
+      "value": "800 in\u00b3"
+    },
+    {
+      "key": "Fill",
+      "value": "95% goose down, 5% feather"
+    },
+    {
+      "key": "Fill weight",
+      "value": "100 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1040 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329367/greenland-no-1-down-jacket-mens"
 }

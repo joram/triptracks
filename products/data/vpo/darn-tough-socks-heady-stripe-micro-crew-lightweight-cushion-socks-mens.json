@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Heady Stripe Micro Crew Lightweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "48% Merino Wool, 45% Nylon, 7% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, hiking shoes, trail runners"
+    }
+  ],
   "url": "https://vpo.ca/product/330586/heady-stripe-micro-crew-lightweight-cushion-socks-mens"
 }

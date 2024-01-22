@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven High Coast Lite Trousers - Mens",
   "price_cents": 1199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% polyamide, 15% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "280 g"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full leg"
+    }
+  ],
   "url": "https://vpo.ca/product/325474/high-coast-lite-trousers-mens"
 }

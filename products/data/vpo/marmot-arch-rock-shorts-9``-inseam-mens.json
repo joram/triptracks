@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Arch Rock Shorts, 9`` Inseam - Mens",
   "price_cents": 800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "7 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit - Mid Rise"
+    },
+    {
+      "key": "Inseam",
+      "value": "9 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342555/arch-rock-shorts-9-inseam-mens"
 }

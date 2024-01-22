@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Moose Kingdom Pima Cotton T-Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348061/valhalla-kingdom-moose-kingdom-pima-cotton-t-shirt-mens"
 }

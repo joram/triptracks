@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Chockstone Pants, Reg - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Double Weave Woven - 88% Nylon, 12% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "11 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/337519/chockstone-pants-reg-mens"
 }

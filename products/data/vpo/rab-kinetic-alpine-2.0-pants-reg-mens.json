@@ -5,6 +5,23 @@
   ],
   "name": "Rab Kinetic Alpine 2.0 Pants, Reg - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Stretch polyamide 20D Woven 3L with PU Membrane and Polyester Backer"
+    },
+    {
+      "key": "Secondary",
+      "value": "Stretch polyamide 20D Woven 3L with PU Membrane and Polyester Backer"
+    },
+    {
+      "key": "Tertiary",
+      "value": "Kicker Patch"
+    },
+    {
+      "key": "Weight",
+      "value": "357 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333242/kinetic-alpine-20-pants-reg-mens"
 }

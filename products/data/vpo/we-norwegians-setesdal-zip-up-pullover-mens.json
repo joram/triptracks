@@ -5,6 +5,15 @@
   ],
   "name": "We Norwegians Setesdal Zip Up Pullover - Mens",
   "price_cents": 3899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "90% merino wool, 10% cashmere - Linsieme yarn"
+    },
+    {
+      "key": "Fit",
+      "value": "Fits generous- they suggest to size down"
+    }
+  ],
   "url": "https://vpo.ca/product/344824/setesdal-zip-up-pullover-mens"
 }

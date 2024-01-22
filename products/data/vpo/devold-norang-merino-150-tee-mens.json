@@ -5,6 +5,15 @@
   ],
   "name": "Devold Norang Merino 150 Tee - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "150 g"
+    },
+    {
+      "key": "Weight",
+      "value": "Superfine wool - 17.5 micron"
+    }
+  ],
   "url": "https://vpo.ca/product/344908/norang-merino-150-tee-mens"
 }

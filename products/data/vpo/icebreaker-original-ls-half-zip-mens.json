@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Original LS Half Zip - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive Of Decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/275628/original-ls-half-zip-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Devold Hiking Half Zip Neck - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "190 g"
+    },
+    {
+      "key": "Fiber",
+      "value": "Fine wool - 18.7 micron"
+    },
+    {
+      "key": "Rib knitted",
+      "value": "hard-wearing, elastic and comfortable"
+    }
+  ],
   "url": "https://vpo.ca/product/344939/hiking-half-zip-neck-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Classic Thermal Merino 250 Base Layer Hoodie - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "250 g"
+    },
+    {
+      "key": "Weight",
+      "value": "318 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/330267/classic-thermal-merino-250-base-layer-hoodie-mens"
 }

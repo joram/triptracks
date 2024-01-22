@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Mountain T-Shirt - Mens",
   "price_cents": 640000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Drirelease\u00ae Cotton - 81% Polyester, 14% Cotton, 5% Elasthan"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "195 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333059/mountain-t-shirt-mens"
 }

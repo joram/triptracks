@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Buckhollow Jacket - Tall - Mens",
   "price_cents": 1799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester, 100% Polyester 2L Ripstop"
+    }
+  ],
   "url": "https://vpo.ca/product/346770/buckhollow-jacket-tall-mens"
 }

@@ -5,6 +5,47 @@
   ],
   "name": "Mammut Alnasca Knit II Low GTX - Mens",
   "price_cents": 1999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "3D Knitted"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX Performance Comfort Footwear"
+    },
+    {
+      "key": "Sole",
+      "value": "Michelin Rock Tech Sole"
+    },
+    {
+      "key": "Weight( per shoe)",
+      "value": "410 g (Size UK 8.5)"
+    },
+    {
+      "key": "Flex index",
+      "value": "A5"
+    },
+    {
+      "key": "Heel drop",
+      "value": "11 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "Standard lacing"
+    },
+    {
+      "key": "Last index",
+      "value": "approachTech"
+    },
+    {
+      "key": "Base Fit\u00ae",
+      "value": "Sliding webbing transfers power from lacing area to soles, ensuring improved"
+    },
+    {
+      "key": "360 Heel Support",
+      "value": "The three-dimensionally shaped TPU element is designed for the anatomy of the heel bone, which it completely envelops. This delivers optimum heel fit, helps prevent twisted ankles and protects against rock abrasion"
+    }
+  ],
   "url": "https://vpo.ca/product/330990/alnasca-knit-ii-low-gtx-mens"
 }

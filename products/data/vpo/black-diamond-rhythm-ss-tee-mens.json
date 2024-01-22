@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Rhythm SS Tee - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Mateirals",
+      "value": "Wool Nylon Blend Single Jersey - 57% Nylon, 43% Merino Wool, 95 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "96 g"
+    }
+  ],
   "url": "https://vpo.ca/product/316743/rhythm-ss-tee-mens"
 }

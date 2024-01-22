@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Stormline Stretch Full Zip Rain Pants, Long - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BD.dry\u2122 2.5L, Two-way stretch woven face with DWR finish - 100% Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "277 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/341555/stormline-stretch-full-zip-rain-pants-long-mens"
 }

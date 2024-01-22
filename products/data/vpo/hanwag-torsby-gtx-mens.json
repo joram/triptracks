@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Torsby GTX - Mens",
   "price_cents": 3500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather, Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Hanwag Endurance Hike"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 5 oz"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/337252/torsby-gtx-mens"
 }

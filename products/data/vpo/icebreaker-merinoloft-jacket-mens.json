@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker MerinoLoft Jacket - Mens",
   "price_cents": 4200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Cotton Filling"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Merino Wool"
+    }
+  ],
   "url": "https://vpo.ca/product/348666/merinoloft-jacket-mens"
 }

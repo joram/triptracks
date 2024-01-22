@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Landroamer Ripstop SS Shirt - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "96% Nylon, 4% Elastane"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "34.5 in"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, easy fit for comfortable range of motion"
+    }
+  ],
   "url": "https://vpo.ca/product/363905/landroamer-ripstop-ss-shirt-mens"
 }

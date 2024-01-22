@@ -5,6 +5,27 @@
   ],
   "name": "Lowa Tibet GTX, Wide - Mens",
   "price_cents": 5300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "1820 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Boot (MID)"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Tsavo"
+    },
+    {
+      "key": "Upper",
+      "value": "Nubuck"
+    }
+  ],
   "url": "https://vpo.ca/product/328217/tibet-gtx-wide-mens"
 }

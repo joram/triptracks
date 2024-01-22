@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 150 Anatomica Boxers - Mens",
   "price_cents": 440000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "83% Merino Wool, 12% Nylon, 5% Elastane - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/292888/merino-150-anatomica-boxers-mens"
 }

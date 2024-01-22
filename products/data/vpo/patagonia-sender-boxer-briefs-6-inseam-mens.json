@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia Sender Boxer Briefs, 6\" Inseam - Mens",
   "price_cents": 315000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "6"
+    }
+  ],
   "url": "https://vpo.ca/product/317261/sender-boxer-briefs-6-inseam-mens"
 }

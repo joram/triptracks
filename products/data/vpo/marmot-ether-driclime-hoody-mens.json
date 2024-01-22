@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Ether DriClime Hoody - Mens",
   "price_cents": 1600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Econyl, 100% Post-Consumer Recycled Nylon, Ripstop, 59g"
+    },
+    {
+      "key": "Weight",
+      "value": "9 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342599/ether-driclime-hoody-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Merino Sport Ultralite Anorak - Mens",
   "price_cents": 1199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Trim / Lining",
+      "value": "53% Merino Wool 47% Lyocell"
+    }
+  ],
   "url": "https://vpo.ca/product/343473/merino-sport-ultralite-anorak-mens"
 }

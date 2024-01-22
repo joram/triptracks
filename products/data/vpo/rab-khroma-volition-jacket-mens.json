@@ -5,6 +5,31 @@
   ],
   "name": "Rab Khroma Volition Jacket - Mens",
   "price_cents": 8250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "40D GORE-TEX\u00ae 2-Layer waterproof technology with insulated construction. HH",
+      "value": "28,000mm"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "60 g"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "749 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "31.5 in"
+    },
+    {
+      "key": "HH",
+      "value": "28,000mm"
+    }
+  ],
   "url": "https://vpo.ca/product/336827/khroma-volition-jacket-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Prana prAna Tank - Standard - Mens",
   "price_cents": 319600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/306076/prana-tank-standard-mens"
 }

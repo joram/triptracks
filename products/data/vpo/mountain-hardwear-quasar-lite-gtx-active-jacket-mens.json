@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Quasar Lite GTX Active Jacket - Mens",
   "price_cents": 3999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex Active 14D 3L Ripstop - 100% Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "245 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/332916/quasar-lite-gtx-active-jacket-mens"
 }

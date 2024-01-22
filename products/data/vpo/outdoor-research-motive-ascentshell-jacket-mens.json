@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Motive AscentShell Jacket - Mens",
   "price_cents": 2799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "AscentShell\u2122 3L, 100% Polyester 50D Mechanical Stretch Plainweave with 100% Polyester 30D Knit Backer"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "309 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 1\u20442 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332561/motive-ascentshell-jacket-mens"
 }

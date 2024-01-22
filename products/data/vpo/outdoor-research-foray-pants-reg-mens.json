@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Foray Pants, Reg - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved Gore-Tex with Paclite\u00ae Technology 2L, bluesign\u00ae approved 100% Polyester 50D Plain Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "302 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "31.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/331932/foray-pants-reg-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Dawn Patrol Hybrid Pants - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell 1",
+      "value": "BD.Dry Stretch Nylon 3L with GTT Empel DWR Finish - 138gsm, ace"
+    },
+    {
+      "key": "Shell 2",
+      "value": "4 way Stretch Nylon Double Weave with GTT Empel DWR Finish - 169gsm, 87% Nylon, 13% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "553 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/330132/dawn-patrol-hybrid-pants-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Resistor Lite Chino Shorts, 10\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    },
+    {
+      "key": "Seven pockets",
+      "value": "two front chino, one coin, two double welt at back, and two drop in cell phone pockets"
+    }
+  ],
   "url": "https://vpo.ca/product/343255/resistor-lite-chino-shorts-10-inseam-mens"
 }

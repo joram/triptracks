@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 200 Dawnder LS Flannel Shirt - Plaid - Mens",
   "price_cents": 2200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/336555/merino-200-dawnder-ls-flannel-shirt-plaid-mens"
 }

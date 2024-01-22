@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Minimalist Pro GTX Jacket - Mens",
   "price_cents": 3300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX Paclite\u00ae 100% Recycled Polyester Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "13 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Back Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342641/minimalist-pro-gtx-jacket-mens"
 }

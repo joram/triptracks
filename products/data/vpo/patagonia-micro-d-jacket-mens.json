@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Micro D Jacket - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "4.7-oz 100% recycled polyester microfleece"
+    },
+    {
+      "key": "Pocket bags",
+      "value": "3-oz 100% polyester brushed mesh"
+    },
+    {
+      "key": "Weight",
+      "value": "337 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/329557/micro-d-jacket-mens"
 }

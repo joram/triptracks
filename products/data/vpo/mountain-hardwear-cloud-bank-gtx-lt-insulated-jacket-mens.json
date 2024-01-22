@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Cloud Bank GTX LT Insulated Jacket - Mens",
   "price_cents": 5500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "85% Recycled Polyester, 15% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "31.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "840 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337533/cloud-bank-gtx-lt-insulated-jacket-mens"
 }

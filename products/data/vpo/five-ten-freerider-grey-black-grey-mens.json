@@ -5,6 +5,19 @@
   ],
   "name": "Five Ten Freerider - Grey / Black / Grey - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Recycled Content",
+      "value": "This product is made with recycled content as part of our ambition to end plastic waste"
+    },
+    {
+      "key": "High-Friction Versatility",
+      "value": "Stealth\u00ae S1 rubber offers versatile high-friction grip on and off the bike"
+    },
+    {
+      "key": "Dotty\u2122 Tread",
+      "value": "Classic Dotty\u2122 tread for superior pedal traction"
+    }
+  ],
   "url": "https://vpo.ca/product/346146/freerider-grey-black-grey-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Norrona Lyngen Flex1 Pants - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material 1",
+      "value": "69% recycled nylon, 19% recycled polyester, 12% elastane"
+    },
+    {
+      "key": "Material 2",
+      "value": "50% recycled polyamide, 43% polyester, 7% elastane"
+    },
+    {
+      "key": "Inseam length",
+      "value": "85 cm (size L)"
+    },
+    {
+      "key": "Fit",
+      "value": "Technical"
+    }
+  ],
   "url": "https://vpo.ca/product/341642/lyngen-flex1-pants-mens"
 }

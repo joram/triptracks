@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Diamond Quilted Bomber Hoody - Mens",
   "price_cents": 1494000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body and lining",
+      "value": "2.2-oz 100% recycled polyester taffeta with a HeiQ\u00ae Eco Dry PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Insulation",
+      "value": "80-g Thermogreen\u00ae 100% recycled polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/323552/diamond-quilted-bomber-hoody-mens"
 }

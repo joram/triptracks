@@ -5,6 +5,15 @@
   ],
   "name": "Bridgedale Hike Lightweight T2 Boot Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "56% Coolmax\u00ae, 43% Nylon, 1% Lycra\u00ae"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    }
+  ],
   "url": "https://vpo.ca/product/323812/hike-lightweight-t2-boot-socks-mens"
 }

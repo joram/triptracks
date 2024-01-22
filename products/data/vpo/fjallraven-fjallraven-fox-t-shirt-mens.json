@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Fjallraven Fox T-Shirt - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Fabric"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    }
+  ],
   "url": "https://vpo.ca/product/339922/fjallraven-fox-t-shirt-mens"
 }

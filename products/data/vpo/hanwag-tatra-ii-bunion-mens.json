@@ -5,6 +5,39 @@
   ],
   "name": "HanWag Tatra II Bunion - Mens",
   "price_cents": 4300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae AW Integral"
+    },
+    {
+      "key": "Lining",
+      "value": "Leather"
+    },
+    {
+      "key": "Weight",
+      "value": "1520 g"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Fit",
+      "value": "Bunion"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/311286/tatra-ii-bunion-mens"
 }

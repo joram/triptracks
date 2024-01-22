@@ -5,6 +5,31 @@
   ],
   "name": "Merrell Kahuna Web - Mens",
   "price_cents": 839700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "100% Recycled Webbing"
+    },
+    {
+      "key": "Lining",
+      "value": "Lycra"
+    },
+    {
+      "key": "Arch Shank",
+      "value": "Molded Nylon"
+    },
+    {
+      "key": "Midsole",
+      "value": "Lightweight EVA foam"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae TC5+ rubber"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "1 lb 2 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/336663/kahuna-web-mens"
 }

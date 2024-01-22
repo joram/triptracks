@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  Zessel T-Shirt - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Artist",
+      "value": "Kate Zessel"
+    }
+  ],
   "url": "https://vpo.ca/product/343572/zessel-t-shirt-mens"
 }

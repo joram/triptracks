@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research SuperStrand LT Hoodie - Mens",
   "price_cents": 2319600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell and Lining",
+      "value": "bluesign\u00ae approved, 100% Nylon 12D Rip Stop"
+    },
+    {
+      "key": "Insulation",
+      "value": "VerticalX\u2122 SuperStrand Insulation 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342441/superstrand-lt-hoodie-mens"
 }

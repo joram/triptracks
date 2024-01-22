@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Joyrydr - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "60% Cotton, 40% Polyester -\u00a0125 gs"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester, 380 - g"
+    },
+    {
+      "key": "Sleeves",
+      "value": "100% Nylon -\u00a060 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313474/joyrydr-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Hike 3Q Crew Socks - Cool-Lite - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "41% Nylon, 28% Merino Wool, 28% Tencel\u00ae, 3% Lycra\u00ae"
+    },
+    {
+      "key": "\u00a0Weight",
+      "value": "138 g"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/317993/hike-3q-crew-socks-cool-lite-mens"
 }

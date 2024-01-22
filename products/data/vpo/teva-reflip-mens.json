@@ -5,6 +5,11 @@
   ],
   "name": "Teva Reflip - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best for",
+      "value": "all-day wear, travel"
+    }
+  ],
   "url": "https://vpo.ca/product/345683/reflip-mens"
 }

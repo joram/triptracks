@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Trail Fleece - Mens",
   "price_cents": 1519600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "390 g"
+    }
+  ],
   "url": "https://vpo.ca/product/293760/abisko-trail-fleece-mens"
 }

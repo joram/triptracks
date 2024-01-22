@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Reduxion Softshell Pants, Reg - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Double Weave Softshell with Brushed Back - 92% Nylon, 8% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 8 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349026/reduxion-softshell-pants-reg-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Mountain Hardwear StretchDown Light Shacket - Mens",
   "price_cents": 2999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "20D Durable Stretch Doubleweave - 86% Nylon, 14% Elastane"
+    },
+    {
+      "key": "Lining",
+      "value": "87% Nylon, 13% Elastane"
+    },
+    {
+      "key": "Insulation",
+      "value": "700-fill RDS\u00ae-certified down"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.5 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "15.2 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349037/stretchdown-light-shacket-mens"
 }

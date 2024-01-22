@@ -5,6 +5,19 @@
   ],
   "name": "Marmot PreCip Jacket - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Materials",
+      "value": "NanoPro\u2122100% Nylon Ripstop 2.2 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "29 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/280641/precip-jacket-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Muck Arctic Ice Tall AG - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Estimated height",
+      "value": "40 cm"
+    },
+    {
+      "key": "Estimated max calf circumference",
+      "value": "42 cm"
+    },
+    {
+      "key": "Comfort Range",
+      "value": "-50\u00b0C to -1\u00b0C"
+    }
+  ],
   "url": "https://vpo.ca/product/332633/arctic-ice-tall-ag-mens"
 }

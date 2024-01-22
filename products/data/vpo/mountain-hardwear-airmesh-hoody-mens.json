@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear AirMesh Hoody - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Active 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Weight",
+      "value": "83 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337512/airmesh-hoody-mens"
 }

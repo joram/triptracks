@@ -5,6 +5,19 @@
   ],
   "name": "The North Face Summit FutureFleece Full Zip Hoodie - Mens",
   "price_cents": 2199900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "124 g"
+    },
+    {
+      "key": "Weight",
+      "value": "208 g"
+    },
+    {
+      "key": "Center Back",
+      "value": "27.25 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347600/summit-futurefleece-full-zip-hoodie-mens"
 }

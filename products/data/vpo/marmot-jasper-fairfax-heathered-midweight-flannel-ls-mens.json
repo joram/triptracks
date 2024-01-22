@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Jasper / Fairfax Heathered Midweight Flannel LS - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "57% Cotton, 43% Recycled Polyester Flannel"
+    },
+    {
+      "key": "Weight",
+      "value": "10 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347835/jasper-fairfax-heathered-midweight-flannel-ls-mens"
 }

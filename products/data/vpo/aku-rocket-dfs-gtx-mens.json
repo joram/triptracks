@@ -5,6 +5,55 @@
   ],
   "name": "Aku Rocket DFS GTX - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining Description",
+      "value": "GORE-TEX\u00ae Performance Comfort"
+    },
+    {
+      "key": "Sole",
+      "value": "VIBRAM Rocket Traction Lug With MegaGrip Compound"
+    },
+    {
+      "key": "Footbed",
+      "value": "Partially Recycled Ortholite Hybrid Insole"
+    },
+    {
+      "key": "Stiffness",
+      "value": "Flexible"
+    },
+    {
+      "key": "Lasting board",
+      "value": "2.0 MM Polypropylene &amp; Die Cut EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "Double Density Polyurethane"
+    },
+    {
+      "key": "Upper",
+      "value": "Microfiber and 3D Laminated Upper"
+    },
+    {
+      "key": "Resoleable",
+      "value": "No"
+    },
+    {
+      "key": "Dual Fit System",
+      "value": "AKU's exclusive Dual Fit System allows for optimal fit and quick customization to give you the confidence and performance you need over the most demanding terrain"
+    },
+    {
+      "key": "Gore-Tex",
+      "value": "Keep your feet dry in all conditions with the integrated waterproof Gore-Tex Performance Comfort membrane"
+    },
+    {
+      "key": "Vibram",
+      "value": "The Vibram Rocket Traction Lug with MegaGrip provides up to 25% more traction to help you cruise along trails more efficiently"
+    },
+    {
+      "key": "AKU Elica Technology",
+      "value": "The Elica Natural Stride System ensures an anatomical fit to provide better stability and weight distribution across the sole of your shoe. This improved fit reduces pressure points and encourages better posture and movement, reducing fatigue and increasing comfort"
+    }
+  ],
   "url": "https://vpo.ca/product/344375/rocket-dfs-gtx-mens"
 }

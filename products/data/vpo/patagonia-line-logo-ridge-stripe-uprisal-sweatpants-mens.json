@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Line Logo Ridge Stripe Uprisal Sweatpants - Mens",
   "price_cents": 1090000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "11.5 oz 55% postconsumer recycled polyester, 45% recycled cotton knit fleece with a brushed back"
+    },
+    {
+      "key": "Weight",
+      "value": "549 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341993/line-logo-ridge-stripe-uprisal-sweatpants-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Trekking Shirt - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "84% polyester, 16% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "325 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325429/abisko-trekking-shirt-mens"
 }

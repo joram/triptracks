@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Anatomica Cool-Lite Boxers - Mens",
   "price_cents": 600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Merino Wool, 33% Lyocell, 12% Nylon, 5% Elastane - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/326284/anatomica-cool-lite-boxers-mens"
 }

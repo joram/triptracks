@@ -5,6 +5,11 @@
   ],
   "name": "Prana Camp Fire Journeyman 2 - Mens",
   "price_cents": 391600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/340108/camp-fire-journeyman-2-mens"
 }

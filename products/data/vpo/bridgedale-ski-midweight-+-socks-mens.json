@@ -5,6 +5,15 @@
   ],
   "name": "Bridgedale Ski Midweight + Socks - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "34% Merino Wool, 33% Endurofil\u2122"
+    },
+    {
+      "key": "Height",
+      "value": "Over-The-Calf"
+    }
+  ],
   "url": "https://vpo.ca/product/314370/ski-midweight-socks-mens"
 }

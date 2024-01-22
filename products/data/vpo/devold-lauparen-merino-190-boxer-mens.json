@@ -5,6 +5,15 @@
   ],
   "name": "Devold Lauparen Merino 190 Boxer - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fiber",
+      "value": "fine wool - 18,7 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "190 g"
+    }
+  ],
   "url": "https://vpo.ca/product/345342/lauparen-merino-190-boxer-mens"
 }

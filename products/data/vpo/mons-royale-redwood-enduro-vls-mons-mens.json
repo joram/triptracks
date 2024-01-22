@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Redwood Enduro VLS - MONS - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Merino Air-Con 140 - 83% Merino Wool, 13% Nylon, 4% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/339044/redwood-enduro-vls-mons-mens"
 }

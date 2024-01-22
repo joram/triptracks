@@ -5,6 +5,27 @@
   ],
   "name": "Rab Capstone Shorts, 10\" Inseam - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary Fabric",
+      "value": "95% Polyamide, 5% Elastane"
+    },
+    {
+      "key": "Secondary Fabric",
+      "value": "85% Polyamide, 15% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "184 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342736/capstone-shorts-10-inseam-mens"
 }

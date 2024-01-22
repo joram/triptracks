@@ -5,6 +5,27 @@
   ],
   "name": "Columbia Sportswear Autumn Park Down Hooded Jacket - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Omni-Heat\u2122 Reflective lining 100% polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "650 Fill Power Down Insulation, RDS Certified"
+    },
+    {
+      "key": "Insulation",
+      "value": "200g Microtemp XF II 85% Recycled Polyester, 15% Polyester"
+    },
+    {
+      "key": "Uses",
+      "value": "Trail"
+    }
+  ],
   "url": "https://vpo.ca/product/349310/autumn-park-down-hooded-jacket-mens"
 }

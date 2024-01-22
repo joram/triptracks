@@ -5,6 +5,51 @@
   ],
   "name": "Mammut Kento Tour High GTX - Mens",
   "price_cents": 2799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main fabric",
+      "value": "Velours leather, textile"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Hexa Tech"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual Density midsole"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX Performance Comfort Footwear"
+    },
+    {
+      "key": "Flex index",
+      "value": "A8"
+    },
+    {
+      "key": "Heel drop",
+      "value": "11 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "2 Zone"
+    },
+    {
+      "key": "Last index",
+      "value": "mountaineeringTech"
+    },
+    {
+      "key": "Hybrid Shell",
+      "value": "Blend of supple inner and tough outer materials for enhanced comfort and good adaptability."
+    },
+    {
+      "key": "2 Zone Lacing",
+      "value": "Individual 2-zone lacing. Can be adjusted to person and situation"
+    },
+    {
+      "key": "Motion Control",
+      "value": "Reinforced, flexible inside prevents you from twisting your ankle while maintaining full freedom of movement"
+    }
+  ],
   "url": "https://vpo.ca/product/338213/kento-tour-high-gtx-mens"
 }

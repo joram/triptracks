@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Kuhl Engineered Hoody - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "\u00a0Main",
+      "value": "100% Polyester - 140 g"
+    },
+    {
+      "key": "Contrast",
+      "value": "100% Polyester - 130 g"
+    }
+  ],
   "url": "https://vpo.ca/product/332390/kuhl-engineered-hoody-mens"
 }

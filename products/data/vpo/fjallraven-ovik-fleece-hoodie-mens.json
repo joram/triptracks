@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Ovik Fleece Hoodie - Mens",
   "price_cents": 2250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Original",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "540 g"
+    },
+    {
+      "key": "Back length",
+      "value": "70 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/293759/ovik-fleece-hoodie-mens"
 }

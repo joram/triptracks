@@ -5,6 +5,11 @@
   ],
   "name": "Devold Nansen Wool Zip Neck - Unisex",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% pure new wool"
+    }
+  ],
   "url": "https://vpo.ca/product/344922/nansen-wool-zip-neck-unisex"
 }

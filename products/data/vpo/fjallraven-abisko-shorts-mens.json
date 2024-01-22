@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Abisko Shorts - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Stretch",
+      "value": "63% Polyamide, 26% Polyester, 11% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "316 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit, Mid Waist"
+    },
+    {
+      "key": "Inseam",
+      "value": "11.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/285439/abisko-shorts-mens"
 }

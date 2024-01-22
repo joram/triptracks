@@ -5,6 +5,15 @@
   ],
   "name": "Fieldsheer Canada Premium 2.0 Merino Heated Socks - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Battery size",
+      "value": "8in x 1.8in x 0.5in"
+    },
+    {
+      "key": "Footnote",
+      "value": "Charge time is based off using a USB-A wall charger that delivers 5V@2.1A"
+    }
+  ],
   "url": "https://vpo.ca/product/341682/premium-20-merino-heated-socks-mens"
 }

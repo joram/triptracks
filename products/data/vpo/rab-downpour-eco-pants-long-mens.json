@@ -5,6 +5,23 @@
   ],
   "name": "Rab Downpour Eco Pants, Long - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "90% Polyamide, 5% Elastane outer with 100% polyester (55% Recycled Polyester)"
+    },
+    {
+      "key": "Recycled 50D Polyester 2.5L with Polyester Membrane / Pertex Shield / 98 g/m\u00b2/ HH",
+      "value": "20,000mm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "225 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333261/downpour-eco-pants-long-mens"
 }

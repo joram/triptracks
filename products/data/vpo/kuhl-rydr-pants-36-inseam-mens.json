@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl Rydr Pants, 36\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Exklusiv Eurotwill\u2122 98% Twill Cotton, 2% Lycra - 365 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Full"
+    },
+    {
+      "key": "Knee opening",
+      "value": "19 in"
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "16.5 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "36 in"
+    },
+    {
+      "key": "Six pockets",
+      "value": "two front hand, one coin, two back, one stealth cell phone"
+    }
+  ],
   "url": "https://vpo.ca/product/270181/rydr-pants-36-inseam-mens"
 }

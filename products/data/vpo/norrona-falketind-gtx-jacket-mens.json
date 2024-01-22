@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Falketind GTX Jacket - Mens",
   "price_cents": 6500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex\u00ae 3-layer, 30D recycled nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "410 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337951/falketind-gtx-jacket-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Polartec High Loft Jacket - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae High Loft\u00ae Fleece - 97% Polyester, 3% Elastane"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 2 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349018/polartec-high-loft-jacket-mens"
 }

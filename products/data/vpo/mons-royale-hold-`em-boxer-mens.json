@@ -5,6 +5,11 @@
   ],
   "name": "Mons Royale Hold `em Boxer - Mens",
   "price_cents": 559600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Merino Air-Con 140 - 83% Merino Wool, 13% Nylon, 4% Elastane, 140 gsm"
+    }
+  ],
   "url": "https://vpo.ca/product/338993/hold-em-boxer-mens"
 }

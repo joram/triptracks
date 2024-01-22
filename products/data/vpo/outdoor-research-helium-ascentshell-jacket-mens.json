@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Helium AscentShell Jacket - Mens",
   "price_cents": 5999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "bluesign\u00ae approved AscentShell\u2122 x Pertex\u00ae Shield Air Diamond Fuse 3L, 100% Nylon 30D Ripstop"
+    },
+    {
+      "key": "Backer",
+      "value": "7D Tricot"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342374/helium-ascentshell-jacket-mens"
 }

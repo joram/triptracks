@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Fordham Jacket - Mens",
   "price_cents": 4300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122, 100% Post-Consumer Recycled Polyester, Plain weave, 218g"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 10 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "30.5 in"
+    },
+    {
+      "key": "Zippered hand pockets offer secure, convenient storage for your everyday, on-the-go essentials",
+      "value": "phone, keys, wallet, credit card &amp; more"
+    }
+  ],
   "url": "https://vpo.ca/product/347816/fordham-jacket-mens"
 }

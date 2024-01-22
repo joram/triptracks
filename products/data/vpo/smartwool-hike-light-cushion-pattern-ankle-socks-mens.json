@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Light Cushion Pattern Ankle Socks - Mens",
   "price_cents": 269500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Merino Wool, 31% Recycled Nylon, 11% Nylon, 2% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Ankle (3.25\")"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Light"
+    }
+  ],
   "url": "https://vpo.ca/product/339131/hike-light-cushion-pattern-ankle-socks-mens"
 }

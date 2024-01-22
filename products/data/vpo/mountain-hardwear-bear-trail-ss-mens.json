@@ -5,6 +5,11 @@
   ],
   "name": "Mountain Hardwear Bear Trail SS - Mens",
   "price_cents": 279600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/342840/bear-trail-ss-mens"
 }

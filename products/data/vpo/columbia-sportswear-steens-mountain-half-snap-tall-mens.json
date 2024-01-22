@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Steens Mountain Half Snap, Tall - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyester MTR filament fleece 250g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular*"
+    },
+    {
+      "key": "Length",
+      "value": "32.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349682/steens-mountain-half-snap-tall-mens"
 }

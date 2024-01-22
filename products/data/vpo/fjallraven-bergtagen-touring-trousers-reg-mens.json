@@ -5,6 +5,35 @@
   ],
   "name": "Fjallraven Bergtagen Touring Trousers, Reg - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Sizes",
+      "value": "44-58"
+    },
+    {
+      "key": "Length",
+      "value": "Regular"
+    },
+    {
+      "key": "Fit/Waist",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Lower leg"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed length"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full leg trousers"
+    },
+    {
+      "key": "Weight",
+      "value": "563 g in size 48"
+    }
+  ],
   "url": "https://vpo.ca/product/349855/bergtagen-touring-trousers-reg-mens"
 }

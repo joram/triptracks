@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Viv GTX Pro Jacket - Mens",
   "price_cents": 9999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX PRO Shell 30D 3L - 100% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "32 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 3 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349052/viv-gtx-pro-jacket-mens"
 }

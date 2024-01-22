@@ -5,6 +5,11 @@
   ],
   "name": "Prana Bishop Creek SS Tee - Mens",
   "price_cents": 391600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic FT Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348123/bishop-creek-ss-tee-mens"
 }

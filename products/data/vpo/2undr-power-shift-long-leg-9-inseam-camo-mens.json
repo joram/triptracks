@@ -5,6 +5,15 @@
   ],
   "name": "2Undr Power Shift Long Leg, 9\" Inseam - Camo - Mens",
   "price_cents": 369500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "90% Polyester, 10% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "9 in"
+    }
+  ],
   "url": "https://vpo.ca/product/327457/power-shift-long-leg-9-inseam-camo-mens"
 }

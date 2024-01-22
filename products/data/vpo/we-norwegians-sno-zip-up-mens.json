@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Sno Zip Up - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Superfine merino wool, 2% Creora-Eco-Soft"
+    }
+  ],
   "url": "https://vpo.ca/product/348161/sno-zip-up-mens"
 }

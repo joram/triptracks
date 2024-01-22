@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Stretch Ozonic Pants, Short - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Dry.Q\u00ae 50D Stretch Ripstop 2.5-layer -\u00a0100% Recycled Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "10.9 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/343062/stretch-ozonic-pants-short-mens"
 }

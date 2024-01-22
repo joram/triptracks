@@ -5,6 +5,11 @@
   ],
   "name": "Prana Calder SS Pocket Top - Mens",
   "price_cents": 455000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "87% Polyester, 13% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/340104/calder-ss-pocket-top-mens"
 }

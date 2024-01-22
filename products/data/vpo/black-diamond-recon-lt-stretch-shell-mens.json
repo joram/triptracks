@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Recon LT Stretch Shell - Mens",
   "price_cents": 4799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BD.dry\u2122 3L, 40D Nylon Stretch with PFC-Free DWR Finish (93% Nylon, 7% Elastane, 141 g"
+    },
+    {
+      "key": "Center Back measurement",
+      "value": "30 1"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "482 g"
+    }
+  ],
   "url": "https://vpo.ca/product/347795/recon-lt-stretch-shell-mens"
 }

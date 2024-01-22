@@ -5,6 +5,11 @@
   ],
   "name": "Lasting Merino VPO Atar 100% Merino Wool LS Shirt - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Merino Wool, 160 g"
+    }
+  ],
   "url": "https://vpo.ca/product/338921/vpo-atar-100-merino-wool-ls-shirt-mens"
 }

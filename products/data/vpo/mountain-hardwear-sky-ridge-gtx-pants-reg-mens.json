@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Sky Ridge GTX Pants, Reg - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX\u00ae 2L 75D Dobby Weave - 100% Recycled Polyester"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "654 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Snow Sports"
+    },
+    {
+      "key": "Uses",
+      "value": "Ski"
+    }
+  ],
   "url": "https://vpo.ca/product/337620/sky-ridge-gtx-pants-reg-mens"
 }

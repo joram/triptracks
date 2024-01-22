@@ -5,6 +5,47 @@
   ],
   "name": "Aku Rock DFS Mid GTX - Mens",
   "price_cents": 3299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining Description",
+      "value": "Waterproof Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Sole",
+      "value": "VIBRAM\u00ae Approach"
+    },
+    {
+      "key": "Footbed",
+      "value": "Ortholite Hybrid"
+    },
+    {
+      "key": "Lasting board (stiffness)",
+      "value": "Soft Flex"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual Density EVA &amp; PU"
+    },
+    {
+      "key": "Upper",
+      "value": "1.6mm Suede Leather, Air 8000 &amp; Microfiber"
+    },
+    {
+      "key": "Dual Fit System",
+      "value": "AKU's DFS collection of approach shoes allows for optimum enjoyment and maximum confidence over the most demanding terrain. Whether you're on flat trails or going vertical, AKU DFS shoes will take you there in comfort"
+    },
+    {
+      "key": "Gore-Tex",
+      "value": "Keep your feet dry in all conditions with the integrated waterproof Gore-Tex Performance Comfort membrane"
+    },
+    {
+      "key": "Vibram Approach",
+      "value": "The Vibram Approach sole is designed to make quick work of trails while giving also giving you the confidence to edge and smear on your climb"
+    },
+    {
+      "key": "AKU Elica Technology",
+      "value": "Elica Technology ensures an anatomical fit to provide better stability and weight distribution across your boot sole to reduce pressure points and encourage better hiking form"
+    }
+  ],
   "url": "https://vpo.ca/product/338276/rock-dfs-mid-gtx-mens"
 }

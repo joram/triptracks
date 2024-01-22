@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 200 Oasis LS Crewe - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310245/merino-200-oasis-ls-crewe-mens"
 }

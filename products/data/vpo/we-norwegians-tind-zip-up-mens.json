@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Tind Zip Up - Mens",
   "price_cents": 2799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% merino wool from Sudwolle"
+    }
+  ],
   "url": "https://vpo.ca/product/350084/tind-zip-up-mens"
 }

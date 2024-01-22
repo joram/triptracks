@@ -5,6 +5,43 @@
   ],
   "name": "Aku Tribute II LTR - Mens",
   "price_cents": 2699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Lining",
+      "value": "Full Grain Leather"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram Sendera"
+    },
+    {
+      "key": "Footbed",
+      "value": "AKU Felt"
+    },
+    {
+      "key": "Stiffness",
+      "value": "Medium"
+    },
+    {
+      "key": "Lasting board",
+      "value": "TPU"
+    },
+    {
+      "key": "Midsole",
+      "value": "Injected PU"
+    },
+    {
+      "key": "Upper",
+      "value": "2.0mm Full Grain Leather"
+    },
+    {
+      "key": "Resoleable",
+      "value": "No"
+    },
+    {
+      "key": "Italian Leather",
+      "value": "The 2MM Premium Italian leather exterior provides protection across rugged terrain"
+    }
+  ],
   "url": "https://vpo.ca/product/335198/tribute-ii-ltr-mens"
 }

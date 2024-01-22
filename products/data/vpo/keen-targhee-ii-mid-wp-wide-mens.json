@@ -5,6 +5,23 @@
   ],
   "name": "Keen Targhee II Mid WP, Wide - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "17.2 oz"
+    },
+    {
+      "key": "Collar Height",
+      "value": "6 in"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    },
+    {
+      "key": "KEEN.DRY",
+      "value": "A proprietary waterproof, breathable membrane that lets vapor out without letting water in"
+    }
+  ],
   "url": "https://vpo.ca/product/309753/targhee-ii-mid-wp-wide-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Run Zero Cushion Mid Crew Pattern Socks - Mens",
   "price_cents": 269500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "51% Merino Wool, 15% Nylon, 30% Recycled Nylon, 4% Elastane"
+    },
+    {
+      "key": "Cushion",
+      "value": "Zero"
+    },
+    {
+      "key": "Height",
+      "value": "Mid Crew"
+    }
+  ],
   "url": "https://vpo.ca/product/344982/run-zero-cushion-mid-crew-pattern-socks-mens"
 }

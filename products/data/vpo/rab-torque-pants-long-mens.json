@@ -5,6 +5,27 @@
   ],
   "name": "Rab Torque Pants, Long - Mens",
   "price_cents": 1800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Composition",
+      "value": "90% Polyamide"
+    },
+    {
+      "key": "Main",
+      "value": "88% Polyamide, 12% Elastane"
+    },
+    {
+      "key": "Second",
+      "value": "54% Polyamide, 33% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "335 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/325604/torque-pants-long-mens"
 }

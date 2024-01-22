@@ -5,6 +5,11 @@
   ],
   "name": "Outdoor Research Alpine Onset Merino 150 Hoodie - Mens",
   "price_cents": 1449500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "47% Merino Wool, 47% Recycled Polyester (Repreve), 6% Elastane Jersey"
+    }
+  ],
   "url": "https://vpo.ca/product/348457/alpine-onset-merino-150-hoodie-mens"
 }

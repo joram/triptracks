@@ -5,6 +5,15 @@
   ],
   "name": "Teva Terra Fi 5 Universal Leather - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight (per shoe)",
+      "value": "13.5 oz (Size 9)"
+    },
+    {
+      "key": "Best for",
+      "value": "Multi-day hikes"
+    }
+  ],
   "url": "https://vpo.ca/product/344694/terra-fi-5-universal-leather-mens"
 }

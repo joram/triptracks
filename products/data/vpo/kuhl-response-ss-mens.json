@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Response SS - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Polyester - 80 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343252/response-ss-mens"
 }

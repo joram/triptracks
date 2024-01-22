@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Mountain Stretch Hoody - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Warp Knit Lightweight Jersey - 100% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/337585/mountain-stretch-hoody-mens"
 }

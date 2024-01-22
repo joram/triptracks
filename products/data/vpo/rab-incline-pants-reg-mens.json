@@ -5,6 +5,23 @@
   ],
   "name": "Rab Incline Pants, Reg - Mens",
   "price_cents": 1680000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary Fabric",
+      "value": "88% Polyamide, 12% Elastane"
+    },
+    {
+      "key": "Secondary Fabric",
+      "value": "85% Polyamide, 15% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "339 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/348916/incline-pants-reg-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Alpine Onset Merino 150 Bottoms - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "47% Merino Wool, 47% Recycled Polyester (Repreve), 6% Elastane Jersey"
+    },
+    {
+      "key": "Weight",
+      "value": "181 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Next to Skin"
+    }
+  ],
   "url": "https://vpo.ca/product/336840/alpine-onset-merino-150-bottoms-mens"
 }

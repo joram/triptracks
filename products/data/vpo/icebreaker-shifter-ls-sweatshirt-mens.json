@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker Shifter LS Sweatshirt - Mens",
   "price_cents": 1960000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "100% Wool"
+    },
+    {
+      "key": "Rib",
+      "value": "98% Wool, 2% Elastane - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/340006/shifter-ls-sweatshirt-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Rab Radius Pants, Reg - Mens",
   "price_cents": 1300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "492 g"
+    }
+  ],
   "url": "https://vpo.ca/product/305900/radius-pants-reg-mens"
 }

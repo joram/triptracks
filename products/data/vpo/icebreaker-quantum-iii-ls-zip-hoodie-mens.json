@@ -5,6 +5,23 @@
   ],
   "name": "Icebreaker Quantum III LS Zip Hoodie - Mens",
   "price_cents": 2080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main body",
+      "value": "100% Wool"
+    },
+    {
+      "key": "Hood lining, Pocket",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "518 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/336577/quantum-iii-ls-zip-hoodie-mens"
 }

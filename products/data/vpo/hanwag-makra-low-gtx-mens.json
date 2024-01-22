@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Makra Low GTX - Mens",
   "price_cents": 3500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper material",
+      "value": "Suede, Cordura"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Pepe"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "910 g"
+    },
+    {
+      "key": "Fit",
+      "value": "AlpineWide"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Rockclimbing"
+    },
+    {
+      "key": "Cut",
+      "value": "Low"
+    }
+  ],
   "url": "https://vpo.ca/product/308249/makra-low-gtx-mens"
 }

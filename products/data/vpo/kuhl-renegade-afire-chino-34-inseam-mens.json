@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl Renegade Afire Chino, 34\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Duralux 95% Nylon, 5% Spandex DWR - 170 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Tapered"
+    },
+    {
+      "key": "Knee opening",
+      "value": "17 in"
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "14 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Seven pockets",
+      "value": "two front hand, one coin, two back and two stealth cell phone pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/317631/renegade-afire-chino-34-inseam-mens"
 }

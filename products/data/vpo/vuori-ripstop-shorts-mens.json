@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Ripstop Shorts - Mens",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "98% Organic Cotton, 2% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "9 in"
+    }
+  ],
   "url": "https://vpo.ca/product/337472/ripstop-shorts-mens"
 }

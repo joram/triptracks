@@ -5,6 +5,19 @@
   ],
   "name": "Rab Downpour Eco Jacket - Mens",
   "price_cents": 1600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Recycled 50D Polyester 2.5L with Polyester Membrane"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g"
+    },
+    {
+      "key": "Center Back Length (Size Medium)",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333259/downpour-eco-jacket-mens"
 }

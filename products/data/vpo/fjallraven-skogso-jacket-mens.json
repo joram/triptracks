@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Skogso Jacket - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Lite",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "G-1000\u00ae Original",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Shoulders and hood"
+    },
+    {
+      "key": "Weight",
+      "value": "610 g"
+    }
+  ],
   "url": "https://vpo.ca/product/285464/skogso-jacket-mens"
 }

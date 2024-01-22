@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Flexidown IN Jacket - Mens",
   "price_cents": 3490000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "90% Down, 10% Feather"
+    }
+  ],
   "url": "https://vpo.ca/product/324465/flexidown-in-jacket-mens"
 }

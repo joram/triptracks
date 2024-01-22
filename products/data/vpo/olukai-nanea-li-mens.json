@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Nanea Li - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Weather-resistant twill canvas with breathable stretch tongue and heel delivers comfort. Rich, full-grain leather on the heel and tongue badge and a handy hidden pull loop for easy on"
+    },
+    {
+      "key": "Footbed",
+      "value": "The dual-density PU footbed, cushy gel insert, and removable"
+    },
+    {
+      "key": "Outsole",
+      "value": "The lightweight EVA midsole with a non-marking 'Wet Grip Rubber' outsole adds traction on wet surfaces"
+    }
+  ],
   "url": "https://vpo.ca/product/337883/nanea-li-mens"
 }

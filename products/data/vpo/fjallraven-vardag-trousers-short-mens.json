@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Vardag Trousers, Short - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "G-1000\u00ae Eco Stretch"
+    },
+    {
+      "key": "Weight",
+      "value": "342 g"
+    },
+    {
+      "key": "Length",
+      "value": "Short 30 in"
+    },
+    {
+      "key": "Fit/Waist",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/339953/vardag-trousers-short-mens"
 }

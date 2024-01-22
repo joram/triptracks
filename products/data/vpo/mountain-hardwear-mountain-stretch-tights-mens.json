@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Mountain Stretch Tights - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Warp Knit Heavyweight\u00a0Jersey - 100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Fitted"
+    },
+    {
+      "key": "Inseam",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349006/mountain-stretch-tights-mens"
 }

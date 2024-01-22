@@ -5,6 +5,19 @@
   ],
   "name": "Cotopaxi Trico Hybrid Hooded Jacket - Mens",
   "price_cents": 2350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell/Lining",
+      "value": "Repurposed Polyester Taffeta with DWR Finish and 600\u00a0MM PU Backer"
+    },
+    {
+      "key": "Second Shell",
+      "value": "100% Recycled Polyester Fleece - 350 g"
+    },
+    {
+      "key": "Insulation",
+      "value": "100% Recycled Polyester - 80 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340060/trico-hybrid-hooded-jacket-mens"
 }

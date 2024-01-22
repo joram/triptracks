@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox All Mountain Quarter Socks Warm - Mens",
   "price_cents": 349500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "50 g"
+    },
+    {
+      "key": "Material",
+      "value": "63% virgin wool (Merino), 35% polyamide, 2% elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/329252/all-mountain-quarter-socks-warm-mens"
 }

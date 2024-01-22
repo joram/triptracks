@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox 230 Competition Boxer - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "57% virgin Merino wool, 41% polyamide, 2% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "78 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/340836/230-competition-boxer-mens"
 }

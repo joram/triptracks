@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Pom Pom Tee SS - Mens",
   "price_cents": 400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Organic Cotton 48% Recycled Polyester Jersey Knit 4.4 oz"
+    },
+    {
+      "key": "Weight",
+      "value": "121.9 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Semi-Fitted"
+    }
+  ],
   "url": "https://vpo.ca/product/322479/pom-pom-tee-ss-mens"
 }

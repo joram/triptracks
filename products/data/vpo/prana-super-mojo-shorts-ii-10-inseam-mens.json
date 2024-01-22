@@ -5,6 +5,15 @@
   ],
   "name": "Prana Super Mojo Shorts II, 10\" Inseam - Mens",
   "price_cents": 712000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "87% Recycled Polyester, 13% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/318661/super-mojo-shorts-ii-10-inseam-mens"
 }

@@ -5,6 +5,51 @@
   ],
   "name": "Oboz Bridger 8\" Insulated B-Dry, Wide - Mens",
   "price_cents": 2750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Waterproof Nubuck Leather, B-DRY Waterproof Membrane, Molded rubber toe cap &amp; heel kick, Gaiter D-Ring"
+    },
+    {
+      "key": "Insulation",
+      "value": "200g Freeze Guard"
+    },
+    {
+      "key": "Midsole",
+      "value": "Single Density Compression Molded EVA, TPU Chassis, Nylon Shank"
+    },
+    {
+      "key": "Outsole",
+      "value": "Trail Tread Winter Compound"
+    },
+    {
+      "key": "Insole",
+      "value": "O Fit Insole\u00ae Thermal"
+    },
+    {
+      "key": "Construction",
+      "value": "Board Lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    },
+    {
+      "key": "Volume",
+      "value": "High"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "15mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "24.7 oz"
+    },
+    {
+      "key": "Fit Tip",
+      "value": "Length runs true to size. Generous volume for thicker socks"
+    }
+  ],
   "url": "https://vpo.ca/product/330111/bridger-8-insulated-b-dry-wide-mens"
 }

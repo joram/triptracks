@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Mountain Stretch Joggers - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "220 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337586/mountain-stretch-joggers-mens"
 }

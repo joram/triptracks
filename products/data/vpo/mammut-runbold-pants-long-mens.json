@@ -5,6 +5,31 @@
   ],
   "name": "Mammut Runbold Pants, Long - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Polyamide-Elastane Woven with miDori\u00ae - 85% Polyamide, 15% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyamide Mesh"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "291 g"
+    },
+    {
+      "key": "UV Protection",
+      "value": "UPF 50+"
+    },
+    {
+      "key": "Low packing volume",
+      "value": "perfect for taking anywhere"
+    }
+  ],
   "url": "https://vpo.ca/product/343404/runbold-pants-long-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven High Coast Lite Jacket - Mens",
   "price_cents": 1539700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "205 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/325467/high-coast-lite-jacket-mens"
 }

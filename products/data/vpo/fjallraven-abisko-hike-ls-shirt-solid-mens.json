@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Hike LS Shirt - Solid - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "150 g"
+    }
+  ],
   "url": "https://vpo.ca/product/293761/abisko-hike-ls-shirt-solid-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Kuhl Kuhl Denim Klassik, 30\" Inseam - Mens",
   "price_cents": 1199600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "58% Organic Cotton, 17% Modal, 11% Lyocell, 13% Elasterell P, 1% Lycra\u00a0- 10.5 oz"
+    },
+    {
+      "key": "Bottom Leg Opening",
+      "value": "15 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343234/kuhl-denim-klassik-30-inseam-mens"
 }

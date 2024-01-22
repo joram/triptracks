@@ -5,6 +5,11 @@
   ],
   "name": "Ortovox Fleece Light Grid Hooded Jacket - Mens",
   "price_cents": 2159600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "225g"
+    }
+  ],
   "url": "https://vpo.ca/product/343552/fleece-light-grid-hooded-jacket-mens"
 }

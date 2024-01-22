@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Bugaboo IV Pants, Reg - Big - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 Generation Dobby 100% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Nylon 210T Taffeta"
+    },
+    {
+      "key": "Insulation",
+      "value": "60g Microtemp XF II 100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/349573/bugaboo-iv-pants-reg-big-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Pala Shorts - Mens",
   "price_cents": 1759600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "74% Polyamide, 15% Wool - OWP Merino, 11% Elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "91% Polyamide, 9% Elastane"
+    },
+    {
+      "key": "Weigth",
+      "value": "248 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343596/pala-shorts-mens"
 }

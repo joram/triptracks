@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Aenergy IN Hybrid Pants, Reg - Mens",
   "price_cents": 3150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Material",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Insert",
+      "value": "88% Polyester, 12% Spandex"
+    },
+    {
+      "key": "Insert 2",
+      "value": "83% Polyamide, 10% Polyester, 7% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348286/aenergy-in-hybrid-pants-reg-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Alpine Chill Zero SS Crew - Tall - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Polyester Lightweight Pointelle Knit"
+    },
+    {
+      "key": "Size",
+      "value": "Tall"
+    }
+  ],
   "url": "https://vpo.ca/product/346506/alpine-chill-zero-ss-crew-tall-mens"
 }

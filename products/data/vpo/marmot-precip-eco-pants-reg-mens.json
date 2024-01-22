@@ -5,6 +5,19 @@
   ],
   "name": "Marmot PreCip Eco Pants, Reg - Mens",
   "price_cents": 1300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122 Eco 100% Recycled Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "8 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316442/precip-eco-pants-reg-mens"
 }

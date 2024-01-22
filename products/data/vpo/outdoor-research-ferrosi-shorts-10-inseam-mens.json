@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Ferrosi Shorts, 10\" Inseam - Mens",
   "price_cents": 949500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 48% Recycled Nylon, 38% Nylon, 14% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342250/ferrosi-shorts-10-inseam-mens"
 }

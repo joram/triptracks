@@ -5,6 +5,31 @@
   ],
   "name": "Marmot KT GTX Component Jacket - Mens",
   "price_cents": 4400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Gore-Tex\u00ae Products 2L 100% Recycled Polyester 3.2 oz"
+    },
+    {
+      "key": "Secondary",
+      "value": "Pertex Quantum\u00a9 100% Nylon Plainweave 1.4 oz"
+    },
+    {
+      "key": "Insulated",
+      "value": "Removable Liner"
+    },
+    {
+      "key": "Weight",
+      "value": "796.6 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/322440/kt-gtx-component-jacket-mens"
 }

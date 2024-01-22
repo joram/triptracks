@@ -5,6 +5,31 @@
   ],
   "name": "La Sportiva Glacier WLF - Mens",
   "price_cents": 3439600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "3mm Idro-Perwanger Roughout Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Dry-Best\u00ae"
+    },
+    {
+      "key": "Insole",
+      "value": "8mm MtnFlex with 1.5 mm Dacromet-coated half steel shank"
+    },
+    {
+      "key": "Midsole",
+      "value": "PU Aircushion"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Ice-New HRO Test and ISO 20344 Certified"
+    },
+    {
+      "key": "Last",
+      "value": "Makalu"
+    }
+  ],
   "url": "https://vpo.ca/product/268712/glacier-wlf-mens"
 }

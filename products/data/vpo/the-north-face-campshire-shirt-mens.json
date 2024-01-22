@@ -5,6 +5,27 @@
   ],
   "name": "The North Face Campshire Shirt - Mens",
   "price_cents": 1499900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "150D 170 g"
+    },
+    {
+      "key": "Lining",
+      "value": "150D 220 g"
+    },
+    {
+      "key": "Sleeve insulation",
+      "value": "40 g Heatseeker\u2122 Eco 70% post-consumer recycled polyester"
+    },
+    {
+      "key": "Center Back",
+      "value": "29.25 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/329149/campshire-shirt-mens"
 }

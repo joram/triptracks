@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Zone Denim Pants, 34\" Inseam - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Moisture Management Blend Stretch Denim - 77% Cotton, 21.5% Polyester, 1.5% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Leg Opening",
+      "value": "15.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "610 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337803/zone-denim-pants-34-inseam-mens"
 }

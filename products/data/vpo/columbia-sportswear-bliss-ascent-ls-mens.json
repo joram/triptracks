@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Bliss Ascent LS - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "85% Polyester, 15% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/349480/bliss-ascent-ls-mens"
 }

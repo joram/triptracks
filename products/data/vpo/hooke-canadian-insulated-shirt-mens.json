@@ -5,6 +5,15 @@
   ],
   "name": "Hooke Canadian Insulated Shirt - Mens",
   "price_cents": 1799900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "80% recycled polyester, 20% recycled wool heavyweight flannel"
+    },
+    {
+      "key": "Insulation",
+      "value": "Recycled Polyester (60 g)"
+    }
+  ],
   "url": "https://vpo.ca/product/346117/canadian-insulated-shirt-mens"
 }

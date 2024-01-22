@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Falketind Warm1 Jacket - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Secondary",
+      "value": "49% recycled polyester, 48% polyester, 3% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "370 g"
+    }
+  ],
   "url": "https://vpo.ca/product/311553/falketind-warm1-jacket-mens"
 }

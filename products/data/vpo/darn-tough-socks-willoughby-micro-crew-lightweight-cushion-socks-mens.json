@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks Willoughby Micro Crew Lightweight Cushion Socks - Mens",
   "price_cents": 319500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Nylon, 44% Merino Wool, 4% Lycra Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Micro Crew"
+    },
+    {
+      "key": "Weight",
+      "value": "Lightweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, hiking shoes"
+    }
+  ],
   "url": "https://vpo.ca/product/344376/willoughby-micro-crew-lightweight-cushion-socks-mens"
 }

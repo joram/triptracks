@@ -5,6 +5,11 @@
   ],
   "name": "Prana Groveland Shirt - Standard - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "80% Organic Cotton, 20% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/332291/groveland-shirt-standard-mens"
 }

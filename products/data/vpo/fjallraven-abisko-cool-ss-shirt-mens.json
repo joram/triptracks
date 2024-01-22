@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Cool SS Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Tencel\u00ae Lyocell"
+    },
+    {
+      "key": "Weight",
+      "value": "180 g (Size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/308224/abisko-cool-ss-shirt-mens"
 }

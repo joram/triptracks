@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear CSC Seasonal Logo Tee - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic cotton, 60% Organic Cotton, 40% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Active"
+    }
+  ],
   "url": "https://vpo.ca/product/347284/csc-seasonal-logo-tee-mens"
 }

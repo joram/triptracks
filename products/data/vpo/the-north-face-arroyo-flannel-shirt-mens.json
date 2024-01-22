@@ -5,6 +5,19 @@
   ],
   "name": "The North Face Arroyo Flannel Shirt - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Center Back",
+      "value": "29.5\""
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Woven logo flag label on left side seam; O4W",
+      "value": "embroidered patch on left chest"
+    }
+  ],
   "url": "https://vpo.ca/product/329147/arroyo-flannel-shirt-mens"
 }

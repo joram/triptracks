@@ -5,6 +5,15 @@
   ],
   "name": "Prana Kragg Pants, 32\" Inseam - Mens",
   "price_cents": 1080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Organic Cotton, 2% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "32\" (81.28 cm )"
+    }
+  ],
   "url": "https://vpo.ca/product/325284/kragg-pants-32-inseam-mens"
 }

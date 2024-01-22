@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl AirKuhl Hoody - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "85% Polyester, 15% Spandex, 130 g"
+    }
+  ],
   "url": "https://vpo.ca/product/328309/airkuhl-hoody-mens"
 }

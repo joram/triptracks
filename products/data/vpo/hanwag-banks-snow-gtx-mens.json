@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Banks Snow GTX - Mens",
   "price_cents": 4700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather, Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram \u00ae Endurance Winter"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex (warm)"
+    },
+    {
+      "key": "Weight",
+      "value": "1450 g (Pair - Size 8 UK)"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Winter hiking, Snowshoeing"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    }
+  ],
   "url": "https://vpo.ca/product/337256/banks-snow-gtx-mens"
 }

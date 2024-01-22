@@ -5,6 +5,15 @@
   ],
   "name": "Rab Stance Vintage SS Tee - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Organic Cotton",
+      "value": "150g"
+    },
+    {
+      "key": "Weight",
+      "value": "177 g"
+    }
+  ],
   "url": "https://vpo.ca/product/316466/stance-vintage-ss-tee-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Groove - Crew Socks - Mens",
   "price_cents": 169500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "50% Polyester, 30% Cotton, 15% Acrylic, 5% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/333485/groove-crew-socks-mens"
 }

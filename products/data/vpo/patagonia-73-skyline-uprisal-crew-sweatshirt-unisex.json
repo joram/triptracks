@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia 73 Skyline Uprisal Crew Sweatshirt - Unisex",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "11.5-oz 55% postconsumer recycled polyester, 45% recycled cotton knit fleece with a brushed back"
+    },
+    {
+      "key": "Weight",
+      "value": "526 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348698/73-skyline-uprisal-crew-sweatshirt-unisex"
 }

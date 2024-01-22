@@ -5,6 +5,23 @@
   ],
   "name": "Prana Pinchot Shirt Jacket - Mens",
   "price_cents": 3290000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Fill",
+      "value": "80% Duck Down, 20% Feathers"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336391/pinchot-shirt-jacket-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Rab Ascendor AS Pants, Reg - Mens",
   "price_cents": 2000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "449 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/349104/ascendor-as-pants-reg-mens"
 }

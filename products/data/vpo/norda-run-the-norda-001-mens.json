@@ -5,6 +5,39 @@
   ],
   "name": "norda run The Norda 001 - Mens",
   "price_cents": 2850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Woven with bio-based Dyneema\u00ae for the highest performance and the lightest footprint"
+    },
+    {
+      "key": "Laces",
+      "value": "Diamond design pattern with bio-based Dyneema\u00ae and recycled polyester"
+    },
+    {
+      "key": "Hi-Vis Reflective",
+      "value": "Front to rear for 360\u00b0 visibility"
+    },
+    {
+      "key": "Midsole Cushioning",
+      "value": "Norda\u2122 x Vibram\u00ae SLE"
+    },
+    {
+      "key": "Soleplate",
+      "value": "Norda\u2122 x Vibram\u00ae exclusive design Formation sole with Litebase\u00ae and Megagrip\u00ae Rubber. 5mm lugs"
+    },
+    {
+      "key": "Insole",
+      "value": "Custom designed TPU for the highest possible energy absorption and return"
+    },
+    {
+      "key": "TPU insole",
+      "value": "5.0mm (approx. foot position. Heel"
+    },
+    {
+      "key": "OrthoLite insole 4.0mm (approx. foot position. Heel",
+      "value": "23mm, Forefoot"
+    }
+  ],
   "url": "https://vpo.ca/product/339496/the-norda-001-mens"
 }

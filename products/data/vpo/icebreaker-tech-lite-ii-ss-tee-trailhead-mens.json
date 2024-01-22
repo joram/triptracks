@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Tech Lite II SS Tee - Trailhead - Mens",
   "price_cents": 800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric Main",
+      "value": "150gm\u00b2 Jersey, 100% Merino Wool"
+    },
+    {
+      "key": "Fiber micron",
+      "value": "Merino Wool 18.9 micron"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/340037/tech-lite-ii-ss-tee-trailhead-mens"
 }

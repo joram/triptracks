@@ -5,6 +5,11 @@
   ],
   "name": "Fieldsheer Canada Peak Heated Vest",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Footnote",
+      "value": "Charge time is based off using a USB-A wall charger that delivers 5V@2.1A"
+    }
+  ],
   "url": "https://vpo.ca/product/341675/peak-heated-vest"
 }

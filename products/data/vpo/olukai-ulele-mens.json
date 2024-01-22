@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Ulele - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Laser-cut synthetic straps with water-resistant suede micro\ufb01ber liningand comfortable nylon toe post"
+    },
+    {
+      "key": "Footbed",
+      "value": "Sleek compression-molded EVA midsole with smooth drop-in ICEVA footbed provides anatomical \ufb01t for sustained comfort"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking, 'Wet Grip Rubber' outsole featuring kapa art lug design and razor siping for added traction"
+    }
+  ],
   "url": "https://vpo.ca/product/326768/ulele-mens"
 }

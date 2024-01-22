@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Hemp Blend T-Shirt - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "70% Cotton, 30% Hemp"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "134 g - size M"
+    }
+  ],
   "url": "https://vpo.ca/product/363469/hemp-blend-t-shirt-mens"
 }

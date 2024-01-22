@@ -5,6 +5,15 @@
   ],
   "name": "Forsake Mason Chukka - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Full Grain Leather",
+      "value": "Waterproof-grade full grain leather resists moisture absorption and water damage"
+    },
+    {
+      "key": "Internal EVA Midsole",
+      "value": "Full length EVA midsole provides underfoot cushion and shock absorption"
+    }
+  ],
   "url": "https://vpo.ca/product/347074/mason-chukka-mens"
 }

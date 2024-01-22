@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker 200 ZoneKnit Leggings - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "200 g"
+    }
+  ],
   "url": "https://vpo.ca/product/347541/200-zoneknit-leggings-mens"
 }

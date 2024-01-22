@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Karib Stripe - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "60% Cotton, 40% Polyester - 99 GSM"
+    }
+  ],
   "url": "https://vpo.ca/product/343218/karib-stripe-mens"
 }

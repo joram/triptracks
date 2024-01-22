@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Blood and Guts IV Woven LS - Tall - Mens",
   "price_cents": 849900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Length",
+      "value": "35 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346706/blood-and-guts-iv-woven-ls-tall-mens"
 }

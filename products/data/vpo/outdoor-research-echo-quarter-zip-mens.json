@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research Echo Quarter Zip - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 100% Recycled Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342059/echo-quarter-zip-mens"
 }

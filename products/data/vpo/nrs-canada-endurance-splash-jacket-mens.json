@@ -5,6 +5,55 @@
   ],
   "name": "NRS Canada Endurance Splash Jacket - Mens",
   "price_cents": 1550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "340 g"
+    },
+    {
+      "key": "Material",
+      "value": "40-denier, 2.5 layer HyproTex\u2122"
+    },
+    {
+      "key": "Waterproof",
+      "value": "Yes"
+    },
+    {
+      "key": "Breathable",
+      "value": "Yes"
+    },
+    {
+      "key": "Neck Closure",
+      "value": "Adjustable polyurethane hook-and-loop closure"
+    },
+    {
+      "key": "Wrist Closure",
+      "value": "Adjustable polyurethane hook-and-loop closures"
+    },
+    {
+      "key": "Waist System",
+      "value": "Drawcord with barrel lock adjustment"
+    },
+    {
+      "key": "Double Tunnel",
+      "value": "No"
+    },
+    {
+      "key": "Pockets",
+      "value": "1 - Sleeve"
+    },
+    {
+      "key": "Latex Neck Gasket",
+      "value": "No"
+    },
+    {
+      "key": "Latex Wrist Gaskets",
+      "value": "No"
+    },
+    {
+      "key": "Reflective Detailing",
+      "value": "No"
+    }
+  ],
   "url": "https://vpo.ca/product/345941/endurance-splash-jacket-mens"
 }

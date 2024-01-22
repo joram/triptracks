@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Vigor Full Zip Hoodie - Mens",
   "price_cents": 1039600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Grid-back fleece"
+    },
+    {
+      "key": "Weight (size M)",
+      "value": "12 oz"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330487/vigor-full-zip-hoodie-mens"
 }

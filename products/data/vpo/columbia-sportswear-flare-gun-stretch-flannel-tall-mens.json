@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Flare Gun Stretch Flannel - Tall - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Cotton, 2% Elastane"
+    },
+    {
+      "key": "Back Length",
+      "value": "35 in"
+    }
+  ],
   "url": "https://vpo.ca/product/350174/flare-gun-stretch-flannel-tall-mens"
 }

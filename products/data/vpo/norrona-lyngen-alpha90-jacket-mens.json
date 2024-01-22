@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Lyngen Alpha90 Jacket - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "78% Recycled Polyester, 22% Polyester"
+    },
+    {
+      "key": "2nd",
+      "value": "94% Recycled Polyester, 6% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "180 g"
+    }
+  ],
   "url": "https://vpo.ca/product/322104/lyngen-alpha90-jacket-mens"
 }

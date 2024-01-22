@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Wicked Tech SS - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Recycled Solid Poly Tech T -\u00a0100% Recycled Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "4 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/343138/wicked-tech-ss-mens"
 }

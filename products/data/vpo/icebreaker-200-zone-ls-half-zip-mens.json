@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker 200 Zone LS Half Zip - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "96% Merino Wool, 4% Elastane"
+    },
+    {
+      "key": "Eyelet",
+      "value": "98% Merino Wool, 1% Elastane, 1% Nylon - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/347540/200-zone-ls-half-zip-mens"
 }

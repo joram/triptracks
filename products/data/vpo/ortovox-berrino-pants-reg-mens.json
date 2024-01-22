@@ -5,6 +5,15 @@
   ],
   "name": "Ortovox Berrino Pants, Reg - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "79 % polyamide, 10 % elastane, 11 % wool (MERINO)"
+    },
+    {
+      "key": "Weight",
+      "value": "302 g"
+    }
+  ],
   "url": "https://vpo.ca/product/349399/berrino-pants-reg-mens"
 }

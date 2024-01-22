@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 260 Tech LS Half Zip - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310274/merino-260-tech-ls-half-zip-mens"
 }

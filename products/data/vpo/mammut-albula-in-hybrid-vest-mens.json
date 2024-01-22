@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Albula IN Hybrid Vest - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Filling",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insert",
+      "value": "95% Polyester, 5% Spandex"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Main material",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "274 g"
+    }
+  ],
   "url": "https://vpo.ca/product/350230/albula-in-hybrid-vest-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Vardag Pile Fleece - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% polyester- \u00a0G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "730 g in size M"
+    },
+    {
+      "key": "Back length",
+      "value": "73 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/349902/vardag-pile-fleece-mens"
 }

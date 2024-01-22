@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Luxe Hooded LS Tee - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "67% Modal, 30% Polyester, 3% Lycra"
+    }
+  ],
   "url": "https://vpo.ca/product/318169/luxe-hooded-ls-tee-mens"
 }

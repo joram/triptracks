@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Intraknit Thermal Merino Base Layer 1/4 Zip - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Merino Wool, 44% Polyester, 3% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "200 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Featuring Intraknit\u2122 technology",
+      "value": "Insulation, articulation and ventilation are seamlessly integrated to amplify movement and comfort during high-intensity activities"
+    }
+  ],
   "url": "https://vpo.ca/product/330195/intraknit-thermal-merino-base-layer-14-zip-mens"
 }

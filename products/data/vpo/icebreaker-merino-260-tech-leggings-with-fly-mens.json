@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Merino 260 Tech Leggings with Fly - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    }
+  ],
   "url": "https://vpo.ca/product/310270/merino-260-tech-leggings-with-fly-mens"
 }

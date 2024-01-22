@@ -5,6 +5,23 @@
   ],
   "name": "Devold Duo Active Merino 205 LS Shirt - Mens",
   "price_cents": 1250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inside",
+      "value": "100% Thermolite"
+    },
+    {
+      "key": "Outside",
+      "value": "80% Merino wool, 20% polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "205 g"
+    },
+    {
+      "key": "Fiber",
+      "value": "Medium wool - 20.5 micron"
+    }
+  ],
   "url": "https://vpo.ca/product/344930/duo-active-merino-205-ls-shirt-mens"
 }

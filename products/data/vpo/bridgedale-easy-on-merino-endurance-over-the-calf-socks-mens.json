@@ -5,6 +5,19 @@
   ],
   "name": "Bridgedale Easy On Merino Endurance Over The Calf Socks - Mens",
   "price_cents": 369500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Height",
+      "value": "Over-The-Calf"
+    },
+    {
+      "key": "Performance Fit",
+      "value": "Contoured knit ensuring the cuff of the sock does not move as it comfortably but closely fits the ankle or calf, depending on the model. They are made from slightly tougher yars and best suited for expeditions and Multi-day trekking"
+    },
+    {
+      "key": "Lightweight",
+      "value": "Light, cool, very breathable and fast wicking. Cushioning and protection are very good for the minimum weight"
+    }
+  ],
   "url": "https://vpo.ca/product/314368/easy-on-merino-endurance-over-the-calf-socks-mens"
 }

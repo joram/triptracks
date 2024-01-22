@@ -1,10 +1,23 @@
 {
-  "description": "When your crew calls to say they're headed your way for an impromptu outdoor adventure, throw on the Men's Full Zip Rocklin Jacket. It offers 100-weight fleece for lightweight warmth and is easy to layer when the weather's too perfect to stay inside. Flatlock seams make this fleece jacket even more comfortable and reduce irritation and chafing. Stow small gear in the zippered hand pockets.",
+  "description": "It\u2019s ol\u2019 reliable for good reasons. Always ready for an impromptu road trip, bonfire or trip to the local crag with easy warmth from 100-weight fleece. Layer it under a shell while lapping your favorite lines at the resort, then rock it at the apres while rating the best crashes of the day.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/325726.jpg"
+    "https://vpo.ca/images/product/large/347918.jpg"
   ],
   "name": "Marmot Rocklin Jacket - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/325726/rocklin-jacket-mens"
+  "price_cents": 1100000,
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "REPREVE\u00ae 100% Recycled Polyester Velour"
+    },
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
+  "url": "https://vpo.ca/product/347918/rocklin-jacket-mens"
 }

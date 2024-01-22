@@ -5,6 +5,27 @@
   ],
   "name": "Columbia Sportswear Horizons Pine Interchange Jacket - Tall - Mens",
   "price_cents": 3099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 Matte Melange 2L 100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Nylon 210T Taffeta"
+    },
+    {
+      "key": "Liner",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "80g Omni-Heat\u2122 Thermal Insulation 50% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/350402/horizons-pine-interchange-jacket-tall-mens"
 }

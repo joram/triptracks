@@ -5,6 +5,27 @@
   ],
   "name": "NRS Canada Ignitor Shorts - Mens",
   "price_cents": 650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "272 g"
+    },
+    {
+      "key": "Material",
+      "value": "Recycled nylon exterior and interior"
+    },
+    {
+      "key": "Neoprene",
+      "value": "2 mm neoprene"
+    },
+    {
+      "key": "Seams",
+      "value": "Flat-lock stitched"
+    },
+    {
+      "key": "Inseam",
+      "value": "25 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/336649/ignitor-shorts-mens"
 }

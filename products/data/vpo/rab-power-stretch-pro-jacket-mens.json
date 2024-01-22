@@ -5,6 +5,19 @@
   ],
   "name": "Rab Power Stretch Pro Jacket - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Fabric Outer - Polartec\u00ae Power Stretch\u00ae Pro"
+    },
+    {
+      "key": "Weight",
+      "value": "399.5 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/296893/power-stretch-pro-jacket-mens"
 }

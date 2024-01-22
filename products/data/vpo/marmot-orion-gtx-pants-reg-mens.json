@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Orion GTX Pants, Reg - Mens",
   "price_cents": 5000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX Products\u00ae 100% Recycled Nylon Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "1 lb 1 oz"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347883/orion-gtx-pants-reg-mens"
 }

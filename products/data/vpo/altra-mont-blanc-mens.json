@@ -5,6 +5,47 @@
   ],
   "name": "Altra Mont Blanc - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "9.9 oz"
+    },
+    {
+      "key": "Midsole",
+      "value": "Altra EGO\u2122 MAX"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u2122 LiteBase"
+    },
+    {
+      "key": "Cushion",
+      "value": "High"
+    },
+    {
+      "key": "Stack Height",
+      "value": "30 mm"
+    },
+    {
+      "key": "Upper",
+      "value": "Ultra-lightweight, hyper-breathable"
+    },
+    {
+      "key": "Footshape\u2122",
+      "value": "Their signature FootShape\u2122 comfort gives your feet more space to sit naturally and is designed to address biological differences in men's and women's feet"
+    },
+    {
+      "key": "Balanced Cushioning\u2122",
+      "value": "Their Balanced Cushioning\u2122 platform positions your heel and forefoot at an equal distance from the ground, encouraging better alignment and better form"
+    },
+    {
+      "key": "Altra Eego\u2122 Max",
+      "value": "Their Altra EGO\u2122 Max midsole foam gives you all the light and luxurious performance with a little extra bounce and added durability"
+    },
+    {
+      "key": "Vibram\u00ae LiteBase",
+      "value": "According to Vibram\u00ae, Vibram\u00ae Litebase midsole reduces 30% of the overall sole weight through a reduction of the sole thickness by 50%, while maintaining Vibram quality in grip, traction, and durability"
+    }
+  ],
   "url": "https://vpo.ca/product/346466/mont-blanc-mens"
 }

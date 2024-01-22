@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Singi Heavy Flannel Shirt - Mens",
   "price_cents": 1399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% organic cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "440 g"
+    }
+  ],
   "url": "https://vpo.ca/product/283213/singi-heavy-flannel-shirt-mens"
 }

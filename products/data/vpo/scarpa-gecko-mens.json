@@ -5,6 +5,39 @@
   ],
   "name": "Scarpa Gecko - Mens",
   "price_cents": 2290000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "1.8mm Suede Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Hybrid Strobel"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D EVA-CM - 12mm Drop"
+    },
+    {
+      "key": "Outsole",
+      "value": "SCARPA Reptilia II"
+    },
+    {
+      "key": "Last",
+      "value": "CUA"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "320 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Romania"
+    }
+  ],
   "url": "https://vpo.ca/product/334794/gecko-mens"
 }

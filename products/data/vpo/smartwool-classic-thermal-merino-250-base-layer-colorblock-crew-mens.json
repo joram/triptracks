@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Classic Thermal Merino (250) Base Layer Colorblock Crew - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "250 g"
+    },
+    {
+      "key": "Weight",
+      "value": "280 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/339354/classic-thermal-merino-250-base-layer-colorblock-crew-mens"
 }

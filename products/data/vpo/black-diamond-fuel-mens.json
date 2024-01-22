@@ -5,6 +5,59 @@
   ],
   "name": "Black Diamond Fuel - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper Material",
+      "value": "Enduro Knit Upper, stretch woven quarter, Welded TPU stitch protection, Strobel construction, Seamless molded collar padding, asymmetrical overlap tongue, Sticky rubber toe cap"
+    },
+    {
+      "key": "Footbed",
+      "value": "Molded, Open Cell Performance EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "Low profile EVA Midsole, Dual Density Heel, Climbing stability formula"
+    },
+    {
+      "key": "Rubber",
+      "value": "BD BlackLabel Mountain"
+    },
+    {
+      "key": "Weight(per shoe)",
+      "value": "303 g"
+    },
+    {
+      "key": "Last",
+      "value": "BD Flat Camber Approach"
+    },
+    {
+      "key": "Width - Heel",
+      "value": "Narrow"
+    },
+    {
+      "key": "Width- Forefoot",
+      "value": "Medium"
+    },
+    {
+      "key": "Stack Height - Forefoot/ Heel",
+      "value": "10mm"
+    },
+    {
+      "key": "Heel - Ball Drop",
+      "value": "8 mm"
+    },
+    {
+      "key": "Closure",
+      "value": "Dual Velcro Strap"
+    },
+    {
+      "key": "Climb Angle",
+      "value": "Vertical"
+    },
+    {
+      "key": "Usage/ Terrain",
+      "value": "Technical approach to climb. Easy 5th class"
+    }
+  ],
   "url": "https://vpo.ca/product/334394/fuel-mens"
 }

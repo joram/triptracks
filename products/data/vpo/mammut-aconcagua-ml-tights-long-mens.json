@@ -1,10 +1,19 @@
 {
-  "description": "Aconcagua ML Tights long Men. An optimal body climate thanks to the combination of two high-quality, functional fleece materials. While Polartec\u00ae Power Stretch\u00ae Pro\u2122 provides warmth and an abrasion-proof nylon surface on the front and back, we use elasticated Pontetorto\u00ae Tecnostretch in the lower leg area for excellent moisture management.",
+  "description": "Versatile tights you can wear under hardshell pants when skiing, mountaineering or even on their own when hiking. The combination of two high-quality fleece fabrics provides for optimal\ntemperature regulation. The main fabric made of Polartec\u00ae Power Stretch\u00ae Pro material is comfortable, extra durable and incredibly stretchy. The lower leg section is made with Polartec\u00ae\nPower Grid\u2122 fleece for excellent moisture management and less volume. The tights fit perfectly thanks to the elastic waistband. They are made to offer superior quality and are extremely\ndurable. Now in its third generation, the Aconcagua family still holds its own on expeditions, long and short outdoor adventures and is also suitable for everyday wear.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/330928.jpg"
+    "https://vpo.ca/images/product/large/350357.jpg"
   ],
   "name": "Mammut Aconcagua ML Tights, Long - Mens",
-  "price_cents": null,
-  "specs": [],
-  "url": "https://vpo.ca/product/330928/aconcagua-ml-tights-long-mens"
+  "price_cents": 1352000,
+  "specs": [
+    {
+      "key": "Main Fabric 2 (B2B)",
+      "value": "polartec recycled polyester knit"
+    },
+    {
+      "key": "Main Fabric 1 (B2B)",
+      "value": "polartec\u00ae power stretch pro\u00ae"
+    }
+  ],
+  "url": "https://vpo.ca/product/350357/aconcagua-ml-tights-long-mens"
 }

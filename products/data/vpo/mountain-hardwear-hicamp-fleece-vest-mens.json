@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear HiCamp Fleece Vest - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Sherpa Fleece - 100% Polyester, 420 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/348986/hicamp-fleece-vest-mens"
 }

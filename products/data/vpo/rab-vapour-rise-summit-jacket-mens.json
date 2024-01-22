@@ -5,6 +5,27 @@
   ],
   "name": "Rab Vapour-Rise Summit Jacket - Mens",
   "price_cents": 2360000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Pertex Quantum Air, 49g"
+    },
+    {
+      "key": "Lining",
+      "value": "VR Warm lining (83g"
+    },
+    {
+      "key": "Composition",
+      "value": "100% polyamide outer with 100% polyester lining"
+    },
+    {
+      "key": "Weight",
+      "value": "354 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "29.7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/329495/vapour-rise-summit-jacket-mens"
 }

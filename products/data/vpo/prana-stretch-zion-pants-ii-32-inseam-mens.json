@@ -5,6 +5,11 @@
   ],
   "name": "Prana Stretch Zion Pants II, 32\" Inseam - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Shell"
+    }
+  ],
   "url": "https://vpo.ca/product/340304/stretch-zion-pants-ii-32-inseam-mens"
 }

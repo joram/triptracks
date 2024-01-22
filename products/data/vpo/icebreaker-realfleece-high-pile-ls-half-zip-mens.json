@@ -5,6 +5,27 @@
   ],
   "name": "Icebreaker RealFleece High Pile LS Half Zip - Mens",
   "price_cents": 4250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell Face",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Shell Back",
+      "value": "100% Lyocell"
+    },
+    {
+      "key": "Pocket Flap",
+      "value": "100% Cotton"
+    },
+    {
+      "key": "Lining",
+      "value": "60% Lyocell, 40% Merino Wool - Exclusive Of Decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "950 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348607/realfleece-high-pile-ls-half-zip-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Marmot PreCip Eco Jacket - Big - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "NanoPro\u2122, 100% Pre-Consumer Recycled Nylon, Ripstop, 78g"
+    },
+    {
+      "key": "Weight",
+      "value": "13 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "33.5 in"
+    },
+    {
+      "key": "Waterproof",
+      "value": "Yes"
+    }
+  ],
   "url": "https://vpo.ca/product/332041/precip-eco-jacket-big-mens"
 }

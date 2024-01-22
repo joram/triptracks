@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks VanGrizzle Boot Midweight Cushion Socks - Mens",
   "price_cents": 359500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "61% Merino Wool, 37% Nylon, 2% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, backpacking boots, walking boots"
+    }
+  ],
   "url": "https://vpo.ca/product/337004/vangrizzle-boot-midweight-cushion-socks-mens"
 }

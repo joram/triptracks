@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Pala Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "74% Polyamide, 15% Wool - OWP Merino, 11% Elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "91% Polyamide, 9% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "374 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343594/pala-pants-mens"
 }

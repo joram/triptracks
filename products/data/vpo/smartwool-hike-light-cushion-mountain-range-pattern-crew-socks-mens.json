@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Hike Light Cushion Mountain Range Pattern Crew Socks - Mens",
   "price_cents": 239600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Merino Wool, 33% Recycled Nylon, 12% Nylon, 3% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Crew (8\")"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Light"
+    }
+  ],
   "url": "https://vpo.ca/product/339147/hike-light-cushion-mountain-range-pattern-crew-socks-mens"
 }

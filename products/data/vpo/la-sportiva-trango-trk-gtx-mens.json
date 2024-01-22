@@ -5,6 +5,39 @@
   ],
   "name": "La Sportiva Trango TRK GTX - Mens",
   "price_cents": 3199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Anti-abrasion and water repellent fabric"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Performance Comfort"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite \u00ae Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Midsole",
+      "value": "Dual-density MeMlex EVA"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Mulaz"
+    },
+    {
+      "key": "Last",
+      "value": "Trango 2"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/343178/trango-trk-gtx-mens"
 }

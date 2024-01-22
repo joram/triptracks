@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Sten Jacket - Mens",
   "price_cents": 1999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Lite",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "G-1000\u00ae Original",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "430 g"
+    }
+  ],
   "url": "https://vpo.ca/product/308281/sten-jacket-mens"
 }

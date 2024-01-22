@@ -5,6 +5,31 @@
   ],
   "name": "Ortovox Col Becchei WB Shorts - Mens",
   "price_cents": 2699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Material (Front)",
+      "value": "100 % Polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100 % Polyurethane Inner"
+    },
+    {
+      "key": "Main Material (Back)",
+      "value": "100 % Polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100 % Polyurethane (Toray Dermizax\u00ae Nx)"
+    },
+    {
+      "key": "Inner",
+      "value": "100 % Polyester"
+    },
+    {
+      "key": "Inserts",
+      "value": "75 % Polyamide + 18 % Wool (Owp-merino) + 7 % Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/349491/col-becchei-wb-shorts-mens"
 }

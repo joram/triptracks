@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Vibe Super Soft Boxer Brief, 5\" Inseam - Mens - 2 Pack",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "95% Viscose, 5% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/308462/vibe-super-soft-boxer-brief-5-inseam-mens-2-pack"
 }

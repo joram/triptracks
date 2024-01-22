@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  Rise T-Shirt - Mens",
   "price_cents": 439500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/337740/rise-t-shirt-mens"
 }

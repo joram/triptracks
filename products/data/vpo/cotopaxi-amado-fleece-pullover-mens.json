@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Amado Fleece Pullover - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% recycled polyester 185g"
+    }
+  ],
   "url": "https://vpo.ca/product/344462/amado-fleece-pullover-mens"
 }

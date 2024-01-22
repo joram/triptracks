@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia R1 TechFace Hoody - Mens",
   "price_cents": 1673000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "391 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327433/r1-techface-hoody-mens"
 }

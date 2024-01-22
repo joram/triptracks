@@ -5,6 +5,11 @@
   ],
   "name": "tentree Oberon Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/324158/oberon-hoodie-mens"
 }

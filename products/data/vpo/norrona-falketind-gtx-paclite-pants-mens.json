@@ -5,6 +5,11 @@
   ],
   "name": "Norrona Falketind GTX Paclite Pants - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex Paclite\u00ae"
+    }
+  ],
   "url": "https://vpo.ca/product/346480/falketind-gtx-paclite-pants-mens"
 }

@@ -5,6 +5,35 @@
   ],
   "name": "La Sportiva Boulder X - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Mesh (back half and tongue only)"
+    },
+    {
+      "key": "Insole",
+      "value": "OrthoLite Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Midsole",
+      "value": "Micropore EVA"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Idro-Grip V-Smear\u2122 with Impact Brake System\u2122"
+    },
+    {
+      "key": "Last",
+      "value": "Boulder"
+    },
+    {
+      "key": "Ideal terrain",
+      "value": "Approach and hiking on technical terrain requiring friction footwork"
+    }
+  ],
   "url": "https://vpo.ca/product/259180/boulder-x-mens"
 }

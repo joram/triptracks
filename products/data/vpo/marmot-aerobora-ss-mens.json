@@ -5,6 +5,15 @@
   ],
   "name": "Marmot Aerobora SS - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "6.35 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29.375 in"
+    }
+  ],
   "url": "https://vpo.ca/product/316242/aerobora-ss-mens"
 }

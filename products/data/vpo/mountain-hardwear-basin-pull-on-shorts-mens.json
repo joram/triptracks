@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Basin Pull-On Shorts - Mens",
   "price_cents": 719600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nylon Stretch Cotton-touch Plain Weave (94% Nylon, 6% Elastane)"
+    },
+    {
+      "key": "Weight",
+      "value": "140 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "9 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/332942/basin-pull-on-shorts-mens"
 }

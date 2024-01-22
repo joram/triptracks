@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Jeffreys Pullover - Mens",
   "price_cents": 1040000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "63% Cotton 27% Polyester 10% Polyamide"
+    },
+    {
+      "key": "Body Length",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/343075/jeffreys-pullover-mens"
 }

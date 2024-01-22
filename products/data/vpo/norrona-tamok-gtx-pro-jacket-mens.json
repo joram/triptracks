@@ -5,6 +5,35 @@
   ],
   "name": "Norrona Tamok GTX Pro Jacket - Mens",
   "price_cents": 6962600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary",
+      "value": "Gore-Tex\u00ae Pro most breathable 3-layer, 70D X 160D recycled nylon"
+    },
+    {
+      "key": "Secondry",
+      "value": "Gore-Tex\u00ae Pro most rugged 3-layer, 200D recycled nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "788 g"
+    },
+    {
+      "key": "Waterproof",
+      "value": "min. 28,000 mm"
+    },
+    {
+      "key": "Breathablility",
+      "value": "High, down to 9 RET"
+    },
+    {
+      "key": "Windproofness",
+      "value": "100%"
+    },
+    {
+      "key": "Fit",
+      "value": "Technical"
+    }
+  ],
   "url": "https://vpo.ca/product/327498/tamok-gtx-pro-jacket-mens"
 }

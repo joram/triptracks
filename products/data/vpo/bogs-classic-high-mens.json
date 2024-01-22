@@ -5,6 +5,11 @@
   ],
   "name": "Bogs Classic High - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Height",
+      "value": "14\u201d"
+    }
+  ],
   "url": "https://vpo.ca/product/307962/classic-high-mens"
 }

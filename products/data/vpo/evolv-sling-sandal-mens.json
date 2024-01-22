@@ -5,6 +5,15 @@
   ],
   "name": "Evolv Sling Sandal - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insole",
+      "value": "EVA Foam"
+    },
+    {
+      "key": "Outsole",
+      "value": "Trax\u00ae Enduro"
+    }
+  ],
   "url": "https://vpo.ca/product/337154/sling-sandal-mens"
 }

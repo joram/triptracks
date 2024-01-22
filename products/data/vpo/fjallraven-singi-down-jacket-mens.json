@@ -5,6 +5,35 @@
   ],
   "name": "Fjallraven Singi Down Jacket - Mens",
   "price_cents": 4899700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "G-1000\u00ae HeavyDuty",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill power",
+      "value": "600 in\u00b3"
+    },
+    {
+      "key": "Fill",
+      "value": "80% goose down, 20% feather"
+    },
+    {
+      "key": "Fill weight",
+      "value": "295 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1890 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313618/singi-down-jacket-mens"
 }

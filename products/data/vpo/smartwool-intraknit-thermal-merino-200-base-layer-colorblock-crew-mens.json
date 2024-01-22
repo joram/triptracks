@@ -5,6 +5,23 @@
   ],
   "name": "Smartwool Intraknit Thermal Merino 200 Base Layer Colorblock Crew - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "200g"
+    },
+    {
+      "key": "Weight",
+      "value": "208 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Featuring Intraknit\u2122 technology",
+      "value": "Insulation, articulation and ventilation are seamlessly integrated to amplify movement and comfort during high-intensity activities"
+    }
+  ],
   "url": "https://vpo.ca/product/339343/intraknit-thermal-merino-200-base-layer-colorblock-crew-mens"
 }

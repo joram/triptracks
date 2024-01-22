@@ -5,6 +5,15 @@
   ],
   "name": "Mammut Eigerjoch Advanced IN Hooded Jacket - Mens",
   "price_cents": 5850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Polyamide Downproof Woven - 100% Polyamide"
+    },
+    {
+      "key": "Small packing volume",
+      "value": "Jacket can be stowed in the front right pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/330815/eigerjoch-advanced-in-hooded-jacket-mens"
 }

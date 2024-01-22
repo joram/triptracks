@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Marquam Peak Fusion Vest - Tall - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "85% Polyester, 15% Cotton, Caribou Faille."
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester."
+    },
+    {
+      "key": "Insulation",
+      "value": "Thermarator\u2122 100% Polyester."
+    }
+  ],
   "url": "https://vpo.ca/product/350589/marquam-peak-fusion-vest-tall-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Coastal Tee LS - Mens",
   "price_cents": 450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "52% Organic Cotton, 48% Recycled Polyester Jersey"
+    },
+    {
+      "key": "Weight",
+      "value": "6 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347713/coastal-tee-ls-mens"
 }

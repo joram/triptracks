@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Recycled Wool-Blend Sweater - Mens",
   "price_cents": 1134000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "70% recycled wool, 26% recycled nylon, 4% other fiber"
+    },
+    {
+      "key": "Weight",
+      "value": "408 g"
+    }
+  ],
   "url": "https://vpo.ca/product/310693/recycled-wool-blend-sweater-mens"
 }

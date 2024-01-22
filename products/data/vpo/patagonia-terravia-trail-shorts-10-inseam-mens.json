@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Terravia Trail Shorts, 10\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "4.7 oz 86% recycled polyester, 14% spandex dobby with four-way stretch and a PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Weight",
+      "value": "215 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/334741/terravia-trail-shorts-10-inseam-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Saxx Underwear Quest Quick Dry Mesh Boxer Brief Fly, 5\" Inseam - Mens",
   "price_cents": 379500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "77% Nylon, 14% Elastane, 9% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/305966/quest-quick-dry-mesh-boxer-brief-fly-5-inseam-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Devold Tuvegga Merino Shirt - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inside material",
+      "value": "99% Merino wool, 1% elastane"
+    },
+    {
+      "key": "Fiber",
+      "value": "Fine wool 18.7 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "250 g"
+    }
+  ],
   "url": "https://vpo.ca/product/345856/tuvegga-merino-shirt-mens"
 }

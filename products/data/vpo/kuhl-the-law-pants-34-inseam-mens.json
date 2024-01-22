@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl The Law Pants, 34\" Inseam - Mens",
   "price_cents": 1450000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Knockabout Kloth - 98% Cotton, 2% Lycra -365 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Full seat and thigh"
+    },
+    {
+      "key": "Knee opening",
+      "value": "19 in"
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "16.5 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Seven pockets",
+      "value": "two front hand, one coin, two back, one stealth cell phone, one 3D and one zipper on 3D pocket"
+    }
+  ],
   "url": "https://vpo.ca/product/296109/the-law-pants-34-inseam-mens"
 }

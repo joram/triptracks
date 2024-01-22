@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Reactor Polartec Jacket - Mens",
   "price_cents": 1300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Classic 100 100% Recycled Polyester Velour"
+    },
+    {
+      "key": "Weight",
+      "value": "12 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347897/reactor-polartec-jacket-mens"
 }

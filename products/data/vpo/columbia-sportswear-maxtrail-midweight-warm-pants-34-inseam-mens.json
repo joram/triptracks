@@ -5,6 +5,11 @@
   ],
   "name": "Columbia Sportswear Maxtrail Midweight Warm Pants, 34\" Inseam - Mens",
   "price_cents": 1099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "57% Recycled Polyester, 34% Polyester, 9% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/350618/maxtrail-midweight-warm-pants-34-inseam-mens"
 }

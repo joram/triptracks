@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Expedition X-Latt Jacket - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill weight",
+      "value": "60 g"
+    },
+    {
+      "key": "Weight",
+      "value": "300 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337169/expedition-x-latt-jacket-mens"
 }

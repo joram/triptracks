@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Big Cottonwood SS Shirt - Mens",
   "price_cents": 600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Slubby Plaid (100% Cotton)"
+    },
+    {
+      "key": "Fabric Weight",
+      "value": "3.4 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/317373/big-cottonwood-ss-shirt-mens"
 }

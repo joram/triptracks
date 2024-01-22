@@ -5,6 +5,27 @@
   ],
   "name": "Icebreaker ZoneKnit Insulated LS Hoodie - Mens",
   "price_cents": 3100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Merino Wool"
+    },
+    {
+      "key": "Filling",
+      "value": "88% Merino Wool, 12% Polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "370 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/348783/zoneknit-insulated-ls-hoodie-mens"
 }

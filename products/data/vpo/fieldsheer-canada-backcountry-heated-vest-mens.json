@@ -5,6 +5,15 @@
   ],
   "name": "Fieldsheer Canada Backcountry Heated Vest - Mens",
   "price_cents": 2299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Multi-Zone Heat Zones",
+      "value": "Left &amp; Right Chest, Upper Back"
+    },
+    {
+      "key": "Footnote",
+      "value": "Charge time is based off using a USB-A wall charger that delivers 5V@2.1A"
+    }
+  ],
   "url": "https://vpo.ca/product/341673/backcountry-heated-vest-mens"
 }

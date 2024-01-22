@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Columbia Logo Printed Hoodie - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "80% Cotton, 20% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular*"
+    },
+    {
+      "key": "Length",
+      "value": "28.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/346817/columbia-logo-printed-hoodie-mens"
 }

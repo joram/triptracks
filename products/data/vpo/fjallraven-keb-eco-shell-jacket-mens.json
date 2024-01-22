@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Keb Eco-Shell Jacket - Mens",
   "price_cents": 6250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Eco-Shell 3-layer Stretch"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Water column",
+      "value": "30,000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "26,000 g"
+    },
+    {
+      "key": "Weight",
+      "value": "520 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313439/keb-eco-shell-jacket-mens"
 }

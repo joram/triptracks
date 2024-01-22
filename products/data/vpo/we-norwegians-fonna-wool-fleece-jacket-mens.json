@@ -5,6 +5,11 @@
   ],
   "name": "We Norwegians Fonna Wool Fleece Jacket - Mens",
   "price_cents": 4399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Details",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/350491/fonna-wool-fleece-jacket-mens"
 }

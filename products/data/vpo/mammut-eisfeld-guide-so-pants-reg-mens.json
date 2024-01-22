@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Eisfeld Guide SO Pants, Reg - Mens",
   "price_cents": 5750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Polyamide Woven Double Weave, 93% Polyamide, 7% Elastene"
+    },
+    {
+      "key": "Partly waterproof",
+      "value": "taped seams in Gore-tex\u00ae Infinium\u2122 areas"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330920/eisfeld-guide-so-pants-reg-mens"
 }

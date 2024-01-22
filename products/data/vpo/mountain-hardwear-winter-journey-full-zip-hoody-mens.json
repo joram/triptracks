@@ -5,6 +5,11 @@
   ],
   "name": "Mountain Hardwear Winter Journey Full Zip Hoody - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "88% Nylon, 12% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/349058/winter-journey-full-zip-hoody-mens"
 }

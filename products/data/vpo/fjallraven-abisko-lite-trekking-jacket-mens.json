@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Abisko Lite Trekking Jacket - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Lite Eco",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "495 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333758/abisko-lite-trekking-jacket-mens"
 }

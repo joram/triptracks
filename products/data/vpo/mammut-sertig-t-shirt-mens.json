@@ -5,6 +5,31 @@
   ],
   "name": "Mammut Sertig T-Shirt - Mens",
   "price_cents": 690000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main 1",
+      "value": "Polyester Stretch; 92% Polyester, 8% Elastane"
+    },
+    {
+      "key": "Main 2",
+      "value": "Knit T-Shirt; 100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "119 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Back length",
+      "value": "27.7 in"
+    },
+    {
+      "key": "UV protection (UPF)",
+      "value": "UPF 50+"
+    }
+  ],
   "url": "https://vpo.ca/product/308271/sertig-t-shirt-mens"
 }

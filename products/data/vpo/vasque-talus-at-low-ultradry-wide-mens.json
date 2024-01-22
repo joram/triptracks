@@ -5,6 +5,39 @@
   ],
   "name": "Vasque Talus AT Low UltraDry, Wide - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric / Material",
+      "value": "Abrasion Resistant Mesh"
+    },
+    {
+      "key": "Waterproof",
+      "value": "UltraDry\u2122 Waterproofing System"
+    },
+    {
+      "key": "Footbed",
+      "value": "Dual Density EVA"
+    },
+    {
+      "key": "Midsole",
+      "value": "Molded EVA And TPU Shank"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Mega Nuasi"
+    },
+    {
+      "key": "Last",
+      "value": "Perpetuum"
+    },
+    {
+      "key": "Leather Type",
+      "value": "Waterproof"
+    },
+    {
+      "key": "Leather Weight",
+      "value": "1.6-1.8mm"
+    }
+  ],
   "url": "https://vpo.ca/product/348756/talus-at-low-ultradry-wide-mens"
 }

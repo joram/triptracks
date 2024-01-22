@@ -5,6 +5,15 @@
   ],
   "name": "Saxx Underwear Volt Breathable Mesh Boxer Brief, 5\" Inseam - Mens",
   "price_cents": 303600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "88% Polyester, 12% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/317984/volt-breathable-mesh-boxer-brief-5-inseam-mens"
 }

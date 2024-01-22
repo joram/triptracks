@@ -5,6 +5,15 @@
   ],
   "name": "Chlorophylle Clivia Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "54% cotton, 46% polyester"
+    },
+    {
+      "key": "Length",
+      "value": "77.5 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/337380/clivia-shirt-mens"
 }

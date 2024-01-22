@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Winter Hiking SO Pants, Reg - Mens",
   "price_cents": 1919600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Polyamide Woven - 85% Polyamide, 15% Spandex"
+    },
+    {
+      "key": "Main Material - Backing",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "852 g"
+    }
+  ],
   "url": "https://vpo.ca/product/324538/winter-hiking-so-pants-reg-mens"
 }

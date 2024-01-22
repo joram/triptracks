@@ -5,6 +5,35 @@
   ],
   "name": "HanWag Trapper Top GTX - Mens",
   "price_cents": 6300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather (waxed)"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1900 g"
+    },
+    {
+      "key": "Upper Material Processing",
+      "value": "waxed"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    }
+  ],
   "url": "https://vpo.ca/product/281362/trapper-top-gtx-mens"
 }

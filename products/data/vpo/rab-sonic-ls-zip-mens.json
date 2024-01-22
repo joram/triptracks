@@ -5,6 +5,23 @@
   ],
   "name": "Rab Sonic LS Zip - Mens",
   "price_cents": 800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyester (56% Recycled Polyester 44% Conventional)"
+    },
+    {
+      "key": "Weight",
+      "value": "130 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "70 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/342826/sonic-ls-zip-mens"
 }

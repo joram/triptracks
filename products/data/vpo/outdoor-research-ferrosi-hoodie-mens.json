@@ -5,6 +5,19 @@
   ],
   "name": "Outdoor Research Ferrosi Hoodie - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "bluesign\u00ae approved 86% Nylon (46% Recycled), 14% Spandex 90D Stretch Woven Ripstop"
+    },
+    {
+      "key": "Accents",
+      "value": "Cordura\u00ae bluesign\u00ae approved 91% Nylon, 9% Spandex 120D Stretch Woven"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342104/ferrosi-hoodie-mens"
 }

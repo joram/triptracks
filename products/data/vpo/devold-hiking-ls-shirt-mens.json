@@ -5,6 +5,15 @@
   ],
   "name": "Devold Hiking LS Shirt - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fiber",
+      "value": "fine wool - 18,7 micron"
+    },
+    {
+      "key": "Weight",
+      "value": "190 g"
+    }
+  ],
   "url": "https://vpo.ca/product/345346/hiking-ls-shirt-mens"
 }

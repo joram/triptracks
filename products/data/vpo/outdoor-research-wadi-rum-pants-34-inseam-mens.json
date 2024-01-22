@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Wadi Rum Pants, 34\" Inseam - Mens",
   "price_cents": 805000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "68% cotton, 29% cordura nylon, 3% spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "390 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/326448/wadi-rum-pants-34-inseam-mens"
 }

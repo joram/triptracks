@@ -5,6 +5,11 @@
   ],
   "name": "PURE naturals Valhalla Kingdom - Bear Paw Pima Cotton T-Shirt - Mens",
   "price_cents": 272700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pima long-staple Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/348057/valhalla-kingdom-bear-paw-pima-cotton-t-shirt-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Thor Full-Zip - Mens",
   "price_cents": 1950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "64% Polyester, 25% Wool, 11% Nylon"
+    },
+    {
+      "key": "Collar, Sleeve Gusset",
+      "value": "100% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/328908/thor-full-zip-mens"
 }

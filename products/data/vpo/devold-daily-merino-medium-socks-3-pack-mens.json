@@ -5,6 +5,11 @@
   ],
   "name": "Devold Daily Merino Medium Socks - 3 Pack - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "52% Merino Wool, 25% Acrylic, 21% Polyamide, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/345340/daily-merino-medium-socks-3-pack-mens"
 }

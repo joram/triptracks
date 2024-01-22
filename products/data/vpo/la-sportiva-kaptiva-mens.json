@@ -5,6 +5,43 @@
   ],
   "name": "La Sportiva Kaptiva - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Sock-Like\u2122 Compression"
+    },
+    {
+      "key": "Lining",
+      "value": "Slip Resistant Nylon Mesh"
+    },
+    {
+      "key": "Midsole",
+      "value": "Compression Molded dual density MEMlex"
+    },
+    {
+      "key": "Sole",
+      "value": "FriXion\u00ae XF 2.0 with Impact Brake System"
+    },
+    {
+      "key": "Drop",
+      "value": "6mm"
+    },
+    {
+      "key": "Stack",
+      "value": "Heel"
+    },
+    {
+      "key": "Midsole",
+      "value": "32A (Heel) &amp; 35A (Forefoot)"
+    },
+    {
+      "key": "Last",
+      "value": "Race"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/318684/kaptiva-mens"
 }

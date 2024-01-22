@@ -5,6 +5,11 @@
   ],
   "name": "Norrona Falketind Aero60 Hood - Mens",
   "price_cents": 1992000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pertex\u00ae"
+    }
+  ],
   "url": "https://vpo.ca/product/346479/falketind-aero60-hood-mens"
 }

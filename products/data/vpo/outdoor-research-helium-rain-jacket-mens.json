@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Helium Rain Jacket - Mens",
   "price_cents": 1719600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved Pertex\u00ae Shield Diamond Fuse 2.5L, bluesign\u00ae approved 100% Nylon, 30D Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "6.3 oz"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.25 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/330432/helium-rain-jacket-mens"
 }

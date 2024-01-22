@@ -5,6 +5,51 @@
   ],
   "name": "Scarpa Spin Infinity - Mens",
   "price_cents": 1592000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Mesh &amp; PU Film &amp; Micro Nubuck"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyester"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D EVA-CM"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Velox Cross"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite\u00ae Strobel and Footbed"
+    },
+    {
+      "key": "Last",
+      "value": "ARSF"
+    },
+    {
+      "key": "Cushion",
+      "value": "High"
+    },
+    {
+      "key": "Drop",
+      "value": "4 mm"
+    },
+    {
+      "key": "Underfoot Protection",
+      "value": "Moderate"
+    },
+    {
+      "key": "Weight",
+      "value": "305 g"
+    },
+    {
+      "key": "SOCK-FIT LW",
+      "value": "Stretch fabric incorporated with a minimal stretch tongue provides gentle wrapping and support, reducing bulk and enhancing fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343802/spin-infinity-mens"
 }

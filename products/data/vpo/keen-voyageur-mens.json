@@ -5,6 +5,15 @@
   ],
   "name": "Keen Voyageur - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit Tip",
+      "value": "Most customers find this style is true to size."
+    },
+    {
+      "key": "Measurement Note",
+      "value": "Keen's measurements were taken using a Men\u2019s size 9 US (42.0 EU). Measurements may vary by size"
+    }
+  ],
   "url": "https://vpo.ca/product/309263/voyageur-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Vidda Pro Wool Padded Jacket - Mens",
   "price_cents": 5500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Fill",
+      "value": "82% wool, 18% polylactide, 80% wool, 20% polylactide"
+    },
+    {
+      "key": "Fill weight",
+      "value": "150 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1390 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329362/vidda-pro-wool-padded-jacket-mens"
 }

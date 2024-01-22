@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Landroamer Jacket - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Double Ripstop 2L 100% nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, easy fit for comfortable range of motion."
+    }
+  ],
   "url": "https://vpo.ca/product/363892/landroamer-jacket-mens"
 }

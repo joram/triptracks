@@ -5,6 +5,15 @@
   ],
   "name": "Norrona /29 Cotton Viking T-Shirt - Mens",
   "price_cents": 399600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% organic cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "200 g (Size L)"
+    }
+  ],
   "url": "https://vpo.ca/product/334149/29-cotton-viking-t-shirt-mens"
 }

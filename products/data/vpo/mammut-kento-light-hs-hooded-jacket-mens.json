@@ -5,6 +5,23 @@
   ],
   "name": "Mammut Kento Light HS Hooded Jacket - Mens",
   "price_cents": 2023000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Face",
+      "value": "100% Polyamide (15D x 15D denier)"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polyurethane"
+    },
+    {
+      "key": "Water column",
+      "value": "26,000 mm"
+    },
+    {
+      "key": "Vapor permeability",
+      "value": "27,000 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327081/kento-light-hs-hooded-jacket-mens"
 }

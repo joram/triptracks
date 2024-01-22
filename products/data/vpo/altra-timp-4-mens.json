@@ -5,6 +5,31 @@
   ],
   "name": "Altra Timp 4 - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "10.9 oz"
+    },
+    {
+      "key": "Midsole",
+      "value": "Altra EGO\u2122 MAX"
+    },
+    {
+      "key": "Outsole",
+      "value": "MaxTrac\u2122"
+    },
+    {
+      "key": "Cushion",
+      "value": "High"
+    },
+    {
+      "key": "Stack Height",
+      "value": "29 mm"
+    },
+    {
+      "key": "Upper",
+      "value": "Quick-Dry Air Mesh"
+    }
+  ],
   "url": "https://vpo.ca/product/347393/timp-4-mens"
 }

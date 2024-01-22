@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Ghost Whisperer/2 Jacket - Mens",
   "price_cents": 3519600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Whisperer 10D x 10D Ripstop - Solids"
+    },
+    {
+      "key": "Insulation",
+      "value": "800-fill RDS\u00ae-certified down - 90% Goose Down, 10% Goose Feathers"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "8.3 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/323346/ghost-whisperer2-jacket-mens"
 }

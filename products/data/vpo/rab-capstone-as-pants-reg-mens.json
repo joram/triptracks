@@ -5,6 +5,15 @@
   ],
   "name": "Rab Capstone AS Pants, Reg - Mens",
   "price_cents": 1570000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "Matrix\u2122 Double Weave Outer Fabric with Soft Brushed Back and Fluorocarbon-free DWR - 207 g"
+    },
+    {
+      "key": "Weight - Size Medium",
+      "value": "374 g"
+    }
+  ],
   "url": "https://vpo.ca/product/336620/capstone-as-pants-reg-mens"
 }

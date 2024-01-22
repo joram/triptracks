@@ -5,6 +5,15 @@
   ],
   "name": "Icebreaker MerinoFine LS Roll Neck - Mens",
   "price_cents": 2750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348649/merinofine-ls-roll-neck-mens"
 }

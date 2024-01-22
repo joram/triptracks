@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Tech Lite II SS Tee - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "100% Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight",
+      "value": "157 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/336724/tech-lite-ii-ss-tee-mens"
 }

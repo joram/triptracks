@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Mountain Shirt - Mens",
   "price_cents": 833000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "188 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Athletic Fit"
+    },
+    {
+      "key": "Lining",
+      "value": "94% Polyester, 6% Spandex"
+    },
+    {
+      "key": "Main material",
+      "value": "89% Polyamide, 6% Polyester, 5% Spandex"
+    },
+    {
+      "key": "UV protection (UPF)",
+      "value": "UPF 50+"
+    }
+  ],
   "url": "https://vpo.ca/product/329056/mountain-shirt-mens"
 }

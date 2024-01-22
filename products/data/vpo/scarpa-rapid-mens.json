@@ -5,6 +5,35 @@
   ],
   "name": "Scarpa Rapid - Mens",
   "price_cents": 1592000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite Strobel and Footbed"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D EVA-CM - 6mm drop"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram Agility"
+    },
+    {
+      "key": "Last",
+      "value": "ARSA"
+    },
+    {
+      "key": "Sock-Fit LW",
+      "value": "Stretch fabric incorporated with a minimal stretch tongue provides gentle wrapping and support, reducing bulk and enhancing fit."
+    }
+  ],
   "url": "https://vpo.ca/product/340905/rapid-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Magnum IP Polo - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/333489/magnum-ip-polo-mens"
 }

@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Bridger Low B-Dry - Mens",
   "price_cents": 2099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "LWG gold certified PFC-free waterproof nubuck leather + Abrasion-resistant Mesh, B-DRY Waterproof Membrane, Molded rubber toe cap &amp; heel counter"
+    },
+    {
+      "key": "Insole",
+      "value": "O Fit Insole\u2122"
+    },
+    {
+      "key": "Midsole",
+      "value": "Single Density Compression Molded EVA, TPU Chassis, Nylon Shank"
+    },
+    {
+      "key": "Outsole",
+      "value": "Granite Peak"
+    },
+    {
+      "key": "Construction",
+      "value": "Board lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Regular"
+    },
+    {
+      "key": "Volume",
+      "value": "Medium"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "15 mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "17.7 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/296800/bridger-low-b-dry-mens"
 }

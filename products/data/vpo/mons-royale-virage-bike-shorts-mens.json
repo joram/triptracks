@@ -5,6 +5,15 @@
   ],
   "name": "Mons Royale Virage Bike Shorts - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "81% Recycled Polyester, 14% Merino Wool, 5% Elastane -137 gsm"
+    },
+    {
+      "key": "Features",
+      "value": "<br *=\"\" comfort<br=\"\" for=\"\" inseams=\"\" placed=\"\" strategically=\"\""
+    }
+  ],
   "url": "https://vpo.ca/product/346414/virage-bike-shorts-mens"
 }

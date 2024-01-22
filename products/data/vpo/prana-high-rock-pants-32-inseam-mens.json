@@ -5,6 +5,15 @@
   ],
   "name": "Prana High Rock Pants, 32\" Inseam - Mens",
   "price_cents": 959600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Shell"
+    },
+    {
+      "key": "Inseam",
+      "value": "32\" (size M)"
+    }
+  ],
   "url": "https://vpo.ca/product/340171/high-rock-pants-32-inseam-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Cielo Rain Jacket - Mens",
   "price_cents": 1720000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell / Lining",
+      "value": "100% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/344467/cielo-rain-jacket-mens"
 }

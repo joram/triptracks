@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Insulated Organic Cotton Midweight Fjord Flannel Shirt - Mens",
   "price_cents": 1673000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "5.9-oz 100% organic cotton yarn-dyed flannel"
+    },
+    {
+      "key": "Lining",
+      "value": "2.4-oz 100% recycled polyester twill with a PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Insulation",
+      "value": "60-g Thermogreen\u00ae 100% recycled polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "680.39 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341409/insulated-organic-cotton-midweight-fjord-flannel-shirt-mens"
 }

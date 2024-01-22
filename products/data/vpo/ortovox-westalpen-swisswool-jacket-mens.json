@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Westalpen Swisswool Jacket - Mens",
   "price_cents": 4750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Padding",
+      "value": "80 % virgin wool (SWISSWOOL) + 20 % polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100 % polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g"
+    }
+  ],
   "url": "https://vpo.ca/product/343751/westalpen-swisswool-jacket-mens"
 }

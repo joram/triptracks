@@ -5,6 +5,23 @@
   ],
   "name": "Rab Trek Gaiters - Mens",
   "price_cents": 850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "70D 2L nylon ripstop, 143g"
+    },
+    {
+      "key": "Composition",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Composition",
+      "value": "90% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "203g"
+    }
+  ],
   "url": "https://vpo.ca/product/333178/trek-gaiters-mens"
 }

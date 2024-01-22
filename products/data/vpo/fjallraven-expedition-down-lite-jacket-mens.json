@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Expedition Down Lite Jacket - Mens",
   "price_cents": 6750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill power",
+      "value": "700 in\u00b3"
+    },
+    {
+      "key": "Fill",
+      "value": "95% goose down, 5% feather"
+    },
+    {
+      "key": "Fill weight",
+      "value": "415 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1260 g"
+    }
+  ],
   "url": "https://vpo.ca/product/313353/expedition-down-lite-jacket-mens"
 }

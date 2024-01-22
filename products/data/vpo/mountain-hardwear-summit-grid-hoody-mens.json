@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Summit Grid Hoody - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Grid Fleece- 100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "11 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349045/summit-grid-hoody-mens"
 }

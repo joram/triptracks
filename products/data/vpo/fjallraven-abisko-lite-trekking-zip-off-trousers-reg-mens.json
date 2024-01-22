@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Abisko Lite Trekking Zip-Off Trousers, Reg - Mens",
   "price_cents": 2550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Lite"
+    },
+    {
+      "key": "Stretch",
+      "value": "88% polyamide, 12% elastane"
+    },
+    {
+      "key": "G-1000 HeavyDuty",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Weight",
+      "value": "470 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Leg endings",
+      "value": "Fixed length"
+    }
+  ],
   "url": "https://vpo.ca/product/324197/abisko-lite-trekking-zip-off-trousers-reg-mens"
 }

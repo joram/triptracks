@@ -5,6 +5,15 @@
   ],
   "name": "Cotopaxi Abrazo Half-Zip Fleece Jacket - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "recycled polyester - 215 g"
+    },
+    {
+      "key": "Chest pocket",
+      "value": "85% nylon, 15% spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/340431/abrazo-half-zip-fleece-jacket-mens"
 }

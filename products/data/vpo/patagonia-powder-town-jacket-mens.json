@@ -5,6 +5,23 @@
   ],
   "name": "Patagonia Powder Town Jacket - Mens",
   "price_cents": 3045000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "2-layer, 3.5-oz 75-denier 100% postconsumer recycled polyester plain weave with a PFC-free DWR finish (durable water repellent coating that does not contain perfluorinated chemicals)"
+    },
+    {
+      "key": "Lining",
+      "value": "(hood, upper body and powder skirt) 2.2-oz 100% recycled polyester taffeta with a HeiQ\u00ae Eco Dry PFC-free DWR finish; (lower body) 3.8-oz 100% recycled polyester tricot mesh"
+    },
+    {
+      "key": "Zippered pockets",
+      "value": "two handwarmers; one chest (with media pocket and cable routing), pass pocket on forearm, and one internal stash. There\u2019s also an internal drop-in for goggles or gloves"
+    },
+    {
+      "key": "Weight",
+      "value": "700 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348875/powder-town-jacket-mens"
 }

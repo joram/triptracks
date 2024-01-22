@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Norrona Warm2 Half Zip - Unisex",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100 % Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "476 g"
+    },
+    {
+      "key": "UPF",
+      "value": "50+"
+    }
+  ],
   "url": "https://vpo.ca/product/328629/norrona-warm2-half-zip-unisex"
 }

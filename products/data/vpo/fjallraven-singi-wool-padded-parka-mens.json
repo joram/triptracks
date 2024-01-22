@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Singi Wool Padded Parka - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "G-1000\u00ae Lite Eco"
+    },
+    {
+      "key": "Material 2",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Inner material",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Body",
+      "value": "88% wool, 12% polylactide"
+    },
+    {
+      "key": "Sleeve",
+      "value": "85% wool, 15% polylactide"
+    }
+  ],
   "url": "https://vpo.ca/product/324240/singi-wool-padded-parka-mens"
 }

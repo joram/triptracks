@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Stormstride Jacket - Mens",
   "price_cents": 6250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "H2No\u00ae Performance Standard shell",
+      "value": "3-layer, 3.5-oz 40-denier Pertex\u00ae Shield 100% nylon (54% recycled) plain weave with two-way stretch, a soft polyester knit backer and a DWR (durable water repellent) finish"
+    },
+    {
+      "key": "Weight",
+      "value": "490 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348848/stormstride-jacket-mens"
 }

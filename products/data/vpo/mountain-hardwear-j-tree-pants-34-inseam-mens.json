@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear J Tree Pants, 34\" Inseam - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Summer Stretch Ripstop (96% Cotton, 4% Elastane)"
+    },
+    {
+      "key": "Inseam",
+      "value": "34 in"
+    }
+  ],
   "url": "https://vpo.ca/product/325984/j-tree-pants-34-inseam-mens"
 }

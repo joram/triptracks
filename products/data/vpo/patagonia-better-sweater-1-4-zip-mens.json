@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia Better Sweater 1/4 Zip - Mens",
   "price_cents": 1014000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "10-oz 100% recycled polyester knit fleece dyed with a low-impact process that significantly reduces the use of dyestuffs, energy and water compared to conventional dyeing methods"
+    }
+  ],
   "url": "https://vpo.ca/product/323531/better-sweater-14-zip-mens"
 }

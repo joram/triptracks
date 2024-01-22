@@ -5,6 +5,19 @@
   ],
   "name": "Rab Radius Shorts, 10\" Inseam - Mens",
   "price_cents": 1100000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton 241 g"
+    },
+    {
+      "key": "Weight",
+      "value": "425 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333207/radius-shorts-10-inseam-mens"
 }

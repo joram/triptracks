@@ -5,6 +5,55 @@
   ],
   "name": "La Sportiva Wildcat - Mens",
   "price_cents": 1649500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "AirMesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Honeycomb Mesh (tongue and heel only)"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Midsole",
+      "value": "MEMIex"
+    },
+    {
+      "key": "Insole",
+      "value": "Ortholite Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Sole",
+      "value": "FriXion\u00ae AT 2.0"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Midsole"
+    },
+    {
+      "key": "Last",
+      "value": "Tempo"
+    },
+    {
+      "key": "Fit",
+      "value": "Medium"
+    },
+    {
+      "key": "Drop",
+      "value": "12mm"
+    },
+    {
+      "key": "Stack",
+      "value": "Toe"
+    },
+    {
+      "key": "Ideal terrain",
+      "value": "Trail running in moderate to technical terrain - anything that requires a lot of cushion"
+    }
+  ],
   "url": "https://vpo.ca/product/252291/wildcat-mens"
 }

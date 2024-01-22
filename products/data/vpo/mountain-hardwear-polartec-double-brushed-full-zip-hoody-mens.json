@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Polartec Double Brushed Full Zip Hoody - Mens",
   "price_cents": 1439600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Polartec\u00ae 200 Fleece"
+    },
+    {
+      "key": "Solid",
+      "value": "100% Recycled Polyester Heather -\u00a087% Recycled Polyester, 13% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Approx. Weight",
+      "value": "1 lb 2 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349016/polartec-double-brushed-full-zip-hoody-mens"
 }

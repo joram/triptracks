@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Pack Yak SS - Mens",
   "price_cents": 244700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30.13 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342926/pack-yak-ss-mens"
 }

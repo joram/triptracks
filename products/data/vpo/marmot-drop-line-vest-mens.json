@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Drop Line Vest - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Polyester Fleece"
+    },
+    {
+      "key": "Weight",
+      "value": "13 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347723/drop-line-vest-mens"
 }

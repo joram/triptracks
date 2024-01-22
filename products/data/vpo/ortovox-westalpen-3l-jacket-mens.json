@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox Westalpen 3L Jacket - Mens",
   "price_cents": 7950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Outer",
+      "value": "100 % Polyamide Membrane"
+    },
+    {
+      "key": "Main Inner",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Inserts",
+      "value": "85 % Virgin Merino Wool, 15 % Polyamide"
+    },
+    {
+      "key": "Mesh Lining",
+      "value": "80 % Polyamide, 20% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "492 g"
+    }
+  ],
   "url": "https://vpo.ca/product/332814/westalpen-3l-jacket-mens"
 }

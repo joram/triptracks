@@ -5,6 +5,23 @@
   ],
   "name": "Rab Sonic Ultra Zip - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "114 g"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "74.5 cm"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/342746/sonic-ultra-zip-mens"
 }

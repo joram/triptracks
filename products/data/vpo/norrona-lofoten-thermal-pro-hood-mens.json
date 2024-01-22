@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Lofoten Thermal Pro Hood - Mens",
   "price_cents": 2499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "89% Recycled Polyester, 11% Elastane"
+    },
+    {
+      "key": "Second",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "360 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348094/lofoten-thermal-pro-hood-mens"
 }

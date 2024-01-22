@@ -5,6 +5,11 @@
   ],
   "name": "Patagonia R1 Air Full Zip Hoody - Mens",
   "price_cents": 2250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "366 g"
+    }
+  ],
   "url": "https://vpo.ca/product/335141/r1-air-full-zip-hoody-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Bergtagen Stretch Trousers - Mens",
   "price_cents": 2899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "92% polyamide, 8% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Fixed Length"
+    },
+    {
+      "key": "Leg Type",
+      "value": "Full leg"
+    }
+  ],
   "url": "https://vpo.ca/product/325445/bergtagen-stretch-trousers-mens"
 }

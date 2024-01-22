@@ -5,6 +5,11 @@
   ],
   "name": "2Undr Luxe V-Neck Tee - Mens",
   "price_cents": 399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "67% Modal, 30% Polyester, 3% Lycra"
+    }
+  ],
   "url": "https://vpo.ca/product/316224/luxe-v-neck-tee-mens"
 }

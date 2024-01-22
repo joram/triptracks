@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Keb Jacket - Mens",
   "price_cents": 3699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Material 2",
+      "value": "Stretch"
+    }
+  ],
   "url": "https://vpo.ca/product/318568/keb-jacket-mens"
 }

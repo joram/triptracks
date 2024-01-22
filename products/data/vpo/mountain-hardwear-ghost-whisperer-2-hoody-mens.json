@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Ghost Whisperer/2 Hoody - Mens",
   "price_cents": 3839600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Whisperer 10D x 10D Ripstop - 100% Recycled Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "800 Fill RDS-Certified - 90% Goose Down, 10% Goose Feathers"
+    },
+    {
+      "key": "Weight",
+      "value": "8.8 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/323342/ghost-whisperer2-hoody-mens"
 }

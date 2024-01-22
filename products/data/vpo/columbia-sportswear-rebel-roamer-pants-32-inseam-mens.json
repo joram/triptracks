@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Rebel Roamer Pants, 32\" Inseam - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Nylon 210T Taffeta, Omni-Tech\u2122 Coated 100% Nylon"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/349637/rebel-roamer-pants-32-inseam-mens"
 }

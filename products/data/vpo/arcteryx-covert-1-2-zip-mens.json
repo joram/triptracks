@@ -5,6 +5,19 @@
   ],
   "name": "Arcteryx Covert 1/2 Zip - Mens",
   "price_cents": 1800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Alpenex II\u2122 - 100% Recycled Polyester - bluesign Approved Material"
+    },
+    {
+      "key": "Weight",
+      "value": "445 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/350164/covert-12-zip-mens"
 }

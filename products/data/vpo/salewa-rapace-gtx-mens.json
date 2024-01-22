@@ -5,6 +5,43 @@
   ],
   "name": "Salewa Rapace GTX - Mens",
   "price_cents": 3999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "CSR",
+      "value": "Fair Wear Foundation"
+    },
+    {
+      "key": "Footbed",
+      "value": "MFF+"
+    },
+    {
+      "key": "Insole",
+      "value": "Bilight Midsole, Crampon Compatible, Stiff"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Performance Comfort"
+    },
+    {
+      "key": "Midsole",
+      "value": "TPU"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae WTC"
+    },
+    {
+      "key": "Upper",
+      "value": "1.8mm Nubuk, 3F System with Steel Cables, 360\u00b0 full rubber rand, Highly wear-resistant fabric"
+    },
+    {
+      "key": "Drop",
+      "value": "15 mm (Heel Stack Height 31 mm"
+    },
+    {
+      "key": "Fit",
+      "value": "Wide"
+    }
+  ],
   "url": "https://vpo.ca/product/301806/rapace-gtx-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Prana Altitude Tracker Pants, 30\" Inseam - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336222/altitude-tracker-pants-30-inseam-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Rab Downpour Eco Pants, Reg - Mens",
   "price_cents": 1400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Recycled 50D polyester 2.5L with polyester membrane / Pertex Shield/ 98 g/m\u00b2/ HH",
+      "value": "20,000mm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "225 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333262/downpour-eco-pants-reg-mens"
 }

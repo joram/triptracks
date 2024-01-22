@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Varmland G-1000 Shirt - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Comfort Fit"
+    },
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Silent Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "425 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329374/varmland-g-1000-shirt-mens"
 }

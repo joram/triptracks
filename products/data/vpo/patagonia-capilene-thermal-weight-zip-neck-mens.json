@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Capilene Thermal Weight Zip Neck - Mens",
   "price_cents": 945000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Solids",
+      "value": "Polartec\u00ae Power Grid\u00ae fabric - 92% recycled polyester, 8% spandex"
+    },
+    {
+      "key": "Cross-dyes",
+      "value": "Polartec\u00ae Power Grid\u00ae fabric - 92% polyester (30% recycled), 8% spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/288991/capilene-thermal-weight-zip-neck-mens"
 }

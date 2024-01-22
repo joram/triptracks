@@ -5,6 +5,19 @@
   ],
   "name": "Rab Quest Hoody - Mens",
   "price_cents": 1280000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight (Size Medium)",
+      "value": "530 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "28.3 in"
+    }
+  ],
   "url": "https://vpo.ca/product/336855/quest-hoody-mens"
 }

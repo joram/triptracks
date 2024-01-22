@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Merino 200 Oasis Shorts - Mens",
   "price_cents": 900000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "190 g"
+    },
+    {
+      "key": "Inseam (L)",
+      "value": "29 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/336527/merino-200-oasis-shorts-mens"
 }

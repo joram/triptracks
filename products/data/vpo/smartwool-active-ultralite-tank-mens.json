@@ -5,6 +5,15 @@
   ],
   "name": "Smartwool Active Ultralite Tank - Mens",
   "price_cents": 699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "53% Merino Wool, 47% Lyocell. Exclusive of Decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    }
+  ],
   "url": "https://vpo.ca/product/347386/active-ultralite-tank-mens"
 }

@@ -5,6 +5,31 @@
   ],
   "name": "Kuhl Renegade Cargo Convertible Pants, 30\" Inseam - Mens",
   "price_cents": 1599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Duralux Softshell\u00a0- 95% Nylon, 5% Spandex DWR\u00a0- 170 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Full"
+    },
+    {
+      "key": "Knee opening",
+      "value": "19.75 in"
+    },
+    {
+      "key": "Bottom leg opening",
+      "value": "17 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "30 in"
+    },
+    {
+      "key": "Eight pockets",
+      "value": "two front hand, two side cargo with snap closure, zipper pocket inside left cargo, cell phone pocket inside right cargo, two back with Velcro closure"
+    }
+  ],
   "url": "https://vpo.ca/product/301342/renegade-cargo-convertible-pants-30-inseam-mens"
 }

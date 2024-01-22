@@ -5,6 +5,31 @@
   ],
   "name": "Outdoor Research Astroman LS Sun Shirt - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 85% Nylon, 15% Spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "173 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "29.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Light Colors",
+      "value": "UPF 30"
+    },
+    {
+      "key": "Dark Colors",
+      "value": "UPF 50"
+    }
+  ],
   "url": "https://vpo.ca/product/332604/astroman-ls-sun-shirt-mens"
 }

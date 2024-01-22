@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Regenerative Organic Certified Cotton Crewneck Sweatshirt - Unisex",
   "price_cents": 763000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "9.4-oz 100% Regenerative Organic Certified\u2122 cotton french terry"
+    },
+    {
+      "key": "Trim",
+      "value": "8.8-oz 89% Regenerative Organic Certified\u2122 cotton, 11% spandex rib knit"
+    }
+  ],
   "url": "https://vpo.ca/product/348826/regenerative-organic-certified-cotton-crewneck-sweatshirt-unisex"
 }

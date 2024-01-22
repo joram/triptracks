@@ -5,6 +5,47 @@
   ],
   "name": "NRS Canada Kicker Wetshoes - Mens",
   "price_cents": 750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "771 g"
+    },
+    {
+      "key": "Gender Sizing",
+      "value": "Men"
+    },
+    {
+      "key": "Material Upper",
+      "value": "3 mm neoprene"
+    },
+    {
+      "key": "Sole",
+      "value": "3 mm rubber"
+    },
+    {
+      "key": "Marking Sole",
+      "value": "No"
+    },
+    {
+      "key": "Insole",
+      "value": "3 mm neoprene"
+    },
+    {
+      "key": "Shim",
+      "value": "2 mm plastic shim"
+    },
+    {
+      "key": "Closure System",
+      "value": "Hook-and-loop webbing adjustment across the top of the footTaped Seams"
+    },
+    {
+      "key": "Category",
+      "value": "Water Shoes"
+    },
+    {
+      "key": "Features",
+      "value": "Rubber support bands"
+    }
+  ],
   "url": "https://vpo.ca/product/344972/kicker-wetshoes-mens"
 }

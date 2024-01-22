@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox Swisswool Piz Boval Jacket - Mens",
   "price_cents": 2559600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Pertex\u00ae Quantum 100% Recycled Polyamide"
+    },
+    {
+      "key": "Padding",
+      "value": "88% Virgin Swisswool, 12% Polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "Pertex\u00ae Quantum 100% Recycled Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "408 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325029/swisswool-piz-boval-jacket-mens"
 }

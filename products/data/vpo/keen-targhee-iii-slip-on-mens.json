@@ -5,6 +5,35 @@
   ],
   "name": "Keen Targhee III Slip-On - Mens",
   "price_cents": 1500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Premium oiled leather"
+    },
+    {
+      "key": "Outsole",
+      "value": "Keen.All-Terrain rubber outsole for higher-traction grip"
+    },
+    {
+      "key": "Midsole",
+      "value": "Compression-molded EVA midsole for cushioning"
+    },
+    {
+      "key": "Lining",
+      "value": "Breathable mesh"
+    },
+    {
+      "key": "Footbed",
+      "value": "Removable PU insole with arch support for long-lasting comfort"
+    },
+    {
+      "key": "Lacing",
+      "value": "Elastic gore for easy on &amp; off"
+    },
+    {
+      "key": "Odor Control",
+      "value": "Eco Anti-Odor for natural odor control"
+    }
+  ],
   "url": "https://vpo.ca/product/338485/targhee-iii-slip-on-mens"
 }

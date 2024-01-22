@@ -5,6 +5,23 @@
   ],
   "name": "Darn Tough Socks ABC Boot Midweight Cushion Socks - Mens",
   "price_cents": 359500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Merino Wool, 38% Nylon, 2% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Height",
+      "value": "Boot"
+    },
+    {
+      "key": "Weight",
+      "value": "Midweight"
+    },
+    {
+      "key": "Pair with",
+      "value": "Hiking boots, backpacking boots, walking boots"
+    }
+  ],
   "url": "https://vpo.ca/product/321732/abc-boot-midweight-cushion-socks-mens"
 }

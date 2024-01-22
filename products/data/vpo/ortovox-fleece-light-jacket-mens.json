@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox Fleece Light Jacket - Mens",
   "price_cents": 1819700,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "67% Polyester, 26% Virgin Wool (Merino), 7% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "320 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/327881/fleece-light-jacket-mens"
 }

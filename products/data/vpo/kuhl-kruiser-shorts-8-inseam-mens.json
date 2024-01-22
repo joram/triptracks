@@ -5,6 +5,11 @@
   ],
   "name": "Kuhl Kruiser Shorts, 8\" Inseam - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "56% Recycled Nylon, 40% Nylon, 4% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/335547/kruiser-shorts-8-inseam-mens"
 }

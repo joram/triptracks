@@ -5,6 +5,11 @@
   ],
   "name": "tentree TreeBlend Classic T-Shirt - Mens",
   "price_cents": 359600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "45% Recycled Polyester, 30% Tencel Lyocell, 25% Organic Cotton"
+    }
+  ],
   "url": "https://vpo.ca/product/327149/treeblend-classic-t-shirt-mens"
 }

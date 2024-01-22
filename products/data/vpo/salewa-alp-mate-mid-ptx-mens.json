@@ -5,6 +5,35 @@
   ],
   "name": "Salewa Alp Mate Mid PTX - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "3F System with Kevlar\u00ae Cables, Mesh, Stretch fabric, Suede 1,.4-1.6 mm"
+    },
+    {
+      "key": "Lining",
+      "value": "PowerTex"
+    },
+    {
+      "key": "Insole",
+      "value": "Mid Stiff - Nylon"
+    },
+    {
+      "key": "Footbed",
+      "value": "Salewa Footbed"
+    },
+    {
+      "key": "Midsole",
+      "value": "EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Pomoca MTN trainer Lite"
+    },
+    {
+      "key": "Drop",
+      "value": "13mm (Heel Stack Height"
+    }
+  ],
   "url": "https://vpo.ca/product/334176/alp-mate-mid-ptx-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear AirMesh LS Crew - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "27 in"
+    },
+    {
+      "key": "Weight",
+      "value": "83 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337482/airmesh-ls-crew-mens"
 }

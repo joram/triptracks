@@ -5,6 +5,43 @@
   ],
   "name": "HanWag Ancash II GTX - Mens",
   "price_cents": 5000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Nubuck leather"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Trekking SF"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1740 g"
+    },
+    {
+      "key": "Width",
+      "value": "Standard"
+    },
+    {
+      "key": "Fit",
+      "value": "StraightFit Extra"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Trekking, Hunting"
+    },
+    {
+      "key": "Cut",
+      "value": "High"
+    }
+  ],
   "url": "https://vpo.ca/product/332186/ancash-ii-gtx-mens"
 }

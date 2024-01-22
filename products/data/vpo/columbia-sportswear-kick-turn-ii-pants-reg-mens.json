@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Kick Turn II Pants, Reg - Mens",
   "price_cents": 2199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Rebound Stretch - 100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "87% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "60g Microtemp XF II 85% Recycled Polyester, \u00a015% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/350447/kick-turn-ii-pants-reg-mens"
 }

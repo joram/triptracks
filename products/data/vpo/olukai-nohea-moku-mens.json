@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Nohea Moku - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Lightweight mesh upper with a stretch-air mesh tongue and gusset ensures breathability. Elastic lacing system for easy on"
+    },
+    {
+      "key": "Footbed",
+      "value": "The dual-density PU footbed, cushy gel insert, and removable"
+    },
+    {
+      "key": "Outsole",
+      "value": "All-weather, non-marking rubber and gum rubber cupsole with razor siping for traction on wet surfaces"
+    }
+  ],
   "url": "https://vpo.ca/product/301798/nohea-moku-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond Coefficient LT Pants - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec Powergrid polyester stretch grid back fleece - 90% Polyester, 10% Elastane, 119 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "122 g"
+    }
+  ],
   "url": "https://vpo.ca/product/347732/coefficient-lt-pants-mens"
 }

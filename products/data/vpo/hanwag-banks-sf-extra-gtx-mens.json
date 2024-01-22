@@ -5,6 +5,39 @@
   ],
   "name": "HanWag Banks SF Extra GTX - Mens",
   "price_cents": 4000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Upper material",
+      "value": "Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Vibram\u00ae Endurance Pro"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Weight",
+      "value": "1250 g"
+    },
+    {
+      "key": "Fit",
+      "value": "StraightFit Extra"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike, Trekking"
+    },
+    {
+      "key": "Cut",
+      "value": "Mid"
+    }
+  ],
   "url": "https://vpo.ca/product/327024/banks-sf-extra-gtx-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "BN3TH - Package Apparel Inc.  Classic Boxer Brief - Mens",
   "price_cents": 359500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "95% Tencel\u2122 Modal, 5% Spandex"
+    },
+    {
+      "key": "Sizing",
+      "value": "All BN3TH fabrics are soft and made from a performance stretch fabric. If your measurements are between sizes, select a larger size for a looser fit or a smaller size for a tighter fit"
+    }
+  ],
   "url": "https://vpo.ca/product/362955/classic-boxer-brief-mens"
 }

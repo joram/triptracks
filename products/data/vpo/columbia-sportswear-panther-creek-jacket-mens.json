@@ -5,6 +5,19 @@
   ],
   "name": "Columbia Sportswear Panther Creek Jacket - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "94% polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "Fine Mesh 100% polyester"
+    },
+    {
+      "key": "Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347628/panther-creek-jacket-mens"
 }

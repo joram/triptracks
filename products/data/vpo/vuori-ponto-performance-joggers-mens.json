@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Ponto Performance Joggers - Mens",
   "price_cents": 1310000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "89% Recycled Polyester, 11% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/348682/ponto-performance-joggers-mens"
 }

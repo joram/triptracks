@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Ulele Olu - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Made with a water-resistant silicone-coated material, soft, French terry lining, and a puffy strap that feels like your favorite beach towel against the foot"
+    },
+    {
+      "key": "Footbed",
+      "value": "The soft, brushed EVA midsole delivers all-day support and cushioning"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking 'Wet Grip Rubber' outsole adds traction on wet surfaces"
+    }
+  ],
   "url": "https://vpo.ca/product/344221/ulele-olu-mens"
 }

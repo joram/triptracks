@@ -5,6 +5,11 @@
   ],
   "name": "Prana Stimmersee Shirt - Slim - Mens",
   "price_cents": 719600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic Cotton, 40% Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/332300/stimmersee-shirt-slim-mens"
 }

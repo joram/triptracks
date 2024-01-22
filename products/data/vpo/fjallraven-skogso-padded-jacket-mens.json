@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Skogso Padded Jacket - Mens",
   "price_cents": 4499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "G-1000\u00ae Original",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "G-1000\u00ae Lite",
+      "value": "65% polyester, 35% cotton"
+    },
+    {
+      "key": "Fill",
+      "value": "G-Loft Supreme"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill weight",
+      "value": "145 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1120 g"
+    }
+  ],
   "url": "https://vpo.ca/product/297985/skogso-padded-jacket-mens"
 }

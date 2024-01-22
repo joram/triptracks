@@ -5,6 +5,47 @@
   ],
   "name": "Oboz Bridger Mid B-Dry, Wide - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "LWG gold certified PFC-free waterproof nubuck leather + B-DRY Waterproof Membrane, Molded rubber toe cap &amp; heel counter"
+    },
+    {
+      "key": "Insole",
+      "value": "O Fit Insole\u2122"
+    },
+    {
+      "key": "Midsole",
+      "value": "Single Density Compression Molded EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Granite Peak"
+    },
+    {
+      "key": "Construction",
+      "value": "Board lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Wide"
+    },
+    {
+      "key": "Volume",
+      "value": "High"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "15mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "20.6 oz"
+    },
+    {
+      "key": "Fit Tip",
+      "value": "Length runs true to size. Form hugging heel cup, sculpted mid-foot, and a generous forefoot &amp; toe box"
+    }
+  ],
   "url": "https://vpo.ca/product/298685/bridger-mid-b-dry-wide-mens"
 }

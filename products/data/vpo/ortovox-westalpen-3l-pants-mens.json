@@ -5,6 +5,31 @@
   ],
   "name": "Ortovox Westalpen 3L Pants - Mens",
   "price_cents": 6950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Outer",
+      "value": "100 % Polyamide Membrane"
+    },
+    {
+      "key": "Inserts",
+      "value": "62% Polyamide (Cordura\u00ae), 38% UHMWPE (Dyneema\u00ae)"
+    },
+    {
+      "key": "Waistband",
+      "value": "85% Virgin Mernio Wool, 15% Polyamide"
+    },
+    {
+      "key": "Mesh Lining",
+      "value": "80% Polyamide, 20% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "662 g"
+    },
+    {
+      "key": "Leg Length",
+      "value": "Medium"
+    }
+  ],
   "url": "https://vpo.ca/product/332816/westalpen-3l-pants-mens"
 }

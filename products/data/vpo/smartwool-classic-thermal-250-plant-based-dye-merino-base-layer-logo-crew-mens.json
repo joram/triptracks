@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Classic Thermal (250) Plant-Based Dye Merino Base Layer Logo Crew - Mens",
   "price_cents": 1160000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "250 g"
+    },
+    {
+      "key": "Weight",
+      "value": "276 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/339356/classic-thermal-250-plant-based-dye-merino-base-layer-logo-crew-mens"
 }

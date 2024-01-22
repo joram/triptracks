@@ -5,6 +5,27 @@
   ],
   "name": "Columbia Sportswear Canyon Meadows Interchange Jacket - Mens",
   "price_cents": 3799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "Omni-Tech \u2122 Rebound Stretch 100% Polyester"
+    },
+    {
+      "key": "Liner",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "\u00a0Liner",
+      "value": "100% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "Omni-Heat\u2122 Synthetic Down 100% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/349718/canyon-meadows-interchange-jacket-mens"
 }

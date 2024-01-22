@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Voyager One LS Shirt - Mens",
   "price_cents": 920000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Stretch Woven\u00a0Flannel - 95% Polyester, 5% Elastane"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "11.8 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    }
+  ],
   "url": "https://vpo.ca/product/323364/voyager-one-ls-shirt-mens"
 }

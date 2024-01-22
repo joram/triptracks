@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research Rocky Mountain High Gaiters - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Nylon, 420D Packcloth With PU Coating"
+    },
+    {
+      "key": "Weight",
+      "value": "193 g"
+    }
+  ],
   "url": "https://vpo.ca/product/273262/rocky-mountain-high-gaiters-mens"
 }

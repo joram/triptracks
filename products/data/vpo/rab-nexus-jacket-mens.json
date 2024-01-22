@@ -5,6 +5,15 @@
   ],
   "name": "Rab Nexus Jacket - Mens",
   "price_cents": 1200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "320 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/305891/nexus-jacket-mens"
 }

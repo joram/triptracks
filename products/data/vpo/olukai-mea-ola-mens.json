@@ -5,6 +5,23 @@
   ],
   "name": "Olukai Mea Ola - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Rich, premium full-grain leather straps, soft micro\ufb01ber lining and a comfortable handsewn toe post"
+    },
+    {
+      "key": "Footbed",
+      "value": "Compression molded EVA midsole wrapped in full-grain leather provides anatomically correct contour for a personalized \ufb01t and sustained comfort over time"
+    },
+    {
+      "key": "Outsole",
+      "value": "Full-grain leather wrapped outsole with non-marking rubber traction pods for enhanced grip and \ufb02exibility"
+    },
+    {
+      "key": "Features",
+      "value": "Comfortable hand-sewn leather toe post, octopus-inspired laser- etched artwork on the footbed, canoe lash whipstitching, and embroidered logo. Leather Working Group certi\ufb01ed supplier"
+    }
+  ],
   "url": "https://vpo.ca/product/298523/mea-ola-mens"
 }

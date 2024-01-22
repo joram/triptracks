@@ -5,6 +5,27 @@
   ],
   "name": "Kuhl Free Rydr Pants, 28\" Inseam - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "Exklusiv Eurotwill\u00a0- 98% Twill Cotton, 2% Lycra\u00a0- 365 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Tapered"
+    },
+    {
+      "key": "Bottom Opening",
+      "value": "16 in"
+    },
+    {
+      "key": "Inseam",
+      "value": "28 in"
+    },
+    {
+      "key": "Six pockets",
+      "value": "two front hand, one coin, two back, one stealth cell phone"
+    }
+  ],
   "url": "https://vpo.ca/product/311686/free-rydr-pants-28-inseam-mens"
 }

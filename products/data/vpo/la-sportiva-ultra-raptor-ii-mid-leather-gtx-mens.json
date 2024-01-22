@@ -5,6 +5,31 @@
   ],
   "name": "La Sportiva Ultra Raptor II Mid Leather GTX - Mens",
   "price_cents": 2799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Debossed Nubuck Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort w"
+    },
+    {
+      "key": "Midsole",
+      "value": "Injection Molded MEMlex"
+    },
+    {
+      "key": "Sole",
+      "value": "Frixion\u00ae AT 2.0"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Midsole"
+    },
+    {
+      "key": "Last",
+      "value": "Tempo 2"
+    }
+  ],
   "url": "https://vpo.ca/product/343192/ultra-raptor-ii-mid-leather-gtx-mens"
 }

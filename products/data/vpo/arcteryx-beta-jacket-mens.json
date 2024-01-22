@@ -5,6 +5,15 @@
   ],
   "name": "Arcteryx Beta Jacket - Mens",
   "price_cents": 5000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "3L 80d GORE-TEX ePE with C-KNIT\u2122 backer technology, plain weave recycled nylon, Beam Dyed, FC0 DWR ,3L 80d GORE-TEX ePE, plain weave recycled nylon, Beam Dyed, FC0 DWR"
+    },
+    {
+      "key": "Weight",
+      "value": "375 g"
+    }
+  ],
   "url": "https://vpo.ca/product/363864/beta-jacket-mens"
 }

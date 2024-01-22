@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker Merino 175 Everyday LS Crewe - Mens",
   "price_cents": 1000000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Merino Wool - Exclusive of decoration"
+    },
+    {
+      "key": "Inseam",
+      "value": "73.2cm - based on size L"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/310223/merino-175-everyday-ls-crewe-mens"
 }

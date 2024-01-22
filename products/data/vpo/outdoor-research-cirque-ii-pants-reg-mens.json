@@ -5,6 +5,23 @@
   ],
   "name": "Outdoor Research Cirque II Pants, Reg - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 50% Nylon, 43% Polyester, 7% Spandex 90D Stretch Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "617 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "33 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/323957/cirque-ii-pants-reg-mens"
 }

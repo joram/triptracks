@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research OR Lockup Back Logo T-Shirt - Unisex",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Organic Cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342388/or-lockup-back-logo-t-shirt-unisex"
 }

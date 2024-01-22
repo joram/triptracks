@@ -5,6 +5,27 @@
   ],
   "name": "Mammut La Liste HS Pants, Reg - Mens",
   "price_cents": 5200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Face",
+      "value": "Gore-Tex\u00ae 3-layer with C-Knit\u2122 Technology - 100% Polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polytetrafluorethylene"
+    },
+    {
+      "key": "Backing",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Cut",
+      "value": "Ski Regular"
+    },
+    {
+      "key": "Water column",
+      "value": "28000 mm"
+    }
+  ],
   "url": "https://vpo.ca/product/330903/la-liste-hs-pants-reg-mens"
 }

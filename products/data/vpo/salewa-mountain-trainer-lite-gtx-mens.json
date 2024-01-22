@@ -5,6 +5,63 @@
   ],
   "name": "Salewa Mountain Trainer Lite GTX - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Footbed",
+      "value": "Salewa footbed"
+    },
+    {
+      "key": "Insole",
+      "value": "Mid stiff"
+    },
+    {
+      "key": "Lining",
+      "value": "GORE-TEX\u00ae Extended Comfort"
+    },
+    {
+      "key": "Midsole",
+      "value": "EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Pomoca MTN trainer Lite"
+    },
+    {
+      "key": "Upper",
+      "value": "Highly wear-resistant fabric"
+    },
+    {
+      "key": "Drop",
+      "value": "15mm (Heel Stack Height 40mm"
+    },
+    {
+      "key": "Single shoe weight",
+      "value": "448 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Wide"
+    },
+    {
+      "key": "Gender",
+      "value": "Male"
+    },
+    {
+      "key": "Shoelaces",
+      "value": "Short Round Shoelace"
+    },
+    {
+      "key": "Sole segment",
+      "value": "Trekking &amp; Hiking"
+    },
+    {
+      "key": "Vegan",
+      "value": "Yes"
+    },
+    {
+      "key": "Recommended Use",
+      "value": "Mixed Mountain Terrain, Mud"
+    }
+  ],
   "url": "https://vpo.ca/product/343939/mountain-trainer-lite-gtx-mens"
 }

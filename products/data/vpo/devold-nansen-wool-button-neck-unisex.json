@@ -5,6 +5,11 @@
   ],
   "name": "Devold Nansen Wool Button Neck - Unisex",
   "price_cents": 3199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% pure new wool"
+    }
+  ],
   "url": "https://vpo.ca/product/344923/nansen-wool-button-neck-unisex"
 }

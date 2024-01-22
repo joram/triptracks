@@ -5,6 +5,11 @@
   ],
   "name": "Icebreaker Multisport Mini Socks - Light Cushion - Mens",
   "price_cents": 184000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "63% Merino Wool, 35% Nylon, 2% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/328682/multisport-mini-socks-light-cushion-mens"
 }

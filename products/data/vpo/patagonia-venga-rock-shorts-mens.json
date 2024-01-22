@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Venga Rock Shorts - Mens",
   "price_cents": 872000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "11.6 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/339885/venga-rock-shorts-mens"
 }

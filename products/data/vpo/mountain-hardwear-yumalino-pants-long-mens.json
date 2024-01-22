@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Yumalino Pants, Long - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "4-Way Strech Woven Shell With Micro\ufb02eece Lining - Shell"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Weight",
+      "value": "172 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337656/yumalino-pants-long-mens"
 }

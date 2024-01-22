@@ -5,6 +5,23 @@
   ],
   "name": "Marmot Alt HB Hoody - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Recycled Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "11 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342524/alt-hb-hoody-mens"
 }

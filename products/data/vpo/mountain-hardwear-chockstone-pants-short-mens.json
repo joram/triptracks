@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear Chockstone Pants, Short - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Double Weave Woven - 88% Nylon, 12% Elastane"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "11 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/337520/chockstone-pants-short-mens"
 }

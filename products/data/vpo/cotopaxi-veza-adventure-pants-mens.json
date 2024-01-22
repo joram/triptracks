@@ -5,6 +5,19 @@
   ],
   "name": "Cotopaxi Veza Adventure Pants - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "91% nylon, 9% spandex stretch woven (137gsm)"
+    },
+    {
+      "key": "Weight",
+      "value": "249 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "29.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/345333/veza-adventure-pants-mens"
 }

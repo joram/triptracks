@@ -5,6 +5,11 @@
   ],
   "name": "Roark Chopper Jacket - Mens",
   "price_cents": 2599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% Nylon"
+    }
+  ],
   "url": "https://vpo.ca/product/363191/chopper-jacket-mens"
 }

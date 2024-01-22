@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia RPS Rock Pants, Reg - Mens",
   "price_cents": 1590000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "339 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/339831/rps-rock-pants-reg-mens"
 }

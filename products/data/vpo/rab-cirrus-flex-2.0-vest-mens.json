@@ -5,6 +5,27 @@
   ],
   "name": "Rab Cirrus Flex 2.0 Vest - Mens",
   "price_cents": 1800000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Pertex Quantum 20D Recycled Polyamide Ripstop"
+    },
+    {
+      "key": "Lining",
+      "value": "20D Recycled Atmos Polyamide Ripstop"
+    },
+    {
+      "key": "Insulation",
+      "value": "PrimaLoft\u00ae Silver Insulation Luxe\u2122 (72 g"
+    },
+    {
+      "key": "Weight",
+      "value": "258.5 g"
+    },
+    {
+      "key": "Center back length (Size 10)",
+      "value": "26.4 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333236/cirrus-flex-20-vest-mens"
 }

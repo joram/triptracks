@@ -5,6 +5,11 @@
   ],
   "name": "Smartwool Sparwood Half Zip Sweater - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "308 g"
+    }
+  ],
   "url": "https://vpo.ca/product/341703/sparwood-half-zip-sweater-mens"
 }

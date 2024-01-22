@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Big Cottonwood LS Shirt - Mens",
   "price_cents": 950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "Yarn Dye Plain Weave Woven - 100% Cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back",
+      "value": "29 in"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "8.11 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/331466/big-cottonwood-ls-shirt-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Rab Expedition 8000 Jacket - Unisex",
   "price_cents": 10500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Pertex\u00ae Quantum Pro"
+    },
+    {
+      "key": "Inner",
+      "value": "Pertex\u00ae Quantum"
+    },
+    {
+      "key": "Insulation",
+      "value": "850FP European Goose Down with Nikwax Fluorocarbon-Free Hydrophobic Finish (526g"
+    },
+    {
+      "key": "Weight",
+      "value": "1340 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "33.75 in"
+    }
+  ],
   "url": "https://vpo.ca/product/300625/expedition-8000-jacket-unisex"
 }

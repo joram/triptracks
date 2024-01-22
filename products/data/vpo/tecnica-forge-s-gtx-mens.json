@@ -5,6 +5,27 @@
   ],
   "name": "Tecnica  Forge S GTX - Mens",
   "price_cents": 3499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "High abrasion resistance stretch fabric with TPU lamination"
+    },
+    {
+      "key": "Lining",
+      "value": "Gore-Tex\u00ae Extended Comfort Footwear"
+    },
+    {
+      "key": "Midsole",
+      "value": "Adaptive system; 2 Layers of EVA combined with 1 layer of ESS"
+    },
+    {
+      "key": "Footbed",
+      "value": "C.A.S. Customizable - Trekking"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram\u00ae Forge with Megagrip compound"
+    }
+  ],
   "url": "https://vpo.ca/product/309173/forge-s-gtx-mens"
 }

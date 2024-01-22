@@ -5,6 +5,43 @@
   ],
   "name": "Mammut Aegility Pro Mid - Mens",
   "price_cents": 2350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Soles",
+      "value": "High rebound EVA wedge"
+    },
+    {
+      "key": "Weight (UK 8.5)",
+      "value": "370 g"
+    },
+    {
+      "key": "Flex index",
+      "value": "A4"
+    },
+    {
+      "key": "Heel drop",
+      "value": "8 mm"
+    },
+    {
+      "key": "Lace system",
+      "value": "Speed"
+    },
+    {
+      "key": "Last index",
+      "value": "multifunction"
+    },
+    {
+      "key": "Easy Entry System",
+      "value": "Easy to put on and take off shoe. Can be operating while wearing thick gloves"
+    },
+    {
+      "key": "Speed Lace System",
+      "value": "Efficient, precise speed lace system. Elastic loops hold laces in lace zone"
+    },
+    {
+      "key": "Suitable for",
+      "value": "Mountain Training, Hiking"
+    }
+  ],
   "url": "https://vpo.ca/product/343282/aegility-pro-mid-mens"
 }

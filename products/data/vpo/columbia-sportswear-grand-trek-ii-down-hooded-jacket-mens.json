@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Grand Trek II Down Hooded Jacket - Mens",
   "price_cents": 3099500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Shell",
+      "value": "Omni-Tech\u2122 Generation Dobby 100% Nylon"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "650 Fill Power Down Insulation, RDS Certified"
+    }
+  ],
   "url": "https://vpo.ca/product/350241/grand-trek-ii-down-hooded-jacket-mens"
 }

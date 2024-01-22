@@ -5,6 +5,23 @@
   ],
   "name": "Rab Power Stretch Pro Pull-On - Mens",
   "price_cents": 1850000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Polartec\u00ae Power Stretch\u00ae Pro"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    },
+    {
+      "key": "Weight",
+      "value": "342 g"
+    },
+    {
+      "key": "Center back length (Size Large)",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/303503/power-stretch-pro-pull-on-mens"
 }

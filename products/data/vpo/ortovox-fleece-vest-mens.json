@@ -5,6 +5,23 @@
   ],
   "name": "Ortovox Fleece Vest - Mens",
   "price_cents": 2399500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "64% polyester (recycled) + 30% virgin wool (OWP-Merino) + 6% elastane"
+    },
+    {
+      "key": "Inserts",
+      "value": "100% virgin wool (OWP-MERINO)"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "328 g"
+    }
+  ],
   "url": "https://vpo.ca/product/340889/fleece-vest-mens"
 }

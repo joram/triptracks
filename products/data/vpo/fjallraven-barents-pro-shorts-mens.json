@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Barents Pro Shorts - Mens",
   "price_cents": 1550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "341 g (size 48)"
+    },
+    {
+      "key": "Inseam",
+      "value": "11 in"
+    },
+    {
+      "key": "Reinforcements",
+      "value": "Yes"
+    },
+    {
+      "key": "Pockets",
+      "value": "Map pocket, axe"
+    }
+  ],
   "url": "https://vpo.ca/product/293772/barents-pro-shorts-mens"
 }

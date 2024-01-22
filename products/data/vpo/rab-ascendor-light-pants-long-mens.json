@@ -5,6 +5,19 @@
   ],
   "name": "Rab Ascendor Light Pants, Long - Mens",
   "price_cents": 1700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Primary fabric",
+      "value": "Matrix\u2122 single weave stretch nylon (108gsm) with fluorocarbon-free DWR, 95% Polyamide, 5% Elastane. Secondary"
+    },
+    {
+      "key": "Secondary fabric",
+      "value": "Matrix\u2122 RX (186gsm) reinforcements with fluorocarbon-free DWR, 100% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "313 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333218/ascendor-light-pants-long-mens"
 }

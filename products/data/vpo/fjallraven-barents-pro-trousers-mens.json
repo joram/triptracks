@@ -5,6 +5,31 @@
   ],
   "name": "Fjallraven Barents Pro Trousers - Mens",
   "price_cents": 1640000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Original"
+    },
+    {
+      "key": "Weight",
+      "value": "570 g"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Yes"
+    },
+    {
+      "key": "Leg ending",
+      "value": "Raw length"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full leg"
+    },
+    {
+      "key": "Fit",
+      "value": "Mid Rise"
+    }
+  ],
   "url": "https://vpo.ca/product/313314/barents-pro-trousers-mens"
 }

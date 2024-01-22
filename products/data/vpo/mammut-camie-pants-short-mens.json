@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Camie Pants, Short - Mens",
   "price_cents": 1119600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Cotton-elastane Double Weave"
+    },
+    {
+      "key": "Weight",
+      "value": "426 g"
+    },
+    {
+      "key": "Cut",
+      "value": "Regular Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/343345/camie-pants-short-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Mammut Eisfeld Light SO Pants, Reg - Mens",
   "price_cents": 2950000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "Cordura-Nylon Double Weave - 89% Polyamide 66, 11% Elasthan"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Weight",
+      "value": "418 g"
+    }
+  ],
   "url": "https://vpo.ca/product/333076/eisfeld-light-so-pants-reg-mens"
 }

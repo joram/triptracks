@@ -5,6 +5,19 @@
   ],
   "name": "Marmot WarmCube West Rib Parka - Mens",
   "price_cents": 8500000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Pertex Quantum 100% Nylon Ripstop"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 6 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "32.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/322521/warmcube-west-rib-parka-mens"
 }

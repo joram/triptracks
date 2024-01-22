@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Cambio Button Up Shirt, Solid - Mens",
   "price_cents": 1050000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "86% Recycled Polyester, 14% Spandex with DWR finish"
+    }
+  ],
   "url": "https://vpo.ca/product/340377/cambio-button-up-shirt-solid-mens"
 }

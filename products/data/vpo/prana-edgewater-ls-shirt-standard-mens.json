@@ -5,6 +5,11 @@
   ],
   "name": "Prana Edgewater LS Shirt - Standard - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "75% Organic Cotton, 25% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/336267/edgewater-ls-shirt-standard-mens"
 }

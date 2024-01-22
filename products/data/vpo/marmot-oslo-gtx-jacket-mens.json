@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Oslo GTX Jacket - Mens",
   "price_cents": 5700000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "GORE-TEX Products\u00ae 100% Recycled Nylon Plain weave"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 4 oz"
+    },
+    {
+      "key": "Center Back",
+      "value": "34.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347887/oslo-gtx-jacket-mens"
 }

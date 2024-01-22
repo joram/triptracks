@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Kuhl Engineered Polo - Mens",
   "price_cents": 760000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Polyester - 140 g"
+    },
+    {
+      "key": "Contrast",
+      "value": "100% Polyester -\u00a0130 g"
+    }
+  ],
   "url": "https://vpo.ca/product/332391/kuhl-engineered-polo-mens"
 }

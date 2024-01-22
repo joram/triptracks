@@ -5,6 +5,19 @@
   ],
   "name": "Ortovox 120 Comp Light Boxer - Mens",
   "price_cents": 550000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "70% Virgin Merino Wool, 30% Polyamide"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    },
+    {
+      "key": "Weight",
+      "value": "40 g"
+    }
+  ],
   "url": "https://vpo.ca/product/327595/120-comp-light-boxer-mens"
 }

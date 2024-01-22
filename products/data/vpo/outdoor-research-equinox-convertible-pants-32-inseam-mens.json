@@ -5,6 +5,27 @@
   ],
   "name": "Outdoor Research Equinox Convertible Pants, 32\" Inseam - Mens",
   "price_cents": 770000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "95% nylon, 5% spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "269 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Pant Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Short Inseam",
+      "value": "10 in"
+    }
+  ],
   "url": "https://vpo.ca/product/326396/equinox-convertible-pants-32-inseam-mens"
 }

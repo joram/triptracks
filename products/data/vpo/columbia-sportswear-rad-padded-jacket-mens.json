@@ -5,6 +5,23 @@
   ],
   "name": "Columbia Sportswear Rad Padded Jacket - Mens",
   "price_cents": 1699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Shell",
+      "value": "97% Cotton, 3% Elastane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insulation",
+      "value": "150g Microtemp XF II 85% Recycled Polyester, 15% Polyester"
+    },
+    {
+      "key": "Regular Fit",
+      "value": "Universal, easy fit for comfortable range of motion"
+    }
+  ],
   "url": "https://vpo.ca/product/363910/rad-padded-jacket-mens"
 }

@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear J Tree Insulated Shacket - Mens",
   "price_cents": 1499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insulation",
+      "value": "60 g polyester fill"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "29 in"
+    },
+    {
+      "key": "Uses",
+      "value": "Casual"
+    }
+  ],
   "url": "https://vpo.ca/product/342085/j-tree-insulated-shacket-mens"
 }

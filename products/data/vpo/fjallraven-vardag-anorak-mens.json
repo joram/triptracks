@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Vardag Anorak - Mens",
   "price_cents": 1919600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "G-1000\u00ae Eco"
+    },
+    {
+      "key": "Weight",
+      "value": "620 g"
+    }
+  ],
   "url": "https://vpo.ca/product/335686/vardag-anorak-mens"
 }

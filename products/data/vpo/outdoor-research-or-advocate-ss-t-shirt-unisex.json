@@ -5,6 +5,27 @@
   ],
   "name": "Outdoor Research OR Advocate SS T-Shirt - Unisex",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Solid",
+      "value": "100% organic cotton"
+    },
+    {
+      "key": "Heather",
+      "value": "60% organic cotton, 40% recycled polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "222 g"
+    },
+    {
+      "key": "Back Length",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332569/or-advocate-ss-t-shirt-unisex"
 }

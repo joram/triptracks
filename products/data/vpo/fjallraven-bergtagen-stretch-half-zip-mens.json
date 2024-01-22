@@ -5,6 +5,15 @@
   ],
   "name": "Fjallraven Bergtagen Stretch Half Zip - Mens",
   "price_cents": 2699500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "92% polyamide, 8% elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "365 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325443/bergtagen-stretch-half-zip-mens"
 }

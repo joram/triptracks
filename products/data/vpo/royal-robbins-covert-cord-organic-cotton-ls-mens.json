@@ -5,6 +5,23 @@
   ],
   "name": "Royal Robbins Covert Cord Organic Cotton LS - Mens",
   "price_cents": 1199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Organic Cotton (exclusive of trim)"
+    },
+    {
+      "key": "Length",
+      "value": "30.25 in"
+    },
+    {
+      "key": "Weight",
+      "value": "9.9 oz"
+    },
+    {
+      "key": "UPF",
+      "value": "UPF 35+"
+    }
+  ],
   "url": "https://vpo.ca/product/330957/covert-cord-organic-cotton-ls-mens"
 }

@@ -5,6 +5,11 @@
   ],
   "name": "Hooke Tech Fleece Hoodie - Mens",
   "price_cents": 1699900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Recycled Polyester Polar Fleece"
+    }
+  ],
   "url": "https://vpo.ca/product/346161/tech-fleece-hoodie-mens"
 }

@@ -5,6 +5,19 @@
   ],
   "name": "Norrona Norrona Warm2 Jacket - Mens",
   "price_cents": 1600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "458 g"
+    },
+    {
+      "key": "UPF",
+      "value": "50+"
+    }
+  ],
   "url": "https://vpo.ca/product/328630/norrona-warm2-jacket-mens"
 }

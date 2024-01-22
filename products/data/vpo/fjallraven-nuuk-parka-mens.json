@@ -5,6 +5,39 @@
   ],
   "name": "Fjallraven Nuuk Parka - Mens",
   "price_cents": 3540000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Fill",
+      "value": "Supreme Microloft"
+    },
+    {
+      "key": "Water column",
+      "value": "10,000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "10,000 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1820 g"
+    },
+    {
+      "key": "Fill weight",
+      "value": "250 g"
+    }
+  ],
   "url": "https://vpo.ca/product/297987/nuuk-parka-mens"
 }

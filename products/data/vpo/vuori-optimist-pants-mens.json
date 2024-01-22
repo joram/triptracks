@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Optimist Pants - Mens",
   "price_cents": 1310000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "98% Cotton, 2% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "30.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/348638/optimist-pants-mens"
 }

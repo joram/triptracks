@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Echo Featherless Jacket - Mens",
   "price_cents": 2300000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "1 lbs 1 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "27.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342586/echo-featherless-jacket-mens"
 }

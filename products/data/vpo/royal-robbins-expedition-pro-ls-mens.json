@@ -5,6 +5,23 @@
   ],
   "name": "Royal Robbins Expedition Pro LS - Mens",
   "price_cents": 999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "6.5 oz"
+    },
+    {
+      "key": "Front",
+      "value": "30.25 in"
+    },
+    {
+      "key": "Back",
+      "value": "31"
+    }
+  ],
   "url": "https://vpo.ca/product/348247/expedition-pro-ls-mens"
 }

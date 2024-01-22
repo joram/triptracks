@@ -5,6 +5,23 @@
   ],
   "name": "Fjallraven Singi Overshirt - Mens",
   "price_cents": 1899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "G-1000\u00ae Silent Eco"
+    },
+    {
+      "key": "Fit",
+      "value": "Comfort Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "450 g"
+    },
+    {
+      "key": "Back length",
+      "value": "78 cm"
+    }
+  ],
   "url": "https://vpo.ca/product/337192/singi-overshirt-mens"
 }

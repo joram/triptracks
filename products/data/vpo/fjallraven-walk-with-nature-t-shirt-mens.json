@@ -5,6 +5,19 @@
   ],
   "name": "Fjallraven Walk With Nature T-Shirt - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Material",
+      "value": "60% cotton, 40% polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Weight",
+      "value": "144 g - size M"
+    }
+  ],
   "url": "https://vpo.ca/product/363525/walk-with-nature-t-shirt-mens"
 }

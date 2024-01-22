@@ -5,6 +5,27 @@
   ],
   "name": "Rab Cirrus Flex 2.0 Hoody - Mens",
   "price_cents": 2400000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Outer",
+      "value": "Pertex Quantum 20D Recycled Polyamide Ripstop"
+    },
+    {
+      "key": "Lining",
+      "value": "20D recycled Atmos Polyamide Ripstop"
+    },
+    {
+      "key": "Insulation",
+      "value": "PrimaLoft\u00ae Silver Luxe\u2122 - 110 g"
+    },
+    {
+      "key": "Weight",
+      "value": "422 g"
+    },
+    {
+      "key": "Center back length (Size Medium)",
+      "value": "28 in"
+    }
+  ],
   "url": "https://vpo.ca/product/333231/cirrus-flex-20-hoody-mens"
 }

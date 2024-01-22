@@ -5,6 +5,11 @@
   ],
   "name": "Prana Riveter Boardshorts, 7\" Inseam - Mens",
   "price_cents": 799500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "92% Recycled Polyester, 8% Spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/333622/riveter-boardshorts-7-inseam-mens"
 }

@@ -5,6 +5,43 @@
   ],
   "name": "La Sportiva TX4 - Mens",
   "price_cents": 1999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Leather"
+    },
+    {
+      "key": "Lining",
+      "value": "Non-slip mesh"
+    },
+    {
+      "key": "Laces",
+      "value": "100% Recycled Polyester"
+    },
+    {
+      "key": "Construction",
+      "value": "Strobel Lasted"
+    },
+    {
+      "key": "Midsole",
+      "value": "Traverse Injection MEMlex"
+    },
+    {
+      "key": "Insole",
+      "value": "OrthoLite Hybrid with 5% recycled rubber + 15% production waste foam"
+    },
+    {
+      "key": "Sole",
+      "value": "Vibram\u00ae Megagrip\u2122 Traverse w"
+    },
+    {
+      "key": "Construction",
+      "value": "Strobel Lasted"
+    },
+    {
+      "key": "Last",
+      "value": "Traverse"
+    }
+  ],
   "url": "https://vpo.ca/product/295655/tx4-mens"
 }

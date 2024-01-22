@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Mountaineer Classic Edition Maximum Cushion Crew Socks - Mens",
   "price_cents": 339500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "74% Merino Wool, 17% Recycled Nylon, 8% Nylon, 1% Elastane"
+    },
+    {
+      "key": "Height",
+      "value": "Crew"
+    },
+    {
+      "key": "Cushioning",
+      "value": "Maximum"
+    }
+  ],
   "url": "https://vpo.ca/product/339107/mountaineer-classic-edition-maximum-cushion-crew-socks-mens"
 }

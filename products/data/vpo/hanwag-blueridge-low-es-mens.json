@@ -5,6 +5,43 @@
   ],
   "name": "HanWag Blueridge Low ES - Mens",
   "price_cents": 2080000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Membrane",
+      "value": "EcoShell Footwear"
+    },
+    {
+      "key": "Upper material",
+      "value": "Suede, Textile"
+    },
+    {
+      "key": "Outer sole",
+      "value": "Hanwag Hike Pro"
+    },
+    {
+      "key": "Lining",
+      "value": "EcoShell Footwear"
+    },
+    {
+      "key": "Weight",
+      "value": "2 lbs 2.5 oz"
+    },
+    {
+      "key": "Field of Application",
+      "value": "Hike, Trekking"
+    },
+    {
+      "key": "Cut",
+      "value": "Low"
+    },
+    {
+      "key": "ABCD Category",
+      "value": "AB"
+    },
+    {
+      "key": "Materials",
+      "value": "High-quality Perwanger leather and robust polyamide upper fabric"
+    }
+  ],
   "url": "https://vpo.ca/product/344419/blueridge-low-es-mens"
 }

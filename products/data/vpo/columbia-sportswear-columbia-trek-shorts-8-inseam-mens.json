@@ -5,6 +5,15 @@
   ],
   "name": "Columbia Sportswear Columbia Trek Shorts, 8\" Inseam - Mens",
   "price_cents": 599500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Cotton, 40% Polyester"
+    },
+    {
+      "key": "Inseam",
+      "value": "8 in"
+    }
+  ],
   "url": "https://vpo.ca/product/347216/columbia-trek-shorts-8-inseam-mens"
 }

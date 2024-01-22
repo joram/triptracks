@@ -5,6 +5,27 @@
   ],
   "name": "Norrona Falketind GTX Pants - Mens",
   "price_cents": 5600000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Gore-Tex\u00ae 3-layer 40D Recycled Nylon"
+    },
+    {
+      "key": "Weight",
+      "value": "472 g"
+    },
+    {
+      "key": "Waterproof",
+      "value": "min. 28,000 mm"
+    },
+    {
+      "key": "\u00a0Breathablility",
+      "value": "High, down to 9 RET"
+    },
+    {
+      "key": "Windproofness",
+      "value": "100%"
+    }
+  ],
   "url": "https://vpo.ca/product/325935/falketind-gtx-pants-mens"
 }

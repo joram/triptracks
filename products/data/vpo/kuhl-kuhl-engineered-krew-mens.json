@@ -5,6 +5,15 @@
   ],
   "name": "Kuhl Kuhl Engineered Krew - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% Polyester, 140 g"
+    },
+    {
+      "key": "2nd",
+      "value": "100% Polyester, 130 g"
+    }
+  ],
   "url": "https://vpo.ca/product/329211/kuhl-engineered-krew-mens"
 }

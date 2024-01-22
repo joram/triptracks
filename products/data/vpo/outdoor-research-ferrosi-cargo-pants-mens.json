@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research Ferrosi Cargo Pants - Mens",
   "price_cents": 1079600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 48% Recycled Nylon, 38% Nylon, 14% Spandex"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/342093/ferrosi-cargo-pants-mens"
 }

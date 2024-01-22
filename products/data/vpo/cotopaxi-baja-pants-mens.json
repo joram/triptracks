@@ -5,6 +5,11 @@
   ],
   "name": "Cotopaxi Baja Pants - Mens",
   "price_cents": 945000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Waistband",
+      "value": "79% recycled polyester, 21% spandex"
+    }
+  ],
   "url": "https://vpo.ca/product/345324/baja-pants-mens"
 }

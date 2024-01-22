@@ -5,6 +5,19 @@
   ],
   "name": "Mountain Hardwear MHW Logo Half Zip - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Midweight Fleece",
+      "value": "100% cotton"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "28.13 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342896/mhw-logo-half-zip-mens"
 }

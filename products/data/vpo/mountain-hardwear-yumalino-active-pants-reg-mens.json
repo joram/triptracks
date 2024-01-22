@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Yumalino Active Pants, Reg - Mens",
   "price_cents": 1299500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "4-Way Strech Woven Shell With Micro\ufb02eece Lining - Shell"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Weight",
+      "value": "172 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337655/yumalino-active-pants-reg-mens"
 }

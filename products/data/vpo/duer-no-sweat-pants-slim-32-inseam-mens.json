@@ -5,6 +5,15 @@
   ],
   "name": "Duer No Sweat Pants Slim, 32\" Inseam - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "62% Cotton, 34% Tencel\u2122 Lyocell, 3% Coolmax\u00ae Polyester, 1% Lycra\u00ae Spandex"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/309918/no-sweat-pants-slim-32-inseam-mens"
 }

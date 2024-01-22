@@ -5,6 +5,15 @@
   ],
   "name": "Mountain Hardwear Weather Down Parka - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Center Back Length",
+      "value": "33 in"
+    },
+    {
+      "key": "Approx. Weight (Medium)",
+      "value": "2 lb 9 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/349054/weather-down-parka-mens"
 }

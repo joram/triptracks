@@ -5,6 +5,15 @@
   ],
   "name": "Outdoor Research Echo Printed Hoodie - Mens",
   "price_cents": 899500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "bluesign\u00ae approved 100% Recycled Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Trim Fit"
+    }
+  ],
   "url": "https://vpo.ca/product/348543/echo-printed-hoodie-mens"
 }

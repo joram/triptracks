@@ -5,6 +5,15 @@
   ],
   "name": "ExOfficio Give-N-Go Sport 2.0 Boxer Brief 6\" - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "90% Nylon, 10% Elastane"
+    },
+    {
+      "key": "Weight",
+      "value": "1.76 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/339635/give-n-go-sport-20-boxer-brief-6-mens"
 }

@@ -5,6 +5,47 @@
   ],
   "name": "Fjallraven Visby 3 in 1 Jacket - Mens",
   "price_cents": 7250000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyurethane"
+    },
+    {
+      "key": "Lining",
+      "value": "100% polyester, 100% polyamide"
+    },
+    {
+      "key": "Filling",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Inner jacket material",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Inner jacket lining",
+      "value": "100% polyamide"
+    },
+    {
+      "key": "Water column",
+      "value": "10 000 m m"
+    },
+    {
+      "key": "Breathability",
+      "value": "10 000 g"
+    },
+    {
+      "key": "Weight",
+      "value": "1276 g"
+    },
+    {
+      "key": "Fill weight",
+      "value": "150 g"
+    }
+  ],
   "url": "https://vpo.ca/product/337196/visby-3-in-1-jacket-mens"
 }

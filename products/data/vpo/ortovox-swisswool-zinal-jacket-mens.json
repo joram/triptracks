@@ -5,6 +5,27 @@
   ],
   "name": "Ortovox Swisswool Zinal Jacket - Mens",
   "price_cents": 3999600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "660 g"
+    },
+    {
+      "key": "Outer",
+      "value": "100% polyamide (PERTEX\u00ae QUANTUM PRO)"
+    },
+    {
+      "key": "Padding",
+      "value": "82% virgin wool (SWISSWOOL) + 18% polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100 % polyamide (recycled)"
+    },
+    {
+      "key": "Inserts",
+      "value": "100% virgin wool (MERINO)"
+    }
+  ],
   "url": "https://vpo.ca/product/340933/swisswool-zinal-jacket-mens"
 }

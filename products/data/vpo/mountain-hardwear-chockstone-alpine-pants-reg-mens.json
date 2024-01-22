@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Chockstone Alpine Pants, Reg - Mens",
   "price_cents": 1519600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Body",
+      "value": "Chockstone Double Weave Softshell (Upper Body) (88% Nylon, 12% Elastane)"
+    },
+    {
+      "key": "Accent",
+      "value": "Tuff Tech Redux Apex (Lower Body) (92% Nylon, 8% Elastane)"
+    },
+    {
+      "key": "Inseam",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "14.8 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/325916/chockstone-alpine-pants-reg-mens"
 }

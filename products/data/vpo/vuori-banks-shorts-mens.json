@@ -5,6 +5,15 @@
   ],
   "name": "Vuori Banks Shorts - Mens",
   "price_cents": 910000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "44% Recycled Polyester, 44% Polyester, 12% Elastane"
+    },
+    {
+      "key": "Inseam",
+      "value": "7.5 in"
+    }
+  ],
   "url": "https://vpo.ca/product/341589/banks-shorts-mens"
 }

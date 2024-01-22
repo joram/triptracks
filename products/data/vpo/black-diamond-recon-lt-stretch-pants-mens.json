@@ -5,6 +5,23 @@
   ],
   "name": "Black Diamond Recon LT Stretch Pants - Mens",
   "price_cents": 4199500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "BD.dry\u2122 3L, 40d Nylon Stretch with PFC-Free DWR Finish - 93% Nylon, 7% Elastane, 141 g"
+    },
+    {
+      "key": "\u00a0Inseam",
+      "value": "32.5 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "479 g"
+    }
+  ],
   "url": "https://vpo.ca/product/347794/recon-lt-stretch-pants-mens"
 }

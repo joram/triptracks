@@ -5,6 +5,15 @@
   ],
   "name": "Prana Stretch Zion AT Pants, 32\" Inseam - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "90% Recycled Nylon, 10% Elastane"
+    },
+    {
+      "key": "Self fabric weight",
+      "value": "220 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348334/stretch-zion-at-pants-32-inseam-mens"
 }

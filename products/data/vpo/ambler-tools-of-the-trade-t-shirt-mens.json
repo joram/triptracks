@@ -5,6 +5,11 @@
   ],
   "name": "Ambler  Tools of the Trade T-Shirt - Mens",
   "price_cents": 520000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabrics",
+      "value": "50% Organic Cotton, 50% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/337739/tools-of-the-trade-t-shirt-mens"
 }

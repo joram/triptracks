@@ -5,6 +5,31 @@
   ],
   "name": "Ortovox Swisswool Col Becchei Hybrid Jacket - Mens",
   "price_cents": 4999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main 1",
+      "value": "75% Polyamide, 18% Wool, 7% Elastane"
+    },
+    {
+      "key": "Main 2",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Padding",
+      "value": "80% Virgin Wool (Swisswool), 20% Polylactide"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Weight",
+      "value": "352 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Athletic"
+    }
+  ],
   "url": "https://vpo.ca/product/349431/swisswool-col-becchei-hybrid-jacket-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Ghost Shadow Hoody - Mens",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Insulation",
+      "value": "80 g (body, sleeves), 60 g (hood, side panels) synthetic insulation|80% Recycled Polyester, 20% Polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Center Back",
+      "value": "27.5 in"
+    },
+    {
+      "key": "Weight",
+      "value": "11.9 oz"
+    },
+    {
+      "key": "Uses",
+      "value": "Rock Climbing, Backpacking"
+    }
+  ],
   "url": "https://vpo.ca/product/331264/ghost-shadow-hoody-mens"
 }

@@ -5,6 +5,15 @@
   ],
   "name": "Patagonia Capilene Midweight Crew - Mens",
   "price_cents": 990000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "100% recycled polyester diamond-grid double knit with HeiQ\u00ae Pure odor control"
+    },
+    {
+      "key": "Weight",
+      "value": "175.77 g"
+    }
+  ],
   "url": "https://vpo.ca/product/323549/capilene-midweight-crew-mens"
 }

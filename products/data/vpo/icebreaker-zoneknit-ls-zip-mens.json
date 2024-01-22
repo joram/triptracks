@@ -5,6 +5,19 @@
   ],
   "name": "Icebreaker ZoneKnit LS Zip - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "60% Lyocell, 40% Merino Wool - Exclusive Of Decoration"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "238 g"
+    }
+  ],
   "url": "https://vpo.ca/product/348800/zoneknit-ls-zip-mens"
 }

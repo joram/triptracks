@@ -5,6 +5,27 @@
   ],
   "name": "Marmot Hype Down Hoody - Mens",
   "price_cents": 3200000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Pertex Quantum\u00a9 100% Recycled Nylon, Mini Ripstop Y\u2011Shape 1.0 oz"
+    },
+    {
+      "key": "Insulation",
+      "value": "800-fill Goose Down"
+    },
+    {
+      "key": "Weight",
+      "value": "390 g"
+    },
+    {
+      "key": "Center Back",
+      "value": "28\u00a0in"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    }
+  ],
   "url": "https://vpo.ca/product/330664/hype-down-hoody-mens"
 }

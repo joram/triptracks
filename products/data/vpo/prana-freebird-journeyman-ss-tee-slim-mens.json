@@ -5,6 +5,11 @@
   ],
   "name": "Prana Freebird Journeyman SS Tee - Slim - Mens",
   "price_cents": 391600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "60% Organic FT Cotton, 40% Recycled Polyester"
+    }
+  ],
   "url": "https://vpo.ca/product/348179/freebird-journeyman-ss-tee-slim-mens"
 }

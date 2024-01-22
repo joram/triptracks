@@ -5,6 +5,15 @@
   ],
   "name": "Norrona Svalbard Cotton Jacket - Mens",
   "price_cents": 2720000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "75% Organic Cotton, 25% Recycled Polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "580 g"
+    }
+  ],
   "url": "https://vpo.ca/product/322113/svalbard-cotton-jacket-mens"
 }

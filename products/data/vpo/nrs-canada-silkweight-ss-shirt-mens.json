@@ -5,6 +5,23 @@
   ],
   "name": "NRS Canada Silkweight SS Shirt - Mens",
   "price_cents": 650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Fabric",
+      "value": "197g - 85% recycled polyester, 15% recycled spandex"
+    },
+    {
+      "key": "Weight",
+      "value": "227 g"
+    },
+    {
+      "key": "Collar",
+      "value": "Crew"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular fit"
+    }
+  ],
   "url": "https://vpo.ca/product/345909/silkweight-ss-shirt-mens"
 }

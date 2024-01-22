@@ -5,6 +5,23 @@
   ],
   "name": "Mountain Hardwear Basin Trek Shorts, Reg - Mens",
   "price_cents": 799600,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nylon Stretch Cotton-touch Plain Weave (94% Nylon, 6% Elastane)"
+    },
+    {
+      "key": "Weight",
+      "value": "140 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Inseam",
+      "value": "7 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332944/basin-trek-shorts-reg-mens"
 }

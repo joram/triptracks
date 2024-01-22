@@ -5,6 +5,19 @@
   ],
   "name": "Patagonia Quandary Convertible Pants, Reg - Mens",
   "price_cents": 875000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "4.2-oz 95% nylon (65% recycled), 5% spandex with a DWR (durable water repellent) finish and 40+ UPF sun protection"
+    },
+    {
+      "key": "Weight",
+      "value": "340 g"
+    },
+    {
+      "key": "Inseam",
+      "value": "32"
+    }
+  ],
   "url": "https://vpo.ca/product/306801/quandary-convertible-pants-reg-mens"
 }

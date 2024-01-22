@@ -5,6 +5,19 @@
   ],
   "name": "Marmot Mountain Works Tee SS - Mens",
   "price_cents": 280000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "5 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Back Length",
+      "value": "29 in"
+    }
+  ],
   "url": "https://vpo.ca/product/342659/mountain-works-tee-ss-mens"
 }

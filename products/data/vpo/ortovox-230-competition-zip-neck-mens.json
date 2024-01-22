@@ -5,6 +5,11 @@
   ],
   "name": "Ortovox 230 Competition Zip Neck - Mens",
   "price_cents": 1650000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "57% Virgin Merino Wool, 41% polyamide, 2% elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/340778/230-competition-zip-neck-mens"
 }

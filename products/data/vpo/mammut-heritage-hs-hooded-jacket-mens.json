@@ -5,6 +5,27 @@
   ],
   "name": "Mammut Heritage HS Hooded Jacket - Mens",
   "price_cents": 2590000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Face",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% Polytetrafluorethylene"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyamide"
+    },
+    {
+      "key": "Water column",
+      "value": "28,000 mm"
+    },
+    {
+      "key": "Vapor permeability",
+      "value": "RET&lt;9 m\u00b2 Pa"
+    }
+  ],
   "url": "https://vpo.ca/product/327071/heritage-hs-hooded-jacket-mens"
 }

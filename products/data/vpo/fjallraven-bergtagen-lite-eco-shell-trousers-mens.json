@@ -5,6 +5,27 @@
   ],
   "name": "Fjallraven Bergtagen Lite Eco-Shell Trousers - Mens",
   "price_cents": 4750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Eco-Shell 3 L"
+    },
+    {
+      "key": "Membrane",
+      "value": "100% polyester"
+    },
+    {
+      "key": "Weight",
+      "value": "380 g"
+    },
+    {
+      "key": "Water column",
+      "value": "20000 mm"
+    },
+    {
+      "key": "Breathability",
+      "value": "30000 g"
+    }
+  ],
   "url": "https://vpo.ca/product/325441/bergtagen-lite-eco-shell-trousers-mens"
 }

@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Nilas Jacket - Mens",
   "price_cents": 7999500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main",
+      "value": "Airshield\u2122 15d 2l - 100% Nylon"
+    },
+    {
+      "key": "Insulation",
+      "value": "800 Fill Power Goose Down Insulation, Rds Certified - 90% Goose Down, 10% Goose Feather"
+    },
+    {
+      "key": "Weight",
+      "value": "31.6 oz"
+    },
+    {
+      "key": "Center Back Length",
+      "value": "30 in"
+    },
+    {
+      "key": "Fit",
+      "value": "Active"
+    }
+  ],
   "url": "https://vpo.ca/product/333010/nilas-jacket-mens"
 }

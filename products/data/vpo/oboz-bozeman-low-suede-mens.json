@@ -5,6 +5,43 @@
   ],
   "name": "Oboz Bozeman Low Suede - Mens",
   "price_cents": 1750000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Waterproof Suede Leather, Nubuck Leather, and Textile"
+    },
+    {
+      "key": "Insole",
+      "value": "O FIT Insole Bloom"
+    },
+    {
+      "key": "Midsole",
+      "value": "TPU Heel Clip, Dual Density Compression Molded EVA"
+    },
+    {
+      "key": "Outsole",
+      "value": "Bozeman"
+    },
+    {
+      "key": "Construction",
+      "value": "Board-Lasted"
+    },
+    {
+      "key": "Width",
+      "value": "Regular"
+    },
+    {
+      "key": "Volume",
+      "value": "Medium"
+    },
+    {
+      "key": "Heel Rise",
+      "value": "8mm"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "13.6 oz"
+    }
+  ],
   "url": "https://vpo.ca/product/343110/bozeman-low-suede-mens"
 }

@@ -5,6 +5,39 @@
   ],
   "name": "Scarpa Spin Ultra - Mens",
   "price_cents": 1592000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Mesh"
+    },
+    {
+      "key": "Lining",
+      "value": "Recycled Polyester"
+    },
+    {
+      "key": "Insole",
+      "value": "Strobel"
+    },
+    {
+      "key": "Midsole",
+      "value": "2D EVA-CM-6mm Drop"
+    },
+    {
+      "key": "Outsole",
+      "value": "Vibram Velox LB Max"
+    },
+    {
+      "key": "Last",
+      "value": "ARS6"
+    },
+    {
+      "key": "Weight (per shoe)",
+      "value": "263 g"
+    },
+    {
+      "key": "Origin",
+      "value": "Vietnam"
+    }
+  ],
   "url": "https://vpo.ca/product/347349/spin-ultra-mens"
 }

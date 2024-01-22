@@ -5,6 +5,19 @@
   ],
   "name": "Odlo Brensholmen Jacket - Mens",
   "price_cents": 1599900,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Main Fabric",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Lining",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Insert I",
+      "value": "78% Polyester, 22% Elastane"
+    }
+  ],
   "url": "https://vpo.ca/product/342534/brensholmen-jacket-mens"
 }

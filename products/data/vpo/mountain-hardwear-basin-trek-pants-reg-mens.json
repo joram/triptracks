@@ -5,6 +5,27 @@
   ],
   "name": "Mountain Hardwear Basin Trek Pants, Reg - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Nylon Stretch Cotton-touch Plain Weave - 94% Nylon, 6% Elastane"
+    },
+    {
+      "key": "Weight (M)",
+      "value": "8.81 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Standard"
+    },
+    {
+      "key": "Leg Shape",
+      "value": "Straight"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    }
+  ],
   "url": "https://vpo.ca/product/332961/basin-trek-pants-reg-mens"
 }

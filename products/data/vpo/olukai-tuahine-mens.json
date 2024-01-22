@@ -5,6 +5,19 @@
   ],
   "name": "Olukai Tuahine - Mens",
   "price_cents": 1350000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Upper",
+      "value": "Premium waterproof full- grain leather with a soft stretch mesh lining and a comfortable nylon toe post"
+    },
+    {
+      "key": "Footbed",
+      "value": "Anatomical, compression molded, EVA midsole with a premium full- grain leather footbed cover"
+    },
+    {
+      "key": "Outsole",
+      "value": "Non-marking 'Wet Grip Rubber' outsole with breeze block lug design for added grip"
+    }
+  ],
   "url": "https://vpo.ca/product/335805/tuahine-mens"
 }

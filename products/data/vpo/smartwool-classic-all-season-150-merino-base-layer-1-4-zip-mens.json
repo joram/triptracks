@@ -5,6 +5,19 @@
   ],
   "name": "Smartwool Classic All-Season (150) Merino Base Layer 1/4 Zip - Mens",
   "price_cents": 1150000,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "150 g"
+    },
+    {
+      "key": "Weight",
+      "value": "193 g"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
+    }
+  ],
   "url": "https://vpo.ca/product/334688/classic-all-season-150-merino-base-layer-14-zip-mens"
 }

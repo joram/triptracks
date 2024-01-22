@@ -5,6 +5,19 @@
   ],
   "name": "Black Diamond BD Cam SS Tee - Mens",
   "price_cents": 499500,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Materials",
+      "value": "Organic Cotton Stretch Jersey - 96% Organic Cotton, 4% Elastane, 160 gsm"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Weight",
+      "value": "145 g"
+    }
+  ],
   "url": "https://vpo.ca/product/326991/bd-cam-ss-tee-mens"
 }

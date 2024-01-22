@@ -5,6 +5,11 @@
   ],
   "name": "Norrona Trollveggen Flex1 Pants - Mens",
   "price_cents": 0,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Weight",
+      "value": "614 g (Size L)"
+    }
+  ],
   "url": "https://vpo.ca/product/363443/trollveggen-flex1-pants-mens"
 }
