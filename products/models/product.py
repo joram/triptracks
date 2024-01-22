@@ -30,9 +30,9 @@ class Product:
     @property
     def weight(self) -> Optional[float]:
         for spec in self.specs:
+            if "fabric" in spec.key.lower():
+                continue
             if "weight" in spec.key.lower():
-                # 16g (description)
-                # 1.16kg
                 value = spec.value.lower()
                 if " " in value:
                     value = value.split(" ")[0]
@@ -42,4 +42,15 @@ class Product:
                 if value.endswith("g"):
                     value = value.replace("g", "")
                     return float(value)
+                if value.endswith("lb"):
+                    value = value.replace("lb", "")
+                    return float(value) * 453.592
+                if value.endswith("oz"):
+                    value = value.replace("oz", "")
+                    return float(value) * 28.3495
+                try:
+                    return float(value)
+                except ValueError:
+                    pass
+                print(f"Could not parse weight: {spec.value}")
         return None

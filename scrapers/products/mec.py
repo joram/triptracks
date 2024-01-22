@@ -1,28 +1,28 @@
 #!/usr/bin/env python
 import dataclasses
+from typing import Optional
 
-from base import BaseScraper
-from mec_raw_html import ScrapeMEC
+from scrapers.base import BaseScraper
 import os
 import json
 
-from scrapers.products.models.product import Spec, Product
+from products.models.product import Spec, Product
 from scrapers.utils.sitemap import get_sitemap_urls
 
 
 class ScrapeMECJSON(BaseScraper):
 
     base_url = "https://www.mec.ca/en/"
+    wait = 0
 
     def __init__(self, debug=False):
         BaseScraper.__init__(self, debug)
-        self.html_scraper = ScrapeMEC(False)
         self._existing_files = None
 
     def item_urls(self):
         sitemap = get_sitemap_urls("https://www.mec.ca/en/")
         for url in sitemap:
-            if "/product/" in url:
+            if "/en/product/" in url:
                 yield url
 
     def item_cache_filepath(self, url):
@@ -31,18 +31,26 @@ class ScrapeMECJSON(BaseScraper):
         url = url.replace("?", "_").replace("=", "_").replace("&", "_")
         filepath = os.path.join(self.data_dir, "./{}".format(url))
         filepath = os.path.abspath(filepath)
+        if not filepath.endswith(".html"):
+            filepath += ".html"
         return filepath
 
-    def get_product(self, url) -> Product:
+    def get_product(self, url) -> Optional[Product]:
         filepath = self.item_cache_filepath(url).replace(".html", ".json")
         if os.path.exists(filepath):
             with open(filepath, "r") as f:
                 data = json.load(f)
-            return Product(**data)
+                if "description" not in data:
+                    os.remove(filepath)
+                else:
+                    return Product(**data)
 
-        soup = self.html_scraper.get_soup(url)
-        data = soup.find("script", {"id": "__NEXT_DATA__"}).text
-        data = json.loads(data)
+        soup = self.get_soup(url)
+        try:
+            data = soup.find("script", {"id": "__NEXT_DATA__"}).text
+            data = json.loads(data)
+        except:
+            return None
 
         def find_key(data, path, key):
             if isinstance(data, dict):
@@ -116,8 +124,12 @@ class ScrapeMECJSON(BaseScraper):
                     specs.append(Spec(key=key, value=spec.get("value")))
             return specs
 
+        if product is None:
+            return None
+
         product = Product(
             name=product.get("name"),
+            description=product.get("description"),
             url=url,
             price_cents=_get_price_cents(),
             img_hrefs=_get_image_urls(),
@@ -125,15 +137,27 @@ class ScrapeMECJSON(BaseScraper):
         )
 
         with open(filepath, "w") as f:
-            json.dump(dataclasses.asdict(product), f)
+            json.dump(dataclasses.asdict(product), f, indent=2, sort_keys=True)
         return product
 
     def products(self):
         for url in self.item_urls():
-            yield self.get_product(url)
+            product = self.get_product(url)
+            if product is not None:
+                yield product
 
 
 if __name__ == "__main__":
-    s = ScrapeMECJSON(True)
+    s = ScrapeMECJSON()
+    i = 0
     for item in s.products():
-        print(f"{item.price_cents/100}".ljust(10), item.name, item.url)
+        print(f"{i}\t {item.price_cents/100}".ljust(10), item.name, item.url)
+        filepath = os.path.join(s.data_dir, f"../../products/data/mec/{item.slug}.json")
+        filepath = os.path.abspath(filepath)
+        directory = os.path.dirname(filepath)
+        os.makedirs(directory, exist_ok=True)
+
+        if not os.path.exists(filepath):
+            with open(filepath, "w") as f:
+                json.dump(dataclasses.asdict(item), f, indent=2, sort_keys=True)
+        i += 1

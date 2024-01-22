@@ -18,7 +18,8 @@ def get_sitemap_urls(website):
         tree = sitemap_tree_for_homepage(website)
         sitemap = tree.all_pages()
         sitemap = [page.url for page in sitemap]
-    except Exception:
+    except Exception as e:
+        print(e)
         return []
     if len(sitemap) == 0:
         return []

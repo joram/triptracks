@@ -35,8 +35,8 @@ npm run start
 - install pyenv `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 - install python
     ```
-    pyenv install 3.6.6
-    pyenv virtualenv 3.6.6 tt
+    pyenv install 3.10
+    pyenv virtualenv 3.10 tt
     pyenv activate tt
     pip install -r requirements.txt
     ```

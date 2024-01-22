@@ -1,16 +1,10 @@
-setup_env.sh
-.venv/*
 venv*
-*.sqlite3
 *.pyc
 *.pem
 node_modules/*
 */generated-js/*
 */compiled-js/*
 data/*
-data*
 scripts/.*
-scripts/data*
-scripts/scrapers/*
 *.zip
 .idea

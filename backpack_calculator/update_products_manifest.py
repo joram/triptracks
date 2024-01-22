@@ -27,11 +27,13 @@ def update_products_manifest():
             with open(filepath) as f:
                 data = f.read()
                 data = json.loads(data)
+                weights = get_weights(data)
+                if len(weights) == 0:
+                    continue
                 manifest.append({
-                  "title": data["name"],
-                  "description": data["description"],
-                  "image": data["img_hrefs"][0],
-                  "weights": get_weights(data),
+                    "title": data["name"],
+                    "url": data["url"],
+                    "weights": weights,
                 })
 
     with open(os.path.join(curr_dir, "./products_manifest.json"), "w") as f:

@@ -1,17 +1,17 @@
-Category, Item, Description, Quantity, Weight
+Category, Item, Product Name, Quantity, Weight
 Camping,food, Food, 1, 6000
 Camping,stove, Jetboil Sumo Stove, 1
 Camping,fuel, Jetboil Jetpower 230g, 4
-Camping,sleeping bag, 3-4 season Sleeping bag,1
+Camping,sleeping bag,MEC Talon -5C Down Sleeping Bag - Unisex,1
 Camping,water, 1.5L Water,1
-Camping,1L water bottle, MEC Nalgene Sustain Wide Mouth Water Bottle 1L,1
-Camping,0.5L water bottle, Nalgene Sustain Wide Mouth Water Bottle 500ml,1
+Camping,1L water bottle, MEC Nalgene Sustain Wide Mouth Water Bottle 1L,1,177.25
+Camping,0.5L water bottle, Nalgene Sustain Wide Mouth Water Bottle 500ml,1,88.5
 Camping,hut booties, MEC Hut Booties,1
 Clothing,long johns top, Base layer long sleeve top,1
 Clothing,long johns bottom, Base layer bottoms,1
 Clothing,puffy jacket, MEC Tremblant Jacket,1
 Clothing,hardshell, Gore-Tex Jacket,1
-Clothing,ski bibs, Gore-Tex Pro Bib,1
+Clothing,ski bibs, Gore-Tex Pro Bib,1,850.486
 Clothing,liner socks, liner socks,1
 Glacier Travel,wag bag,Disposable Bag For Solid Waste,3
 Glacier Travel,harness, Blue Ice Choucas Light Harness,1
@@ -26,5 +26,5 @@ Skiing, skis, Black Diamond Helio Recon 95 Skis,1
 Skiing, bindings, Marker Alpinist 12 Bindings,1
 Skiing, ski crampons, Ski Crampons,1
 Skiing, skins, Pompoca ski Skins,1
-Skiing, helmet, sirocco lightweight helmet,1
+Skiing, helmet, sirocco helmet,1
 Skiing, ski Boots, Scarpa Maestrale RS Ski Boots,1

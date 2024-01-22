@@ -21,10 +21,10 @@ def _get_manifest():
             for product in manifest:
                 product = Product(
                     name=product["title"],
-                    description=product["description"],
-                    url="",
+                    description="",
+                    url=product["url"],
                     price_cents=0,
-                    img_hrefs=[product["image"]],
+                    img_hrefs=[],
                     specs=[Spec(key=w["key"], value=w["value"]) for w in product["weights"]],
                 )
                 products[product.name.lower()] = product
@@ -78,7 +78,7 @@ def _get_lines(csv_file):
             quantity = float(line[3].strip())
             weight = None
             if len(line) > 4:
-                weight = int(line[4])
+                weight = float(line[4])
             yield category, short_name, full_name, quantity, weight
 
 
@@ -98,6 +98,8 @@ def flesh_out_csv(csv_file):
         print(f"{category.ljust(20)} {name.ljust(50)}\t{weight} x {quantity}  \t{product_name}")
         if weight is not None:
             total_weight += weight*quantity
+        else:
+            print(f"Could not find weight for: {name}\t{product.url if product is not None else ''}")
     print(f"Total weight: {total_weight}")
 
 

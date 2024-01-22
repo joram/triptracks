@@ -1,14 +1,24 @@
 import os
 import re
 import time
+
+import playwright
 import requests
 import json
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 
 class FailedRequest(Exception):
     pass
 
+
+_browser = None
+def get_browser():
+    global _browser
+    if _browser is None:
+        _browser = sync_playwright().start().chromium.launch()
+    return _browser
 
 class BaseScraper(object):
     FILETYPE = "json"
@@ -69,10 +79,19 @@ class BaseScraper(object):
         if self.debug:
             print("downloading {}".format(url))
         time.sleep(self.wait)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            print(FailedRequest(resp.content))
-        return str(resp.text)
+        attempts = 0
+        while attempts < 5:
+            page = get_browser().new_page(user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ")
+            try:
+                page.goto(url)
+                content = page.content()
+                page.close()
+                return content
+            except:
+                attempts += 1
+                page.close()
+                time.sleep(1)
+        return None
 
     def get_content(self, url):
 
@@ -96,7 +115,7 @@ class BaseScraper(object):
 
     def get_soup(self, url):
         html = self.get_content(url)
-        soup = BeautifulSoup(html)
+        soup = BeautifulSoup(html, features="html.parser")
         return soup
 
     def get_metadata(self, soup):
@@ -115,3 +134,13 @@ class BaseScraper(object):
             data[key] = val
 
         return data
+
+    def item_cache_filepath(self, url):
+        url = url.rstrip("/")
+        url = url.replace("https://", "").replace("http://", "").replace("/", "_").rstrip("/")
+        url = url.replace("?", "_").replace("=", "_").replace("&", "_")
+        filepath = os.path.join(self.data_dir, "./{}".format(url))
+        filepath = os.path.abspath(filepath)
+        if not filepath.endswith(".html"):
+            filepath += ".html"
+        return filepath
