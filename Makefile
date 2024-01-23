@@ -1,3 +1,5 @@
+PYTHONPATH=.
+
 setup:
 	pyenv install 3.10
 	pyenv virtualenv 3.10 tt
@@ -17,5 +19,5 @@ vpo:
 	./scrapers/products/vpo.py
 
 backpack:
-	./backpack_calculator/update_products_manifest.py
-	./backpack_calculator/main.py
+	./backpack/update_products_manifest.py
+	./backpack/main.py

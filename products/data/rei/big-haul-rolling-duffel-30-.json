@@ -3,6 +3,51 @@
   "img_hrefs": "https://www.rei.com/media/product/118819",
   "name": "Big Haul Rolling Duffel - 30\"",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Travel"
+    },
+    {
+      "key": "Bag Style",
+      "value": "Duffel"
+    },
+    {
+      "key": "Gear Capacity (L)",
+      "value": "87 liters"
+    },
+    {
+      "key": "Gear Capacity (cu. in.)",
+      "value": "5309 cubic inches"
+    },
+    {
+      "key": "Number of Exterior Pockets",
+      "value": "2"
+    },
+    {
+      "key": "Wheeled",
+      "value": "Yes"
+    },
+    {
+      "key": "Material(s)",
+      "value": "400-denier TPU-coated nylon/915-denier Cordura polyester"
+    },
+    {
+      "key": "Dimensions",
+      "value": "30 x 16 x 14.5 inches"
+    },
+    {
+      "key": "Weight",
+      "value": "9 lbs. 7 oz."
+    },
+    {
+      "key": "Gender",
+      "value": "Unisex"
+    },
+    {
+      "key": "Sustainability",
+      "value": "From a Climate Neutral Certified brand"
+    }
+  ],
   "url": "https://www.rei.com/product/118819/rei-co-op-big-haul-rolling-duffel-30"
 }

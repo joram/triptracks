@@ -3,6 +3,43 @@
   "img_hrefs": "https://www.rei.com/media/product/184296",
   "name": "Lugano Soft Footbed Sandals - Women's",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Casual"
+    },
+    {
+      "key": "Footwear Closure",
+      "value": "Buckle"
+    },
+    {
+      "key": "Upper",
+      "value": "Suede"
+    },
+    {
+      "key": "Lining",
+      "value": "Suede"
+    },
+    {
+      "key": "Topsole",
+      "value": "Suede"
+    },
+    {
+      "key": "Support",
+      "value": "Birkenstock contoured cork footbed"
+    },
+    {
+      "key": "Outsole",
+      "value": "EVA"
+    },
+    {
+      "key": "Toe Coverage",
+      "value": "Open Toe"
+    },
+    {
+      "key": "Gender",
+      "value": "Women's"
+    }
+  ],
   "url": "https://www.rei.com/product/184296/birkenstock-lugano-soft-footbed-sandals-womens"
 }

@@ -1,22 +1,22 @@
 {
-  "description": "A super-sporty and agile hiking shoe for multi-day outings, trekking excursions or fast-paced hikes in the mountains, incorporating the benefits of cutting-edge production techniques. The core of the Ducan High GTX\u00ae Men is the Mammut Flextron technology which integrates a spring-steel sole as a midsole in the shoe. This prevents deflection of the foot while at the same time providing improved vertical support. The result: more efficient use of energy on hikes and climbs. Mammut Georganic 3D technology ensures natural movement of the foot. The geometric-dynamic design is combined with cuts tailored organically to the foot. The focal point is the anatomical last which, together with the asymmetric lacing and mono-tongue for one-sided entry, provides a very good fit. With the specially designed vibram\u00ae sole, the Ducan High GTX\u00ae Men will bring you outstanding grip on uneven terrain in the world of nature and the mountains.",
+  "description": "From short hikes to multi-day tours, this boot keeps all your options open \u2013 and is backed by the latest technologies to do so. Putting the literal spring in your step, Flextron technology uses a spring-steel sole to provide effective shock absorption, energy transfer, and stability to support your natural stride. Meanwhile, reliable grip is provided by the Vibram outersole and a trusted GORE-TEX membrane keeps you protected from adverse weather. All this in an anatomically tailored design for a comfortable, precise fit. The Ducan collection - a classic for a reason.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/315833.jpg"
+    "https://vpo.ca/images/product/large/352807.jpg"
   ],
   "name": "Mammut Ducan High GTX - Mens",
-  "price_cents": 2280000,
+  "price_cents": 2850000,
   "specs": [
     {
-      "key": "Main",
+      "key": "Soles",
+      "value": "Vibram\u00ae Flextron"
+    },
+    {
+      "key": "Material",
       "value": "Double Layer Engineered Mesh"
     },
     {
       "key": "Lining",
-      "value": "Gore-Tex Extended Comfort Footwear"
-    },
-    {
-      "key": "Sole",
-      "value": "Vibram\u00ae Flextron"
+      "value": "GORE-TEX Footwear"
     },
     {
       "key": "Flex index",
@@ -33,7 +33,11 @@
     {
       "key": "Last index",
       "value": "hiking"
+    },
+    {
+      "key": "Weight (UK 8.5)",
+      "value": "545 g"
     }
   ],
-  "url": "https://vpo.ca/product/315833/ducan-high-gtx-mens"
+  "url": "https://vpo.ca/product/352807/ducan-high-gtx-mens"
 }

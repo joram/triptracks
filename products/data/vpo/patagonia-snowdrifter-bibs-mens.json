@@ -1,19 +1,10 @@
 {
-  "description": "Patagonia's lightweight, backcountry-ready SnowDrifter Bibs combine stretchy fabric for uphill performance with serious storm protection to keep you dry and comfortable in all conditions. The SnowDrifter Bibs provide 3-layer H 2 No\u00ae Performance Standard protection in a 70% recycled stretch fabric that\u2019s ideal for human-powered powder pursuits. Fair Trade Certified\u2122 sewn.",
+  "description": "Their lightweight, backcountry-ready SnowDrifter Bibs combine stretchy fabric for uphill performance with serious storm protection to keep you dry and comfortable in all conditions. The SnowDrifter Bibs provide 3-layer H2No\u00ae Performance Standard protection in a 70% recycled stretch fabric that\u2019s ideal for human-powered powder pursuits.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/323735.jpg"
+    "https://vpo.ca/images/product/large/360046.jpg"
   ],
-  "name": "Patagonia Snowdrifter Bibs - Mens",
-  "price_cents": 3800000,
-  "specs": [
-    {
-      "key": "H2No\u00ae Performance Standard shell",
-      "value": "3-layer, 5-oz 75-denier 100% polyester (70% recycled) solid stretch ripstop with a polyester knit backer and a DWR (durable water repellent) finish"
-    },
-    {
-      "key": "Bib upper",
-      "value": "6.5-oz 63% recycled nylon, 26% polyester, 11% spandex double weave with fOur-way stretch and a DWR finish"
-    }
-  ],
-  "url": "https://vpo.ca/product/323735/snowdrifter-bibs-mens"
+  "name": "Patagonia SnowDrifter Bibs - Mens",
+  "price_cents": 3493000,
+  "specs": [],
+  "url": "https://vpo.ca/product/360046/snowdrifter-bibs-mens"
 }

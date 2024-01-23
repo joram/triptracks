@@ -1,19 +1,23 @@
 {
-  "description": "Head for the hills, trails, and mountains in the performance-ready Arch Rock Pants. The abrasion-resistant nylon can handle the jagged branches and rough rocks you might encounter, while the stretch construction and inseam gusset allow for plenty of mobility when you need to sidestep an obstacle. You'll feel good wearing these pants too, since they are also made with bluesign\u00ae-approved fabric, meeting the standards to conserve resources and reduce environmental impact. These relaxed-fit pants are packed with features to take you to the summit without holding you back, including UPF 50\u2013rated fabric to block the sun and a durable, water-repelling DWR finish to keep you dry. Stash essentials in the secure side zippered pocket.",
+  "description": "The Men's Arch Rock Pants are built to handle a full day on the trail. UPF 50 protects your skin from the sun, and a light but durable fabric means you\u2019re cool in the shade. Articulated knees and a crotch gusset mean they'll hold up on serious climbs, and the PFC-free coating will keep you dry when the deluge hits.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/316255.jpg"
+    "https://vpo.ca/images/product/large/342553.jpg"
   ],
   "name": "Marmot Arch Rock Pants, Reg - Mens",
   "price_cents": 1000000,
   "specs": [
     {
       "key": "Weight",
-      "value": "11.64 oz"
+      "value": "9 oz"
+    },
+    {
+      "key": "Fit",
+      "value": "Regular Fit"
     },
     {
       "key": "Inseam",
-      "value": "32.5 in"
+      "value": "32 in"
     }
   ],
-  "url": "https://vpo.ca/product/316255/arch-rock-pants-reg-mens"
+  "url": "https://vpo.ca/product/342553/arch-rock-pants-reg-mens"
 }

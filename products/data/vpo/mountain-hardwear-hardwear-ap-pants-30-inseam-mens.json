@@ -1,27 +1,23 @@
 {
-  "description": "An all-day pant that offers a unique combination of performance and style. Backpacker gave the AP Pant its Editor's Choice Award for incomparable fit, design, and versatility. Made from a blended canvas fabric it's comfortable, durable, and has excellent stretch.",
+  "description": "An all-day pant that offers a unique combination of performance and style. Backpacker gave the AP\u2122 Pant its Editor's Choice Award, and you'll see why. Made from a twill fabric that's comfortable, durable, and has excellent stretch, it's known for its incomparable fit and versatility.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/294312.jpg"
+    "https://vpo.ca/images/product/large/357622.jpg"
   ],
   "name": "Mountain Hardwear Hardwear AP Pants, 30\" Inseam - Mens",
   "price_cents": 1099500,
   "specs": [
     {
-      "key": "Materials",
-      "value": "Stretch Cotton Nylon Sanded Canvas (75% Cotton, 23% Nylon, 2% Elastane)"
-    },
-    {
-      "key": "Fabric Weight",
-      "value": "6 oz"
+      "key": "Fabrics",
+      "value": "Peached Woven - 75% Cotton, 22% Nylon, 3% Lycra\u00ae Elastane - 203 g"
     },
     {
       "key": "Inseam",
-      "value": "36 in"
+      "value": "30 in"
     },
     {
       "key": "Fit",
       "value": "Slim"
     }
   ],
-  "url": "https://vpo.ca/product/294312/hardwear-ap-pants-30-inseam-mens"
+  "url": "https://vpo.ca/product/357622/hardwear-ap-pants-30-inseam-mens"
 }

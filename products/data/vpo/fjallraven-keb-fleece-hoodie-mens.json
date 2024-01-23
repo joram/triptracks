@@ -1,13 +1,13 @@
 {
-  "description": "Dress for life\u2019s highpoints with Keb Fleece Hoodie in a functional wool blend. The flat-knitted, low-friction outside slides easily under a shell jacket while the inside\u2019s lofty structure warms and wicks away moisture. A versatile and comfortable mid layer that is just as suitable in the summer mountains as for skiing in the winter. <br><br>Functional fleece that warms and wicks away moisture. Reinforcements in G-1000 Eco on the shoulders. Two zippered hand pockets. Vertical chest pocket with zipper. Well-fitting hood. Front zipper with chin guard. Smooth outside, brushed inside. Polyester (partly recycled), wool and elastane. Elastic edging around hood, cuffs and hem.",
+  "description": "An insulating and moisture-wicking fleece hoodie \u2013 perfect as a mid layer for all-year-round activities. Made from a recycled polyester and traceable wool blend. Reinforced with G-1000 Eco over the shoulders for extra durability in high-wear areas.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/313447.jpg"
+    "https://vpo.ca/images/product/large/358116.jpg"
   ],
   "name": "Fjallraven Keb Fleece Hoodie - Mens",
   "price_cents": 2499500,
   "specs": [
     {
-      "key": "Outer",
+      "key": "Main",
       "value": "73% polyester, 20% wool, 7% elastane"
     },
     {
@@ -15,9 +15,21 @@
       "value": "65% polyester, 35% cotton"
     },
     {
+      "key": "Fit",
+      "value": "Regular Fit"
+    },
+    {
+      "key": "Reinforcement",
+      "value": "Shoulders"
+    },
+    {
       "key": "Weight",
-      "value": "510 g"
+      "value": "516 g"
+    },
+    {
+      "key": "Update",
+      "value": "Two-way front zipper; improved hood construction; traceable wool and recycled polyester; updated fit that allows for easy layering underneath"
     }
   ],
-  "url": "https://vpo.ca/product/313447/keb-fleece-hoodie-mens"
+  "url": "https://vpo.ca/product/358116/keb-fleece-hoodie-mens"
 }

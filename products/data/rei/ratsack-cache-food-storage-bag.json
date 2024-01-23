@@ -3,6 +3,15 @@
   "img_hrefs": "https://www.rei.com/media/product/846495",
   "name": "Ratsack Cache Food Storage Bag",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Camping"
+    },
+    {
+      "key": "Material(s)",
+      "value": "Stainless-steel mesh/nylon webbing"
+    }
+  ],
   "url": "https://www.rei.com/product/846495/armored-outdoor-gear-ratsack-cache-food-storage-bag"
 }

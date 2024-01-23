@@ -1,15 +1,19 @@
 {
-  "description": "Simple graphics, responsible manufacture. Made in a Fair Trade Certified\u2122 factory. A comfy tee featuring a groovy, kaleidoscopic llama. Their super soft t-shirt is also softer on the planet.",
+  "description": "A comfy tee featuring a groovy, kaleidoscopic llama. Their super soft t-shirt is also softer on the planet.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/353813.jpg"
+    "https://vpo.ca/images/product/large/360070.jpg"
   ],
   "name": "Cotopaxi Altitude Llama Organic T-Shirt - Mens",
-  "price_cents": 449500,
+  "price_cents": null,
   "specs": [
     {
       "key": "Materials",
-      "value": "60% Organic cotton, 40% Recycled Polyester"
+      "value": "60% organic cotton, 40% recycled polyester"
+    },
+    {
+      "key": "Fit",
+      "value": "Slim"
     }
   ],
-  "url": "https://vpo.ca/product/353813/altitude-llama-organic-t-shirt-mens"
+  "url": "https://vpo.ca/product/360070/altitude-llama-organic-t-shirt-mens"
 }

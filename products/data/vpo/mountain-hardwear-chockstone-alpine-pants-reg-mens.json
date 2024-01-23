@@ -1,27 +1,23 @@
 {
-  "description": "A tough, durable alpine climbing pant for guides and those who follow them. The Chockstone Alpine is a heavyweight softshell pant that can take the kind of abuse that comes from daily use in extreme conditions. It\u2019s a workhorse. Created specifically for alpine guides, it has tons of useful features--even a thigh pocket that\u2019s designed to hold a logbook and a map.",
+  "description": "Your new go-to. These softshell alpine climbing pants are built with a 4-way stretch, hyper-durable double weave fabric to navigate unforgiving environments without breaking a sweat. Built to stand up to years of abuse in extreme conditions\u2013and with essential features like a built-in belt, secure zippered thigh pockets, and a streamlined cuff cinch\u2013these are essential for your next predawn start.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/325916.jpg"
+    "https://vpo.ca/images/product/large/354198.jpg"
   ],
   "name": "Mountain Hardwear Chockstone Alpine Pants, Reg - Mens",
-  "price_cents": 1519600,
+  "price_cents": 1999500,
   "specs": [
     {
-      "key": "Body",
-      "value": "Chockstone Double Weave Softshell (Upper Body) (88% Nylon, 12% Elastane)"
+      "key": "Materials",
+      "value": "Double Weave Soft Shell - 92% Nylon, 8% Elastane"
     },
     {
-      "key": "Accent",
-      "value": "Tuff Tech Redux Apex (Lower Body) (92% Nylon, 8% Elastane)"
+      "key": "Fit",
+      "value": "Alpine"
     },
     {
-      "key": "Inseam",
-      "value": "Regular"
-    },
-    {
-      "key": "Weight",
-      "value": "14.8 oz"
+      "key": "Approx. Weight (Medium)",
+      "value": "1 lb 2.5 oz"
     }
   ],
-  "url": "https://vpo.ca/product/325916/chockstone-alpine-pants-reg-mens"
+  "url": "https://vpo.ca/product/354198/chockstone-alpine-pants-reg-mens"
 }

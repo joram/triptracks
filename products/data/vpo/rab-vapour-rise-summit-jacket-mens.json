@@ -1,31 +1,31 @@
 {
-  "description": "The warmest piece in the new VR range is perfect for winter based activities from skiing to ice climbing and winter mountaineering. Outstanding all weather comfort is provided by re-engineered Vapour-rise technology.",
+  "description": "The warmest Vapour-Rise softshell built for high mountain pursuits in cold conditions. This protective, wind resistant and highly breathable jacket manages moisture efficiently while keeping you warm, built with a helmet compatible hood.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/329495.jpg"
+    "https://vpo.ca/images/product/large/357354.jpg"
   ],
   "name": "Rab Vapour-Rise Summit Jacket - Mens",
-  "price_cents": 2360000,
+  "price_cents": 3200000,
   "specs": [
     {
-      "key": "Main",
-      "value": "Pertex Quantum Air, 49g"
+      "key": "Outer",
+      "value": "100% Polyamide with Acrylic Coating"
     },
     {
       "key": "Lining",
-      "value": "VR Warm lining (83g"
+      "value": "100% Polyester"
     },
     {
-      "key": "Composition",
-      "value": "100% polyamide outer with 100% polyester lining"
+      "key": "Fit",
+      "value": "Regular"
+    },
+    {
+      "key": "Centre Back Length",
+      "value": "73.5 cm"
     },
     {
       "key": "Weight",
-      "value": "354 g"
-    },
-    {
-      "key": "Center back length (Size Large)",
-      "value": "29.7 in"
+      "value": "352 g"
     }
   ],
-  "url": "https://vpo.ca/product/329495/vapour-rise-summit-jacket-mens"
+  "url": "https://vpo.ca/product/357354/vapour-rise-summit-jacket-mens"
 }

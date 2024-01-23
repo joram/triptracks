@@ -3,6 +3,39 @@
   "img_hrefs": "https://www.rei.com/media/product/190958",
   "name": "15500 Meatcrafter Fixed-Blade Knife ",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Camping"
+    },
+    {
+      "key": "Knife Blade Type",
+      "value": "Straight Edge"
+    },
+    {
+      "key": "Number of Blades",
+      "value": "1 Blade"
+    },
+    {
+      "key": "Max Blade Length (in.)",
+      "value": "6.08 inches"
+    },
+    {
+      "key": "Handle Material",
+      "value": "Santoprene"
+    },
+    {
+      "key": "Blade Construction",
+      "value": "CPM-154 stainless steel"
+    },
+    {
+      "key": "Lanyard Ring",
+      "value": "Yes"
+    },
+    {
+      "key": "Weight",
+      "value": "3.25 ounces"
+    }
+  ],
   "url": "https://www.rei.com/product/190958/benchmade-15500-meatcrafter-fixed-blade-knife"
 }

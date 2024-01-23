@@ -1,31 +1,35 @@
 {
-  "description": "Mountain Shirt Men - a comfortable shirt for hiking. It is made from a pleasant lightweight material with elastic properties for high comfort. An antimicrobial treatment reduces unpleasant odors, while the shirt impresses with active moisture-wicking.",
+  "description": "<p>A short-sleeve shirt for hiking, trekking and everyday use. The Mountain Shirt is slightly elasticated, feels good on your skin and provides reliable sun protection. The shirt dries quickly, and the FreshTech antimicrobial treatment reduces unpleasant odors. Practical details: the zipper chest pocket and a cloth for cleaning glasses integrated on the inside of the hem. A shirt for feel-good comfort on hot summer days.</p>",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/329056.jpg"
+    "https://vpo.ca/images/product/large/343392.jpg"
   ],
   "name": "Mammut Mountain Shirt - Mens",
-  "price_cents": 833000,
+  "price_cents": 952000,
   "specs": [
     {
-      "key": "Weight",
-      "value": "188 g"
+      "key": "Main Fabric 1 (B2B)",
+      "value": "Polyamid polyester mix mit elasthan"
+    },
+    {
+      "key": "Lining 1 (B2B)",
+      "value": "Brushed polyester tricot"
     },
     {
       "key": "Cut",
-      "value": "Athletic Fit"
+      "value": "Regular Fit"
     },
     {
-      "key": "Lining",
-      "value": "94% Polyester, 6% Spandex"
+      "key": "Back length",
+      "value": "81.2 cm"
     },
     {
-      "key": "Main material",
-      "value": "89% Polyamide, 6% Polyester, 5% Spandex"
+      "key": "Weight",
+      "value": "210 g"
     },
     {
       "key": "UV protection (UPF)",
       "value": "UPF 50+"
     }
   ],
-  "url": "https://vpo.ca/product/329056/mountain-shirt-mens"
+  "url": "https://vpo.ca/product/343392/mountain-shirt-mens"
 }

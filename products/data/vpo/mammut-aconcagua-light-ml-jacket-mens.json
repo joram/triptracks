@@ -1,27 +1,27 @@
 {
-  "description": "The Aconcagua Light can be worn as a mid-layer for mountaineering, climbing, ski touring or hiking. The high-quality material is lightweight, stretchable and pleasant to wear. An antimicrobial treatment using the chemical-free Livinguard\u00ae technology prevents the formation of unpleasant odors. This makes the Aconcagua Light easy-care, durable and environmentally friendly, as you won't need to wash it as often. The design of the pockets is tailored to the needs of mountain sports enthusiasts: allowing easy access at all times, even when wearing a backpack or climbing harness. A versatile and comfortable mid-layer jacket.",
+  "description": "The Light version of their classic fleece jacket is ideal for outdoor summer activities and those in-between seasons. The premium fleece made of Polartec\u00ae Power Grid\u2122 material is light, incredibly soft and super comfortable on the skin. The patented waffle structure offers an excellent warmth-to-weight ratio and keeps the jacket extra breathable. It also dries quickly and packs down small. The Aconcagua Light can be worn on its own or as a mid-layer when mountaineering, climbing, ski touring or hiking. The tight-fitting cut makes it easy to wear under a hardshell or insulated jacket. Out in the mountains or going about your daily business, the Aconcagua Light is versatile, functional and stylish.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/333035.jpg"
+    "https://vpo.ca/images/product/large/350208.jpg"
   ],
   "name": "Mammut Aconcagua Light ML Jacket - Mens",
-  "price_cents": 1590000,
+  "price_cents": 1699500,
   "specs": [
     {
-      "key": "Materials",
-      "value": "Main Fabric"
+      "key": "Main",
+      "value": "89% Polyester, 11% Spandex - polartec recycled polyester knit"
+    },
+    {
+      "key": "\u00a0Lining",
+      "value": "polyamide mesh"
     },
     {
       "key": "Weight",
-      "value": "321 g"
+      "value": "282 g"
     },
     {
-      "key": "Fit",
-      "value": "Athletic"
-    },
-    {
-      "key": "Back length",
-      "value": "28.3 in"
+      "key": "Cut",
+      "value": "Athletic Fit"
     }
   ],
-  "url": "https://vpo.ca/product/333035/aconcagua-light-ml-jacket-mens"
+  "url": "https://vpo.ca/product/350208/aconcagua-light-ml-jacket-mens"
 }

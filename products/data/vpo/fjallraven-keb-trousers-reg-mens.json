@@ -1,31 +1,43 @@
 {
-  "description": "Award-winning trekking trousers in stretch fabric and G-1000 Eco, now updated for even better performance, fit and durability. We have also added an attachment zone for suspenders and the leg endings have a new design that is easier to adjust and repair. Just as before, the trousers have classic, large pockets and generous ventilation openings along the thighs and calves. A well-fitting, durable classic for maximum freedom of movement in the mountains.",
+  "description": "Award-winning trekking trousers in stretch fabric and G-1000 Eco, now updated for even better performance, comfort and durability. The trousers have classic, large pockets, generous ventilation zippers and openings for kneepads (an accessory). A well-fitting, durable classic pair of trousers for maximum freedom of movement in the mountains.",
   "img_hrefs": [
-    "https://vpo.ca/images/product/large/318584.jpg"
+    "https://vpo.ca/images/product/large/358129.jpg"
   ],
   "name": "Fjallraven Keb Trousers, Reg - Mens",
-  "price_cents": 1925000,
+  "price_cents": 2750000,
   "specs": [
     {
       "key": "Main",
-      "value": "G-1000\u00ae Eco"
-    },
-    {
-      "key": "Stretch",
       "value": "63% polyamide, 26% polyester, 11% elastane"
     },
     {
-      "key": "Weight",
-      "value": "610 g"
+      "key": "G-1000\u00ae Eco",
+      "value": "65% polyester, 35% cotton"
     },
     {
-      "key": "Inseam",
-      "value": "Regular"
+      "key": "Fit/Waist",
+      "value": "Regular Fit"
     },
     {
       "key": "Reinforcement",
-      "value": "Yes"
+      "value": "Knees, Rear, Pockets"
+    },
+    {
+      "key": "Leg type",
+      "value": "Full leg trousers"
+    },
+    {
+      "key": "Inseam",
+      "value": "32 in"
+    },
+    {
+      "key": "Weight",
+      "value": "697 g (size 50)"
+    },
+    {
+      "key": "Update",
+      "value": "Now with a more inclusive fit for improved freedom of movement and comfort"
     }
   ],
-  "url": "https://vpo.ca/product/318584/keb-trousers-reg-mens"
+  "url": "https://vpo.ca/product/358129/keb-trousers-reg-mens"
 }

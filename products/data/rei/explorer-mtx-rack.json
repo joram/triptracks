@@ -3,6 +3,35 @@
   "img_hrefs": "https://www.rei.com/media/product/697821",
   "name": "Explorer MTX Rack",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Bike Commuting"
+    },
+    {
+      "key": "Rack Mount Position",
+      "value": "Rear Mount"
+    },
+    {
+      "key": "Rack Mount Type",
+      "value": "Frame Mount"
+    },
+    {
+      "key": "Fits Wheel Size",
+      "value": "Unavailable"
+    },
+    {
+      "key": "Weight Capacity (lbs)",
+      "value": "55 pounds"
+    },
+    {
+      "key": "Material(s)",
+      "value": "Aluminum 6061-T6"
+    },
+    {
+      "key": "Weight",
+      "value": "590 grams"
+    }
+  ],
   "url": "https://www.rei.com/product/697821/topeak-explorer-mtx-rack"
 }

@@ -3,6 +3,15 @@
   "img_hrefs": "https://www.rei.com/media/product/670395",
   "name": "Pro Bike Stand with Bag",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Cycling"
+    },
+    {
+      "key": "Weight",
+      "value": "12 pounds"
+    }
+  ],
   "url": "https://www.rei.com/product/670395/ultimate-support-pro-bike-stand-with-bag"
 }

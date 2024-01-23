@@ -3,6 +3,15 @@
   "img_hrefs": "https://www.rei.com/media/product/799929",
   "name": "Raceway Platform 2 Bike Trunk Rack",
   "price_cents": null,
-  "specs": [],
+  "specs": [
+    {
+      "key": "Best Use",
+      "value": "Cycling"
+    },
+    {
+      "key": "Number of Bikes",
+      "value": "2-bike"
+    }
+  ],
   "url": "https://www.rei.com/product/799929/thule-raceway-platform-2-bike-trunk-rack"
 }

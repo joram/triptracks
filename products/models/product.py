@@ -31,37 +31,43 @@ class Product:
     @property
     def weight(self) -> Optional[float]:
         for spec in self.specs:
-            if "fabric" in spec.key.lower():
+            s = spec.key.lower()
+            if "fabric" in s:
                 continue
-            if "weight" in spec.key.lower():
-                value = spec.value.lower()
-                #convert a-b to the average
-                if "-" in value:
+            if "weight" in s:
+                # convert A-B to (A+B)/2
+                if "-" in s:
                     regex = re.compile(r"(\d+)-(\d+)")
-                    match = regex.search(value)
+                    match = regex.search(s)
                     if match:
                         a = float(match.group(1))
                         b = float(match.group(2))
-                        v = (a+b)/2
-                        value = regex.sub(value, f"{v}")
+                        v = (a + b) / 2
+                        s = regex.sub(s, f"{v}")
+                if " pound" in s:
+                    s = s.replace(" pound", "lb")
 
-                if " " in value:
-                    value = value.split(" ")[0]
-                if value.endswith("kg"):
-                    value = value.replace("kg", "")
-                    return float(value) * 1000
-                if value.endswith("g"):
-                    value = value.replace("g", "")
-                    return float(value)
-                if value.endswith("lb"):
-                    value = value.replace("lb", "")
-                    return float(value) * 453.592
-                if value.endswith("oz"):
-                    value = value.replace("oz", "")
-                    return float(value) * 28.3495
-                try:
-                    return float(value)
-                except ValueError:
-                    pass
-                print(f"Could not parse weight: {spec.value}")
+                def word_to_grams(word):
+                    try:
+                        if word.endswith("kg"):
+                            word = word.replace("kg", "")
+                            return float(word) * 1000
+                        if word.endswith("g"):
+                            word = word.replace("g", "")
+                            return float(word)
+                        if word.endswith("lb"):
+                            word = word.replace("lb", "")
+                            return float(word) * 453.592
+                        if word.endswith("oz"):
+                            word = word.replace("oz", "")
+                            return float(word) * 28.3495
+                    except ValueError:
+                        pass
+                    return 0
+
+                grams = [word_to_grams(word) for word in spec.value.split(" ")]
+                grams = sum(grams)
+                grams = int(grams*100)/100
+                if grams > 0:
+                    return grams
         return None
